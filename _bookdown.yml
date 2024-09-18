@@ -3,3 +3,7 @@ language:
   ui:
     chapter_name: "Chapter "
 resource_files: ["images/**"]
+rmd_files: [
+  "index.Rmd",
+  "01-introR.Rmd",
+  "02-DataTypesDescription.Rmd"]
