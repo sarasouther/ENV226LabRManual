@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Welcome to R! | ENV 226 Lab Online R Manual</title>
+  <title>Chapter 2 Welcome to R! | Descriptive statistics</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Welcome to R! | ENV 226 Lab Online R Manual" />
+  <meta property="og:title" content="Chapter 2 Welcome to R! | Descriptive statistics" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Welcome to R! | ENV 226 Lab Online R Manual" />
+  <meta name="twitter:title" content="Chapter 2 Welcome to R! | Descriptive statistics" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -37,7 +37,7 @@ set in the _output.yml file.</p>" />
   
   
 <link rel="prev" href="index.html"/>
-
+<link rel="next" href="descriptive-statistics.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -161,6 +161,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#libraries"><i class="fa fa-check"></i><b>2.7</b> Libraries</a></li>
 <li class="chapter" data-level="2.8" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.8</b> Organizing your code</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive statistics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#what-can-statistics-tell-us"><i class="fa fa-check"></i><b>3.1</b> What can statistics tell us?</a></li>
+<li class="chapter" data-level="3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#sampling-populations"><i class="fa fa-check"></i><b>3.2</b> Sampling populations</a></li>
+<li class="chapter" data-level="3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-types"><i class="fa fa-check"></i><b>3.3</b> Data types</a></li>
+<li class="chapter" data-level="3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#describing-data"><i class="fa fa-check"></i><b>3.4</b> Describing data</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -173,7 +180,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ENV 226 Lab Online R Manual</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Descriptive statistics</a>
           </h1>
         </div>
 
@@ -231,11 +238,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">2.5</span> Good housekeeping<a href="welcome-to-r.html#good-housekeeping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When you are coding in R, you will want to save your R or R markdown scripts and any other data files (e.g., .csv or spatial files) that you are analyzing in a common file. With good housekeeping, you will be able to seamlessly rerun your analyses at in point in time, allowing you to pick back up on projects that may have been dormant!</p>
 <p>The first step in good R housekeeping is to set a <strong>working directory</strong>. A working directory tells R where to look for and save files. As an example, let’s say I am planning to save everything associated with this tutorial to a file called Class1_IntroToR. To do this, create a new folder on your desktop called ‘R is great’. You can change your working directory using the R studio interface by selecting a working directory at the top of the console panel in the “Files” tab. If you want to change your working directory to a different location, click on the “…” (ellipsis) button in RStudio’s “Files” tab. This will allow you to browse your file system and select a new directory as your working directory. That said, you will be <em>far</em> better served by including code in your R script that directs R to your working directory. I prefer to set it within the code in order to allow you to instantaneously be able to pick up work where you left off rather than searching through files and trying to remember how you set up the code. You can view your working directory by running a simple bit of code (run code below).</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="welcome-to-r.html#cb1-1" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co">#display file path to R studio </span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="welcome-to-r.html#cb2-1" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co">#display file path to R studio </span></span></code></pre></div>
 <pre><code>## [1] &quot;/Users/sks379/Desktop/ENV226LabRManual&quot;</code></pre>
 <p>When you run, getwd() you will see where R is looking for files. Now, let’s tell R where we want it to access files from! First, you will need to identify your file path. To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including ‘Get info’ (check out picture below).</p>
-<p><img src="images:/01-intro/workingdirectorymac.png" /></p>
-<p>Then, select ‘Get info’. Then, highlight the information after ‘where’ and copy it as a pathname (see picture).</p>
+<p><img src="images:/01-intro/workingdirectorymac.png" />
+Then, select ‘Get info’. Then, highlight the information after ‘where’ and copy it as a pathname (see picture).</p>
 <p><img src="images:/01-intro/copyingpathnamemac.png" /></p>
 <p>For PCs, start by opening your File Explorer:
 Press the Windows key + E on your keyboard.
@@ -259,7 +266,7 @@ Navigate to the Folder: Use the File Explorer to navigate to the folder where th
 <p>The weird thing about including install packages code is that you don’t want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I’ve included the install function in the text). You will need to load packages, but you update R and R studio, you won’t need to install packages after you have done it once. You can either then install the packages and delete the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. When prompted, be sure to install dependencies - this will make sure that you have any pieces of code that the library that you are installing needs to operate.</p>
 <p><img src="images:/01-intro/installlibraries.png" /></p>
 <p>Excellent! You have installed a library! Now, we need to load it. AND you will need to load R packages everytime that you use R. Any functions associated with your package won’t work, unless the package is loaded, so I suggest keeping the load library code in your R script. The code is simple (see below).</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="welcome-to-r.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="welcome-to-r.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
 <p>Wonderful, you now have the essential knowledge base that you need to start working efficiently and effectively in R!</p>
 </div>
 <div id="organizing-your-code" class="section level2 hasAnchor" number="2.8">
@@ -276,8 +283,8 @@ Navigate to the Folder: Use the File Explorer to navigate to the folder where th
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="descriptive-statistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -331,6 +338,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

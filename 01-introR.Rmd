@@ -4,8 +4,8 @@ output: pdf_document
 date: "`r Sys.Date()`"
 ---
 
-```{r setup, include=FALSE} 
-knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```{r setup-intro}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 
 # Welcome to R!
@@ -68,7 +68,10 @@ In RStudio, the four panels or panes are commonly referred to as:
 
 Typically, I select a structure in which I have my **Source pane** in the upper left, my **Console Pane** in the lower left position, my **Environment Pane** in the upper right corner, and the **Files/Plots/Packages/Help Pane** in the lower right position. You can select any position that you'd like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here's what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won't have to adjust positioning!
 
-![](/Users/sks379/Desktop/ENV226LabRManual/images:/01-intro/PaneLayout.png) 
+![](images:/01-intro/PaneLayout.png)
+
+
+
 
 ## Good housekeeping
 
@@ -82,11 +85,10 @@ getwd() #display file path to R studio
 
 When you run, getwd() you will see where R is looking for files. Now, let's tell R where we want it to access files from! First, you will need to identify your file path. To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including 'Get info' (check out picture below).
 
-![](/Users/sks379/Desktop/ENV226LabRManual/images:/01-intro/workingdirectorymac.png) 
-
+![](images:/01-intro/workingdirectorymac.png)
 Then, select 'Get info'. Then, highlight the information after 'where' and copy it as a pathname (see picture).
 
-![](/Users/sks379/Desktop/ENV226LabRManual/images:/01-intro/copyingpathnamemac.png) 
+![](images:/01-intro/copyingpathnamemac.png) 
 
 For PCs, start by opening your File Explorer:
 Press the Windows key + E on your keyboard.
@@ -105,7 +107,7 @@ Now R studio is directed to upload and save work to this folder.
 
 Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don't want or need while coding, so I typically recommend creating an R script and annotating your that file! One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string
 
-![](/Users/sks379/Desktop/ENV226LabRManual/images:/01-intro/createrscript.png) 
+![](images:/01-intro/createrscript.png) 
 
 ## Libraries
 
@@ -113,7 +115,7 @@ Base R, the fundamental, built-in set of functions, data structures, and librari
 
 The weird thing about including install packages code is that you don't want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I've included the install function in the text). You will need to load packages, but you update R and R studio, you won't need to install packages after you have done it once. You can either then install the packages and delete the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. When prompted, be sure to install dependencies - this will make sure that you have any pieces of code that the library that you are installing needs to operate.
 
-![](/Users/sks379/Desktop/ENV226LabRManual/images:/01-intro/installlibraries.png) 
+![](images:/01-intro/installlibraries.png) 
 
 Excellent! You have installed a library! Now, we need to load it. AND you will need to load R packages everytime that you use R. Any functions associated with your package won't work, unless the package is loaded, so I suggest keeping the load library code in your R script. The code is simple (see below).
 
@@ -128,7 +130,7 @@ Wonderful, you now have the essential knowledge base that you need to start work
 A well-written R script will include the components we have been discussion: Annotated notes on what the script is doing and potentially even the version of R, loading commands for your libraries, and a line of code specifying your working directory. With these elements in place, you are ready to code your heart out!
 
 Here is a glimpse at what your R scripts should look like.
-![](/Users/sks379/Desktop/ENV226LabRManual/images:/01-intro/RScriptSetUp.png) 
+![](images:/01-intro/RScriptSetUp.png) 
 
 And with that, welcome to the wonderful world of coding in R!
 

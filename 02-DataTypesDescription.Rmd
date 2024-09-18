@@ -3,7 +3,7 @@ title: "Descriptive statistics"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup data description, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
