@@ -1,0 +1,11 @@
+ecological-data-analysis-in-env-226-laboratory
+how-to-use-this-resource
+welcome-to-r
+r-and-r-studio-installation
+download-the-r-statistical-software-from-the-official-r-project-website.
+download-r-studio
+set-up-r-studio
+good-housekeeping
+annotating-your-code
+libraries
+organizing-your-code

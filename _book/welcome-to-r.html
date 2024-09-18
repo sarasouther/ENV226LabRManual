@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Welcome to R! | ENV 226 Lab Online R Manual</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Welcome to R! | ENV 226 Lab Online R Manual" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Welcome to R! | ENV 226 Lab Online R Manual" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Sara Souther" />
+
+
+<meta name="date" content="2024-09-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Ecological data analysis in ENV 226 laboratory</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#how-to-use-this-resource"><i class="fa fa-check"></i><b>1.1</b> How to use this resource</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="welcome-to-r.html"><a href="welcome-to-r.html"><i class="fa fa-check"></i><b>2</b> Welcome to R!</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#r-and-r-studio-installation"><i class="fa fa-check"></i><b>2.1</b> R and R studio installation</a></li>
+<li class="chapter" data-level="2.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-the-r-statistical-software-from-the-official-r-project-website."><i class="fa fa-check"></i><b>2.2</b> Download the R statistical software from the official R Project website.</a></li>
+<li class="chapter" data-level="2.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-r-studio"><i class="fa fa-check"></i><b>2.3</b> Download R studio</a></li>
+<li class="chapter" data-level="2.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#set-up-r-studio"><i class="fa fa-check"></i><b>2.4</b> Set up R studio</a></li>
+<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#good-housekeeping"><i class="fa fa-check"></i><b>2.5</b> Good housekeeping</a></li>
+<li class="chapter" data-level="2.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#annotating-your-code"><i class="fa fa-check"></i><b>2.6</b> Annotating your code</a></li>
+<li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#libraries"><i class="fa fa-check"></i><b>2.7</b> Libraries</a></li>
+<li class="chapter" data-level="2.8" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.8</b> Organizing your code</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ENV 226 Lab Online R Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="welcome-to-r" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Welcome to R!<a href="welcome-to-r.html#welcome-to-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>R is an open source statistical software package commonly used by researchers and other folks, who crave a free way to manipulate, analyze, and visualize date. R uses it’s own programming language, which is similar to S+ (the paid precursor to R). R employs an object-oriented programming (OOP) paradigm, specifically a type of OOP known as “class-based object-oriented programming,” to manage and manipulate data. In R, objects are fundamental entities, and you work with data and functions through objects. Let’s walk through the basics of installing and using R!</p>
+<div id="r-and-r-studio-installation" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> R and R studio installation<a href="welcome-to-r.html#r-and-r-studio-installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You will first want to download R statistical software and R studio, which is a powerful program that interfaces with R to make your coding experience more organized and enjoyable. Notice that you need to select a version of R depending on your operating system.</p>
+</div>
+<div id="download-the-r-statistical-software-from-the-official-r-project-website." class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Download the R statistical software from the official R Project website.<a href="welcome-to-r.html#download-the-r-statistical-software-from-the-official-r-project-website." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Open your web browser and go to the official R Project website at <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>.</p>
+<p>Choose a CRAN Mirror: On the R Project website’s main page, you’ll see a section that says “Download and Install R.” Click on the link that says “CRAN (Comprehensive R Archive Network).” This will take you to the CRAN website.</p>
+<ol style="list-style-type: decimal">
+<li><p>Select Your Mirror: On the CRAN website, you’ll find a list of mirrors (servers) from which you can download R. Choose a mirror that is geographically close to your location, as this will generally provide faster download speeds. Click on the mirror’s link.</p></li>
+<li><p>Download R for Your Operating System: On the mirror’s page, you’ll see options to download R for various operating systems (e.g., Windows, macOS, Linux). Click on the appropriate link for your operating system.</p></li>
+<li><p>Choose the Latest Version: You’ll typically see multiple versions of R available for download. It’s recommended to choose the latest stable version unless you have a specific reason to use an older version.</p></li>
+<li><p>Download and Install: After clicking on the download link, the installation file for R will begin downloading. Once the download is complete, run the installer and follow the installation instructions for your operating system.</p></li>
+<li><p>Start Using R: After the installation is complete, you can launch R from your computer. Depending on your operating system, you may also have an option to install RStudio, a popular integrated development environment (IDE) for R, to enhance your R programming experience.</p></li>
+</ol>
+</div>
+<div id="download-r-studio" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Download R studio<a href="welcome-to-r.html#download-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now download R studio!</p>
+<ol style="list-style-type: decimal">
+<li><p>Visit the RStudio Website: Open your web browser and go to the official RStudio website at <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a>.</p></li>
+<li><p>Download RStudio: On the RStudio website’s main page, click on the “Products” menu at the top, and then select “RStudio” from the dropdown menu.</p></li>
+<li><p>Choose the RStudio Edition: RStudio offers different editions, including RStudio Desktop (for use on your local machine), RStudio Server (for remote access), and RStudio Workbench (formerly known as RStudio Server Pro, designed for collaboration and sharing in enterprise environments). You will want to choose the free version, RStudio Desktop.</p></li>
+<li><p>Download the Installer: After selecting the edition, you’ll be directed to a page with download options. Click on the download link for your operating system (e.g., Windows, macOS, Linux).</p></li>
+<li><p>Download and Install: The installation file for RStudio will begin downloading. Once the download is complete, run the installer and follow the installation instructions for your operating system.</p></li>
+</ol>
+<p>Start Using RStudio: After the installation is complete, you can launch RStudio from your computer. You’ll have access to a powerful IDE that provides a user-friendly interface for working with R, including code editing, interactive R console, data visualization, and more. RStudio greatly enhances your R programming and data analysis experience, and it’s widely used by R users for its features and capabilities.</p>
+</div>
+<div id="set-up-r-studio" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Set up R studio<a href="welcome-to-r.html#set-up-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Alright, now that you’ve downloaded R and R studio, open R studio. You can customize the panes that you are visualizing in R.</p>
+<p>In RStudio, the four panels or panes are commonly referred to as:</p>
+<p><strong>Source Pane</strong>: This is where you can write, edit, and save your R scripts and code files. It is typically used for script development and editing. You can open and create new R script files in this pane.</p>
+<p><strong>Console Pane</strong>: The console is where you interact with R directly. You can execute R commands and see their output here. It’s an interactive environment where you can test and run R code line by line or in batches.</p>
+<p><strong>Environment Pane</strong>: The environment pane displays information about the objects, data frames, variables, and functions currently loaded in your R session. You can also use this pane to view data frames in a spreadsheet-like format and manage your workspace.</p>
+<p><strong>Files/Plots/Packages/Help Pane</strong>: This pane has multiple tabs and serves various purposes:
+<em>Files</em>: It shows the file system of your project, allowing you to navigate and manage files and directories.
+<em>Plots</em>: When you create plots in R, they will appear in this tab. You can interact with and export the plots from here.
+<em>Packages</em>: This tab displays information about installed packages, and you can use it to install, update, or load packages.
+<em>Help</em>: When you need documentation or help for R functions or packages, you can use the Help tab to search for and view documentation.</p>
+<p>Typically, I select a structure in which I have my <strong>Source pane</strong> in the upper left, my <strong>Console Pane</strong> in the lower left position, my <strong>Environment Pane</strong> in the upper right corner, and the <strong>Files/Plots/Packages/Help Pane</strong> in the lower right position. You can select any position that you’d like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here’s what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won’t have to adjust positioning!</p>
+<p><img src="images:/01-intro/PaneLayout.png" /></p>
+</div>
+<div id="good-housekeeping" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Good housekeeping<a href="welcome-to-r.html#good-housekeeping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When you are coding in R, you will want to save your R or R markdown scripts and any other data files (e.g., .csv or spatial files) that you are analyzing in a common file. With good housekeeping, you will be able to seamlessly rerun your analyses at in point in time, allowing you to pick back up on projects that may have been dormant!</p>
+<p>The first step in good R housekeeping is to set a <strong>working directory</strong>. A working directory tells R where to look for and save files. As an example, let’s say I am planning to save everything associated with this tutorial to a file called Class1_IntroToR. To do this, create a new folder on your desktop called ‘R is great’. You can change your working directory using the R studio interface by selecting a working directory at the top of the console panel in the “Files” tab. If you want to change your working directory to a different location, click on the “…” (ellipsis) button in RStudio’s “Files” tab. This will allow you to browse your file system and select a new directory as your working directory. That said, you will be <em>far</em> better served by including code in your R script that directs R to your working directory. I prefer to set it within the code in order to allow you to instantaneously be able to pick up work where you left off rather than searching through files and trying to remember how you set up the code. You can view your working directory by running a simple bit of code (run code below).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="welcome-to-r.html#cb1-1" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co">#display file path to R studio </span></span></code></pre></div>
+<pre><code>## [1] &quot;/Users/sks379/Desktop/ENV226LabRManual&quot;</code></pre>
+<p>When you run, getwd() you will see where R is looking for files. Now, let’s tell R where we want it to access files from! First, you will need to identify your file path. To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including ‘Get info’ (check out picture below).</p>
+<p><img src="images:/01-intro/workingdirectorymac.png" /></p>
+<p>Then, select ‘Get info’. Then, highlight the information after ‘where’ and copy it as a pathname (see picture).</p>
+<p><img src="images:/01-intro/copyingpathnamemac.png" /></p>
+<p>For PCs, start by opening your File Explorer:
+Press the Windows key + E on your keyboard.
+Alternatively, you can click the “File Explorer” or “This PC” icon on your taskbar or Start menu.
+Navigate to the Folder: Use the File Explorer to navigate to the folder where the file is located. You can click on folders to open them and view their contents.</p>
+<ol style="list-style-type: decimal">
+<li><p>Find the File: Locate the file you are interested in within the folder.</p></li>
+<li><p>View the File Path: Once you’ve found the file, you can see its full file path in the address bar at the top of the File Explorer window. The file path will be displayed as a sequence of folder and file names separated by backslashes. You can click in the address bar and copy the file path to the clipboard by pressing Ctrl + C after selecting it.</p></li>
+<li><p>Once you have copied your file path, paste that path name into the following code and set your working directory: setwd(“/Users/sks379/Desktop/R is great/”)</p></li>
+</ol>
+<p>Now R studio is directed to upload and save work to this folder.</p>
+</div>
+<div id="annotating-your-code" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Annotating your code<a href="welcome-to-r.html#annotating-your-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don’t want or need while coding, so I typically recommend creating an R script and annotating your that file! One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string</p>
+<p><img src="images:/01-intro/createrscript.png" /></p>
+</div>
+<div id="libraries" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Libraries<a href="welcome-to-r.html#libraries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Base R, the fundamental, built-in set of functions, data structures, and libraries that come with the R programming language without the need for additional packages or extensions, including basic math functions, statistical analyses and visualization tools. However, one amazingly cool think about R is that folks are out there creating ‘libraries’, or a collection of R functions, data sets, and documentation bundled together into a single package, to do specialized analyses. For most tasks in R, you will need to install and load libraries. There are two methods to install libraries. Let’s start by installing an important library (or package) for data manipulation, called ‘tidyverse’ (actually several packages - hence why the name references a universe). To do this, run this code: install.packages(“tidyverse”).</p>
+<p>The weird thing about including install packages code is that you don’t want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I’ve included the install function in the text). You will need to load packages, but you update R and R studio, you won’t need to install packages after you have done it once. You can either then install the packages and delete the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. When prompted, be sure to install dependencies - this will make sure that you have any pieces of code that the library that you are installing needs to operate.</p>
+<p><img src="images:/01-intro/installlibraries.png" /></p>
+<p>Excellent! You have installed a library! Now, we need to load it. AND you will need to load R packages everytime that you use R. Any functions associated with your package won’t work, unless the package is loaded, so I suggest keeping the load library code in your R script. The code is simple (see below).</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="welcome-to-r.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<p>Wonderful, you now have the essential knowledge base that you need to start working efficiently and effectively in R!</p>
+</div>
+<div id="organizing-your-code" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Organizing your code<a href="welcome-to-r.html#organizing-your-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A well-written R script will include the components we have been discussion: Annotated notes on what the script is doing and potentially even the version of R, loading commands for your libraries, and a line of code specifying your working directory. With these elements in place, you are ready to code your heart out!</p>
+<p>Here is a glimpse at what your R scripts should look like.
+<img src="images:/01-intro/RScriptSetUp.png" /></p>
+<p>And with that, welcome to the wonderful world of coding in R!</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-introR.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
