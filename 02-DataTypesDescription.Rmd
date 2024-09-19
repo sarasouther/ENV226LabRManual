@@ -1,6 +1,8 @@
 ---
 title: "Descriptive statistics"
-output: pdf_document
+author: "Sara Souther"
+date: "`r Sys.Date()`"
+output: html_document
 ---
 
 ```{r setup data description, include=FALSE}

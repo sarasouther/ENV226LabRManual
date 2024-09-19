@@ -1,7 +1,8 @@
 ---
 title: "ENV 226 Lab Online R Manual"
-output: pdf_document
+author: "Sara Souther"
 date: "`r Sys.Date()`"
+output: html_document
 ---
 
 ```{r setup-intro}
