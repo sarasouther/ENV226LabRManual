@@ -1,3 +1,4 @@
+title: "ENV 226 Lab Online R Manual"
 delete_merged_file: true
 language:
   ui:
@@ -6,8 +7,9 @@ resource_files: ["images/**"]
 rmd_files: [
   "index.Rmd",
   "01-IntroR.Rmd",
-  "02-DataTypesDescription.Rmd"
+  "02-DataTypesDescription.Rmd",
   "03-NaturalSelection.Rmd",
-  "04-PopulationEcology.Rmd"]
+  "04-PopulationEcology.Rmd"
+]
 output_dir: "docs"
 
