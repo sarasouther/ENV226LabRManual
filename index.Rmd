@@ -1,5 +1,5 @@
 ---
-title: "ENV 226 Lab Online R Manual"
+title: "Introduction to ENV 226 Lab"
 author: "Sara Souther"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
