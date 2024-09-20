@@ -1,0 +1,147 @@
+---
+title: "Population ecology"
+author: "Sara Souther"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Population ecology
+
+## Week 1: Lab set-up
+
+In a few weeks, we will complete a lab on the population dynamics of duckweed in microcosms. Today, we will set up your experiment. Next week, you will collect data on your populations and maintain your experiment.
+
+**MATERIALS:**
+1.	Microcosms (i.e., clear plastic containers)
+2.	Lemna minor individuals 
+3.	Water
+4.	Small labels or markers
+5.	Light source (natural sunlight or artificial light)
+6.	Data recording sheets
+
+First, we will explore growth rates of populations with two different initial population sizes. Working in groups of 3 – 5, follow the procedure below. Then, proceed to setting up your experiment in which nutrient levels are varied! 
+
+**PROCEDURE:**
+1.	Fill two microcosms with artificial pond water, 200 ml. Mark the 200 ml water level on the cup so that you can refresh the culture solution to the same volume. 
+2.	Place two healthy Lemna plants in one of the cups. Place 15 health Lemna plants in the second cup.
+3.	Because a plant can consist of one or more thalli, it is necessary that you now count the number of thalli in each cup. One thallus is any leaf unit that is over 1.5 mm. Record these data in the Day 0 column of Table 1.
+4.	Place the cups under fluorescent or near natural lights for a period of two weeks, check them periodically to refill the cups to the 200 ml line.
+5.	Count the number of thalli in each cup on Day 7 and Day 14. Record these data in the columns of Table 1.
+
+## Week 2-3: Maintaining your microcosms and measuring population growth
+
+1.	Check the microcosms and refill the cups to the 200 ml line.
+5.	Count the number of thalli in each cup on Day 7 and Day 14. Record these data in the columns of Table 1.
+
+## Introduction - Microcosm studies of population dynamics
+
+Microcosms in ecological sciences are small-scale experimental systems that replicate natural ecosystems. Researchers use microcosms to study ecological interactions, nutrient cycling, and other ecological processes in a controlled environment. Here we will use microcosms to examine population dynamics of duckweed (Lemna minor) to gain insights into core concepts in population ecological, such as population growth and carrying capacity.
+
+In class, we discussed how populations have the capacity to grow exponentially, but resource availability eventually limits population growth. Light, space and nutrients are all examples of resources that may be limited within ecosystems and constrain population growth. Here, we will explore populations growth using the model species, L. minor.  A model organism is a species used in scientific research to represent a broader biological phenomenon, serving as a convenient and well-understood subject for studying fundamental biological processes.
+
+POPULATION GROWTH:  EXPERIMENTAL MODELS USING DUCKWEED (Lemna spp.)
+University of Toronto, Toronto CANADA
+
+It is easy to show that in the absence of environmental constraints, any population of organisms reproducing at their full potential would cover the surface of the earth in a relatively short time. At current rates of human population growth, for example, in another 2000 years the surface of the Earth would be expanding outward with new people at the speed of light.
+
+It is clear that animal and plant populations are not growing in an uncontrolled explosive way. Limitations in resource availability define a maximum population size above which continued population growth is not possible. Resources that might be limiting for any given population might include sunlight, space for growth, nutrients, pollinators, refuges from harsh weather, or hiding places from predators. The availability of these resources will determine the carrying capacity, the maximum population size of that species the resources can sustain. Resource availability and thus maximum population size can be influenced by the presence of other competitors, particularly if competitors share resources that are in limited supply. 
+
+Few plants are suitable for studying continuous population growth because most plants have life cycles with discrete jumps in population size, their reproduction is seasonal and they respond to changes in population density by changing size and shape instead of population number (Harper, 1977). However, free-floating aquatic plants such as duckweeds (Lemna spp) or water ferns (Azolla and Salvinia) undergo continuous growth and therefore are excellent models for quantifying aspects of population growth (Clatworthy and Harper, 1962; Harper, 1977). These plants are stemless and have only one to four leaf-like structures called thalli (singular = thallus), if they are flowering plants, or fronds, if they are ferns. Roots from the thallus hang free in the water. Duckweeds can reproduce by flowering and setting seed (sexual reproduction) but seldom do. More commonly they reproduce asexually by producing a new thallus or frond directly from an old one. When a new thallus has grown large enough and has roots, it breaks loose from its parent plant and grows on its own as a separate plant. The growth of a population can be followed by counting thalli or measuring changes in biomass (dry weight).
+
+If a pond or lab beaker is inoculated with one or two thalli and conditions are favorable, the plants commence exponential growth (Fig. 1, Phase I). The growth rate of the population under these conditions is density independent; the population grows unimpeded by resource limitation or competition. We can estimate the intrinsic rate of growth (r- see the equations on following pages) by measuring the uninhibited growth of low-density populations. 
+
+As thalli accumulate, the population becomes crowded and limited by the available resources. For a period, growth appears constant (Fig. 1, Phase II) as the width and thickness of the mat of floating plants increases. Eventually the beaker or pond fills with floating plants (Fig. 1, Phase III) and the population reaches a steady state (see the following equations). At this point, for every new thallus that appears, an existing one is shaded and dies, i.e., the population size is stable. The logistic growth curve (Fig. 1) illustrates all three Phases.
+
+**Figure 1.** Number of individuals through time in a population with carrying capacity (K).
+
+OBJECTIVE:
+To investigate population dynamics of duckweed using microcosms.
+
+MATERIALS:
+1.	Microcosms (i.e., clear plastic containers)
+2.	Lemna minor individuals 
+3.	Water
+4.	Small labels or markers
+5.	Light source (natural sunlight or artificial light)
+6.	Data recording sheets
+
+First, we will explore growth rates of populations with two different initial population sizes. Working in groups of 3 – 5, follow the procedure below. Then, proceed to setting up your experiment in which nutrient levels are varied! 
+
+PROCEDURE:
+1.	Fill two microcosms with artificial pond water, 200 ml. Mark the 200 ml water level on the cup so that you can refresh the culture solution to the same volume. 
+2.	Place two healthy Lemna plants in one of the cups. Place 15 healthy Lemna plants in the second cup.
+3.	Because a plant can consist of one or more thalli, it is necessary that you now count the number of thalli in each cup. One thallus is any leaf unit that is over 1.5 mm. Record these data in the Day 0 column of Table 1.
+4.	Place the cups under fluorescent or near natural lights for a period of two weeks, check them periodically to refill the cups to the 200 ml line.
+5.	Count the number of thalli in each cup on Day 7 and Day 14. Record these data in the columns of Table 1.
+
+Table 1. Dynamics of population growth
+
+Using class data, graph the average (mean) number of thalli (N) as a function of time for the cultures that started with two plants and the cultures that started with 15 plants. 
+
+The three equations shown below describe the exponential or geometric growth of populations:
+
+Exponential population growth (expressed by the instantaneous rate of increase, r):
+dN/dt = rN
+
+Geometric population growth rate:
+N(t+1) = N(t)ert
+
+where N is the number of individuals in the population, r is the intrinsic rate of natural increase, e is the base of the natural logarithm, and t is time.
+
+The factor by which a population increases in one unit of time (ert) is the exponential or geometric growth rate of the population (λ):
+
+1)	N(t+1) = N(t)ert
+2)	log N(t) = log N(0) + rt
+3)	N(t+1) = e*N(t) = λN(t)
+
+When resources are finite, we can rearrange the exponential growth equation to include the carrying capacity of the environment:
+dN/dt = rN(1 - N/K)
+
+where K is the carrying capacity of the environment for that species.
+
+ESTIMATING GEOMETRIC GROWTH
+Let’s start by plotting population growth through time. Since population growth rate is exponential, we can plot it as log(N) over time. Plot log N as a function of t for the cultures that started with two plants. The slope of a line drawn through the mean log N at Day 0, Day 7, and Day 14 would approximate r. Make the same graph and calculations for the cultures that started with 15 plants.
+
+Do the slopes of these two lines differ? If so, how? 
+
+
+
+Now, let’s calculate geometric population growth for our two populations, using this equation: 
+Nt+1 = Nt
+
+If N day 7 =  N day 0, then  = N day 7/N day 0. Calculate  for cultures that started with two plants and for the cultures that started with 15 plants:
+
+
+
+Which is higher? What was the highest population growth rate for the class? 
+
+
+
+As the population of Lemna in your cup grows, the rate of growth will slow down. When the population reaches the carrying capacity of the cup, the growth rate of the population will be 0 (dN/dt = 0). There are two ways to estimate K for this experimental set-up. First, if you knew the area of the water surface and you knew the area of one thallus, you could estimate the number of plants it would take to cover the surface (K). Second, if you plot the geometric growth rate (λ, calculated above) for each cup, as a function of population size (Nt), you should have a linear plot where the y intercept (where N = 0) would approximate r and when λ = 1, n = K. 
+
+Plot your data below: 
+
+What is your estimated carrying capacity (K)?
+
+
+DISCUSSION 
+
+Analyze the data and discuss the factors influencing population dynamics within the microcosms (Consider the effects of competition, resource availability, and perturbations on population size and structure).
+
+
+
+
+
+
+
+
+
+
+CONCLUSIONS AND IMPLICATIONS
+
+Summarize the findings and draw conclusions about the factors influencing population dynamics and discuss the implications of the study for understanding population ecology in natural ecosystems.
+

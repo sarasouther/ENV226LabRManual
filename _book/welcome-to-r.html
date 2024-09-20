@@ -232,7 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <em>Packages</em>: This tab displays information about installed packages, and you can use it to install, update, or load packages.
 <em>Help</em>: When you need documentation or help for R functions or packages, you can use the Help tab to search for and view documentation.</p>
 <p>Typically, I select a structure in which I have my <strong>Source pane</strong> in the upper left, my <strong>Console Pane</strong> in the lower left position, my <strong>Environment Pane</strong> in the upper right corner, and the <strong>Files/Plots/Packages/Help Pane</strong> in the lower right position. You can select any position that you’d like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here’s what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won’t have to adjust positioning!</p>
-<p><img src="images:/01-intro/PaneLayout.png" /></p>
+<p><img src="images/01-intro/PaneLayout.png" /></p>
 </div>
 <div id="good-housekeeping" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Good housekeeping<a href="welcome-to-r.html#good-housekeeping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -241,9 +241,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="welcome-to-r.html#cb2-1" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co">#display file path to R studio </span></span></code></pre></div>
 <pre><code>## [1] &quot;/Users/sks379/Desktop/ENV226LabRManual&quot;</code></pre>
 <p>When you run, getwd() you will see where R is looking for files. Now, let’s tell R where we want it to access files from! First, you will need to identify your file path. To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including ‘Get info’ (check out picture below).</p>
-<p><img src="images:/01-intro/workingdirectorymac.png" />
+<p><img src="images/01-intro/workingdirectorymac.png" />
 Then, select ‘Get info’. Then, highlight the information after ‘where’ and copy it as a pathname (see picture).</p>
-<p><img src="images:/01-intro/copyingpathnamemac.png" /></p>
+<p><img src="images/01-intro/copyingpathnamemac.png" /></p>
 <p>For PCs, start by opening your File Explorer:
 Press the Windows key + E on your keyboard.
 Alternatively, you can click the “File Explorer” or “This PC” icon on your taskbar or Start menu.
@@ -258,13 +258,13 @@ Navigate to the Folder: Use the File Explorer to navigate to the folder where th
 <div id="annotating-your-code" class="section level2 hasAnchor" number="2.6">
 <h2><span class="header-section-number">2.6</span> Annotating your code<a href="welcome-to-r.html#annotating-your-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don’t want or need while coding, so I typically recommend creating an R script and annotating your that file! One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string</p>
-<p><img src="images:/01-intro/createrscript.png" /></p>
+<p><img src="images/01-intro/createrscript.png" /></p>
 </div>
 <div id="libraries" class="section level2 hasAnchor" number="2.7">
 <h2><span class="header-section-number">2.7</span> Libraries<a href="welcome-to-r.html#libraries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Base R, the fundamental, built-in set of functions, data structures, and libraries that come with the R programming language without the need for additional packages or extensions, including basic math functions, statistical analyses and visualization tools. However, one amazingly cool think about R is that folks are out there creating ‘libraries’, or a collection of R functions, data sets, and documentation bundled together into a single package, to do specialized analyses. For most tasks in R, you will need to install and load libraries. There are two methods to install libraries. Let’s start by installing an important library (or package) for data manipulation, called ‘tidyverse’ (actually several packages - hence why the name references a universe). To do this, run this code: install.packages(“tidyverse”).</p>
 <p>The weird thing about including install packages code is that you don’t want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I’ve included the install function in the text). You will need to load packages, but you update R and R studio, you won’t need to install packages after you have done it once. You can either then install the packages and delete the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. When prompted, be sure to install dependencies - this will make sure that you have any pieces of code that the library that you are installing needs to operate.</p>
-<p><img src="images:/01-intro/installlibraries.png" /></p>
+<p><img src="images/01-intro/installlibraries.png" /></p>
 <p>Excellent! You have installed a library! Now, we need to load it. AND you will need to load R packages everytime that you use R. Any functions associated with your package won’t work, unless the package is loaded, so I suggest keeping the load library code in your R script. The code is simple (see below).</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="welcome-to-r.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
 <p>Wonderful, you now have the essential knowledge base that you need to start working efficiently and effectively in R!</p>
@@ -273,7 +273,7 @@ Navigate to the Folder: Use the File Explorer to navigate to the folder where th
 <h2><span class="header-section-number">2.8</span> Organizing your code<a href="welcome-to-r.html#organizing-your-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A well-written R script will include the components we have been discussion: Annotated notes on what the script is doing and potentially even the version of R, loading commands for your libraries, and a line of code specifying your working directory. With these elements in place, you are ready to code your heart out!</p>
 <p>Here is a glimpse at what your R scripts should look like.
-<img src="images:/01-intro/RScriptSetUp.png" /></p>
+<img src="images/01-intro/RScriptSetUp.png" /></p>
 <p>And with that, welcome to the wonderful world of coding in R!</p>
 
 </div>

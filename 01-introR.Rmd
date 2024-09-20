@@ -132,6 +132,22 @@ A well-written R script will include the components we have been discussion: Ann
 
 Here is a glimpse at what your R scripts should look like.
 ![](images/01-intro/RScriptSetUp.png) 
+## Importing and exporting .csv files 
+
+You may want to import data, and export a .csv file after analyses to include as a table in your results. The code to do this is simple:
+
+```{r}
+# Read in a file
+read.csv("your_data.csv")
+
+# Write a file
+write.csv(your_object_to_export, "your_file_name.csv") 
+```
+
+Finally, one easy way to export plots is to use the 'Plots' tab in your R studio window. Simply click on the 'Plots' tab and select export - you can choose different file types and sizes when you export. 
+
+![](images/01-intro/fileexport.png) 
+Here is a nice example of a R script: [Download the R file](downloads/intro.R) 
 
 And with that, welcome to the wonderful world of coding in R!
 
