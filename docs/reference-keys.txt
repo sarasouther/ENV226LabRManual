@@ -1,4 +1,4 @@
-ecological-data-analysis-in-env-226-laboratory
+introduction
 how-to-use-this-resource
 welcome-to-r
 r-and-r-studio-installation
@@ -15,7 +15,7 @@ sampling-populations
 data-types
 describing-data
 natural-selection
-introduction
+introduction-1
 objectives
 research-question
 methods
