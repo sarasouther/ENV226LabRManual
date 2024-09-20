@@ -19,7 +19,7 @@ objectives
 research-question
 methods
 what-to-turn-in
-population-ecology
+population-ecology-practice
 week-1-lab-set-up
 week-2-3-maintaining-your-microcosms-and-measuring-population-growth
 introduction---microcosm-studies-of-population-dynamics
