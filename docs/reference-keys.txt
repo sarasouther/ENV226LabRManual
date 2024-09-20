@@ -1,5 +1,4 @@
 introduction
-how-to-use-this-resource
 welcome-to-r
 r-and-r-studio-installation
 download-the-r-statistical-software-from-the-official-r-project-website.
