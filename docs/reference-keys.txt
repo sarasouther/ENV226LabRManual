@@ -14,7 +14,7 @@ sampling-populations
 data-types
 describing-data
 natural-selection
-introduction-1
+backgrounds
 objectives
 research-question
 methods
