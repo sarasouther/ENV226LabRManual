@@ -71,9 +71,6 @@ Typically, I select a structure in which I have my **Source pane** in the upper 
 
 ![](images/01-intro/PaneLayout.png)
 
-
-
-
 ## Good housekeeping
 
 When you are coding in R, you will want to save your R or R markdown scripts and any other data files (e.g., .csv or spatial files) that you are analyzing in a common file. With good housekeeping, you will be able to seamlessly rerun your analyses at in point in time, allowing you to pick back up on projects that may have been dormant! 
