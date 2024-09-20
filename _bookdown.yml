@@ -1,5 +1,6 @@
 title: "ENV 226 Lab Online R Manual"
 delete_merged_file: true
+output_dir: "docs"
 language:
   ui:
     chapter_name: "Chapter "
@@ -11,4 +12,3 @@ rmd_files: [
   "03-NaturalSelection.Rmd",
   "04-PopulationEcology.Rmd"
 ]
-output_dir: "docs"
