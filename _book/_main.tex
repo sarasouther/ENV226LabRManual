@@ -120,7 +120,7 @@
 
 \title{Descriptive statistics}
 \author{Sara Souther}
-\date{2024-09-19}
+\date{2024-09-20}
 
 \begin{document}
 \maketitle
@@ -296,6 +296,16 @@ A well-written R script will include the components we have been discussion: Ann
 
 Here is a glimpse at what your R scripts should look like.
 \includegraphics{images/01-intro/RScriptSetUp.png}
+\#\# Importing and exporting .csv files
+
+You may want to import data, and export a .csv file after analyses to include as a table in your results. The code to do this is simple:
+
+\includegraphics{images/01-intro/importexport.png}
+
+Finally, one easy way to export plots is to use the `Plots' tab in your R studio window. Simply click on the `Plots' tab and select export - you can choose different file types and sizes when you export.
+
+\includegraphics{images/01-intro/fileexport.png}
+Here is a nice example of a R script: \href{downloads/intro.R}{Download the R file}
 
 And with that, welcome to the wonderful world of coding in R!
 
@@ -339,7 +349,7 @@ We can quickly and easily generate such a sample in R, using the sample function
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 48 60 20 42 95 58 49 98 14 44
+##  [1] 49 94 69 26 84 16 74  5 66 65
 \end{verbatim}
 
 \begin{Shaded}
@@ -679,11 +689,11 @@ We've played around a lot with data, but what do you actually need to take away 
 Now, let's play around a little more with R! For your reference, here is a guide that shows the basics formulas for calculations in R: \href{downloads/calculator.pdf}{Supplementary Material}
 
 Let's also try describing the petal lengths of 3 different plant species: Milkweed, Bluestar and Pectis using this dataset:
-\href{downloads/lesson2data.csv}{Download the example dataset}
+\href{downloads/summarystatsdata.csv}{Download the example dataset}
 The code can be used to import the data, but in case you wanted to access the data yourself - provided above!
 
 Build on this code, to generate your description of the petal lengths of your focal species:
-\href{downloads/lesson2summarystatistics.R}{R Script for Chapter 1}
+\href{downloads/summarystatistics.R}{R Script for Chapter 1}
 
 Please put your results in a document and submit to your TA in canvas!
 
