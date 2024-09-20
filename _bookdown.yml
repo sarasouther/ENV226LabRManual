@@ -12,4 +12,3 @@ rmd_files: [
   "04-PopulationEcology.Rmd"
 ]
 output_dir: "docs"
-
