@@ -5,5 +5,9 @@ language:
 resource_files: ["images/**"]
 rmd_files: [
   "index.Rmd",
-  "01-introR.Rmd",
-  "02-DataTypesDescription.Rmd"]
+  "01-IntroR.Rmd",
+  "02-DataTypesDescription.Rmd"
+  "03-NaturalSelection.Rmd",
+  "04-PopulationEcology.Rmd"]
+output_dir: "docs"
+
