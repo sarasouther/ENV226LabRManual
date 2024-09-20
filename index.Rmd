@@ -11,8 +11,8 @@ link-citations: yes
 github-repo: sarasouther/ENV226LabRManual
 ---
 
-```{r setup-intro, include=FALSE}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```{r setup intro, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Introduction
