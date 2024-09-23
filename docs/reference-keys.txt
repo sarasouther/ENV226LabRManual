@@ -22,6 +22,9 @@ research-question
 methods
 what-to-turn-in
 population-ecology-practice
-week-1-lab-set-up
-week-2-3-maintaining-your-microcosms-and-measuring-population-growth
-introduction---microcosm-studies-of-population-dynamics
+lab-set-up-week-1
+maintaining-your-microcosms-and-measuring-population-growth-week-2
+final-data-collection-and-analysis-week-3
+microcosm-studies-of-population-dynamics
+population-dynamics-basics
+assignment

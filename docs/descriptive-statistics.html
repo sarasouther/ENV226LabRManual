@@ -171,9 +171,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html"><i class="fa fa-check"></i><b>5</b> Population ecology practice</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#week-1-lab-set-up"><i class="fa fa-check"></i><b>5.1</b> Week 1: Lab set-up</a></li>
-<li class="chapter" data-level="5.2" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#week-2-3-maintaining-your-microcosms-and-measuring-population-growth"><i class="fa fa-check"></i><b>5.2</b> Week 2-3: Maintaining your microcosms and measuring population growth</a></li>
-<li class="chapter" data-level="5.3" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#introduction---microcosm-studies-of-population-dynamics"><i class="fa fa-check"></i><b>5.3</b> Introduction - Microcosm studies of population dynamics</a></li>
+<li class="chapter" data-level="5.1" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#lab-set-up-week-1"><i class="fa fa-check"></i><b>5.1</b> Lab set-up (week 1)</a></li>
+<li class="chapter" data-level="5.2" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#maintaining-your-microcosms-and-measuring-population-growth-week-2"><i class="fa fa-check"></i><b>5.2</b> Maintaining your microcosms and measuring population growth (week 2)</a></li>
+<li class="chapter" data-level="5.3" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#final-data-collection-and-analysis-week-3"><i class="fa fa-check"></i><b>5.3</b> Final data collection and analysis (week 3)</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#microcosm-studies-of-population-dynamics"><i class="fa fa-check"></i><b>5.3.1</b> Microcosm studies of population dynamics</a></li>
+<li class="chapter" data-level="5.3.2" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#population-dynamics-basics"><i class="fa fa-check"></i><b>5.3.2</b> Population dynamics basics</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#assignment"><i class="fa fa-check"></i><b>5.4</b> Assignment</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -215,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Simple Random Sampling</strong> is when every sample has an equal likelihood of being selected.</p>
 <p>We can quickly and easily generate such a sample in R, using the sample function.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="descriptive-statistics.html#cb5-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##  [1] 64 98 56 81 84 15 53 36 69 94</code></pre>
+<pre><code>##  [1] 10 99 68 78 24 95 79 15 38  9</code></pre>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="descriptive-statistics.html#cb7-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
 <span id="cb7-2"><a href="descriptive-statistics.html#cb7-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
 <span id="cb7-3"><a href="descriptive-statistics.html#cb7-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
@@ -233,7 +238,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 *Discrete = Counts of things (no decimal points/fractions)
 Data are discrete when it does not make sense to have a partial number of the variable. For instance, if counting the number of insects in a pond, it does not make sense to count a half a species.
 <strong>Examples</strong>: Number of people in a building, number of trees in a plot, number of bugs in a pond</p>
-<p><em>Continuous</em> = Numerical data that can occur at any value.
+<p><em>Continuous</em> are numerical data that can occur at any value.
 These are variables that can occur in any quantity. If you can have a fraction of this variable, it is continuous.
 <strong>Examples</strong> = Height, Weight, Length</p>
 <p><em>Ordinal variables</em> (sometimes referred to as ranked) can be categorical or numerical, but the order matters.
@@ -352,10 +357,19 @@ While standard deviation measures the variation of the sample, standard error is
 <pre><code>## [1] 4.454545</code></pre>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="descriptive-statistics.html#cb35-1" tabindex="-1"></a><span class="fu">median</span>(sedona_skewed)</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="descriptive-statistics.html#cb37-1" tabindex="-1"></a><span class="fu">hist</span>(sedona_unskewed, <span class="at">main =</span> <span class="st">&quot;Mostly Unskewed&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Plant height (cm)&quot;</span>, <span class="at">breaks=</span><span class="dv">5</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="672" />
-In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.
-<img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="descriptive-statistics.html#cb38-1" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="fu">hist</span>(sedona_unskewed, <span class="at">main =</span> <span class="st">&quot;Mostly Unskewed&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Plant height (cm)&quot;</span>, <span class="at">breaks=</span><span class="dv">5</span>)</span>
+<span id="cb38-2"><a href="descriptive-statistics.html#cb38-2" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="descriptive-statistics.html#cb38-3" tabindex="-1"></a>xfit <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(sedona_unskewed), <span class="fu">max</span>(sedona_unskewed), <span class="at">length =</span> <span class="dv">40</span>) </span>
+<span id="cb38-4"><a href="descriptive-statistics.html#cb38-4" tabindex="-1"></a>yfit <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(xfit, <span class="at">mean =</span> <span class="fu">mean</span>(sedona_unskewed), <span class="at">sd =</span> <span class="fu">sd</span>(sedona_unskewed)) </span>
+<span id="cb38-5"><a href="descriptive-statistics.html#cb38-5" tabindex="-1"></a>yfit <span class="ot">&lt;-</span> yfit <span class="sc">*</span> <span class="fu">diff</span>(h<span class="sc">$</span>mids[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]) <span class="sc">*</span> <span class="fu">length</span>(sedona_unskewed) </span>
+<span id="cb38-6"><a href="descriptive-statistics.html#cb38-6" tabindex="-1"></a></span>
+<span id="cb38-7"><a href="descriptive-statistics.html#cb38-7" tabindex="-1"></a><span class="fu">lines</span>(xfit, yfit, <span class="at">col =</span> <span class="st">&quot;black&quot;</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.png" width="672" />
 Here, we superimposed the bellshaped Normal or Gaussian distribution.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="descriptive-statistics.html#cb39-1" tabindex="-1"></a><span class="fu">hist</span>(sedona_skewed, <span class="at">main =</span> <span class="st">&quot;Skewed&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Plant height (cm)&quot;</span>, <span class="at">breaks =</span> <span class="dv">5</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="672" />
 In this example of skewed data, the tail tapers to the right, indicated that the data is skewed to the right.</p>
 <p>In order to explain outliers, we need to look at quantiles! Quantiles are proportions of your data, in other words a way to break your data into chunks to understand spread. You can break your data into as many quantiles as you would like, but it is most common to break your data into 4 parts, also called quartiles. (If you break data into 5 parts, the components are called quintiles, 10 parts = deciles, 100 parts = percentiles).</p>
@@ -363,9 +377,9 @@ In this example of skewed data, the tail tapers to the right, indicated that the
 <p>Box and whisker plots are commonly used to quickly examine quartiles. Let’s check out our plant height data again, using a box and whisker plot.
 <img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" />
 In the plot shown here, the box encapsulates the Interquartile Range (IQR); the center of the data ranging from the 25th percentile to the 75th. The black line in the middle of the box is the median (also called the 50th percentile, because it bisects the dataset; half of the data occur above the median and half below). The lines emerging from the box (whiskers) indicate the extent of the first and third quartiles, and usually corresponding with the minimum and maximum values of the dataset, unless there are <strong>outliers</strong>. An outlier is a datapoint that occurs outside of the 1st or 3rd quantile. Let’s add one to our Sedona dataset, and see how it is represented on the box and whisker plot.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="descriptive-statistics.html#cb37-1" tabindex="-1"></a><span class="co">#Let&#39;s add a plant height of 20.</span></span>
-<span id="cb37-2"><a href="descriptive-statistics.html#cb37-2" tabindex="-1"></a>sedona_skewed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">20</span>)</span>
-<span id="cb37-3"><a href="descriptive-statistics.html#cb37-3" tabindex="-1"></a><span class="fu">boxplot</span>(sedona_skewed, <span class="at">main=</span><span class="st">&quot;Skewed&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Plant height (cm)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="descriptive-statistics.html#cb40-1" tabindex="-1"></a><span class="co">#Let&#39;s add a plant height of 20.</span></span>
+<span id="cb40-2"><a href="descriptive-statistics.html#cb40-2" tabindex="-1"></a>sedona_skewed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">20</span>)</span>
+<span id="cb40-3"><a href="descriptive-statistics.html#cb40-3" tabindex="-1"></a><span class="fu">boxplot</span>(sedona_skewed, <span class="at">main=</span><span class="st">&quot;Skewed&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Plant height (cm)&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="672" />
 The outlier appears as a dot on the box and whisker plot, and is the maximum value of the dataset.</p>
 <p>One other thing to note: Standard deviation also breaks data into meaningful segments, but is only used when data conform to a normal distribution; the mean +/- 1 SD accounts for 68% of the data, +/-2 SDs contains 95% of data, and +/- 3SD includes 99% of data. That said, I’ve never presented standard deviation in a manuscript; it is much more common to include standard error or confidence intervals (discussed later).</p>

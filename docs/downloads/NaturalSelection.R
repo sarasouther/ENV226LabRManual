@@ -3,18 +3,8 @@ library(gridExtra) #REMEMBER TO INSTALL!!!
 
 #import data
 
-# URL to the raw dataset on GitHub
-url <- "https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/%20lesson2data.csv"
-
-# Import the CSV file into R
-lesson2_data <- read.csv(url)
-
-# View the first few rows of the dataset to verify
-head(lesson2_data)
-
 #change below once finalized
-setwd("/Users/sks379/Desktop/ENV226LabRManual/downloads") #laptop
-mousetable <- read.csv("naturalselectiondatasheet.csv", header=TRUE) 
+setwd("addyourworkingdirectoryhere") 
 
 # Load the data
 data <- read.csv("naturalselectiondatasheet.csv")
