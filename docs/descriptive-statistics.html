@@ -23,7 +23,7 @@
 <meta name="author" content="Sara Souther" />
 
 
-<meta name="date" content="2024-09-20" />
+<meta name="date" content="2024-09-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,10 +147,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-the-r-statistical-software-from-the-official-r-project-website."><i class="fa fa-check"></i><b>2.2</b> Download the R statistical software from the official R Project website.</a></li>
 <li class="chapter" data-level="2.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-r-studio"><i class="fa fa-check"></i><b>2.3</b> Download R studio</a></li>
 <li class="chapter" data-level="2.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#set-up-r-studio"><i class="fa fa-check"></i><b>2.4</b> Set up R studio</a></li>
-<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#good-housekeeping"><i class="fa fa-check"></i><b>2.5</b> Good housekeeping</a></li>
+<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#working-directories"><i class="fa fa-check"></i><b>2.5</b> Working directories</a></li>
 <li class="chapter" data-level="2.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#annotating-your-code"><i class="fa fa-check"></i><b>2.6</b> Annotating your code</a></li>
-<li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#libraries"><i class="fa fa-check"></i><b>2.7</b> Libraries</a></li>
-<li class="chapter" data-level="2.8" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.8</b> Organizing your code</a></li>
+<li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.7</b> Organizing your code</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive statistics</a>
 <ul>
@@ -158,6 +157,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#sampling-populations"><i class="fa fa-check"></i><b>3.2</b> Sampling populations</a></li>
 <li class="chapter" data-level="3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-types"><i class="fa fa-check"></i><b>3.3</b> Data types</a></li>
 <li class="chapter" data-level="3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#describing-data"><i class="fa fa-check"></i><b>3.4</b> Describing data</a></li>
+<li class="chapter" data-level="3.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#figures"><i class="fa fa-check"></i><b>3.5</b> Figures</a></li>
+<li class="chapter" data-level="3.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary"><i class="fa fa-check"></i><b>3.6</b> Summary</a></li>
+<li class="chapter" data-level="3.7" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#practice"><i class="fa fa-check"></i><b>3.7</b> Practice</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="natural-selection.html"><a href="natural-selection.html"><i class="fa fa-check"></i><b>4</b> Natural selection</a>
 <ul>
@@ -197,8 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 3</span> Descriptive statistics<a href="descriptive-statistics.html#descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="what-can-statistics-tell-us" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> What can statistics tell us?<a href="descriptive-statistics.html#what-can-statistics-tell-us" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Welcome to our statistical exploration of the natural world! I want you to have an intuitive understanding of what we do when we conduct statistical analysis, understand how to select the appropriate statistical analysis and the assumptions of that analysis, and make a connection between running an analysis in a statistical software package and the statisticese of those unique individuals that we call statisticians. I think this will give you the confidence to tackle any analytical situation!</p>
-<p>First off, we are <strong>not</strong> statisticians - whew! We are training to be ecologists. This means that we do not need to understand theoretical mathematical frameworks. We need to APPLY statistics appropriately. There will be limits to our mathematical understanding of statistics, and this is OKAY! Think of all of the knowledge about the natural world and conducting field work that we possess that statisticians don’t!</p>
+<p>Welcome to our statistical exploration of the natural world!</p>
 <p>Almost all statistical analysis boils down to answering 1 of 2 questions:
 <em>Do these groups differ?
 </em>Is there a relationship between these variables?</p>
@@ -214,7 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Simple Random Sampling</strong> is when every sample has an equal likelihood of being selected.</p>
 <p>We can quickly and easily generate such a sample in R, using the sample function.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="descriptive-statistics.html#cb5-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##  [1] 35 13 61 44  5 17 73 26 49 46</code></pre>
+<pre><code>##  [1]  4 47 16 89 64 10 48  7 73 70</code></pre>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="descriptive-statistics.html#cb7-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
 <span id="cb7-2"><a href="descriptive-statistics.html#cb7-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
 <span id="cb7-3"><a href="descriptive-statistics.html#cb7-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
@@ -368,28 +369,43 @@ In the plot shown here, the box encapsulates the Interquartile Range (IQR); the 
 <p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="672" />
 The outlier appears as a dot on the box and whisker plot, and is the maximum value of the dataset.</p>
 <p>One other thing to note: Standard deviation also breaks data into meaningful segments, but is only used when data conform to a normal distribution; the mean +/- 1 SD accounts for 68% of the data, +/-2 SDs contains 95% of data, and +/- 3SD includes 99% of data. That said, I’ve never presented standard deviation in a manuscript; it is much more common to include standard error or confidence intervals (discussed later).</p>
+</div>
+<div id="figures" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Figures<a href="descriptive-statistics.html#figures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Figures are a common way to show key elements of your data or statistical analysis. In this tutorial, you’ve seen both histograms and box plots (aka box and whisker plots). When presenting results in a scientific manuscript or report, figures will be accompanied by figure legends. A good figure legend provides the following information:
+1. A description of what the figure is showing you.
+2. For complex figures with multiple panels, an orientation to the structure of the figure
+3. Explanation of any symbols, colors, and/or lines
+4. Description of how variance is quantified
+5. Definitions of axes or units, if unclear
+6. Acknowledgment of data source, if data source requires attribution
+7. Implications of the figure (optional)</p>
+<p>Here is an example figure legend of a hypothetical figure showing species richness as a function of temperature across ecosystems:</p>
+<p><strong>Figure 1.</strong> Species richness increases with temperature across ecosystems. Panel A shows the mean species richness across three ecosystems: grassland (green), forest (blue), and desert (orange) from 2015 to 2020. Panel B depicts the temperature variation in these ecosystems during the same period. Circles represent data from 2015, while triangles represent data from 2020. The x-axis shows mean annual temperature (°C), and the y-axis shows species richness (number of species per 1000 m²). Error bars indicate ±1 standard deviation. The dashed line represents the best-fit linear regression (R² = 0.85, p &lt; 0.05), showing a positive correlation between temperature and species richness.</p>
+</div>
+<div id="summary" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Summary<a href="descriptive-statistics.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We’ve played around a lot with data, but what do you actually need to take away from this?
-<em>Data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)
-<strong>Why?</strong> We will select analyses based on data type.
-</em>The two basic questions that most statistical analyses answer.
-<strong>Why?</strong> This will help you define what statistics can and can’t do and bound our learning space!
-<em>Ways to describe numerical continuous data (Location, Spread, Shape, Outliers).
-<strong>Why?</strong> You will describe your results using these concepts in write-up AND these concepts will be important for certain analyses.
-</em>Know how to calculate mean, median, and standard error.
-<strong>Why?</strong> These are typical ways to describe data in results sections.
-<em>Start to familiarize yourself with mathematical annotation.
-<strong>Why?</strong> You may need to include equations in your methods section.
-</em>Start to familiarize yourself with R code.
-<strong>Why?</strong> Most researchers now use R to analyze, describe, and visualize their data.
-*Be able to interpret a histogram and box-whisker plot.
-<strong>Why?</strong> These are commonly used ways to visualize data.</p>
+1. Understand data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)
+2. Know ways to describe numerical continuous data (Location, Spread, Shape, Outliers)..
+3. Be able to calculate mean, median, and standard error.
+4. Familiarize yourself with mathematical annotation.
+5. Familiarize yourself with R code.
+6. Be able to interpret a histogram and box-whisker plot.
+7. Be able to construct an appropriate figure legend.</p>
+</div>
+<div id="practice" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Practice<a href="descriptive-statistics.html#practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now, let’s play around a little more with R! For your reference, here is a guide that shows the basics formulas for calculations in R: <a href="downloads/calculator.pdf">Supplementary Material</a></p>
 <p>Let’s also try describing the petal lengths of 3 different plant species: Milkweed, Bluestar and Pectis using this dataset:
 <a href="downloads/summarystatsdata.csv">Download the example dataset</a>
 The code can be used to import the data, but in case you wanted to access the data yourself - provided above!</p>
 <p>Build on this code, to generate your description of the petal lengths of your focal species:
 <a href="downloads/summarystatistics.R">R Script for Chapter 1</a></p>
-<p>Please put your results in a document and submit to your TA in canvas!</p>
+<p>Please put your results in a document and submit to your TA in canvas! Be sure to include:
+1. Summary statistics for your flower species (mean, median, and se)
+2. Plots that you create
+3. Appropriate figure legends for each plot, including a description of the data that a box plot shows.</p>
 
 </div>
 </div>

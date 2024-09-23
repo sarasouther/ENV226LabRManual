@@ -13,9 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## What can statistics tell us?
 
-Welcome to our statistical exploration of the natural world! I want you to have an intuitive understanding of what we do when we conduct statistical analysis, understand how to select the appropriate statistical analysis and the assumptions of that analysis, and make a connection between running an analysis in a statistical software package and the statisticese of those unique individuals that we call statisticians. I think this will give you the confidence to tackle any analytical situation! 
-
-First off, we are **not** statisticians - whew! We are training to be ecologists. This means that we do not need to understand theoretical mathematical frameworks. We need to APPLY statistics appropriately. There will be limits to our mathematical understanding of statistics, and this is OKAY! Think of all of the knowledge about the natural world and conducting field work that we possess that statisticians don't!  
+Welcome to our statistical exploration of the natural world! 
 
 Almost all statistical analysis boils down to answering 1 of 2 questions:
 *Do these groups differ?
@@ -246,21 +244,33 @@ The outlier appears as a dot on the box and whisker plot, and is the maximum val
 
 One other thing to note: Standard deviation also breaks data into meaningful segments, but is only used when data conform to a normal distribution; the mean +/- 1 SD accounts for 68% of the data, +/-2 SDs contains 95% of data, and +/- 3SD includes 99% of data. That said, I've never presented standard deviation in a manuscript; it is much more common to include standard error or confidence intervals (discussed later).
 
+## Figures
+
+Figures are a common way to show key elements of your data or statistical analysis. In this tutorial, you've seen both histograms and box plots (aka box and whisker plots). When presenting results in a scientific manuscript or report, figures will be accompanied by figure legends. A good figure legend provides the following information:
+1. A description of what the figure is showing you. 
+2. For complex figures with multiple panels, an orientation to the structure of the figure
+3. Explanation of any symbols, colors, and/or lines
+4. Description of how variance is quantified
+5. Definitions of axes or units, if unclear
+6. Acknowledgment of data source, if data source requires attribution
+7. Implications of the figure (optional)
+
+Here is an example figure legend of a hypothetical figure showing species richness as a function of temperature across ecosystems:
+
+**Figure 1.** Species richness increases with temperature across ecosystems. Panel A shows the mean species richness across three ecosystems: grassland (green), forest (blue), and desert (orange) from 2015 to 2020. Panel B depicts the temperature variation in these ecosystems during the same period. Circles represent data from 2015, while triangles represent data from 2020. The x-axis shows mean annual temperature (°C), and the y-axis shows species richness (number of species per 1000 m²). Error bars indicate ±1 standard deviation. The dashed line represents the best-fit linear regression (R² = 0.85, p < 0.05), showing a positive correlation between temperature and species richness.
+
+## Summary
+
 We've played around a lot with data, but what do you actually need to take away from this?
-*Data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)
-**Why?** We will select analyses based on data type.
-*The two basic questions that most statistical analyses answer. 
-**Why?** This will help you define what statistics can and can't do and bound our learning space!
-*Ways to describe numerical continuous data (Location, Spread, Shape, Outliers).
-**Why?** You will describe your results using these concepts in write-up AND these concepts will be important for certain analyses.
-*Know how to calculate mean, median, and standard error.
-**Why?** These are typical ways to describe data in results sections.
-*Start to familiarize yourself with mathematical annotation.
-**Why?** You may need to include equations in your methods section.
-*Start to familiarize yourself with R code.
-**Why?** Most researchers now use R to analyze, describe, and visualize their data.
-*Be able to interpret a histogram and box-whisker plot.
-**Why?** These are commonly used ways to visualize data.
+1. Understand data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)
+2. Know ways to describe numerical continuous data (Location, Spread, Shape, Outliers)..
+3. Be able to calculate mean, median, and standard error.
+4. Familiarize yourself with mathematical annotation.
+5. Familiarize yourself with R code.
+6. Be able to interpret a histogram and box-whisker plot.
+7. Be able to construct an appropriate figure legend.
+
+## Practice
 
 Now, let's play around a little more with R! For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](downloads/calculator.pdf)
 
@@ -271,7 +281,10 @@ The code can be used to import the data, but in case you wanted to access the da
 Build on this code, to generate your description of the petal lengths of your focal species:
 [R Script for Chapter 1](downloads/summarystatistics.R)
 
-Please put your results in a document and submit to your TA in canvas!
+Please put your results in a document and submit to your TA in canvas! Be sure to include:
+1. Summary statistics for your flower species (mean, median, and se)
+2. Plots that you create
+3. Appropriate figure legends for each plot, including a description of the data that a box plot shows.
 
 
 
