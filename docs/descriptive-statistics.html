@@ -215,7 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Simple Random Sampling</strong> is when every sample has an equal likelihood of being selected.</p>
 <p>We can quickly and easily generate such a sample in R, using the sample function.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="descriptive-statistics.html#cb5-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##  [1] 39 67 84 32 73 38 64 55 45 34</code></pre>
+<pre><code>##  [1] 64 98 56 81 84 15 53 36 69 94</code></pre>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="descriptive-statistics.html#cb7-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
 <span id="cb7-2"><a href="descriptive-statistics.html#cb7-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
 <span id="cb7-3"><a href="descriptive-statistics.html#cb7-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
@@ -233,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 *Discrete = Counts of things (no decimal points/fractions)
 Data are discrete when it does not make sense to have a partial number of the variable. For instance, if counting the number of insects in a pond, it does not make sense to count a half a species.
 <strong>Examples</strong>: Number of people in a building, number of trees in a plot, number of bugs in a pond</p>
-<p>*Continuous = Numerical data that can occur at any value.
+<p><em>Continuous</em> = Numerical data that can occur at any value.
 These are variables that can occur in any quantity. If you can have a fraction of this variable, it is continuous.
 <strong>Examples</strong> = Height, Weight, Length</p>
 <p><em>Ordinal variables</em> (sometimes referred to as ranked) can be categorical or numerical, but the order matters.
