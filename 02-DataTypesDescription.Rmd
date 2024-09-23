@@ -63,7 +63,7 @@ Before we start learning to present research results (analysis, description, vis
 Data are discrete when it does not make sense to have a partial number of the variable. For instance, if counting the number of insects in a pond, it does not make sense to count a half a species.
 **Examples**: Number of people in a building, number of trees in a plot, number of bugs in a pond 
 
-*Continuous = Numerical data that can occur at any value. 
+*Continuous* = Numerical data that can occur at any value. 
 These are variables that can occur in any quantity. If you can have a fraction of this variable, it is continuous.
 **Examples** = Height, Weight, Length
 
