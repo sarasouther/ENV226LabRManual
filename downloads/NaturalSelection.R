@@ -1,9 +1,10 @@
+# This code allows us to look at the effects of natural selection due to predation
+
+#Load libraries
 library(tidyverse)
 library(gridExtra) #REMEMBER TO INSTALL!!!
 
-#import data
-
-#change below once finalized
+# Set your working directory
 setwd("addyourworkingdirectoryhere") 
 
 # Load the data

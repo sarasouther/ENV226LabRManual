@@ -123,10 +123,6 @@ Let’s start by plotting population growth through time. [Download the R file](
 
 Since population growth rate is exponential, we can plot it as log (N) over time. Plot log N as a function of t for the cultures that started with two plants. The slope of a line drawn through the mean log N at Day 0, Day 7, and Day 14 would approximate r. Make the same graph and calculations for the cultures that started with 15 plants.
 
-**Do the slopes of these two lines differ? If so, how?** 
-
-
-
 Now, let’s calculate the finite rate of increase, \( \lambda \), using the equation:
 
 $$
@@ -136,10 +132,6 @@ where:
 - \( N_{t+1} \) is the population size at the final time point (e.g., Day 14),
 - \( N_t \) is the population size at the initial time point (e.g., Day 0), and
 - \( t \) is the total time (e.g., 14 days).
-
-**Which is higher? What was the highest population growth rate for the class?** 
-
-
 
 As the population of Lemna in your cup grows, the rate of growth will slow down. When the population reaches the carrying capacity of the cup, the growth rate of the population will be 0 (dN/dt = 0). If you plot the geometric growth rate (λ, calculated above) for each cup, as a function of population size (Nt), you should have a linear plot where the y intercept (where N = 0) would approximate r and when λ = 1, n = K. We derived that information by rearrange your formula for carrying capacity:
 
@@ -157,9 +149,9 @@ $$
 ## Assignment
 
 Please turn into your TA, your:
-1) Estimates of r for both populations & associated figure
-2) Estimates of finite population growth
-3) Estimate of carrying capacity & associated figure
-4) Summarize the findings and draw conclusions about the factors influencing population dynamics and discuss the implications of the study for understanding population ecology in natural ecosystems.
+1. Estimates of r for both populations & associated figure
+2. Estimates of finite population growth
+3. Estimate of carrying capacity & associated figure
+4. Summarize the findings and draw conclusions about the factors influencing population dynamics and discuss the implications of the study for understanding population ecology in natural ecosystems. Be sure to describe any differences in growth rates between the two microcosms and discuss why you might be seeing that pattern.
 
 
