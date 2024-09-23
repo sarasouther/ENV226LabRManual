@@ -56,7 +56,8 @@ Note-taking materials
 4.	Spread the fabric flat on a table and randomly sprinkle the 84 dots onto the fabric. Be sure to disperse the dots all over the fabric, not just in a small group on one part of the fabric. 
 
 5. On the spreadsheet provided here, record the frequency of each type of colored dot. 
-[Download the CSV file](downloads/naturalselectiondatasheet.csv)
+
+[Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/naturalselectiondatasheet.csv)
 
 6.	Imagine each group member is a red-tailed hawk, and that each colored dot is a mouse with a particular fur color. Each mouse runs free in its respective environment, while each hawk preys on the mice. Hawks can only prey on one mouse at a time. A hawk must “fly” the mouse back to its nest (another culture dish) each time it captures one. The hawks must hunt quickly – you will only have 45 seconds to remove 56 mice!
 
