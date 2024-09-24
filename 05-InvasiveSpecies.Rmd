@@ -38,35 +38,41 @@ Each group of 4 or 5 should have:
 
 ## Procedure
 
-### Question/hypothesis development
+### Hypothesis development
 
 In this lab, we will be characterizing a nonnative species infestation at our study site and 
-exploring where it occurs. Brainstorm with your group and write a scientific question this 
-study may address.
+exploring where it occurs. Specifically, we are interested in the question: Does disturbance increase the abundance of invasive species? 
+Look around the site. Considering the site characteristics you can observe, brainstorm with your group and write a hypothesis for how you think environmental conditions are affecting the distribution of your nonnative focal species in the area.
 
-Now, look around the site. Considering the site characteristics you can observe, brainstorm with your group and write a hypothesis for how you think environmental conditions are affecting the distribution of your nonnative focal species in the area.
+### Nonnative species density quadrats
 
-### Nonnative focal species density quadrats
+You will set your **quadrats** up along **transects**, or linear sampling features that you create with a tape measure or **transect tape**. Since you suspect that azimuth, or the direction, could influence invasive behavior, you decide to establish 4 transects, and place 4 quadrats along each transect. 
 
-Start your transect tape at one of the pin flags located on the north side of the study site. The 
-western transect is transect number 1 on your datasheet, the middle transect is transect number 2, and the eastern transect is number 3.
+You divide the field into general directions. Azimuth is measured clockwise from 0° (which corresponds to true north) up to 360°.
+-	0° or 360° = North
+- 90° = East
+- 180° = South
+- 270° = West
+
+At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. You can download the PDF by clicking [here](https://raw.githubusercontent.com/username/repository/main/downloads/example.pdf).
+
+Identify the number, and pace out the number from the table to mark the start of your transect. Then run the transect from the starting point south (north to south; see **Fig. 3**). 
+
+![](images/05-invasivespecies/TransectSetUp.png)
 
 Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west 
 side of the study site. You will sample four 4x4m quadrats along this 50m transect: one starting at 
 0m, one starting at 15m, one starting at 30m, and one starting at 45m. 
 
-At each survey point, place a pin-flag there to mark the corner. Continue 4m further down the transect  tape and place another pin-flag. 
+![](images/05-invasivespecies/invasivespecies_experimentaldesign.png)
+At each survey point, place a pin-flag there to mark the corner. Continue 4m further down the transect tape and place another pin-flag. 
 Use your meter stick/tape to measure 4m to the east of each of those pin-flags and place another 
 pin-flag at each resulting point, creating a 4x4m quadrat. 
 
-Within a quadrat, count the total number of your nonnative focal species plants and record that number. For the 12 tallest nonnative focal species plants, measure the height of each plant at its tallest stem. [Note: if there are fewer than 12 nonnative focal species plants in the quadrat, measure all of those plants.] Gently pull the stem upward if it is growing at an angle to get an accurate height measurement. All measurements should be in centimeters. Record the total number of your nonnative focal species plants and height of the 12 tallest plants in your datasheet. 
+Within a quadrat, count the total number of your nonnative focal species plants and record that number. Record the total number of your nonnative focal species plants in the column 'NumberNonNativeSpecies' in this datasheet. [Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/duckweeddatasheet.csv) 
 
 In addition, walk carefully throughout that 4x4m quadrat and look for evidence of disturbance (e.g., 
-animal waste, trails, trash, scat, etc.). Also record the number of trees (taller than the height 
-of the tallest member of your group) that are shading the quadrat and rank the presence of pine 
-needles in the quadrat with a 1 indicating no pine needles, a 2 indicating partial coverage and 3,
-indicating the ground is covered with needles in a manner similar to what you would find under a 
-pine tree.
+animal waste, trails, trash, scat, etc.). If there is disturbance in your plot, record 'Yes' if there is no disturbance record 'No' (be sure to capitalize) in this column, 'DisturbancePresent'. As evidence of more intact habitat (less disturbed), also record the number of trees (taller than the height of the tallest member of your group) that are shading the quadrat in the column, 'TreeNumber'.
 
 Repeat all of these methods until you have gathered data for all four 4x4m quadrats along the 
 transect.
