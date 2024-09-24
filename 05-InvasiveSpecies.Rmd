@@ -1,0 +1,87 @@
+---
+title: "05-InvasiveSpecies"
+author: "Sara Souther"
+date: "`r Sys.Date()`"
+output: html_document
+---
+# Invasive species lab
+
+## Introduction	
+
+In this lab, you will consider the distribution of a non-native species that has become widespread in our region. You will collect field vegetation data according to common methods in ecology and answer discussion questions after your data collection.  
+
+Biological invasions are considered one of the primary threats to biodiversity and ecological functions today. Any species that has been introduced by humans (either accidentally or on purpose) to a location it didn’t reach on its own is considered a non-native species. Other terms you might hear include exotic and alien. A non-native species that exerts a negative impact on native species is termed **invasive**. Not all non-native species become invasive: in fact, it is estimated that out of all species that are introduced, about 10% are able to establish reproducing populations in place, about 10% of those escape human-dominated areas and spread through natural areas, and about 10% of those become invasive. **Figure 1** illustrates the phases of invasion.
+
+![](images/05-invasivespecies/InvasionFigure.png)
+As non-native species establish and spread, their populations tend to follow predictable growth patterns. An initial group of individuals will reproduce and demonstrate population growth in the immediate area, slowly expanding the infestation as shown in **Figure 2**. Occasional long-distance dispersal events will establish new populations, each of which then demonstrates the same process and expands its occupied area.
+
+![](images/05-invasivespecies/InvasiveFigure2_PopGrowth.png)
+Invasive species are known to exert a range of impacts, depending on the invading organism and on the characteristics of the invaded system. Worldwide, invasive species include vertebrates, invertebrates, and plants. Invasives have been known to outcompete native species, reducing native biodiversity in the invaded locale. Thick infestations of invasive plants, where no native plants are able to persist, are known as monocultures. Other invasives act as predators or herbivores, directly damaging or preying upon native species. Such effects have resulted in extinction (for example, predation by invasive cats and rodents has resulted in extinction of ground-nesting birds on islands). Other invasive species transform ecological conditions or functions: for example, invasions may alter soil pH or stability, water table accessibility, pollinator abundance, etc.
+
+Agencies that manage forests and other natural areas must survey and monitor invasive plants within their jurisdictions. Monitoring information that is collected includes: total area infested, density or cover of the infestation, spread rate from year to year, environmental characteristics of inhabited sites. This information can help agencies predict further spread in the future. Other information that is often collected is focused on understanding the impacts of the invader, including the implications of the infestation for native species, soil characteristics, moisture availability, and ecological functions such as species interactions.
+
+In this lab, we will look at where a non-native species of your choosing occurs, measure its density, and evaluate the presence of young individuals in order to develop some inferences about likely spread rates.
+
+## Objectives
+
+To characterize the current infestation of your nonnative focal species near a recreation site between NAU’s campus and a 4-lane interstate highway, and see how this infestation is driven by disturbance to the landscape. 
+
+## Materials
+
+Each group of 4 or 5 should have: 
+
+1. 1 Tape measure (50m)
+2. 1 meter tape (or meter stick)
+3. 16 Pin-flags 
+4. Printed lab with datasheets
+5. Website for identifying invasives: https://nazinvasiveplants.org/
+
+## Procedure
+
+### Question/hypothesis development
+
+In this lab, we will be characterizing a nonnative species infestation at our study site and 
+exploring where it occurs. Brainstorm with your group and write a scientific question this 
+study may address.
+
+Now, look around the site. Considering the site characteristics you can observe, brainstorm with your group and write a hypothesis for how you think environmental conditions are affecting the distribution of your nonnative focal species in the area.
+
+### Nonnative focal species density quadrats
+
+Start your transect tape at one of the pin flags located on the north side of the study site. The 
+western transect is transect number 1 on your datasheet, the middle transect is transect number 2, and the eastern transect is number 3.
+
+Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west 
+side of the study site. You will sample four 4x4m quadrats along this 50m transect: one starting at 
+0m, one starting at 15m, one starting at 30m, and one starting at 45m. 
+
+At each survey point, place a pin-flag there to mark the corner. Continue 4m further down the transect  tape and place another pin-flag. 
+Use your meter stick/tape to measure 4m to the east of each of those pin-flags and place another 
+pin-flag at each resulting point, creating a 4x4m quadrat. 
+
+Within a quadrat, count the total number of your nonnative focal species plants and record that number. For the 12 tallest nonnative focal species plants, measure the height of each plant at its tallest stem. [Note: if there are fewer than 12 nonnative focal species plants in the quadrat, measure all of those plants.] Gently pull the stem upward if it is growing at an angle to get an accurate height measurement. All measurements should be in centimeters. Record the total number of your nonnative focal species plants and height of the 12 tallest plants in your datasheet. 
+
+In addition, walk carefully throughout that 4x4m quadrat and look for evidence of disturbance (e.g., 
+animal waste, trails, trash, scat, etc.). Also record the number of trees (taller than the height 
+of the tallest member of your group) that are shading the quadrat and rank the presence of pine 
+needles in the quadrat with a 1 indicating no pine needles, a 2 indicating partial coverage and 3,
+indicating the ground is covered with needles in a manner similar to what you would find under a 
+pine tree.
+
+Repeat all of these methods until you have gathered data for all four 4x4m quadrats along the 
+transect.
+
+Now move to the next density quadrat transect and repeat the same method of data collection for 
+your nonnative focal species count, height measurement, evidence of disturbance, number of trees, and presence of pine needles in the four quadrats along that transect line. Repeat until you have collected data at all 3 transects. When you are finished, complete the discussion questions at the end of the lab. You can (and should) work with your classmates to address these questions, but the answers must be in your own words.
+
+### Analyses
+
+## Assignment
+
+Please turn into your TA:
+1. Your question and hypothesis
+
+Answers to these questions:
+- Consider the data you took. Did you notice that quadrat plots with more your nonnative focal species also had more shade trees, or fewer shade trees?
+- What relationship, if any, did you notice between the occurrence of your nonnative focal species and pine needles on the ground? What might explain this pattern?
+- What relationship, if any, did you notice between the occurrence of your nonnative focal species and signs of disturbance? What might explain this pattern?

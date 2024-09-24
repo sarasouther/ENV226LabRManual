@@ -118,7 +118,7 @@ where:
 
 **Estimating geometric growth**
 
-Let’s start by plotting population growth through time. [Download the R file](downloads/) 
+Let’s start by plotting population growth through time. [Download the R file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/PopulationEcology.R) 
 
 
 Since population growth rate is exponential, we can plot it as log (N) over time. Plot log N as a function of t for the cultures that started with two plants. The slope of a line drawn through the mean log N at Day 0, Day 7, and Day 14 would approximate r. Make the same graph and calculations for the cultures that started with 15 plants.
