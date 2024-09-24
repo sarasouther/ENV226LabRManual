@@ -33,7 +33,7 @@ First, we will explore growth rates of populations with two different initial po
 2.	Place two healthy Lemna plants in one of the cups. Place 15 health Lemna plants in the second cup.
 3.	Because a plant can consist of one or more thalli, it is necessary that you now count the number of thalli in each cup. One thallus is any leaf unit that is over 1.5 mm. Record these data in the Day 0 column of Table 1.
 4.	Place the cups under fluorescent or near natural lights for a period of two weeks, check them periodically to refill the cups to the 200 ml line.
-5.	Count the number of thalli in each cup on Day 7 and Day 14. These counts are already reflected in the datasheet for this lab, but you will need to record population size going forward [Download the CSV file](downloads/duckweeddatasheet.csv) 
+5.	Count the number of thalli in each cup on Day 7 and Day 14. These counts are already reflected in the datasheet for this lab, but you will need to record population size going forward [Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/duckweeddatasheet.csv) 
 
 Here is some information on *L. minor* to assist you!
 ![](images/04-populationecology/LemnaInfo.png)
@@ -41,7 +41,7 @@ Here is some information on *L. minor* to assist you!
 ## Maintaining your microcosms and measuring population growth (week 2)
 
 1.	Check the microcosms and refill the cups to the 200 ml line.
-5.	Count the number of thalli in each cup on Day 7 and Day 14. Record these data in the population size column of your datasheet.
+2.	Count the number of thalli in each cup on Day 7 and Day 14. Record these data in the population size column of your datasheet.
 
 ## Final data collection and analysis (week 3)
 

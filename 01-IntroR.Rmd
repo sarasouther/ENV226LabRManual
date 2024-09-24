@@ -4,7 +4,6 @@ author: "Sara Souther"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-
 # Welcome to R!
 
 R is an open source statistical software package commonly used by researchers and other folks, who crave a free way to manipulate, analyze, and visualize date. R uses it's own programming language, which is similar to S+ (the paid precursor to R). R employs an object-oriented programming (OOP) paradigm, specifically a type of OOP known as "class-based object-oriented programming," to manage and manipulate data. In R, objects are fundamental entities, and you work with data and functions through objects. Let's walk through the basics of installing and using R!
@@ -130,7 +129,7 @@ You may want to import data, and export a .csv file after analyses to include as
 Finally, one easy way to export plots is to use the 'Plots' tab in your R studio window. Simply click on the 'Plots' tab and select export - you can choose different file types and sizes when you export. 
 
 ![](images/01-intro/fileexport.png) 
-Here is a nice example of a R script: [Download the R file](downloads/intro.R) 
+Here is a nice example of a R script: [Download the R file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/intro.R) 
 
 And with that, welcome to the wonderful world of coding in R!
 

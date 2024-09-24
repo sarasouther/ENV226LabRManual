@@ -71,7 +71,7 @@ Note-taking materials
 
 11.	If the frequencies of fur color changed in the population over time, then within your group and with everyday language describe the phenomenon that was responsible for the change. 
 
-12. Graph your results [Download the R file](downloads/NaturalSelection.R)
+12. Graph your results [Download the R file](downloads/https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/NaturalSelection.R)
 
 ## What to turn in
 
