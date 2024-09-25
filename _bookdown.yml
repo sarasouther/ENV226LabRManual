@@ -10,5 +10,7 @@ rmd_files: [
   "01-IntroR.Rmd",
   "02-DataTypesDescription.Rmd",
   "03-NaturalSelection.Rmd",
-  "04-PopulationEcology.Rmd"
+  "04-PopulationEcology.Rmd",
+  "05-InvasiveSpecies.Rmd",
+  "06-WaterQuality.Rmd"
 ]
