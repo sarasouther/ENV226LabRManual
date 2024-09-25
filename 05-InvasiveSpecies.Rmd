@@ -41,12 +41,15 @@ Each group of 4 or 5 should have:
 ### Hypothesis development
 
 In this lab, we will be characterizing a nonnative species infestation at our study site and 
-exploring where it occurs. Specifically, we are interested in the question: Does disturbance increase the abundance of invasive species? 
-Look around the site. Considering the site characteristics you can observe, brainstorm with your group and write a hypothesis for how you think environmental conditions are affecting the distribution of your nonnative focal species in the area.
+exploring where it occurs. Specifically, we are interested in the question: **Does disturbance increase the abundance of nonnative species?**
+
+Look around the site. Considering the site characteristics you can observe, brainstorm with your group and write a hypothesis for how you think environmental conditions are affecting the distribution of your nonnative focal species in the area. **Record your hypothesis** - you will need it for you lab packet!
+
+Now, what evidence will you need to accept or reject your hypothesis. Write an if/then statement to guide your work, again recording for your lab packet. Several things to know when you are writing your if/then statement, we will be measuring non-native species density as your response variable. You will be recording both evidence of disturbance (i.e., roads, trash, etc.) as a direct measure of disturbance, and tree cover as an indicator of undisturbed habitat. 
 
 ### Nonnative species density quadrats
 
-You will set your **quadrats** up along **transects**, or linear sampling features that you create with a tape measure or **transect tape**. Since you suspect that azimuth, or the direction, could influence invasive behavior, you decide to establish 4 transects, and place 4 quadrats along each transect. 
+You will set your **quadrats** up along **transects**, or linear sampling features that you create with a tape measure or **transect tape**. Since you suspect that azimuth, or the direction, could influence nonnative species behavior, you decide to establish 4 transects, and place 4 quadrats along each transect. 
 
 You divide the field into general directions. Azimuth is measured clockwise from 0° (which corresponds to true north) up to 360°.
 -	0° or 360° = North
@@ -54,12 +57,9 @@ You divide the field into general directions. Azimuth is measured clockwise from
 - 180° = South
 - 270° = West
 
-At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. You can download the PDF by clicking [here](https://raw.githubusercontent.com/username/repository/main/downloads/example.pdf).
-
-Identify the number, and pace out the number from the table to mark the start of your transect. Then run the transect from the starting point south (north to south; see **Fig. 3**). 
+At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. Use only the first two numbers of the 5 digit number. This will indicate the number of paces you will take along the northern end of the field. Then run the transect from the starting point south (north to south; see **Fig. 3**).  You can download the PDF by clicking [here](https://raw.githubusercontent.com/username/repository/main/downloads/example.pdf).
 
 ![](images/05-invasivespecies/TransectSetUp.png)
-
 Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west 
 side of the study site. You will sample four 4x4m quadrats along this 50m transect: one starting at 
 0m, one starting at 15m, one starting at 30m, and one starting at 45m. 
@@ -72,22 +72,50 @@ pin-flag at each resulting point, creating a 4x4m quadrat.
 Within a quadrat, count the total number of your nonnative focal species plants and record that number. Record the total number of your nonnative focal species plants in the column 'NumberNonNativeSpecies' in this datasheet. [Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/duckweeddatasheet.csv) 
 
 In addition, walk carefully throughout that 4x4m quadrat and look for evidence of disturbance (e.g., 
-animal waste, trails, trash, scat, etc.). If there is disturbance in your plot, record 'Yes' if there is no disturbance record 'No' (be sure to capitalize) in this column, 'DisturbancePresent'. As evidence of more intact habitat (less disturbed), also record the number of trees (taller than the height of the tallest member of your group) that are shading the quadrat in the column, 'TreeNumber'.
-
-Repeat all of these methods until you have gathered data for all four 4x4m quadrats along the 
-transect.
-
-Now move to the next density quadrat transect and repeat the same method of data collection for 
-your nonnative focal species count, height measurement, evidence of disturbance, number of trees, and presence of pine needles in the four quadrats along that transect line. Repeat until you have collected data at all 3 transects. When you are finished, complete the discussion questions at the end of the lab. You can (and should) work with your classmates to address these questions, but the answers must be in your own words.
+animal waste, trails, trash, scat, etc.). If there is disturbance in your plot, record 'Yes' if there is no disturbance record 'No' (be sure to capitalize) in this column, 'DisturbancePresent'. As evidence of more intact habitat (less disturbed), also record the number of trees (taller than the height of the tallest member of your group) that are shading the quadrat in the column, 'TreeNumber'. Repeat all of these methods until you have gathered data for all four 4x4m quadrats along all 4 transects (You will have collected data from 16 quadrats). 
 
 ### Analyses
 
+Once you collect your data and enter it into your csv file, analyze your data. We are going to conduct a statistical test on your data using linear models. A linear model is a mathematical method used to describe the relationship between one or more predictor variables (also called independent variables) and a response variable (also called the dependent variable). When we fit a linear model, we want to know if the relationship between the predictor variables and the response variable is statistically significant. This helps us determine whether the predictors have a meaningful effect on the response, or whether the observed relationships could just be due to chance.
+
+#### 1. Hypothesis Testing for Each Coefficient
+For each predictor in the model, we test the following hypotheses:
+
+- **Null Hypothesis (\( H_0 \))**: The coefficient is zero, meaning the predictor has no effect on the response variable.
+- **Alternative Hypothesis (\( H_A \))**: The coefficient is not zero, meaning the predictor does have an effect on the response variable.
+
+#### 2. P-value
+The **p-value** tells us the probability of observing the data, assuming the null hypothesis is true. For each predictor:
+- A **small p-value** (typically \( < 0.05 \)) suggests that the predictor has a significant effect on the response variable, and we reject the null hypothesis.
+- A **large p-value** (typically \( > 0.05 \)) suggests that the predictor does not have a significant effect, and we fail to reject the null hypothesis.
+
+#### 3. F-statistic (Overall Model Significance)
+The **F-statistic** tests whether the model as a whole is better than a model with no predictors (a model that only includes the intercept). This tests the null hypothesis that all the coefficients (except the intercept) are zero:
+- A **significant F-statistic** (p-value \( < 0.05 \)) suggests that the model explains a significant portion of the variation in the response variable.
+
+#### 4. R-squared
+The **R-squared** value tells us how much of the variation in the response variable is explained by the model. While this isn’t a test of significance, a higher \( R^2 \) value indicates that the model fits the data better.
+
+#### 5. Reporting your results
+
+A results statement has several important components:
+1. A description of the statistical results with an appropriate citation on your results (test statistic, p-value).
+2. If you have a *statistically significant* effect, a description of the magnitude and/or direction of the relationship, which often cites a figure. 
+
+Here is an example of what your results statement should look like:
+The position of the transect affect nonnative species density (F = 3.45, p = 0.02). Quadrats located on the southern side of the field had higher levels of invasion (Fig. 1).
+
 ## Assignment
+When you are finished, report out on the primary research question that we addressed in lab: Does disturbance affect non-native plant density? 
 
-Please turn into your TA:
-1. Your question and hypothesis
+In your brief report, provide:
+1. Your hypothesis for the question
+2. Your if/then statement describing the patterns that you expect to see in order to identify the information that you need to gather
+3. A results statement for each statistical test
+4. A figure with an appropriate legend
+5. Interpretation of your results, answering the question: Does disturbance affect non-native plant density? Did you support or refute your hypothesis?
 
-Answers to these questions:
-- Consider the data you took. Did you notice that quadrat plots with more your nonnative focal species also had more shade trees, or fewer shade trees?
-- What relationship, if any, did you notice between the occurrence of your nonnative focal species and pine needles on the ground? What might explain this pattern?
-- What relationship, if any, did you notice between the occurrence of your nonnative focal species and signs of disturbance? What might explain this pattern?
+Put this in a document and turn into your TA!
+
+
+
