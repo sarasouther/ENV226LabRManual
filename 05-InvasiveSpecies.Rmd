@@ -8,7 +8,7 @@ output: html_document
 
 ## Introduction	
 
-In this lab, you will consider the distribution of a non-native species that has become widespread in our region. You will collect field vegetation data according to common methods in ecology and answer discussion questions after your data collection.  
+In this lab, you will consider the distribution of a non-native species that has become widespread in our region. You will collect field vegetation data according to common methods in ecology and answer discussion questions after your data collection. We will be meeting near the South Commuter Lot / Disc Golf Area on campus for this lab. [Download location information](https://github.com/username/repo/raw/main/downloads/lab_handout.docx) 
 
 Biological invasions are considered one of the primary threats to biodiversity and ecological functions today. Any species that has been introduced by humans (either accidentally or on purpose) to a location it didn’t reach on its own is considered a non-native species. Other terms you might hear include exotic and alien. A non-native species that exerts a negative impact on native species is termed **invasive**. Not all non-native species become invasive: in fact, it is estimated that out of all species that are introduced, about 10% are able to establish reproducing populations in place, about 10% of those escape human-dominated areas and spread through natural areas, and about 10% of those become invasive. **Figure 1** illustrates the phases of invasion.
 
@@ -57,7 +57,7 @@ You divide the field into general directions. Azimuth is measured clockwise from
 - 180° = South
 - 270° = West
 
-At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. Use only the first two numbers of the 5 digit number. This will indicate the number of paces you will take along the northern end of the field. Then run the transect from the starting point south (north to south; see **Fig. 3**).  You can download the PDF by clicking [here](https://raw.githubusercontent.com/username/repository/main/downloads/example.pdf).
+At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. Use only the first two numbers of the 5 digit number. This will indicate the number of paces you will take along the northern end of the field. Then run the transect from the starting point south (north to south; see **Fig. 3**).  You can download the PDF by clicking [here](downloads/RandomNumberSheet.pdf).
 
 ![](images/05-invasivespecies/TransectSetUp.png)
 Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west 
