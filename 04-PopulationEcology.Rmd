@@ -17,7 +17,7 @@ In a few weeks, we will complete a lab on the population dynamics of duckweed (*
 
 ### Downloads for this lab
 
-[Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/duckweeddatasheet.csv) 
+[Download the CSV file](https://drive.google.com/uc?export=download&id=1h4GEESVZnmh84_RRqCwC0HLJ6OaG_J8d)
 
 [Download the R file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/PopulationEcology.R) 
 

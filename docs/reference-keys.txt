@@ -25,6 +25,9 @@ what-to-turn-in
 population-ecology-practice
 lab-set-up-week-1
 downloads-for-this-lab
+objectives-1
+materials
+procedure
 maintaining-your-microcosms-and-measuring-population-growth-week-2
 final-data-collection-and-analysis-week-3
 microcosm-studies-of-population-dynamics
@@ -33,9 +36,9 @@ assignment
 invasive-species-lab
 introduction-1
 downloads-for-this-lab-1
-objectives-1
-materials
-procedure
+objectives-2
+materials-1
+procedure-1
 hypothesis-development
 nonnative-species-density-quadrats
 analyses
