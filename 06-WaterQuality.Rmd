@@ -7,7 +7,7 @@ output: html_document
 ```{r water quality, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Water Quality Lab
+# Water quality
 
 ## Background
 

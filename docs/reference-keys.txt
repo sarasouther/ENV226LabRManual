@@ -57,3 +57,5 @@ water-quality-monitoring
 downloads-for-this-lab-2
 hypothesis-generation
 methods-1
+conclusion
+including-plots

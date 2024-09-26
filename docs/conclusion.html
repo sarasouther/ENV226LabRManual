@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Natural selection | Conclusion</title>
+  <title>Chapter 8 Conclusion | Conclusion</title>
   <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Natural selection | Conclusion" />
+  <meta property="og:title" content="Chapter 8 Conclusion | Conclusion" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="github-repo" content="sarasouther/ENV226LabRManual" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Natural selection | Conclusion" />
+  <meta name="twitter:title" content="Chapter 8 Conclusion | Conclusion" />
   
   <meta name="twitter:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="descriptive-statistics.html"/>
-<link rel="next" href="population-ecology-practice.html"/>
+<link rel="prev" href="water-quality-lab.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -238,62 +238,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="natural-selection" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Natural selection<a href="natural-selection.html#natural-selection" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="background" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Background<a href="natural-selection.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The living world is rich with diversity. This diversity is often examined at the level of species, with over 1.5 million species described and estimates of the total number of species on Earth ranging from 5 to 100 million (estimates vary greatly; see figure below). Yet diversity also exists within species, populations, social units, and family lineages. Variability in the features of organisms that we see today is put into even greater perspective when one considers the vast amount of diversity that occurred in previous generations. Only a fraction of this remains recorded in the fossil record.</p>
-<p>Fossils suggest that the number of species has increased over time, although some relatively brief periods of decrease are also recorded. Records also suggest that characteristics have become more complex over time. There are numerous hypotheses that could explain the origin and diversification of species. Some attribute it to divine intervention, some to extraterrestrial influence, and still others to simple physical and chemical processes that occurred in our primordial backyards.</p>
-<p>Regardless of what caused the origin and initial diversification of life, ecologists are generally curious about the sources of diversity within modern populations, and knowing what causes this diversity to be maintained, increased, or eliminated from populations. Indeed, the entire field of conservation biology is devoted to understanding and preserving natural variation within and among groups of organisms.</p>
-<p><strong>Key Terms</strong>: (you’ll want to be sure to use these in your lab report!)</p>
-<p><em>Natural selection</em>: the process by which organisms better adapted to their environment are able to survive for longer and produce more offspring.</p>
-<p><em>Fitness</em>: an organism’s relative likelihood of surviving long enough to pass on its genes. In other words, those who contribute most to the next generation exhibit the highest fitness.</p>
-<p><em>Selective environment</em>: an organism’s environment plays a role in selecting favorable traits, and traits that get selected for may be different depending on the nature of each environment.</p>
-<p><em>Selective agent</em>: a biological or physical agent that imposes selection, and thereby determines which individuals pass on genes and which do not.</p>
-</div>
-<div id="downloads-for-this-class" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Downloads for this class<a href="natural-selection.html#downloads-for-this-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://drive.google.com/uc?export=download&amp;id=167MbTJaHF4mL-8-50HvojooEPhtaO4mi">Download the CSV file</a></p>
-<p><a href="https://drive.google.com/uc?export=download&amp;id=1Iokx1NopcYemVqavTaGVGrocOmM06q8E">Download the R file</a></p>
-</div>
-<div id="objectives" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Objectives<a href="natural-selection.html#objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To understand how natural selection operates and characteristics within and among populations change over time, and to answer the following research question (especially in your lab report):</p>
-</div>
-<div id="research-question" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Research question:<a href="natural-selection.html#research-question" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Does the selective environment affect the composition of future generations?</p>
-</div>
-<div id="methods" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Methods<a href="natural-selection.html#methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Materials</em></p>
-<p>Each group of three should have:
-1 piece of patterned fabric
-7 different colors of dots (approximately 80 of each color, kept in separate piles)
-Green bowl (for discarding dots)
-Note-taking materials</p>
-<p><em>Procedure</em></p>
-<ol style="list-style-type: decimal">
-<li><p>With your group members, read through the entire procedure. Based on what you now know about the experiment, formulate a hypothesis. Write it down for inclusion in your lab report.</p></li>
-<li><p>Each group of three to four should select a fabric pattern of its choice (it’s OK if two or more groups use the same pattern) and get <em>seven</em> piles of differently colored paper dots (keep colors separate; colors include black, hot pink, green, pink/peach, dark yellow, white, blue).</p></li>
-<li><p>Count out 12 dots of each color, and mix them in a single dish.</p></li>
-<li><p>Spread the fabric flat on a table and randomly sprinkle the 84 dots onto the fabric. Be sure to disperse the dots all over the fabric, not just in a small group on one part of the fabric.</p></li>
-<li><p>On the spreadsheet provided here, record the frequency of each type of colored dot.</p></li>
-<li><p>Imagine each group member is a red-tailed hawk, and that each colored dot is a mouse with a particular fur color. Each mouse runs free in its respective environment, while each hawk preys on the mice. Hawks can only prey on one mouse at a time. A hawk must “fly” the mouse back to its nest (another culture dish) each time it captures one. The hawks must hunt quickly – you will only have 45 seconds to remove 56 mice!</p></li>
-<li><p>In the first year of predation, the hawks remove 56 mice from the population (thus, 28 mice remain in the population). Group members will remove the first 56 dots they see in 45 seconds. If you need more than 45 seconds, keep going until you remove 56, just try to go as quick as you can while following the instructions!</p></li>
-<li><p>Remove the 28 survivors from the fabric as well. Each of the survivors “overwinters” and has two offspring of the same color. Count out these new mice and incorporate them into the population. [If this requires hole-punching more of a particular color, feel free to do so.] After they’ve been incorporated, record the frequency in Table 1 of each fur color in the population (note: the population size after the new mice are incorporated should again be 84, but the frequencies of the fur colors might be different than those recorded in Step 4 of this investigation). Again, randomly sprinkle the 84 dots onto the fabric.</p></li>
-<li><p>Repeat Steps 6 -8 three times, recording the frequency of fur colors for each generation. After the third iteration of hawks preying on the population, count the remaining mice (those that would make up the fourth generation) and record in Table 1. Next to your first graph, make a bar graph showing the frequency of each type of colored dot in the final generation. Copy the two graphs into your lab report.</p></li>
-<li><p>Compare the frequencies of fur colors (dot colors) in the first generation to those in the fourth generation.</p></li>
-<li><p>If the frequencies of fur color changed in the population over time, then within your group and with everyday language describe the phenomenon that was responsible for the change.</p></li>
-<li><p>Graph your results using the R file that you downloaded</p></li>
-</ol>
-</div>
-<div id="what-to-turn-in" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> What to turn in<a href="natural-selection.html#what-to-turn-in" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Lab Report Due in 1 week on Canvas</em></p>
-<p>Your final product will be a lab report containing only research question, hypothesis, methods, and results (Format 1) as described in the “Written Lab Report Guidelines” on Canvas.</p>
-<p>Only use the data from your group of hawks and habitat. Compare the distribution of mice fur colors between the first, second, third and fourth generation to answer the research question and address how your results aligned with your hypothesis. Describe your data collection methods (outlined above) and your results. <strong>You must include one table and one set of figures based on today’s results.</strong></p>
-<p>Next week, you will turn in a completed lab report to your instructor through Canvas in which you have made your best effort to write up those components of a lab report. Then, your instructor will provide you with feedback by the following week’s class.</p>
+<div id="conclusion" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Conclusion<a href="conclusion.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="conclusion.html#cb41-1" tabindex="-1"></a><span class="fu">summary</span>(cars)</span></code></pre></div>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
+<div id="including-plots" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Including Plots<a href="conclusion.html#including-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can also embed plots, for example:</p>
+<p><img src="_main_files/figure-html/pressure-1.png" width="672" /></p>
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 
 </div>
 </div>
@@ -302,8 +263,8 @@ Note-taking materials</p>
           </div>
         </div>
       </div>
-<a href="descriptive-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="population-ecology-practice.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="water-quality-lab.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -334,7 +295,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-NaturalSelection.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/12-Conclusion.Rmd",
 "text": "Edit"
 },
 "history": {

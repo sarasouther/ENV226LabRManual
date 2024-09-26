@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Population ecology practice
+# Population ecology
 
 ## Lab set-up (week 1)
 
