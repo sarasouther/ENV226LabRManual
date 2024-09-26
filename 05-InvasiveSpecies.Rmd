@@ -4,7 +4,7 @@ author: "Sara Souther"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-```{r invasive species, include=FALSE}
+```{r Invasive species, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 # Invasive species

@@ -4,7 +4,7 @@ output: html_document
 date: "2024-09-19"
 ---
 
-```{r natural selection, include=FALSE}
+```{r Natural selection, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
