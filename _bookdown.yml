@@ -12,5 +12,6 @@ rmd_files: [
   "03-NaturalSelection.Rmd",
   "04-PopulationEcology.Rmd",
   "05-InvasiveSpecies.Rmd",
-  "06-WaterQuality.Rmd"
+  "06-WaterQuality.Rmd",
+  "12-Conclusion.Rmd"
 ]
