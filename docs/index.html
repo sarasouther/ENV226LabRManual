@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Population ecology</title>
+  <title>Water quality</title>
   <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Population ecology" />
+  <meta property="og:title" content="Water quality" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="github-repo" content="sarasouther/ENV226LabRManual" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Population ecology" />
+  <meta name="twitter:title" content="Water quality" />
   
   <meta name="twitter:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Sara Souther" />
 
 
-<meta name="date" content="2024-09-23" />
+<meta name="date" content="2024-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -66,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -164,21 +164,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="natural-selection.html"><a href="natural-selection.html"><i class="fa fa-check"></i><b>4</b> Natural selection</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="natural-selection.html"><a href="natural-selection.html#backgrounds"><i class="fa fa-check"></i><b>4.1</b> Backgrounds</a></li>
-<li class="chapter" data-level="4.2" data-path="natural-selection.html"><a href="natural-selection.html#objectives"><i class="fa fa-check"></i><b>4.2</b> Objectives</a></li>
-<li class="chapter" data-level="4.3" data-path="natural-selection.html"><a href="natural-selection.html#research-question"><i class="fa fa-check"></i><b>4.3</b> Research question:</a></li>
-<li class="chapter" data-level="4.4" data-path="natural-selection.html"><a href="natural-selection.html#methods"><i class="fa fa-check"></i><b>4.4</b> Methods</a></li>
-<li class="chapter" data-level="4.5" data-path="natural-selection.html"><a href="natural-selection.html#what-to-turn-in"><i class="fa fa-check"></i><b>4.5</b> What to turn in</a></li>
+<li class="chapter" data-level="4.2" data-path="natural-selection.html"><a href="natural-selection.html#downloads-for-this-class"><i class="fa fa-check"></i><b>4.2</b> Downloads for this class</a></li>
+<li class="chapter" data-level="4.3" data-path="natural-selection.html"><a href="natural-selection.html#objectives"><i class="fa fa-check"></i><b>4.3</b> Objectives</a></li>
+<li class="chapter" data-level="4.4" data-path="natural-selection.html"><a href="natural-selection.html#research-question"><i class="fa fa-check"></i><b>4.4</b> Research question:</a></li>
+<li class="chapter" data-level="4.5" data-path="natural-selection.html"><a href="natural-selection.html#methods"><i class="fa fa-check"></i><b>4.5</b> Methods</a></li>
+<li class="chapter" data-level="4.6" data-path="natural-selection.html"><a href="natural-selection.html#what-to-turn-in"><i class="fa fa-check"></i><b>4.6</b> What to turn in</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html"><i class="fa fa-check"></i><b>5</b> Population ecology practice</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#lab-set-up-week-1"><i class="fa fa-check"></i><b>5.1</b> Lab set-up (week 1)</a></li>
-<li class="chapter" data-level="5.2" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#maintaining-your-microcosms-and-measuring-population-growth-week-2"><i class="fa fa-check"></i><b>5.2</b> Maintaining your microcosms and measuring population growth (week 2)</a></li>
-<li class="chapter" data-level="5.3" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#final-data-collection-and-analysis-week-3"><i class="fa fa-check"></i><b>5.3</b> Final data collection and analysis (week 3)</a>
+<li class="chapter" data-level="5.2" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#downloads-for-this-lab"><i class="fa fa-check"></i><b>5.2</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="5.3" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#maintaining-your-microcosms-and-measuring-population-growth-week-2"><i class="fa fa-check"></i><b>5.3</b> Maintaining your microcosms and measuring population growth (week 2)</a></li>
+<li class="chapter" data-level="5.4" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#final-data-collection-and-analysis-week-3"><i class="fa fa-check"></i><b>5.4</b> Final data collection and analysis (week 3)</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#microcosm-studies-of-population-dynamics"><i class="fa fa-check"></i><b>5.3.1</b> Microcosm studies of population dynamics</a></li>
-<li class="chapter" data-level="5.3.2" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#population-dynamics-basics"><i class="fa fa-check"></i><b>5.3.2</b> Population dynamics basics</a></li>
+<li class="chapter" data-level="5.4.1" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#microcosm-studies-of-population-dynamics"><i class="fa fa-check"></i><b>5.4.1</b> Microcosm studies of population dynamics</a></li>
+<li class="chapter" data-level="5.4.2" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#population-dynamics-basics"><i class="fa fa-check"></i><b>5.4.2</b> Population dynamics basics</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#assignment"><i class="fa fa-check"></i><b>5.4</b> Assignment</a></li>
+<li class="chapter" data-level="5.5" data-path="population-ecology-practice.html"><a href="population-ecology-practice.html#assignment"><i class="fa fa-check"></i><b>5.5</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html"><i class="fa fa-check"></i><b>6</b> Invasive species lab</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#downloads-for-this-lab-1"><i class="fa fa-check"></i><b>6.2</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="6.3" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#objectives-1"><i class="fa fa-check"></i><b>6.3</b> Objectives</a></li>
+<li class="chapter" data-level="6.4" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#materials"><i class="fa fa-check"></i><b>6.4</b> Materials</a></li>
+<li class="chapter" data-level="6.5" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#procedure"><i class="fa fa-check"></i><b>6.5</b> Procedure</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#hypothesis-development"><i class="fa fa-check"></i><b>6.5.1</b> Hypothesis development</a></li>
+<li class="chapter" data-level="6.5.2" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#nonnative-species-density-quadrats"><i class="fa fa-check"></i><b>6.5.2</b> Nonnative species density quadrats</a></li>
+<li class="chapter" data-level="6.5.3" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#analyses"><i class="fa fa-check"></i><b>6.5.3</b> Analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="invasive-species-lab.html"><a href="invasive-species-lab.html#assignment-1"><i class="fa fa-check"></i><b>6.6</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="water-quality-lab.html"><a href="water-quality-lab.html"><i class="fa fa-check"></i><b>7</b> Water Quality Lab</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="water-quality-lab.html"><a href="water-quality-lab.html#background"><i class="fa fa-check"></i><b>7.1</b> Background</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="water-quality-lab.html"><a href="water-quality-lab.html#history-of-francis-short-pond"><i class="fa fa-check"></i><b>7.1.1</b> History of Francis Short Pond</a></li>
+<li class="chapter" data-level="7.1.2" data-path="water-quality-lab.html"><a href="water-quality-lab.html#rio-de-flag-flood-control-project"><i class="fa fa-check"></i><b>7.1.2</b> Rio de Flag Flood Control Project</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="water-quality-lab.html"><a href="water-quality-lab.html#key-water-quality-terms-and-concepts"><i class="fa fa-check"></i><b>7.2</b> Key Water Quality Terms and Concepts</a></li>
+<li class="chapter" data-level="7.3" data-path="water-quality-lab.html"><a href="water-quality-lab.html#water-quality-monitoring"><i class="fa fa-check"></i><b>7.3</b> Water Quality Monitoring:</a></li>
+<li class="chapter" data-level="7.4" data-path="water-quality-lab.html"><a href="water-quality-lab.html#downloads-for-this-lab-2"><i class="fa fa-check"></i><b>7.4</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="7.5" data-path="water-quality-lab.html"><a href="water-quality-lab.html#hypothesis-generation"><i class="fa fa-check"></i><b>7.5</b> Hypothesis generation</a></li>
+<li class="chapter" data-level="7.6" data-path="water-quality-lab.html"><a href="water-quality-lab.html#methods-1"><i class="fa fa-check"></i><b>7.6</b> Methods</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -192,7 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Population ecology</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Water quality</a>
           </h1>
         </div>
 
@@ -201,9 +230,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Population ecology</h1>
+<h1 class="title">Water quality</h1>
 <p class="author"><em>Sara Souther</em></p>
-<p class="date"><em>2024-09-23</em></p>
+<p class="date"><em>2024-09-26</em></p>
 </div>
 <div id="introduction" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
