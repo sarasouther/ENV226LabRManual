@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Welcome to R! | Conclusion</title>
+  <title>Chapter 6 Invasive species | Conclusion</title>
   <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Welcome to R! | Conclusion" />
+  <meta property="og:title" content="Chapter 6 Invasive species | Conclusion" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="github-repo" content="sarasouther/ENV226LabRManual" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Welcome to R! | Conclusion" />
+  <meta name="twitter:title" content="Chapter 6 Invasive species | Conclusion" />
   
   <meta name="twitter:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="descriptive-statistics.html"/>
+<link rel="prev" href="population-ecology.html"/>
+<link rel="next" href="water-quality.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -235,107 +235,116 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="welcome-to-r" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Welcome to R!<a href="welcome-to-r.html#welcome-to-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>R is an open source statistical software package commonly used by researchers and other folks, who crave a free way to manipulate, analyze, and visualize date. R uses it’s own programming language, which is similar to S+ (the paid precursor to R). R employs an object-oriented programming (OOP) paradigm, specifically a type of OOP known as “class-based object-oriented programming,” to manage and manipulate data. In R, objects are fundamental entities, and you work with data and functions through objects. Let’s walk through the basics of installing and using R!</p>
-<div id="r-and-r-studio-installation" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> R and R studio installation<a href="welcome-to-r.html#r-and-r-studio-installation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>You will first want to download R statistical software and R studio, which is a powerful program that interfaces with R to make your coding experience more organized and enjoyable. Notice that you need to select a version of R depending on your operating system.</p>
+<div id="invasive-species" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Invasive species<a href="invasive-species.html#invasive-species" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Introduction<a href="invasive-species.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this lab, you will consider the distribution of a non-native species that has become widespread in our region. You will collect field vegetation data according to common methods in ecology and answer discussion questions after your data collection. We will be meeting near the South Commuter Lot / Disc Golf Area on campus for this lab. <a href="https://docs.google.com/document/d/1CLyCniBl5Zu8DXZPz7UeVGhHL3ZN0lUp/export?format=pdf">Download location information</a></p>
+<p>Biological invasions are considered one of the primary threats to biodiversity and ecological functions today. Any species that has been introduced by humans (either accidentally or on purpose) to a location it didn’t reach on its own is considered a non-native species. Other terms you might hear include exotic and alien. A non-native species that exerts a negative impact on native species is termed <strong>invasive</strong>. Not all non-native species become invasive: in fact, it is estimated that out of all species that are introduced, about 10% are able to establish reproducing populations in place, about 10% of those escape human-dominated areas and spread through natural areas, and about 10% of those become invasive. <strong>Figure 1</strong> illustrates the phases of invasion.</p>
+<p><img src="images/05-invasivespecies/InvasionFigure.png" />
+As non-native species establish and spread, their populations tend to follow predictable growth patterns. An initial group of individuals will reproduce and demonstrate population growth in the immediate area, slowly expanding the infestation as shown in <strong>Figure 2</strong>. Occasional long-distance dispersal events will establish new populations, each of which then demonstrates the same process and expands its occupied area.</p>
+<p><img src="images/05-invasivespecies/InvasiveFigure2_PopGrowth.png" />
+Invasive species are known to exert a range of impacts, depending on the invading organism and on the characteristics of the invaded system. Worldwide, invasive species include vertebrates, invertebrates, and plants. Invasives have been known to outcompete native species, reducing native biodiversity in the invaded locale. Thick infestations of invasive plants, where no native plants are able to persist, are known as monocultures. Other invasives act as predators or herbivores, directly damaging or preying upon native species. Such effects have resulted in extinction (for example, predation by invasive cats and rodents has resulted in extinction of ground-nesting birds on islands). Other invasive species transform ecological conditions or functions: for example, invasions may alter soil pH or stability, water table accessibility, pollinator abundance, etc.</p>
+<p>Agencies that manage forests and other natural areas must survey and monitor invasive plants within their jurisdictions. Monitoring information that is collected includes: total area infested, density or cover of the infestation, spread rate from year to year, environmental characteristics of inhabited sites. This information can help agencies predict further spread in the future. Other information that is often collected is focused on understanding the impacts of the invader, including the implications of the infestation for native species, soil characteristics, moisture availability, and ecological functions such as species interactions.</p>
+<p>In this lab, we will look at where a non-native species of your choosing occurs, measure its density, and evaluate the presence of young individuals in order to develop some inferences about likely spread rates.</p>
 </div>
-<div id="download-the-r-statistical-software-from-the-official-r-project-website." class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Download the R statistical software from the official R Project website.<a href="welcome-to-r.html#download-the-r-statistical-software-from-the-official-r-project-website." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Open your web browser and go to the official R Project website at <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a>.</p>
-<p>Choose a CRAN Mirror: On the R Project website’s main page, you’ll see a section that says “Download and Install R.” Click on the link that says “CRAN (Comprehensive R Archive Network).” This will take you to the CRAN website.</p>
+<div id="downloads-for-this-lab-1" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Downloads for this lab<a href="invasive-species.html#downloads-for-this-lab-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://drive.google.com/uc?export=download&amp;id=1LsGwJ9vgy4qEahdXgWu53P8aJr9VvdCY">Download random number sheet</a></p>
+<p><a href="https://drive.google.com/uc?export=download&amp;id=18nRNvy3Fz3kDOyJ-KQBq9NKq1fxs0HjI">Download the CSV file</a></p>
+<p><a href="https://drive.google.com/uc?export=download&amp;id=1BoClHL9i33UcCLDSHjXS2voZA1_gJZWT">Download the R file</a></p>
+</div>
+<div id="objectives-2" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Objectives<a href="invasive-species.html#objectives-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To characterize the current infestation of your nonnative focal species near a recreation site between NAU’s campus and a 4-lane interstate highway, and see how this infestation is driven by disturbance to the landscape.</p>
+</div>
+<div id="materials-1" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Materials<a href="invasive-species.html#materials-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Each group of 4 or 5 should have:</p>
 <ol style="list-style-type: decimal">
-<li><p>Select Your Mirror: On the CRAN website, you’ll find a list of mirrors (servers) from which you can download R. Choose a mirror that is geographically close to your location, as this will generally provide faster download speeds. Click on the mirror’s link.</p></li>
-<li><p>Download R for Your Operating System: On the mirror’s page, you’ll see options to download R for various operating systems (e.g., Windows, macOS, Linux). Click on the appropriate link for your operating system.</p></li>
-<li><p>Choose the Latest Version: You’ll typically see multiple versions of R available for download. It’s recommended to choose the latest stable version unless you have a specific reason to use an older version.</p></li>
-<li><p>Download and Install: After clicking on the download link, the installation file for R will begin downloading. Once the download is complete, run the installer and follow the installation instructions for your operating system.</p></li>
-<li><p>Start Using R: After the installation is complete, you can launch R from your computer. First, let’s install RStudio, a popular integrated development environment (IDE) for R, to enhance your R programming experience.</p></li>
+<li>1 Tape measure (50m)</li>
+<li>1 meter tape (or meter stick)</li>
+<li>16 Pin-flags</li>
+<li>Printed lab with datasheets</li>
+<li>Website for identifying invasives: <a href="https://nazinvasiveplants.org/" class="uri">https://nazinvasiveplants.org/</a></li>
 </ol>
 </div>
-<div id="download-r-studio" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Download R studio<a href="welcome-to-r.html#download-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Now download R studio!</p>
-<ol style="list-style-type: decimal">
-<li><p>Visit the RStudio Website: Open your web browser and go to the official RStudio website at <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a>.</p></li>
-<li><p>Download RStudio: On the RStudio website’s main page, click on the “Products” menu at the top, and then select “RStudio” from the dropdown menu.</p></li>
-<li><p>Choose the RStudio Edition: RStudio offers different editions, including RStudio Desktop (for use on your local machine), RStudio Server (for remote access), and RStudio Workbench (formerly known as RStudio Server Pro, designed for collaboration and sharing in enterprise environments). You will want to choose the free version, RStudio Desktop.</p></li>
-<li><p>Download the Installer: After selecting the edition, you’ll be directed to a page with download options. Click on the download link for your operating system (e.g., Windows, macOS, Linux).</p></li>
-<li><p>Download and Install: The installation file for RStudio will begin downloading. Once the download is complete, run the installer and follow the installation instructions for your operating system.</p></li>
-</ol>
-<p>Start Using RStudio: After the installation is complete, you can launch RStudio from your computer.</p>
+<div id="procedure-1" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Procedure<a href="invasive-species.html#procedure-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="hypothesis-development" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Hypothesis development<a href="invasive-species.html#hypothesis-development" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this lab, we will be characterizing a nonnative species infestation at our study site and
+exploring where it occurs. Specifically, we are interested in the question: <strong>Does disturbance increase the abundance of nonnative species?</strong></p>
+<p>Look around the site. Considering the site characteristics you can observe, brainstorm with your group and write a hypothesis for how you think environmental conditions are affecting the distribution of your nonnative focal species in the area. <strong>Record your hypothesis</strong> - you will need it for you lab packet!</p>
+<p>Now, what evidence will you need to accept or reject your hypothesis. Write an if/then statement to guide your work, again recording for your lab packet. Several things to know when you are writing your if/then statement, we will be measuring non-native species density as your response variable. You will be recording both evidence of disturbance (i.e., roads, trash, etc.) as a direct measure of disturbance, and tree cover as an indicator of undisturbed habitat.</p>
 </div>
-<div id="set-up-r-studio" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Set up R studio<a href="welcome-to-r.html#set-up-r-studio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Alright, now that you’ve downloaded R and R studio, open R studio. You can customize the panes that you are visualizing in R.</p>
-<p>In RStudio, the four panels or panes are commonly referred to as:</p>
-<p><strong>Source Pane</strong>: This is where you can write, edit, and save your R scripts and code files. It is typically used for script development and editing. You can open and create new R script files in this pane.</p>
-<p><strong>Console Pane</strong>: The console is where you interact with R directly. You can execute R commands and see their output here. It’s an interactive environment where you can test and run R code line by line or in batches.</p>
-<p><strong>Environment Pane</strong>: The environment pane displays information about the objects, data frames, variables, and functions currently loaded in your R session. You can also use this pane to view data frames in a spreadsheet-like format and manage your workspace.</p>
-<p><strong>Files/Plots/Packages/Help Pane</strong>: This pane has multiple tabs and serves various purposes:
-<em>Files</em>: It shows the file system of your project, allowing you to navigate and manage files and directories.
-<em>Plots</em>: When you create plots in R, they will appear in this tab. You can interact with and export the plots from here.
-<em>Packages</em>: This tab displays information about installed packages, and you can use it to install, update, or load packages.
-<em>Help</em>: When you need documentation or help for R functions or packages, you can use the Help tab to search for and view documentation.</p>
-<p>Typically, I select a structure in which I have my <strong>Source pane</strong> in the upper left, my <strong>Console Pane</strong> in the lower left position, my <strong>Environment Pane</strong> in the upper right corner, and the <strong>Files/Plots/Packages/Help Pane</strong> in the lower right position. You can select any position that you’d like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here’s what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won’t have to adjust positioning!</p>
-<p><img src="images/01-intro/PaneLayout.png" /></p>
+<div id="nonnative-species-density-quadrats" class="section level3 hasAnchor" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Nonnative species density quadrats<a href="invasive-species.html#nonnative-species-density-quadrats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You will set your <strong>quadrats</strong> up along <strong>transects</strong>, or linear sampling features that you create with a tape measure or <strong>transect tape</strong>. Since you suspect that azimuth, or the direction, could influence nonnative species behavior, you decide to establish 4 transects, and place 4 quadrats along each transect.</p>
+<p>You divide the field into general directions. Azimuth is measured clockwise from 0° (which corresponds to true north) up to 360°.
+- 0° or 360° = North
+- 90° = East
+- 180° = South
+- 270° = West</p>
+<p>At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. Use only the first two numbers of the 5 digit number. This will indicate the number of paces you will take along the northern end of the field. Then run the transect from the starting point south (north to south; see <strong>Fig. 3</strong>).</p>
+<p><img src="images/05-invasivespecies/TransectSetUp.png" />
+Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west
+side of the study site. You will sample four 4x4m quadrats along this 50m transect: one starting at
+0m, one starting at 15m, one starting at 30m, and one starting at 45m.</p>
+<p><img src="images/05-invasivespecies/invasivespecies_experimentaldesign.png" />
+At each survey point, place a pin-flag there to mark the corner. Continue 4m further down the transect tape and place another pin-flag.
+Use your meter stick/tape to measure 4m to the east of each of those pin-flags and place another
+pin-flag at each resulting point, creating a 4x4m quadrat.</p>
+<p>Within a quadrat, count the total number of your nonnative focal species plants and record that number. Record the total number of your nonnative focal species plants in the column ‘NumberNonNativeSpecies’ in this datasheet.</p>
+<p>In addition, walk carefully throughout that 4x4m quadrat and look for evidence of disturbance (e.g.,
+animal waste, trails, trash, scat, etc.). If there is disturbance in your plot, record ‘Yes’ if there is no disturbance record ‘No’ (be sure to capitalize) in this column, ‘DisturbancePresent’. As evidence of more intact habitat (less disturbed), also record the number of trees (taller than the height of the tallest member of your group) that are shading the quadrat in the column, ‘TreeNumber’. Repeat all of these methods until you have gathered data for all four 4x4m quadrats along all 4 transects (You will have collected data from 16 quadrats).</p>
 </div>
-<div id="working-directories" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Working directories<a href="welcome-to-r.html#working-directories" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When you are coding in R, you will want to save your R or R markdown scripts and any other data files (e.g., .csv or spatial files) that you are analyzing in a common file. With good housekeeping, you will be able to seamlessly rerun your analyses at in point in time, allowing you to pick back up on projects that may have been dormant!</p>
-<p>The first step in good R housekeeping is to set a <strong>working directory</strong>. A working directory tells R where to look for and save files. As an example, let’s say I am planning to save everything associated with this tutorial to a file called Class1_IntroToR. To do this, create a new folder on your desktop called ‘R is great’. You can change your working directory using the R studio interface by selecting a working directory at the top of the console panel in the “Files” tab. If you want to change your working directory to a different location, click on the “…” (ellipsis) button in RStudio’s “Files” tab.</p>
-<p>This will allow you to browse your file system and select a new directory as your working directory. That said, you will be <em>far</em> better served by including code in your R script that directs R to your working directory. I prefer to set it within the code in order to allow you to instantaneously be able to pick up work where you left off rather than searching through files and trying to remember how you set up the code. You can view your working directory by running a simple bit of code (run code below).</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="welcome-to-r.html#cb1-1" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co">#display file path to R studio </span></span></code></pre></div>
-<pre><code>## [1] &quot;/Users/sks379/Desktop/ENV226LabRManual&quot;</code></pre>
-<p>When you run, getwd() you will see where R is looking for files. Now, let’s tell R where we want it to access files from! First, you will need to identify your file path. To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including ‘Get info’ (check out picture below).</p>
-<p><img src="images/01-intro/workingdirectorymac.png" />
-Then, select ‘Get info’. Then, highlight the information after ‘where’ and copy it as a pathname (see picture).</p>
-<p><img src="images/01-intro/copyingpathnamemac.png" />
-For PCs, start by opening your File Explorer:
-Press the Windows key + E on your keyboard.
-Alternatively, you can click the “File Explorer” or “This PC” icon on your taskbar or Start menu.
-Navigate to the Folder: Use the File Explorer to navigate to the folder where the file is located. You can click on folders to open them and view their contents.</p>
-<ol style="list-style-type: decimal">
-<li><p>Find the File: Locate the file you are interested in within the folder.</p></li>
-<li><p>View the File Path: Once you’ve found the file, you can see its full file path in the address bar at the top of the File Explorer window. The file path will be displayed as a sequence of folder and file names separated by backslashes. You can click in the address bar and copy the file path to the clipboard by pressing Ctrl + C after selecting it.</p></li>
-<li><p>Once you have copied your file path, paste that path name into the following code and set your working directory: setwd(“/Users/sks379/Desktop/R is great/”)</p></li>
-</ol>
-<p>Now R studio is directed to upload and save work to this folder.</p>
+<div id="analyses" class="section level3 hasAnchor" number="6.5.3">
+<h3><span class="header-section-number">6.5.3</span> Analyses<a href="invasive-species.html#analyses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once you collect your data and enter it into your csv file, analyze your data using your R file. We are going to conduct a statistical test on your data using linear models. A linear model is a mathematical method used to describe the relationship between one or more predictor variables (also called independent variables) and a response variable (also called the dependent variable). When we fit a linear model, we want to know if the relationship between the predictor variables and the response variable is statistically significant. This helps us determine whether the predictors have a meaningful effect on the response, or whether the observed relationships could just be due to chance.</p>
+<div id="hypothesis-testing-for-each-coefficient" class="section level4 hasAnchor" number="6.5.3.1">
+<h4><span class="header-section-number">6.5.3.1</span> 1. Hypothesis Testing for Each Coefficient<a href="invasive-species.html#hypothesis-testing-for-each-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For each predictor in the model, we test the following hypotheses:</p>
+<ul>
+<li><strong>Null Hypothesis (<span class="math inline">\(H_0\)</span>)</strong>: The coefficient is zero, meaning the predictor has no effect on the response variable.</li>
+<li><strong>Alternative Hypothesis (<span class="math inline">\(H_A\)</span>)</strong>: The coefficient is not zero, meaning the predictor does have an effect on the response variable.</li>
+</ul>
 </div>
-<div id="annotating-your-code" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Annotating your code<a href="welcome-to-r.html#annotating-your-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don’t want or need while coding, so I typically recommend creating an R script and annotating your that file! One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string</p>
-<p><img src="images/01-intro/createrscript.png" />
-## Libraries</p>
-<p>Base R, the fundamental, built-in set of functions, data structures, and libraries that come with the R programming language without the need for additional packages or extensions, including basic math functions, statistical analyses and visualization tools. However, one amazingly cool think about R is that folks are out there creating ‘libraries’, or a collection of R functions, data sets, and documentation bundled together into a single package, to do specialized analyses. For most tasks in R, you will need to install and load libraries. There are two methods to install libraries. Let’s start by installing an important library (or package) for data manipulation, called ‘tidyverse’ (actually several packages - hence why the name references a universe). To do this, run this code: install.packages(“tidyverse”).</p>
-<p>The weird thing about including install packages code is that you don’t want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I’ve included the install function in the text). You will need to load packages, you generally won’t need to install packages after you have done it once. You can either then install the packages and delete the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. When prompted, be sure to install dependencies - this will make sure that you have any pieces of code that the library that you are installing needs to operate.</p>
-<p><img src="images/01-intro/installlibraries.png" />
-Excellent! You have installed a library! Now, we need to load it. You WILL need to load R packages every time that you use R. Any functions associated with your package won’t work, unless the package is loaded, so I suggest keeping the load library code in your R script. The code to load libraries is simple (see below).</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="welcome-to-r.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.4     ✔ readr     2.1.5
-## ✔ forcats   1.0.0     ✔ stringr   1.5.1
-## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-## ✔ purrr     1.0.2     
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<div id="p-value" class="section level4 hasAnchor" number="6.5.3.2">
+<h4><span class="header-section-number">6.5.3.2</span> 2. P-value<a href="invasive-species.html#p-value" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The <strong>p-value</strong> tells us the probability of observing the data, assuming the null hypothesis is true. For each predictor:
+- A <strong>small p-value</strong> (typically <span class="math inline">\(&lt; 0.05\)</span>) suggests that the predictor has a significant effect on the response variable, and we reject the null hypothesis.
+- A <strong>large p-value</strong> (typically <span class="math inline">\(&gt; 0.05\)</span>) suggests that the predictor does not have a significant effect, and we fail to reject the null hypothesis.</p>
 </div>
-<div id="organizing-your-code" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> Organizing your code<a href="welcome-to-r.html#organizing-your-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A well-written R script will include the components we have been discussion: Annotated notes on what the script is doing and potentially even the version of R, loading commands for your libraries, and a line of code specifying your working directory. With these elements in place, you are ready to code your heart out!</p>
-<p>Here is a glimpse at what your R scripts should look like.
-<img src="images/01-intro/RScriptSetUp.png" />
-## Importing and exporting .csv files</p>
-<p>You may want to import data, and export a .csv file after analyses to include as a table in your results. The code to do this is simple:</p>
-<p><img src="images/01-intro/importexport.png" />
-Finally, one easy way to export plots is to use the ‘Plots’ tab in your R studio window. Simply click on the ‘Plots’ tab and select export - you can choose different file types and sizes when you export.</p>
-<p><img src="images/01-intro/fileexport.png" />
-Here is a nice example of a R script: <a href="https://drive.google.com/uc?export=download&amp;id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW">Download the R file</a></p>
-<p>And with that, welcome to the wonderful world of coding in R!</p>
+<div id="f-statistic-overall-model-significance" class="section level4 hasAnchor" number="6.5.3.3">
+<h4><span class="header-section-number">6.5.3.3</span> 3. F-statistic (Overall Model Significance)<a href="invasive-species.html#f-statistic-overall-model-significance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The <strong>F-statistic</strong> tests whether the model as a whole is better than a model with no predictors (a model that only includes the intercept). This tests the null hypothesis that all the coefficients (except the intercept) are zero:
+- A <strong>significant F-statistic</strong> (p-value <span class="math inline">\(&lt; 0.05\)</span>) suggests that the model explains a significant portion of the variation in the response variable.</p>
+</div>
+<div id="r-squared" class="section level4 hasAnchor" number="6.5.3.4">
+<h4><span class="header-section-number">6.5.3.4</span> 4. R-squared<a href="invasive-species.html#r-squared" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The <strong>R-squared</strong> value tells us how much of the variation in the response variable is explained by the model. While this isn’t a test of significance, a higher <span class="math inline">\(R^2\)</span> value indicates that the model fits the data better.</p>
+</div>
+<div id="reporting-your-results" class="section level4 hasAnchor" number="6.5.3.5">
+<h4><span class="header-section-number">6.5.3.5</span> 5. Reporting your results<a href="invasive-species.html#reporting-your-results" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A results statement has several important components:
+1. A description of the statistical results with an appropriate citation on your results (test statistic, p-value).
+2. If you have a <em>statistically significant</em> effect, a description of the magnitude and/or direction of the relationship, which often cites a figure.</p>
+<p>Here is an example of what your results statement should look like:
+The position of the transect affect nonnative species density (F = 3.45, p = 0.02). Quadrats located on the southern side of the field had higher levels of invasion (Fig. 1).</p>
+</div>
+</div>
+</div>
+<div id="assignment-2" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Assignment<a href="invasive-species.html#assignment-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When you are finished, report out on the primary research question that we addressed in lab: Does disturbance affect non-native plant density?</p>
+<p>In your brief report, provide:
+1. Your hypothesis for the question
+2. Your if/then statement describing the patterns that you expect to see in order to identify the information that you need to gather
+3. A results statement for each statistical test
+4. A figure with an appropriate legend
+5. Interpretation of your results, answering the question: Does disturbance affect non-native plant density? Did you support or refute your hypothesis?</p>
+<p>Put this in a document and turn into your TA!</p>
 
 </div>
 </div>
@@ -344,8 +353,8 @@ Here is a nice example of a R script: <a href="https://drive.google.com/uc?expor
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="descriptive-statistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="population-ecology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="water-quality.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -376,7 +385,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/sarasouther/ENV226LabRManual/edit/main/01-IntroR.Rmd",
+"link": "https://github.com/sarasouther/ENV226LabRManual/edit/main/05-InvasiveSpecies.Rmd",
 "text": "Edit"
 },
 "history": {

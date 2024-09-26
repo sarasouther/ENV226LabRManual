@@ -22,7 +22,7 @@ objectives
 research-question
 methods
 what-to-turn-in
-population-ecology-practice
+population-ecology
 lab-set-up-week-1
 downloads-for-this-lab
 objectives-1
@@ -33,7 +33,7 @@ final-data-collection-and-analysis-week-3
 microcosm-studies-of-population-dynamics
 population-dynamics-basics
 assignment-1
-invasive-species-lab
+invasive-species
 introduction-1
 downloads-for-this-lab-1
 objectives-2
@@ -48,7 +48,7 @@ f-statistic-overall-model-significance
 r-squared
 reporting-your-results
 assignment-2
-water-quality-lab
+water-quality
 background-1
 history-of-francis-short-pond
 rio-de-flag-flood-control-project
@@ -58,4 +58,3 @@ downloads-for-this-lab-2
 hypothesis-generation
 methods-1
 conclusion
-including-plots
