@@ -15,7 +15,6 @@ data$Order_LightesttoDarkest <- as.numeric(data$Order_LightesttoDarkest)
 
 # Define a named vector that matches coat color names to actual colors
 color_mapping <- c("White" = "white", 
-                   "Peach" = "peachpuff", 
                    "Yellow" = "yellow", 
                    "Green" = "#00FF7F", 
                    "Light blue" = "lightblue", 

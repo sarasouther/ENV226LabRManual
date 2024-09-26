@@ -28,6 +28,12 @@ Regardless of what caused the origin and initial diversification of life, ecolog
 
 *Selective agent*: a biological or physical agent that imposes selection, and thereby determines which individuals pass on genes and which do not.
 
+## Downloads for this class
+
+[Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/naturalselectiondatasheet.csv)
+
+[Download the R file](downloads/https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/NaturalSelection.R)
+
 ## Objectives
 
 To understand how natural selection operates and characteristics within and among populations change over time, and to answer the following research question (especially in your lab report):
@@ -57,8 +63,6 @@ Note-taking materials
 
 5. On the spreadsheet provided here, record the frequency of each type of colored dot. 
 
-[Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/naturalselectiondatasheet.csv)
-
 6.	Imagine each group member is a red-tailed hawk, and that each colored dot is a mouse with a particular fur color. Each mouse runs free in its respective environment, while each hawk preys on the mice. Hawks can only prey on one mouse at a time. A hawk must “fly” the mouse back to its nest (another culture dish) each time it captures one. The hawks must hunt quickly – you will only have 45 seconds to remove 56 mice!
 
 7.	In the first year of predation, the hawks remove 56 mice from the population (thus, 28 mice remain in the population).  Group members will remove the first 56 dots they see  in 45 seconds. If you need more than 45 seconds, keep going until you remove 56, just try to go as quick as you can while following the instructions!
@@ -71,7 +75,7 @@ Note-taking materials
 
 11.	If the frequencies of fur color changed in the population over time, then within your group and with everyday language describe the phenomenon that was responsible for the change. 
 
-12. Graph your results [Download the R file](downloads/https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/NaturalSelection.R)
+12. Graph your results using the R file that you downloaded 
 
 ## What to turn in
 
