@@ -2,7 +2,6 @@
 title: "Welcome to R!"
 author: "Sara Souther"
 date: "`r Sys.Date()`"
-output: html_document
 ---
 # Welcome to R!
 
