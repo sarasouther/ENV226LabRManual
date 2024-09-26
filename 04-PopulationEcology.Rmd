@@ -15,16 +15,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In a few weeks, we will complete a lab on the population dynamics of duckweed (*Lemna minor*) in microcosms. Today, we will set up your experiment. Next week, you will collect data on your populations and maintain your experiment.
 
-## Downloads for this lab
+### Downloads for this lab
 
 [Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/duckweeddatasheet.csv) 
 
 [Download the R file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/PopulationEcology.R) 
 
-**Objective**
+### Objectives
 To investigate population dynamics of duckweed using microcosms.
 
-**Materials**
+### Materials
 1.	Microcosms (i.e., clear plastic containers)
 2.	*Lemna minor* individuals 
 3.	Water
@@ -34,7 +34,7 @@ To investigate population dynamics of duckweed using microcosms.
 
 First, we will explore growth rates of populations with two different initial population sizes. Working in groups of 3 – 5, follow the procedure below. Then, proceed to setting up your experiment in which nutrient levels are varied! 
 
-**Procedure**
+### Procedure
 1.	Fill two microcosms with artificial pond water, 200 ml. Mark the 200 ml water level on the cup so that you can refresh the culture solution to the same volume. 
 2.	Place two healthy Lemna plants in one of the cups. Place 15 health Lemna plants in the second cup.
 3.	Because a plant can consist of one or more thalli, it is necessary that you now count the number of thalli in each cup. One thallus is any leaf unit that is over 1.5 mm. Record these data in the Day 0 column of Table 1.
