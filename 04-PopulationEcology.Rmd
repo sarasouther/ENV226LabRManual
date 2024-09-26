@@ -4,11 +4,6 @@ author: "Sara Souther"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-
-```{r Population ecology, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Population ecology
 
 ## Lab set-up (week 1)

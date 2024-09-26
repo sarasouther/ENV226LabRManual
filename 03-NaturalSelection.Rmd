@@ -3,11 +3,6 @@ title: "Natural selection"
 output: html_document
 date: "2024-09-19"
 ---
-
-```{r Natural selection, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Natural selection
 
 ## Background
