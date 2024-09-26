@@ -30,9 +30,9 @@ Regardless of what caused the origin and initial diversification of life, ecolog
 
 ## Downloads for this class
 
-[Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/naturalselectiondatasheet.csv)
+[Download the CSV file](https://drive.google.com/uc?export=download&id=167MbTJaHF4mL-8-50HvojooEPhtaO4mi)
 
-[Download the R file](downloads/https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/NaturalSelection.R)
+[Download the R file](https://drive.google.com/uc?export=download&id=1Iokx1NopcYemVqavTaGVGrocOmM06q8E)
 
 ## Objectives
 

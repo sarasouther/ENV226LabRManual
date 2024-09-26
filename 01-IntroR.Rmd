@@ -129,7 +129,7 @@ You may want to import data, and export a .csv file after analyses to include as
 Finally, one easy way to export plots is to use the 'Plots' tab in your R studio window. Simply click on the 'Plots' tab and select export - you can choose different file types and sizes when you export. 
 
 ![](images/01-intro/fileexport.png) 
-Here is a nice example of a R script: [Download the R file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/intro.R) 
+Here is a nice example of a R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) 
 
 And with that, welcome to the wonderful world of coding in R!
 

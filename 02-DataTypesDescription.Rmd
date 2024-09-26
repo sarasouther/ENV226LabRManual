@@ -268,14 +268,14 @@ We've played around a lot with data, but what do you actually need to take away 
 
 ## Practice
 
-Now, let's play around a little more with R! For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](downloads/calculator.pdf)
+Now, let's play around a little more with R! For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](https://drive.google.com/uc?export=download&id=1jhqzC8Qms-KajOj60hCt1jegW1b1BQPU)
 
 Let's also try describing the petal lengths of 3 different plant species: Milkweed, Bluestar and Pectis using this dataset:
-[Download the example dataset](downloads/https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/summarystatsdata.csv)
+[Download the example dataset](https://drive.google.com/uc?export=download&id=11ul4c3e6Ucqml5bmwiPmC81vgCEVno3D)
 The code can be used to import the data, but in case you wanted to access the data yourself - provided above!
 
 Build on this code, to generate your description of the petal lengths of your focal species:
-[R Script for Chapter 1](downloads/https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/summarystatistics.R)
+[R Script for Chapter 1](https://drive.google.com/uc?export=download&id=1vyxsv3L2-zMJ3MXUd0duMRngvuuYRZc9)
 
 Please put your results in a document and submit to your TA in canvas! Be sure to include:
 1. Summary statistics for your flower species (mean, median, and se)
