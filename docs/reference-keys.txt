@@ -14,9 +14,9 @@ data-types
 describing-data
 figures
 summary
-practice
+assignment
 natural-selection
-backgrounds
+background
 downloads-for-this-class
 objectives
 research-question
@@ -32,7 +32,7 @@ maintaining-your-microcosms-and-measuring-population-growth-week-2
 final-data-collection-and-analysis-week-3
 microcosm-studies-of-population-dynamics
 population-dynamics-basics
-assignment
+assignment-1
 invasive-species-lab
 introduction-1
 downloads-for-this-lab-1
@@ -47,9 +47,9 @@ p-value
 f-statistic-overall-model-significance
 r-squared
 reporting-your-results
-assignment-1
+assignment-2
 water-quality-lab
-background
+background-1
 history-of-francis-short-pond
 rio-de-flag-flood-control-project
 key-water-quality-terms-and-concepts

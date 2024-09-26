@@ -266,7 +266,7 @@ We've played around a lot with data, but what do you actually need to take away 
 6. Be able to interpret a histogram and box-whisker plot.
 7. Be able to construct an appropriate figure legend.
 
-## Practice
+## Assignment
 
 Now, let's play around a little more with R! For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](https://drive.google.com/uc?export=download&id=1jhqzC8Qms-KajOj60hCt1jegW1b1BQPU)
 

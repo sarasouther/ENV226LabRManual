@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Natural selection
 
-## Backgrounds
+## Background
 
 The living world is rich with diversity. This diversity is often examined at the level of species, with over 1.5 million species described and estimates of the total number of species on Earth ranging from 5 to 100 million (estimates vary greatly; see figure below). Yet diversity also exists within species, populations, social units, and family lineages. Variability in the features of organisms that we see today is put into even greater perspective when one considers the vast amount of diversity that occurred in previous generations. Only a fraction of this remains recorded in the fossil record. 
 
