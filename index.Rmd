@@ -3,6 +3,7 @@ title: "Introduction"
 author: "Sara Souther"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 description: |
