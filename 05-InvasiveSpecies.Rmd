@@ -25,6 +25,14 @@ Agencies that manage forests and other natural areas must survey and monitor inv
 
 In this lab, we will look at where a non-native species of your choosing occurs, measure its density, and evaluate the presence of young individuals in order to develop some inferences about likely spread rates.
 
+## Downloads for this lab 
+
+[Download random number sheet](downloads/RandomNumberSheet.pdf).
+
+[Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/invasivespeciesdatasheet.csv) 
+
+[Download the R file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/InvasiveSpecies.R)
+
 ## Objectives
 
 To characterize the current infestation of your nonnative focal species near a recreation site between NAU’s campus and a 4-lane interstate highway, and see how this infestation is driven by disturbance to the landscape. 
@@ -60,7 +68,7 @@ You divide the field into general directions. Azimuth is measured clockwise from
 - 180° = South
 - 270° = West
 
-At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. Use only the first two numbers of the 5 digit number. This will indicate the number of paces you will take along the northern end of the field. Then run the transect from the starting point south (north to south; see **Fig. 3**).  You can download the PDF by clicking [here](downloads/RandomNumberSheet.pdf).
+At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. Use only the first two numbers of the 5 digit number. This will indicate the number of paces you will take along the northern end of the field. Then run the transect from the starting point south (north to south; see **Fig. 3**).  
 
 ![](images/05-invasivespecies/TransectSetUp.png)
 Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west 
@@ -72,16 +80,14 @@ At each survey point, place a pin-flag there to mark the corner. Continue 4m fur
 Use your meter stick/tape to measure 4m to the east of each of those pin-flags and place another 
 pin-flag at each resulting point, creating a 4x4m quadrat. 
 
-Within a quadrat, count the total number of your nonnative focal species plants and record that number. Record the total number of your nonnative focal species plants in the column 'NumberNonNativeSpecies' in this datasheet. [Download the CSV file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/invasivespeciesdatasheet.csv) 
+Within a quadrat, count the total number of your nonnative focal species plants and record that number. Record the total number of your nonnative focal species plants in the column 'NumberNonNativeSpecies' in this datasheet. 
 
 In addition, walk carefully throughout that 4x4m quadrat and look for evidence of disturbance (e.g., 
 animal waste, trails, trash, scat, etc.). If there is disturbance in your plot, record 'Yes' if there is no disturbance record 'No' (be sure to capitalize) in this column, 'DisturbancePresent'. As evidence of more intact habitat (less disturbed), also record the number of trees (taller than the height of the tallest member of your group) that are shading the quadrat in the column, 'TreeNumber'. Repeat all of these methods until you have gathered data for all four 4x4m quadrats along all 4 transects (You will have collected data from 16 quadrats). 
 
 ### Analyses
 
-Once you collect your data and enter it into your csv file, analyze your data. [Download the R file](https://raw.githubusercontent.com/sarasouther/ENV226LabRManual/refs/heads/main/downloads/InvasiveSpecies.R)
-
-We are going to conduct a statistical test on your data using linear models. A linear model is a mathematical method used to describe the relationship between one or more predictor variables (also called independent variables) and a response variable (also called the dependent variable). When we fit a linear model, we want to know if the relationship between the predictor variables and the response variable is statistically significant. This helps us determine whether the predictors have a meaningful effect on the response, or whether the observed relationships could just be due to chance.
+Once you collect your data and enter it into your csv file, analyze your data using your R file. We are going to conduct a statistical test on your data using linear models. A linear model is a mathematical method used to describe the relationship between one or more predictor variables (also called independent variables) and a response variable (also called the dependent variable). When we fit a linear model, we want to know if the relationship between the predictor variables and the response variable is statistically significant. This helps us determine whether the predictors have a meaningful effect on the response, or whether the observed relationships could just be due to chance.
 
 #### 1. Hypothesis Testing for Each Coefficient
 For each predictor in the model, we test the following hypotheses:

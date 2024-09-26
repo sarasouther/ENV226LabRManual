@@ -57,6 +57,8 @@ The Environmental Protection Agency (EPA) and the Arizona Department of Environm
  
 Water is perhaps our most precious natural resource in the arid Southwest.  High-quality water is important in many aspects of our lives, from providing cities and towns with clean drinking water to supporting native fish and other wildlife species in rivers and creeks found in the region.
   
+## Downloads for this lab
+
 ## Hypothesis generation
 
 The research question for this lab is: Does the current water quality in the wash fall within standards established by environmental protection agencies worldwide?
