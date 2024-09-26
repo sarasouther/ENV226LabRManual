@@ -3,7 +3,6 @@ title: "Introduction"
 author: "Sara Souther"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 description: |
@@ -11,6 +10,7 @@ description: |
 link-citations: yes
 github-repo: sarasouther/ENV226LabRManual
 ---
+
 # Introduction
 
 This course surveys the central concepts in ecology: evolution, population dynamics, community interactions, biogeochemical cycling, and limiting factors, as well as how those factors are measured, quantified, and interact with drivers of global environmental change. This course is required for the B.S. in Environmental Sciences degree program, and also the B.S. in Environmental and Sustainability Studies degree. This course acquaints students with foundational concepts and theories in ecology and provides a broad basis for more advanced courses in subdisciplines and applications of ecology. 
