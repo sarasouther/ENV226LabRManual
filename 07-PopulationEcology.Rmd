@@ -144,6 +144,7 @@ $$
 ## Assignment
 
 Please turn into your TA, your:
+
 1. Estimates of r for both populations & associated figure
 2. Estimates of finite population growth
 3. Estimate of carrying capacity & associated figure

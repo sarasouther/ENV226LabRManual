@@ -111,13 +111,13 @@ The position of the transect affect nonnative species density (F = 3.45, p = 0.0
 When you are finished, report out on the primary research question that we addressed in lab: Does disturbance affect non-native plant density? 
 
 In your brief report, provide:
+
 1. Your hypothesis for the question
 2. Your if/then statement describing the patterns that you expect to see in order to identify the information that you need to gather
 3. A results statement for each statistical test
 4. A figure with an appropriate legend
 5. Interpretation of your results, answering the question: Does disturbance affect non-native plant density? Did you support or refute your hypothesis?
 
-Put this in a document and turn into your TA!
-
+Put this in a document and turn it into your TA!
 
 

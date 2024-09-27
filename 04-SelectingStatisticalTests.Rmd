@@ -1,0 +1,27 @@
+---
+title: "Selecting Statistical Tests"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## A foray into statistics
+
+Last week we talked about data types and describing data. This week we are applying concepts that we learned last week to select (and run) a statistical analysis. When conducting an analysis, a dataset will contain one or more **response variables** (aka y-variables, dependent variables) and one or more **explanatory variables** (aka x-variables, independent variables). The data types of the explanatory and response variables determine which statistical test we use.
+
+**Brief review**: Explanatory variables are used to explain variation in response variables. For instance, imagine that we want to identify areas that support high numbers of plants from the genus Mitella. We hypothesize that Mitella occurrence is positively related to water supply (i.e., the number of Mitella plants goes up as water availability increases). In this case, my response variable would be number of plants in genus Mitella, and my explanatory variable would be some measure of water supply. 
+
+## Selecting statistical analyses
+
+Below, you will see a very simple decision matrix for selecting statistical analyses. We will build on this basic matrix and move into alternative ways of conducting the analyses indicated within the matrix throughout the semester. However, this basic structure gives us a great launch point for structuring the next discussions. Also, the statistical analyses presented below are super common in social and ecological sciences!  
+
+![Select the statistical analysis!](/Users/sks379/Desktop/GraduateStudents/Stats and Lit Review Lessons/Class4_SelectingStatisticalAnalyses/DecisionMatrix.png)
+When both the response and explanatory variables are **categorical**, we use what is called a **G-test**! 
+
+
+
+
+
+

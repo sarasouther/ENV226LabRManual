@@ -14,8 +14,7 @@ About 40 years ago (in the late 60s), the city of Flagstaff was considering pavi
 
 In more recent years high vegetation levels (algae, bulrushes etc.) have affected water quality, habitat, and recreational and educational uses of the pond. The city underwent one major restoration project in 2005 where it drained the pond and dredged it. That grant project also added a sediment cleanout area, a small spillway and a wetland to filter some of the storm runoff that enters the pond. An aeration system helps keep the pond livable for fish and other wildlife.
 
-The city completed a similar process in 2015, removing vegetation and restoring the trail around the pond.
-The overgrown vegetation is a problem because during the times when those plants aren’t photosynthesizing, such as at night or when the pond is covered in ice, they respire, pulling oxygen from the water. That lack of oxygen has caused fish die-offs in recent years.
+The city completed a similar process in 2015, removing vegetation and restoring the trail around the pond. The overgrown vegetation is a problem because during the times when those plants aren’t photosynthesizing, such as at night or when the pond is covered in ice, they respire, pulling oxygen from the water. That lack of oxygen has caused fish die-offs in recent years.
 
 The Arizona Department of Game and Fish regularly stocks the pond with hundreds of pounds of catfish, largemouth bass and bluegill sunfish. The pond also has nonnative Siberian elm and Russian olive trees that volunteers have tried to address in the past. The pond is supplemented with reclaimed water (in addition to whatever comes down the Rio de Flag channel).
 
@@ -29,26 +28,33 @@ The **Rio de Flag Flood Control Project** is a large-scale infrastructure initia
 - **Status**: While portions of the project have been completed, such as some channel improvements, the full implementation has been delayed due to funding and design challenges. Full completion is expected to significantly reduce the risk of flooding in Flagstaff.
 
 Francis Short Pond plays an important role in the Rio de Flag Flood Control Project, including:
-1.	**Stormwater Retention**: Francis Short Pond helps capture stormwater runoff from nearby areas, acting as a retention basin. This helps reduce the volume of water flowing into the Rio de Flag during heavy rain events, contributing to flood control by temporarily storing excess water.
-2.	**Flood Mitigation**: The pond reduces the pressure on the Rio de Flag’s natural channel by holding stormwater, which helps manage water flow and reduce the risk of downstream flooding. By retaining stormwater, it lowers the volume of water that reaches the Rio de Flag during peak rain events, which is crucial in preventing flood events in urban areas like downtown Flagstaff and the Southside neighborhood.
-3.	**Water Quality Improvement**: The pond can help improve city water quality by acting as a buffer zone for sediments and pollutants before they enter the Rio de Flag system. As a retention basin, it allows suspended sediments, nutrients, and pollutants to settle out of the water column, preventing them from being washed downstream into more sensitive areas.
 
-Given this, how do you think Rio de Flag Flood Control Project will affect the water quality at Francis Short Pond? 
+1. **Stormwater Retention**: Francis Short Pond helps capture stormwater runoff from nearby areas, acting as a retention basin. This helps reduce the volume of water flowing into the Rio de Flag during heavy rain events, contributing to flood control by temporarily storing excess water.
+2. **Flood Mitigation**: The pond reduces the pressure on the Rio de Flag’s natural channel by holding stormwater, which helps manage water flow and reduce the risk of downstream flooding. By retaining stormwater, it lowers the volume of water that reaches the Rio de Flag during peak rain events, which is crucial in preventing flood events in urban areas like downtown Flagstaff and the Southside neighborhood.
+3. **Water Quality Improvement**: The pond can help improve city water quality by acting as a buffer zone for sediments and pollutants before they enter the Rio de Flag system. As a retention basin, it allows suspended sediments, nutrients, and pollutants to settle out of the water column, preventing them from being washed downstream into more sensitive areas.
+
+**Given this, how do you think Rio de Flag Flood Control Project will affect the water quality at Francis Short Pond?** 
 
 ## Key Water Quality Terms and Concepts
+
 - **Dissolved Oxygen (D.O.)** – Oxygen that is dissolved in water; the most important indicator of water body health for the support of aquatic ecosystems. 
-- **Effluent** – Wastewater (sewage) that has been treated at a wastewater treatment plant. In the US, treated effluent is discharged.
-Nitrate(NO3-)– a nitrogen-containing organic molecule that is found in fertilizer and can be readily used by plants; excess nitrate in water can cause eutrophication. Other sources of nitrates include municipal and industrial waste water, septic tanks and private sewage disposal systems, urban drainage and decaying plant debris.
-Phosphate(PO4-)– a phosphorus-containing organic molecule that is derived from rocks or detergents; excess phosphate in water can cause eutrophication. Because phosphorus tends to attach to soil particles, it moves into surface-water bodies as a result of erosion and runoff into the water. 
-pH– a measurement of how acidic or basic a solution is; technically, it is the concentration of hydrogen ions (H+) in a liquid. Perfectly neutral = pH of 7. Natural changes in pH occur with interactions between the water source and surrounding rock. pH can also vary with precipitation (especially acid rain) and wastewater or mining discharges. 
-Total dissolved solids (TDS) - inorganic salts (principally calcium, magnesium, potassium, sodium, bicarbonates, chlorides, and sulfates) and some small amounts of organic matter that are dissolved in water. High TDS readings can be the result of water running through a region that has rocks with a high salt content. Human-caused sources include agricultural and urban runoff, wastewater discharges, industrial wastewater and salt that is used to de-ice roads.
+- **Effluent**: Wastewater (sewage) that has been treated at a wastewater treatment plant. In the US, treated effluent is discharged.
+- **Nitrate(NO3-)**: A nitrogen-containing organic molecule that is found in fertilizer and can be readily used by plants; excess nitrate in water can cause eutrophication. Other sources of nitrates include municipal and industrial waste water, septic tanks and private sewage disposal systems, urban drainage and decaying plant debris.
+- **Phosphate(PO4-)**: A phosphorus-containing organic molecule that is derived from rocks or detergents; excess phosphate in water can cause eutrophication. Because phosphorus tends to attach to soil particles, it moves into surface-water bodies as a result of erosion and runoff into the water. 
+- **pH**: A measurement of how acidic or basic a solution is; technically, it is the concentration of hydrogen ions (H+) in a liquid. Perfectly neutral = pH of 7. Natural changes in pH occur with interactions between the water source and surrounding rock. pH can also vary with precipitation (especially acid rain) and wastewater or mining discharges. 
+- **Total dissolved solids (TDS)** Inorganic salts (principally calcium, magnesium, potassium, sodium, bicarbonates, chlorides, and sulfates) and some small amounts of organic matter that are dissolved in water. High TDS readings can be the result of water running through a region that has rocks with a high salt content. Human-caused sources include agricultural and urban runoff, wastewater discharges, industrial wastewater and salt that is used to de-ice roads.
 
 ## Water Quality Monitoring:
+
 The Environmental Protection Agency (EPA) and the Arizona Department of Environmental Quality (AZDEQ) set safe levels for naturally-occurring chemicals and contaminants in Arizona’s waters.  Water quality standards exist for drinking water, surface water, and wastewater effluent and vary depending on the water source and the intended use. Of the three sets of standards, drinking water standards are the strictest.  The EPA currently regulates approximately 90 contaminants that occur in drinking water but adds to the list of regulated contaminants as we learn more about the effects of various chemicals on human health.
  
 Water is perhaps our most precious natural resource in the arid Southwest.  High-quality water is important in many aspects of our lives, from providing cities and towns with clean drinking water to supporting native fish and other wildlife species in rivers and creeks found in the region.
   
 ## Downloads for this lab
+
+If you conduct the tests in the field, here is location information on where to meet [Download the map](https://drive.google.com/uc?export=download&id=1BGRB2hnSc7O_xM7g68wryQDFgTO3Sd4t)
+
+[Download the excel file](https://docs.google.com/spreadsheets/d/19m-QEhLQ0SBdH81q0OG5gQtrhm1Z0C8x/export?format=xlsx) 
 
 ## Hypothesis generation
 
@@ -68,43 +74,20 @@ Divide into four groups, and make sure that the backpack kit that you have has i
  5) dissolved oxygen (dO)
  6) total dissolved solids (TDS)
 
-STEP 1: GET NITRILE EXAM GLOVES FROM YOUR LAB INSTRUCTOR BEFORE HANDLING ANY CHEMICALS
+**GET NITRILE EXAM GLOVES FROM YOUR LAB INSTRUCTOR BEFORE HANDLING ANY CHEMICALS**
 After you have the necessary number of gloves, carefully follow the instructions for each water quality test, detailed on the laminated cards. It is a good idea to read over the instructions for each test before you run the test, to make sure you don’t forget or miss any steps. Gather all solid waste into the black trashbag provided, and place all liquid waste into the appropriately labeled waste bottles provided – it is very important that we remove all chemicals and trash from the pond so that we are not contaminating the environment.
 
-Data Table
-Record the results of your tests below. Compare your results with other groups to ensure you all conducted the tests properly. If your numbers are way off, consult with your lab instructor. 
+### Record and compare your results
+Record the results of your tests in the excel file. Compare your results with other groups to ensure you all conducted the tests properly. If your numbers are way off, consult with your lab instructor. Now, compare the results you found with the global water quality standards (no need for a statistical test). Is the Francis Short Pond water within standard ranges for water quality? 
 
+## Assignment 
 
+Turn into your TA:
 
-Francis Short Pond
-Water quality standard for US aquatic ecosystems
-Nitrate (N)
-
-
-<41 ppm
-Phosphorus (P)
-
-
-<10 ppm
-Water temperature (T)
-
-
-varies
-Water pH (pH)
-
-
-6.5-8.5
-Dissolved Oxygen (dO)
-
-
-4-8 mg/L
-Total Dissolved Solids (TDS)
-
-
-<450 mg/L
-
-Now, compare the results you found with the global water quality standards in the right hand column of the table. Is the Francis Short Pond water within standard ranges for water quality? 
-
+1. Your hypothesis
+2. Your if/then statement
+3. Your table with water quality results
+4. Your answer to the question: Is the Francis Short Pond water within standard ranges for water quality? 
 
 
 

@@ -272,6 +272,7 @@ Build on this code, to generate your description of the petal lengths of your fo
 [R Script for Chapter 1](https://drive.google.com/uc?export=download&id=1vyxsv3L2-zMJ3MXUd0duMRngvuuYRZc9)
 
 Please put your results in a document and submit to your TA in canvas! Be sure to include:
+
 1. Summary statistics for your flower species (mean, median, and se)
 2. Plots that you create
 3. Appropriate figure legends for each plot, including a description of the data that a box plot shows.
