@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+#title: "Introduction"
 #author: "Sara Souther"
 #date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
