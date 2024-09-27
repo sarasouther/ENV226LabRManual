@@ -1,8 +1,3 @@
----
-title: "Welcome to R"
-author: "Sara Souther"
-date: "`r Sys.Date()`"
----
 # Welcome to R
 
 R is an open source statistical software package commonly used by researchers and other folks, who crave a free way to manipulate, analyze, and visualize date. R uses it's own programming language, which is similar to S+ (the paid precursor to R). R employs an object-oriented programming (OOP) paradigm, specifically a type of OOP known as "class-based object-oriented programming," to manage and manipulate data. In R, objects are fundamental entities, and you work with data and functions through objects. Let's walk through the basics of installing and using R!
