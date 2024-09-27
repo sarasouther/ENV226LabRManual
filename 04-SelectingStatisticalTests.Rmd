@@ -1,11 +1,4 @@
----
-title: "Selecting Statistical Tests"
-output: pdf_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Selecting statistical tests"
 
 ## A foray into statistics
 

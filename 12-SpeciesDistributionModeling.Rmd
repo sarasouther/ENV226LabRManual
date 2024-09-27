@@ -1,15 +1,6 @@
----
-title: "Species Distribution Modeling"
-output: pdf_document
-date: "2024-2-4"
-fig_caption: yes
----
+# Species Distribution Modeling
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
-## Species Distribution Models (SDMs)
+## Introduction 
 
 Species distribution models (a.k.a.; ecological niche models, habitat models) relate environmental predictors like climate, elevation, or soil characteristics to species presence or abundance. These relationships are used to project likelihood of occurrence across space, by calculating the likelihood of occurrence across the study area using values associated with raster maps of the environmental variables in the model (**Fig. 1**). Most SDMs are correlative models that mathematically describe observed patterns of occurrence, and that do not incorporate underlying mechanisms in model projections. Understanding the limitations of correlative models (discussed below) is important for deciding when to use these models *and* interpreting your results. 
 
@@ -170,7 +161,7 @@ names(prethindata)[1:3] <- c("LAT", "LON", "SPEC")
 thinned_data <- spThin::thin(loc.data = prethindata, 
                   lat.col = "LAT", long.col = "LON",
                   spec.col = "SPEC",
-                  thin.par = 5, reps = 100, #thinning 5km
+                  thin.par = 30, reps = 100, #thinning 5km
                   locs.thinned.list.return = TRUE,
                   write.files=FALSE,
                   write.log.file=FALSE)

@@ -1,11 +1,4 @@
----
-title: "A Simple Statistical Test"
-output: pdf_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Basic statistical testing 
 
 We will highlight the basic components of a statistical test with a very simple statistical 'tailed' test. For this example, we will:
 *State a hypothesis
@@ -13,7 +6,7 @@ We will highlight the basic components of a statistical test with a very simple 
 *Determine the p-value
 *Interpret results
 
-## Basic hypothesis testing review
+## Hypothesis testing review
 
 We are all familiar with the basic scientific process:  A researcher makes observations about the natural world, then generates a hypothesis to test a particular explanation of an observed phenomenon within the system, rejects or fails to reject the hypothesis, and reports these findings, growing the understanding of the system. In most day-to-day research, researchers perform the scientific process intuitively, rather than explicitly. For instance, I have never included hypotheses in a manuscript. This isn't to say you can't include hypotheses, just that most journals don't require writing your methods this way, and often space constraints and readability considerations lead authors to avoid including specific hypotheses in write-ups. Frequently, I will include hypotheses in a research proposal to help illustrate key aspects of the system and demonstrate that the statistical tests are testable, but not always! In other words, hypothesis testing is the foundation of scientific inquiry, but easily overlooked, since it often isn't necessary to explicitly state hypotheses to create scientific products. 
 
@@ -84,7 +77,7 @@ Let's do that now:
 
 We probably generated something that looks like the figure below. This is referred to a probability distribution and expresses the relative frequency of particular events occurring. Frequentist statistics derives its name from this probability distribution.
 
-```{r cars}
+```{r}
 paws <- 0:18
 plot(paws, dbinom(paws, 18, 0.5), type='h', ylab="Probability", xlab="Number Right-pawed Cats")
 ```
