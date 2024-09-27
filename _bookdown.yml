@@ -9,9 +9,15 @@ rmd_files: [
   "index.Rmd",
   "01-IntroR.Rmd",
   "02-DataTypesDescription.Rmd",
-  "03-NaturalSelection.Rmd",
-  "04-PopulationEcology.Rmd",
-  "05-InvasiveSpecies.Rmd",
-  "06-WaterQuality.Rmd",
-  "12-Conclusion.Rmd"
+  "03-BasicStatisticalTest.Rmd",
+  "04-SelectingStatisticalTests.Rmd",
+  "05-EcologicalSampling.Rmd",
+  "06-NaturalSelection.Rmd",
+  "07-PopulationEcology.Rmd",
+  "08-InvasiveSpecies.Rmd",
+  "09-WaterQuality.Rmd",
+  "10-SpeciesInteractions.Rmd",
+  "11-SpeciesDiversity.Rmd",
+  "12-SpeciesDistributionModeling.Rmd",
+  "13-Conclusion.Rmd"
 ]
