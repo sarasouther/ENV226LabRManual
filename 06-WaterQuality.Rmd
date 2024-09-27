@@ -1,11 +1,3 @@
----
-title: "Water quality"
-author: "Sara Souther"
-date: "`r Sys.Date()`"
----
-```{r Water quality, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 # Water quality
 
 ## Background

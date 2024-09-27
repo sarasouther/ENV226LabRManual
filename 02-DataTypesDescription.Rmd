@@ -1,8 +1,3 @@
----
-title: "Descriptive statistics"
-author: "Sara Souther"
-date: "`r Sys.Date()`"
----
 # Descriptive statistics
 
 ## What can statistics tell us?
