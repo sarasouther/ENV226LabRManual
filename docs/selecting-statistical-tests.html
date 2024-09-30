@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction | _main.knit</title>
+  <title>Chapter 5 Selecting statistical tests” | _main.knit</title>
   <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Introduction | _main.knit" />
+  <meta property="og:title" content="Chapter 5 Selecting statistical tests” | _main.knit" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="github-repo" content="sarasouther/ENV226LabRManual" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction | _main.knit" />
+  <meta name="twitter:title" content="Chapter 5 Selecting statistical tests” | _main.knit" />
   
   <meta name="twitter:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="welcome-to-r.html"/>
+<link rel="prev" href="basic-statistical-testing.html"/>
+<link rel="next" href="ecological-sampling.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -283,23 +283,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This course surveys the central concepts in ecology: evolution, population dynamics, community interactions, biogeochemical cycling, and limiting factors, as well as how those factors are measured, quantified, and interact with drivers of global environmental change. This course is required for the B.S. in Environmental Sciences degree program, and also the B.S. in Environmental and Sustainability Studies degree. This course acquaints students with foundational concepts and theories in ecology and provides a broad basis for more advanced courses in subdisciplines and applications of ecology.</p>
-<p>A critical part of ecological research is developing practical and analytic skills. Most ecologists and data scientists use R statistical software. Learning how to manage, manipulate and analyze data in R will serve your undergraduate career and beyond! In ENV 226 lab, we will ease you into using R for all your data needs!</p>
-<p><strong>How to use this resource</strong></p>
-<p>Each chapter in this online book corresponds to a lesson that will help you in lab. The order of labs may change due to weather conditions or other factors, so please consult your TA on which chapter you complete in each week!</p>
+<div id="selecting-statistical-tests" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Selecting statistical tests”<a href="selecting-statistical-tests.html#selecting-statistical-tests" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="a-foray-into-statistics" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> A foray into statistics<a href="selecting-statistical-tests.html#a-foray-into-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Last week we talked about data types and describing data. This week we are applying concepts that we learned last week to select (and run) a statistical analysis. When conducting an analysis, a dataset will contain one or more <strong>response variables</strong> (aka y-variables, dependent variables) and one or more <strong>explanatory variables</strong> (aka x-variables, independent variables). The data types of the explanatory and response variables determine which statistical test we use.</p>
+<p><strong>Brief review</strong>: Explanatory variables are used to explain variation in response variables. For instance, imagine that we want to identify areas that support high numbers of plants from the genus Mitella. We hypothesize that Mitella occurrence is positively related to water supply (i.e., the number of Mitella plants goes up as water availability increases). In this case, my response variable would be number of plants in genus Mitella, and my explanatory variable would be some measure of water supply.</p>
+</div>
+<div id="selecting-statistical-analyses" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Selecting statistical analyses<a href="selecting-statistical-tests.html#selecting-statistical-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Below, you will see a very simple decision matrix for selecting statistical analyses. We will build on this basic matrix and move into alternative ways of conducting the analyses indicated within the matrix throughout the semester. However, this basic structure gives us a great launch point for structuring the next discussions. Also, the statistical analyses presented below are super common in social and ecological sciences!</p>
+<p><img src="/Users/sks379/Desktop/GraduateStudents/Stats%20and%20Lit%20Review%20Lessons/Class4_SelectingStatisticalAnalyses/DecisionMatrix.png" alt="Select the statistical analysis!" />
+When both the response and explanatory variables are <strong>categorical</strong>, we use what is called a <strong>G-test</strong>!</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="welcome-to-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="basic-statistical-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ecological-sampling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -330,7 +335,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/sarasouther/ENV226LabRManual/edit/main/index.Rmd",
+"link": "https://github.com/sarasouther/ENV226LabRManual/edit/main/04-SelectingStatisticalTests.Rmd",
 "text": "Edit"
 },
 "history": {
