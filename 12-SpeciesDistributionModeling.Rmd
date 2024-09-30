@@ -85,99 +85,12 @@ Finally, we select the 'socio-economic pathway' utilized by our climate model. T
 \vspace{12pt}
 \vspace{12pt}
 
+In your R file run this chunk of code (Section 1). Be sure to install packages if you don't have them installed.
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-#install.packages("sdm")
-#install.packages("sp")
-#install.packages("raster")
-#install.packages("usdm")
-#install.packages("CoordinateCleaner")
-#install.packages("spThin")
-#install.packages("geodata")
-#install.packages("sf")
-#install.packages("terra")
-#install.packages("tidyverse")
-#install.packages("rgbif")
-#install.packages("usdm")
-#installAll(sdm)
-
-library(sdm)
-library(sp)
-library(raster)
-library(usdm)
-library(CoordinateCleaner)
-library(spThin)
-library(geodata)
-library(sf)
-library(terra)
-library(tidyverse)
-library(rgbif)
-library(usdm)
-
-#you can use this code to check out country codes
-#geodata::country_codes()
-
-#https://epsg.org/home.html website to look up crs codes
-#‘World Geodetic System 1984’ (WGS 84) is a geodetic CRS with EPSG code 4326
-#this is a common code, but we want to reduce the number of times that we reproject
-
-#or save to your working directory
-bio <- worldclim_global(var = "bio", version="2.1", res=2.5, path=tempdir())
-
-#rename layers
-names(bio) <- c("bio1", "bio2", "bio3", "bio4", "bio5", "bio6", "bio7", "bio8", "bio9", "bio10", "bio11", "bio12", "bio13", "bio14", "bio15", "bio16", "bio17", "bio18", "bio19")
-
-#set a projection 
-crs(bio) <- "epsg:4326"
-
-biof6180  <- geodata::cmip6_world("CNRM-CM6-1", "585", "2061-2080", var="bioc", res=2.5, path=tempdir())
-```
 Now that we've loaded our current and future climate models, let's input our occurrence data. For our data on species occurrence, we will use data from the Global Biodiversity Information Facility (GBIF), a repository for species observations and locations derived from multiple sources, including citizen science, herbarium and museum collections. The GBIF data are biased by observer behavior, since many observations are derived from citizen science projects. Humans tend to collect data from easily accessed areas around roads, popular hiking trails or congregating areas. One way to reduce bias in presence only data is to use spatial thinning to reduce weighting observations from heavily trafficked areas more than observations made in other areas. There is no standard thinning distance, but it is typical to require a minimum of 5 km between observations. If you are working at smaller or larger scales, you could reduce or increase this distance! Also, if you are using presence and absence data or have employed an unbiased sampling strategy to collect data, you can skip this next step. While there are various quality control measures used by GBIF to ensure high data quality, we will run a few other data cleaning codes to remove anomalous points. This step is not necessary if using nonGBIF data! However, when producing your own spatial datasets, some form of data quality control is necessary.
 
 For this exercise, we will investigate whether models predict that Ponderosa pine forests that surround Flagstaff are predicted to persist as climate changes. Let's download occurrence data for Ponderosa pine (*Pinus ponderosa*).
 
-```{r, comment = NA, include = FALSE, message = FALSE, warning = FALSE}
-
-species_name <- "Pinus ponderosa"
-#gbif data are referenced by keys associated with particular species. let's get the key for Pediocactus simpsonii
-key <- name_backbone(name=species_name, kingdom='plants', rank='species')$speciesKey
-
-#by running the name_backbone function, we accessed GBIF to get the unique identifier and saved it as object 'key'. Now let's use that key to get occurrence data for this species.
-
-#check out the occ_data function by typing ?occ_data in the command line. we can specify many fields to constrain what data we download. for our needs, we want data entries with a coordinate and that have not been flagged with a geospatial problem. Finally, we are primarily interested in North America. This is often important to specify, because people will post identifications from botanical gardens across the globe, which can yield weird results!
-
-dat <- occ_data(taxonKey=key, hasCoordinate = TRUE, continent='north_america', limit=10000, hasGeospatialIssue = FALSE)$data
-
-#select a few important columns, so that dataset isn't so crazy.
-dat1 <- dat %>% dplyr::select(species, decimalLongitude, decimalLatitude, countryCode, gbifID, family, taxonRank, year, basisOfRecord)
-
-names(dat1)[2:3] <- c("decimallongitude", "decimallatitude") #corrects coordinate name for cleaning
-clean <- clean_coordinates(dat1, lon = "decimallongitude", lat = "decimallatitude", species = "species", countries = NULL, tests = c("capitals", "duplicates", "equal", "gbif", "seas", "zeros", "country", "centroids"), value = "clean", verbose = TRUE, report = FALSE)
-
-prethindata <- clean[, c("decimallatitude", "decimallongitude", 'species')]
-names(prethindata)[1:3] <- c("LAT", "LON", "SPEC")
-
-#thin auto-correlated presence data
-thinned_data <- spThin::thin(loc.data = prethindata, 
-                  lat.col = "LAT", long.col = "LON",
-                  spec.col = "SPEC",
-                  thin.par = 30, reps = 100, #thinning 5km
-                  locs.thinned.list.return = TRUE,
-                  write.files=FALSE,
-                  write.log.file=FALSE)
-
-occurdata <- thinned_data[[1]]
-
-#add a column to indicate occurrence 
-occurdata$species <- 1
-
-#change to a spatial point dataframe
-occurdata2 <- st_as_sf(occurdata, coords = c("Longitude", "Latitude"))
-
-#crs_wgs84 <- sf::st_crs(4326)  # WGS 84 has EPSG code 4326 
-st_crs(occurdata2) <- 4326
-st_crs(occurdata2) #check coordinate string
-```
 Great! Now we have data! Let's build an SDM. Our first decision point on model construction is based on the response variable. In this case, we have presence-only data; in other words, no one went out to the field to confirm locations where a species is *absent* across the landscape. Since location information often suffers from *absence* of absence data (ha), researchers have found statistical workarounds, which produce amazingly similar results to models fitted with presence or absence data. The method most commonly used to model habitat suitability with presence-only data involves generated numerous background points across your study area to compare with areas where your species is present. Note that your focal species *could* occur at any one of these background points, but that doesn't matter. Essentially your model is characterizing habitat available to the species and the habitat of known occurrence to identify the environmental factors that best distinguish occupied habitat.
 
 Let's breakdown the major model types used for SDMs:
@@ -243,16 +156,6 @@ The world of species distribution modeling is a contentious one! Many leaders in
 
 In general, it is recommended to avoid having correlated features (variables that have different numbers, but are following the same pattern) in your dataset. Indeed, a group of highly correlated features will not bring additional information to our analyses, but will increase the complexity of the algorithm, thus increasing the risk of errors. Including highly correlated variables in models also, in essence, weights the correlated variables more than independent variables, again leading to less accurate model outputs. In other words, we need to remove highly correlated variables. We will do this by generating Variable Inflation Factor (VIF) values, a measure of collinearity, for all predictor variables. Then, we will remove one of the two correlated variables.
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-#reduce colinearity
-geographic.extent <- extent(occurdata2) #could also use st_bbox
-bioc <- crop(x = bio, y = geographic.extent)
-ex <- terra::extract(bioc, occurdata2)
-v1 <- vifstep(ex) #vifstep and vifcor are both methods to remove colinearity - default vif threshold for vifcor is 0.9, but you can change
-bioc_stack <- brick(bioc)
-biom <- exclude(bioc_stack, v1)
-```
-
 **Build the dataframe for the SDM**
 Building the SDM, requires two additional steps. In the first, we assemble the final dataset to be used in the model. 
 
@@ -261,11 +164,6 @@ Building the SDM, requires two additional steps. In the first, we assemble the f
 * The column that contains presence data. 
 * The environmental predictors. 
 * Absence data or how to create background data.
-
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
-occurdata_df <- sf::as_Spatial(occurdata2)
-d1 <- sdm::sdmData(species~., occurdata_df, predictors = biom, bg=list(method='gRandom', n=10000, remove=TRUE))
-```
 
 **Specify model evaluation parameters**
 
@@ -290,16 +188,7 @@ Once the data is appropriately compiled, we use the sdm function to build the ac
 * Replication type (cv), number of folds (5), how many times to repeat partitioning (1)
 
 THIS STEP WILL TAKE SOME TIME - JUST LET THE PROGRAM RUN!
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-#choose modeling methods - to see all run code below
-sdm::getmethodNames()
 
-#create model
-m1 <- suppressWarnings(sdm(species~., d1, methods=c('gam','rf'), replication='cv', cv.folds=5, n=1))
-
-#call the model to check it out
-m1
-```
 The model object (m1) tells you several things. First, it gives a brief summary of the model you ran. You can double check this to be sure that the model did what you told it to do. Here, everything seems fine: We ran a model for one species, we used two modeling methods, glm and maxent, we used cross_validation with 5 partitions. The model runs were successful (100% each). Finally, we are provided with 4 measures of model performance: AUC, COR, TSS, and Deviance. 
 
 **What types of models are we using to predict habitat suitability for Ponderosa pines (i.e., machine learning, regression, profile techniques)?**
@@ -325,10 +214,6 @@ SDMs predict a probability of occurrence across the landscape. Different thresho
 
 So, let's check out the ROC plot below. 
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-eval1 <- sdm::getEvaluation(m1)
-roc(m1)
-```
 **Looking at AUC, a common form of model performance assessment, which is the best performing model?**
 \vspace{12pt}
 \vspace{12pt}
@@ -349,21 +234,10 @@ Like AUC, **True Skill Statistic (TSS)** values are calculated across the range 
 
 Finally, we will merge models into an ensemble model. You may want to exclude models that didn't have high predictive performance. We will give higher weights to the models with higher accuracy, in this cause using the TSS score. 
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-#create an ensemble model
-en1 <- sdm::ensemble(m1, biom, filename = paste(species_name,"_T1.tif", sep=""), setting=list(method='weighted', stat='tss', opt=2), overwrite = TRUE)
-#weighting models by tss threshold defined using option 2
-```
-
 ## Investigating model components
 
 We can run code to look at the model components that best predict presence.
-```{r, include = FALSE, message = FALSE, warning = FALSE}
 
-#look at predictor variables 
-getVarImp(m1)
-plot(getVarImp(m1, method='rf'))
-```
 **According this figure, which climatic variable best predicts habitat suitability for Ponderosa pine?**
 \vspace{12pt}
 \vspace{12pt}
@@ -373,133 +247,17 @@ plot(getVarImp(m1, method='rf'))
 
 We use the test statistics to identify a threshold that maximized true positives and reduced false negatives. In order to do this, we will create a new raster and populate it with predictions of presence, using that threshold.
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-df <- as.data.frame(d1)
-df <- data.frame(presabs=df$species, coordinates(d1))
-ev <- sdm::evaluates(df$presabs, terra::extract(en1, df[,c('coords.x1', 'coords.x2')]))
-
-th <- ev@threshold_based$threshold[2] 
-pa1 <- terra::rast(en1)
-pa1[] <- ifelse(en1[] >= th, 1, 0)
-
-terra::writeRaster(pa1, "Pinus_ponderosa.tif", overwrite=TRUE)
-```
-
 ##  Plotting and predictions
 
 Let's take a quick look at the predictions we have created for the current time period. 
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-# URL for the GeoJSON file containing U.S. state boundaries from Natural Earth
-geojson_url <- "https://www2.census.gov/geo/tiger/GENZ2021/shp/cb_2021_us_state_500k.zip"
-
-# Download the GeoJSON file locally
-download.file(geojson_url, destfile = "cb_2021_us_state_500k.zip")
-
-# Unzip the downloaded file
-unzip("cb_2021_us_state_500k.zip")
-
-# Read the GeoJSON file using sf::st_read
-us_states <- st_read("cb_2021_us_state_500k.shp")
-
-#check projection
-st_crs(us_states)
-
-#looks good but if you'd need to change, you can use this code
-us_states <- st_transform(us_states, 4326)
-
-#check projections to make sure that everything looks good
-st_crs(en1)
-st_crs(us_states)
-
-#extract Arizona state boundary
-az <- us_states[us_states$STUSPS == "AZ", 1]
-
-#you can crop to features to make neater
-#crs(en1) <- "epsg:4326"
-
-#arrange view for 2 plots
-par(mfrow=c(1,2), mar = c(1, 4, 1, 3)) # bottom, left, top, right
-
-xlim <- c(-117, -105)
-ylim <- c(30, 40)
-en1 <- crop(x = en1, y = geographic.extent)
-en1_crop <- mask(en1, az)
-plot(en1_crop, xlim = xlim, ylim = ylim, main = "Ponderosa habitat suitability") #plot of continuous data
-
-xlim2 <- c(-117, -105)
-ylim2 <- c(30, 40)
-pa1 <- crop(x = pa1, y = geographic.extent)
-pa1_crop <- mask(pa1, az)
-plot(pa1_crop, xlim = xlim2, ylim = ylim2, main = "Ponderosa predicted occurrence") #plot of presence absence data
-
-```
-
 To predict response of your focal species to future climate, just plug the novel climate conditions into the model!
 Let's run this model.
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-
-#let's crop!
-biof6180c <- crop(x = biof6180, y = geographic.extent)
-names(biof6180c) <- names(bio) # change names
-biof6180cf <- brick(biof6180c)
-
-#rerun models for our future climate
-enbiof6180 <- sdm::ensemble(m1, biof6180cf, filename = "pondo_future.tif", setting=list(method='weighted', stat='tss', opt=2), overwrite = TRUE)
-```
-
 Now, let's plot this prediction against our original! First, we'll take a zoomed out look, then we will focus into our region!
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
-
-#you can specify your own colors
-cl <- colorRampPalette(c('#3E49BB', '#3498DB', 'yellow', 'orange', 'red', 'darkred'))
-#bottom, left, top, right
-par(mfrow=c(1,2), bty="l", mar=c(0,0,1,0)) #bottom, left, top, right
-
-xlim <- c(-117, -105)
-ylim <- c(30, 40)
-
-en1_crop <- mask(en1, az)
-plot(en1_crop, col=cl(200), xlim = xlim, ylim = ylim, main = "Current Ponderosa habitat", box=FALSE, axes=FALSE, legend=FALSE) #plot of continuous data
-
-enbiof6180_crop <- mask(enbiof6180, az)
-plot(enbiof6180_crop, col=cl(200), xlim = xlim, ylim = ylim, main = "Future Ponderosa habitat", box=FALSE, axes=FALSE, legend=FALSE) #plot of presence absence data
-
-```
 Let's convert to predicted occurrence and plot!
-```{r, include = FALSE, message = FALSE, warning = FALSE}
 
-#trying again using new method
-df <- as.data.frame(d1)
-df <- data.frame(presabs=df$species, coordinates(d1))
-ev2 <- sdm::evaluates(df$presabs, terra::extract(enbiof6180, df[,c('coords.x1', 'coords.x2')]))
-
-th2 <- ev2@threshold_based$threshold[2] 
-pa2 <- terra::rast(enbiof6180)
-pa2[] <- ifelse(enbiof6180[] >= th2, 1, 0)
-
-terra::writeRaster(pa2, "Pinus_ponderosa_future.tif", overwrite=TRUE)
-
-pa2_crop <- mask(pa2, az)
-
-par(mfrow=c(1,2), bty="l", mar=c(0,0,0,0)) #bottom, left, top, right
-
-xlim <- c(-117, -105)
-ylim <- c(30, 40)
-
-# Latitude and longitude coordinates for Flagstaff, AZ
-flagstaff_lat <- 35.1983
-flagstaff_lon <- -111.6513
-
-plot(pa1_crop, xlim = xlim, ylim = ylim, main = "Current Ponderosa occurrence", box=FALSE, axes=FALSE, legend=FALSE) # Add a point for Flagstaff, AZ
-points(flagstaff_lon, flagstaff_lat, pch = 8, col = "black", cex = 2)
-
-plot(pa2_crop, xlim = xlim, ylim = ylim, main = "Future Ponderosa occurrence", box=FALSE, axes=FALSE, legend=FALSE) # Add a point for Flagstaff, AZ
-points(flagstaff_lon, flagstaff_lat, pch = 8, col = "black", cex = 2)
-
-```
 **According to these maps, how will the amount of suitable habitat for *Pinus ponderosa* in Flagstaff change if climate change continues along the SSP 585 projection?**
 \vspace{12pt}
 \vspace{12pt}
@@ -516,8 +274,3 @@ points(flagstaff_lon, flagstaff_lat, pch = 8, col = "black", cex = 2)
 \vspace{12pt}
 
 Submit your answers to the questions presented throughout this tutorial, your R script file, and the figures that you generated (Occurrence of *Pinus ponderosa* currently and in the future) to your TA.
-
-
-
-
-

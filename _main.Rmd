@@ -1238,7 +1238,7 @@ Finally, we select the 'socio-economic pathway' utilized by our climate model. T
 \vspace{12pt}
 
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
 #install.packages("sdm")
 #install.packages("sp")
 #install.packages("raster")
@@ -1288,7 +1288,7 @@ Now that we've loaded our current and future climate models, let's input our occ
 
 For this exercise, we will investigate whether models predict that Ponderosa pine forests that surround Flagstaff are predicted to persist as climate changes. Let's download occurrence data for Ponderosa pine (*Pinus ponderosa*).
 
-```{r, comment = NA, include = FALSE, message = FALSE, warning = FALSE}
+```{r, comment = NA, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
 
 species_name <- "Pinus ponderosa"
 #gbif data are referenced by keys associated with particular species. let's get the key for Pediocactus simpsonii
@@ -1313,7 +1313,7 @@ names(prethindata)[1:3] <- c("LAT", "LON", "SPEC")
 thinned_data <- spThin::thin(loc.data = prethindata, 
                   lat.col = "LAT", long.col = "LON",
                   spec.col = "SPEC",
-                  thin.par = 5, reps = 100, #thinning 5km
+                  thin.par = 30, reps = 100, #thinning 5km
                   locs.thinned.list.return = TRUE,
                   write.files=FALSE,
                   write.log.file=FALSE)
@@ -1396,6 +1396,9 @@ The world of species distribution modeling is a contentious one! Many leaders in
 In general, it is recommended to avoid having correlated features (variables that have different numbers, but are following the same pattern) in your dataset. Indeed, a group of highly correlated features will not bring additional information to our analyses, but will increase the complexity of the algorithm, thus increasing the risk of errors. Including highly correlated variables in models also, in essence, weights the correlated variables more than independent variables, again leading to less accurate model outputs. In other words, we need to remove highly correlated variables. We will do this by generating Variable Inflation Factor (VIF) values, a measure of collinearity, for all predictor variables. Then, we will remove one of the two correlated variables.
 
 ```{r, include = FALSE, message = FALSE, warning = FALSE}
+library(raster) 
+library(terra) 
+
 #reduce colinearity
 geographic.extent <- extent(occurdata2) #could also use st_bbox
 bioc <- crop(x = bio, y = geographic.extent)
@@ -1414,7 +1417,7 @@ Building the SDM, requires two additional steps. In the first, we assemble the f
 * The environmental predictors. 
 * Absence data or how to create background data.
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
 occurdata_df <- sf::as_Spatial(occurdata2)
 d1 <- sdm::sdmData(species~., occurdata_df, predictors = biom, bg=list(method='gRandom', n=10000, remove=TRUE))
 ```
@@ -1442,7 +1445,7 @@ Once the data is appropriately compiled, we use the sdm function to build the ac
 * Replication type (cv), number of folds (5), how many times to repeat partitioning (1)
 
 THIS STEP WILL TAKE SOME TIME - JUST LET THE PROGRAM RUN!
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
 #choose modeling methods - to see all run code below
 sdm::getmethodNames()
 
@@ -1477,7 +1480,7 @@ SDMs predict a probability of occurrence across the landscape. Different thresho
 
 So, let's check out the ROC plot below. 
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
 eval1 <- sdm::getEvaluation(m1)
 roc(m1)
 ```
@@ -1501,7 +1504,7 @@ Like AUC, **True Skill Statistic (TSS)** values are calculated across the range 
 
 Finally, we will merge models into an ensemble model. You may want to exclude models that didn't have high predictive performance. We will give higher weights to the models with higher accuracy, in this cause using the TSS score. 
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
 #create an ensemble model
 en1 <- sdm::ensemble(m1, biom, filename = paste(species_name,"_T1.tif", sep=""), setting=list(method='weighted', stat='tss', opt=2), overwrite = TRUE)
 #weighting models by tss threshold defined using option 2
@@ -1510,7 +1513,7 @@ en1 <- sdm::ensemble(m1, biom, filename = paste(species_name,"_T1.tif", sep=""),
 ## Investigating model components
 
 We can run code to look at the model components that best predict presence.
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
 
 #look at predictor variables 
 getVarImp(m1)
@@ -1525,7 +1528,10 @@ plot(getVarImp(m1, method='rf'))
 
 We use the test statistics to identify a threshold that maximized true positives and reduced false negatives. In order to do this, we will create a new raster and populate it with predictions of presence, using that threshold.
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
+library(raster) 
+library(terra)  
+
 df <- as.data.frame(d1)
 df <- data.frame(presabs=df$species, coordinates(d1))
 ev <- sdm::evaluates(df$presabs, terra::extract(en1, df[,c('coords.x1', 'coords.x2')]))
@@ -1541,7 +1547,10 @@ terra::writeRaster(pa1, "Pinus_ponderosa.tif", overwrite=TRUE)
 
 Let's take a quick look at the predictions we have created for the current time period. 
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
+library(raster) 
+library(terra)  
+
 # URL for the GeoJSON file containing U.S. state boundaries from Natural Earth
 geojson_url <- "https://www2.census.gov/geo/tiger/GENZ2021/shp/cb_2021_us_state_500k.zip"
 
@@ -1590,7 +1599,9 @@ plot(pa1_crop, xlim = xlim2, ylim = ylim2, main = "Ponderosa predicted occurrenc
 To predict response of your focal species to future climate, just plug the novel climate conditions into the model!
 Let's run this model.
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
+library(raster) 
+library(terra)  
 
 #let's crop!
 biof6180c <- crop(x = biof6180, y = geographic.extent)
@@ -1603,7 +1614,9 @@ enbiof6180 <- sdm::ensemble(m1, biof6180cf, filename = "pondo_future.tif", setti
 
 Now, let's plot this prediction against our original! First, we'll take a zoomed out look, then we will focus into our region!
 
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
+library(raster) 
+library(terra)  
 
 #you can specify your own colors
 cl <- colorRampPalette(c('#3E49BB', '#3498DB', 'yellow', 'orange', 'red', 'darkred'))
@@ -1621,7 +1634,9 @@ plot(enbiof6180_crop, col=cl(200), xlim = xlim, ylim = ylim, main = "Future Pond
 
 ```
 Let's convert to predicted occurrence and plot!
-```{r, include = FALSE, message = FALSE, warning = FALSE}
+```{r, include = FALSE, message = FALSE, warning = FALSE, eval=FALSE}
+library(raster) 
+library(terra)  
 
 #trying again using new method
 df <- as.data.frame(d1)
@@ -1668,11 +1683,6 @@ points(flagstaff_lon, flagstaff_lat, pch = 8, col = "black", cex = 2)
 \vspace{12pt}
 
 Submit your answers to the questions presented throughout this tutorial, your R script file, and the figures that you generated (Occurrence of *Pinus ponderosa* currently and in the future) to your TA.
-
-
-
-
-
 
 <!--chapter:end:12-SpeciesDistributionModeling.Rmd-->
 
