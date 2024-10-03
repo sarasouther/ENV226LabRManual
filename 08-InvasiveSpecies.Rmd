@@ -40,7 +40,7 @@ Each group of 4 or 5 should have:
     a. https://nazinvasiveplants.org/
     b. iNaturalist application (free download from your app store)
     
-For a brief tutorial on making iNaturalist observations, check this document out:
+For a brief tutorial on making iNaturalist observations, please [Download this document](https://docs.google.com/uc?export=download&id=1gt1MvIj7ePiWcaIfa8eUmrohHxpzdCs4)
 
 ## Procedure
 
