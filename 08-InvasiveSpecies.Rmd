@@ -36,7 +36,11 @@ Each group of 4 or 5 should have:
 2. 1 meter tape (or meter stick)
 3. 16 Pin-flags 
 4. Printed lab with datasheets
-5. Website for identifying invasives: https://nazinvasiveplants.org/
+5. Website or application for identifying invasives
+    a. https://nazinvasiveplants.org/
+    b. iNaturalist application (free download from your app store)
+    
+For a brief tutorial on making iNaturalist observations, check this document out:
 
 ## Procedure
 

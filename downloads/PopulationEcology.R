@@ -1,8 +1,8 @@
 #This R script analyzes population growth of Lemna minor
 
 # Load necessary libraries
-library(ggplot2)
 library(ggpubr)  # For ggarrange
+library(tidyverse)
 
 # Set your working directory
 setwd("addyourworkingdirectoryhere") 
