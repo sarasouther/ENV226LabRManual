@@ -125,6 +125,10 @@ Finally, one easy way to export plots is to use the 'Plots' tab in your R studio
 ![](images/01-intro/fileexport.png) 
 Here is a nice example of a R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) 
 
+and this .csv file [Download the data file](https://drive.google.com/uc?export=download&id=1NejYe6LMu3qwSyKp3lz3ZvFF9c--FFzp)
+
+Download both, modify your working directory and import the file. Check up the object in R. We won't export anything today, but it is a useful code to have! 
+
 And with that, welcome to the wonderful world of coding in R!
 
 

@@ -31,4 +31,4 @@ A critical part of ecological research is developing practical and analytic skil
 
 **How to use this resource**
 
-Each chapter in this online book corresponds to a lesson that will help you in lab. When starting a new chapter, create a new R script with a name that allows you to easily connect the content in the R script to the chapter. Then, copy and paste sections of code in the chapter into your R script to practice! 
+Each chapter in this online book corresponds to a lesson that will help you in lab. For most labs, you will download R code that you will use to analyze your data, and that can be also be used for other analyses and projects that you have in college and in the workplace.
