@@ -8,11 +8,23 @@ In statistics, a **population** refers to the all units of the thing that you ar
 
 A **sample** is a subset of the population that we measure to infer something about the true population. In order to avoid erroneous conclusions about the population, our sample must be **representative** of the population of interest and **unbiased**. As an example, imagine that you were interested in whether coat color in cats differed between house cats and feral cats. To select the house cat sample, you randomly select house numbers, visit the house and record coat color, thus collecting a random sample. However, to survey feral cats, you go to several cat colonies at night and record the first cat that you see, which are always white or tan. The sampling strategy for feral cats introduces bias, because darker cats are harder to see at night. This causes you to overestimate the number of light-coated feral cats, and underestimate dark-coated feral cats, resulting in the erroneous conclusion that a greater proportion of feral cats are light-colored compared to house cats. Experiments must be carefully planned to reduce bias. 
 
+![](images/05-ecologicalsampling/cat.jpeg)
+We can conduct statistical analysis until the cats come home (ha!), but if your sample is biased, our results will always be meaningless. In the cat example, it was pretty obvious that the researcher was introducing bias, BUT it is REALLY easy to introduce bias in ecological and social research on accident! Imagine that you looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat's claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. Let's talk about several types of appropriate sampling strategies. 
+
 ## Sampling approaches
 
 ### Random sampling 
 
 In order to reduce bias, researchers **randomize** sampling. **Random sampling** is when every item within the focal population has an equal chance of being selected. In research, random sampling can be applied to selecting experimental subjects, assigning individuals to treatments, or identifying plot locations. It is **REALLY** easy to introduce bias in ecological and social research on accident if you do not use a random sampling technique! Imagine that you are looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat's claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. In practice, researchers use number generators, like those on your phone, or within computer programs, like ArcGIS, to randomly place sampling points. Here, we’ve included a random number sheet to use to randomly array plots. A random number sheet contains random numbers that someone generated in advance to assist in the field. 
+
+We can quickly and easily generate such a sample in R, using the sample function. 
+
+```{r}
+sample(1:100, 10, replace=FALSE)
+#1:10000 = numbers to chose among 
+#number of random numbers you wish to generate
+#to replace or not (in other words do you wish for the same number to be selected multiple times)
+```
 
 ### Stratefied random sampling
 
@@ -27,6 +39,10 @@ In complex, multi-species systems, another approach to improve coverage of rando
 
 ![](images/05-ecologicalsampling/GriddedSamplingDesign.png) 
 **Figure 2.** Randomly placing plots within a gridded region helps maximize the likelihood to capture species dynamics in complex, multi-species systems, composed of species with a variety of spatial distributions. 
+
+### Random cluster sampling
+
+**Random cluster sampling** randomly select groups (aka clusters) within a population. This sampling design is used commonly in ecology, when we select random locations for plots, then measure all individuals within those plots. If for instance, we are interested in Ponderosa Pine growth rates on the Coconino National Forest, we would randomly assign points across Pondo habitat on the Coconino. At each point, we would set up a plot in which we measure Ponderosa Pines within an 11.71m radius plot. **Why wouldn't we just go out to a point and measure 1 tree to create a totally random sample?** The plots are randomly assigned (yay!), but the trees within the plots are not **independent**. In other words, we might expect measures of trees within plot A to be more similar to each other than they are to trees within plot B, due to differences in microsite characteristics, genetic similarity among co-occurring trees, or site history (logging, fire). Luckily, we can account for this non-independence, as long as the plots are random!
 
 ## Plot shapes, sizes, and transects
 

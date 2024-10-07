@@ -1,6 +1,8 @@
 # Descriptive statistics
 
-## What can statistics tell us?
+## A short statistical review
+
+### What can statistics tell us?
 
 Welcome to our statistical exploration of the natural world! 
 
@@ -10,35 +12,29 @@ Almost all statistical analysis boils down to answering 1 of 2 questions:
 
 These seem like relatively simple questions to answer, perhaps just by looking at our data, so **Why do we need statistics?** 
 
-The short answer is: **error** and **sampling**! Whenever we collect data, we introduce **error**; our instruments are imprecise and do not capture an exact measure of whatever you are measuring (e.g., height, weight), and humans make mistakes during measurement collection. Secondly, we are **always** measuring a sub-sample of the true population (*true population* meaning all representatives of whatever you are trying to measure; this can be grass, marbles, or the tibia of humans). Not only is in intractable in most cases to measure all individuals of whatever you are interested in, even when it is possible to attempt to measure **all** individuals (like in the case of rare plant work), statistics acknowledges that it is **still** unlikely that we are able to completely measure all individuals in your focal population, since individuals may be dormant or challenging to locate. If we could measure all individuals of our population of interest with perfect accurately, we could calculate population **parameters**, or quantities describing populations like averages and variation, rather than estimating these metrics, and just compare them. In this way, statistics is inherently practical, and asks: What can we say about whatever we are looking at, given our numerous flaws?
+The short answer is: **error** and **sampling**! Whenever we collect data, we introduce **error**; our instruments are imprecise and do not capture an exact measure of whatever you are measuring (e.g., height, weight), and humans make mistakes during measurement collection. Secondly, we are **always** measuring a sub-sample of the true population (*true population* meaning all representatives of whatever you are trying to measure; this can be grass, marbles, or the tibia of humans). Not only is it intractable in most cases to measure all individuals of whatever you are interested in, even when it is possible to attempt to measure **all** individuals (like in the case of rare plant work), statistics acknowledges that it is **still** unlikely that we are able to do so, since individuals may be dormant or challenging to locate. If we could measure all individuals of our focal population with perfect accurately, we could calculate population **parameters**, or quantities describing populations like averages and variation, rather than estimating these metrics, and just compare them. In this way, statistics is inherently practical, and asks: What can we say about whatever we are looking at, given our numerous flaws?
 
-## Sampling populations
+### Sampling populations
 After a few classes, we will explore sampling methodology in greater depth in order to design appropriate experiments that test a statistical **hypothesis**. Let's quickly talk about sampling now so that we have a shared understanding and vocabulary to build on - after all, statistics really centers around estimating characteristics of a true population from a sample. The **really, truly** amazing thing is that by properly applying statistics, we can learn practically anything about almost any population using samples!
 
 In statistics, a **population** refers to the all units of the thing that you are interested (i.e., all suriname frogs, all grains of sand, all aspen leaves from a genotype found in southern Arizona). **Note**: Population in statistics differs from the term population in population ecology, where a population refers to a group of individuals in a particular area that interbreed. 
 
-A **sample** is a subset of the population that we measure to infer something about the population. Statistical analyses depend on a random sample or must account for non-randomness within the sample. Just imagine, for instance, that you were interested in whether coat color in cats differed between house cats and feral cats. To select the house cat sample, you randomly select house numbers, visit the house and record coat color, thus collecting a random sample. However, to survey feral cats, you go to several cat colonies at night and record the first cat that you see, which are always white or tan, since darker cats are harder to see (not because their are fewer of them in the colonies). The sample of feral cats introduces bias, and causes you to overestimate the number of light colored feral cats, and underestimate dark feral cats. 
+A **sample** is a subset of the population that we measure to infer something about the population. 
+**Statistical analysis is only one part of presenting your research results.** Generally, a results section in a manuscript includes: **statistical results**, **data description** (e.g., describing means, ranges, maxima, minima of groups of interest), and **data visualization** (i.e., creating beautiful figures). 
 
-We can conduct statistical analysis until the cats come home (ha!), but if your sample is biased, our results will always be meaningless. In the cat example, it was pretty obvious that the researcher was introducing bias, BUT it is REALLY easy to introduce bias in ecological and social research on accident! Imagine that you looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat's claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. We can go over field sampling methodology later, but let's talk about several types of appropriate sampling strategies. The key is that we want our sample to be **representative** of the true population, so that estimates of values (i.e., means, variance) from the sample represent true population parameters.
+## Objectives
 
-**Simple Random Sampling** is when every sample has an equal likelihood of being selected.
+We will build to towards always providing a complete results section with these three components. In this lab, however, we will focus exclusively on data description and a teeny bit of visualization. 
 
-We can quickly and easily generate such a sample in R, using the sample function. 
+## Downloads for this lab
 
-```{r}
-sample(1:100, 10, replace=FALSE)
-#1:10000 = numbers to chose among 
-#number of random numbers you wish to generate
-#to replace or not (in other words do you wish for the same number to be selected multiple times)
-```
+For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](https://drive.google.com/uc?export=download&id=1jhqzC8Qms-KajOj60hCt1jegW1b1BQPU)
 
-**Random Cluster Sampling** randomly select groups (aka clusters) within a population. This sampling design is used commonly in ecology, when we select random locations for plots, then measure all individuals within those plots. If for instance, we are interested in Ponderosa Pine growth rates on the Coconino National Forest, we would randomly assign points across Pondo habitat on the Coconino. At each point, we would set up a plot in which we measure Ponderosa Pines within an 11.71m radius plot. **Why wouldn't we just go out to a point and measure 1 tree to create a totally random sample?** The plots are randomly assigned (yay!), but the trees within the plots are not **independent**. In other words, we might expect measures of trees within plot A to be more similar to each other than they are to trees within plot B, due to differences in microsite characteristics, genetic similarity among co-occurring trees, or site history (logging, fire). Luckily, we can account for this non-independence, as long as the plots are random!
+[Download the example dataset](https://drive.google.com/uc?export=download&id=11ul4c3e6Ucqml5bmwiPmC81vgCEVno3D)
+The code can be used to import the data, but in case you wanted to access the data yourself - provided above!
 
-**Stratified Sampling** draws samples using proportionality based on homogeneous groupings known as strata. This type of sampling is frequently used in ecology to account for landscape differences in key factors. For instance, say you asked to classify vegetation types for a Nature preserve in southern Arizona. The reserve has a large riparian area (25% of the property) with completely different vegetation from the upland area (75%). Random sampling might, by chance, under or over represent one of these two areas. To create a stratified sampling design, you would ensure proportional representation of both areas by randomly placing 25% of the sample points within the riparian area, and 75% of the sample points within the upland area.
-
-**Sample size** More is better. However, practically we are often limited by time and money!
-
-**Statistical analysis is only one part of presenting your research results.** Generally, a results section in a manuscript includes: statistical results, data description (e.g., describing means, ranges, maxima, minima of groups of interest), and data visualization (i.e., creating beautiful figures). For each analysis that we cover, we will talk about how to present statistical results, describe data, and create appropriate supporting figures. 
+Build on this code, to generate your description of the petal lengths of your focal species:
+[R Script for Chapter 1](https://drive.google.com/uc?export=download&id=1vyxsv3L2-zMJ3MXUd0duMRngvuuYRZc9)
 
 ## Data types
 
@@ -59,13 +55,16 @@ These are variables that can occur in any quantity. If you can have a fraction o
 *Ordinal variables* (sometimes referred to as ranked) can be categorical or numerical, but the order matters.
 **Examples** = Grades (A, B, C, D, E), Likert scale variables (Strongly disagree, Agree, Strongly Agree), Class rank (1, 2, 3, 4, 5)
 
-## Describing data
+## Descriptive statistics
 
-First, let's take a spin with data description. We are starting here to introduce a few concepts that will be important to understand, as we launch into statistical analysis. We will start by describing continuous data.
+Descriptive statistics quantify characteristics of a population. Critically, they are *not* statistical tests, which tell us whether groups differ or if variables are related, BUT they are an important part of scientific work and data analysis. First, we will start by describing continuous data.
 
 Let's use a simplified version of a dataset that I'm working with right now to look at the performance of several species of pollinator-friendly native species in agricultural gardens. Eventually, we'd like to develop seed to provide to restorationists for restoration of arid and semiarid grasslands. To do this, we need to understand how reliable these species are at establishing, producing seed, and attracting pollinators. Initially, we are conducting experiments with multiple populations of each species to determine how consistently plants grow, reproduce, and perform. Here, We will take a look at the initial heights of 1 population of one species, *Asclepias subverticulata*. 
 
 Most of the time when writing up results, you present a mean (sum of numbers divided by the number of observations), and an estimate of variation (a measure of how different the observations are). Here, we calculated three estimates variation, variance, standard deviation, and standard error.
+
+**For the following sections of code, practice code is in your R file**
+
 ```{r}
 #create vector of heights (cm) of one population of A. subverticulata
 sedonapopulation <- c(3, 3, 3, 3, 7, 8, 9)
@@ -262,14 +261,9 @@ We've played around a lot with data, but what do you actually need to take away 
 
 ## Assignment
 
-Now, let's play around a little more with R! For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](https://drive.google.com/uc?export=download&id=1jhqzC8Qms-KajOj60hCt1jegW1b1BQPU)
+Now, let's play around a little more with R! 
 
-Let's also try describing the petal lengths of 3 different plant species: Milkweed, Bluestar and Pectis using this dataset:
-[Download the example dataset](https://drive.google.com/uc?export=download&id=11ul4c3e6Ucqml5bmwiPmC81vgCEVno3D)
-The code can be used to import the data, but in case you wanted to access the data yourself - provided above!
-
-Build on this code, to generate your description of the petal lengths of your focal species:
-[R Script for Chapter 1](https://drive.google.com/uc?export=download&id=1vyxsv3L2-zMJ3MXUd0duMRngvuuYRZc9)
+Let's also try describing the petal lengths of 3 different plant species: Milkweed, Bluestar and Pectis using the dataset that you downloaded.
 
 Please put your results in a document and submit to your TA in canvas! Be sure to include:
 

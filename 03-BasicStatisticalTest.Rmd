@@ -1,40 +1,44 @@
 # Basic statistical testing 
 
-We will highlight the basic components of a statistical test with a very simple statistical 'tailed' test. For this example, we will:
-*State a hypothesis
-*Calculate a test statistic
-*Determine the p-value
-*Interpret results
-
 ## Hypothesis testing review
 
-We are all familiar with the basic scientific process:  A researcher makes observations about the natural world, then generates a hypothesis to test a particular explanation of an observed phenomenon within the system, rejects or fails to reject the hypothesis, and reports these findings, growing the understanding of the system. In most day-to-day research, researchers perform the scientific process intuitively, rather than explicitly. For instance, I have never included hypotheses in a manuscript. This isn't to say you can't include hypotheses, just that most journals don't require writing your methods this way, and often space constraints and readability considerations lead authors to avoid including specific hypotheses in write-ups. Frequently, I will include hypotheses in a research proposal to help illustrate key aspects of the system and demonstrate that the statistical tests are testable, but not always! In other words, hypothesis testing is the foundation of scientific inquiry, but easily overlooked, since it often isn't necessary to explicitly state hypotheses to create scientific products. 
+Ahhhh the scientific process:  A researcher makes observations about the natural world, generates a hypothesis to test, tests the hypothesis, rejects or fails to reject the hypothesis, and reports these findings. A simple, yet glorious process that has led to incredible discoveries! Statistical hypothesis testing answers very simple questions, while scientists work in very complex knowledge environments. For beginning researchers, it is important to understand what statistics can tell us, and how this builds information to address amazing and very interesting research questions. Hypotheses allow us to articulate exactly what we are testing in statistics and to organize thoughts and analyses. In the data description module, we discussed that most statistical tests are designed to answer one of two questions: 1) Are there differences between these groups? and 2) are there relationships between these variables? Let's connect these concepts directly to hypothesis testing.
 
-Statistical hypothesis testing answers very simple questions, while scientists work in very complex knowledge environments. For beginning researchers, it is important to understand what statistics can tell us, and how this builds information to address amazing and very interesting research questions. Hypotheses allow us to articulate exactly what we are testing in statistics and to organize thoughts and analyses. In Week 1, we discussed that most statistical tests are designed to answer one of two questions: 1) Are there differences between these groups? and 2) are there relationships between these variables? Let's connect these concepts directly to hypothesis testing.
+## Downloads for this module
+
+[Download the R file](https://drive.google.com/open?id=1-mBgBLuGHaKlvPWArRw1XkE_1DpWJyzx&usp=drive_fs).
+
+## Objectives
+
+We will highlight the basic components of a statistical test with a very simple statistical 'tailed' test. Today, we will:
+1. State a hypothesis
+2. Calculate a test statistic
+3. Determine the p-value
+4. Interpret results
 
 The **null hypothesis** ($H_0$) is a statement about a population parameter that would be interesting to reject. The null hypothesis typically asserts that there is no effect or relationship or that results will not deviate from established knowledge.
 
 For instance:
-*The mean height of giraffes in captivity and in the wild do NOT differ.
-*The incidence of toenail fungus is the SAME in the control group and the group given anti-fungal medicine.
-*There is NO relationship between sea grass height and the number of sea snails.
-*The mean human body temperature is 98.6 degrees Fahrenheit. 
+- The mean height of giraffes in captivity and in the wild do NOT differ.
+- The incidence of toenail fungus is the SAME in the control group and the group given anti-fungal medicine.
+- There is NO relationship between sea grass height and the number of sea snails.
+- The mean human body temperature is 98.6 degrees Fahrenheit. 
 
 Null hypotheses are paired with **alternative hypotheses** ($H_A$) that represent ALL other possibilities other than that stated in the null hypothesis. 
 
 For instance:
-*The mean height of giraffes in captivity and in the wild differs.
-*The incidence of toenail fungus is different in the control group and the group given anti-fungal medicine.
-*There is a relationship between sea grass height and the number of sea snails.
-*The mean human body temperature is not 98.6 degrees Fahrenheit. 
+- The mean height of giraffes in captivity and in the wild differs.
+- The incidence of toenail fungus is different in the control group and the group given anti-fungal medicine.
+- There is a relationship between sea grass height and the number of sea snails.
+- The mean human body temperature is not 98.6 degrees Fahrenheit. 
 
 Note that the null hypothesis is very **specific**, while the alternative hypothesis is **general**. Statistical tests are designed to either reject or fail to reject the **null** hypothesis.
 
 ## Tailed tests
 
-Tailed tests are very simple tests for comparing means or proportions, and are great for illustrating the basic components of a frequentist statistical analysis. Let's walk through an example! Handedness is common in humans. Around 90% of humans preferentially use their right hand. You've been watching your cat, Geraldo, play with his toy mouse, and you notice that he preferentially uses his right paw to bat the mouse around. You start to wonder if cats display handedness like humans! You run around visiting cats and observing their paw usage and determine that 14 cats of the 18 you observe appear to be right-pawed, while 4 preferentially use their left paw. Is this enough evidence to suggest that cats display 'handedness' or did this pattern just emerge by chance?
+Tailed tests are very simple tests for comparing means or proportions, and are great for illustrating the basic components of a frequentist statistical analysis. Let's walk through an example! Handedness is common in humans. Around 90% of humans preferentially use their right hand. You've been watching your cat, Geraldo, play with his toy mouse, and you notice that he preferentially uses his right paw to bat the mouse around. You start to wonder if cats display handedness like humans! You run around visiting cats and observing their paw usage and determine that 14 cats of the 18 you observe appear to be right-pawed, while only 4 preferentially use their left paw. Is this enough evidence to suggest that cats display 'handedness' or did this pattern just emerge by chance?
 
-*Generate hypotheses*
+### Generate hypotheses
 
 *What is the null hypothesis in this case?* Remember it must be specific so that we can either reject or fail to reject the null!
 
@@ -50,15 +54,22 @@ Note that the alternative hypothesis is very broad and encompasses all other pos
 **In a two-tailed test, the alternative hypothesis includes parameters on both sides of the value specified by the null hypothesis.**
 
 Before we move on, can you think of an example of a 1-tailed test?
-Examples:
-*Did you score better than the class average?
-*Is the time to ARD slower when you avoid driving through campus?
-Note that we are only interested in values in one direction. In the first example, we are interested in whether your score is >80% (class average). In the second, we are interested in whether your drive time is <10 minutes (time to ARD driving through campus from your house). 
+
+**Don't look before guessing!**
+
+Here are some examples:
+1. Did you score better than the class average?
+2. Is the time to getting to the student union less than 10 minutes when you avoid driving through campus?
+
+Note the difference with the 2-tailed test: we are only interested in values in one direction. In the first example, we are interested in whether your score is >80% (class average). In the second, we are interested in whether your drive time is <10 minutes (time to the student union driving through campus from your house). 
 
 How could you phrase the first example to be a 2-sided test?
-Answer: Was my score different than the class average? In this case, your score could be higher or lower.
 
-*Calculate a test statistic*
+**Don't look before guessing!**
+
+It could be something like this: Was my score different than the class average? In this case, your score could be higher or lower.
+
+### Calculate a test statistic
 
 We generated our hypotheses. Let's calculate a test statistic. What is a test statistic? 
 
@@ -66,21 +77,22 @@ We generated our hypotheses. Let's calculate a test statistic. What is a test st
 
 For this simple test, our test statistic will be 14, since this is the number of right-handed cats we observed. We want to ask whether observing 14 out of 18 cats using their right paw is truly different from the null (9 out of 18 cats using their right paw), or did this pattern occur by chance in our sample?
 
-*Determine the p-value*
+### Determine the p-value
 
-Frequentists statistics is based on the concept of statistical distributions. If we run many trials, we can determine the likelihood of certain events occurring. We refer to the patterns of occurrence of trials as frequency distributions. Let's illustrate using the data above. A cat can either be right-handed or left-handed (in this case there are no ambidextrous cats). To determine the likelihood that our pattern arose by chance, we conduct numerous trials like a coin toss. We would randomly flip a coin 18 times and record the outcome of each trial; heads being right-pawed, and tails being left-pawed. 
+Frequentists statistics is based on the concept of statistical distributions. If we run many trials, we can determine the likelihood of certain events occurring by chance. We refer to the patterns of occurrence of trials as frequency distributions. Let's illustrate using the data above. A cat can either be right-handed or left-handed (in this case there are no ambidextrous cats). To determine the likelihood that our pattern arose by chance, we conduct numerous trials like a coin toss. We would randomly flip a coin 18 times and record the outcome of each trial; heads being right-pawed, and tails being left-pawed. 
 
 Let's do that now: 
-*Each student take a coin. 
-*Flip the coin 18 times and record number of heads. 
-*Divide by total number of trials (in this case students) to derive relative frequency for each event.
+- Each student take a coin. 
+- Flip the coin 18 times and record number of heads. 
+- Divide by total number of trials (in this case students) to derive relative frequency for each event.
 
-We probably generated something that looks like the figure below. This is referred to a probability distribution and expresses the relative frequency of particular events occurring. Frequentist statistics derives its name from this probability distribution.
+If we would flip the coins many times, we probably generated something that looks like the figure below. This is referred to as a probability distribution and expresses the relative frequency of particular events occurring. Frequentist statistics derives its name from this probability distribution.
 
 ```{r}
 paws <- 0:18
 plot(paws, dbinom(paws, 18, 0.5), type='h', ylab="Probability", xlab="Number Right-pawed Cats")
 ```
+
 Here is a table of those probabilities:
 ```{r}
 probability <- dbinom(paws, 18, 0.5)
@@ -108,7 +120,7 @@ In most sciences, we have agreed on a threshold of 0.05 for establishing statist
 
 This significance level is important. In the sciences, we would rather err on the side of *not* identifying a pattern, rather than saying there is a pattern, when there it doesn't actually exist. This concept is included in the in the discussion of *statistical errors**. 
 
-A Type I error is when you reject a true null hypothesis. You are saying there is a difference, when actually, if could perfectly measure your focal population, there is no difference. By establishing a significance level ($\alpha$) of 0.05, we are saying that we are willing to accept that 5% of the time, we will say there is an effect when there isn't one. 
+A Type I error is when you reject a true null hypothesis. You are saying there is a difference, when actually, if could perfectly measure your focal population, there is no difference. By establishing a significance level ($\alpha$) of 0.05, we are saying that we are willing to accept that 5% of the time, we will say there is an effect when there isn't one.  
 
 A Type II error is failing to find a pattern or a difference when there actually is one. If you reduce your $\alpha$ to reduce your likelihood of making a Type I, you increase the likelihood of committing a Type II error.
 
@@ -123,15 +135,41 @@ What would we say if we didn't reject the null? We would state that we **failed 
 ## Reporting results
 
 When we report findings, we will provide:
-1) A statement of findings
-2) The test statistic
-3) The P-value
-4) A description of differences, if differences exist
-5) A visualization of differences, if differences exist
 
-Here, let's focus on reporting information 1 - 3. We might say something like:
-Cats displayed higher levels of handedness than expected by chance (t = 14, p = 0.031). 
+1. A statement of findings
+2. The test statistic
+3. The P-value
+4. A description of differences, if differences exist
+5. A visualization of differences, if differences exist
 
-## Review problems
+Here is how we might report the written results of our previous test:
+
+Cats displayed higher levels of handedness than expected by chance (t = 14, p = 0.03). Around 78% of cats preferentially use their right paw (**Fig. 1**). 
+
+**Note that it is common to include up to 2 decimal places in the results statements.If p-values are less than 0.01, it is common to report the p-value as p < 0.01.**
+
+## Assignment
+
+We will now apply the tailed-test to a new question! You think that your dog, Rupert, prefers blue to red. 
+You want to know: Do dogs prefer the color blue?
+
+1. What is your null hypothesis? 
+2. What is your alternative hypothesis?
+
+You invite all your friends with dogs, place both red and blue balls on the ground, and see if how many times the dogs select the blue ball out of a series of 10 trials. Ten of friends with dogs participate and you record the number of times that the dogs select the blue ball. Run the t-test in R!
+
+3. Provide a corrected crafted results statement describing the outcome of the test. Please correctly structure your results statements, and make sure that you have included the 5 components mentioned above.
+
+4. For your figure, please be sure to properly craft a legend. Recall from last lesson, the key parts of the figure legend:
+
+1. A description of what the figure is showing you. 
+2. For complex figures with multiple panels, an orientation to the structure of the figure
+3. Explanation of any symbols, colors, and/or lines
+4. Description of how variance is quantified
+5. Definitions of axes or units, if unclear
+6. Acknowledgment of data source, if data source requires attribution
+7. Implications of the figure (optional)
+
+
 
 
