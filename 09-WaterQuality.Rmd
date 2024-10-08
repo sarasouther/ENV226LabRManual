@@ -4,7 +4,7 @@
 
 Stream ecology is best understood in the contexts of physicochemical and biological processes.  The physical properties of streams include the slope, aspect, elevation and temperatures of the stream environment.  The chemical properties of streams include a large set of characteristics; such as alkalinity, pH, nutrients - such as nitrogen and phosphorus, and the gasses dissolved in stream waters, including dissolved oxygen. 
  
-In this lab we will collect water samples at Francis Short Pond in order to document effects of Rio de Flag Flood Control Project on water quality to be compiled over time and provided to the City of Flagstaff [Download the PDF Map to get to Francis Short Pond]. We will evaluate the current water quality of Francis Short Pond to determine whether it falls within standards established by environmental protection agencies worldwide.
+In this lab we will collect water samples at Francis Short Pond in order to document effects of Rio de Flag Flood Control Project on water quality to be compiled over time and provided to the City of Flagstaff. We will evaluate the current water quality of Francis Short Pond to determine whether it falls within standards established by environmental protection agencies worldwide.
 
 ### History of Francis Short Pond
 
@@ -52,7 +52,11 @@ Water is perhaps our most precious natural resource in the arid Southwest.  High
   
 ## Downloads for this lab
 
-If you conduct the tests in the field, here is location information on where to meet [Download the map](https://drive.google.com/uc?export=download&id=1BGRB2hnSc7O_xM7g68wryQDFgTO3Sd4t)
+Sometimes we conduct this lab outside at Francis Short Pond if weather permits. It takes a half an hour to walk from Physical Sciences to Francis Short Pond, however you are welcome to drive or bike. Plan to meet a half an hour after class starts!
+
+[Get Directions to the location](https://maps.app.goo.gl/Y7CphVYJcHtXbeJe9)
+
+[Download the map of the meeting place](https://drive.google.com/uc?export=download&id=1BGRB2hnSc7O_xM7g68wryQDFgTO3Sd4t)
 
 [Download the excel file](https://docs.google.com/spreadsheets/d/19m-QEhLQ0SBdH81q0OG5gQtrhm1Z0C8x/export?format=xlsx) 
 
