@@ -8,7 +8,7 @@ We've talked about data types and describing data. This week we are applying con
 
 Imagine that we want to identify areas that support high numbers of plants from the genus *Mitella*. We hypothesize that *Mitella* occurrence is positively related to water supply (i.e., the number of *Mitella* plants goes up as water availability increases). 
 
-**Answer**:
+**Answer**
 
 1. **Response Variable (Y)**: This is the variable we are trying to explain or predict. In the case of *Mitella*, it could be the number of *Mitella plants* in a specific area.
 2. Explanatory Variable (X): This is the variable that we believe influences or explains the variation in the response. In your example, this would be water availability.

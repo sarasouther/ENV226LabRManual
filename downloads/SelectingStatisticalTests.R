@@ -3,27 +3,33 @@
 # Load libraries
 library(tidyverse)
 
+# -------------------------------
 # 1. G-test (Categorical Response and Categorical Explanatory Variable)
 
-# Create example data
+# Example: Bird nest preferences
 data_g_test <- data.frame(
   TreeSpecies = factor(rep(c("Oak", "Pine", "Maple"), each = 20)),
   NestPresence = sample(c("Yes", "No"), 60, replace = TRUE)
 )
+
+# Check out the data
+data_g_test
 
 # Run a G-test (Chi-squared test)
 g_test_result <- chisq.test(table(data_g_test$TreeSpecies, data_g_test$NestPresence))
 print(g_test_result)
 
 # Create a bar plot
-library(ggplot2)
 ggplot(data_g_test, aes(x = TreeSpecies, fill = NestPresence)) +
   geom_bar(position = "dodge") +
-  labs(title = "Bird Nest Preference by Tree Species", x = "Tree Species", y = "Count")
+  labs(x = "Tree species", y = "Count")
 
+# -------------------------------
+
+# -------------------------------
 # t-test (Continuous Response and Categorical Explanatory Variable)
 
-# Create example data
+# Two species of frogs example
 set.seed(123)
 data_t_test <- data.frame(
   Species = factor(rep(c("A", "B"), each = 30)),
@@ -38,7 +44,9 @@ print(t_test_result)
 ggplot(data_t_test, aes(x = Species, y = Weight, fill = Species)) +
   geom_boxplot() +
   labs(title = "Frog Weight Comparison", x = "Species", y = "Weight (g)")
+# -------------------------------
 
+# -------------------------------
 # ANOVA
 
 # Create example data
@@ -56,7 +64,9 @@ summary(anova_result)
 ggplot(data_anova, aes(x = Habitat, y = PlantHeight, fill = Habitat)) +
   geom_boxplot() +
   labs(title = "Plant Height by Habitat", x = "Habitat", y = "Plant Height (cm)")
+# -------------------------------
 
+# -------------------------------
 # Linear regression
 
 # Create example data
@@ -75,7 +85,9 @@ ggplot(data_lm, aes(x = WaterTemp, y = FishCount)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
   labs(title = "Fish Count vs Water Temperature", x = "Water Temperature (°C)", y = "Fish Count")
+# -------------------------------
 
+# -------------------------------
 # Logistic regression
 
 # Create example data

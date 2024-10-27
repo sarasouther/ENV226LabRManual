@@ -44,7 +44,7 @@ Francis Short Pond plays an important role in the Rio de Flag Flood Control Proj
 - **pH**: A measurement of how acidic or basic a solution is; technically, it is the concentration of hydrogen ions (H+) in a liquid. Perfectly neutral = pH of 7. Natural changes in pH occur with interactions between the water source and surrounding rock. pH can also vary with precipitation (especially acid rain) and wastewater or mining discharges. 
 - **Total dissolved solids (TDS)** Inorganic salts (principally calcium, magnesium, potassium, sodium, bicarbonates, chlorides, and sulfates) and some small amounts of organic matter that are dissolved in water. High TDS readings can be the result of water running through a region that has rocks with a high salt content. Human-caused sources include agricultural and urban runoff, wastewater discharges, industrial wastewater and salt that is used to de-ice roads.
 
-## Water Quality Monitoring:
+## Water Quality Monitoring
 
 The Environmental Protection Agency (EPA) and the Arizona Department of Environmental Quality (AZDEQ) set safe levels for naturally-occurring chemicals and contaminants in Arizona’s waters.  Water quality standards exist for drinking water, surface water, and wastewater effluent and vary depending on the water source and the intended use. Of the three sets of standards, drinking water standards are the strictest.  The EPA currently regulates approximately 90 contaminants that occur in drinking water but adds to the list of regulated contaminants as we learn more about the effects of various chemicals on human health.
  
