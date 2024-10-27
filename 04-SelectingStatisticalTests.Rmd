@@ -15,7 +15,7 @@ Imagine that we want to identify areas that support high numbers of plants from 
 
 ## Downloads for this class
 
-[Download the R file]
+- [Download the R file]
 
 ## Selecting statistical analyses
 

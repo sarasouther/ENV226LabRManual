@@ -54,12 +54,9 @@ Water is perhaps our most precious natural resource in the arid Southwest.  High
 
 Sometimes we conduct this lab outside at Francis Short Pond if weather permits. It takes a half an hour to walk from Physical Sciences to Francis Short Pond, however you are welcome to drive or bike. Plan to meet a half an hour after class starts!
 
-[Get Directions to the location](https://maps.app.goo.gl/Y7CphVYJcHtXbeJe9)
-
-[Download the map of the meeting place](https://drive.google.com/uc?export=download&id=1BGRB2hnSc7O_xM7g68wryQDFgTO3Sd4t)
-
-[Download the excel file](https://docs.google.com/spreadsheets/d/19m-QEhLQ0SBdH81q0OG5gQtrhm1Z0C8x/export?format=xlsx) 
-
+- [Get Directions to the location](https://maps.app.goo.gl/Y7CphVYJcHtXbeJe9)
+- [Download the map of the meeting place](https://drive.google.com/uc?export=download&id=1BGRB2hnSc7O_xM7g68wryQDFgTO3Sd4t)
+- [Download the excel file](https://docs.google.com/spreadsheets/d/19m-QEhLQ0SBdH81q0OG5gQtrhm1Z0C8x/export?format=xlsx) 
 ## Hypothesis generation
 
 The research question for this lab is: Does the current water quality in the wash fall within standards established by environmental protection agencies worldwide?

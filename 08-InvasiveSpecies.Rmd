@@ -18,11 +18,9 @@ In this lab, we will look at where a non-native species of your choosing occurs,
 
 ## Downloads for this lab 
 
-[Download random number sheet](https://drive.google.com/uc?export=download&id=1LsGwJ9vgy4qEahdXgWu53P8aJr9VvdCY)
-
-[Download the CSV file](https://drive.google.com/uc?export=download&id=18nRNvy3Fz3kDOyJ-KQBq9NKq1fxs0HjI) 
-
-[Download the R file](https://drive.google.com/uc?export=download&id=1BoClHL9i33UcCLDSHjXS2voZA1_gJZWT)
+- [Download random number sheet](https://drive.google.com/uc?export=download&id=1LsGwJ9vgy4qEahdXgWu53P8aJr9VvdCY)
+- [Download the CSV file](https://drive.google.com/uc?export=download&id=18nRNvy3Fz3kDOyJ-KQBq9NKq1fxs0HjI) 
+- [Download the R file](https://drive.google.com/uc?export=download&id=1BoClHL9i33UcCLDSHjXS2voZA1_gJZWT)
 
 ## Objectives
 

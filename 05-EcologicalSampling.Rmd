@@ -70,13 +70,10 @@ Finally, depending on the research question, there are a number of different var
 
 ### Downloads for this class
 
-[Random number table for compass bearings (optional)](https://drive.google.com/uc?export=download&id=1-ioFKuNVmxoMvEESJ6QF0XQyKQ8LBZSU)
-
-[Land propery maps](https://drive.google.com/uc?export=download&id=1-c-49NKwBPxb4oyyP8mwQilfXWLnAENl)
-
-[City plan](https://drive.google.com/uc?export=download&id=1-U4zEODzfB5Y82M8DfMorhUhBWI0OfhO)
-
-[Description of Sinclair Wash](https://drive.google.com/uc?export=download&id=1-gGpZdC0G_SIDdvriYHDf0tO8TVXODfj)
+- [Random number table for compass bearings (optional)](https://drive.google.com/uc?export=download&id=1-ioFKuNVmxoMvEESJ6QF0XQyKQ8LBZSU)
+- [Land propery maps](https://drive.google.com/uc?export=download&id=1-c-49NKwBPxb4oyyP8mwQilfXWLnAENl)
+- [City plan](https://drive.google.com/uc?export=download&id=1-U4zEODzfB5Y82M8DfMorhUhBWI0OfhO)
+- [Description of Sinclair Wash](https://drive.google.com/uc?export=download&id=1-gGpZdC0G_SIDdvriYHDf0tO8TVXODfj)
 This information can help you develop your sampling plan.
 
 ### Sampling Q & A

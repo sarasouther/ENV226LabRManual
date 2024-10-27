@@ -67,11 +67,13 @@ Please turn-in:
 
 ## Downloads for this lab
 
-[Data sheets for recording arthropod diversity](https://docs.google.com/document/d/17EEEAznHCsfMOvyqD2xU2wx9W7enbTth/export?format=docx)
-[Taxonomic key for arthropod identification](https://drive.google.com/uc?export=download&id=15L5cU5sXxGj-w83Hm0Tfgavl9iRG-vUO)
-[Excel files to calculate diversity](https://docs.google.com/spreadsheets/d/1MbHuYrZbnnisuUqpPi8_IswaG8dORmrH/export?format=xlsx)
-[Reading on Shannon's Index](https://drive.google.com/uc?export=download&id=1ymTaRVXzTZHUAs1w6miGt-1Sdfbxv9LI)
-[Discussion questions](https://docs.google.com/document/d/1POS4xISzodRSV3urLwb2b_KMnCDd1Tmg/export?format=docx)
+Please download this information:
+
+- [Data sheets for recording arthropod diversity](https://docs.google.com/document/d/17EEEAznHCsfMOvyqD2xU2wx9W7enbTth/export?format=docx)
+- [Taxonomic key for arthropod identification](https://drive.google.com/uc?export=download&id=15L5cU5sXxGj-w83Hm0Tfgavl9iRG-vUO)
+- [Excel files to calculate diversity](https://docs.google.com/spreadsheets/d/1MbHuYrZbnnisuUqpPi8_IswaG8dORmrH/export?format=xlsx)
+- [Reading on Shannon's Index](https://drive.google.com/uc?export=download&id=1ymTaRVXzTZHUAs1w6miGt-1Sdfbxv9LI)
+- [Discussion questions](https://docs.google.com/document/d/1POS4xISzodRSV3urLwb2b_KMnCDd1Tmg/export?format=docx)
 
 In this lab we will be analyzing the data from the compost arthropod lab to determine values for  species richness, evenness, and diversity. We will compare two metrics of soil invertebrate  biodiversity: 
 We will be using the Shannon’s index (H´) to calculate species diversity. This is one of the  most common measures of species diversity in ecology, though there are others. Shannon’s  index takes into account both richness (the number of species) and evenness, or how evenly  individuals are distributed among species. A large value of H´ denotes high biodiversity.  Shannon’s index is advantageous over simply counting the total number of different species,  because a simple count is affected by sampling effort (plot size and total number of individuals sampled): the larger the sample, the more rare species you find. H´ is superior because it is  calculated from proportions (%), as you will see, and rare species contribute very little. Therefore, this index is relatively insensitive to the random inclusion or omission of rare species  that happens with any sampling effort. See the background information on Shannon's index for more information.

@@ -6,7 +6,7 @@ Ahhhh the scientific process:  A researcher makes observations about the natural
 
 ## Downloads for this module
 
-[Download the R file](https://drive.google.com/open?id=1-mBgBLuGHaKlvPWArRw1XkE_1DpWJyzx&usp=drive_fs).
+- [Download the R file](https://drive.google.com/open?id=1-mBgBLuGHaKlvPWArRw1XkE_1DpWJyzx&usp=drive_fs).
 
 ## Objectives
 

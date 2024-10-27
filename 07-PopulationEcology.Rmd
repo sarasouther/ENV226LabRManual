@@ -6,9 +6,8 @@ In a few weeks, we will complete a lab on the population dynamics of duckweed (*
 
 ### Downloads for this lab
 
-[Download the CSV file](https://drive.google.com/uc?export=download&id=1mtEFQQcmza9Sk5jmWpQKehy87nG8gKBP)
-
-[Download the R file](https://drive.google.com/uc?export=download&id=1u3DzlEIM3NwZzNC9ebvyOqXmwaztYysZ) 
+- [Download the CSV file](https://drive.google.com/uc?export=download&id=1mtEFQQcmza9Sk5jmWpQKehy87nG8gKBP)
+- [Download the R file](https://drive.google.com/uc?export=download&id=1u3DzlEIM3NwZzNC9ebvyOqXmwaztYysZ) 
 
 ### Objectives
 To investigate population dynamics of duckweed using microcosms.

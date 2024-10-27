@@ -269,12 +269,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.2" data-path="water-quality.html"><a href="water-quality.html#key-water-quality-terms-and-concepts"><i class="fa fa-check"></i><b>10.2</b> Key Water Quality Terms and Concepts</a></li>
 <li class="chapter" data-level="10.3" data-path="water-quality.html"><a href="water-quality.html#water-quality-monitoring"><i class="fa fa-check"></i><b>10.3</b> Water Quality Monitoring</a></li>
 <li class="chapter" data-level="10.4" data-path="water-quality.html"><a href="water-quality.html#downloads-for-this-lab-3"><i class="fa fa-check"></i><b>10.4</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="10.5" data-path="water-quality.html"><a href="water-quality.html#hypothesis-generation"><i class="fa fa-check"></i><b>10.5</b> Hypothesis generation</a></li>
-<li class="chapter" data-level="10.6" data-path="water-quality.html"><a href="water-quality.html#methods-1"><i class="fa fa-check"></i><b>10.6</b> Methods</a>
+<li class="chapter" data-level="10.5" data-path="water-quality.html"><a href="water-quality.html#methods-1"><i class="fa fa-check"></i><b>10.5</b> Methods</a>
 <ul>
-<li class="chapter" data-level="10.6.1" data-path="water-quality.html"><a href="water-quality.html#record-and-compare-your-results"><i class="fa fa-check"></i><b>10.6.1</b> Record and compare your results</a></li>
+<li class="chapter" data-level="10.5.1" data-path="water-quality.html"><a href="water-quality.html#record-and-compare-your-results"><i class="fa fa-check"></i><b>10.5.1</b> Record and compare your results</a></li>
 </ul></li>
-<li class="chapter" data-level="10.7" data-path="water-quality.html"><a href="water-quality.html#assignment-6"><i class="fa fa-check"></i><b>10.7</b> Assignment</a></li>
+<li class="chapter" data-level="10.6" data-path="water-quality.html"><a href="water-quality.html#assignment-6"><i class="fa fa-check"></i><b>10.6</b> Assignment</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="species-interaction-project.html"><a href="species-interaction-project.html"><i class="fa fa-check"></i><b>11</b> Species interaction project</a>
 <ul>
@@ -364,7 +363,7 @@ We can conduct statistical analysis until the cats come home (ha!), but if your 
 <p>In order to reduce bias, researchers <strong>randomize</strong> sampling. <strong>Random sampling</strong> is when every item within the focal population has an equal chance of being selected. In research, random sampling can be applied to selecting experimental subjects, assigning individuals to treatments, or identifying plot locations. It is <strong>REALLY</strong> easy to introduce bias in ecological and social research on accident if you do not use a random sampling technique! Imagine that you are looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat’s claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. In practice, researchers use number generators, like those on your phone, or within computer programs, like ArcGIS, to randomly place sampling points. Here, we’ve included a random number sheet to use to randomly array plots. A random number sheet contains random numbers that someone generated in advance to assist in the field.</p>
 <p>We can quickly and easily generate such a sample in R, using the sample function.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="ecological-sampling.html#cb48-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##  [1] 75 21 29 51 91  3 65 80 14 36</code></pre>
+<pre><code>##  [1] 67 36 80  9 52 31 91 95 40 12</code></pre>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="ecological-sampling.html#cb50-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
 <span id="cb50-2"><a href="ecological-sampling.html#cb50-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
 <span id="cb50-3"><a href="ecological-sampling.html#cb50-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
@@ -410,11 +409,13 @@ these fairly large plots (C). Plots must be large in order to include enough tre
 <h2><span class="header-section-number">6.6</span> Assignment<a href="ecological-sampling.html#assignment-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="downloads-for-this-class-1" class="section level3 hasAnchor" number="6.6.1">
 <h3><span class="header-section-number">6.6.1</span> Downloads for this class<a href="ecological-sampling.html#downloads-for-this-class-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://drive.google.com/uc?export=download&amp;id=1-ioFKuNVmxoMvEESJ6QF0XQyKQ8LBZSU">Random number table for compass bearings (optional)</a></p>
-<p><a href="https://drive.google.com/uc?export=download&amp;id=1-c-49NKwBPxb4oyyP8mwQilfXWLnAENl">Land propery maps</a></p>
-<p><a href="https://drive.google.com/uc?export=download&amp;id=1-U4zEODzfB5Y82M8DfMorhUhBWI0OfhO">City plan</a></p>
-<p><a href="https://drive.google.com/uc?export=download&amp;id=1-gGpZdC0G_SIDdvriYHDf0tO8TVXODfj">Description of Sinclair Wash</a>
-This information can help you develop your sampling plan.</p>
+<ul>
+<li><a href="https://drive.google.com/uc?export=download&amp;id=1-ioFKuNVmxoMvEESJ6QF0XQyKQ8LBZSU">Random number table for compass bearings (optional)</a></li>
+<li><a href="https://drive.google.com/uc?export=download&amp;id=1-c-49NKwBPxb4oyyP8mwQilfXWLnAENl">Land propery maps</a></li>
+<li><a href="https://drive.google.com/uc?export=download&amp;id=1-U4zEODzfB5Y82M8DfMorhUhBWI0OfhO">City plan</a></li>
+<li><a href="https://drive.google.com/uc?export=download&amp;id=1-gGpZdC0G_SIDdvriYHDf0tO8TVXODfj">Description of Sinclair Wash</a>
+This information can help you develop your sampling plan.</li>
+</ul>
 </div>
 <div id="sampling-q-a" class="section level3 hasAnchor" number="6.6.2">
 <h3><span class="header-section-number">6.6.2</span> Sampling Q &amp; A<a href="ecological-sampling.html#sampling-q-a" class="anchor-section" aria-label="Anchor link to header"></a></h3>

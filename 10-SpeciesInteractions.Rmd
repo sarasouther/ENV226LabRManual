@@ -24,9 +24,11 @@ Over the next six to eight weeks, you will visit your experimental plants in the
 
 ### Downloads for this lab
 
-[A reading about plant species interactions](https://drive.google.com/open?id=1-s5YEWarOOD420vWT_zcQ8FGdOKB07tU&usp=drive_fs)
-[Experimental design worksheet for turn-in](https://drive.google.com/uc?export=download&id=1-s5YEWarOOD420vWT_zcQ8FGdOKB07tU)
-[An example data sheet](https://drive.google.com/uc?export=download&id=1-skItueuzz_NAF4Qm9uMV3mPaGTgbFAF)
+Please download:
+
+- [A reading about plant species interactions](https://drive.google.com/open?id=1-s5YEWarOOD420vWT_zcQ8FGdOKB07tU&usp=drive_fs)
+- [Experimental design worksheet for turn-in](https://drive.google.com/uc?export=download&id=1-s5YEWarOOD420vWT_zcQ8FGdOKB07tU)
+- [An example data sheet](https://drive.google.com/uc?export=download&id=1-skItueuzz_NAF4Qm9uMV3mPaGTgbFAF)
 
 **This is a datasheet for an experiment with 12 pots and two species, with each pot containing species A & B. You may need to adjust the structure of the dataset depending your experimental design**
 
@@ -100,8 +102,10 @@ Note: the greenhouse is open between 7:00 am - 3:00 pm. You will need to get the
 
 ### Downloads
 
-[Poster instructions](https://drive.google.com/uc?export=download&id=108UqK1q6LJduCPzZXb3xkMnGYCbmgJgw)
-[Peer evaluation](https://drive.google.com/uc?export=download&id=1F-1RDATlsQs7ZsMd3VmexTc8I7xltD22)
+Please download:
+
+- [Poster instructions](https://drive.google.com/uc?export=download&id=108UqK1q6LJduCPzZXb3xkMnGYCbmgJgw)
+- [Peer evaluation](https://drive.google.com/uc?export=download&id=1F-1RDATlsQs7ZsMd3VmexTc8I7xltD22)
 
 Once you have all of your data, you will prepare a poster with your group detailing your experiment and its outcome. 
 For the poster you will follow standard scientific writing style (see handout). Using the statistical lessons and R scripts that you have received earlier in the semester, analyze your data and create figures. Remember the correct methods for reporting results and writing figure lessons. 

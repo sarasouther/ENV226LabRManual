@@ -28,12 +28,12 @@ We will build to towards always providing a complete results section with these 
 
 ## Downloads for this lab
 
-For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](https://drive.google.com/uc?export=download&id=1jhqzC8Qms-KajOj60hCt1jegW1b1BQPU)
+- For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](https://drive.google.com/uc?export=download&id=1jhqzC8Qms-KajOj60hCt1jegW1b1BQPU)
+- [Download the example dataset](https://drive.google.com/uc?export=download&id=11ul4c3e6Ucqml5bmwiPmC81vgCEVno3D)
 
-[Download the example dataset](https://drive.google.com/uc?export=download&id=11ul4c3e6Ucqml5bmwiPmC81vgCEVno3D)
 The code can be used to import the data, but in case you wanted to access the data yourself - provided above!
 
-Build on this code, to generate your description of the petal lengths of your focal species:
+- Build on this code, to generate your description of the petal lengths of your focal species:
 [R Script for Chapter 1](https://drive.google.com/uc?export=download&id=1vyxsv3L2-zMJ3MXUd0duMRngvuuYRZc9)
 
 ## Data types
