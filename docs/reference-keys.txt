@@ -131,7 +131,11 @@ acknowledgements
 species-distribution-modeling
 introduction-4
 a-brief-review-of-niche-theory
+downloads-for-this-lab-7
+objectives-8
+methods-4
 lets-get-modeling
+run-the-r-code
 model-selection
 build-an-sdm
 model-evaluation-explained
