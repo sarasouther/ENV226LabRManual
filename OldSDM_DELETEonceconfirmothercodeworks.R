@@ -1,35 +1,25 @@
-# Set the working directory to the master folder
-# Uncomment and modify the path below as needed for each student's system
-# setwd("path/to/your/speciesdistributionmodels")
+#old SDM
 
-# Required libraries
-# Uncomment to install packages if needed
-# install.packages("sdm")
-# install.packages("sp")
-# install.packages("raster")
-# install.packages("usdm")
-# install.packages("CoordinateCleaner")
-# install.packages("spThin")
-# install.packages("geodata")
-# install.packages("sf")
-# install.packages("terra")
-# install.packages("tidyverse")
-# install.packages("rgbif")
-
-library(sdm)
-library(sp)
-library(raster)
-library(usdm)
-library(CoordinateCleaner)
-library(spThin)
-library(geodata)
-library(sf)
-library(terra)
-library(tidyverse)
-library(rgbif)
-
-#------------------------
 # Code section 1 - Set up file paths and load bioclimatic data
+
+# Set your working directory
+setwd("addyourworkingdirectory") 
+
+# Load the data
+data <- read.csv("invasivespeciesdatasheet.csv")
+
+# Import the climate shapefile
+climate_shapefile <- st_read("climate.shp")
+
+# Import the US states shapefile
+us_states_shapefile <- st_read("cb_2021_us_state_500k.shp")
+
+# Import the climate GeoTIFF file
+climate_geotiff <- raster("cmip6_biof6180.tif")
+
+# Import the species locations CSV file
+species_locations <- read.csv("species_locations.csv")
+
 
 # Set up paths within the master directory
 bioclim_folder <- file.path(getwd(), "climate", "wc2.1_2.5m")
@@ -149,3 +139,7 @@ enbiof6180 <- sdm::ensemble(m1, biof6180c, filename = "pondo_future.tif", settin
 par(mfrow = c(1, 2), mar = c(0, 0, 1, 0))
 plot(mask(en1, az), col = colorRampPalette(c('#3E49BB', '#3498DB', 'yellow', 'orange', 'red', 'darkred'))(200), main = "Current Ponderosa habitat")
 plot(mask(enbiof6180, az), col = colorRampPalette(c('#3E49BB', '#3498DB', 'yellow', 'orange', 'red', 'darkred'))(200), main = "Future Ponderosa habitat")
+
+
+
+
