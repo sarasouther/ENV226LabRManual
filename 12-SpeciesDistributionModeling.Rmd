@@ -33,10 +33,7 @@ These caveats and limitations, particularly related to your data, should be incl
 Create a file on your desktop called 'speciesdistributionmodels' and place the following files within it:
 
 - [R script for creating the SDM](https://drive.google.com/uc?export=download&id=1_SSBxFBS421iJyH-O1_PJQ5s8VqW09sT)
-- [Current climate data](https://drive.google.com/drive/folders/1AwjI0mWRri0GxCSRDjU3xMRgvIMXMadk?usp=sharing)
-- [Future climate data](https://drive.google.com/uc?export=download&id=1AoRWyjIMf22l5ZwSLZURNel806c-LUoE)
 - [Occurrence data](https://drive.google.com/uc?export=download&id=1D3hIBXCDSnqTQPmx7ZFOMqHzZk01--JQ)
-- [Boundary data](https://drive.google.com/uc?export=download&id=16-eE5JNnNeHnalt8WOMh9Vayzf0EUTcz)
 - [Worksheet to turn-in](https://docs.google.com/document/d/1Od_MirdwRFjmDnCzo2TKwc5KxBFUbkPD/export?format=docx)
 
 ## Objectives
