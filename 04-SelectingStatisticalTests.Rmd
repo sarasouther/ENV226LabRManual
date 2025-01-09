@@ -15,13 +15,14 @@ Imagine that we want to identify areas that support high numbers of plants from 
 
 ## Downloads for this class
 
-- [Download the R file]
+- [Download the R file](https://drive.google.com/uc?export=download&id=14tBsHZx8ZBXV-Gf1sxKG_jiNAXwu94dm)
 
 ## Selecting statistical analyses
 
 Below, you will see a very simple decision matrix for selecting statistical analyses. Let's walk through how to use it to select statistical tests.  
 
-![Select the statistical analysis!](/Users/sks379/Desktop/GraduateStudents/Stats and Lit Review Lessons/Class4_SelectingStatisticalAnalyses/DecisionMatrix.png)
+![](images/04-selectingstatisticaltests/DecisionMatrix.png)
+
 ### Using the decision matrix
 
 **Both variables are categorical**: Use a G-test (or chi-square test) to see if the frequency of categorical outcomes differs across categories of the explanatory variable.
@@ -87,6 +88,7 @@ Here are the descriptions of 4 datasets (they are loaded in your R file). For ea
 ### Turn-in 
 
 1. Results statements including:
+
 - The correct test statistics
 
 2. Associated figures with correct figure legends.

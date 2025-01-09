@@ -193,7 +193,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#a-foray-into-statistics"><i class="fa fa-check"></i><b>5.1</b> A foray into statistics</a></li>
 <li class="chapter" data-level="5.2" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#downloads-for-this-class"><i class="fa fa-check"></i><b>5.2</b> Downloads for this class</a></li>
-<li class="chapter" data-level="5.3" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#selecting-statistical-analyses"><i class="fa fa-check"></i><b>5.3</b> Selecting statistical analyses</a></li>
+<li class="chapter" data-level="5.3" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#selecting-statistical-analyses"><i class="fa fa-check"></i><b>5.3</b> Selecting statistical analyses</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#using-the-decision-matrix"><i class="fa fa-check"></i><b>5.3.1</b> Using the decision matrix</a></li>
+</ul></li>
 <li class="chapter" data-level="5.4" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#statistical-tests"><i class="fa fa-check"></i><b>5.4</b> Statistical tests</a>
 <ul>
 <li class="chapter" data-level="5.4.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#g-test-categorical-response-and-categorical-explanatory-variable"><i class="fa fa-check"></i><b>5.4.1</b> G-test (Categorical Response and Categorical Explanatory Variable)</a></li>
@@ -370,14 +373,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="downloads-for-this-class" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Downloads for this class<a href="selecting-statistical-tests.html#downloads-for-this-class" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>[Download the R file]</li>
+<li><a href="https://drive.google.com/uc?export=download&amp;id=14tBsHZx8ZBXV-Gf1sxKG_jiNAXwu94dm">Download the R file</a></li>
 </ul>
 </div>
 <div id="selecting-statistical-analyses" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Selecting statistical analyses<a href="selecting-statistical-tests.html#selecting-statistical-analyses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Below, you will see a very simple decision matrix for selecting statistical analyses. Let’s walk through how to use it to select statistical tests.</p>
-<p><img src="/Users/sks379/Desktop/GraduateStudents/Stats%20and%20Lit%20Review%20Lessons/Class4_SelectingStatisticalAnalyses/DecisionMatrix.png" alt="Select the statistical analysis!" />
-### Using the decision matrix</p>
+<p><img src="images/04-selectingstatisticaltests/DecisionMatrix.png" /></p>
+<div id="using-the-decision-matrix" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Using the decision matrix<a href="selecting-statistical-tests.html#using-the-decision-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Both variables are categorical</strong>: Use a G-test (or chi-square test) to see if the frequency of categorical outcomes differs across categories of the explanatory variable.
 <strong>Example</strong>: If we were studying whether <em>Mitella</em> plants are found more frequently in shaded vs. sunny areas (categorical), we would use a G-test.</p>
 <p><strong>Explanatory variable is categorical, response variable is continuous</strong>: Use a t-test (or ANOVA for more than two categories).
@@ -387,6 +391,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <strong>Example</strong>: If you measured the amount of water in milliliters and counted the number of Mitella plants, linear regression could help determine the relationship between water availability and Mitella abundance.</p>
 <p><strong>Explanatory variable is continuous, response variable is categorical</strong>: Use logistic regression.
 <strong>Example</strong>: If you’re modeling the presence or absence of Mitella plants (categorical response) based on continuous water availability, logistic regression is the correct choice.</p>
+</div>
 </div>
 <div id="statistical-tests" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Statistical tests<a href="selecting-statistical-tests.html#statistical-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>

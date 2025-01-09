@@ -1,4 +1,3 @@
-fig:hist-sedona-unskewed
 introduction
 welcome-to-r
 r-and-r-studio-installation
@@ -40,6 +39,7 @@ selecting-statistical-tests
 a-foray-into-statistics
 downloads-for-this-class
 selecting-statistical-analyses
+using-the-decision-matrix
 statistical-tests
 g-test-categorical-response-and-categorical-explanatory-variable
 t-test-and-anova-continuous-response-and-categorical-explanatory-variable
