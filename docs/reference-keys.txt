@@ -1,3 +1,4 @@
+fig:hist-sedona-unskewed
 introduction
 welcome-to-r
 r-and-r-studio-installation

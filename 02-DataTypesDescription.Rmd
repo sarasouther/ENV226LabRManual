@@ -196,7 +196,11 @@ median(sedona_unskewed)
 sedona_skewed <- c(3, 3, 3, 3, 7, 3, 4, 5, 6, 3, 3, 3, 4, 4, 6, 7, 8, 9, 3, 4, 5, 2)
 mean(sedona_skewed)
 median(sedona_skewed)
-hist(sedona_unskewed, main = "Mostly Unskewed", xlab = "Plant height (cm)", breaks=5)
+```
+
+
+```{r hist-sedona-unskewed, echo=TRUE, fig.cap="Histogram of plant heights (Unskewed)", fig.align="center"}
+hist(sedona_unskewed, main = "Unskewed", xlab = "Plant height (cm)", breaks=5)
 ```
 
 In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.

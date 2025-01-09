@@ -522,8 +522,13 @@ While standard deviation measures the variation of the sample, standard error is
 <pre><code>## [1] 4.454545</code></pre>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="descriptive-statistics.html#cb31-1" tabindex="-1"></a><span class="fu">median</span>(sedona_skewed)</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="descriptive-statistics.html#cb33-1" tabindex="-1"></a><span class="fu">hist</span>(sedona_unskewed, <span class="at">main =</span> <span class="st">&quot;Mostly Unskewed&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Plant height (cm)&quot;</span>, <span class="at">breaks=</span><span class="dv">5</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="descriptive-statistics.html#cb33-1" tabindex="-1"></a><span class="fu">hist</span>(sedona_unskewed, <span class="at">main =</span> <span class="st">&quot;Unskewed&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Plant height (cm)&quot;</span>, <span class="at">breaks=</span><span class="dv">5</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hist-sedona-unskewed"></span>
+<img src="_main_files/figure-html/hist-sedona-unskewed-1.png" alt="Histogram of plant heights (Unskewed)" width="672" />
+<p class="caption">
+Figure 3.1: Histogram of plant heights (Unskewed)
+</p>
+</div>
 <p>In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="descriptive-statistics.html#cb34-1" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="fu">hist</span>(sedona_unskewed, <span class="at">main =</span> <span class="st">&quot;Mostly Unskewed&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Plant height (cm)&quot;</span>, <span class="at">breaks=</span><span class="dv">5</span>)</span>
 <span id="cb34-2"><a href="descriptive-statistics.html#cb34-2" tabindex="-1"></a></span>
