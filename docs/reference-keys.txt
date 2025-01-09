@@ -5,8 +5,13 @@ download-the-r-statistical-software-from-the-official-r-project-website.
 download-r-studio
 set-up-r-studio
 working-directories
+setting-your-working-directory-on-an-apple-device
 annotating-your-code
+packages-and-libraries
 organizing-your-code
+importing-and-exporting-csv-files
+downloads
+deliverables
 descriptive-statistics
 a-short-statistical-review
 what-can-statistics-tell-us
@@ -112,7 +117,7 @@ creating-your-data-sheet
 turn-in-week-1
 weeks-2---5
 final-week
-downloads
+downloads-1
 turn-in-1
 species-diversity
 introduction-3

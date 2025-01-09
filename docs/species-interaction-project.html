@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Species interaction project | ENV 226 Lab Online R Manual</title>
   <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Species interaction project | ENV 226 Lab Online R Manual" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Sara Souther" />
 
 
-<meta name="date" content="2024-10-27" />
+<meta name="date" content="2025-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,9 +147,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-the-r-statistical-software-from-the-official-r-project-website."><i class="fa fa-check"></i><b>2.2</b> Download the R statistical software from the official R Project website.</a></li>
 <li class="chapter" data-level="2.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-r-studio"><i class="fa fa-check"></i><b>2.3</b> Download R studio</a></li>
 <li class="chapter" data-level="2.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#set-up-r-studio"><i class="fa fa-check"></i><b>2.4</b> Set up R studio</a></li>
-<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#working-directories"><i class="fa fa-check"></i><b>2.5</b> Working directories</a></li>
+<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#working-directories"><i class="fa fa-check"></i><b>2.5</b> Working directories</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#setting-your-working-directory-on-an-apple-device"><i class="fa fa-check"></i><b>2.5.1</b> Setting your working directory on an Apple device</a></li>
+</ul></li>
 <li class="chapter" data-level="2.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#annotating-your-code"><i class="fa fa-check"></i><b>2.6</b> Annotating your code</a></li>
-<li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.7</b> Organizing your code</a></li>
+<li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#packages-and-libraries"><i class="fa fa-check"></i><b>2.7</b> Packages and libraries</a></li>
+<li class="chapter" data-level="2.8" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.8</b> Organizing your code</a></li>
+<li class="chapter" data-level="2.9" data-path="welcome-to-r.html"><a href="welcome-to-r.html#importing-and-exporting-csv-files"><i class="fa fa-check"></i><b>2.9</b> Importing and exporting csv files</a></li>
+<li class="chapter" data-level="2.10" data-path="welcome-to-r.html"><a href="welcome-to-r.html#downloads"><i class="fa fa-check"></i><b>2.10</b> Downloads</a></li>
+<li class="chapter" data-level="2.11" data-path="welcome-to-r.html"><a href="welcome-to-r.html#deliverables"><i class="fa fa-check"></i><b>2.11</b> Deliverables</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive statistics</a>
 <ul>
@@ -291,7 +298,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.8" data-path="species-interaction-project.html"><a href="species-interaction-project.html#weeks-2---5"><i class="fa fa-check"></i><b>11.8</b> Weeks 2 - 5</a></li>
 <li class="chapter" data-level="11.9" data-path="species-interaction-project.html"><a href="species-interaction-project.html#final-week"><i class="fa fa-check"></i><b>11.9</b> Final week</a>
 <ul>
-<li class="chapter" data-level="11.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads"><i class="fa fa-check"></i><b>11.9.1</b> Downloads</a></li>
+<li class="chapter" data-level="11.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads-1"><i class="fa fa-check"></i><b>11.9.1</b> Downloads</a></li>
 <li class="chapter" data-level="11.9.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in-1"><i class="fa fa-check"></i><b>11.9.2</b> Turn-in</a></li>
 </ul></li>
 </ul></li>
@@ -448,8 +455,8 @@ MILLIMETERS!</p>
 </div>
 <div id="final-week" class="section level2 hasAnchor" number="11.9">
 <h2><span class="header-section-number">11.9</span> Final week<a href="species-interaction-project.html#final-week" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="downloads" class="section level3 hasAnchor" number="11.9.1">
-<h3><span class="header-section-number">11.9.1</span> Downloads<a href="species-interaction-project.html#downloads" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="downloads-1" class="section level3 hasAnchor" number="11.9.1">
+<h3><span class="header-section-number">11.9.1</span> Downloads<a href="species-interaction-project.html#downloads-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Please download:</p>
 <ul>
 <li><a href="https://drive.google.com/uc?export=download&amp;id=108UqK1q6LJduCPzZXb3xkMnGYCbmgJgw">Poster instructions</a></li>

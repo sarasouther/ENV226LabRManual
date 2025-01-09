@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Ecological sampling | ENV 226 Lab Online R Manual</title>
   <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Ecological sampling | ENV 226 Lab Online R Manual" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Sara Souther" />
 
 
-<meta name="date" content="2024-10-27" />
+<meta name="date" content="2025-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,9 +147,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-the-r-statistical-software-from-the-official-r-project-website."><i class="fa fa-check"></i><b>2.2</b> Download the R statistical software from the official R Project website.</a></li>
 <li class="chapter" data-level="2.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-r-studio"><i class="fa fa-check"></i><b>2.3</b> Download R studio</a></li>
 <li class="chapter" data-level="2.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#set-up-r-studio"><i class="fa fa-check"></i><b>2.4</b> Set up R studio</a></li>
-<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#working-directories"><i class="fa fa-check"></i><b>2.5</b> Working directories</a></li>
+<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#working-directories"><i class="fa fa-check"></i><b>2.5</b> Working directories</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#setting-your-working-directory-on-an-apple-device"><i class="fa fa-check"></i><b>2.5.1</b> Setting your working directory on an Apple device</a></li>
+</ul></li>
 <li class="chapter" data-level="2.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#annotating-your-code"><i class="fa fa-check"></i><b>2.6</b> Annotating your code</a></li>
-<li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.7</b> Organizing your code</a></li>
+<li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#packages-and-libraries"><i class="fa fa-check"></i><b>2.7</b> Packages and libraries</a></li>
+<li class="chapter" data-level="2.8" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.8</b> Organizing your code</a></li>
+<li class="chapter" data-level="2.9" data-path="welcome-to-r.html"><a href="welcome-to-r.html#importing-and-exporting-csv-files"><i class="fa fa-check"></i><b>2.9</b> Importing and exporting csv files</a></li>
+<li class="chapter" data-level="2.10" data-path="welcome-to-r.html"><a href="welcome-to-r.html#downloads"><i class="fa fa-check"></i><b>2.10</b> Downloads</a></li>
+<li class="chapter" data-level="2.11" data-path="welcome-to-r.html"><a href="welcome-to-r.html#deliverables"><i class="fa fa-check"></i><b>2.11</b> Deliverables</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive statistics</a>
 <ul>
@@ -291,7 +298,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.8" data-path="species-interaction-project.html"><a href="species-interaction-project.html#weeks-2---5"><i class="fa fa-check"></i><b>11.8</b> Weeks 2 - 5</a></li>
 <li class="chapter" data-level="11.9" data-path="species-interaction-project.html"><a href="species-interaction-project.html#final-week"><i class="fa fa-check"></i><b>11.9</b> Final week</a>
 <ul>
-<li class="chapter" data-level="11.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads"><i class="fa fa-check"></i><b>11.9.1</b> Downloads</a></li>
+<li class="chapter" data-level="11.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads-1"><i class="fa fa-check"></i><b>11.9.1</b> Downloads</a></li>
 <li class="chapter" data-level="11.9.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in-1"><i class="fa fa-check"></i><b>11.9.2</b> Turn-in</a></li>
 </ul></li>
 </ul></li>
@@ -363,7 +370,7 @@ We can conduct statistical analysis until the cats come home (ha!), but if your 
 <p>In order to reduce bias, researchers <strong>randomize</strong> sampling. <strong>Random sampling</strong> is when every item within the focal population has an equal chance of being selected. In research, random sampling can be applied to selecting experimental subjects, assigning individuals to treatments, or identifying plot locations. It is <strong>REALLY</strong> easy to introduce bias in ecological and social research on accident if you do not use a random sampling technique! Imagine that you are looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat’s claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. In practice, researchers use number generators, like those on your phone, or within computer programs, like ArcGIS, to randomly place sampling points. Here, we’ve included a random number sheet to use to randomly array plots. A random number sheet contains random numbers that someone generated in advance to assist in the field.</p>
 <p>We can quickly and easily generate such a sample in R, using the sample function.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="ecological-sampling.html#cb48-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##  [1] 67 36 80  9 52 31 91 95 40 12</code></pre>
+<pre><code>##  [1] 93 96 71 67 23 79 85 37  8 51</code></pre>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="ecological-sampling.html#cb50-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
 <span id="cb50-2"><a href="ecological-sampling.html#cb50-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
 <span id="cb50-3"><a href="ecological-sampling.html#cb50-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>

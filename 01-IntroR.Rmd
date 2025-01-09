@@ -1,6 +1,6 @@
 # Welcome to R
 
-R is an open source statistical software package commonly used by researchers and other folks, who crave a free way to manipulate, analyze, and visualize date. R uses it's own programming language, which is similar to S+ (the paid precursor to R). R employs an object-oriented programming (OOP) paradigm, specifically a type of OOP known as "class-based object-oriented programming," to manage and manipulate data. 
+R is an open source statistical software package commonly used by researchers and other folks, who crave a free way to manipulate, analyze, and visualize data. R uses its own programming language, which is similar to S+ (the paid precursor to R). R employs an object-oriented programming (OOP) paradigm to manage and manipulate data. Object-oriented programming (OOP) is a paradigm where data and functions are grouped into ‘objects’ that can be reused, helping organize and simplify code.
 
 Today, R is essential for ecological work that involves data analysis, whether you are attending a graduate program analyzing data for your thesis or working at a non-profit analyzing the efficacy of restoration treatments. We are using R in this lab to introduce you to the basics of data analysis. Managing, manipulating and analyzing data and a foundation in programming are important skills to include on your resume and will hopefully help you in other classes at NAU! Let's walk through the basics of installing and using R!
 
@@ -60,7 +60,7 @@ In RStudio, the four panels or panes are commonly referred to as:
 
 Typically, I select a structure in which I have my **Source pane** in the upper left, my **Console Pane** in the lower left position, my **Environment Pane** in the upper right corner, and the **Files/Plots/Packages/Help Pane** in the lower right position. You can select any position that you'd like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here's what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won't have to adjust positioning!
 
-![](images/01-intro/PaneLayout.png)
+![Adjusting the layout of your workspace](images/01-intro/PaneLayout.png){width=50%, height=auto}
 
 ## Working directories
 
@@ -74,16 +74,22 @@ This will allow you to browse your file system and select a new directory as you
 getwd() #display file path to R studio 
 ```
 
-When you run, getwd() you will see where R is looking for files. Now, let's tell R where we want it to access files from! First, you will need to identify your file path. To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including 'Get info' (check out picture below).
+When you run, getwd() you will see where R is looking for files. Now, let's tell R where we want it to access files from! First, you will need to identify your file path. 
 
-![](images/01-intro/workingdirectorymac.png)
+### Setting your working directory on an Apple device
+
+To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including 'Get info' (check out picture below).
+
+![Finding your path](images/01-intro/workingdirectorymac.png){width=15%, height=auto}
 Then, select 'Get info'. Then, highlight the information after 'where' and copy it as a pathname (see picture).
 
-![](images/01-intro/copyingpathnamemac.png) 
+![Copying pathnames](images/01-intro/copyingpathnamemac.png){width=15%, height=auto}
+### Setting your working directory on a PC
+
 For PCs, start by opening your File Explorer:
-Press the Windows key + E on your keyboard.
-Alternatively, you can click the "File Explorer" or "This PC" icon on your taskbar or Start menu.
-Navigate to the Folder: Use the File Explorer to navigate to the folder where the file is located. You can click on folders to open them and view their contents.
+
+Press the Windows key + E on your keyboard. Alternatively, you can click the "File Explorer" or "This PC" icon on your taskbar or Start menu.
+Navigate to the Folder: Use the File Explorer to navigate to the folder where the file is located. You can click on folders to open them and view their contents. Then, proceed to:
 
 1. Find the File: Locate the file you are interested in within the folder.
 
@@ -95,16 +101,18 @@ Now R studio is directed to upload and save work to this folder.
 
 ## Annotating your code
 
-Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don't want or need while coding, so I typically recommend creating an R script and annotating your that file! One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string
+Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don't want or need while coding, so I typically recommend creating an R script and annotating your that file! 
 
-![](images/01-intro/createrscript.png) 
-## Libraries
+![Create an R script](images/01-intro/createrscript.png){width=50%, height=auto}
+One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string
+
+## Packages and libraries
 
 Base R, the fundamental, built-in set of functions, data structures, and libraries that come with the R programming language without the need for additional packages or extensions, including basic math functions, statistical analyses and visualization tools. However, one amazingly cool think about R is that folks are out there creating 'libraries', or a collection of R functions, data sets, and documentation bundled together into a single package, to do specialized analyses. For most tasks in R, you will need to install and load libraries. There are two methods to install libraries. Let's start by installing an important library (or package) for data manipulation, called 'tidyverse' (actually several packages - hence why the name references a universe). To do this, run this code: install.packages("tidyverse").
 
-The weird thing about including install packages code is that you don't want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I've included the install function in the text). You will need to load packages, you generally won't need to install packages after you have done it once. You can either then install the packages and delete the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. When prompted, be sure to install dependencies - this will make sure that you have any pieces of code that the library that you are installing needs to operate.
+The weird thing about including install packages code is that you don't want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I've included the install function in the text). You will need to load packages, you generally won't need to install packages after you have done it once. You can either then install the packages and delete/hash out the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. When prompted, be sure to install dependencies - this will make sure that you have any pieces of code that the library that you are installing needs to operate.
 
-![](images/01-intro/installlibraries.png) 
+![Install a package](images/01-intro/installlibraries.png){width=50%, height=auto}
 Excellent! You have installed a library! Now, we need to load it. You WILL need to load R packages every time that you use R. Any functions associated with your package won't work, unless the package is loaded, so I suggest keeping the load library code in your R script. The code to load libraries is simple (see below).
 
 ```{r}
@@ -115,21 +123,28 @@ library(tidyverse)
 
 A well-written R script will include the components we have been discussion: Annotated notes on what the script is doing and potentially even the version of R, loading commands for your libraries, and a line of code specifying your working directory. With these elements in place, you are ready to code your heart out!
 
-Here is a glimpse at what your R scripts should look like.
-![](images/01-intro/RScriptSetUp.png) 
-## Importing and exporting .csv files 
+Here is a glimpse at what your R scripts should look like:
+
+![](images/01-intro/RScriptSetUp.png){width=50%, height=auto}
+
+## Importing and exporting csv files 
 
 You may want to import data, and export a .csv file after analyses to include as a table in your results. The code to do this is simple:
 
-![](images/01-intro/importexport.png) 
+![](images/01-intro/importexport.png){width=50%, height=auto}
 Finally, one easy way to export plots is to use the 'Plots' tab in your R studio window. Simply click on the 'Plots' tab and select export - you can choose different file types and sizes when you export. 
 
-![](images/01-intro/fileexport.png) 
+![](images/01-intro/fileexport.png){width=25%, height=auto}
+
+## Downloads
+
 Here is a nice example of a R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) 
 
 and this .csv file [Download the data file](https://drive.google.com/uc?export=download&id=1NejYe6LMu3qwSyKp3lz3ZvFF9c--FFzp)
 
-Download both, modify your working directory and import the file. Check out the object in R.
+## Deliverables
+
+Download both files, modify your working directory and import the file. Show your TA that you successfully altered your working directory and imported a file to receive credit!
 
 And with that, welcome to the wonderful world of coding in R!
 
