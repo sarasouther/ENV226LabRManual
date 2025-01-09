@@ -361,9 +361,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="what-can-statistics-tell-us" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> What can statistics tell us?<a href="descriptive-statistics.html#what-can-statistics-tell-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Welcome to our statistical exploration of the natural world!</p>
-<p>Almost all statistical analysis boils down to answering 1 of 2 questions:
-<em>Do these groups differ?
-</em>Is there a relationship between these variables?</p>
+<p>Almost all statistical analysis boils down to answering 1 of 2 questions:</p>
+<ul>
+<li>Do these groups differ?</li>
+<li>Is there a relationship between these variables?</li>
+</ul>
 <p>These seem like relatively simple questions to answer, perhaps just by looking at our data, so <strong>Why do we need statistics?</strong></p>
 <p>The short answer is: <strong>error</strong> and <strong>sampling</strong>! Whenever we collect data, we introduce <strong>error</strong>; our instruments are imprecise and do not capture an exact measure of whatever you are measuring (e.g., height, weight), and humans make mistakes during measurement collection. Secondly, we are <strong>always</strong> measuring a sub-sample of the true population (<em>true population</em> meaning all representatives of whatever you are trying to measure; this can be grass, marbles, or the tibia of humans). Not only is it intractable in most cases to measure all individuals of whatever you are interested in, even when it is possible to attempt to measure <strong>all</strong> individuals (like in the case of rare plant work), statistics acknowledges that it is <strong>still</strong> unlikely that we are able to do so, since individuals may be dormant or challenging to locate. If we could measure all individuals of our focal population with perfect accurately, we could calculate population <strong>parameters</strong>, or quantities describing populations like averages and variation, rather than estimating these metrics, and just compare them. In this way, statistics is inherently practical, and asks: What can we say about whatever we are looking at, given our numerous flaws?</p>
 </div>
@@ -397,7 +399,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><em>Categorical variables</em> are non-numeric variables.
 <strong>Examples</strong>: Pet type (dog, cat, fish, bird), Size (small, medium, large), Car type (sedan, SUV), Present/Absent</p>
 <p><em>Numerical variables</em> are variables that are numbers, and occur in two forms:
-*Discrete = Counts of things (no decimal points/fractions)
+<em>Discrete</em> = Counts of things (no decimal points/fractions)
 Data are discrete when it does not make sense to have a partial number of the variable. For instance, if counting the number of insects in a pond, it does not make sense to count a half a species.
 <strong>Examples</strong>: Number of people in a building, number of trees in a plot, number of bugs in a pond</p>
 <p><em>Continuous</em> are numerical data that can occur at any value.
@@ -521,8 +523,13 @@ While standard deviation measures the variation of the sample, standard error is
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="descriptive-statistics.html#cb31-1" tabindex="-1"></a><span class="fu">median</span>(sedona_skewed)</span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="descriptive-statistics.html#cb33-1" tabindex="-1"></a><span class="fu">hist</span>(sedona_unskewed, <span class="at">main =</span> <span class="st">&quot;Mostly Unskewed&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Plant height (cm)&quot;</span>, <span class="at">breaks=</span><span class="dv">5</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="672" />
-In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="_main_files/figure-html/unnamed-chunk-9-1.png" alt="Histogram of unskewed plant heights" width="672" />
+<p class="caption">
+Figure 3.1: Histogram of unskewed plant heights
+</p>
+</div>
+<p>In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="descriptive-statistics.html#cb34-1" tabindex="-1"></a>h <span class="ot">&lt;-</span> <span class="fu">hist</span>(sedona_unskewed, <span class="at">main =</span> <span class="st">&quot;Mostly Unskewed&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Plant height (cm)&quot;</span>, <span class="at">breaks=</span><span class="dv">5</span>)</span>
 <span id="cb34-2"><a href="descriptive-statistics.html#cb34-2" tabindex="-1"></a></span>
 <span id="cb34-3"><a href="descriptive-statistics.html#cb34-3" tabindex="-1"></a>xfit <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(sedona_unskewed), <span class="fu">max</span>(sedona_unskewed), <span class="at">length =</span> <span class="dv">40</span>) </span>
@@ -562,14 +569,16 @@ The outlier appears as a dot on the box and whisker plot, and is the maximum val
 </div>
 <div id="summary" class="section level2 hasAnchor" number="3.7">
 <h2><span class="header-section-number">3.7</span> Summary<a href="descriptive-statistics.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We’ve played around a lot with data, but what do you actually need to take away from this?
-1. Understand data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)
-2. Know ways to describe numerical continuous data (Location, Spread, Shape, Outliers)..
-3. Be able to calculate mean, median, and standard error.
-4. Familiarize yourself with mathematical annotation.
-5. Familiarize yourself with R code.
-6. Be able to interpret a histogram and box-whisker plot.
-7. Be able to construct an appropriate figure legend.</p>
+<p>We’ve played around a lot with data, but what do you actually need to take away from this?</p>
+<ol style="list-style-type: decimal">
+<li>Understand data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)</li>
+<li>Know ways to describe numerical continuous data (Location, Spread, Shape, Outliers)..</li>
+<li>Be able to calculate mean, median, and standard error.</li>
+<li>Familiarize yourself with mathematical annotation.</li>
+<li>Familiarize yourself with R code.</li>
+<li>Be able to interpret a histogram and box-whisker plot.</li>
+<li>Be able to construct an appropriate figure legend.</li>
+</ol>
 </div>
 <div id="assignment" class="section level2 hasAnchor" number="3.8">
 <h2><span class="header-section-number">3.8</span> Assignment<a href="descriptive-statistics.html#assignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>

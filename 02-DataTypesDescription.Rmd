@@ -7,8 +7,9 @@
 Welcome to our statistical exploration of the natural world! 
 
 Almost all statistical analysis boils down to answering 1 of 2 questions:
-*Do these groups differ?
-*Is there a relationship between these variables?
+
+- Do these groups differ?
+- Is there a relationship between these variables?
 
 These seem like relatively simple questions to answer, perhaps just by looking at our data, so **Why do we need statistics?** 
 
@@ -44,7 +45,7 @@ Before we start learning to present research results (analysis, description, vis
 **Examples**: Pet type (dog, cat, fish, bird), Size (small, medium, large), Car type (sedan, SUV), Present/Absent
 
 *Numerical variables* are variables that are numbers, and occur in two forms:
-*Discrete = Counts of things (no decimal points/fractions)
+*Discrete* = Counts of things (no decimal points/fractions)
 Data are discrete when it does not make sense to have a partial number of the variable. For instance, if counting the number of insects in a pond, it does not make sense to count a half a species.
 **Examples**: Number of people in a building, number of trees in a plot, number of bugs in a pond 
 
@@ -93,6 +94,7 @@ $n$ is the number of observations
 Because statisticians typically use $\bar{x}$ to indicate the true mean of the population, and $\mu$ to indicate the sample mean!
 
 Just to show you, what the mean() function is doing, let's run:
+
 ```{r}
 sum = 3+3+3+3+7+8+9 #add all the numbers in the sample
 n = length(sedonapopulation) #or you can just calculate the number of height measurements
@@ -108,6 +110,7 @@ $x_{i}$ is the value of one observation;
 $n$ is the number of observations
 
 In other words:
+
 ```{r}
 #We determine how much each observation varies from the mean.
 diffobs1 = mean - 3
@@ -166,6 +169,7 @@ Means and variance measures are the most common way to describe quantitative dat
 *Outliers
 
 We've talked about means. The median is just the central number in the dataset, and helps you identify skewness.
+
 ```{r}
 #an example of an unskewed population
 sedona_unskewed <- c(1, 2, 3, 4, 5, 6, 7)
@@ -177,6 +181,7 @@ sedonapopulation <- c(3, 3, 3, 3, 7, 8, 9)
 mean(sedonapopulation)
 median(sedonapopulation)
 ```
+
 In an unskewed population, the mean will equal the median. Skew may not seem important, but it has statistical ramifications, AND it tells us something meaningful about the data. For instance, what if I said that mean price of a home in Flagstaff is 350K, but the median price of a home is 300K? We would know the that average house prices are driven up by a smaller number of expensive homes. 
 
 We can quantify skew by comparing means and medians (mean > median = right-skewed; median > mean = left-skewed), but it is helpful to visualize the shape of data with a **histogram**. A **histogram** is a graph of the frequency of different measurements.
@@ -193,9 +198,10 @@ mean(sedona_skewed)
 median(sedona_skewed)
 ```
 
-```{r, echo=TRUE}
+```{r, echo=TRUE, fig.cap="Histogram of unskewed plant heights"}
 hist(sedona_unskewed, main = "Mostly Unskewed", xlab = "Plant height (cm)", breaks=5)
 ```
+
 In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.
 
 ```{r, echo=TRUE}
@@ -251,6 +257,7 @@ Here is an example figure legend of a hypothetical figure showing species richne
 ## Summary
 
 We've played around a lot with data, but what do you actually need to take away from this?
+
 1. Understand data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)
 2. Know ways to describe numerical continuous data (Location, Spread, Shape, Outliers)..
 3. Be able to calculate mean, median, and standard error.
