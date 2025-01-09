@@ -6,6 +6,7 @@ download-r-studio
 set-up-r-studio
 working-directories
 setting-your-working-directory-on-an-apple-device
+setting-your-working-directory-on-a-pc
 annotating-your-code
 packages-and-libraries
 organizing-your-code
