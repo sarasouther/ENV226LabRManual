@@ -188,7 +188,7 @@ We can quantify skew by comparing means and medians (mean > median = right-skewe
 
 Let's add a few more observations to our Sedona populations (skewed and unskewed) and check out the look of the data!
 
-```{r}
+```{r, echo = TRUE}
 sedona_unskewed <- c(7, 2, 2, 3, 3, 3, 3, 6, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 0.5)
 mean(sedona_unskewed)
 median(sedona_unskewed)
@@ -196,9 +196,6 @@ median(sedona_unskewed)
 sedona_skewed <- c(3, 3, 3, 3, 7, 3, 4, 5, 6, 3, 3, 3, 4, 4, 6, 7, 8, 9, 3, 4, 5, 2)
 mean(sedona_skewed)
 median(sedona_skewed)
-```
-
-```{r, echo=TRUE, fig.cap="Histogram of unskewed plant heights"}
 hist(sedona_unskewed, main = "Mostly Unskewed", xlab = "Plant height (cm)", breaks=5)
 ```
 
@@ -213,11 +210,13 @@ yfit <- yfit * diff(h$mids[1:2]) * length(sedona_unskewed)
 
 lines(xfit, yfit, col = "black", lwd = 2)
 ```
+
 Here, we superimposed the bellshaped Normal or Gaussian distribution. 
 
 ```{r, echo=TRUE}
 hist(sedona_skewed, main = "Skewed", xlab = "Plant height (cm)", breaks = 5)
 ```
+
 In this example of skewed data, the tail tapers to the right, indicated that the data is skewed to the right.
 
 In order to explain outliers, we need to look at quantiles! Quantiles are proportions of your data, in other words a way to break your data into chunks to understand spread. You can break your data into as many quantiles as you would like, but it is most common to break your data into 4 parts, also called quartiles. (If you break data into 5 parts, the components are called quintiles, 10 parts = deciles, 100 parts = percentiles). 
@@ -225,9 +224,11 @@ In order to explain outliers, we need to look at quantiles! Quantiles are propor
 When you break data into quartiles, roughly 25 percent of the data occurs within each data chunk. The first chunk of the dataset contains 25% of the data (25th percentile; 25% of the data fall at or below this cut-off) is called the first quartile, the 50th percentile is called the sample median or the second quartile, the 75th percentile is called the third quartile. 
 
 Box and whisker plots are commonly used to quickly examine quartiles. Let's check out our plant height data again, using a box and whisker plot.
+
 ```{r, echo=FALSE}
 boxplot(sedona_skewed, main="Skewed", ylab="Plant height (cm)")
 ```
+
 In the plot shown here, the box encapsulates the Interquartile Range (IQR); the center of the data ranging from the 25th percentile to the 75th. The black line in the middle of the box is the median (also called the 50th percentile, because it bisects the dataset; half of the data occur above the median and half below). The lines emerging from the box (whiskers) indicate the extent of the first and third quartiles, and usually corresponding with the minimum and maximum values of the dataset, unless there are **outliers**. An outlier is a datapoint that occurs outside of the 1st or 3rd quantile. Let's add one to our Sedona dataset, and see how it is represented on the box and whisker plot.
 
 ```{r}
@@ -235,6 +236,7 @@ In the plot shown here, the box encapsulates the Interquartile Range (IQR); the 
 sedona_skewed <- c(3, 3, 3, 3, 7, 3, 4, 5, 6, 3, 3, 3, 4, 4, 6, 7, 8, 9, 3, 4, 5, 2, 20)
 boxplot(sedona_skewed, main="Skewed", ylab="Plant height (cm)")
 ```
+
 The outlier appears as a dot on the box and whisker plot, and is the maximum value of the dataset. 
 
 One other thing to note: Standard deviation also breaks data into meaningful segments, but is only used when data conform to a normal distribution; the mean +/- 1 SD accounts for 68% of the data, +/-2 SDs contains 95% of data, and +/- 3SD includes 99% of data. That said, I've never presented standard deviation in a manuscript; it is much more common to include standard error or confidence intervals (discussed later).
@@ -242,6 +244,7 @@ One other thing to note: Standard deviation also breaks data into meaningful seg
 ## Figures
 
 Figures are a common way to show key elements of your data or statistical analysis. In this tutorial, you've seen both histograms and box plots (aka box and whisker plots). When presenting results in a scientific manuscript or report, figures will be accompanied by figure legends. A good figure legend provides the following information:
+
 1. A description of what the figure is showing you. 
 2. For complex figures with multiple panels, an orientation to the structure of the figure
 3. Explanation of any symbols, colors, and/or lines
@@ -256,7 +259,7 @@ Here is an example figure legend of a hypothetical figure showing species richne
 
 ## Summary
 
-We've played around a lot with data, but what do you actually need to take away from this?
+We've played around a lot with data, but what do you actually need to take away from this? Here are the key takeaways:
 
 1. Understand data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)
 2. Know ways to describe numerical continuous data (Location, Spread, Shape, Outliers)..

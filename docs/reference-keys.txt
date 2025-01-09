@@ -1,4 +1,3 @@
-fig:unnamed-chunk-9
 introduction
 welcome-to-r
 r-and-r-studio-installation

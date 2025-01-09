@@ -60,7 +60,7 @@ In RStudio, the four panels or panes are commonly referred to as:
 
 Typically, I select a structure in which I have my **Source pane** in the upper left, my **Console Pane** in the lower left position, my **Environment Pane** in the upper right corner, and the **Files/Plots/Packages/Help Pane** in the lower right position. You can select any position that you'd like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here's what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won't have to adjust positioning!
 
-![](images/01-intro/PaneLayout.png){width=25%, height=auto}
+![](images/01-intro/PaneLayout.png){width=10%, height=auto}
 
 ## Working directories
 
@@ -105,7 +105,7 @@ Now R studio is directed to upload and save work to this folder.
 
 Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don't want or need while coding, so I typically recommend creating an R script and annotating your that file! 
 
-![](images/01-intro/createrscript.png){width=200px}
+![](images/01-intro/createrscript.png){width=25%}
 One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string
 
 ## Packages and libraries
@@ -133,11 +133,11 @@ Here is a glimpse at what your R scripts should look like:
 
 You may want to import data, and export a .csv file after analyses to include as a table in your results. The code to do this is simple:
 
-![](images/01-intro/importexport.png){width=125px}
+![](images/01-intro/importexport.png){width=200px}
 
 Finally, one easy way to export plots is to use the 'Plots' tab in your R studio window. Simply click on the 'Plots' tab and select export - you can choose different file types and sizes when you export. 
 
-![](images/01-intro/fileexport.png){width=100px}
+![](images/01-intro/fileexport.png){width=200px}
 
 ## Downloads
 
