@@ -60,7 +60,7 @@ In RStudio, the four panels or panes are commonly referred to as:
 
 Typically, I select a structure in which I have my **Source pane** in the upper left, my **Console Pane** in the lower left position, my **Environment Pane** in the upper right corner, and the **Files/Plots/Packages/Help Pane** in the lower right position. You can select any position that you'd like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here's what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won't have to adjust positioning!
 
-![](images/01-intro/PaneLayout.png){width=10%, height=auto}
+![](images/01-intro/PaneLayout.png){width=5%, height=auto}
 
 ## Working directories
 

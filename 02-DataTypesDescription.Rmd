@@ -188,7 +188,7 @@ We can quantify skew by comparing means and medians (mean > median = right-skewe
 
 Let's add a few more observations to our Sedona populations (skewed and unskewed) and check out the look of the data!
 
-```{r, echo = TRUE}
+```{r}
 sedona_unskewed <- c(7, 2, 2, 3, 3, 3, 3, 6, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 0.5)
 mean(sedona_unskewed)
 median(sedona_unskewed)
@@ -199,7 +199,7 @@ median(sedona_skewed)
 ```
 
 
-```{r, echo=TRUE}
+```{r}
 
 hist(sedona_unskewed, main = "Unskewed", xlab = "Plant height (cm)", breaks=5)
 
@@ -207,7 +207,7 @@ hist(sedona_unskewed, main = "Unskewed", xlab = "Plant height (cm)", breaks=5)
 
 In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.
 
-```{r, echo=TRUE}
+```{r}
 
 h <- hist(sedona_unskewed, main = "Mostly Unskewed", xlab = "Plant height (cm)", breaks=5)
 
@@ -221,7 +221,7 @@ lines(xfit, yfit, col = "black", lwd = 2)
 
 Here, we superimposed the bellshaped Normal or Gaussian distribution. 
 
-```{r, echo=TRUE}
+```{r}
 
 hist(sedona_skewed, main = "Skewed", xlab = "Plant height (cm)", breaks = 5)
 
@@ -235,7 +235,7 @@ When you break data into quartiles, roughly 25 percent of the data occurs within
 
 Box and whisker plots are commonly used to quickly examine quartiles. Let's check out our plant height data again, using a box and whisker plot.
 
-```{r, echo=FALSE}
+```{r}
 boxplot(sedona_skewed, main="Skewed", ylab="Plant height (cm)")
 ```
 
