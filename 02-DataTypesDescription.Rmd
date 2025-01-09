@@ -200,15 +200,12 @@ median(sedona_skewed)
 
 
 ```{r}
-
 hist(sedona_unskewed, main = "Unskewed", xlab = "Plant height (cm)", breaks=5)
-
 ```
 
 In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.
 
 ```{r}
-
 h <- hist(sedona_unskewed, main = "Mostly Unskewed", xlab = "Plant height (cm)", breaks=5)
 
 xfit <- seq(min(sedona_unskewed), max(sedona_unskewed), length = 40) 
@@ -216,15 +213,12 @@ yfit <- dnorm(xfit, mean = mean(sedona_unskewed), sd = sd(sedona_unskewed))
 yfit <- yfit * diff(h$mids[1:2]) * length(sedona_unskewed) 
 
 lines(xfit, yfit, col = "black", lwd = 2)
-
 ```
 
 Here, we superimposed the bellshaped Normal or Gaussian distribution. 
 
 ```{r}
-
 hist(sedona_skewed, main = "Skewed", xlab = "Plant height (cm)", breaks = 5)
-
 ```
 
 In this example of skewed data, the tail tapers to the right, indicated that the data is skewed to the right.
