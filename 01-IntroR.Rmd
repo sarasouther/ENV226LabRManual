@@ -60,7 +60,7 @@ In RStudio, the four panels or panes are commonly referred to as:
 
 Typically, I select a structure in which I have my **Source pane** in the upper left, my **Console Pane** in the lower left position, my **Environment Pane** in the upper right corner, and the **Files/Plots/Packages/Help Pane** in the lower right position. You can select any position that you'd like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here's what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won't have to adjust positioning!
 
-![Adjusting the layout of your workspace](images/01-intro/PaneLayout.png){width=50%, height=auto}
+![Adjusting the layout of your workspace](images/01-intro/PaneLayout.png){width=25%, height=auto}
 
 ## Working directories
 
@@ -80,10 +80,10 @@ When you run, getwd() you will see where R is looking for files. Now, let's tell
 
 To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including 'Get info' (check out picture below).
 
-![Finding your path](images/01-intro/workingdirectorymac.png){width=15%, height=auto}
+![Finding your path](images/01-intro/workingdirectorymac.png){width=5%, height=auto}
 Then, select 'Get info'. Then, highlight the information after 'where' and copy it as a pathname (see picture).
 
-![Copying pathnames](images/01-intro/copyingpathnamemac.png){width=15%, height=auto}
+![Copying pathnames](images/01-intro/copyingpathnamemac.png){width=5%, height=auto}
 ### Setting your working directory on a PC
 
 For PCs, start by opening your File Explorer:
