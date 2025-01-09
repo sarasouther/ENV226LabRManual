@@ -80,10 +80,10 @@ When you run, getwd() you will see where R is looking for files. Now, let's tell
 
 To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including 'Get info' (check out picture below).
 
-![Finding your path](images/01-intro/workingdirectorymac.png){width=5%, height=auto}
+![Finding your path](images/01-intro/workingdirectorymac.png){width=100px}
 Then, select 'Get info'. Then, highlight the information after 'where' and copy it as a pathname (see picture).
 
-![Copying pathnames](images/01-intro/copyingpathnamemac.png){width=5%, height=auto}
+![Copying pathnames](images/01-intro/copyingpathnamemac.png){width=100px}
 ### Setting your working directory on a PC
 
 For PCs, start by opening your File Explorer:
