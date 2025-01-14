@@ -40,7 +40,7 @@ Now download R studio!
 
 Start Using RStudio: After the installation is complete, you can launch RStudio from your computer. 
 
-## Set up R studio
+## Optional: Set up R studio
 
 Alright, now that you've downloaded R and R studio, open R studio. You can customize the panes that you are visualizing in R. 
 
@@ -62,21 +62,70 @@ Typically, I select a structure in which I have my **Source pane** in the upper 
 
 ![](images/01-intro/PaneLayout.png){width=5%, height=auto}
 
-## Working directories
+## Downloads
 
-When you are coding in R, you will want to save your R or R markdown scripts and any other data files (e.g., .csv or spatial files) that you are analyzing in a common file. With good housekeeping, you will be able to seamlessly rerun your analyses at in point in time, allowing you to pick back up on projects that may have been dormant! 
+Here is a nice example of a R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) Download and use the R script to practice with R.
 
-The first step in good R housekeeping is to set a **working directory**. A working directory tells R where to look for and save files. As an example, let's say I am planning to save everything associated with this tutorial to a file called Class1_IntroToR. To do this, create a new folder on your desktop called 'R is great'. You can change your working directory using the R studio interface by selecting a working directory at the top of the console panel in the "Files" tab. If you want to change your working directory to a different location, click on the "..." (ellipsis) button in RStudio's "Files" tab. 
+Also, download this .csv file [Download the data file](https://drive.google.com/uc?export=download&id=1NejYe6LMu3qwSyKp3lz3ZvFF9c--FFzp) We will use it to practice importing a file.
 
-This will allow you to browse your file system and select a new directory as your working directory. That said, you will be *far* better served by including code in your R script that directs R to your working directory. I prefer to set it within the code in order to allow you to instantaneously be able to pick up work where you left off rather than searching through files and trying to remember how you set up the code. You can view your working directory by running a simple bit of code (run code below).
+## Using R
+
+1. Create a folder on your desktop called: EcologyLab 
+2. Download the R file and .csv file above
+3. Once you've downloaded the R script, open it in R studio:
+
+    - File -> Open file
+
+4. You will see several things:
+
+    - Text with a hastag in front of it (#This code ...). R won't run code with a hastag, so we can use this to explain what chunks of code do
+    - Code to load and install packages.
+    - Code to set your working directory 
+    - Code in import data
+    - Code to export data
+    
+We will go through each of these codes during this laboratory exercise.
+
+### Packages and libraries
+
+Base R, the fundamental, built-in set of functions, data structures, and libraries that come with the R programming language without the need for additional packages or extensions, including basic math functions, statistical analyses and visualization tools. However, one amazingly cool think about R is that folks are out there creating 'libraries', or a collection of R functions, data sets, and documentation bundled together into a single package, to do specialized analyses. For most tasks in R, you will need to install and load libraries. 
+
+#### Install a library
+
+There are two methods to install libraries:
+
+1. Manually: Go to the Rstudio pane 'Packages' -> Install -> Search for your package and install
+2. Run code: install.packages("tidyverse")
+    - To run code, place your cursor on a line of code (any where on install.packages("tidyverse")) and press the **Run** button at the top of this pane.
+
+**Please install a library** (or package) for data manipulation, called 'tidyverse' (actually several packages - hence why the name references a universe) using either method. When prompted, be sure to **install dependencies** - this will make sure that you have any pieces of code that the library that you are installing needs to operate.
+
+The weird thing about including install packages code is that you don't want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I've included the install function in the text). You will need to load packages, you generally won't need to install packages after you have done it once. You can either then install the packages and delete/hash out the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. 
+
+![](images/01-intro/installlibraries.png){width=50%, height=auto}
+
+Excellent! You have installed a library! **Now, we need to load it.** To load a library, run this code:
 
 ```{r}
-getwd() #display file path to R studio 
+library(tidyverse)
 ```
 
-When you run, getwd() you will see where R is looking for files. Now, let's tell R where we want it to access files from! First, you will need to identify your file path. 
+Alternatively, to load packages, you can select the package name in the 'Packages' pane. You WILL need to load R packages every time that you use R. Any functions associated with your package won't work, unless the package is loaded, so I suggest keeping the load library code in your R script, rather than loading manually.
 
-### Setting your working directory on an Apple device
+### Working directories
+
+When you are coding in R, you will want to save your R or R markdown scripts and any other data files (e.g., .csv or spatial files) that you are analyzing in a common file. You can use R studio interface to import files (Go to files tab); however, with good housekeeping, you will be able to seamlessly rerun your analyses at in point in time, allowing you to pick back up on projects that may have been dormant! 
+
+The first step in good R housekeeping is to set a **working directory**. A working directory tells R where to look for and save files. Now, let's set your working directory to the folder containing the R script and .csv file called 'EcologyLab'. As always, there are two options:
+
+1. Manual working directory selection: You can change your working directory using the R studio interface by selecting a working directory at the top of the console panel in the "Files" tab. If you want to change your working directory to a different location, click on the "..." (ellipsis) button in RStudio's "Files" tab. 
+2. Set the working directory using code.
+
+You will be *far* better served by including code in your R script that directs R to your working directory. I prefer to set it within the code in order to allow you to instantaneously be able to pick up work where you left off rather than searching through files and trying to remember how you set up the code. You can view your working directory by running a simple bit of code (run code below).
+
+The code to set your working directory is in the R script that you loaded: setwd("your_path_to_your_working_folder"). The only challenging part is to identify your working directory. However, once you have found it, and if you put all your files into one folder, you can copy and paste this script into every code you use throughout the semester to set your working directory.
+
+#### Setting your working directory on an Apple device
 
 To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including 'Get info' (check out picture below).
 
@@ -86,7 +135,7 @@ Then, select 'Get info'. Then, highlight the information after 'where' and copy 
 
 ![](images/01-intro/copyingpathnamemac.png){width=125px}
 
-### Setting your working directory on a PC
+#### Setting your working directory on a PC
 
 For PCs, start by opening your File Explorer:
 
@@ -97,31 +146,27 @@ Navigate to the Folder: Use the File Explorer to navigate to the folder where th
 
 2. View the File Path: Once you've found the file, you can see its full file path in the address bar at the top of the File Explorer window. The file path will be displayed as a sequence of folder and file names separated by backslashes. You can click in the address bar and copy the file path to the clipboard by pressing Ctrl + C after selecting it.
 
-3. Once you have copied your file path, paste that path name into the following code and set your working directory: setwd("/Users/sks379/Desktop/R is great/") 
+#### Adjust your code
+
+Once you have copied your file path, paste that path name into the following code and set your working directory: setwd("your_path_to_your_working_folder"):
+
+  - Example for my mac: setwd("/Users/sks379/Desktop/EcologyLab/") 
 
 Now R studio is directed to upload and save work to this folder.
 
-## Annotating your code
+### Trouble-shooting issues
+
+When coding, every symbol is important - meaning that it is extremely easy to make mistakes and have your code not run. One easy way of troubleshooting your code is to use AI. For this class, I suggest using the free version of ChatGPT. If you are having a problem setting your working directory, copy and paste your code into chat and explain the error. Were you able to troubleshoot your problem?
+
+### Annotating your code
 
 Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don't want or need while coding, so I typically recommend creating an R script and annotating your that file! 
 
 ![](images/01-intro/createrscript.png){width=25%}
 One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string
 
-## Packages and libraries
 
-Base R, the fundamental, built-in set of functions, data structures, and libraries that come with the R programming language without the need for additional packages or extensions, including basic math functions, statistical analyses and visualization tools. However, one amazingly cool think about R is that folks are out there creating 'libraries', or a collection of R functions, data sets, and documentation bundled together into a single package, to do specialized analyses. For most tasks in R, you will need to install and load libraries. There are two methods to install libraries. Let's start by installing an important library (or package) for data manipulation, called 'tidyverse' (actually several packages - hence why the name references a universe). To do this, run this code: install.packages("tidyverse").
-
-The weird thing about including install packages code is that you don't want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I've included the install function in the text). You will need to load packages, you generally won't need to install packages after you have done it once. You can either then install the packages and delete/hash out the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. When prompted, be sure to install dependencies - this will make sure that you have any pieces of code that the library that you are installing needs to operate.
-
-![](images/01-intro/installlibraries.png){width=50%, height=auto}
-Excellent! You have installed a library! Now, we need to load it. You WILL need to load R packages every time that you use R. Any functions associated with your package won't work, unless the package is loaded, so I suggest keeping the load library code in your R script. The code to load libraries is simple (see below).
-
-```{r}
-library(tidyverse)
-```
-
-## Organizing your code
+### Organizing your code
 
 A well-written R script will include the components we have been discussion: Annotated notes on what the script is doing and potentially even the version of R, loading commands for your libraries, and a line of code specifying your working directory. With these elements in place, you are ready to code your heart out!
 
@@ -129,7 +174,7 @@ Here is a glimpse at what your R scripts should look like:
 
 ![](images/01-intro/RScriptSetUp.png){width=50%, height=auto}
 
-## Importing and exporting csv files 
+### Importing and exporting csv files 
 
 You may want to import data, and export a .csv file after analyses to include as a table in your results. The code to do this is simple:
 
@@ -138,13 +183,6 @@ You may want to import data, and export a .csv file after analyses to include as
 Finally, one easy way to export plots is to use the 'Plots' tab in your R studio window. Simply click on the 'Plots' tab and select export - you can choose different file types and sizes when you export. 
 
 ![](images/01-intro/fileexport.png){width=200px}
-
-## Downloads
-
-Here is a nice example of a R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) 
-
-and this .csv file [Download the data file](https://drive.google.com/uc?export=download&id=1NejYe6LMu3qwSyKp3lz3ZvFF9c--FFzp)
-
 ## Deliverables
 
 Download both files, modify your working directory and import the file. Show your TA that you successfully altered your working directory and imported a file to receive credit!
