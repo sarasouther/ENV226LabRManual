@@ -4,7 +4,7 @@ r-and-r-studio-installation
 download-the-r-statistical-software-from-the-official-r-project-website.
 download-r-studio
 optional-set-up-r-studio
-downloads
+downloads-and-video-links
 using-r
 packages-and-libraries
 install-a-library
@@ -122,7 +122,7 @@ creating-your-data-sheet
 turn-in-week-1
 weeks-2---5
 final-week
-downloads-1
+downloads
 turn-in-1
 species-diversity
 introduction-3

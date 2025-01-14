@@ -62,7 +62,9 @@ Typically, I select a structure in which I have my **Source pane** in the upper 
 
 ![](images/01-intro/PaneLayout.png){width=5%, height=auto}
 
-## Downloads
+## Downloads and video links
+
+Watch the tutorial for this lab project: [YouTube Video](https://youtu.be/t1suBdonG6o)
 
 Here is a nice example of a R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) Download and use the R script to practice with R.
 
@@ -156,7 +158,34 @@ Now R studio is directed to upload and save work to this folder.
 
 ### Trouble-shooting issues
 
-When coding, every symbol is important - meaning that it is extremely easy to make mistakes and have your code not run. One easy way of troubleshooting your code is to use AI. For this class, I suggest using the free version of ChatGPT. If you are having a problem setting your working directory, copy and paste your code into chat and explain the error. Were you able to troubleshoot your problem?
+When coding, every symbol is important - meaning that it is extremely easy to make mistakes and have your code not run. One easy way of troubleshooting your code is to use AI. For this class, I suggest using the free version of ChatGPT. 
+
+1. Access ChatGPT on a Web Browser
+	- No Installation Required! The free version of ChatGPT does not require downloading or installation:
+	
+    	1.	Open a web browser (e.g., Chrome, Firefox, Safari).
+    	2.	Visit ChatGPT’s website.
+    	3.	Log in using an existing account, or sign up for free using an email address, Google account, or Microsoft account.
+
+2. Use ChatGPT on Mobile
+	- Mobile-Friendly Website:
+	
+	    - Simply visit chat.openai.com on your mobile browser and log in.
+	    
+	- Mobile Apps (Optional):
+	
+    	- OpenAI offers official apps for ChatGPT on iOS and Android devices. Here’s how to download them:
+    	- iPhone/iPad:
+          	1.	Open the App Store.
+          	2.	Search for “ChatGPT” by OpenAI.
+          	3.	Tap Download and install the app. 
+      	
+    	- Android Devices:
+          	1.	Open the Google Play Store.
+          	2.	Search for “ChatGPT” by OpenAI.
+          	3.	Tap Install to download the app.
+
+If you are having a problem setting your working directory, copy and paste your code into chat and explain the error. **Were you able to troubleshoot your problem?**
 
 ### Annotating your code
 

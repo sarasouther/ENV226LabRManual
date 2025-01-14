@@ -147,7 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-the-r-statistical-software-from-the-official-r-project-website."><i class="fa fa-check"></i><b>2.2</b> Download the R statistical software from the official R Project website.</a></li>
 <li class="chapter" data-level="2.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-r-studio"><i class="fa fa-check"></i><b>2.3</b> Download R studio</a></li>
 <li class="chapter" data-level="2.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#optional-set-up-r-studio"><i class="fa fa-check"></i><b>2.4</b> Optional: Set up R studio</a></li>
-<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#downloads"><i class="fa fa-check"></i><b>2.5</b> Downloads</a></li>
+<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#downloads-and-video-links"><i class="fa fa-check"></i><b>2.5</b> Downloads and video links</a></li>
 <li class="chapter" data-level="2.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#using-r"><i class="fa fa-check"></i><b>2.6</b> Using R</a>
 <ul>
 <li class="chapter" data-level="2.6.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#packages-and-libraries"><i class="fa fa-check"></i><b>2.6.1</b> Packages and libraries</a></li>
@@ -301,7 +301,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.8" data-path="species-interaction-project.html"><a href="species-interaction-project.html#weeks-2---5"><i class="fa fa-check"></i><b>11.8</b> Weeks 2 - 5</a></li>
 <li class="chapter" data-level="11.9" data-path="species-interaction-project.html"><a href="species-interaction-project.html#final-week"><i class="fa fa-check"></i><b>11.9</b> Final week</a>
 <ul>
-<li class="chapter" data-level="11.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads-1"><i class="fa fa-check"></i><b>11.9.1</b> Downloads</a></li>
+<li class="chapter" data-level="11.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads"><i class="fa fa-check"></i><b>11.9.1</b> Downloads</a></li>
 <li class="chapter" data-level="11.9.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in-1"><i class="fa fa-check"></i><b>11.9.2</b> Turn-in</a></li>
 </ul></li>
 </ul></li>
@@ -373,7 +373,7 @@ We can conduct statistical analysis until the cats come home (ha!), but if your 
 <p>In order to reduce bias, researchers <strong>randomize</strong> sampling. <strong>Random sampling</strong> is when every item within the focal population has an equal chance of being selected. In research, random sampling can be applied to selecting experimental subjects, assigning individuals to treatments, or identifying plot locations. It is <strong>REALLY</strong> easy to introduce bias in ecological and social research on accident if you do not use a random sampling technique! Imagine that you are looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat’s claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. In practice, researchers use number generators, like those on your phone, or within computer programs, like ArcGIS, to randomly place sampling points. Here, we’ve included a random number sheet to use to randomly array plots. A random number sheet contains random numbers that someone generated in advance to assist in the field.</p>
 <p>We can quickly and easily generate such a sample in R, using the sample function.</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="ecological-sampling.html#cb46-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##  [1] 93 96 71 67 23 79 85 37  8 51</code></pre>
+<pre><code>##  [1]  74  50  98 100  86  76  84  46  17  62</code></pre>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="ecological-sampling.html#cb48-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
 <span id="cb48-2"><a href="ecological-sampling.html#cb48-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
 <span id="cb48-3"><a href="ecological-sampling.html#cb48-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
