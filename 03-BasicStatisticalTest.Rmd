@@ -6,11 +6,16 @@ Ahhhh the scientific process:  A researcher makes observations about the natural
 
 ## Downloads for this module
 
+Download this file to the folder you created for this lab:
+
 - [Download the R file](https://drive.google.com/open?id=1-mBgBLuGHaKlvPWArRw1XkE_1DpWJyzx&usp=drive_fs).
+
+As you read the tutorial, follow along in the R code. Then, use the code to finish your assignment.
 
 ## Objectives
 
 We will highlight the basic components of a statistical test with a very simple statistical 'tailed' test. Today, we will:
+
 1. State a hypothesis
 2. Calculate a test statistic
 3. Determine the p-value
@@ -19,6 +24,7 @@ We will highlight the basic components of a statistical test with a very simple 
 The **null hypothesis** ($H_0$) is a statement about a population parameter that would be interesting to reject. The null hypothesis typically asserts that there is no effect or relationship or that results will not deviate from established knowledge.
 
 For instance:
+
 - The mean height of giraffes in captivity and in the wild do NOT differ.
 - The incidence of toenail fungus is the SAME in the control group and the group given anti-fungal medicine.
 - There is NO relationship between sea grass height and the number of sea snails.
@@ -27,6 +33,7 @@ For instance:
 Null hypotheses are paired with **alternative hypotheses** ($H_A$) that represent ALL other possibilities other than that stated in the null hypothesis. 
 
 For instance:
+
 - The mean height of giraffes in captivity and in the wild differs.
 - The incidence of toenail fungus is different in the control group and the group given anti-fungal medicine.
 - There is a relationship between sea grass height and the number of sea snails.
@@ -153,7 +160,10 @@ Cats displayed higher levels of handedness than expected by chance (t = 14, p = 
 We will now apply the tailed-test to a new question! You think that your dog, Rupert, prefers blue to red. 
 You want to know: Do dogs prefer the color blue?
 
+Provide the following information in a document and turn into your TA:
+
 1. What is your null hypothesis? 
+
 2. What is your alternative hypothesis?
 
 You invite all your friends with dogs, place both red and blue balls on the ground, and see if how many times the dogs select the blue ball out of a series of 10 trials. Ten of friends with dogs participate and you record the number of times that the dogs select the blue ball. Run the t-test in R!
@@ -162,13 +172,13 @@ You invite all your friends with dogs, place both red and blue balls on the grou
 
 4. For your figure, please be sure to properly craft a legend. Recall from last lesson, the key parts of the figure legend:
 
-1. A description of what the figure is showing you. 
-2. For complex figures with multiple panels, an orientation to the structure of the figure
-3. Explanation of any symbols, colors, and/or lines
-4. Description of how variance is quantified
-5. Definitions of axes or units, if unclear
-6. Acknowledgment of data source, if data source requires attribution
-7. Implications of the figure (optional)
+  1. A description of what the figure is showing you. 
+  2. For complex figures with multiple panels, an orientation to the structure of the figure
+  3. Explanation of any symbols, colors, and/or lines
+  4. Description of how variance is quantified
+  5. Definitions of axes or units, if unclear
+  6. Acknowledgment of data source, if data source requires attribution
+  7. Implications of the figure (optional)
 
 
 
