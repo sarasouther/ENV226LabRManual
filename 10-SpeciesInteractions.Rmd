@@ -89,14 +89,13 @@ for the next 6 - 8 weeks. Do this by modifying the example data sheet that we ha
 
 ## Weeks 2 - 5 
 
-During this time, you will be maintaining your experiment and continue to collect data.Make a schedule with your group members to ensure that someone will measure growth of the
-plants at least once per week over the next seven weeks. The same person should also
-photograph the plants each time measurements are made. To measure each plant, place the end
-of a ruler against the soil surface. Gently pull the plant to its full height and measure the tallest
-point intersected along the ruler by the plant. ALL MEASUREMENTS ARE IN
-MILLIMETERS!
+During this time, you will be maintaining your experiment and continue to collect data.Make a schedule with your group members to ensure that someone will measure growth of the plants at least once per week over the next seven weeks. The same person should also photograph the plants each time measurements are made. To measure each plant, place the end of a ruler against the soil surface. Gently pull the plant to its full height and measure the tallest point intersected along the ruler by the plant. ALL MEASUREMENTS ARE IN MILLIMETERS!
 
-Note: the greenhouse is open between 7:00 am - 3:00 pm. You will need to get the pass code from your TA!
+**Note: the greenhouse is open between 7:00 am - 3:00 pm. You will need to get the pass code from your TA!**
+
+### Analyzing and visualizing your data
+
+Refer back to lab manual chapters 3 and 4 for a reminder about descriptive and inferential statistics. To run statistical tests on your data, refer to lab manual chapter 5: Selecting statistical tests.   
 
 ## Final week
 

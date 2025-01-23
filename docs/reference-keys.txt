@@ -121,6 +121,7 @@ set-up-your-experiment
 creating-your-data-sheet
 turn-in-week-1
 weeks-2---5
+analyzing-and-visualizing-your-data
 final-week
 downloads
 turn-in-1
