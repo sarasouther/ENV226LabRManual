@@ -2,7 +2,7 @@
 
 ## Hypothesis testing review
 
-Ahhhh the scientific process:  A researcher makes observations about the natural world, generates a hypothesis to test, tests the hypothesis, rejects or fails to reject the hypothesis, and reports these findings. A simple, yet glorious process that has led to incredible discoveries! Statistical hypothesis testing answers very simple questions, while scientists work in very complex knowledge environments. For beginning researchers, it is important to understand what statistics can tell us, and how this builds information to address amazing and very interesting research questions. Hypotheses allow us to articulate exactly what we are testing in statistics and to organize thoughts and analyses. In the data description module, we discussed that most statistical tests are designed to answer one of two questions: 1) Are there differences between these groups? and 2) are there relationships between these variables? Let's connect these concepts directly to hypothesis testing.
+Ahhhh the scientific process:  A researcher makes observations about the natural world, generates a hypothesis to test, tests the hypothesis, rejects or fails to reject the hypothesis, and reports these findings. A simple, yet glorious process that has led to incredible discoveries! Statistical hypothesis testing answers very simple questions, while scientists work in very complex knowledge environments. For beginning researchers, it is important to understand what statistics can tell us, and how this builds information to address amazing and very interesting research questions. Hypotheses allow us to articulate exactly what we are testing in statistics and to organize thoughts and analyses. In the data description module, we discussed that most statistical tests are designed to answer one of two questions: 1) Are there differences between these groups? and 2) Are there relationships between these variables? Let's connect these concepts directly to hypothesis testing.
 
 ## Downloads for this module
 
@@ -54,6 +54,7 @@ $H_0$: Left and right-pawed cats are equally frequent in the population (i.e., C
 Note that this null hypothesis is very specific. If we would describe this mathematically, we would say that we expect half the cats (9 / 18) to use their right paws and half to use their left paws. If we express this as a proportion, ($p$), we are testing whether $p$ = 0.5. Very specific.
 
 *What is the alternative hypothesis?*
+
 $H_A$: Left and right-pawed cats are not equally frequent in the population.
 
 Note that the alternative hypothesis is very broad and encompasses all other possibilities. Because, in theory, we could observe proportions below 0.5 (1/18 cats are right-handed) or above 0.5 (16/19 cats are right-handed), we refer to this as **two-tailed**. 
@@ -65,8 +66,9 @@ Before we move on, can you think of an example of a 1-tailed test?
 **Don't look before guessing!**
 
 Here are some examples:
-1. Did you score better than the class average?
-2. Is the time to getting to the student union less than 10 minutes when you avoid driving through campus?
+
+- Did you score better than the class average?
+- Is the time to getting to the student union less than 10 minutes when you avoid driving through campus?
 
 Note the difference with the 2-tailed test: we are only interested in values in one direction. In the first example, we are interested in whether your score is >80% (class average). In the second, we are interested in whether your drive time is <10 minutes (time to the student union driving through campus from your house). 
 
@@ -88,12 +90,13 @@ For this simple test, our test statistic will be 14, since this is the number of
 
 Frequentists statistics is based on the concept of statistical distributions. If we run many trials, we can determine the likelihood of certain events occurring by chance. We refer to the patterns of occurrence of trials as frequency distributions. Let's illustrate using the data above. A cat can either be right-handed or left-handed (in this case there are no ambidextrous cats). To determine the likelihood that our pattern arose by chance, we conduct numerous trials like a coin toss. We would randomly flip a coin 18 times and record the outcome of each trial; heads being right-pawed, and tails being left-pawed. 
 
-Let's do that now: 
-- Each student take a coin. 
-- Flip the coin 18 times and record number of heads. 
-- Divide by total number of trials (in this case students) to derive relative frequency for each event.
+In class: 
 
-If we would flip the coins many times, we probably generated something that looks like the figure below. This is referred to as a probability distribution and expresses the relative frequency of particular events occurring. Frequentist statistics derives its name from this probability distribution.
+- Each student took a coin. 
+- Flipped the coin 18 times and recorded number of heads. 
+- Divided by total number of trials (in this case students) to derive relative frequency for each event.
+
+If we would flip the coins many times, we probably generated something that looks like the figure generated by running the code below (run in your R code to generate the figure). This is referred to as a probability distribution and expresses the relative frequency of particular events occurring. Frequentist statistics derives its name from this probability distribution.
 
 ```{r}
 paws <- 0:18
@@ -101,12 +104,14 @@ plot(paws, dbinom(paws, 18, 0.5), type='h', ylab="Probability", xlab="Number Rig
 ```
 
 Here is a table of those probabilities:
+
 ```{r}
 probability <- dbinom(paws, 18, 0.5)
 N <- 0:18
 pawtable <- cbind(N, probability)
 pawtableF <- as.data.frame(pawtable); pawtableF
 ```
+
 Take a look at the chart. What is the probability of observing right pawedness in 14 out of 18 cats? Is this difference from the null (9 cats are right-handed, no better than random) big enough to reject the null? To determine this we calculate a p-value.
 
 **A p-value is the probability of obtaining the data that we observe if the null hypothesis were true.**
@@ -119,6 +124,7 @@ Recall that we can add these probabilities up, since, in our example, we say tha
 ```{r}
 pvalue <- (0.0117 + 0.0031 + 0.0006 + 0.00007 + 0.000004)*2; pvalue
 ```
+
 We generate a P-value of 0.031.
 
 In most sciences, we have agreed on a threshold of 0.05 for establishing statistical significance. If p-values are less than or equal to 0.05, we reject the null hypothesis. If larger, we fail to reject. 

@@ -23,7 +23,7 @@
 <meta name="author" content="Sara Souther" />
 
 
-<meta name="date" content="2025-01-28" />
+<meta name="date" content="2025-01-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -363,7 +363,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 4</span> Basic statistical testing<a href="basic-statistical-testing.html#basic-statistical-testing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="hypothesis-testing-review" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Hypothesis testing review<a href="basic-statistical-testing.html#hypothesis-testing-review" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Ahhhh the scientific process: A researcher makes observations about the natural world, generates a hypothesis to test, tests the hypothesis, rejects or fails to reject the hypothesis, and reports these findings. A simple, yet glorious process that has led to incredible discoveries! Statistical hypothesis testing answers very simple questions, while scientists work in very complex knowledge environments. For beginning researchers, it is important to understand what statistics can tell us, and how this builds information to address amazing and very interesting research questions. Hypotheses allow us to articulate exactly what we are testing in statistics and to organize thoughts and analyses. In the data description module, we discussed that most statistical tests are designed to answer one of two questions: 1) Are there differences between these groups? and 2) are there relationships between these variables? Let’s connect these concepts directly to hypothesis testing.</p>
+<p>Ahhhh the scientific process: A researcher makes observations about the natural world, generates a hypothesis to test, tests the hypothesis, rejects or fails to reject the hypothesis, and reports these findings. A simple, yet glorious process that has led to incredible discoveries! Statistical hypothesis testing answers very simple questions, while scientists work in very complex knowledge environments. For beginning researchers, it is important to understand what statistics can tell us, and how this builds information to address amazing and very interesting research questions. Hypotheses allow us to articulate exactly what we are testing in statistics and to organize thoughts and analyses. In the data description module, we discussed that most statistical tests are designed to answer one of two questions: 1) Are there differences between these groups? and 2) Are there relationships between these variables? Let’s connect these concepts directly to hypothesis testing.</p>
 </div>
 <div id="downloads-for-this-module" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Downloads for this module<a href="basic-statistical-testing.html#downloads-for-this-module" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -408,15 +408,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><em>What is the null hypothesis in this case?</em> Remember it must be specific so that we can either reject or fail to reject the null!</p>
 <p><span class="math inline">\(H_0\)</span>: Left and right-pawed cats are equally frequent in the population (i.e., Cats are not right or left-pawed).</p>
 <p>Note that this null hypothesis is very specific. If we would describe this mathematically, we would say that we expect half the cats (9 / 18) to use their right paws and half to use their left paws. If we express this as a proportion, (<span class="math inline">\(p\)</span>), we are testing whether <span class="math inline">\(p\)</span> = 0.5. Very specific.</p>
-<p><em>What is the alternative hypothesis?</em>
-<span class="math inline">\(H_A\)</span>: Left and right-pawed cats are not equally frequent in the population.</p>
+<p><em>What is the alternative hypothesis?</em></p>
+<p><span class="math inline">\(H_A\)</span>: Left and right-pawed cats are not equally frequent in the population.</p>
 <p>Note that the alternative hypothesis is very broad and encompasses all other possibilities. Because, in theory, we could observe proportions below 0.5 (1/18 cats are right-handed) or above 0.5 (16/19 cats are right-handed), we refer to this as <strong>two-tailed</strong>.</p>
 <p><strong>In a two-tailed test, the alternative hypothesis includes parameters on both sides of the value specified by the null hypothesis.</strong></p>
 <p>Before we move on, can you think of an example of a 1-tailed test?</p>
 <p><strong>Don’t look before guessing!</strong></p>
-<p>Here are some examples:
-1. Did you score better than the class average?
-2. Is the time to getting to the student union less than 10 minutes when you avoid driving through campus?</p>
+<p>Here are some examples:</p>
+<ul>
+<li>Did you score better than the class average?</li>
+<li>Is the time to getting to the student union less than 10 minutes when you avoid driving through campus?</li>
+</ul>
 <p>Note the difference with the 2-tailed test: we are only interested in values in one direction. In the first example, we are interested in whether your score is &gt;80% (class average). In the second, we are interested in whether your drive time is &lt;10 minutes (time to the student union driving through campus from your house).</p>
 <p>How could you phrase the first example to be a 2-sided test?</p>
 <p><strong>Don’t look before guessing!</strong></p>
@@ -431,19 +433,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="determine-the-p-value" class="section level3 hasAnchor" number="4.4.3">
 <h3><span class="header-section-number">4.4.3</span> Determine the p-value<a href="basic-statistical-testing.html#determine-the-p-value" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Frequentists statistics is based on the concept of statistical distributions. If we run many trials, we can determine the likelihood of certain events occurring by chance. We refer to the patterns of occurrence of trials as frequency distributions. Let’s illustrate using the data above. A cat can either be right-handed or left-handed (in this case there are no ambidextrous cats). To determine the likelihood that our pattern arose by chance, we conduct numerous trials like a coin toss. We would randomly flip a coin 18 times and record the outcome of each trial; heads being right-pawed, and tails being left-pawed.</p>
-<p>Let’s do that now:
-- Each student take a coin.
-- Flip the coin 18 times and record number of heads.
-- Divide by total number of trials (in this case students) to derive relative frequency for each event.</p>
-<p>If we would flip the coins many times, we probably generated something that looks like the figure below. This is referred to as a probability distribution and expresses the relative frequency of particular events occurring. Frequentist statistics derives its name from this probability distribution.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="basic-statistical-testing.html#cb37-1" tabindex="-1"></a>paws <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">18</span></span>
-<span id="cb37-2"><a href="basic-statistical-testing.html#cb37-2" tabindex="-1"></a><span class="fu">plot</span>(paws, <span class="fu">dbinom</span>(paws, <span class="dv">18</span>, <span class="fl">0.5</span>), <span class="at">type=</span><span class="st">&#39;h&#39;</span>, <span class="at">ylab=</span><span class="st">&quot;Probability&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Number Right-pawed Cats&quot;</span>)</span></code></pre></div>
+<p>In class:</p>
+<ul>
+<li>Each student took a coin.</li>
+<li>Flipped the coin 18 times and recorded number of heads.</li>
+<li>Divided by total number of trials (in this case students) to derive relative frequency for each event.</li>
+</ul>
+<p>If we would flip the coins many times, we probably generated something that looks like the figure generated by running the code below (run in your R code to generate the figure). This is referred to as a probability distribution and expresses the relative frequency of particular events occurring. Frequentist statistics derives its name from this probability distribution.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="basic-statistical-testing.html#cb36-1" tabindex="-1"></a>paws <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">18</span></span>
+<span id="cb36-2"><a href="basic-statistical-testing.html#cb36-2" tabindex="-1"></a><span class="fu">plot</span>(paws, <span class="fu">dbinom</span>(paws, <span class="dv">18</span>, <span class="fl">0.5</span>), <span class="at">type=</span><span class="st">&#39;h&#39;</span>, <span class="at">ylab=</span><span class="st">&quot;Probability&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Number Right-pawed Cats&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>Here is a table of those probabilities:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="basic-statistical-testing.html#cb38-1" tabindex="-1"></a>probability <span class="ot">&lt;-</span> <span class="fu">dbinom</span>(paws, <span class="dv">18</span>, <span class="fl">0.5</span>)</span>
-<span id="cb38-2"><a href="basic-statistical-testing.html#cb38-2" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">18</span></span>
-<span id="cb38-3"><a href="basic-statistical-testing.html#cb38-3" tabindex="-1"></a>pawtable <span class="ot">&lt;-</span> <span class="fu">cbind</span>(N, probability)</span>
-<span id="cb38-4"><a href="basic-statistical-testing.html#cb38-4" tabindex="-1"></a>pawtableF <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(pawtable); pawtableF</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="basic-statistical-testing.html#cb37-1" tabindex="-1"></a>probability <span class="ot">&lt;-</span> <span class="fu">dbinom</span>(paws, <span class="dv">18</span>, <span class="fl">0.5</span>)</span>
+<span id="cb37-2"><a href="basic-statistical-testing.html#cb37-2" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">18</span></span>
+<span id="cb37-3"><a href="basic-statistical-testing.html#cb37-3" tabindex="-1"></a>pawtable <span class="ot">&lt;-</span> <span class="fu">cbind</span>(N, probability)</span>
+<span id="cb37-4"><a href="basic-statistical-testing.html#cb37-4" tabindex="-1"></a>pawtableF <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(pawtable); pawtableF</span></code></pre></div>
 <pre><code>##     N  probability
 ## 1   0 3.814697e-06
 ## 2   1 6.866455e-05
@@ -469,7 +473,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In this case, we will generate a p-value for a two-tailed test. To do this, we will add the probabilities of observing 14 right pawed cats or more by chance AND for the possibility of observing 4 or fewer right paws, which would indicate left pawedness.
 P-value = Pr[14] + Pr[15] + Pr[16] + Pr[17] + Pr[18] + Pr[4] + Pr[3] + Pr[2] + Pr[1] + Pr[0]</p>
 <p>Recall that we can add these probabilities up, since, in our example, we say that being right or left pawed are mutually exclusive events.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="basic-statistical-testing.html#cb40-1" tabindex="-1"></a>pvalue <span class="ot">&lt;-</span> (<span class="fl">0.0117</span> <span class="sc">+</span> <span class="fl">0.0031</span> <span class="sc">+</span> <span class="fl">0.0006</span> <span class="sc">+</span> <span class="fl">0.00007</span> <span class="sc">+</span> <span class="fl">0.000004</span>)<span class="sc">*</span><span class="dv">2</span>; pvalue</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="basic-statistical-testing.html#cb39-1" tabindex="-1"></a>pvalue <span class="ot">&lt;-</span> (<span class="fl">0.0117</span> <span class="sc">+</span> <span class="fl">0.0031</span> <span class="sc">+</span> <span class="fl">0.0006</span> <span class="sc">+</span> <span class="fl">0.00007</span> <span class="sc">+</span> <span class="fl">0.000004</span>)<span class="sc">*</span><span class="dv">2</span>; pvalue</span></code></pre></div>
 <pre><code>## [1] 0.030948</code></pre>
 <p>We generate a P-value of 0.031.</p>
 <p>In most sciences, we have agreed on a threshold of 0.05 for establishing statistical significance. If p-values are less than or equal to 0.05, we reject the null hypothesis. If larger, we fail to reject.</p>
