@@ -190,9 +190,4 @@ You invite all your friends with dogs, place both red and blue balls on the grou
   6. Acknowledgment of data source, if data source requires attribution
   7. Implications of the figure (optional)
 
-```{r binomial-plot, echo=FALSE, fig.cap="Binomial Probability Distribution", dev="png"}
-paws <- 0:18
-plot(paws, dbinom(paws, 18, 0.5), type='h', ylab="Probability", xlab="Number Right-pawed Cats")
-```
-
 

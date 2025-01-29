@@ -1,5 +1,4 @@
 fig:binomial-plot-save
-fig:binomial-plot
 introduction
 welcome-to-r
 r-and-r-studio-installation
