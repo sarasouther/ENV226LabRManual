@@ -529,6 +529,14 @@ You want to know: Do dogs prefer the color blue?</p>
 <li><p>Acknowledgment of data source, if data source requires attribution</p></li>
 <li><p>Implications of the figure (optional)</p></li>
 </ol>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="basic-statistical-testing.html#cb41-1" tabindex="-1"></a>paws <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">18</span></span>
+<span id="cb41-2"><a href="basic-statistical-testing.html#cb41-2" tabindex="-1"></a><span class="fu">plot</span>(paws, <span class="fu">dbinom</span>(paws, <span class="dv">18</span>, <span class="fl">0.5</span>), <span class="at">type=</span><span class="st">&#39;h&#39;</span>, <span class="at">ylab=</span><span class="st">&quot;Probability&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;Number Right-pawed Cats&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:binomial-plot"></span>
+<img src="_main_files/figure-html/binomial-plot-1.png" alt="Binomial Probability Distribution" width="672" />
+<p class="caption">
+Figure 4.2: Binomial Probability Distribution
+</p>
+</div>
 
 </div>
 </div>
