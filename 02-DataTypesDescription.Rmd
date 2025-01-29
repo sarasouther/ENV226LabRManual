@@ -40,6 +40,8 @@ The code can be used to import the data, but in case you wanted to access the da
 - Build on this code, to generate your description of the petal lengths of your focal species:
 [R Script for Chapter 1](https://drive.google.com/uc?export=download&id=1vyxsv3L2-zMJ3MXUd0duMRngvuuYRZc9)
 
+- [Watch this video if you need additional help](https://youtu.be/sSPQRhNgZF0)
+
 Remember to alter the working directory, so that you are importing and exporting files from the folder for this lab.
 
 ## Data types
