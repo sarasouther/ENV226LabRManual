@@ -1,4 +1,7 @@
 fig:histogram-plot-save
+fig:histogram2-plot-save
+fig:histogramskewed-plot-save
+fig:boxplot-plot-save
 fig:binomial-plot-save
 introduction
 welcome-to-r

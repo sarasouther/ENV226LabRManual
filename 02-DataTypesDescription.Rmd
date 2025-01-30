@@ -205,7 +205,7 @@ mean(sedona_skewed)
 median(sedona_skewed)
 ```
 
-```{r histogram-plot-save, echo=FALSE, fig.cap="Histogram plant height"}
+```{r histogram-plot-save, echo=FALSE, fig.cap="Histogram unskewed plant height"}
 png("histogram_plantheight.png")
 hist(sedona_unskewed, main = "Unskewed", xlab = "Plant height (cm)", breaks=5)
 dev.off()
@@ -214,7 +214,9 @@ knitr::include_graphics("histogram_plantheight.png")
 
 In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.
 
-```{r}
+```{r histogram2-plot-save, echo=FALSE, fig.cap="Histogram unskewed plant height"}
+png("histogram_plantheight2.png")
+
 h <- hist(sedona_unskewed, main = "Mostly Unskewed", xlab = "Plant height (cm)", breaks=5)
 
 xfit <- seq(min(sedona_unskewed), max(sedona_unskewed), length = 40) 
@@ -222,12 +224,18 @@ yfit <- dnorm(xfit, mean = mean(sedona_unskewed), sd = sd(sedona_unskewed))
 yfit <- yfit * diff(h$mids[1:2]) * length(sedona_unskewed) 
 
 lines(xfit, yfit, col = "black", lwd = 2)
+
+dev.off()
+knitr::include_graphics("histogram_plantheight2.png")
 ```
 
 Here, we superimposed the bellshaped Normal or Gaussian distribution. 
 
-```{r}
+```{r histogramskewed-plot-save, echo=FALSE, fig.cap="Histogram skewed plant height"}
+png("histogram_skewedplantheight.png")
 hist(sedona_skewed, main = "Skewed", xlab = "Plant height (cm)", breaks = 5)
+dev.off()
+knitr::include_graphics("histogram_skewedplantheight.png")
 ```
 
 In this example of skewed data, the tail tapers to the right, indicated that the data is skewed to the right.
@@ -238,8 +246,11 @@ When you break data into quartiles, roughly 25 percent of the data occurs within
 
 Box and whisker plots are commonly used to quickly examine quartiles. Let's check out our plant height data again, using a box and whisker plot.
 
-```{r}
+```{r boxplot-plot-save, echo=FALSE, fig.cap="Histogram skewed plant height"}
+png("boxplot_skewedplantheight.png")
 boxplot(sedona_skewed, main="Skewed", ylab="Plant height (cm)")
+dev.off()
+knitr::include_graphics("boxplot_skewedplantheight.png")
 ```
 
 In the plot shown here, the box encapsulates the Interquartile Range (IQR); the center of the data ranging from the 25th percentile to the 75th. The black line in the middle of the box is the median (also called the 50th percentile, because it bisects the dataset; half of the data occur above the median and half below). The lines emerging from the box (whiskers) indicate the extent of the first and third quartiles, and usually corresponding with the minimum and maximum values of the dataset, unless there are **outliers**. An outlier is a datapoint that occurs outside of the 1st or 3rd quantile. Let's add one to our Sedona dataset, and see how it is represented on the box and whisker plot.
