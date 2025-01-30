@@ -205,9 +205,11 @@ mean(sedona_skewed)
 median(sedona_skewed)
 ```
 
-
-```{r}
+```{r histogram-plot-save, echo=FALSE, fig.cap="Histogram plant height"}
+png("histogram_plantheight.png")
 hist(sedona_unskewed, main = "Unskewed", xlab = "Plant height (cm)", breaks=5)
+dev.off()
+knitr::include_graphics("histogram_plantheight.png")
 ```
 
 In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.
