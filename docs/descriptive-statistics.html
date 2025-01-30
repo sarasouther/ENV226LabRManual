@@ -569,10 +569,14 @@ Figure 3.4: Histogram skewed plant height
 </p>
 </div>
 <p>In the plot shown here, the box encapsulates the Interquartile Range (IQR); the center of the data ranging from the 25th percentile to the 75th. The black line in the middle of the box is the median (also called the 50th percentile, because it bisects the dataset; half of the data occur above the median and half below). The lines emerging from the box (whiskers) indicate the extent of the first and third quartiles, and usually corresponding with the minimum and maximum values of the dataset, unless there are <strong>outliers</strong>. An outlier is a datapoint that occurs outside of the 1st or 3rd quantile. Let’s add one to our Sedona dataset, and see how it is represented on the box and whisker plot.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="descriptive-statistics.html#cb35-1" tabindex="-1"></a><span class="co">#Let&#39;s add a plant height of 20.</span></span>
-<span id="cb35-2"><a href="descriptive-statistics.html#cb35-2" tabindex="-1"></a>sedona_skewed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">20</span>)</span>
-<span id="cb35-3"><a href="descriptive-statistics.html#cb35-3" tabindex="-1"></a><span class="fu">boxplot</span>(sedona_skewed, <span class="at">main=</span><span class="st">&quot;Skewed&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Plant height (cm)&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre><code>## RStudioGD 
+##         2</code></pre>
+<div class="figure"><span style="display:block;" id="fig:boxplot-skewed-plot-save"></span>
+<img src="boxplot_skewedplantheight2.png" alt="Histogram skewed plant height" width="240" />
+<p class="caption">
+Figure 3.5: Histogram skewed plant height
+</p>
+</div>
 <p>The outlier appears as a dot on the box and whisker plot, and is the maximum value of the dataset.</p>
 <p>One other thing to note: Standard deviation also breaks data into meaningful segments, but is only used when data conform to a normal distribution; the mean +/- 1 SD accounts for 68% of the data, +/-2 SDs contains 95% of data, and +/- 3SD includes 99% of data. That said, I’ve never presented standard deviation in a manuscript; it is much more common to include standard error or confidence intervals (discussed later).</p>
 </div>

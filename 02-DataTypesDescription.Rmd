@@ -255,10 +255,13 @@ knitr::include_graphics("boxplot_skewedplantheight.png")
 
 In the plot shown here, the box encapsulates the Interquartile Range (IQR); the center of the data ranging from the 25th percentile to the 75th. The black line in the middle of the box is the median (also called the 50th percentile, because it bisects the dataset; half of the data occur above the median and half below). The lines emerging from the box (whiskers) indicate the extent of the first and third quartiles, and usually corresponding with the minimum and maximum values of the dataset, unless there are **outliers**. An outlier is a datapoint that occurs outside of the 1st or 3rd quantile. Let's add one to our Sedona dataset, and see how it is represented on the box and whisker plot.
 
-```{r}
+```{r boxplot-skewed-plot-save, echo=FALSE, fig.cap="Histogram skewed plant height"}
+png("boxplot_skewedplantheight2.png")
 #Let's add a plant height of 20.
 sedona_skewed <- c(3, 3, 3, 3, 7, 3, 4, 5, 6, 3, 3, 3, 4, 4, 6, 7, 8, 9, 3, 4, 5, 2, 20)
 boxplot(sedona_skewed, main="Skewed", ylab="Plant height (cm)")
+dev.off()
+knitr::include_graphics("boxplot_skewedplantheight2.png")
 ```
 
 The outlier appears as a dot on the box and whisker plot, and is the maximum value of the dataset. 
