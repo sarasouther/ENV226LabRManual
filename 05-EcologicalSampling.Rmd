@@ -62,6 +62,7 @@ What is **sampling error**? Sampling error is the difference between the true es
 ## Variables of interest
 
 Finally, depending on the research question, there are a number of different variables that you might want to measure. In ecology, you may want to measure the number of different species in an area to look at diversity patterns, or collect data on size or growth to look at performance, or monitor individuals after a disturbance to look at mortality. We will collect different forms of data throughout the semester, but the following principles will always apply: 
+
 1. Samples should be random and representative 
 2. Sampling methodology – plot shape and size – should reflect the organism or ecological feature that you are measuring 
 3. More replication is better, since it reduces sampling error 
@@ -69,6 +70,8 @@ Finally, depending on the research question, there are a number of different var
 ## Assignment
 
 ### Downloads for this class
+
+Please download for class:
 
 - [Random number table for compass bearings (optional)](https://drive.google.com/uc?export=download&id=1-ioFKuNVmxoMvEESJ6QF0XQyKQ8LBZSU)
 - [Land propery maps](https://drive.google.com/uc?export=download&id=1-c-49NKwBPxb4oyyP8mwQilfXWLnAENl)
@@ -80,25 +83,29 @@ This information can help you develop your sampling plan.
 
 **Answer the following questions.** 
 
-1. You are working in an agroforestry system attempting to understand where a species of finch occurs across this landscape. The habitat is patchy, with forests comprising 80% of the landscape and fields covering the remaining 20%. You decide to use random stratified sampling to capture finch occupation in both systems proportionally. Given this, how many of your 40 plots will occur in forested habitat? 
+1. You are working in an agroforestry system attempting to understand where a species of finch occurs across this landscape. The habitat is patchy, with forests comprising 80% of the landscape and fields covering the remaining 20%. You decide to use random stratified sampling to capture finch occupation in both systems proportionally. Given this, how many of your 40 plots will occur in forested habitat? Select one:
+
 1. 20 
 2. 30 
 3. 32 
 4. 38 
 
 2. You are interested in how the abundance of frogs varies across habitats moving away from a local stream. In order to look at frog abundance as a function of distance from stream, you: 
+
 1. Place 1m2 quadrats along the stream bank. 
 2. Create a grid along stream habitat and randomly assign plots to occur within the grid cells. 
 3. Place a 50 m transect running perpendicular to the stream, starting at the stream bank and moving away. 
 4. Place a 50 m transect along the stream parallel to the running water. 
 
-3. Which of the following sampling schemes will have the lowest sampling error? 
+3. Which of the following sampling schemes will have the lowest sampling error? Select one:
+
 1. plot per hectare 
 2. 5 plots per hectare 
 3. 10 plots per hectare 
 4. Unable to determine using this information 
 
- Review: Last week you learned about different data types, list the data type for each variable below (continuous, nominal): 
+Review: Last week you learned about different data types, list the data type for each variable below (continuous, nominal): 
+
 1. Growth  
 2. Survival (yes, no) 
 3. Foliar nitrogen content 
@@ -114,9 +121,10 @@ Once you have looked over this information and the downloads provided, if the we
 
 Write out a brief description of a sampling strategy for determining how restoration is affecting revegetation along eroded banks along Sinclair Wash. Be sure to mention how you would reduce bias, collect a representative sample, and reduce error. Please also describe plot shapes and sizes. Then, draw or make a map of your sampling strategy.
 
-### Turn-in checklist
+### Deliverables
 
-**Please turn-in:**
+Please turn in:
+
 1. The answers the the questions.
 2. A written description of your sampling strategy
 3. A picture / drawing of your sampling strategy
