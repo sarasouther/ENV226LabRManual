@@ -32,6 +32,10 @@ Please download:
 
 **This is a datasheet for an experiment with 12 pots and two species, with each pot containing species A & B. You may need to adjust the structure of the dataset depending your experimental design**
 
+We will be working in the NAU greenhouse. For those of you who have not visited the greenhouse yet, here is a mapped location:
+
+- [View NAU greenhouse location on Google Maps](https://maps.app.goo.gl/UHgzcexkYzsEHVPW7)
+
 ### Materials 
 
 Each group of two should have: 
