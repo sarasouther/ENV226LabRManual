@@ -212,6 +212,7 @@ You may want to import data, and export a .csv file after analyses to include as
 Finally, one easy way to export plots is to use the 'Plots' tab in your R studio window. Simply click on the 'Plots' tab and select export - you can choose different file types and sizes when you export. 
 
 ![](images/01-intro/fileexport.png){width=200px}
+
 ## Deliverables
 
 Download both files, modify your working directory and import the file. Show your TA that you successfully altered your working directory and imported a file to receive credit!
