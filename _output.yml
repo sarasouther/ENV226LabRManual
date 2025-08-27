@@ -1,6 +1,6 @@
 bookdown::gitbook:
   css: style.css
-  title: "ENV 226 Lab Online R Manual"  # Add a title here
+  title: "ENV 226 Lab Online R Manual"
   config:
     toc:
       before: |
@@ -8,8 +8,14 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/sarasouther/ENV226LabRManual/edit/main/%s
-    download: ["epub"]
-  output_dir: "docs"
+    download: ["pdf", "epub"]   # <-- add pdf here so the button appears
+
+bookdown::pdf_book:
+  latex_engine: xelatex
+  citation_package: natbib
+  # optional: tweak LaTeX preamble
+  # includes:
+  #   in_header: preamble.tex
 
 bookdown::epub_book:
   toc: true
