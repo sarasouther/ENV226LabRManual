@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Descriptive statistics | ENV 226 Lab Online R Manual</title>
+  <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Descriptive statistics | ENV 226 Lab Online R Manual" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
+  <meta name="github-repo" content="sarasouther/ENV226LabRManual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Descriptive statistics | ENV 226 Lab Online R Manual" />
+  
+  <meta name="twitter:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
+  
+
+<meta name="author" content="Sara Souther" />
+
+
+<meta name="date" content="2025-08-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="welcome-to-r.html"/>
+<link rel="next" href="basic-statistical-testing.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ENV 226 Lab Online R Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="welcome-to-r.html"><a href="welcome-to-r.html"><i class="fa fa-check"></i><b>2</b> Welcome to R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#r-and-r-studio-installation"><i class="fa fa-check"></i><b>2.1</b> R and R studio installation</a></li>
+<li class="chapter" data-level="2.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-the-r-statistical-software-from-the-official-r-project-website."><i class="fa fa-check"></i><b>2.2</b> Download the R statistical software from the official R Project website.</a></li>
+<li class="chapter" data-level="2.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-r-studio"><i class="fa fa-check"></i><b>2.3</b> Download R studio</a></li>
+<li class="chapter" data-level="2.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#optional-set-up-r-studio"><i class="fa fa-check"></i><b>2.4</b> Optional: Set up R studio</a></li>
+<li class="chapter" data-level="2.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#downloads-and-video-links"><i class="fa fa-check"></i><b>2.5</b> Downloads and video links</a></li>
+<li class="chapter" data-level="2.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#using-r"><i class="fa fa-check"></i><b>2.6</b> Using R</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#packages-and-libraries"><i class="fa fa-check"></i><b>2.6.1</b> Packages and libraries</a></li>
+<li class="chapter" data-level="2.6.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#working-directories"><i class="fa fa-check"></i><b>2.6.2</b> Working directories</a></li>
+<li class="chapter" data-level="2.6.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#trouble-shooting-issues"><i class="fa fa-check"></i><b>2.6.3</b> Trouble-shooting issues</a></li>
+<li class="chapter" data-level="2.6.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#annotating-your-code"><i class="fa fa-check"></i><b>2.6.4</b> Annotating your code</a></li>
+<li class="chapter" data-level="2.6.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#organizing-your-code"><i class="fa fa-check"></i><b>2.6.5</b> Organizing your code</a></li>
+<li class="chapter" data-level="2.6.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#importing-and-exporting-csv-files"><i class="fa fa-check"></i><b>2.6.6</b> Importing and exporting csv files</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#deliverables"><i class="fa fa-check"></i><b>2.7</b> Deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive statistics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#a-short-statistical-review"><i class="fa fa-check"></i><b>3.1</b> A short statistical review</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#what-can-statistics-tell-us"><i class="fa fa-check"></i><b>3.1.1</b> What can statistics tell us?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#sampling-populations"><i class="fa fa-check"></i><b>3.1.2</b> Sampling populations</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#objectives"><i class="fa fa-check"></i><b>3.2</b> Objectives</a></li>
+<li class="chapter" data-level="3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#downloads-for-this-lab"><i class="fa fa-check"></i><b>3.3</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-types"><i class="fa fa-check"></i><b>3.4</b> Data types</a></li>
+<li class="chapter" data-level="3.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-1"><i class="fa fa-check"></i><b>3.5</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="3.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#figures"><i class="fa fa-check"></i><b>3.6</b> Figures</a></li>
+<li class="chapter" data-level="3.7" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary"><i class="fa fa-check"></i><b>3.7</b> Summary</a></li>
+<li class="chapter" data-level="3.8" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#assignment"><i class="fa fa-check"></i><b>3.8</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html"><i class="fa fa-check"></i><b>4</b> Basic statistical testing</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#hypothesis-testing-review"><i class="fa fa-check"></i><b>4.1</b> Hypothesis testing review</a></li>
+<li class="chapter" data-level="4.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#downloads-for-this-module"><i class="fa fa-check"></i><b>4.2</b> Downloads for this module</a></li>
+<li class="chapter" data-level="4.3" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#objectives-1"><i class="fa fa-check"></i><b>4.3</b> Objectives</a></li>
+<li class="chapter" data-level="4.4" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#tailed-tests"><i class="fa fa-check"></i><b>4.4</b> Tailed tests</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#generate-hypotheses"><i class="fa fa-check"></i><b>4.4.1</b> Generate hypotheses</a></li>
+<li class="chapter" data-level="4.4.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#calculate-a-test-statistic"><i class="fa fa-check"></i><b>4.4.2</b> Calculate a test statistic</a></li>
+<li class="chapter" data-level="4.4.3" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#determine-the-p-value"><i class="fa fa-check"></i><b>4.4.3</b> Determine the p-value</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#drawing-conclusions-from-statistics"><i class="fa fa-check"></i><b>4.5</b> Drawing conclusions from statistics</a></li>
+<li class="chapter" data-level="4.6" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#reporting-results"><i class="fa fa-check"></i><b>4.6</b> Reporting results</a></li>
+<li class="chapter" data-level="4.7" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#assignment-1"><i class="fa fa-check"></i><b>4.7</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html"><i class="fa fa-check"></i><b>5</b> Selecting statistical tests</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#a-foray-into-statistics"><i class="fa fa-check"></i><b>5.1</b> A foray into statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#downloads-for-this-class"><i class="fa fa-check"></i><b>5.2</b> Downloads for this class</a></li>
+<li class="chapter" data-level="5.3" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#selecting-statistical-analyses"><i class="fa fa-check"></i><b>5.3</b> Selecting statistical analyses</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#using-the-decision-matrix"><i class="fa fa-check"></i><b>5.3.1</b> Using the decision matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#statistical-tests"><i class="fa fa-check"></i><b>5.4</b> Statistical tests</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#g-test-categorical-response-and-categorical-explanatory-variable"><i class="fa fa-check"></i><b>5.4.1</b> G-test (Categorical Response and Categorical Explanatory Variable)</a></li>
+<li class="chapter" data-level="5.4.2" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#t-test-and-anova-continuous-response-and-categorical-explanatory-variable"><i class="fa fa-check"></i><b>5.4.2</b> t-test and ANOVA (Continuous Response and Categorical Explanatory Variable)</a></li>
+<li class="chapter" data-level="5.4.3" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#linear-regression-continuous-response-and-continuous-explanatory-variable"><i class="fa fa-check"></i><b>5.4.3</b> Linear Regression (Continuous Response and Continuous Explanatory Variable)</a></li>
+<li class="chapter" data-level="5.4.4" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#logistic-regression-categorical-response-and-continuous-explanatory-variable"><i class="fa fa-check"></i><b>5.4.4</b> 5. Logistic Regression (Categorical Response and Continuous Explanatory Variable)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#assignment-2"><i class="fa fa-check"></i><b>5.5</b> Assignment</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#turn-in"><i class="fa fa-check"></i><b>5.5.1</b> Turn-in</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ecological-sampling.html"><a href="ecological-sampling.html"><i class="fa fa-check"></i><b>6</b> Ecological sampling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#background"><i class="fa fa-check"></i><b>6.1</b> Background</a></li>
+<li class="chapter" data-level="6.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-approaches"><i class="fa fa-check"></i><b>6.2</b> Sampling approaches</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#random-sampling"><i class="fa fa-check"></i><b>6.2.1</b> Random sampling</a></li>
+<li class="chapter" data-level="6.2.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#stratefied-random-sampling"><i class="fa fa-check"></i><b>6.2.2</b> Stratefied random sampling</a></li>
+<li class="chapter" data-level="6.2.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#gridded-random-sampling"><i class="fa fa-check"></i><b>6.2.3</b> Gridded random sampling</a></li>
+<li class="chapter" data-level="6.2.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#random-cluster-sampling"><i class="fa fa-check"></i><b>6.2.4</b> Random cluster sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#plot-shapes-sizes-and-transects"><i class="fa fa-check"></i><b>6.3</b> Plot shapes, sizes, and transects</a></li>
+<li class="chapter" data-level="6.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#reducing-sampling-error"><i class="fa fa-check"></i><b>6.4</b> Reducing sampling error</a></li>
+<li class="chapter" data-level="6.5" data-path="ecological-sampling.html"><a href="ecological-sampling.html#variables-of-interest"><i class="fa fa-check"></i><b>6.5</b> Variables of interest</a></li>
+<li class="chapter" data-level="6.6" data-path="ecological-sampling.html"><a href="ecological-sampling.html#assignment-3"><i class="fa fa-check"></i><b>6.6</b> Assignment</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#downloads-for-this-class-1"><i class="fa fa-check"></i><b>6.6.1</b> Downloads for this class</a></li>
+<li class="chapter" data-level="6.6.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-q-a"><i class="fa fa-check"></i><b>6.6.2</b> Sampling Q &amp; A</a></li>
+<li class="chapter" data-level="6.6.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-activity"><i class="fa fa-check"></i><b>6.6.3</b> Sampling activity</a></li>
+<li class="chapter" data-level="6.6.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#deliverables-1"><i class="fa fa-check"></i><b>6.6.4</b> Deliverables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="natural-selection.html"><a href="natural-selection.html"><i class="fa fa-check"></i><b>7</b> Natural selection</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="natural-selection.html"><a href="natural-selection.html#background-1"><i class="fa fa-check"></i><b>7.1</b> Background</a></li>
+<li class="chapter" data-level="7.2" data-path="natural-selection.html"><a href="natural-selection.html#downloads-for-this-class-2"><i class="fa fa-check"></i><b>7.2</b> Downloads for this class</a></li>
+<li class="chapter" data-level="7.3" data-path="natural-selection.html"><a href="natural-selection.html#objectives-2"><i class="fa fa-check"></i><b>7.3</b> Objectives</a></li>
+<li class="chapter" data-level="7.4" data-path="natural-selection.html"><a href="natural-selection.html#research-question"><i class="fa fa-check"></i><b>7.4</b> Research question:</a></li>
+<li class="chapter" data-level="7.5" data-path="natural-selection.html"><a href="natural-selection.html#methods"><i class="fa fa-check"></i><b>7.5</b> Methods</a></li>
+<li class="chapter" data-level="7.6" data-path="natural-selection.html"><a href="natural-selection.html#what-to-turn-in"><i class="fa fa-check"></i><b>7.6</b> What to turn in</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="population-ecology.html"><a href="population-ecology.html"><i class="fa fa-check"></i><b>8</b> Population ecology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="population-ecology.html"><a href="population-ecology.html#lab-set-up-week-1"><i class="fa fa-check"></i><b>8.1</b> Lab set-up (week 1)</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="population-ecology.html"><a href="population-ecology.html#downloads-for-this-lab-1"><i class="fa fa-check"></i><b>8.1.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="8.1.2" data-path="population-ecology.html"><a href="population-ecology.html#objectives-3"><i class="fa fa-check"></i><b>8.1.2</b> Objectives</a></li>
+<li class="chapter" data-level="8.1.3" data-path="population-ecology.html"><a href="population-ecology.html#materials"><i class="fa fa-check"></i><b>8.1.3</b> Materials</a></li>
+<li class="chapter" data-level="8.1.4" data-path="population-ecology.html"><a href="population-ecology.html#procedure"><i class="fa fa-check"></i><b>8.1.4</b> Procedure</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="population-ecology.html"><a href="population-ecology.html#maintaining-your-microcosms-and-measuring-population-growth-week-2"><i class="fa fa-check"></i><b>8.2</b> Maintaining your microcosms and measuring population growth (week 2)</a></li>
+<li class="chapter" data-level="8.3" data-path="population-ecology.html"><a href="population-ecology.html#final-data-collection-and-analysis-week-3"><i class="fa fa-check"></i><b>8.3</b> Final data collection and analysis (week 3)</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="population-ecology.html"><a href="population-ecology.html#microcosm-studies-of-population-dynamics"><i class="fa fa-check"></i><b>8.3.1</b> Microcosm studies of population dynamics</a></li>
+<li class="chapter" data-level="8.3.2" data-path="population-ecology.html"><a href="population-ecology.html#population-dynamics-basics"><i class="fa fa-check"></i><b>8.3.2</b> Population dynamics basics</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="population-ecology.html"><a href="population-ecology.html#assignment-4"><i class="fa fa-check"></i><b>8.4</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="invasive-species.html"><a href="invasive-species.html"><i class="fa fa-check"></i><b>9</b> Invasive species</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="invasive-species.html"><a href="invasive-species.html#introduction-1"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="invasive-species.html"><a href="invasive-species.html#downloads-for-this-lab-2"><i class="fa fa-check"></i><b>9.2</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="9.3" data-path="invasive-species.html"><a href="invasive-species.html#objectives-4"><i class="fa fa-check"></i><b>9.3</b> Objectives</a></li>
+<li class="chapter" data-level="9.4" data-path="invasive-species.html"><a href="invasive-species.html#materials-1"><i class="fa fa-check"></i><b>9.4</b> Materials</a></li>
+<li class="chapter" data-level="9.5" data-path="invasive-species.html"><a href="invasive-species.html#procedure-1"><i class="fa fa-check"></i><b>9.5</b> Procedure</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="invasive-species.html"><a href="invasive-species.html#hypothesis-development"><i class="fa fa-check"></i><b>9.5.1</b> Hypothesis development</a></li>
+<li class="chapter" data-level="9.5.2" data-path="invasive-species.html"><a href="invasive-species.html#nonnative-species-density-quadrats"><i class="fa fa-check"></i><b>9.5.2</b> Nonnative species density quadrats</a></li>
+<li class="chapter" data-level="9.5.3" data-path="invasive-species.html"><a href="invasive-species.html#analyses"><i class="fa fa-check"></i><b>9.5.3</b> Analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="invasive-species.html"><a href="invasive-species.html#assignment-5"><i class="fa fa-check"></i><b>9.6</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="water-quality.html"><a href="water-quality.html"><i class="fa fa-check"></i><b>10</b> Water quality</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="water-quality.html"><a href="water-quality.html#background-2"><i class="fa fa-check"></i><b>10.1</b> Background</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="water-quality.html"><a href="water-quality.html#history-of-francis-short-pond"><i class="fa fa-check"></i><b>10.1.1</b> History of Francis Short Pond</a></li>
+<li class="chapter" data-level="10.1.2" data-path="water-quality.html"><a href="water-quality.html#rio-de-flag-flood-control-project"><i class="fa fa-check"></i><b>10.1.2</b> Rio de Flag Flood Control Project</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="water-quality.html"><a href="water-quality.html#key-water-quality-terms-and-concepts"><i class="fa fa-check"></i><b>10.2</b> Key Water Quality Terms and Concepts</a></li>
+<li class="chapter" data-level="10.3" data-path="water-quality.html"><a href="water-quality.html#water-quality-monitoring"><i class="fa fa-check"></i><b>10.3</b> Water Quality Monitoring</a></li>
+<li class="chapter" data-level="10.4" data-path="water-quality.html"><a href="water-quality.html#downloads-for-this-lab-3"><i class="fa fa-check"></i><b>10.4</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="10.5" data-path="water-quality.html"><a href="water-quality.html#methods-1"><i class="fa fa-check"></i><b>10.5</b> Methods</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="water-quality.html"><a href="water-quality.html#record-and-compare-your-results"><i class="fa fa-check"></i><b>10.5.1</b> Record and compare your results</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="water-quality.html"><a href="water-quality.html#assignment-6"><i class="fa fa-check"></i><b>10.6</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="species-interaction-project.html"><a href="species-interaction-project.html"><i class="fa fa-check"></i><b>11</b> Species interaction project</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#introduction-2"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#objectives-5"><i class="fa fa-check"></i><b>11.2</b> Objectives</a></li>
+<li class="chapter" data-level="11.3" data-path="species-interaction-project.html"><a href="species-interaction-project.html#week-1"><i class="fa fa-check"></i><b>11.3</b> Week 1</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads-for-this-lab-4"><i class="fa fa-check"></i><b>11.3.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="11.3.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#materials-2"><i class="fa fa-check"></i><b>11.3.2</b> Materials</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="species-interaction-project.html"><a href="species-interaction-project.html#overall-procedure"><i class="fa fa-check"></i><b>11.4</b> Overall procedure</a></li>
+<li class="chapter" data-level="11.5" data-path="species-interaction-project.html"><a href="species-interaction-project.html#set-up-your-experiment"><i class="fa fa-check"></i><b>11.5</b> Set up your experiment</a></li>
+<li class="chapter" data-level="11.6" data-path="species-interaction-project.html"><a href="species-interaction-project.html#creating-your-data-sheet"><i class="fa fa-check"></i><b>11.6</b> Creating your Data Sheet</a></li>
+<li class="chapter" data-level="11.7" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in-week-1"><i class="fa fa-check"></i><b>11.7</b> Turn-in week 1</a></li>
+<li class="chapter" data-level="11.8" data-path="species-interaction-project.html"><a href="species-interaction-project.html#weeks-2---5"><i class="fa fa-check"></i><b>11.8</b> Weeks 2 - 5</a>
+<ul>
+<li class="chapter" data-level="11.8.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#analyzing-and-visualizing-your-data"><i class="fa fa-check"></i><b>11.8.1</b> Analyzing and visualizing your data</a></li>
+</ul></li>
+<li class="chapter" data-level="11.9" data-path="species-interaction-project.html"><a href="species-interaction-project.html#final-week"><i class="fa fa-check"></i><b>11.9</b> Final week</a>
+<ul>
+<li class="chapter" data-level="11.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads"><i class="fa fa-check"></i><b>11.9.1</b> Downloads</a></li>
+<li class="chapter" data-level="11.9.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in-1"><i class="fa fa-check"></i><b>11.9.2</b> Turn-in</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="species-diversity.html"><a href="species-diversity.html"><i class="fa fa-check"></i><b>12</b> Species diversity</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="species-diversity.html"><a href="species-diversity.html#introduction-3"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="species-diversity.html"><a href="species-diversity.html#week-1-1"><i class="fa fa-check"></i><b>12.2</b> Week 1</a></li>
+<li class="chapter" data-level="12.3" data-path="species-diversity.html"><a href="species-diversity.html#downloads-for-this-lab-5"><i class="fa fa-check"></i><b>12.3</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="12.4" data-path="species-diversity.html"><a href="species-diversity.html#objectives-6"><i class="fa fa-check"></i><b>12.4</b> Objectives</a></li>
+<li class="chapter" data-level="12.5" data-path="species-diversity.html"><a href="species-diversity.html#methods-2"><i class="fa fa-check"></i><b>12.5</b> Methods</a></li>
+<li class="chapter" data-level="12.6" data-path="species-diversity.html"><a href="species-diversity.html#turn-in-week-1-1"><i class="fa fa-check"></i><b>12.6</b> Turn-in week 1</a></li>
+<li class="chapter" data-level="12.7" data-path="species-diversity.html"><a href="species-diversity.html#week-2"><i class="fa fa-check"></i><b>12.7</b> Week 2</a></li>
+<li class="chapter" data-level="12.8" data-path="species-diversity.html"><a href="species-diversity.html#downloads-for-this-lab-6"><i class="fa fa-check"></i><b>12.8</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="12.9" data-path="species-diversity.html"><a href="species-diversity.html#objectives-7"><i class="fa fa-check"></i><b>12.9</b> Objectives</a></li>
+<li class="chapter" data-level="12.10" data-path="species-diversity.html"><a href="species-diversity.html#methods-3"><i class="fa fa-check"></i><b>12.10</b> Methods</a></li>
+<li class="chapter" data-level="12.11" data-path="species-diversity.html"><a href="species-diversity.html#turn-in-week-2"><i class="fa fa-check"></i><b>12.11</b> Turn-in week 2</a></li>
+<li class="chapter" data-level="12.12" data-path="species-diversity.html"><a href="species-diversity.html#acknowledgements"><i class="fa fa-check"></i><b>12.12</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html"><i class="fa fa-check"></i><b>13</b> Species Distribution Modeling</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#introduction-4"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.2" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#a-brief-review-of-niche-theory"><i class="fa fa-check"></i><b>13.2</b> A brief review of niche theory</a></li>
+<li class="chapter" data-level="13.3" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#downloads-for-this-lab-7"><i class="fa fa-check"></i><b>13.3</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="13.4" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#objectives-8"><i class="fa fa-check"></i><b>13.4</b> Objectives</a></li>
+<li class="chapter" data-level="13.5" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#methods-4"><i class="fa fa-check"></i><b>13.5</b> Methods</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#lets-get-modeling"><i class="fa fa-check"></i><b>13.5.1</b> Let’s get modeling</a></li>
+<li class="chapter" data-level="13.5.2" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#run-the-r-code"><i class="fa fa-check"></i><b>13.5.2</b> Run the R code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="env-226-lab-exercises.html"><a href="env-226-lab-exercises.html"><i class="fa fa-check"></i><b>14</b> ENV 226 Lab Exercises</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="env-226-lab-exercises.html"><a href="env-226-lab-exercises.html#conclusions"><i class="fa fa-check"></i><b>14.1</b> Conclusions</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ENV 226 Lab Online R Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="descriptive-statistics" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Descriptive statistics<a href="descriptive-statistics.html#descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="a-short-statistical-review" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> A short statistical review<a href="descriptive-statistics.html#a-short-statistical-review" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-can-statistics-tell-us" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> What can statistics tell us?<a href="descriptive-statistics.html#what-can-statistics-tell-us" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Welcome to our statistical exploration of the natural world!</p>
+<p>Almost all statistical analysis boils down to answering 1 of 2 questions:</p>
+<ul>
+<li>Do these groups differ?</li>
+<li>Is there a relationship between these variables?</li>
+</ul>
+<p>These seem like relatively simple questions to answer, perhaps just by looking at our data, so <strong>Why do we need statistics?</strong></p>
+<p>The short answer is: <strong>error</strong> and <strong>sampling</strong>! Whenever we collect data, we introduce <strong>error</strong>; our instruments are imprecise and do not capture an exact measure of whatever you are measuring (e.g., height, weight), and humans make mistakes during measurement collection. Secondly, we are <strong>always</strong> measuring a sub-sample of the true population (<em>true population</em> meaning all representatives of whatever you are trying to measure; this can be grass, marbles, or the tibia of humans). Not only is it intractable in most cases to measure all individuals of whatever you are interested in, even when it is possible to attempt to measure <strong>all</strong> individuals (like in the case of rare plant work), statistics acknowledges that it is <strong>still</strong> unlikely that we are able to do so, since individuals may be dormant or challenging to locate. If we could measure all individuals of our focal population with perfect accurately, we could calculate population <strong>parameters</strong>, or quantities describing populations like averages and variation, rather than estimating these metrics, and just compare them. In this way, statistics is inherently practical, and asks: What can we say about whatever we are looking at, given our numerous flaws?</p>
+</div>
+<div id="sampling-populations" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Sampling populations<a href="descriptive-statistics.html#sampling-populations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After a few classes, we will explore sampling methodology in greater depth in order to design appropriate experiments that test a statistical <strong>hypothesis</strong>. Let’s quickly talk about sampling now so that we have a shared understanding and vocabulary to build on - after all, statistics really centers around estimating characteristics of a true population from a sample. The <strong>really, truly</strong> amazing thing is that by properly applying statistics, we can learn practically anything about almost any population using samples!</p>
+<p>In statistics, a <strong>population</strong> refers to the all units of the thing that you are interested (i.e., all suriname frogs, all grains of sand, all aspen leaves from a genotype found in southern Arizona). <strong>Note</strong>: Population in statistics differs from the term population in population ecology, where a population refers to a group of individuals in a particular area that interbreed.</p>
+<p>A <strong>sample</strong> is a subset of the population that we measure to infer something about the population.
+<strong>Statistical analysis is only one part of presenting your research results.</strong> Generally, a results section in a manuscript includes: <strong>statistical results</strong>, <strong>data description</strong> (e.g., describing means, ranges, maxima, minima of groups of interest), and <strong>data visualization</strong> (i.e., creating beautiful figures).</p>
+</div>
+</div>
+<div id="objectives" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Objectives<a href="descriptive-statistics.html#objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will build to towards always providing a complete results section with these three components. In this lab, however, we will focus exclusively on data description and a teeny bit of visualization.</p>
+</div>
+<div id="downloads-for-this-lab" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Downloads for this lab<a href="descriptive-statistics.html#downloads-for-this-lab" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Last week, you should have created a folder to keep files for lab. Download these materials and place in your folder:</p>
+<ul>
+<li><p>For your reference, here is a guide that shows the basics formulas for calculations in R: <a href="https://drive.google.com/uc?export=download&amp;id=1jhqzC8Qms-KajOj60hCt1jegW1b1BQPU">Supplementary Material</a></p></li>
+<li><p><a href="https://drive.google.com/uc?export=download&amp;id=11ul4c3e6Ucqml5bmwiPmC81vgCEVno3D">Download the example dataset</a></p></li>
+</ul>
+<p>The code can be used to import the data, but in case you wanted to access the data yourself - provided above!</p>
+<ul>
+<li><p>Build on this code, to generate your description of the petal lengths of your focal species:
+<a href="https://drive.google.com/uc?export=download&amp;id=1vyxsv3L2-zMJ3MXUd0duMRngvuuYRZc9">R Script for Chapter 1</a></p></li>
+<li><p><a href="https://youtu.be/sSPQRhNgZF0">Watch this video if you need additional help</a></p></li>
+</ul>
+<p>Remember to alter the working directory, so that you are importing and exporting files from the folder for this lab.</p>
+</div>
+<div id="data-types" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Data types<a href="descriptive-statistics.html#data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before we start learning to present research results (analysis, description, visualization), let’s talk about data! Data comes in several varieties, and the variety dictates which statistical analysis we choose!</p>
+<p><em>Categorical variables</em> are non-numeric variables.
+<strong>Examples</strong>: Pet type (dog, cat, fish, bird), Size (small, medium, large), Car type (sedan, SUV), Present/Absent</p>
+<p><em>Numerical variables</em> are variables that are numbers, and occur in two forms:
+<em>Discrete</em> = Counts of things (no decimal points/fractions)
+Data are discrete when it does not make sense to have a partial number of the variable. For instance, if counting the number of insects in a pond, it does not make sense to count a half a species.
+<strong>Examples</strong>: Number of people in a building, number of trees in a plot, number of bugs in a pond</p>
+<p><em>Continuous</em> are numerical data that can occur at any value.
+These are variables that can occur in any quantity. If you can have a fraction of this variable, it is continuous.
+<strong>Examples</strong> = Height, Weight, Length</p>
+<p><em>Ordinal variables</em> (sometimes referred to as ranked) can be categorical or numerical, but the order matters.
+<strong>Examples</strong> = Grades (A, B, C, D, E), Likert scale variables (Strongly disagree, Agree, Strongly Agree), Class rank (1, 2, 3, 4, 5)</p>
+</div>
+<div id="descriptive-statistics-1" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Descriptive statistics<a href="descriptive-statistics.html#descriptive-statistics-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Descriptive statistics quantify characteristics of a population. Critically, they are <em>not</em> statistical tests, which tell us whether groups differ or if variables are related, BUT they are an important part of scientific work and data analysis. First, we will start by describing continuous data.</p>
+<p>Let’s use a simplified version of a dataset that I’m working with right now to look at the performance of several species of pollinator-friendly native species in agricultural gardens. Eventually, we’d like to develop seed to provide to restorationists for restoration of arid and semiarid grasslands. To do this, we need to understand how reliable these species are at establishing, producing seed, and attracting pollinators. Initially, we are conducting experiments with multiple populations of each species to determine how consistently plants grow, reproduce, and perform. Here, We will take a look at the initial heights of 1 population of one species, <em>Asclepias subverticulata</em>.</p>
+<p>Most of the time when writing up results, you present a mean (sum of numbers divided by the number of observations), and an estimate of variation (a measure of how different the observations are). Here, we calculated three estimates variation, variance, standard deviation, and standard error.</p>
+<p><strong>For the following sections of code, practice code is in your R file</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="descriptive-statistics.html#cb3-1" tabindex="-1"></a><span class="co">#create vector of heights (cm) of one population of A. subverticulata</span></span>
+<span id="cb3-2"><a href="descriptive-statistics.html#cb3-2" tabindex="-1"></a>sedonapopulation <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
+<span id="cb3-3"><a href="descriptive-statistics.html#cb3-3" tabindex="-1"></a><span class="co">#take the mean</span></span>
+<span id="cb3-4"><a href="descriptive-statistics.html#cb3-4" tabindex="-1"></a><span class="fu">mean</span>(sedonapopulation)</span></code></pre></div>
+<pre><code>## [1] 5.142857</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="descriptive-statistics.html#cb5-1" tabindex="-1"></a><span class="co">#calculate variance</span></span>
+<span id="cb5-2"><a href="descriptive-statistics.html#cb5-2" tabindex="-1"></a><span class="fu">var</span>(sedonapopulation)</span></code></pre></div>
+<pre><code>## [1] 7.47619</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="descriptive-statistics.html#cb7-1" tabindex="-1"></a><span class="co">#calculate standard deviation</span></span>
+<span id="cb7-2"><a href="descriptive-statistics.html#cb7-2" tabindex="-1"></a><span class="fu">sd</span>(sedonapopulation)</span></code></pre></div>
+<pre><code>## [1] 2.734262</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="descriptive-statistics.html#cb9-1" tabindex="-1"></a><span class="co">#calculate standard error</span></span>
+<span id="cb9-2"><a href="descriptive-statistics.html#cb9-2" tabindex="-1"></a><span class="co">#base r doesn&#39;t have this function</span></span>
+<span id="cb9-3"><a href="descriptive-statistics.html#cb9-3" tabindex="-1"></a><span class="co">#so we have to write our own</span></span>
+<span id="cb9-4"><a href="descriptive-statistics.html#cb9-4" tabindex="-1"></a>std_error <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="fu">length</span>(x))</span>
+<span id="cb9-5"><a href="descriptive-statistics.html#cb9-5" tabindex="-1"></a><span class="fu">std_error</span>(sedonapopulation)</span></code></pre></div>
+<pre><code>## [1] 1.033454</code></pre>
+<p>Since you will occasionally need to include equations in your write-ups, let’s get use to mathematical syntax, with these simple examples.</p>
+<p>The formula for the sample mean is: <span class="math inline">\(\mu = \frac{\Sigma x_i}{n}\)</span>;
+where <span class="math inline">\(\mu\)</span> indicates the sample mean (sample = group of numbers we are looking at);
+<span class="math inline">\(\Sigma\)</span> means to add what ever follows;
+<span class="math inline">\(x_{i}\)</span> is the value of one observation; (subscript i is often used to indicate that the action should be repeated for all values);
+<span class="math inline">\(n\)</span> is the number of observations</p>
+<p><em>Why didn’t we just use <span class="math inline">\(\bar{x}\)</span> to indicate the mean?</em>
+Because statisticians typically use <span class="math inline">\(\bar{x}\)</span> to indicate the true mean of the population, and <span class="math inline">\(\mu\)</span> to indicate the sample mean!</p>
+<p>Just to show you, what the mean() function is doing, let’s run:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="descriptive-statistics.html#cb11-1" tabindex="-1"></a>sum <span class="ot">=</span> <span class="dv">3</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">7</span><span class="sc">+</span><span class="dv">8</span><span class="sc">+</span><span class="dv">9</span> <span class="co">#add all the numbers in the sample</span></span>
+<span id="cb11-2"><a href="descriptive-statistics.html#cb11-2" tabindex="-1"></a>n <span class="ot">=</span> <span class="fu">length</span>(sedonapopulation) <span class="co">#or you can just calculate the number of height measurements</span></span>
+<span id="cb11-3"><a href="descriptive-statistics.html#cb11-3" tabindex="-1"></a>mean <span class="ot">=</span> sum<span class="sc">/</span>n; mean <span class="co">#divide sum by number</span></span></code></pre></div>
+<pre><code>## [1] 5.142857</code></pre>
+<p>This formula is simple, but sometimes with more complex formulas, I will solve the equations by hand, to make sure that I understand what is happening!</p>
+<p>The formula for variance is: <span class="math inline">\(S^{2} = \frac{\Sigma(x_i - \mu)^{2}}{n - 1}\)</span>
+where <span class="math inline">\(S^{2}\)</span> is the sample variance;
+<span class="math inline">\(\mu\)</span> is the sample mean (remember from above);
+<span class="math inline">\(x_{i}\)</span> is the value of one observation;
+<span class="math inline">\(n\)</span> is the number of observations</p>
+<p>In other words:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="descriptive-statistics.html#cb13-1" tabindex="-1"></a><span class="co">#We determine how much each observation varies from the mean.</span></span>
+<span id="cb13-2"><a href="descriptive-statistics.html#cb13-2" tabindex="-1"></a>diffobs1 <span class="ot">=</span> mean <span class="sc">-</span> <span class="dv">3</span></span>
+<span id="cb13-3"><a href="descriptive-statistics.html#cb13-3" tabindex="-1"></a>diffobs2 <span class="ot">=</span> mean <span class="sc">-</span> <span class="dv">3</span></span>
+<span id="cb13-4"><a href="descriptive-statistics.html#cb13-4" tabindex="-1"></a>diffobs3 <span class="ot">=</span> mean <span class="sc">-</span> <span class="dv">3</span></span>
+<span id="cb13-5"><a href="descriptive-statistics.html#cb13-5" tabindex="-1"></a>diffobs4 <span class="ot">=</span> mean <span class="sc">-</span> <span class="dv">3</span></span>
+<span id="cb13-6"><a href="descriptive-statistics.html#cb13-6" tabindex="-1"></a>diffobs5 <span class="ot">=</span> mean <span class="sc">-</span> <span class="dv">7</span> </span>
+<span id="cb13-7"><a href="descriptive-statistics.html#cb13-7" tabindex="-1"></a>diffobs6 <span class="ot">=</span> mean <span class="sc">-</span> <span class="dv">8</span></span>
+<span id="cb13-8"><a href="descriptive-statistics.html#cb13-8" tabindex="-1"></a>diffobs7 <span class="ot">=</span> mean <span class="sc">-</span> <span class="dv">9</span> </span>
+<span id="cb13-9"><a href="descriptive-statistics.html#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="descriptive-statistics.html#cb13-10" tabindex="-1"></a><span class="co">#Then we square each of these. </span></span>
+<span id="cb13-11"><a href="descriptive-statistics.html#cb13-11" tabindex="-1"></a>diffobj1_sq <span class="ot">=</span> diffobs1<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-12"><a href="descriptive-statistics.html#cb13-12" tabindex="-1"></a>diffobj2_sq <span class="ot">=</span> diffobs2<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-13"><a href="descriptive-statistics.html#cb13-13" tabindex="-1"></a>diffobj3_sq <span class="ot">=</span> diffobs3<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-14"><a href="descriptive-statistics.html#cb13-14" tabindex="-1"></a>diffobj4_sq <span class="ot">=</span> diffobs4<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-15"><a href="descriptive-statistics.html#cb13-15" tabindex="-1"></a>diffobj5_sq <span class="ot">=</span> diffobs5<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-16"><a href="descriptive-statistics.html#cb13-16" tabindex="-1"></a>diffobj6_sq <span class="ot">=</span> diffobs6<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-17"><a href="descriptive-statistics.html#cb13-17" tabindex="-1"></a>diffobj7_sq <span class="ot">=</span> diffobs7<span class="sc">^</span><span class="dv">2</span></span></code></pre></div>
+<p><em>Why do we square the differences rather than just adding them up?</em>
+Because differences will be positive and negative. If we added them without squaring, sample differences would negate each other. We want an estimate of the absolute differences of samples from the mean.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="descriptive-statistics.html#cb14-1" tabindex="-1"></a><span class="co">#Then we add the differences up.</span></span>
+<span id="cb14-2"><a href="descriptive-statistics.html#cb14-2" tabindex="-1"></a>sumofsquares <span class="ot">=</span> <span class="fu">sum</span>(diffobj1_sq, diffobj2_sq, diffobj3_sq, diffobj4_sq, diffobj5_sq, diffobj6_sq, diffobj7_sq)</span>
+<span id="cb14-3"><a href="descriptive-statistics.html#cb14-3" tabindex="-1"></a><span class="co">#Divide the sum of squares by n - 1.</span></span>
+<span id="cb14-4"><a href="descriptive-statistics.html#cb14-4" tabindex="-1"></a>variance <span class="ot">=</span> sumofsquares<span class="sc">/</span>(n<span class="dv">-1</span>); variance </span></code></pre></div>
+<pre><code>## [1] 7.47619</code></pre>
+<p><em>Why n - 1 instead of n?</em>
+One reason is that, theoretically, because we are taking the mean of a sample, rather than all individuals, we underestimate the variance, so taking n-1 corrects that bias. Consider it a penalty for measuring a sample, not the entire population! Another practical reason is that dividing by n-1 makes the variance of a single sample undefined (unsolvable) rather than zero (solvable)</p>
+<p>For standard deviation, we just take the square root of the variance, to remove the effect of squaring the differences when calculating the variance, and thus contextualizing our estimate of variation with regard to the mean. For example, the variance for the Sedona population is 7.48, larger than the sample mean of 5.12; while the standard deviation is 2.73, indicating that you would expect most observations to be 5.12 +/- 2.73 (we’ll get to quantiles in a minute).</p>
+<p>The formula for standard deviation is: <span class="math inline">\(\sigma = \sqrt\frac{\Sigma(x_i - \mu)^{2}}{n - 1}\)</span>
+where <span class="math inline">\(\sigma\)</span> is the sample variance;
+<span class="math inline">\(\mu\)</span> is the sample mean;
+<span class="math inline">\(x_{i}\)</span> is the value of one observation;
+<span class="math inline">\(n\)</span> is the number of observations.</p>
+<p>Finally, standard error and confidence intervals (we’ll get to confidence intervals later) are the most common metrics of variance presented in journals.</p>
+<p>The formula for standard error is: <span class="math inline">\(SE = \frac{\sigma}{\sqrt n}\)</span>
+where <span class="math inline">\(SE\)</span> is standard error of the sample;
+<span class="math inline">\(\sigma\)</span> is the standard deviation; and
+<span class="math inline">\(n\)</span> is the number of samples.</p>
+<p><em>Why do we divide the standard deviation by the square root of the sample size to get standard error?</em>
+While standard deviation measures the variation of the sample, standard error is meant to estimate the variation of the entire population of samples, if we could measure all individuals accurately. By dividing by the <span class="math inline">\(\sqrt n\)</span>, the larger the sample size, the lower the error, because you have a more complete estimate of the true mean. In other words, standard deviation is just a measure of the variation of our sample, while standard error also incorporates information about our sampling process (how many individuals we have sampled). <em>Want to delve deep into standard error and deviation (me neither - ha)?: Google central limit theorem + standard error / standard deviation.</em></p>
+<p>Means and variance measures are the most common way to describe quantitative data. However, several other metrics are useful for understanding the nature of your data and making decisions about analyses. A comprehensive understanding of your dataset includes describing these four features:
+<em>Location (Mean, Median)
+</em>Spread (Variability)
+<em>Shape (Normal, skewed)
+</em>Outliers</p>
+<p>We’ve talked about means. The median is just the central number in the dataset, and helps you identify skewness.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="descriptive-statistics.html#cb16-1" tabindex="-1"></a><span class="co">#an example of an unskewed population</span></span>
+<span id="cb16-2"><a href="descriptive-statistics.html#cb16-2" tabindex="-1"></a>sedona_unskewed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
+<span id="cb16-3"><a href="descriptive-statistics.html#cb16-3" tabindex="-1"></a><span class="fu">mean</span>(sedona_unskewed)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="descriptive-statistics.html#cb18-1" tabindex="-1"></a><span class="fu">median</span>(sedona_unskewed)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="descriptive-statistics.html#cb20-1" tabindex="-1"></a><span class="co">#previous sedona population; skewed</span></span>
+<span id="cb20-2"><a href="descriptive-statistics.html#cb20-2" tabindex="-1"></a>sedonapopulation <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
+<span id="cb20-3"><a href="descriptive-statistics.html#cb20-3" tabindex="-1"></a><span class="fu">mean</span>(sedonapopulation)</span></code></pre></div>
+<pre><code>## [1] 5.142857</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="descriptive-statistics.html#cb22-1" tabindex="-1"></a><span class="fu">median</span>(sedonapopulation)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>In an unskewed population, the mean will equal the median. Skew may not seem important, but it has statistical ramifications, AND it tells us something meaningful about the data. For instance, what if I said that mean price of a home in Flagstaff is 350K, but the median price of a home is 300K? We would know the that average house prices are driven up by a smaller number of expensive homes.</p>
+<p>We can quantify skew by comparing means and medians (mean &gt; median = right-skewed; median &gt; mean = left-skewed), but it is helpful to visualize the shape of data with a <strong>histogram</strong>. A <strong>histogram</strong> is a graph of the frequency of different measurements.</p>
+<p>Let’s add a few more observations to our Sedona populations (skewed and unskewed) and check out the look of the data!</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="descriptive-statistics.html#cb24-1" tabindex="-1"></a>sedona_unskewed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">0.5</span>)</span>
+<span id="cb24-2"><a href="descriptive-statistics.html#cb24-2" tabindex="-1"></a><span class="fu">mean</span>(sedona_unskewed)</span></code></pre></div>
+<pre><code>## [1] 3.975</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="descriptive-statistics.html#cb26-1" tabindex="-1"></a><span class="fu">median</span>(sedona_unskewed)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="descriptive-statistics.html#cb28-1" tabindex="-1"></a><span class="co">#I&#39;m renaming sedonapopulation, sedona_skewed for this example</span></span>
+<span id="cb28-2"><a href="descriptive-statistics.html#cb28-2" tabindex="-1"></a>sedona_skewed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>)</span>
+<span id="cb28-3"><a href="descriptive-statistics.html#cb28-3" tabindex="-1"></a><span class="fu">mean</span>(sedona_skewed)</span></code></pre></div>
+<pre><code>## [1] 4.454545</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="descriptive-statistics.html#cb30-1" tabindex="-1"></a><span class="fu">median</span>(sedona_skewed)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
+<div class="figure"><span style="display:block;" id="fig:histogram-plot-save"></span>
+<img src="histogram_plantheight.png" alt="Histogram unskewed plant height" width="240" />
+<p class="caption">
+Figure 3.1: Histogram unskewed plant height
+</p>
+</div>
+<p>In this relatively unskewed example, the tails are approximately even. This shape is also referred to as a normal or Gaussian distribution.</p>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
+<div class="figure"><span style="display:block;" id="fig:histogram2-plot-save"></span>
+<img src="histogram_plantheight2.png" alt="Histogram unskewed plant height" width="240" />
+<p class="caption">
+Figure 3.2: Histogram unskewed plant height
+</p>
+</div>
+<p>Here, we superimposed the bellshaped Normal or Gaussian distribution.</p>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
+<div class="figure"><span style="display:block;" id="fig:histogramskewed-plot-save"></span>
+<img src="histogram_skewedplantheight.png" alt="Histogram skewed plant height" width="240" />
+<p class="caption">
+Figure 3.3: Histogram skewed plant height
+</p>
+</div>
+<p>In this example of skewed data, the tail tapers to the right, indicated that the data is skewed to the right.</p>
+<p>In order to explain outliers, we need to look at quantiles! Quantiles are proportions of your data, in other words a way to break your data into chunks to understand spread. You can break your data into as many quantiles as you would like, but it is most common to break your data into 4 parts, also called quartiles. (If you break data into 5 parts, the components are called quintiles, 10 parts = deciles, 100 parts = percentiles).</p>
+<p>When you break data into quartiles, roughly 25 percent of the data occurs within each data chunk. The first chunk of the dataset contains 25% of the data (25th percentile; 25% of the data fall at or below this cut-off) is called the first quartile, the 50th percentile is called the sample median or the second quartile, the 75th percentile is called the third quartile.</p>
+<p>Box and whisker plots are commonly used to quickly examine quartiles. Let’s check out our plant height data again, using a box and whisker plot.</p>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
+<div class="figure"><span style="display:block;" id="fig:boxplot-plot-save"></span>
+<img src="boxplot_skewedplantheight.png" alt="Histogram skewed plant height" width="240" />
+<p class="caption">
+Figure 3.4: Histogram skewed plant height
+</p>
+</div>
+<p>In the plot shown here, the box encapsulates the Interquartile Range (IQR); the center of the data ranging from the 25th percentile to the 75th. The black line in the middle of the box is the median (also called the 50th percentile, because it bisects the dataset; half of the data occur above the median and half below). The lines emerging from the box (whiskers) indicate the extent of the first and third quartiles, and usually corresponding with the minimum and maximum values of the dataset, unless there are <strong>outliers</strong>. An outlier is a datapoint that occurs outside of the 1st or 3rd quantile. Let’s add one to our Sedona dataset, and see how it is represented on the box and whisker plot.</p>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
+<div class="figure"><span style="display:block;" id="fig:boxplot-skewed-plot-save"></span>
+<img src="boxplot_skewedplantheight2.png" alt="Histogram skewed plant height" width="240" />
+<p class="caption">
+Figure 3.5: Histogram skewed plant height
+</p>
+</div>
+<p>The outlier appears as a dot on the box and whisker plot, and is the maximum value of the dataset.</p>
+<p>One other thing to note: Standard deviation also breaks data into meaningful segments, but is only used when data conform to a normal distribution; the mean +/- 1 SD accounts for 68% of the data, +/-2 SDs contains 95% of data, and +/- 3SD includes 99% of data. That said, I’ve never presented standard deviation in a manuscript; it is much more common to include standard error or confidence intervals (discussed later).</p>
+</div>
+<div id="figures" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Figures<a href="descriptive-statistics.html#figures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Figures are a common way to show key elements of your data or statistical analysis. In this tutorial, you’ve seen both histograms and box plots (aka box and whisker plots). When presenting results in a scientific manuscript or report, figures will be accompanied by figure legends. A good figure legend provides the following information:</p>
+<ol style="list-style-type: decimal">
+<li>A description of what the figure is showing you.</li>
+<li>For complex figures with multiple panels, an orientation to the structure of the figure</li>
+<li>Explanation of any symbols, colors, and/or lines</li>
+<li>Description of how variance is quantified</li>
+<li>Definitions of axes or units, if unclear</li>
+<li>Acknowledgment of data source, if data source requires attribution</li>
+<li>Implications of the figure (optional)</li>
+</ol>
+<p>Here is an example figure legend of a hypothetical figure showing species richness as a function of temperature across ecosystems:</p>
+<p><strong>Figure 1.</strong> Species richness increases with temperature across ecosystems. Panel A shows the mean species richness across three ecosystems: grassland (green), forest (blue), and desert (orange) from 2015 to 2020. Panel B depicts the temperature variation in these ecosystems during the same period. Circles represent data from 2015, while triangles represent data from 2020. The x-axis shows mean annual temperature (°C), and the y-axis shows species richness (number of species per 1000 m²). Error bars indicate ±1 standard deviation. The dashed line represents the best-fit linear regression (R² = 0.85, p &lt; 0.05), showing a positive correlation between temperature and species richness.</p>
+</div>
+<div id="summary" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Summary<a href="descriptive-statistics.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ve played around a lot with data, but what do you actually need to take away from this? Here are the key takeaways:</p>
+<ol style="list-style-type: decimal">
+<li>Understand data types (Categorical, Numerical discrete, Numerical continuous, Ordinal)</li>
+<li>Know ways to describe numerical continuous data (Location, Spread, Shape, Outliers)..</li>
+<li>Be able to calculate mean, median, and standard error.</li>
+<li>Familiarize yourself with mathematical annotation.</li>
+<li>Familiarize yourself with R code.</li>
+<li>Be able to interpret a histogram and box-whisker plot.</li>
+<li>Be able to construct an appropriate figure legend.</li>
+</ol>
+</div>
+<div id="assignment" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Assignment<a href="descriptive-statistics.html#assignment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now, let’s play around a little more with R!</p>
+<p>Let’s also try describing the petal lengths of 3 different plant species: Milkweed, Bluestar and Pectis using the dataset that you downloaded.</p>
+<p>Please put your results in a document and submit to your TA in Canvas! Be sure to include:</p>
+<ol style="list-style-type: decimal">
+<li>Summary statistics for your flower species (mean, median, and se)</li>
+<li>Plots that you create</li>
+<li>Appropriate figure legends for each plot, including a description of the data that a box plot shows.</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="welcome-to-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="basic-statistical-testing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/sarasouther/ENV226LabRManual/edit/main/02-DataTypesDescription.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
