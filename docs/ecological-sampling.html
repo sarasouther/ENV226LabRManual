@@ -23,7 +23,7 @@
 <meta name="author" content="Sara Souther" />
 
 
-<meta name="date" content="2025-08-27" />
+<meta name="date" content="2025-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -376,11 +376,11 @@ We can conduct statistical analysis until the cats come home (ha!), but if your 
 <h3><span class="header-section-number">6.2.1</span> Random sampling<a href="ecological-sampling.html#random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In order to reduce bias, researchers <strong>randomize</strong> sampling. <strong>Random sampling</strong> is when every item within the focal population has an equal chance of being selected. In research, random sampling can be applied to selecting experimental subjects, assigning individuals to treatments, or identifying plot locations. It is <strong>REALLY</strong> easy to introduce bias in ecological and social research on accident if you do not use a random sampling technique! Imagine that you are looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat’s claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. In practice, researchers use number generators, like those on your phone, or within computer programs, like ArcGIS, to randomly place sampling points. Here, we’ve included a random number sheet to use to randomly array plots. A random number sheet contains random numbers that someone generated in advance to assist in the field.</p>
 <p>We can quickly and easily generate such a sample in R, using the sample function.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="ecological-sampling.html#cb47-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##  [1] 93 96 71 67 23 79 85 37  8 51</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="ecological-sampling.html#cb49-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
-<span id="cb49-2"><a href="ecological-sampling.html#cb49-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
-<span id="cb49-3"><a href="ecological-sampling.html#cb49-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="ecological-sampling.html#cb46-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>##  [1]  74  50  98 100  86  76  84  46  17  62</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="ecological-sampling.html#cb48-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
+<span id="cb48-2"><a href="ecological-sampling.html#cb48-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
+<span id="cb48-3"><a href="ecological-sampling.html#cb48-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
 </div>
 <div id="stratefied-random-sampling" class="section level3 hasAnchor" number="6.2.2">
 <h3><span class="header-section-number">6.2.2</span> Stratefied random sampling<a href="ecological-sampling.html#stratefied-random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -433,38 +433,39 @@ these fairly large plots (C). Plots must be large in order to include enough tre
 <li><a href="https://drive.google.com/uc?export=download&amp;id=1-gGpZdC0G_SIDdvriYHDf0tO8TVXODfj">Description of Sinclair Wash</a>
 This information can help you develop your sampling plan.</li>
 </ul>
+<p>Please print for class:</p>
+<ul>
+<li><a href="https://docs.google.com/document/d/1wf6BQ3rI-5tAapN45JsZO2K6rQ3mAa5H/export?format=pdf">Lab worksheet</a></li>
+</ul>
 </div>
 <div id="sampling-q-a" class="section level3 hasAnchor" number="6.6.2">
 <h3><span class="header-section-number">6.6.2</span> Sampling Q &amp; A<a href="ecological-sampling.html#sampling-q-a" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Answer the following questions.</strong></p>
+<p><strong>Answer the following questions on your printed Lab worksheet.</strong></p>
 <ol style="list-style-type: decimal">
-<li><p>You are working in an agroforestry system attempting to understand where a species of finch occurs across this landscape. The habitat is patchy, with forests comprising 80% of the landscape and fields covering the remaining 20%. You decide to use random stratified sampling to capture finch occupation in both systems proportionally. Given this, how many of your 40 plots will occur in forested habitat? Select one:</p></li>
-<li><p>20</p></li>
-<li><p>30</p></li>
-<li><p>32</p></li>
-<li><p>38</p></li>
-<li><p>You are interested in how the abundance of frogs varies across habitats moving away from a local stream. In order to look at frog abundance as a function of distance from stream, you:</p></li>
-<li><p>Place 1m2 quadrats along the stream bank.</p></li>
-<li><p>Create a grid along stream habitat and randomly assign plots to occur within the grid cells.</p></li>
-<li><p>Place a 50 m transect running perpendicular to the stream, starting at the stream bank and moving away.</p></li>
-<li><p>Place a 50 m transect along the stream parallel to the running water.</p></li>
-<li><p>Which of the following sampling schemes will have the lowest sampling error? Select one:</p></li>
-<li><p>plot per hectare</p></li>
-<li><p>5 plots per hectare</p></li>
-<li><p>10 plots per hectare</p></li>
-<li><p>Unable to determine using this information</p></li>
-</ol>
-<p>Review: Last week you learned about different data types, list the data type for each variable below (continuous, nominal):</p>
-<ol style="list-style-type: decimal">
-<li>Growth<br />
-</li>
-<li>Survival (yes, no)</li>
-<li>Foliar nitrogen content</li>
+<li><p>You are working in an agroforestry system attempting to understand where a species of finch occurs across this landscape. The habitat is patchy, with forests comprising 80% of the landscape and fields covering the remaining 20%. You decide to use random stratified sampling to capture finch occupation in both systems proportionally. Given this, how many of your 40 plots will occur in forested habitat? Select one:</p>
+<p>A. 20
+B. 30
+C. 32
+D. 38</p></li>
+<li><p>You are interested in how the abundance of frogs varies across habitats moving away from a local stream. In order to look at frog abundance as a function of distance from stream, you:</p>
+<p>A. Place 1m2 quadrats along the stream bank.
+B. Create a grid along stream habitat and randomly assign plots to occur within the grid cells.
+C. Place a 50 m transect running perpendicular to the stream, starting at the stream bank and moving away.
+D. Place a 50 m transect along the stream parallel to the running water.</p></li>
+<li><p>Which of the following sampling schemes will have the lowest sampling error? Select one:</p>
+<p>A. plot per hectare
+B. 5 plots per hectare
+C. 10 plots per hectare
+D. Unable to determine using this information</p></li>
+<li><p>List the data type for each variable below (continuous, nominal):</p>
+<p>A. Growth<br />
+B. Survival (yes, no)
+C. Foliar nitrogen content</p></li>
 </ol>
 </div>
 <div id="sampling-activity" class="section level3 hasAnchor" number="6.6.3">
 <h3><span class="header-section-number">6.6.3</span> Sampling activity<a href="ecological-sampling.html#sampling-activity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>During this semester, we are going to monitor the impacts of the <strong>Rio de Flag Flood Control Project</strong> on the recovery of Sinclair Wash (also called Clay Avenue Wash) to be compiled over time and provided to the City of Flagstaff. This project has the dual benefit of restoring important ecological habitat along the Rio de Flag, as well as reducing flood risk in historically minority neighborhoods in Flagstaff. The project is a collaboration between the City of Flagstaff and the US Army Corps of Engineers and is projected to take 20 years to complete and cost $122 million dollars.</p>
+<p>We are going to monitor the impacts of the <strong>Rio de Flag Flood Control Project</strong> on the recovery of Sinclair Wash (also called Clay Avenue Wash) to be compiled over time and provided to the City of Flagstaff. This project has the dual benefit of restoring important ecological habitat along the Rio de Flag, as well as reducing flood risk in historically minority neighborhoods in Flagstaff. The project is a collaboration between the City of Flagstaff and the US Army Corps of Engineers and is projected to take 20 years to complete and cost $122 million dollars.</p>
 <p>There are several nice resources to learn about this project, including this <a href="https://www.southsideflagstaff.com/resources-1">resource page</a>. Please watch the following informational video on the project (feel free to watch in groups):
 <a href="https://vimeo.com/27081671">A Southside Story</a>. Also, please visit the <a href="https://www.flagstaff.az.gov/4189/Rio-De-Flag-Flood-Control-Project">city project page</a>.</p>
 <p>Once you have looked over this information and the downloads provided, if the weather allows, walk out to Sinclair Wash and orient yourself to the site. <a href="https://maps.app.goo.gl/XckDsR2THhCctFL26">Walking directions</a>. If the weather is poor, check out what the wash looks like on google and use this view to create your plan. Navigate to the <a href="https://maps.app.goo.gl/bGy3fkAut525xXk77">Aerial view of Sinclair Wash</a>, and zoom in until you can see the Rio, which follows the tree line and path (path is hard to see here). Create your plan - you can even import a screenshot into powerpoint or use other applications to map out your sampling strategy.</p>
@@ -474,9 +475,10 @@ This information can help you develop your sampling plan.</li>
 <h3><span class="header-section-number">6.6.4</span> Deliverables<a href="ecological-sampling.html#deliverables-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Please turn in:</p>
 <ol style="list-style-type: decimal">
-<li>The answers the the questions.</li>
-<li>A written description of your sampling strategy</li>
-<li>A picture / drawing of your sampling strategy</li>
+<li><p>The lab worksheet, which includes:</p>
+<p>A. The answers the the questions.
+B. A written description of your sampling strategy
+C. A picture / drawing of your sampling strategy</p></li>
 </ol>
 
 </div>
