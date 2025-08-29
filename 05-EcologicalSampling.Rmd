@@ -79,40 +79,44 @@ Please download for class:
 - [Description of Sinclair Wash](https://drive.google.com/uc?export=download&id=1-gGpZdC0G_SIDdvriYHDf0tO8TVXODfj)
 This information can help you develop your sampling plan.
 
+Please print for class:
+
+- [Lab worksheet](https://docs.google.com/document/d/1wf6BQ3rI-5tAapN45JsZO2K6rQ3mAa5H/export?format=pdf)
+
 ### Sampling Q & A
 
-**Answer the following questions.** 
+**Answer the following questions on your printed Lab worksheet.** 
 
 1. You are working in an agroforestry system attempting to understand where a species of finch occurs across this landscape. The habitat is patchy, with forests comprising 80% of the landscape and fields covering the remaining 20%. You decide to use random stratified sampling to capture finch occupation in both systems proportionally. Given this, how many of your 40 plots will occur in forested habitat? Select one:
 
-1. 20 
-2. 30 
-3. 32 
-4. 38 
+    A. 20 
+    B. 30 
+    C. 32 
+    D. 38 
 
 2. You are interested in how the abundance of frogs varies across habitats moving away from a local stream. In order to look at frog abundance as a function of distance from stream, you: 
 
-1. Place 1m2 quadrats along the stream bank. 
-2. Create a grid along stream habitat and randomly assign plots to occur within the grid cells. 
-3. Place a 50 m transect running perpendicular to the stream, starting at the stream bank and moving away. 
-4. Place a 50 m transect along the stream parallel to the running water. 
+    A. Place 1m2 quadrats along the stream bank. 
+    B. Create a grid along stream habitat and randomly assign plots to occur within the grid cells. 
+    C. Place a 50 m transect running perpendicular to the stream, starting at the stream bank and moving away. 
+    D. Place a 50 m transect along the stream parallel to the running water. 
 
 3. Which of the following sampling schemes will have the lowest sampling error? Select one:
 
-1. plot per hectare 
-2. 5 plots per hectare 
-3. 10 plots per hectare 
-4. Unable to determine using this information 
+    A. plot per hectare 
+    B. 5 plots per hectare 
+    C. 10 plots per hectare 
+    D. Unable to determine using this information 
 
-Review: Last week you learned about different data types, list the data type for each variable below (continuous, nominal): 
+4. List the data type for each variable below (continuous, nominal): 
 
-1. Growth  
-2. Survival (yes, no) 
-3. Foliar nitrogen content 
+    A. Growth  
+    B. Survival (yes, no) 
+    C. Foliar nitrogen content 
 
 ### Sampling activity
 
-During this semester, we are going to monitor the impacts of the **Rio de Flag Flood Control Project** on the recovery of Sinclair Wash (also called Clay Avenue Wash) to be compiled over time and provided to the City of Flagstaff. This project has the dual benefit of restoring important ecological habitat along the Rio de Flag, as well as reducing flood risk in historically minority neighborhoods in Flagstaff. The project is a collaboration between the City of Flagstaff and the US Army Corps of Engineers and is projected to take 20 years to complete and cost $122 million dollars.
+We are going to monitor the impacts of the **Rio de Flag Flood Control Project** on the recovery of Sinclair Wash (also called Clay Avenue Wash) to be compiled over time and provided to the City of Flagstaff. This project has the dual benefit of restoring important ecological habitat along the Rio de Flag, as well as reducing flood risk in historically minority neighborhoods in Flagstaff. The project is a collaboration between the City of Flagstaff and the US Army Corps of Engineers and is projected to take 20 years to complete and cost $122 million dollars.
 
 There are several nice resources to learn about this project, including this [resource page](https://www.southsideflagstaff.com/resources-1 ). Please watch the following informational video on the project (feel free to watch in groups):
 [A Southside Story](https://vimeo.com/27081671). Also, please visit the [city project page](https://www.flagstaff.az.gov/4189/Rio-De-Flag-Flood-Control-Project).
@@ -125,9 +129,11 @@ Write out a brief description of a sampling strategy for determining how restora
 
 Please turn in:
 
-1. The answers the the questions.
-2. A written description of your sampling strategy
-3. A picture / drawing of your sampling strategy
+1. The lab worksheet, which includes:
+
+    A. The answers the the questions.
+    B. A written description of your sampling strategy
+    C. A picture / drawing of your sampling strategy
 
 
 
