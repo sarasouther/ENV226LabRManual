@@ -1,17 +1,81 @@
-# Selecting statistical tests
+# Selecting statistical tests  
 
-## A foray into statistics
+## A foray into statistics  
 
-We've talked about data types and describing data. This week we are applying concepts that we learned last week to select (and run) a statistical analysis. When conducting an analysis, a dataset will contain one or more **response variables** (aka y-variables, dependent variables) and one or more **explanatory variables** (aka x-variables, independent variables). Explanatory variables are used to explain variation in response variables. The data types of the explanatory and response variables determine which statistical test we use.
+We've talked about data types, describing data, and basic hypothesis testing. This week we are applying concepts from the last tutorial to select (and run) a statistical analysis. When conducting an analysis, a dataset will contain one or more **response variables** (aka *y-variables*, dependent variables) and one or more **explanatory variables** (aka *x-variables*, independent variables). Explanatory variables are used to explain variation in response variables.  
 
-**Pick the explanatory and response variable** 
+The type of both the explanatory and response variables determines which statistical test we use. Selecting the right test is important because it ensures that we’re asking a question our data can actually answer.  
 
-Imagine that we want to identify areas that support high numbers of plants from the genus *Mitella*. We hypothesize that *Mitella* occurrence is positively related to water supply (i.e., the number of *Mitella* plants goes up as water availability increases). 
+---
 
-**Answer**
+## Pick the explanatory and response variable  
 
-1. **Response Variable (Y)**: This is the variable we are trying to explain or predict. In the case of *Mitella*, it could be the number of *Mitella plants* in a specific area.
-2. Explanatory Variable (X): This is the variable that we believe influences or explains the variation in the response. In your example, this would be water availability.
+Imagine that we want to identify areas that support high numbers of plants from the genus *Mitella*. We hypothesize that *Mitella* occurrence is positively related to water supply (i.e., the number of *Mitella* plants goes up as water availability increases).  
+
+**Answer**  
+
+1. **Response Variable (Y)**: Number of *Mitella* plants in a specific area (continuous count data).  
+2. **Explanatory Variable (X)**: Water availability (continuous).  
+
+In this case, both the explanatory and response variables are continuous, so we might test their relationship using a **correlation** or **linear regression**.  
+
+---
+
+## Variable types refresher  
+
+| Variable Type | Examples | Notes |
+|---------------|----------|-------|
+| **Categorical (nominal)** | Species identity, treatment group (control vs. watered) | Categories with no natural order |
+| **Categorical (ordinal)** | Low/medium/high shade | Ordered categories |
+| **Continuous** | Height, biomass, rainfall (measured on a scale) | Quantitative, can take on many values |
+| **Count** | Number of seedlings, number of visits by a pollinator | Discrete values (0, 1, 2, …), often treated separately in statistics |  
+
+---
+
+## More examples  
+
+### Example 1: Categorical explanatory → continuous response  
+- **Question**: Do soil nitrogen levels differ between burned vs. unburned plots?  
+- **Test**: Two-sample *t-test* (or Mann–Whitney if data are non-normal).  
+
+### Example 2: Categorical explanatory → categorical response  
+- **Question**: Is survival (alive vs. dead) related to treatment (control vs. watered)?  
+- **Test**: *Chi-square test of independence*.  
+
+### Example 3: Continuous explanatory → continuous response  
+- **Question**: Does plant biomass increase with light availability?  
+- **Test**: *Linear regression*.  
+
+---
+
+## The decision matrix  
+
+Below is a simple decision matrix for selecting statistical analyses.  
+
+![](images/04-selectingstatisticaltests/DecisionMatrix.png)  
+
+**How to use it:**  
+1. Identify your explanatory and response variables.  
+2. Decide whether each is categorical, continuous, or count.  
+3. Follow the matrix to the test.  
+
+*Example*: In the *Mitella* case, the matrix points toward regression. For the soil nitrogen example, the matrix suggests a t-test.  
+
+---
+
+## A note on assumptions  
+
+Choosing a test is only step one. Most tests also have **assumptions** (e.g., data are normally distributed, groups have equal variance, observations are independent). If assumptions are not met, we either transform the data or use a non-parametric alternative. We’ll dive into this more in upcoming tutorials.  
+
+---
+
+## Learning goals  
+
+By the end of this module, you should be able to:  
+
+- Correctly identify explanatory and response variables.  
+- Match data types to the appropriate statistical test.  
+- Begin to evaluate whether assumptions are met.  
 
 ## Downloads for this class
 
@@ -24,6 +88,13 @@ Below, you will see a very simple decision matrix for selecting statistical anal
 ![](images/04-selectingstatisticaltests/DecisionMatrix.png)
 
 ### Using the decision matrix
+
+**How to use it:**  
+1. Identify your explanatory and response variables.  
+2. Decide whether each is categorical, continuous, or count.  
+3. Follow the matrix to the test.  
+
+*Example*: In the *Mitella* case, the matrix points toward regression. For the soil nitrogen example, the matrix suggests a t-test.  
 
 **Both variables are categorical**: Use a G-test (or chi-square test) to see if the frequency of categorical outcomes differs across categories of the explanatory variable.
 **Example**: If we were studying whether *Mitella* plants are found more frequently in shaded vs. sunny areas (categorical), we would use a G-test.
@@ -41,7 +112,7 @@ Below, you will see a very simple decision matrix for selecting statistical anal
 
 ## Statistical tests 
 
-Let's practice these statistical tests in R!  
+Let's practice these statistical tests in R (these examples are preloaded in your R file)!  
 
 ### G-test (Categorical Response and Categorical Explanatory Variable)
 
@@ -81,15 +152,50 @@ Scenario: You want to study the probability of a specific bird species’ presen
 	•	Response variable: Bird presence (Yes/No)
 	•	Explanatory variable: Elevation (meters)
 
-## Assignment
+## Assignment: Choosing and Running the Right Test
 
-Here are the descriptions of 4 datasets (they are loaded in your R file). For each one, select the correct statistical test, then modify the code from your examples and run the test. 
+Next, let's practice on your own.
 
-### Turn-in 
+For each scenario:
+
+	1.	Read the description carefully.
+	2.	Decide which statistical test is most appropriate.
+	3.	Modify the code from the examples we’ve covered in class to run the test in R.
+	4.	Interpret the output using proper results statements.
+
+⸻
+
+#### Scenario 1: Comparing Two Groups
+
+A biologist measures the leaf nitrogen content (%) in plants from two different habitats: Sunny vs. Shady. 
+
+👉 Question: What test should you use to compare nitrogen between habitats?
+
+#### Scenario 2: More Than Two Groups
+
+An ecologist measures the average number of pollinator visits to flowers of three species: Aster, Goldenrod, and Sunflower.
+
+👉 Question: What test should you use to compare mean visits among these three species?
+
+#### Scenario 3: Relationship Between Two Variables
+
+A forester records tree diameter (cm) and age (years) for a sample of trees.
+
+👉 Question: What test should you use to test whether tree diameter predicts age?
+
+#### Scenario 4: Categorical Data
+
+A conservationist records whether birds are Present or Absent at two sites: Restored and Unrestored.
+
+👉 Question: What test should you use to see if bird presence differs between restored and unrestored sites?
+
+### Deliverables 
+
+For each of the 4 scenarios above, run the appropriate statistical test, and provide:
 
 1. Results statements including:
 
-- The correct test statistics
+  - The correct test statistics
 
 2. Associated figures with correct figure legends.
 

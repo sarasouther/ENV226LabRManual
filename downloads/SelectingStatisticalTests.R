@@ -107,4 +107,46 @@ ggplot(data_logit, aes(x = Elevation, y = BirdPresence)) +
   stat_smooth(method = "glm", method.args = list(family = binomial), se = FALSE) +
   labs(title = "Bird Presence vs Elevation", x = "Elevation (meters)", y = "Bird Presence (Yes/No)")
 
+# -----------------------------
+# Assignment 
+# -----------------------------
 
+# Datasets for each scenario! Add and modify code below!
+
+# Scenario 1: Comparing Two Groups
+# A biologist measures the leaf nitrogen content (%) in plants from two different habitats: Sunny vs. Shady.
+
+leaf_data <- data.frame(
+  habitat = rep(c("Sunny", "Shady"), each = 8),
+  nitrogen = c(2.3, 2.5, 2.7, 2.8, 2.9, 3.0, 2.6, 2.4,
+               1.8, 2.0, 2.1, 2.3, 1.9, 2.2, 2.1, 2.0)
+)
+
+# Scenario 2: More Than Two Groups
+# An ecologist measures the average number of pollinator visits to flowers of three species: Aster, Goldenrod, and Sunflower.
+
+pollinator_data <- data.frame(
+  species = rep(c("Aster", "Goldenrod", "Sunflower"), each = 6),
+  visits = c(5, 6, 4, 7, 5, 6,
+             8, 9, 10, 9, 11, 8,
+             12, 11, 13, 12, 14, 13)
+)
+
+# Scenario 3: Relationship Between Two Variables
+# A forester records tree diameter (cm) and age (years) for a sample of trees.
+
+tree_data <- data.frame(
+  diameter = c(10, 15, 20, 25, 30, 35, 40, 45),
+  age = c(12, 18, 22, 30, 35, 40, 45, 50)
+)
+
+# Scenario 4: Categorical Data
+# A conservationist records whether birds are Present or Absent at two sites: Restored and Unrestored.
+
+bird_data <- matrix(
+  c(25, 15,   # Restored: Present, Absent
+    10, 20),  # Unrestored: Present, Absent
+  nrow = 2, byrow = TRUE
+)
+rownames(bird_data) <- c("Restored", "Unrestored")
+colnames(bird_data) <- c("Present", "Absent")
