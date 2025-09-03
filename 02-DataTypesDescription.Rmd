@@ -1,31 +1,18 @@
 # Descriptive statistics
 
-## A short statistical review
+Over the next few weeks, we will build your skills evaluating and developing experiments, collecting data, analyzing data, and reporting results. We will start with something familiar to most folks in the class: descriptive statistics. Descriptive statistics refers to quantifying features of a focal population (e.g., describing the mean height of the adult population of the U.S., or the percent of a community that consists of flowering plants). Descriptive statistics aren’t statistical tests (which we will get to in the next tutorial), but they are a key part of the results section of a manuscript. They tell us what our data look like—summarizing central tendencies, variation, and overall patterns—so that we can see the “big picture” before diving into more complex analyses. In other words, descriptive statistics provide the foundation for interpreting data and for deciding what kinds of formal tests or models we might need next.
 
-### What can statistics tell us?
+They are also an essential part of a complete results summary in a manuscript, which typically includes three components:
 
-Welcome to our statistical exploration of the natural world! 
+1.	The outcome of a statistical test,
+2.	A description of the populations being studied and their responses to experimental treatments (often supported by descriptive statistics), and
+3.	A visualization of the results (figures).
 
-Almost all statistical analysis boils down to answering 1 of 2 questions:
-
-- Do these groups differ?
-- Is there a relationship between these variables?
-
-These seem like relatively simple questions to answer, perhaps just by looking at our data, so **Why do we need statistics?** 
-
-The short answer is: **error** and **sampling**! Whenever we collect data, we introduce **error**; our instruments are imprecise and do not capture an exact measure of whatever you are measuring (e.g., height, weight), and humans make mistakes during measurement collection. Secondly, we are **always** measuring a sub-sample of the true population (*true population* meaning all representatives of whatever you are trying to measure; this can be grass, marbles, or the tibia of humans). Not only is it intractable in most cases to measure all individuals of whatever you are interested in, even when it is possible to attempt to measure **all** individuals (like in the case of rare plant work), statistics acknowledges that it is **still** unlikely that we are able to do so, since individuals may be dormant or challenging to locate. If we could measure all individuals of our focal population with perfect accurately, we could calculate population **parameters**, or quantities describing populations like averages and variation, rather than estimating these metrics, and just compare them. In this way, statistics is inherently practical, and asks: What can we say about whatever we are looking at, given our numerous flaws?
-
-### Sampling populations
-After a few classes, we will explore sampling methodology in greater depth in order to design appropriate experiments that test a statistical **hypothesis**. Let's quickly talk about sampling now so that we have a shared understanding and vocabulary to build on - after all, statistics really centers around estimating characteristics of a true population from a sample. The **really, truly** amazing thing is that by properly applying statistics, we can learn practically anything about almost any population using samples!
-
-In statistics, a **population** refers to the all units of the thing that you are interested (i.e., all suriname frogs, all grains of sand, all aspen leaves from a genotype found in southern Arizona). **Note**: Population in statistics differs from the term population in population ecology, where a population refers to a group of individuals in a particular area that interbreed. 
-
-A **sample** is a subset of the population that we measure to infer something about the population. 
-**Statistical analysis is only one part of presenting your research results.** Generally, a results section in a manuscript includes: **statistical results**, **data description** (e.g., describing means, ranges, maxima, minima of groups of interest), and **data visualization** (i.e., creating beautiful figures). 
+Over the next set of tutorials, we will build toward producing a results section that weaves these three components together, giving readers both a clear picture of the data and the evidence to support scientific conclusions.
 
 ## Objectives
 
-We will build to towards always providing a complete results section with these three components. In this lab, however, we will focus exclusively on data description and a teeny bit of visualization. 
+In this lab, we will focus exclusively on data description and a teeny bit of visualization. 
 
 ## Downloads for this lab
 

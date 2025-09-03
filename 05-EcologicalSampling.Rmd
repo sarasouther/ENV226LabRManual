@@ -85,7 +85,7 @@ Please print for class:
 
 ### Sampling Q & A
 
-**Answer the following questions on your printed Lab worksheet.** 
+**Answer the following questions on your printed *Lab worksheet*.** 
 
 1. You are working in an agroforestry system attempting to understand where a species of finch occurs across this landscape. The habitat is patchy, with forests comprising 80% of the landscape and fields covering the remaining 20%. You decide to use random stratified sampling to capture finch occupation in both systems proportionally. Given this, how many of your 40 plots will occur in forested habitat? Select one:
 

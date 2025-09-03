@@ -24,9 +24,6 @@ organizing-your-code
 importing-and-exporting-csv-files
 deliverables
 descriptive-statistics
-a-short-statistical-review
-what-can-statistics-tell-us
-sampling-populations
 objectives
 downloads-for-this-lab
 data-types
@@ -35,6 +32,9 @@ figures
 summary
 assignment
 basic-statistical-testing
+a-short-statistical-review
+what-can-statistics-tell-us
+sampling-populations
 hypothesis-testing-review
 downloads-for-this-module
 objectives-1
