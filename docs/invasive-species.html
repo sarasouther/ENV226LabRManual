@@ -23,7 +23,7 @@
 <meta name="author" content="Sara Souther" />
 
 
-<meta name="date" content="2025-09-03" />
+<meta name="date" content="2025-10-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -376,11 +377,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="introduction-1" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Introduction<a href="invasive-species.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this lab, you will consider the distribution of a non-native species that has become widespread in our region. You will collect field vegetation data according to common methods in ecology and answer discussion questions after your data collection. We will be meeting near the South Commuter Lot / Disc Golf Area on campus for this lab. <a href="https://docs.google.com/document/d/1CLyCniBl5Zu8DXZPz7UeVGhHL3ZN0lUp/export?format=pdf">Download location information</a></p>
-<p>Biological invasions are considered one of the primary threats to biodiversity and ecological functions today. Any species that has been introduced by humans (either accidentally or on purpose) to a location it didn’t reach on its own is considered a non-native species. Other terms you might hear include exotic and alien. A non-native species that exerts a negative impact on native species is termed <strong>invasive</strong>. Not all non-native species become invasive: in fact, it is estimated that out of all species that are introduced, about 10% are able to establish reproducing populations in place, about 10% of those escape human-dominated areas and spread through natural areas, and about 10% of those become invasive. <strong>Figure 1</strong> illustrates the phases of invasion.</p>
+<p>Biological invasions are considered one of the primary threats to biodiversity and ecological functions today. Any species that has been introduced by humans (either accidentally or on purpose) to a location it didn’t reach on its own is considered a non-native species. Other terms you might hear include exotic and alien. A non-native species that exerts a negative impact on native species is termed <strong>invasive</strong>. Not all non-native species become invasive: in fact, it is estimated that out of all species that are introduced, about 10% are able to establish reproducing populations in place, about 10% of those escape human-dominated areas and spread through natural areas, and about 10% of those become invasive.</p>
 <p><img src="images/05-invasivespecies/InvasionFigure.png" />
-As non-native species establish and spread, their populations tend to follow predictable growth patterns. An initial group of individuals will reproduce and demonstrate population growth in the immediate area, slowly expanding the infestation as shown in <strong>Figure 2</strong>. Occasional long-distance dispersal events will establish new populations, each of which then demonstrates the same process and expands its occupied area.</p>
+<strong>Figure 1</strong> illustrates the phases of invasion.</p>
+<p>As non-native species establish and spread, their populations tend to follow predictable growth patterns. An initial group of individuals will reproduce and demonstrate population growth in the immediate area, slowly expanding the infestation as shown in <strong>Figure 2</strong>. Occasional long-distance dispersal events will establish new populations, each of which then demonstrates the same process and expands its occupied area.</p>
 <p><img src="images/05-invasivespecies/InvasiveFigure2_PopGrowth.png" />
-Invasive species are known to exert a range of impacts, depending on the invading organism and on the characteristics of the invaded system. Worldwide, invasive species include vertebrates, invertebrates, and plants. Invasives have been known to outcompete native species, reducing native biodiversity in the invaded locale. Thick infestations of invasive plants, where no native plants are able to persist, are known as monocultures. Other invasives act as predators or herbivores, directly damaging or preying upon native species. Such effects have resulted in extinction (for example, predation by invasive cats and rodents has resulted in extinction of ground-nesting birds on islands). Other invasive species transform ecological conditions or functions: for example, invasions may alter soil pH or stability, water table accessibility, pollinator abundance, etc.</p>
+<strong>Figure 2</strong>. Expanding invasion dynamics.</p>
+<p>Invasive species are known to exert a range of impacts, depending on the invading organism and on the characteristics of the invaded system. Worldwide, invasive species include vertebrates, invertebrates, and plants. Invasives have been known to outcompete native species, reducing native biodiversity in the invaded locale. Thick infestations of invasive plants, where no native plants are able to persist, are known as monocultures. Other invasives act as predators or herbivores, directly damaging or preying upon native species. Such effects have resulted in extinction (for example, predation by invasive cats and rodents has resulted in extinction of ground-nesting birds on islands). Other invasive species transform ecological conditions or functions: for example, invasions may alter soil pH or stability, water table accessibility, pollinator abundance, etc.</p>
 <p>Agencies that manage forests and other natural areas must survey and monitor invasive plants within their jurisdictions. Monitoring information that is collected includes: total area infested, density or cover of the infestation, spread rate from year to year, environmental characteristics of inhabited sites. This information can help agencies predict further spread in the future. Other information that is often collected is focused on understanding the impacts of the invader, including the implications of the infestation for native species, soil characteristics, moisture availability, and ecological functions such as species interactions.</p>
 <p>In this lab, we will look at where a non-native species of your choosing occurs, measure its density, and evaluate the presence of young individuals in order to develop some inferences about likely spread rates.</p>
 </div>
@@ -403,11 +406,12 @@ Invasive species are known to exert a range of impacts, depending on the invadin
 <li>1 Tape measure (50m)</li>
 <li>1 meter tape (or meter stick)</li>
 <li>16 Pin-flags</li>
-<li>Printed lab with datasheets</li>
+<li>Printed random number generator</li>
+<li>Datasheet (.csv files)</li>
 <li>Website or application for identifying invasives
 <ol style="list-style-type: lower-alpha">
-<li><a href="https://nazinvasiveplants.org/" class="uri">https://nazinvasiveplants.org/</a></li>
-<li>iNaturalist application (free download from your app store)</li>
+<li><a href="https://www.swvma.org/invasive-non-native-plants/north-arizona-invasive-plants/" class="uri">https://www.swvma.org/invasive-non-native-plants/north-arizona-invasive-plants/</a></li>
+<li>iNaturalist or Seek application (free download from your app store)</li>
 </ol></li>
 </ol>
 <p>For a brief tutorial on making iNaturalist observations, please <a href="https://docs.google.com/uc?export=download&amp;id=1gt1MvIj7ePiWcaIfa8eUmrohHxpzdCs4">Download this document</a></p>
@@ -431,11 +435,13 @@ exploring where it occurs. Specifically, we are interested in the question: <str
 - 270° = West</p>
 <p>At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. Use only the first two numbers of the 5 digit number. This will indicate the number of paces you will take along the northern end of the field. Then run the transect from the starting point south (north to south; see <strong>Fig. 3</strong>).</p>
 <p><img src="images/05-invasivespecies/TransectSetUp.png" />
-Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west
+<strong>Figure 3</strong>. Transect step up.</p>
+<p>Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west
 side of the study site. You will sample four 4x4m quadrats along this 50m transect: one starting at
 0m, one starting at 15m, one starting at 30m, and one starting at 45m.</p>
 <p><img src="images/05-invasivespecies/invasivespecies_experimentaldesign.png" />
-At each survey point, place a pin-flag there to mark the corner. Continue 4m further down the transect tape and place another pin-flag.
+<strong>Figure 4</strong>. Quadrat set-up.</p>
+<p>At each survey point, place a pin-flag there to mark the corner. Continue 4m further down the transect tape and place another pin-flag.
 Use your meter stick/tape to measure 4m to the east of each of those pin-flags and place another
 pin-flag at each resulting point, creating a 4x4m quadrat.</p>
 <p>Within a quadrat, count the total number of your nonnative focal species plants and record that number. Record the total number of your nonnative focal species plants in the column ‘NumberNonNativeSpecies’ in this datasheet.</p>
