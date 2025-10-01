@@ -12,6 +12,7 @@ Biological invasions are considered one of the primary threats to biodiversity a
 As non-native species establish and spread, their populations tend to follow predictable growth patterns. An initial group of individuals will reproduce and demonstrate population growth in the immediate area, slowly expanding the infestation as shown in **Figure 2**. Occasional long-distance dispersal events will establish new populations, each of which then demonstrates the same process and expands its occupied area.
 
 ![](images/05-invasivespecies/InvasiveFigure2_PopGrowth.png)
+
 **Figure 2**. Expanding invasion dynamics.
 
 Invasive species are known to exert a range of impacts, depending on the invading organism and on the characteristics of the invaded system. Worldwide, invasive species include vertebrates, invertebrates, and plants. Invasives have been known to outcompete native species, reducing native biodiversity in the invaded locale. Thick infestations of invasive plants, where no native plants are able to persist, are known as monocultures. Other invasives act as predators or herbivores, directly damaging or preying upon native species. Such effects have resulted in extinction (for example, predation by invasive cats and rodents has resulted in extinction of ground-nesting birds on islands). Other invasive species transform ecological conditions or functions: for example, invasions may alter soil pH or stability, water table accessibility, pollinator abundance, etc.
@@ -60,7 +61,8 @@ Now, what evidence will you need to accept or reject your hypothesis. Write an i
 
 You will set your **quadrats** up along **transects**, or linear sampling features that you create with a tape measure or **transect tape**. Since you suspect that azimuth, or the direction, could influence nonnative species behavior, you decide to establish 4 transects, and place 4 quadrats along each transect. 
 
-You divide the field into general directions. Azimuth is measured clockwise from 0° (which corresponds to true north) up to 360°.
+You divide the field into general directions. Azimuth is measured clockwise from 0° (which corresponds to true north) up to 360°:
+
 -	0° or 360° = North
 - 90° = East
 - 180° = South
@@ -69,23 +71,20 @@ You divide the field into general directions. Azimuth is measured clockwise from
 At each end, use this random number sheet or the random number generator on your phone (you will need to choose smaller numbers) to identify a starting point for your transect. As an example, go to the northern part of the field, place your finger anywhere along the random number table. Use only the first two numbers of the 5 digit number. This will indicate the number of paces you will take along the northern end of the field. Then run the transect from the starting point south (north to south; see **Fig. 3**).  
 
 ![](images/05-invasivespecies/TransectSetUp.png)
-**Figure 3**. Transect step up. 
+**Figure 3**. Transect set-up. 
 
-Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west 
-side of the study site. You will sample four 4x4m quadrats along this 50m transect: one starting at 
-0m, one starting at 15m, one starting at 30m, and one starting at 45m. 
+Extend the transect tape 50 meters to the south, in a line roughly parallel to the fence on the west side of the study site. You will sample four 4x4m quadrats along this 50m transect:
+
+ - one starting at 0m, one starting at 15m, one starting at 30m, and one starting at 45m. 
 
 ![](images/05-invasivespecies/invasivespecies_experimentaldesign.png)
 **Figure 4**. Quadrat set-up.
 
-At each survey point, place a pin-flag there to mark the corner. Continue 4m further down the transect tape and place another pin-flag. 
-Use your meter stick/tape to measure 4m to the east of each of those pin-flags and place another 
-pin-flag at each resulting point, creating a 4x4m quadrat. 
+At each survey point, place a pin-flag there to mark the corner. Continue 4m further down the transect tape and place another pin-flag. Use your meter stick/tape to measure 4m to the east of each of those pin-flags and place another pin-flag at each resulting point, creating a 4x4m quadrat. 
 
 Within a quadrat, count the total number of your nonnative focal species plants and record that number. Record the total number of your nonnative focal species plants in the column 'NumberNonNativeSpecies' in this datasheet. 
 
-In addition, walk carefully throughout that 4x4m quadrat and look for evidence of disturbance (e.g., 
-animal waste, trails, trash, scat, etc.). If there is disturbance in your plot, record 'Yes' if there is no disturbance record 'No' (be sure to capitalize) in this column, 'DisturbancePresent'. As evidence of more intact habitat (less disturbed), also record the number of trees (taller than the height of the tallest member of your group) that are shading the quadrat in the column, 'TreeNumber'. Repeat all of these methods until you have gathered data for all four 4x4m quadrats along all 4 transects (You will have collected data from 16 quadrats). 
+In addition, walk carefully throughout that 4x4m quadrat and look for evidence of disturbance (e.g., animal waste, trails, trash, scat, etc.). If there is disturbance in your plot, record 'Yes' if there is no disturbance record 'No' (be sure to capitalize) in this column, 'DisturbancePresent'. As evidence of more intact habitat (less disturbed), also record the number of trees (taller than the height of the tallest member of your group) that are shading the quadrat in the column, 'TreeNumber'. Repeat all of these methods until you have gathered data for all four 4x4m quadrats along all 4 transects (You will have collected data from 16 quadrats). 
 
 ### Analyses
 
@@ -99,19 +98,23 @@ For each predictor in the model, we test the following hypotheses:
 
 #### 2. P-value
 The **p-value** tells us the probability of observing the data, assuming the null hypothesis is true. For each predictor:
+
 - A **small p-value** (typically \( < 0.05 \)) suggests that the predictor has a significant effect on the response variable, and we reject the null hypothesis.
 - A **large p-value** (typically \( > 0.05 \)) suggests that the predictor does not have a significant effect, and we fail to reject the null hypothesis.
 
 #### 3. F-statistic (Overall Model Significance)
 The **F-statistic** tests whether the model as a whole is better than a model with no predictors (a model that only includes the intercept). This tests the null hypothesis that all the coefficients (except the intercept) are zero:
+
 - A **significant F-statistic** (p-value \( < 0.05 \)) suggests that the model explains a significant portion of the variation in the response variable.
 
 #### 4. R-squared
+
 The **R-squared** value tells us how much of the variation in the response variable is explained by the model. While this isn’t a test of significance, a higher \( R^2 \) value indicates that the model fits the data better.
 
 #### 5. Reporting your results
 
 A results statement has several important components:
+
 1. A description of the statistical results with an appropriate citation on your results (test statistic, p-value).
 2. If you have a *statistically significant* effect, a description of the magnitude and/or direction of the relationship, which often cites a figure. 
 
