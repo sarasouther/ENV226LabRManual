@@ -57,6 +57,7 @@ Sometimes we conduct this lab outside at Francis Short Pond if weather permits. 
 - [Get Directions to the location](https://maps.app.goo.gl/Y7CphVYJcHtXbeJe9)
 - [Download the map of the meeting place](https://drive.google.com/uc?export=download&id=1BGRB2hnSc7O_xM7g68wryQDFgTO3Sd4t)
 - [Download the excel file](https://docs.google.com/spreadsheets/d/19m-QEhLQ0SBdH81q0OG5gQtrhm1Z0C8x/export?format=xlsx) 
+
 ## Hypothesis generation
 
 The research question for this lab is: Does the current water quality in the wash fall within standards established by environmental protection agencies worldwide?
@@ -76,6 +77,7 @@ Divide into four groups, and make sure that the backpack kit that you have has i
  6) total dissolved solids (TDS)
 
 **GET NITRILE EXAM GLOVES FROM YOUR LAB INSTRUCTOR BEFORE HANDLING ANY CHEMICALS**
+
 After you have the necessary number of gloves, carefully follow the instructions for each water quality test, detailed on the laminated cards. It is a good idea to read over the instructions for each test before you run the test, to make sure you don’t forget or miss any steps. Gather all solid waste into the black trashbag provided, and place all liquid waste into the appropriately labeled waste bottles provided – it is very important that we remove all chemicals and trash from the pond so that we are not contaminating the environment.
 
 ### Record and compare your results
