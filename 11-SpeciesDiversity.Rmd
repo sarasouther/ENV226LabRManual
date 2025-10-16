@@ -6,6 +6,7 @@ Diversity and the measurement of diversity are central to many issues in ecologi
 
 
 ![](images/11-speciesdiversity/diversity.png)
+
 **Figure 1.** Interactions among factors that control litter decomposition (from Swift et al. 1979).
 
 This model shows the relationships among the three factors that govern litter decomposition rates: the Biota (structure and activity of the biotic soil food webs, i.e., microbes, invertebrates, vertebrates), the Physico-chemical environment (climate, habitat, edaphic factors, i.e., contributions from the non-living environment); and Resource Attributes (primarily plant species diversity and tissue chemistry, i.e., contributions from the living environment). 
@@ -19,7 +20,7 @@ On the other hand, recent work suggests that composition and biodiversity of soi
 
 Soil invertebrates are clearly affecting litter decomposition rates, soil aeration, nutrient mineralization, primary production, and other ecosystem services related to soil ecosystem function and agroecological conservation (e.g., Six et al. 2002). With interest in global climate change has come the realization that soil biota may strongly affect soil CO2 sequestration and release, which is a critical variable in climate change models. Agroscientists and restoration ecologists have found that soil biota play critical roles in toxic chemical and metal mobility and remediation; they directly affect disturbed ecosystem recovery/ ecological restorations that occur after fire, UV-B exposure, post-urbanization, and herbicide-stressed soils (e.g., Lal 2002). Bioprospectors carry out the search for novel antibiotics and other drugs among the billions of soil microorganisms. 
 
-Soil invertebrates are also recognized for their role in mediating or determining belowground interactions among plants. Because they are often prey for vertebrates such as birds and mammals, they have vital roles in the food chains that include those animals. Take notes on the compost process from the videos linked to below. You will be able to reference this video in your lab report when discussing the methods for making compost. You will be turning this in, along with photos of the experimental set-up.
+Soil invertebrates are also recognized for their role in mediating or determining below ground interactions among plants. Because they are often prey for vertebrates such as birds and mammals, they have vital roles in the food chains that include those animals. Take notes on the compost process from the videos linked to below. You will be able to reference this video in your lab report when discussing the methods for making compost. You will be turning this in, along with photos of the experimental set-up.
 
 Here are the video links:
 
@@ -62,7 +63,7 @@ When you return to lab next week, you will examine the contents of the 20-mL via
 Please turn-in:
 
 - Notes from the video of the compost process
-- Your hypothesis and if/then statement
+- Your hypothesis and if / then statement
 - A photo of the Tullgren / Burlese funnel set-up
 
 ## Week 2
@@ -86,7 +87,7 @@ Identify arthropods and calculate diversity of compost collected from two differ
 
 ## Methods
 
-You will be identifying invertebrates (Arthropods) from the compost using dissecting  microscopes and dichotomous keys. Use the dichotomous key provided to make your best  guess at the taxon for each organism in your sample. Record abundances in each sample using  the table below.
+You will be identifying invertebrates (Arthropods) from the compost using dissecting  microscopes and dichotomous keys. Use the dichotomous key provided to make your best  guess at the taxon for each organism in your sample. Record abundances in each sample in the datasheet that you downloaded.
 
 ## Turn-in week 2
 
