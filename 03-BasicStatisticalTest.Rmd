@@ -195,21 +195,20 @@ We will now apply the tailed-test to a new question! You think that your dog, Ru
 Provide the following information in a document and turn into your TA:
 
 1. What is your null hypothesis? 
-
 2. What is your alternative hypothesis?
 
 You invite all your friends with dogs, place both red and blue balls on the ground, and see if how many times the dogs select the blue ball out of a series of 10 trials. Ten of friends with dogs participate and you record the number of times that the dogs select the blue ball. Run the t-test in R!
 
 3. Provide a corrected crafted results statement describing the outcome of the test. Please correctly structure your results statements, and make sure that you have included the 5 components mentioned above.
 
-4. For your figure, please be sure to properly craft a legend. Recall from last lesson, the key parts of the figure legend:
+4. For your figure, please include a properly formatted figure legend. Recall from last lesson, the key parts of the figure legend:
 
-  1. A description of what the figure is showing you. 
-  2. For complex figures with multiple panels, an orientation to the structure of the figure
-  3. Explanation of any symbols, colors, and/or lines
-  4. Description of how variance is quantified
-  5. Definitions of axes or units, if unclear
-  6. Acknowledgment of data source, if data source requires attribution
-  7. Implications of the figure (optional)
+- A description of what the figure is showing you. 
+- For complex figures with multiple panels, an orientation to the structure of the figure
+- Explanation of any symbols, colors, and/or lines
+- Description of how variance is quantified
+- Definitions of axes or units, if unclear
+- Acknowledgment of data source, if data source requires attribution
+- Implications of the figure (optional)
 
 
