@@ -33,11 +33,11 @@ In lab, we will conduct experiments and practice skills used in the ecological s
 
 Each chapter in this online book corresponds to lab that you will complete. For most labs, you will download R code that you will use to analyze your data, and that can be also be used for other analyses and projects that you have in college and in the workplace.
 
-# Important downloads
+**Important downloads**
 
 Your rubrics for the lab report and final class project poster can be downloaded here:
 
-[Lab report rubric](https://docs.google.com/document/d/1PlysFXMnZzTNnqcQtFkKqMUrEkeBC4Qw/export?format=docx)
-[Poster presentation rubric](https://docs.google.com/document/d/1__T1jhAOm3JKRFCgicyOp7SqHQGBpwLU/export?format=docx)
+- [Lab report rubric](https://docs.google.com/document/d/1PlysFXMnZzTNnqcQtFkKqMUrEkeBC4Qw/export?format=docx)
+- [Poster presentation rubric](https://docs.google.com/document/d/1__T1jhAOm3JKRFCgicyOp7SqHQGBpwLU/export?format=docx)
 
 These links are also embedded within the class projects for which you will create the lab report and the poster.
