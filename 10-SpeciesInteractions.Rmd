@@ -93,13 +93,13 @@ for the next 6 - 8 weeks. Do this by modifying the example data sheet that we ha
 
 ## Weeks 2 - 5 
 
-During this time, you will be maintaining your experiment and continue to collect data.Make a schedule with your group members to ensure that someone will measure growth of the plants at least once per week over the next seven weeks. The same person should also photograph the plants each time measurements are made. To measure each plant, place the end of a ruler against the soil surface. Gently pull the plant to its full height and measure the tallest point intersected along the ruler by the plant. ALL MEASUREMENTS ARE IN MILLIMETERS!
+During this time, you will be maintaining your experiment and continue to collect data. Make a schedule with your group members to ensure that someone will measure growth of the plants at least once per week over the next seven weeks. The same person should also photograph the plants each time measurements are made. To measure each plant, place the end of a ruler against the soil surface. Gently pull the plant to its full height and measure the tallest point intersected along the ruler by the plant. ALL MEASUREMENTS ARE IN MILLIMETERS!
 
 **Note: the greenhouse is open between 7:00 am - 3:00 pm. You will need to get the pass code from your TA!**
 
 ### Analyzing and visualizing your data
 
-Refer back to lab manual chapters 3 and 4 for a reminder about descriptive and inferential statistics. To run statistical tests on your data, refer to lab manual chapter 5: Selecting statistical tests.   
+Refer back to lab manual chapters 3 and 4 for a reminder about descriptive and inferential statistics. To run statistical tests on your data, refer to lab manual chapter 5: Selecting statistical tests, found here [Selecting Statistical Tests](selecting-statistical-tests.html). You can modify the R code to run your own statistical tests.  
 
 ## Final week
 
@@ -107,7 +107,7 @@ Refer back to lab manual chapters 3 and 4 for a reminder about descriptive and i
 
 Please download:
 
-- [Poster instructions](https://drive.google.com/uc?export=download&id=108UqK1q6LJduCPzZXb3xkMnGYCbmgJgw)
+- [Poster instructions](https://docs.google.com/document/d/1__T1jhAOm3JKRFCgicyOp7SqHQGBpwLU/export?format=docx)
 - [Peer evaluation](https://drive.google.com/uc?export=download&id=1F-1RDATlsQs7ZsMd3VmexTc8I7xltD22)
 
 Once you have all of your data, you will prepare a poster with your group detailing your experiment and its outcome. 
@@ -117,16 +117,12 @@ For the poster you will follow standard scientific writing style (see handout). 
 
 Submit your **poster as a PDF** to your lab instructor through canvas (or via email, if instructed by your TA). Only one person in your group needs to submit. Each group member must also submit a **peer evaluation**, assessing the contribution of each group member.
 
-The poster is in format C, which means that the poster must include:
-
-- 5 sources cited (look at other poster examples to see how to cite in text without using a lot of space)
-- An introduction, methods, results, discussion, and conclusion section. 
-- Include least one figure or table **and** one photo of your plants. 
+Please review the poster instructions and rubric to ensure that you receive full points for this assignment.
 
 Other notes:
 
 - You do not need an abstract on this poster.
-- 15% of your grade will be determined by your group mate’s assessment of your participation level. 
+- Participation points will be determined by both your performance during the presentation, and by your group mate’s assessment of your participation level. 
 
 
 

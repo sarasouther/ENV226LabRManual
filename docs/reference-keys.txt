@@ -5,6 +5,7 @@ fig:boxplot-plot-save
 fig:boxplot-skewed-plot-save
 fig:binomial-plot-save
 introduction
+important-downloads
 welcome-to-r
 r-and-r-studio-installation
 download-the-r-statistical-software-from-the-official-r-project-website.
