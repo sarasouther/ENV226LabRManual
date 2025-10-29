@@ -28,19 +28,19 @@ In this case, both the explanatory and response variables are continuous, so we 
 
 ## More examples  
 
-### Example 1: Categorical explanatory → continuous response  
+**Example 1**: Categorical explanatory → continuous response  
 - **Question**: Do soil nitrogen levels differ between burned vs. unburned plots?  
 - **Test**: *ANOVA* (a one way ANOVA is basically equivalent to a two-sample *t-test*, which we discussed in the chapter on basic statistical testing) 
 
-### Example 2: Categorical explanatory → categorical response  
+**Example 2**: Categorical explanatory → categorical response  
 - **Question**: Is survival (alive vs. dead) related to treatment (control vs. watered)?  
 - **Test**: *G-test* (a type of *Chi-square test*)  
 
-### Example 3: Continuous explanatory → continuous response  
+**Example 3**: Continuous explanatory → continuous response  
 - **Question**: Does plant biomass increase with light availability?  
 - **Test**: *Regression*.  
 
-### Example 4: Continuous explanatory → categorical response   
+**Example 4**: Continuous explanatory → categorical response   
 - **Question**: Does plant biomass increase survivorship of duckweed?  
 - **Test**: *Logistic regression*.  
 
@@ -78,7 +78,7 @@ By the end of this module, you should be able to:
 
 Let's practice these statistical tests in R (these examples are preloaded in your R file)!  
 
-### G-test (Categorical Response and Categorical Explanatory Variable)
+**G-test (Categorical Response and Categorical Explanatory Variable)**
 
 Scenario: You are studying bird nest preferences in a forest. You want to know if birds prefer nesting in different tree species (oak, pine, or maple).
 
@@ -87,38 +87,36 @@ Scenario: You are studying bird nest preferences in a forest. You want to know i
 	
 Run the code in R.
 
-### t-test and ANOVA (Continuous Response and Categorical Explanatory Variable)
+**t-test and ANOVA (Continuous Response and Categorical Explanatory Variable)**
 
-#### t-test
+**t-test**
 Scenario: You want to compare the weight of two species of frogs (Species A and Species B) to see if there’s a significant difference in weight between them.
 
 - Response variable: Frog weight (grams)
 - Explanatory variable: Species (A or B)
 	
-#### ANOVA (Continuous Response and Categorical Explanatory Variable with More Than Two Categories)
+**ANOVA** (Continuous Response and Categorical Explanatory Variable with More Than Two Categories)
 
 Scenario: You are studying the growth of plants in three different habitats: Desert, Forest, and Wetland. You want to compare plant height across these habitats.
 
 - Response variable: Plant height (cm)
 - Explanatory variable: Habitat (Desert, Forest, Wetland)
 
-### Linear Regression (Continuous Response and Continuous Explanatory Variable)
+**Linear Regression** (Continuous Response and Continuous Explanatory Variable)
 
 Scenario: You are studying how the number of fish in a river changes with water temperature. You want to model the relationship between water temperature (°C) and fish count.
 
 - Response variable: Fish count
 - Explanatory variable: Water temperature (°C)
 	
-### 5. Logistic Regression (Categorical Response and Continuous Explanatory Variable)
+**Logistic Regression** (Categorical Response and Continuous Explanatory Variable)
 
 Scenario: You want to study the probability of a specific bird species’ presence in different areas based on elevation. The response is whether the bird is present or absent.
 
 - Response variable: Bird presence (Yes/No)
 - Explanatory variable: Elevation (meters)
 
-(blank line)
 ---
-(blank line)
 
 **Skip this section** if you are using this chapter to run your analyses for your species interaction project.
 
@@ -133,25 +131,25 @@ For each scenario:
 3.	Modify the code from the examples we’ve covered in class to run the test in R.
 4.	Interpret the output using proper results statements.
 
-#### Scenario 1: Comparing Two Groups
+**Scenario 1**: Comparing Two Groups
 
 A biologist measures the leaf nitrogen content (%) in plants from two different habitats: Sunny vs. Shady. 
 
 - Question: What test should you use to compare nitrogen between habitats?
 
-#### Scenario 2: More Than Two Groups
+**Scenario 2**: More Than Two Groups
 
 An ecologist measures the average number of pollinator visits to flowers of three species: Aster, Goldenrod, and Sunflower.
 
 - Question: What test should you use to compare mean visits among these three species?
 
-#### Scenario 3: Relationship Between Two Variables
+**Scenario 3**: Relationship Between Two Variables
 
 A forester records tree diameter (cm) and age (years) for a sample of trees.
 
 - Question: What test should you use to test whether tree diameter predicts age?
 
-#### Scenario 4: Categorical Data
+**Scenario 4**: Categorical Data
 
 A conservationist records whether birds are Present or Absent at two sites: Restored and Unrestored.
 
@@ -167,9 +165,7 @@ For each of the 4 scenarios above, run the appropriate statistical test, and pro
 
 2. Associated figures with correct figure legends.
 
-(blank line)
 ---
-(blank line)
 
 Start here again if using this chapter to analyze data for your species interaction lab
 
