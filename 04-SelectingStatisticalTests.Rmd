@@ -73,6 +73,7 @@ By the end of this module, you should be able to:
 ## Downloads for this class
 
 - [Download the R file](https://drive.google.com/uc?export=download&id=14tBsHZx8ZBXV-Gf1sxKG_jiNAXwu94dm)
+- [Watch the YouTube tutorial here](https://youtu.be/ZQz770Uzvyo)
 
 ## In-class practice
 
