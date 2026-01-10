@@ -1,222 +1,205 @@
 # Welcome to R
 
-R is an open source statistical software package commonly used by researchers and other folks, who crave a free way to manipulate, analyze, and visualize data. R uses its own programming language, which is similar to S+ (the paid precursor to R). R employs an object-oriented programming (OOP) paradigm to manage and manipulate data. Object-oriented programming (OOP) is a paradigm where data and functions are grouped into ‘objects’ that can be reused, helping organize and simplify code.
+R is a free, open-source program used by ecologists and other scientists to work with data—from organizing spreadsheets to making figures and running analyses.
 
-Today, R is essential for ecological work that involves data analysis, whether you are participating in a graduate program and analyzing data for your thesis or working at a non-profit analyzing the efficacy of restoration treatments. We are using R in this lab to introduce you to the basics of data analysis. Managing, manipulating and analyzing data are important skills to include on your resume and will hopefully help you in other classes at NAU. Let's walk through the basics of installing and using R!
+In this course, we’ll use R to learn the basics of data analysis. You do not need prior coding experience. You also do not need to understand everything right away. The goal today is simply to get R working on your computer and take the first steps.
 
-## R and R studio installation
+If something feels confusing at first—that’s normal. Everyone learns R by using it, not by memorizing it.
 
-You will first want to download R statistical software and R studio, which is a powerful program that interfaces with R to make your coding experience more organized and enjoyable. Notice that you need to select a version of R depending on your operating system.
+## What you need (two things)
 
-## Download the R statistical software from the official R Project website. 
+You need two programs:
 
-Open your web browser and go to the official R Project website at https://www.r-project.org/.
+1. R (does the calculations)
+2. RStudio (helps you write and organize code)
 
-Choose a CRAN Mirror: On the R Project website's main page, you'll see a section that says "Download and Install R." Click on the link that says "CRAN (Comprehensive R Archive Network)." This will take you to the CRAN website.
+Think of R as the engine, and RStudio as the dashboard.
 
-1. Select Your Mirror: On the CRAN website, you'll find a list of mirrors (servers) from which you can download R. Choose a mirror that is geographically close to your location, as this will generally provide faster download speeds. Click on the mirror's link.
+### Step 1: Install R:
 
-2. Download R for Your Operating System: On the mirror's page, you'll see options to download R for various operating systems (e.g., Windows, macOS, Linux). Click on the appropriate link for your operating system.
+1.	Go to: https://www.r-project.org
+2.	Click Download R from CRAN
+3.	Choose any mirror (it truly does not matter)
+4.	Download the version for your operating system (Mac, Windows, or Linux)
+5.	Install using the default options
 
-3. Choose the Latest Version: You'll typically see multiple versions of R available for download. It's recommended to choose the latest stable version unless you have a specific reason to use an older version.
+You only need to do this once per computer
 
-4. Download and Install: After clicking on the download link, the installation file for R will begin downloading. Once the download is complete, run the installer and follow the installation instructions for your operating system.
+### Step 2: Install RStudio:
 
-5. Start Using R: After the installation is complete, you can launch R from your computer. First, let's install RStudio, a popular integrated development environment (IDE) for R, to enhance your R programming experience.
+1.	Go to: https://posit.co/download/rstudio-desktop/
+2.	Download RStudio Desktop (Free)
+3.	Install using the default options
 
-## Download R studio
+RStudio will automatically find R once both are installed
 
-Now download R studio!
+### Step 3: Open RStudio
 
-1. Visit the RStudio Website: Open your web browser and go to the official RStudio website at https://www.rstudio.com/.
+When you open RStudio, you’ll see four panes. You do not need to customize anything right now.
 
-2. Download RStudio: On the RStudio website's main page, click on the "Products" menu at the top, and then select "RStudio" from the dropdown menu.
+Here’s what matters most:
 
-3. Choose the RStudio Edition: RStudio offers different editions, including RStudio Desktop (for use on your local machine), RStudio Server (for remote access), and RStudio Workbench (formerly known as RStudio Server Pro, designed for collaboration and sharing in enterprise environments). You will want to choose the free version, RStudio Desktop.
+- **Console** is where R runs code
+- **Source** is where you write and save code
+- **Environment** shows what data you have loaded
+- **Plots/Files/Help** is where figures and help appear
 
-4. Download the Installer: After selecting the edition, you'll be directed to a page with download options. Click on the download link for your operating system (e.g., Windows, macOS, Linux).
+Your layout may look slightly different than your neighbor’s—and that’s OK.
 
-5. Download and Install: The installation file for RStudio will begin downloading. Once the download is complete, run the installer and follow the installation instructions for your operating system.
+### Step 4: Download the files for this lab
 
-Start Using RStudio: After the installation is complete, you can launch RStudio from your computer. 
+#### Create a folder on your desktop
 
-## Optional: Set up R studio
+Create a folder on your computer called: EcologyLab
 
-Alright, now that you've downloaded R and R studio, open R studio. You can customize the panes that you are visualizing in R. 
+#### Create a CSV file
 
-In RStudio, the four panels or panes are commonly referred to as:
+For this class, we’ll use one folder for our statistical analyses. Create a folder on your desktop labeled 'EcologyLab'.
 
-**Source Pane**: This is where you can write, edit, and save your R scripts and code files. It is typically used for script development and editing. You can open and create new R script files in this pane.
+Depending on the weather, you will choose one of two options:
 
-**Console Pane**: The console is where you interact with R directly. You can execute R commands and see their output here. It's an interactive environment where you can test and run R code line by line or in batches.
+1. Statistical meet and greet
+2. Tree measurement
 
-**Environment Pane**: The environment pane displays information about the objects, data frames, variables, and functions currently loaded in your R session. You can also use this pane to view data frames in a spreadsheet-like format and manage your workspace.
+For the statistical meet and greet, ask your group members the following questions:
 
-**Files/Plots/Packages/Help Pane**: This pane has multiple tabs and serves various purposes:
-*Files*: It shows the file system of your project, allowing you to navigate and manage files and directories.
-*Plots*: When you create plots in R, they will appear in this tab. You can interact with and export the plots from here.
-*Packages*: This tab displays information about installed packages, and you can use it to install, update, or load packages.
-*Help*: When you need documentation or help for R functions or packages, you can use the Help tab to search for and view documentation.
+1. How far from home are you? (Use Google Maps to get the mileage)
+2. Do you prefer cats or dogs? 
+3. How many roommates do you have?
 
-Typically, I select a structure in which I have my **Source pane** in the upper left, my **Console Pane** in the lower left position, my **Environment Pane** in the upper right corner, and the **Files/Plots/Packages/Help Pane** in the lower right position. You can select any position that you'd like, but if we create the same work environment, it will be easy for me to direct you when we are trouble-shooting code. To adjust the panels positions, use the pane layout function. Here's what that looks at for a Mac, but typically this arrangement is the default positioning for panels in R studio, so you likely won't have to adjust positioning!
+Add your responses to this google sheet. [Open the class data sheet (add your data here)](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/edit?usp=sharing)
 
-![](images/01-intro/PaneLayout.png){width=5%, height=auto}
+Once every has entered your responses, have your TA check-out the google sheet. When you get the greenlight, download the google sheet as a .csv file and save in your **EcologyLab** folder
 
-## Downloads and video links
+[Download the data file (.csv)](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/export?format=csv)
 
-Watch the tutorial for this lab project: [YouTube Video](https://youtu.be/t1suBdonG6o)
+Then, download your R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) Download and use the R script to practice with R.
 
-Here is a nice example of a R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) Download and use the R script to practice with R.
+You should have these two files and place them inside that folder:
 
-Also, download this .csv file [Download the data file](https://drive.google.com/uc?export=download&id=1NejYe6LMu3qwSyKp3lz3ZvFF9c--FFzp) We will use it to practice importing a file.
+- Practice R script 
+- Practice CSV data file
 
-## Using R
+### Step 5: Open the R script
 
-1. Create a folder on your desktop called: EcologyLab 
-2. Download the R file and .csv file above
-3. Once you've downloaded the R script, open it in R studio:
+In RStudio:
 
-    - File -> Open file
+File → Open File → select the R script
 
-4. You will see several things:
+You’ll notice:
 
-    - Text with a hastag in front of it (#This code ...). R won't run code with a hastag, so we can use this to explain what chunks of code do
-    - Code to load and install packages.
-    - Code to set your working directory 
-    - Code in import data
-    - Code to export data
-    
-We will go through each of these codes during this laboratory exercise.
+- Lines starting with # these are notes, not code
+- Code for installing/loading packages
+- Code for setting a working directory
+- Code for importing data
+- Code for visualizing your data
 
-### Packages and libraries
+We’ll go through these together.
 
-Base R, the fundamental, built-in set of functions, data structures, and libraries that come with the R programming language without the need for additional packages or extensions, including basic math functions, statistical analyses and visualization tools. However, one amazingly cool think about R is that folks are out there creating 'libraries', or a collection of R functions, data sets, and documentation bundled together into a single package, to do specialized analyses. For most tasks in R, you will need to install and load libraries. 
+### Packages (what they are & why we use them)
 
-#### Install a library
+R comes with built-in tools, but most ecological work uses packages—collections of tools made by other scientists.
 
-There are two methods to install libraries:
+For this course, we’ll start with one package:
 
-1. Manually: Go to the Rstudio pane 'Packages' -> Install -> Search for your package and install
-2. Run code: install.packages("tidyverse")
-    - To run code, place your cursor on a line of code (any where on install.packages("tidyverse")) and press the **Run** button at the top of this pane.
+Install the tidyverse (one time only)
 
-**Please install a library** (or package) for data manipulation, called 'tidyverse' (actually several packages - hence why the name references a universe) using either method. When prompted, be sure to **install dependencies** - this will make sure that you have any pieces of code that the library that you are installing needs to operate.
+Run this once in the Console:
 
-The weird thing about including install packages code is that you don't want to re-install packages every time that you use R (in fact, it caused my R markdown code to freak out, which is why I've included the install function in the text). You will need to load packages, you generally won't need to install packages after you have done it once. You can either then install the packages and delete/hash out the install code OR you can install through the R studio interface by going to packages, selecting install and searching for and installing the packages that you are interested in. 
+```{r}
+install.packages("tidyverse")
+```
 
-![](images/01-intro/installlibraries.png){width=50%, height=auto}
+If asked, choose Yes to install dependencies.
 
-Excellent! You have installed a library! **Now, we need to load it.** To load a library, run this code:
+Load the tidyverse (every session)
+
+Every time you open R, run:
 
 ```{r}
 library(tidyverse)
 ```
 
-Alternatively, to load packages, you can select the package name in the 'Packages' pane. You WILL need to load R packages every time that you use R. Any functions associated with your package won't work, unless the package is loaded, so I suggest keeping the load library code in your R script, rather than loading manually.
+If you forget to load a package, your code won’t work—and that’s one of the most common R mistakes.
 
-### Working directories
+### Working directories (the simple version)
 
-When you are coding in R, you will want to save your R or R markdown scripts and any other data files (e.g., .csv or spatial files) that you are analyzing in a common file. You can use R studio interface to import files (Go to files tab); however, with good housekeeping, you will be able to seamlessly rerun your analyses at in point in time, allowing you to pick back up on projects that may have been dormant! 
+A working directory tells R where your files live.
 
-The first step in good R housekeeping is to set a **working directory**. A working directory tells R where to look for and save files. Now, let's set your working directory to the folder containing the R script and .csv file called 'EcologyLab'. As always, there are two options:
+In RStudio:
 
-1. Manual working directory selection: You can change your working directory using the R studio interface by selecting a working directory at the top of the console panel in the "Files" tab. If you want to change your working directory to a different location, click on the "..." (ellipsis) button in RStudio's "Files" tab. 
-2. Set the working directory using code.
+- Go to the Files pane
+- Navigate to your EcologyLab folder
+- Click More, then Set As Working Directory
 
-You will be *far* better served by including code in your R script that directs R to your working directory. I prefer to set it within the code in order to allow you to instantaneously be able to pick up work where you left off rather than searching through files and trying to remember how you set up the code. You can view your working directory by running a simple bit of code (run code below).
+### Importing data
 
-The code to set your working directory is in the R script that you loaded: setwd("your_path_to_your_working_folder"). The only challenging part is to identify your working directory. However, once you have found it, and if you put all your files into one folder, you can copy and paste this script into every code you use throughout the semester to set your working directory.
+Once your working directory is set, importing a CSV is simple. You can use the code in the R file, or you can import the file manually using RStudio’s menus.
 
-#### Setting your working directory on an Apple device
+Importing a CSV file manually in RStudio:
 
-To find the file path to the Class1_IntroToR on a mac, double click on the file and should see several option, including 'Get info' (check out picture below).
+1.	In RStudio, go to the Environment pane.
+2.	Click Import Dataset.
+3.	Choose From Text (readr).
+4.	Navigate to the folder where your CSV file is saved and select the file.
+5.	Click Import.
 
-![](images/01-intro/workingdirectorymac.png){width=125px}
+RStudio will:
 
-Then, select 'Get info'. Then, highlight the information after 'where' and copy it as a path name (see picture). Now you can paste the path to your working folder in your R code to set the working directory.
+- Load the data into your session
+- Show you the data in a spreadsheet-like view
+- Automatically generate the R code used to import the file
 
-![](images/01-intro/copyingpathnamemac.png){width=125px}
+Tip: Manual import is helpful when you are first learning R or troubleshooting file paths. For reproducible projects, we will usually rely on code-based imports.
 
-#### Setting your working directory on a PC
+If the file is in your EcologyLab folder, this will work.
 
-For PCs, start by opening your File Explorer:
+Once you have imported your data, run your data visualization code.
 
-Press the Windows key + E on your keyboard. Alternatively, you can click the "File Explorer" or "This PC" icon on your taskbar or Start menu.
-Navigate to the Folder: Use the File Explorer to navigate to the folder where the file is located. You can click on folders to open them and view their contents. Then, proceed to:
+### Download each figure 
 
-1. Find the File: Locate the file you are interested in within the folder.
+To save a figure you created in R, use the Plots tab in RStudio:
 
-2. View the File Path: Once you've found the file, you can see its full file path in the address bar at the top of the File Explorer window. The file path will be displayed as a sequence of folder and file names separated by backslashes. You can click in the address bar and copy the file path to the clipboard by pressing Ctrl + C after selecting it.
+1.	Click on the Plots tab (usually in the lower-right pane).
+2.	Make sure the figure you want is visible.
+3.	Click Export.
+4.	Choose a file format (e.g., PNG or PDF).
+5.	Select a file name and save location (your EcologyLab folder is a good choice).
 
-#### Adjust your code
+Saving figures this way allows you to control the file type and size, which is useful when inserting figures into reports, presentations, or lab assignments.
 
-Once you have copied your file path, paste that path name into the following code and set your working directory: setwd("your_path_to_your_working_folder"):
+Put these files into a word document (this will be what you turn in)
 
-  - Example for my mac: setwd("/Users/sks379/Desktop/EcologyLab/") 
+### Other information about this R code
 
-Now R studio is directed to upload and save work to this folder.
+#### Commenting your code (very important)
 
-### Trouble-shooting issues
+Anything after a # is ignored by R.
 
-When coding, every symbol is important - meaning that it is extremely easy to make mistakes and have your code not run. One easy way of troubleshooting your code is to use AI. For this class, I suggest using the free version of ChatGPT. 
+```{r}
+# This is a note to myself
+```
 
-1. Access ChatGPT on a Web Browser
-	- No Installation Required! The free version of ChatGPT does not require downloading or installation:
-	
-    	1.	Open a web browser (e.g., Chrome, Firefox, Safari).
-    	2.	Visit ChatGPT’s website.
-    	3.	Log in using an existing account, or sign up for free using an email address, Google account, or Microsoft account.
+Use comments to explain:
 
-2. Use ChatGPT on Mobile
-	- Mobile-Friendly Website:
-	
-	    - Simply visit chat.openai.com on your mobile browser and log in.
-	    
-	- Mobile Apps (Optional):
-	
-    	- OpenAI offers official apps for ChatGPT on iOS and Android devices. Here’s how to download them:
-    	- iPhone/iPad:
-          	1.	Open the App Store.
-          	2.	Search for “ChatGPT” by OpenAI.
-          	3.	Tap Download and install the app. 
-      	
-    	- Android Devices:
-          	1.	Open the Google Play Store.
-          	2.	Search for “ChatGPT” by OpenAI.
-          	3.	Tap Install to download the app.
+- what the code does
+- why you wrote it
+- anything future-you will forget
 
-If you are having a problem setting your working directory, copy and paste your code into chat and explain the error. **Were you able to troubleshoot your problem?**
+Good code is readable code.
 
-### Annotating your code
+#### Getting help when things break
 
-Notice anything about the code in the section you just ran? You can use the hast tag symbol to tell R not to run a section of code. Whenever I am generating code, I try to add lots of notes to myself, so that that future me knows what code I created and why. Annotating your code is just good practice for coding! Alternatively, you can create R markdown files (what this tutorial has been created in), but R markdown, while generating pretty PDFs and websites, adds an extra layer of complexity that you generally don't want or need while coding, so I typically recommend creating an R script and annotating your that file! 
+Everyone—including professional scientists—gets errors in R.
 
-![](images/01-intro/createrscript.png){width=25%}
-One thing that you might want to include in your code description is the version of R that you are using (you may need to load older versions of R if your scripts stop working due to updates to the program). To check the version of R that you are using, paste this in the command line: R.version.string
+When you’re stuck:
 
+	1.	Copy the error message
+	2.	Paste it into ChatGPT
+	3.	Ask: “What does this error mean?”
 
-### Organizing your code
+Learning to debug is part of learning R.
 
-A well-written R script will include the components we have been discussion: Annotated notes on what the script is doing and potentially even the version of R, loading commands for your libraries, and a line of code specifying your working directory. With these elements in place, you are ready to code your heart out!
+## Assignment
 
-Here is a glimpse at what your R scripts should look like:
-
-![](images/01-intro/RScriptSetUp.png){width=50%, height=auto}
-
-### Importing and exporting csv files 
-
-You may want to import data, and export a .csv file after analyses to include as a table in your results. The code to do this is simple:
-
-![](images/01-intro/importexport.png){width=200px}
-
-Finally, one easy way to export plots is to use the 'Plots' tab in your R studio window. Simply click on the 'Plots' tab and select export - you can choose different file types and sizes when you export. 
-
-![](images/01-intro/fileexport.png){width=200px}
-
-## Deliverables
-
-Download both files, modify your working directory and import the file. Show your TA that you successfully altered your working directory and imported a file to receive credit!
-
-And with that, welcome to the wonderful world of coding in R!
-
-
+To receive credit, submit your word document through your canvas portal.
