@@ -56,18 +56,17 @@ Create a folder on your computer called: EcologyLab
 
 For this class, we’ll use one folder for our statistical analyses. Create a folder on your desktop labeled 'EcologyLab'.
 
-Depending on the weather, you will choose one of two options:
+Now let's collect some data!
 
-1. Statistical meet and greet
-2. Tree measurement
-
-For the statistical meet and greet, ask your group members the following questions:
+Ask your group members the following questions:
 
 1. How far from home are you? (Use Google Maps to get the mileage)
 2. Do you prefer cats or dogs? 
 3. How many roommates do you have?
 
-Add your responses to this google sheet. [Open the class data sheet (add your data here)](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/edit?usp=sharing)
+If the weather is nice, follow your TA outside to collect data on the diameter of aspen trees.
+
+Add your responses/tree data to this google sheet. [Open the class data sheet (add your data here)](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/edit?usp=sharing)
 
 Once every has entered your responses, have your TA check-out the google sheet. When you get the greenlight, download the google sheet as a .csv file and save in your **EcologyLab** folder
 
