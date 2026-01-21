@@ -16,6 +16,7 @@ These seem like relatively simple questions to answer, perhaps just by looking a
 The short answer is: **error** and **sampling**! Whenever we collect data, we introduce **error**; our instruments are imprecise and do not capture an exact measure of whatever you are measuring (e.g., height, weight), and humans make mistakes during measurement collection. Secondly, we are **always** measuring a sub-sample of the true population (*true population* meaning all representatives of whatever you are trying to measure; this can be grass, marbles, or the tibia of humans). Not only is it intractable in most cases to measure all individuals of whatever you are interested in, even when it is possible to attempt to measure **all** individuals (like in the case of rare plant work), statistics acknowledges that it is **still** unlikely that we are able to do so, since individuals may be dormant or challenging to locate. If we could measure all individuals of our focal population with perfect accurately, we could calculate population **parameters**, or quantities describing populations like averages and variation, rather than estimating these metrics, and just compare them. In this way, statistics is inherently practical, and asks: What can we say about whatever we are looking at, given our numerous flaws?
 
 ### Sampling populations
+
 After a few classes, we will explore sampling methodology in greater depth in order to design appropriate experiments that test a statistical **hypothesis**. Let's quickly talk about sampling now so that we have a shared understanding and vocabulary to build on - after all, statistics really centers around estimating characteristics of a true population from a sample. The **really, truly** amazing thing is that by properly applying statistics, we can learn practically anything about almost any population using samples!
 
 In statistics, a **population** refers to the all units of the thing that you are interested (i.e., all suriname frogs, all grains of sand, all aspen leaves from a genotype found in southern Arizona). **Note**: Population in statistics differs from the term population in population ecology, where a population refers to a group of individuals in a particular area that interbreed. 
@@ -107,7 +108,7 @@ We generated our hypotheses. Let's calculate a test statistic. What is a test st
 
 **A test statistic is a quantity calculated from that data used in statistical analysis to evaluate the null hypothesis.**
 
-For this simple test, our test statistic will be 14, since this is the number of right-handed cats we observed. We want to ask whether observing 14 out of 18 cats using their right paw is truly different from the null (9 out of 18 cats using their right paw), or did this pattern occur by chance in our sample?
+For this simple test, this is a tailed comparison most closely related to a G-test/likelihood test, so we will use the term 'g' to represent our test statistic. Here, g will equal 14, since this is the number of right-handed cats we observed. We want to ask whether observing 14 out of 18 cats using their right paw is truly different from the null (9 out of 18 cats using their right paw), or did this pattern occur by chance in our sample?
 
 ### Determine the p-value
 
@@ -184,7 +185,7 @@ When we report findings, we will provide:
 
 Here is how we might report the written results of our previous test:
 
-Cats displayed higher levels of handedness than expected by chance (t = 14, p = 0.03). Around 78% of cats preferentially use their right paw (**Fig. 1**). 
+Cats displayed higher levels of handedness than expected by chance (g = 14, p = 0.03). Around 78% of cats preferentially use their right paw (**Fig. 1**). 
 
 **Note that it is common to include up to 2 decimal places in the results statements.If p-values are less than 0.01, it is common to report the p-value as p < 0.01.**
 
@@ -197,7 +198,7 @@ Provide the following information in a document and turn into your TA:
 1. What is your null hypothesis? 
 2. What is your alternative hypothesis?
 
-You invite all your friends with dogs, place both red and blue balls on the ground, and see if how many times the dogs select the blue ball out of a series of 10 trials. Ten of friends with dogs participate and you record the number of times that the dogs select the blue ball. Run the t-test in R!
+You invite all your friends with dogs, place both red and blue balls on the ground, and see if how many times the dogs select the blue ball out of a series of 10 trials. Ten of friends with dogs participate and you record the number of times that the dogs select the blue ball. Run the statistical test in R!
 
 3. Provide a corrected crafted results statement describing the outcome of the test. Please correctly structure your results statements, and make sure that you have included the 5 components mentioned above.
 
