@@ -2,6 +2,20 @@
 .Rhistory
 .RData
 .Ruserdata
-ssh-keygen -t ed25519 -C "sara.souther@nau.edu"
-ssh-keygen -t ed25519 -C "sara.souther@nau.edu".pub
 .DS_Store
+
+# --- Never commit: too large for GitHub (100 MB/file limit) ---
+*.zip
+downloads/*.tif
+downloads/wc2.1_2.5m/
+ENVLabManual.pdf
+LabManual.epub
+
+# --- Never commit: second clone of this repo lives here ---
+notes/env226-migration/
+
+# --- Build artifacts ---
+_book/
+_bookdown_files/
+_main_files/
+notes/

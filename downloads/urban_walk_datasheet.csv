@@ -1,0 +1,13 @@
+Segment,Block,Group,Variable,Value,Unit,Notes
+Southside,1,3,StreetTrees,2,count,Both small; one in poor condition
+Southside,1,3,CanopyCover,8,percent,Ocular estimate over sidewalk
+Southside,1,3,ImperviousSurface,78,percent,
+Southside,2,3,StreetTrees,1,count,
+Southside,2,3,CanopyCover,5,percent,
+Southside,2,3,ImperviousSurface,84,percent,Vacant lot fully paved
+Downtown,6,3,StreetTrees,7,count,Planted street trees; regular spacing
+Downtown,6,3,CanopyCover,24,percent,
+Downtown,6,3,ImperviousSurface,71,percent,
+Campus Edge,11,3,StreetTrees,12,count,Mature ponderosa retained
+Campus Edge,11,3,CanopyCover,46,percent,
+Campus Edge,11,3,ImperviousSurface,42,percent,

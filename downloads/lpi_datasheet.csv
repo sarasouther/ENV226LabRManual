@@ -1,0 +1,11 @@
+Site,Plot,Transect,PointID,Observer,TopLayer,Lower1,Lower2,SoilSurface
+Sinclair Wash,1,A,1,SS,PIPO,HL,,S
+Sinclair Wash,1,A,2,SS,N,,,S
+Sinclair Wash,1,A,3,SS,BOGR,HL,,BOGR
+Sinclair Wash,1,A,4,SS,N,HL,,LC
+Sinclair Wash,1,A,5,SS,PF1,HL,,S
+Sinclair Wash,1,A,6,SS,N,,,R
+Sinclair Wash,1,A,7,SS,BOGR,,,BOGR
+Sinclair Wash,1,A,8,SS,ARTR,WL,HL,S
+Sinclair Wash,1,A,9,SS,N,,,S
+Sinclair Wash,1,A,10,SS,PG1,HL,,PG1

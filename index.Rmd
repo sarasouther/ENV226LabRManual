@@ -19,13 +19,17 @@ output:
         after: |
           <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
       edit: https://github.com/sarasouther/ENV226LabRManual/edit/main/%s
-      download: ["epub"]
+      # No download button for now: it advertises _main.epub, which only
+      # exists if you also render bookdown::epub_book. Re-enable with
+      #   download: ["epub"]
+      # once you are rendering the epub as part of your build.
+      download: []
   bookdown::epub_book:
     toc: true
 ---
 # Introduction
 
-This course surveys the central concepts in ecology: evolution, population dynamics, community interactions, biogeochemical cycling, and limiting factors, as well as how those factors are measured, quantified, and interact with drivers of global environmental change. This course is required for the B.S. in Environmental Sciences degree program, and also the B.S. in Environmental and Sustainability Studies degree. This course acquaints students with foundational concepts and theories in ecology and provides a broad basis for more advanced courses in subdisciplines and applications of ecology. 
+This course surveys the central concepts in ecology: evolution, population dynamics, community interactions, biogeochemical cycling, and limiting factors, as well as how those factors are measured, quantified, and interact with drivers of global environmental change. This course is required for the B.S. in Environmental Sciences degree program, and also the B.S. in Environmental and Sustainability Studies degree. This course acquaints students with foundational concepts and theories in ecology and provides a broad basis for more advanced courses in subdisciplines and applications of ecology.
 
 In lab, we will conduct experiments and practice skills used in the ecological sciences. In addition to field and experimental techniques, these skills include data collection and analysis. Learning how to manage, manipulate and analyze data in R will serve your undergraduate career and beyond! In ENV 226 lab, we will ease you into using R for all your data needs!
 
@@ -37,7 +41,58 @@ Each chapter in this online book corresponds to lab that you will complete. For 
 
 Your rubrics for the lab report and final class project poster can be downloaded here:
 
-- [Lab report rubric](https://docs.google.com/document/d/1PlysFXMnZzTNnqcQtFkKqMUrEkeBC4Qw/export?format=docx)
-- [Poster presentation rubric](https://docs.google.com/document/d/1__T1jhAOm3JKRFCgicyOp7SqHQGBpwLU/export?format=docx)
+- [Lab report guidelines and rubric](#labreport)
+- [Poster presentation rubric](downloads/LabPosterInstructions.pdf)
 
 These links are also embedded within the class projects for which you will create the lab report and the poster.
+
+## Skills you'll build
+
+Every chapter in this manual opens with a short box headed **"Skills this lab builds."** Those boxes are not decoration. They tell you which professional competencies a given lab is training, and they are drawn from two published frameworks that the ecology and biology education communities use to design and evaluate courses.
+
+The point of naming them is simple: **you should be able to say what you can do, not just what you covered.** "I took an ecology lab" is a line on a transcript. "I can run a line-point intercept transect, calculate cover, and quantify observer disagreement against a published standard" is a thing an employer can hire.
+
+### The two frameworks
+
+**4DEE — Four-Dimensional Ecology Education**, from the Ecological Society of America. It describes ecology teaching along four dimensions, and its central claim is that good ecology education integrates them rather than teaching them separately.
+
+| Dimension | What it covers |
+|---|---|
+| **Core Ecological Concepts** | Organisms · Populations · Communities · Ecosystems · Landscapes · Biomes · Biosphere |
+| **Ecology Practices** | Natural history · Fieldwork · Designing, conducting, and critiquing investigations · Quantitative reasoning and computational thinking · Data analysis and interpretation · Working collaboratively · Communicating and applying ecology |
+| **Human–Environment Interactions** | Human interdependence with the environment · Human impacts on the environment from local to global scales · Ecological ethics |
+| **Cross-Cutting Themes** | Structure & function · Pathways & transformations of matter and energy · Systems · Evolution · Space & time |
+
+**The BioSkills Guide**, a nationally validated set of learning outcomes that unpacks the *Vision and Change* core competencies into 77 specific, teachable statements. Its six competencies are:
+
+1. **Process of Science** — scientific thinking, information literacy, question formulation, study design, data interpretation and evaluation, doing research
+2. **Quantitative Reasoning** — numeracy, quantitative and computational data analysis
+3. **Modeling & Simulation** — purpose of models, model application, modeling
+4. **Interdisciplinary Nature of Science** — connecting scientific knowledge, interdisciplinary problem solving
+5. **Communication & Collaboration** — communication, collaboration, collegial review, metacognition
+6. **Science & Society** — ethics, societal influences, science's impact on society
+
+The two frameworks complement each other rather than overlapping. BioSkills is sharpest on quantitative reasoning, communication and research ethics. It contains **no outcome naming natural history or field observation** — and those are precisely the first two Ecology Practices in 4DEE. A field-based ecology lab needs both.
+
+### Where this manual covers what
+
+| Skill area | Where you practise it |
+|---|---|
+| **Natural history and field observation** | Tree walk · Field methods · Population structure · Urban ecology |
+| **Fieldwork and protocol execution** | Ecological sampling · Field methods · Plant population biology · Water quality · Species interactions |
+| **Study design** | Ecological sampling · Selecting statistical tests · Species interactions · Urban ecology |
+| **Measurement error and uncertainty** | Field methods (observer calibration) · Population structure · Ecological sampling |
+| **Data management** | Welcome to R · Descriptive statistics · every lab with a shared class datasheet |
+| **Quantitative and statistical analysis** | Basic statistical testing · Selecting statistical tests · Species diversity · every analysis chapter |
+| **Modeling and simulation** | Plant population biology · Species distribution modeling · Population ecology · Dendrochronology |
+| **Communication and collaboration** | Species interactions · Urban ecology · the class project |
+| **Ethics and responsible conduct** | Population ecology (culture disposal) · Species diversity (specimen collection) · Field methods (collecting permission) · Urban ecology (conduct in neighbourhoods) |
+| **Science and society** | Urban ecology · Invasive species · Water quality · Dendrochronology |
+
+### If you are reading this as an instructor or reviewer
+
+The tags are also a coverage map. Reading down the chapters, you can see which competencies the manual hits repeatedly and which it touches once — which is exactly the information you need to decide what the next revision should add.
+
+**Sources.** ESA 4DEE framework: <https://esa.org/4dee/>. Foundational paper: Klemow, K., A. Berkowitz, C. Cid, and G. Middendorf. 2019. Improving ecological education through a four-dimensional framework. *Frontiers in Ecology and the Environment* 17(2): 71. <https://doi.org/10.1002/fee.2013>
+
+BioSkills Guide: Clemmons, A.W., J. Timbrook, J.C. Herron, and A.J. Crowe. 2020. BioSkills Guide: Development and national validation of a tool for interpreting the *Vision and Change* core competencies. *CBE—Life Sciences Education* 19(4): ar53. <https://doi.org/10.1187/cbe.19-11-0259>. The full list of 77 outcomes is freely available at <https://qubeshub.org/publications/1305/5> under a CC BY-NC-ND 4.0 licence; outcome statements quoted in this manual are reproduced verbatim with attribution.

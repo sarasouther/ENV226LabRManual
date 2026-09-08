@@ -1,0 +1,226 @@
+# Plant population biology: matrix models and viability
+
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Populations; Ecology Practices → Fieldwork; Quantitative reasoning and computational thinking; Data analysis and interpretation. Cross-Cutting Themes → Space & Time. Human–Environment Interactions → Human impacts on the environment from local to global scales. *BioSkills:* Modeling & Simulation → Purpose of Models, Model Application; Quantitative Reasoning → "Use probability and understanding of biological variability to reason about biological processes."
+
+The last two labs gave you two ways of describing a population. The microcosm gave you a single number for the whole population — *N*, then *r*, then λ. The population structure lab split the population into size classes, but only to read its history backwards.
+
+This lab does the thing both of those were building toward. You will split a population into stages, measure how individuals **move between stages** from one year to the next, and use that to project the population forward — and then ask the question that most conservation work actually turns on: **is this population going to persist, and what would it take to change the answer?**
+
+### Downloads for this lab
+
+- [Plant demography datasheet (.csv)](downloads/plant_demography_datasheet.csv)
+- [R script for this lab](downloads/PlantDemography.R)
+
+You will need two R packages:
+
+```{r eval=FALSE}
+install.packages(c("popbio", "gplots"))
+```
+
+## Objectives
+
+1. Census a marked population of a local perennial plant and assign individuals to stages.
+2. Build a stage-based transition matrix by hand from your own data.
+3. Calculate λ, and use elasticity to find which life-history transition matters most.
+4. Add stochasticity, and estimate a probability of quasi-extinction.
+5. Compare management scenarios by their effect on λ and on extinction risk.
+
+---
+
+## Background
+
+### Why not just count?
+
+A single number for population size hides everything that determines whether the population has a future. A hundred plants that are all old and no longer reproducing is a population on its way out. A hundred plants that are mostly seedlings is a population on its way up. Both are "N = 100."
+
+So instead of tracking one number, we track a **vector** — how many individuals are in each stage — and a **matrix** describing the rates at which individuals move between stages, survive within them, and produce new ones.
+
+### Stages, not ages
+
+For most plants, age is both unknowable and unhelpful. You cannot see how old a wildflower is, and two plants of the same age may be wildly different sizes depending on where they germinated. What matters for a plant's survival and reproduction is usually its **size**, not its age.
+
+So we sort individuals into **stage classes** defined by size, plus a few by condition:
+
+| Stage | Typical definition |
+|---|---|
+| Recruit / seedling | New this year, below a size cutoff |
+| Juvenile | Established, not yet reproductive |
+| Non-flowering adult | Large enough to flower, did not this year |
+| Flowering adult | Reproduced this year |
+
+Your instructor will set the size cutoffs after looking at a histogram of your measurements. This is a real methodological choice, not a preliminary — where you put the cutoffs changes your matrix. Move them and see.
+
+### The projection matrix
+
+Arrange the stages in order and build a square matrix **A**, where each entry $a_{ij}$ is the rate at which an individual in stage *j* contributes to stage *i* next year:
+
+$$
+\mathbf{n}(t+1) = \mathbf{A}\,\mathbf{n}(t)
+$$
+
+Read the matrix by column: **column *j* is the future of an individual currently in stage *j*.** Reading it any other way will confuse you, so fix it now.
+
+- Entries **on the diagonal** are stasis — surviving and staying in the same stage.
+- Entries **below the diagonal** are growth — surviving and moving up a stage.
+- Entries **above the diagonal** are retrogression (shrinking back) and, in the top row, **fecundity** — the production of new recruits.
+
+The top row is different in kind from the rest. Everything else is a probability, bounded between 0 and 1. Fecundity is a count of offspring per individual and can be any positive number. It is the single most common place to make an error.
+
+### Lambda, again
+
+The dominant eigenvalue of **A** is **λ**, the asymptotic annual growth rate of the population. λ > 1 means growth, λ < 1 means decline, λ = 1 means a population holding steady.
+
+This is the same λ you calculated from the microcosm, and the same λ from the static life table. Three labs, three completely different kinds of data, one quantity — that is not a coincidence, it is why λ is the currency of population biology.
+
+The eigenvector that goes with it is the **stable stage distribution**: the proportions in each stage that the population converges to if the matrix stays fixed. Note that this is the assumption the population structure lab asked you to defend. Here you can see where it comes from.
+
+### Elasticity: which rate matters most
+
+Suppose λ = 0.94 and you want to fix it. Do you protect the seedlings, or the big flowering adults?
+
+**Elasticity analysis** answers this. It asks: if I changed this one matrix entry by 1%, by what percentage would λ change? The entries with the highest elasticity are the ones where management effort buys the most.
+
+The answer is very often counter-intuitive, and it is one of the most useful results in applied ecology. For many long-lived plants, elasticity is concentrated in **adult survival**, not in seed production — which is why protecting existing large individuals frequently does more for a population than any amount of planting.
+
+Note the word *percentage*. Elasticity is proportional sensitivity, which is what lets you compare a survival probability and a fecundity count on the same scale even though they are measured in different units.
+
+### Stochasticity, and why a single lambda is not enough
+
+Your matrix came from one year. Next year's will be different — wetter, drier, a late frost, a good seed year.
+
+A **stochastic** projection accounts for that. Instead of one fixed matrix, each year's transitions are drawn from a distribution, and the population is projected many times. The output is not one trajectory but a spray of them, and the useful result is not the average but the **spread**.
+
+That matters because of a fact worth internalising: **a population with a mean λ above 1 can still go extinct.** Variability alone can carry a small population to zero, and the smaller the population, the more likely that becomes. This is why conservation biology talks about probabilities of persistence rather than about growth rates.
+
+### Quasi-extinction
+
+Rather than asking when a population hits exactly zero, we set a **quasi-extinction threshold** — a population size low enough that recovery is implausible, say 10 individuals. The output of the PVA is then:
+
+> the probability that this population falls below *X* individuals within *Y* years
+
+That sentence is the deliverable of essentially every population viability analysis ever written for a management agency.
+
+> **Where this goes next.** The matrix model chops a continuous variable — size — into a handful of boxes, and the boundaries are yours to choose. An **integral projection model (IPM)** does the same job without the boxes, using size as a continuous variable and fitting survival, growth and reproduction as functions of it. Everything you learn here transfers directly; the IPM is the same logic with the discretisation removed. It is what your instructor's own research group uses on rare plants in this region.
+
+---
+
+## Part 1 — Field census
+
+### Materials
+
+1. Meter tapes and string, to divide the site into sections
+2. Rebar or stakes with safety caps for section corners
+3. Numbered aluminium tags, or numbered flagging
+4. Ruler or calipers
+5. Datasheet and clipboard
+
+### Procedure
+
+1. **Work in pairs.** Each pair is assigned a unique block of ID numbers so that no two plants in the class share an ID. This sounds bureaucratic; it is the single thing that determines whether the class dataset can be assembled at all.
+
+2. **Lay out the site.** Divide the study area into sections with tapes and string, and mark section corners permanently. Your section is the unit you will return to.
+
+3. **Find every individual in your section.** Every one — including the small ones. Under-recording seedlings is the classic failure of plant demography, and because recruits sit in the top row of the matrix, it biases λ downward in a way that is invisible afterward.
+
+4. **Tag each plant** with its permanent numbered tag, placed so it will still be findable next year and will not girdle or damage the plant.
+
+5. **Measure each plant** using the protocol your instructor specifies for this species — height, number of leaves, rosette diameter, longest leaf. Whichever it is, everyone uses the same one.
+
+6. **Record reproduction**: whether the plant flowered, and if so how many flowers, fruits or capsules.
+
+7. **Record** one row per plant:
+
+```
+Site,Section,PlantID,Year,Size,Reproductive,Fruits,Fate
+```
+
+`Fate` is left blank this year. It is what next year's class fills in.
+
+### The problem of year one
+
+A transition matrix needs two censuses. You have one.
+
+Two ways round this, and your class will use whichever your instructor sets up:
+
+**Simulated year two.** You will be given a plausible second year of data for your own tagged plants, generated from published vital rates for a similar species. The analysis runs exactly as it will when the data is real, and you get to do the whole workflow today.
+
+**The class time series.** Your census is added to a permanent dataset. Next year's ENV 226 relocates your tagged plants, records their fates, and builds the matrix from your data plus theirs. You are the first year of a real long-term study, and it is worth knowing that this is genuinely how most plant demography datasets begin — with an undergraduate and a bag of aluminium tags.
+
+Either way, **tag carefully.** Somebody is coming back for these plants.
+
+---
+
+## Part 2 — Building the matrix by hand
+
+Do this on paper before you touch R. It takes fifteen minutes and it is the difference between using a model and understanding one.
+
+1. **Set your stage boundaries** from the size histogram your instructor projects.
+
+2. **Assign every plant to a stage** in year 1 and in year 2.
+
+3. **Tally the transitions.** Make a grid with stages in year 1 across the top and stages in year 2 down the side, and put a tally mark in the cell for each plant. Plants that died get their own row at the bottom — they are how you know the column is complete.
+
+4. **Convert counts to probabilities.** Divide each cell by the **column total**, including the deaths. Each column of survival transitions must sum to the survival probability of that stage — which cannot exceed 1. If a column sums above 1, you divided by the wrong thing.
+
+5. **Fill in the top row.** Fecundity is the number of new recruits per individual of that stage, which means you need this year's recruit count and last year's flowering adult count. Fecundity is *not* a probability and is not constrained to be below 1.
+
+Now compare your hand-built matrix to the one R produces. If they differ, find out why before you go further. It is almost always the deaths row or the top row.
+
+---
+
+## Part 3 — Analysis in R
+
+`PlantDemography.R` walks through:
+
+```{r eval=FALSE}
+library(popbio)
+
+lambda(A)            # asymptotic growth rate
+stable.stage(A)      # stable stage distribution
+elasticity(A)        # proportional sensitivity of lambda
+pop.projection(A, n0, iterations = 50)
+```
+
+Then the stochastic part: repeated projection with transitions drawn from distributions, and the fraction of runs that drop below your quasi-extinction threshold.
+
+Finally, the management scenarios. Each is just a modified matrix:
+
+- **Harvest.** Remove a fraction of flowering adults each year. What does that do to λ?
+- **Augmentation.** Add individuals to a stage. Which stage buys the most?
+- **Seed addition.** Increase the top row. Compare its effect to the same proportional change in adult survival.
+
+Run each and record λ and the extinction probability. Then check the ranking against your elasticity results — the scenario that helps most should be the one acting on the highest-elasticity transition. When it is not, that is worth a sentence in your write-up.
+
+---
+
+## Assignment
+
+Turn in to your TA:
+
+1. Your section's census data, complete and correctly formatted.
+2. Your **hand-built transition matrix**, photographed, alongside the R version.
+3. λ, and one sentence stating what it means for this population.
+4. Your elasticity matrix, and the transition with the highest elasticity. Say in plain language what a manager should do with that information.
+5. Your stochastic projection figure, and the probability of falling below the quasi-extinction threshold within 50 years.
+6. **Comparison of at least two management scenarios**, with λ and extinction probability for each.
+7. **One paragraph.** Your model rests on assumptions — one year of transitions, fixed stage boundaries, a closed population with no immigration, and vital rates that do not change as the climate does. Pick the assumption you think is most likely to be wrong here, explain what breaking it would do to your λ, and say whether your management recommendation would survive.
+
+Question 7 is where the grade is. A PVA that reports a number without its assumptions is not a scientific result; it is a number.
+
+---
+
+## Notes for TAs
+
+- **Site and species selection is the whole ballgame.** You need a perennial with at least 100 individuals — ideally 50–300 — in a patch small enough to census in three hours, on ground you have standing permission to mark. A dense herbaceous perennial in a stable patch works; anything rare, protected, or ephemeral does not.
+- **Do not use a listed or sensitive species.** Tagging and repeated visitation are not neutral for a rare plant, and the permitting is not a class-scale task.
+- Budget roughly: 30–45 min introducing matrix models, 3 h in the field, 2–3 h in the computer lab, 30 min homework for data entry.
+- **Between sessions you must compile the data and set the stage boundaries.** This is real prep time and it is unavoidable in year one.
+- Students do not write R here — they run a provided script line by line and read the output. That is deliberate; the goal is the model, not the syntax.
+- The single most common data problem is duplicate plant IDs. Assign non-overlapping ID ranges in writing before anyone goes outside.
+
+## Sources
+
+Adapted from: Charney, N., and S. Record. 2013. Performing a population viability analysis from data students collect on a local plant. *Teaching Issues and Experiments in Ecology*, Vol. 9, Experiment #2. <https://tiee.esa.org/vol/v9/experiments/charney/abstract.html>
+
+- Stubben, C., and B. Milligan. `popbio`: Construction and Analysis of Matrix Population Models. <https://cran.r-project.org/package=popbio>
+- Related desk exercise using published vital rates, no fieldwork: Conard, J.M. 2011. Demographic vital rates and population growth. *TIEE* Vol. 7, Issues — Data Sets #3. <https://www.esa.org/tiee/vol/v7/issues/data_sets/conard/abstract.html>

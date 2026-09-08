@@ -1,5 +1,7 @@
 # Basic statistical testing 
 
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Data analysis and interpretation. *BioSkills:* Quantitative Reasoning → "Select, carry out, and interpret statistical analyses"; Process of Science → "Analyze data, summarize resulting patterns, and draw appropriate conclusions."
+
 ## A short statistical review
 
 ### What can statistics tell us?
@@ -32,7 +34,7 @@ Ahhhh the scientific process:  A researcher makes observations about the natural
 
 Download this file to the folder you created for this lab:
 
-- [Download the R file](https://drive.google.com/open?id=1-mBgBLuGHaKlvPWArRw1XkE_1DpWJyzx&usp=drive_fs).
+- [Download the R file](downloads/BasicStatisticalTest.R).
 
 As you read the tutorial, follow along in the R code. Then, use the code to finish your assignment.
 

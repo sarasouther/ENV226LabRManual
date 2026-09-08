@@ -1,5 +1,7 @@
 # Ecological sampling
 
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Fieldwork; Designing, conducting, and critiquing investigations. *BioSkills:* Process of Science → "Design controlled experiments, including plans for analyzing the data"; "Describe sources of error and uncertainty in data."
+
 ## Background
 
 Ecology is the study of organisms and their relationship to the environment. With infinite time and capacity, we could measure every organism, every characteristic of the environment, every physiological function that affects the way an organism responds to the environment, and every gene that underlies those physiological functions in order to understand ecological systems. In practice, such detailed measurements are time-consuming and impractical. For that reason, we use statistics to account for the fact we are always missing information when we conduct ecological studies. 
@@ -73,15 +75,15 @@ Finally, depending on the research question, there are a number of different var
 
 Please download for class:
 
-- [Random number table for compass bearings (optional)](https://drive.google.com/uc?export=download&id=1-ioFKuNVmxoMvEESJ6QF0XQyKQ8LBZSU)
-- [Land propery maps](https://drive.google.com/uc?export=download&id=1-c-49NKwBPxb4oyyP8mwQilfXWLnAENl)
-- [City plan](https://drive.google.com/uc?export=download&id=1-U4zEODzfB5Y82M8DfMorhUhBWI0OfhO)
-- [Description of Sinclair Wash](https://drive.google.com/uc?export=download&id=1-gGpZdC0G_SIDdvriYHDf0tO8TVXODfj)
+- [Random number table for compass bearings (optional)](downloads/compassbearings.pdf)
+- [Land propery maps](downloads/RDF_Property.pdf)
+- [City plan](downloads/RDFPhasesMap.pdf)
+- [Description of Sinclair Wash](downloads/PoffEtAl_RioDeFlag.pdf)
 This information can help you develop your sampling plan.
 
 Please print for class:
 
-- [Lab worksheet](https://docs.google.com/document/d/1wf6BQ3rI-5tAapN45JsZO2K6rQ3mAa5H/export?format=pdf)
+- [Lab worksheet](downloads/EcologicalSampling_Turnin.docx)
 
 ### Sampling Q & A
 
@@ -118,7 +120,7 @@ Please print for class:
 
 We are going to monitor the impacts of the **Rio de Flag Flood Control Project** on the recovery of Sinclair Wash (also called Clay Avenue Wash) to be compiled over time and provided to the City of Flagstaff. This project has the dual benefit of restoring important ecological habitat along the Rio de Flag, as well as reducing flood risk in historically minority neighborhoods in Flagstaff. The project is a collaboration between the City of Flagstaff and the US Army Corps of Engineers and is projected to take 20 years to complete and cost $122 million dollars.
 
-There are several nice resources to learn about this project, including this [resource page](https://www.southsideflagstaff.com/resources-1 ). Please watch the following informational video on the project (feel free to watch in groups):
+There are several nice resources to learn about this project, including this [resource page](https://www.southsideflagstaff.com/resources-1). Please watch the following informational video on the project (feel free to watch in groups):
 [A Southside Story](https://vimeo.com/27081671). Also, please visit the [city project page](https://www.flagstaff.az.gov/4189/Rio-De-Flag-Flood-Control-Project).
 
 Once you have looked over this information and the downloads provided, if the weather allows, walk out to Sinclair Wash and orient yourself to the site. [Walking directions](https://maps.app.goo.gl/XckDsR2THhCctFL26). If the weather is poor, check out what the wash looks like on google and use this view to create your plan. Navigate to the [Aerial view of Sinclair Wash](https://maps.app.goo.gl/bGy3fkAut525xXk77), and zoom in until you can see the Rio, which follows the tree line and path (path is hard to see here). Create your plan - you can even import a screenshot into powerpoint or use other applications to map out your sampling strategy.

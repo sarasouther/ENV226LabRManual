@@ -1,8 +1,10 @@
 # Invasive species
 
+> **Skills this lab builds.** *4DEE:* Human–Environment Interactions → Human impacts on the environment from local to global scales. Ecology Practices → Natural history; Communicating and applying ecology. *BioSkills:* Science & Society → Societal Influences; Interdisciplinary Nature of Science → Connecting Scientific Knowledge.
+
 ## Introduction	
 
-In this lab, you will consider the distribution of a non-native species that has become widespread in our region. You will collect field vegetation data according to common methods in ecology and answer discussion questions after your data collection. We will be meeting near the South Commuter Lot / Disc Golf Area on campus for this lab. [Download location information](https://docs.google.com/document/d/1CLyCniBl5Zu8DXZPz7UeVGhHL3ZN0lUp/export?format=pdf) 
+In this lab, you will consider the distribution of a non-native species that has become widespread in our region. You will collect field vegetation data according to common methods in ecology and answer discussion questions after your data collection. We will be meeting near the South Commuter Lot / Disc Golf Area on campus for this lab. [Download location information](downloads/LabMeetingPlace.docx) 
 
 Biological invasions are considered one of the primary threats to biodiversity and ecological functions today. Any species that has been introduced by humans (either accidentally or on purpose) to a location it didn’t reach on its own is considered a non-native species. Other terms you might hear include exotic and alien. A non-native species that exerts a negative impact on native species is termed **invasive**. Not all non-native species become invasive: in fact, it is estimated that out of all species that are introduced, about 10% are able to establish reproducing populations in place, about 10% of those escape human-dominated areas and spread through natural areas, and about 10% of those become invasive. 
 
@@ -23,9 +25,9 @@ In this lab, we will look at where a non-native species of your choosing occurs,
 
 ## Downloads for this lab 
 
-- [Download random number sheet](https://drive.google.com/uc?export=download&id=1LsGwJ9vgy4qEahdXgWu53P8aJr9VvdCY)
-- [Download the CSV file](https://drive.google.com/uc?export=download&id=18nRNvy3Fz3kDOyJ-KQBq9NKq1fxs0HjI) 
-- [Download the R file](https://drive.google.com/uc?export=download&id=1BoClHL9i33UcCLDSHjXS2voZA1_gJZWT)
+- [Download random number sheet](downloads/RandomNumberSheet.pdf)
+- [Download the CSV file](downloads/invasivespeciesdatasheet.csv) 
+- [Download the R file](downloads/InvasiveSpecies.R)
 
 ## Objectives
 
@@ -41,10 +43,10 @@ Each group of 4 or 5 should have:
 4. Printed random number generator
 5. Datasheet (.csv files)
 6. Website or application for identifying invasives
-    a. https://www.swvma.org/invasive-non-native-plants/north-arizona-invasive-plants/
+    a. https://www.swvma.org/resources/ (see the *Top 12 Northern Invaders* poster)
     b. iNaturalist or Seek application (free download from your app store)
     
-For a brief tutorial on making iNaturalist observations, please [Download this document](https://docs.google.com/uc?export=download&id=1gt1MvIj7ePiWcaIfa8eUmrohHxpzdCs4)
+For a brief tutorial on making iNaturalist observations, please [Download this document](downloads/inaturalisthowto.docx)
 
 ## Procedure
 

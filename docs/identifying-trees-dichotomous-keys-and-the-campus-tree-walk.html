@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Identifying trees: dichotomous keys and the campus tree walk | ENV 226 Lab Online R Manual</title>
+  <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Identifying trees: dichotomous keys and the campus tree walk | ENV 226 Lab Online R Manual" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
+  <meta name="github-repo" content="sarasouther/ENV226LabRManual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Identifying trees: dichotomous keys and the campus tree walk | ENV 226 Lab Online R Manual" />
+  
+  <meta name="twitter:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
+  
+
+<meta name="author" content="Sara Souther" />
+
+
+<meta name="date" content="2026-09-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="ecological-sampling.html"/>
+<link rel="next" href="field-methods-running-a-monitoring-plot.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ENV 226 Lab Online R Manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#skills-youll-build"><i class="fa fa-check"></i><b>1.1</b> Skills you’ll build</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#the-two-frameworks"><i class="fa fa-check"></i><b>1.1.1</b> The two frameworks</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#where-this-manual-covers-what"><i class="fa fa-check"></i><b>1.1.2</b> Where this manual covers what</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#if-you-are-reading-this-as-an-instructor-or-reviewer"><i class="fa fa-check"></i><b>1.1.3</b> If you are reading this as an instructor or reviewer</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="welcome-to-r.html"><a href="welcome-to-r.html"><i class="fa fa-check"></i><b>2</b> Welcome to R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#what-you-need-two-things"><i class="fa fa-check"></i><b>2.1</b> What you need (two things)</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-1-install-r"><i class="fa fa-check"></i><b>2.1.1</b> Step 1: Install R:</a></li>
+<li class="chapter" data-level="2.1.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-2-install-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> Step 2: Install RStudio:</a></li>
+<li class="chapter" data-level="2.1.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-3-open-rstudio"><i class="fa fa-check"></i><b>2.1.3</b> Step 3: Open RStudio</a></li>
+<li class="chapter" data-level="2.1.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-4-download-the-files-for-this-lab"><i class="fa fa-check"></i><b>2.1.4</b> Step 4: Download the files for this lab</a></li>
+<li class="chapter" data-level="2.1.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-5-open-the-r-script"><i class="fa fa-check"></i><b>2.1.5</b> Step 5: Open the R script</a></li>
+<li class="chapter" data-level="2.1.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#packages-what-they-are-why-we-use-them"><i class="fa fa-check"></i><b>2.1.6</b> Packages (what they are &amp; why we use them)</a></li>
+<li class="chapter" data-level="2.1.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#the-full-package-list-for-this-course"><i class="fa fa-check"></i><b>2.1.7</b> The full package list for this course</a></li>
+<li class="chapter" data-level="2.1.8" data-path="welcome-to-r.html"><a href="welcome-to-r.html#working-directories-the-simple-version"><i class="fa fa-check"></i><b>2.1.8</b> Working directories (the simple version)</a></li>
+<li class="chapter" data-level="2.1.9" data-path="welcome-to-r.html"><a href="welcome-to-r.html#importing-data"><i class="fa fa-check"></i><b>2.1.9</b> Importing data</a></li>
+<li class="chapter" data-level="2.1.10" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-each-figure"><i class="fa fa-check"></i><b>2.1.10</b> Download each figure</a></li>
+<li class="chapter" data-level="2.1.11" data-path="welcome-to-r.html"><a href="welcome-to-r.html#other-information-about-this-r-code"><i class="fa fa-check"></i><b>2.1.11</b> Other information about this R code</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#assignment"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive statistics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#objectives"><i class="fa fa-check"></i><b>3.1</b> Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#downloads-for-this-lab"><i class="fa fa-check"></i><b>3.2</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-types"><i class="fa fa-check"></i><b>3.3</b> Data types</a></li>
+<li class="chapter" data-level="3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-1"><i class="fa fa-check"></i><b>3.4</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="3.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#figures"><i class="fa fa-check"></i><b>3.5</b> Figures</a></li>
+<li class="chapter" data-level="3.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary"><i class="fa fa-check"></i><b>3.6</b> Summary</a></li>
+<li class="chapter" data-level="3.7" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#assignment-1"><i class="fa fa-check"></i><b>3.7</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html"><i class="fa fa-check"></i><b>4</b> Basic statistical testing</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#a-short-statistical-review"><i class="fa fa-check"></i><b>4.1</b> A short statistical review</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#what-can-statistics-tell-us"><i class="fa fa-check"></i><b>4.1.1</b> What can statistics tell us?</a></li>
+<li class="chapter" data-level="4.1.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#sampling-populations"><i class="fa fa-check"></i><b>4.1.2</b> Sampling populations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#hypothesis-testing-review"><i class="fa fa-check"></i><b>4.2</b> Hypothesis testing review</a></li>
+<li class="chapter" data-level="4.3" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#downloads-for-this-module"><i class="fa fa-check"></i><b>4.3</b> Downloads for this module</a></li>
+<li class="chapter" data-level="4.4" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#objectives-1"><i class="fa fa-check"></i><b>4.4</b> Objectives</a></li>
+<li class="chapter" data-level="4.5" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#tailed-tests"><i class="fa fa-check"></i><b>4.5</b> Tailed tests</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#generate-hypotheses"><i class="fa fa-check"></i><b>4.5.1</b> Generate hypotheses</a></li>
+<li class="chapter" data-level="4.5.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#calculate-a-test-statistic"><i class="fa fa-check"></i><b>4.5.2</b> Calculate a test statistic</a></li>
+<li class="chapter" data-level="4.5.3" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#determine-the-p-value"><i class="fa fa-check"></i><b>4.5.3</b> Determine the p-value</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#drawing-conclusions-from-statistics"><i class="fa fa-check"></i><b>4.6</b> Drawing conclusions from statistics</a></li>
+<li class="chapter" data-level="4.7" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#reporting-results"><i class="fa fa-check"></i><b>4.7</b> Reporting results</a></li>
+<li class="chapter" data-level="4.8" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#assignment-2"><i class="fa fa-check"></i><b>4.8</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html"><i class="fa fa-check"></i><b>5</b> Selecting statistical tests</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#a-foray-into-statistics"><i class="fa fa-check"></i><b>5.1</b> A foray into statistics</a></li>
+<li class="chapter" data-level="5.2" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#pick-the-explanatory-and-response-variable"><i class="fa fa-check"></i><b>5.2</b> Pick the explanatory and response variable</a></li>
+<li class="chapter" data-level="5.3" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#variable-types-refresher"><i class="fa fa-check"></i><b>5.3</b> Variable types refresher</a></li>
+<li class="chapter" data-level="5.4" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#more-examples"><i class="fa fa-check"></i><b>5.4</b> More examples</a></li>
+<li class="chapter" data-level="5.5" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#the-decision-matrix"><i class="fa fa-check"></i><b>5.5</b> The decision matrix</a></li>
+<li class="chapter" data-level="5.6" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#a-note-on-assumptions"><i class="fa fa-check"></i><b>5.6</b> A note on assumptions</a></li>
+<li class="chapter" data-level="5.7" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#learning-goals"><i class="fa fa-check"></i><b>5.7</b> Learning goals</a></li>
+<li class="chapter" data-level="5.8" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#downloads-for-this-class"><i class="fa fa-check"></i><b>5.8</b> Downloads for this class</a></li>
+<li class="chapter" data-level="5.9" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#in-class-practice"><i class="fa fa-check"></i><b>5.9</b> In-class practice</a></li>
+<li class="chapter" data-level="5.10" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#assignment-choosing-and-running-the-right-test"><i class="fa fa-check"></i><b>5.10</b> Assignment: Choosing and Running the Right Test</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#deliverables"><i class="fa fa-check"></i><b>5.10.1</b> Deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#statistical-analyses-for-your-species-interaction-lab"><i class="fa fa-check"></i><b>5.11</b> Statistical analyses for your species interaction lab</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ecological-sampling.html"><a href="ecological-sampling.html"><i class="fa fa-check"></i><b>6</b> Ecological sampling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#background"><i class="fa fa-check"></i><b>6.1</b> Background</a></li>
+<li class="chapter" data-level="6.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-approaches"><i class="fa fa-check"></i><b>6.2</b> Sampling approaches</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#random-sampling"><i class="fa fa-check"></i><b>6.2.1</b> Random sampling</a></li>
+<li class="chapter" data-level="6.2.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#stratefied-random-sampling"><i class="fa fa-check"></i><b>6.2.2</b> Stratefied random sampling</a></li>
+<li class="chapter" data-level="6.2.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#gridded-random-sampling"><i class="fa fa-check"></i><b>6.2.3</b> Gridded random sampling</a></li>
+<li class="chapter" data-level="6.2.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#random-cluster-sampling"><i class="fa fa-check"></i><b>6.2.4</b> Random cluster sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#plot-shapes-sizes-and-transects"><i class="fa fa-check"></i><b>6.3</b> Plot shapes, sizes, and transects</a></li>
+<li class="chapter" data-level="6.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#reducing-sampling-error"><i class="fa fa-check"></i><b>6.4</b> Reducing sampling error</a></li>
+<li class="chapter" data-level="6.5" data-path="ecological-sampling.html"><a href="ecological-sampling.html#variables-of-interest"><i class="fa fa-check"></i><b>6.5</b> Variables of interest</a></li>
+<li class="chapter" data-level="6.6" data-path="ecological-sampling.html"><a href="ecological-sampling.html#assignment-3"><i class="fa fa-check"></i><b>6.6</b> Assignment</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#downloads-for-this-class-1"><i class="fa fa-check"></i><b>6.6.1</b> Downloads for this class</a></li>
+<li class="chapter" data-level="6.6.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-q-a"><i class="fa fa-check"></i><b>6.6.2</b> Sampling Q &amp; A</a></li>
+<li class="chapter" data-level="6.6.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-activity"><i class="fa fa-check"></i><b>6.6.3</b> Sampling activity</a></li>
+<li class="chapter" data-level="6.6.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#deliverables-1"><i class="fa fa-check"></i><b>6.6.4</b> Deliverables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><i class="fa fa-check"></i><b>7</b> Identifying trees: dichotomous keys and the campus tree walk</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#how-this-lab-runs"><i class="fa fa-check"></i><b>7.1</b> How this lab runs</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#downloads-for-this-lab-1"><i class="fa fa-check"></i><b>7.1.1</b> Downloads for this lab</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#objectives-2"><i class="fa fa-check"></i><b>7.2</b> Objectives</a></li>
+<li class="chapter" data-level="7.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#background-1"><i class="fa fa-check"></i><b>7.3</b> Background</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-a-dichotomous-key-is"><i class="fa fa-check"></i><b>7.3.1</b> What a dichotomous key is</a></li>
+<li class="chapter" data-level="7.3.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#characters-and-character-states"><i class="fa fa-check"></i><b>7.3.2</b> Characters and character states</a></li>
+<li class="chapter" data-level="7.3.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#where-keys-fail"><i class="fa fa-check"></i><b>7.3.3</b> Where keys fail</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-1-key-practice"><i class="fa fa-check"></i><b>7.4</b> Part 1 — Key practice</a></li>
+<li class="chapter" data-level="7.5" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#key-to-trees-of-the-nau-campus-and-the-flagstaff-area"><i class="fa fa-check"></i><b>7.5</b> Key to trees of the NAU campus and the Flagstaff area</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#group-i-leaves-needle-like-or-scale-like-conifers"><i class="fa fa-check"></i><b>7.5.1</b> Group I — Leaves needle-like or scale-like (conifers)</a></li>
+<li class="chapter" data-level="7.5.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#group-ii-leaves-broad-and-flat-hardwoods"><i class="fa fa-check"></i><b>7.5.2</b> Group II — Leaves broad and flat (hardwoods)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-nau-arboretum"><i class="fa fa-check"></i><b>7.6</b> The NAU arboretum</a></li>
+<li class="chapter" data-level="7.7" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-2a-the-arbor-day-walk-fall"><i class="fa fa-check"></i><b>7.7</b> Part 2A — The Arbor Day walk (fall)</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-is-different-about-being-led"><i class="fa fa-check"></i><b>7.7.1</b> What is different about being led</a></li>
+<li class="chapter" data-level="7.7.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-to-record"><i class="fa fa-check"></i><b>7.7.2</b> What to record</a></li>
+<li class="chapter" data-level="7.7.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#questions-worth-asking"><i class="fa fa-check"></i><b>7.7.3</b> Questions worth asking</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-2b-self-guided-walk-spring-or-when-the-arbor-day-walk-doesnt-fit-the-schedule"><i class="fa fa-check"></i><b>7.8</b> Part 2B — Self-guided walk (spring, or when the Arbor Day walk doesn’t fit the schedule)</a></li>
+<li class="chapter" data-level="7.9" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#recording-your-data"><i class="fa fa-check"></i><b>7.9</b> Recording your data</a></li>
+<li class="chapter" data-level="7.10" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-3-when-the-key-fails"><i class="fa fa-check"></i><b>7.10</b> Part 3 — When the key fails</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#give-it-a-code-and-use-the-code-consistently"><i class="fa fa-check"></i><b>7.10.1</b> Give it a code, and use the code consistently</a></li>
+<li class="chapter" data-level="7.10.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#fill-in-the-unknown-plant-log"><i class="fa fa-check"></i><b>7.10.2</b> Fill in the unknown plant log</a></li>
+<li class="chapter" data-level="7.10.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#photograph-it-properly"><i class="fa fa-check"></i><b>7.10.3</b> Photograph it properly</a></li>
+<li class="chapter" data-level="7.10.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#route-one-inaturalist"><i class="fa fa-check"></i><b>7.10.4</b> Route one: iNaturalist</a></li>
+<li class="chapter" data-level="7.10.5" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#route-two-a-specimen"><i class="fa fa-check"></i><b>7.10.5</b> Route two: a specimen</a></li>
+<li class="chapter" data-level="7.10.6" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-goes-on-the-label"><i class="fa fa-check"></i><b>7.10.6</b> What goes on the label</a></li>
+<li class="chapter" data-level="7.10.7" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-determiner-field-and-why-this-chapter-has-been-about-it-all-along"><i class="fa fa-check"></i><b>7.10.7</b> The determiner field, and why this chapter has been about it all along</a></li>
+</ul></li>
+<li class="chapter" data-level="7.11" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-3b-the-deaver-herbarium-optional"><i class="fa fa-check"></i><b>7.11</b> Part 3B — The Deaver Herbarium (optional)</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-youll-do-there"><i class="fa fa-check"></i><b>7.11.1</b> What you’ll do there</a></li>
+<li class="chapter" data-level="7.11.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#if-you-want-an-identification"><i class="fa fa-check"></i><b>7.11.2</b> If you want an identification</a></li>
+<li class="chapter" data-level="7.11.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-collection-is-also-online"><i class="fa fa-check"></i><b>7.11.3</b> The collection is also online</a></li>
+<li class="chapter" data-level="7.11.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#where-this-connects-to-the-rest-of-the-manual"><i class="fa fa-check"></i><b>7.11.4</b> Where this connects to the rest of the manual</a></li>
+</ul></li>
+<li class="chapter" data-level="7.12" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-4-write-your-own-key"><i class="fa fa-check"></i><b>7.12</b> Part 4 — Write your own key</a></li>
+<li class="chapter" data-level="7.13" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#assignment-4"><i class="fa fa-check"></i><b>7.13</b> Assignment</a></li>
+<li class="chapter" data-level="7.14" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#notes-for-tas"><i class="fa fa-check"></i><b>7.14</b> Notes for TAs</a>
+<ul>
+<li class="chapter" data-level="7.14.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#if-you-are-running-the-arbor-day-walk-part-2a"><i class="fa fa-check"></i><b>7.14.1</b> If you are running the Arbor Day walk (Part 2A)</a></li>
+<li class="chapter" data-level="7.14.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#either-way"><i class="fa fa-check"></i><b>7.14.2</b> Either way</a></li>
+<li class="chapter" data-level="7.14.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#unknowns-and-the-herbarium-visit"><i class="fa fa-check"></i><b>7.14.3</b> Unknowns and the herbarium visit</a></li>
+</ul></li>
+<li class="chapter" data-level="7.15" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#sources-and-further-reading"><i class="fa fa-check"></i><b>7.15</b> Sources and further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html"><i class="fa fa-check"></i><b>8</b> Field methods: running a monitoring plot</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#downloads-for-this-lab-2"><i class="fa fa-check"></i><b>8.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="8.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#objectives-3"><i class="fa fa-check"></i><b>8.1</b> Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#why-point-intercept-rather-than-how-much-is-covered"><i class="fa fa-check"></i><b>8.2</b> Why point intercept rather than “how much is covered?”</a></li>
+<li class="chapter" data-level="8.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-1-establishing-the-plot"><i class="fa fa-check"></i><b>8.3</b> Part 1 — Establishing the plot</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#materials"><i class="fa fa-check"></i><b>8.3.1</b> Materials</a></li>
+<li class="chapter" data-level="8.3.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#procedure"><i class="fa fa-check"></i><b>8.3.2</b> Procedure</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-2-line-point-intercept"><i class="fa fa-check"></i><b>8.4</b> Part 2 — Line-point intercept</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#dropping-the-pin"><i class="fa fa-check"></i><b>8.4.1</b> Dropping the pin</a></li>
+<li class="chapter" data-level="8.4.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#what-you-record-at-each-point"><i class="fa fa-check"></i><b>8.4.2</b> What you record at each point</a></li>
+<li class="chapter" data-level="8.4.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#species-codes"><i class="fa fa-check"></i><b>8.4.3</b> Species codes</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-3-observer-calibration"><i class="fa fa-check"></i><b>8.5</b> Part 3 — Observer calibration</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#procedure-1"><i class="fa fa-check"></i><b>8.5.1</b> Procedure</a></li>
+<li class="chapter" data-level="8.5.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#the-thresholds"><i class="fa fa-check"></i><b>8.5.2</b> The thresholds</a></li>
+<li class="chapter" data-level="8.5.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#what-to-do-with-the-answer"><i class="fa fa-check"></i><b>8.5.3</b> What to do with the answer</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-4-unknown-plants-and-voucher-specimens"><i class="fa fa-check"></i><b>8.6</b> Part 4 — Unknown plants and voucher specimens</a></li>
+<li class="chapter" data-level="8.7" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#analysis"><i class="fa fa-check"></i><b>8.7</b> Analysis</a></li>
+<li class="chapter" data-level="8.8" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#assignment-5"><i class="fa fa-check"></i><b>8.8</b> Assignment</a></li>
+<li class="chapter" data-level="8.9" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#notes-for-tas-1"><i class="fa fa-check"></i><b>8.9</b> Notes for TAs</a></li>
+<li class="chapter" data-level="8.10" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#sources"><i class="fa fa-check"></i><b>8.10</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html"><i class="fa fa-check"></i><b>9</b> Dendrochronology: reading time in wood</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#downloads-for-this-lab-3"><i class="fa fa-check"></i><b>9.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="9.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#objectives-4"><i class="fa fa-check"></i><b>9.1</b> Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#background-2"><i class="fa fa-check"></i><b>9.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#one-ring-one-year-usually"><i class="fa fa-check"></i><b>9.2.1</b> One ring, one year — usually</a></li>
+<li class="chapter" data-level="9.2.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#crossdating"><i class="fa fa-check"></i><b>9.2.2</b> Crossdating</a></li>
+<li class="chapter" data-level="9.2.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#marker-years-and-pointer-years"><i class="fa fa-check"></i><b>9.2.3</b> Marker years and pointer years</a></li>
+<li class="chapter" data-level="9.2.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#what-limits-a-ponderosa-in-northern-arizona"><i class="fa fa-check"></i><b>9.2.4</b> What limits a ponderosa in northern Arizona</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#track-a-physical-cross-sections"><i class="fa fa-check"></i><b>9.3</b> Track A — Physical cross-sections</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#materials-1"><i class="fa fa-check"></i><b>9.3.1</b> Materials</a></li>
+<li class="chapter" data-level="9.3.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#procedure-2"><i class="fa fa-check"></i><b>9.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="9.3.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#fire-scars"><i class="fa fa-check"></i><b>9.3.3</b> Fire scars</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#track-b-itrdb-chronologies-no-physical-material-needed"><i class="fa fa-check"></i><b>9.4</b> Track B — ITRDB chronologies (no physical material needed)</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#getting-the-data"><i class="fa fa-check"></i><b>9.4.1</b> Getting the data</a></li>
+<li class="chapter" data-level="9.4.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#reading-it-into-r"><i class="fa fa-check"></i><b>9.4.2</b> Reading it into R</a></li>
+<li class="chapter" data-level="9.4.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#checking-the-dating"><i class="fa fa-check"></i><b>9.4.3</b> Checking the dating</a></li>
+<li class="chapter" data-level="9.4.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#detrending-and-why"><i class="fa fa-check"></i><b>9.4.4</b> Detrending, and why</a></li>
+<li class="chapter" data-level="9.4.5" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#finding-your-pointer-years"><i class="fa fa-check"></i><b>9.4.5</b> Finding your pointer years</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#assignment-6"><i class="fa fa-check"></i><b>9.5</b> Assignment</a></li>
+<li class="chapter" data-level="9.6" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#notes-for-tas-2"><i class="fa fa-check"></i><b>9.6</b> Notes for TAs</a></li>
+<li class="chapter" data-level="9.7" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#sources-1"><i class="fa fa-check"></i><b>9.7</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="natural-selection.html"><a href="natural-selection.html"><i class="fa fa-check"></i><b>10</b> Natural selection</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="natural-selection.html"><a href="natural-selection.html#background-3"><i class="fa fa-check"></i><b>10.1</b> Background</a></li>
+<li class="chapter" data-level="10.2" data-path="natural-selection.html"><a href="natural-selection.html#downloads-for-this-class-2"><i class="fa fa-check"></i><b>10.2</b> Downloads for this class</a></li>
+<li class="chapter" data-level="10.3" data-path="natural-selection.html"><a href="natural-selection.html#objectives-5"><i class="fa fa-check"></i><b>10.3</b> Objectives</a></li>
+<li class="chapter" data-level="10.4" data-path="natural-selection.html"><a href="natural-selection.html#research-question"><i class="fa fa-check"></i><b>10.4</b> Research question:</a></li>
+<li class="chapter" data-level="10.5" data-path="natural-selection.html"><a href="natural-selection.html#methods"><i class="fa fa-check"></i><b>10.5</b> Methods</a></li>
+<li class="chapter" data-level="10.6" data-path="natural-selection.html"><a href="natural-selection.html#what-to-turn-in"><i class="fa fa-check"></i><b>10.6</b> What to turn in</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="population-ecology.html"><a href="population-ecology.html"><i class="fa fa-check"></i><b>11</b> Population ecology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="population-ecology.html"><a href="population-ecology.html#choosing-a-track"><i class="fa fa-check"></i><b>11.1</b> Choosing a track</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="population-ecology.html"><a href="population-ecology.html#downloads-for-this-lab-4"><i class="fa fa-check"></i><b>11.1.1</b> Downloads for this lab</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="population-ecology.html"><a href="population-ecology.html#track-a-daphnia-microcosms"><i class="fa fa-check"></i><b>11.2</b> Track A — <em>Daphnia</em> microcosms</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="population-ecology.html"><a href="population-ecology.html#lab-set-up-week-1"><i class="fa fa-check"></i><b>11.2.1</b> Lab set-up (week 1)</a></li>
+<li class="chapter" data-level="11.2.2" data-path="population-ecology.html"><a href="population-ecology.html#maintaining-your-microcosms-week-2"><i class="fa fa-check"></i><b>11.2.2</b> Maintaining your microcosms (week 2)</a></li>
+<li class="chapter" data-level="11.2.3" data-path="population-ecology.html"><a href="population-ecology.html#final-counts-week-3"><i class="fa fa-check"></i><b>11.2.3</b> Final counts (week 3)</a></li>
+<li class="chapter" data-level="11.2.4" data-path="population-ecology.html"><a href="population-ecology.html#ethics-and-disposal"><i class="fa fa-check"></i><b>11.2.4</b> Ethics and disposal</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="population-ecology.html"><a href="population-ecology.html#track-b-duckweed-microcosms"><i class="fa fa-check"></i><b>11.3</b> Track B — Duckweed microcosms</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="population-ecology.html"><a href="population-ecology.html#lab-set-up-week-1-1"><i class="fa fa-check"></i><b>11.3.1</b> Lab set-up (week 1)</a></li>
+<li class="chapter" data-level="11.3.2" data-path="population-ecology.html"><a href="population-ecology.html#objectives-6"><i class="fa fa-check"></i><b>11.3.2</b> Objectives</a></li>
+<li class="chapter" data-level="11.3.3" data-path="population-ecology.html"><a href="population-ecology.html#materials-2"><i class="fa fa-check"></i><b>11.3.3</b> Materials</a></li>
+<li class="chapter" data-level="11.3.4" data-path="population-ecology.html"><a href="population-ecology.html#procedure-3"><i class="fa fa-check"></i><b>11.3.4</b> Procedure</a></li>
+<li class="chapter" data-level="11.3.5" data-path="population-ecology.html"><a href="population-ecology.html#maintaining-your-microcosms-and-measuring-population-growth-week-2"><i class="fa fa-check"></i><b>11.3.5</b> Maintaining your microcosms and measuring population growth (week 2)</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="population-ecology.html"><a href="population-ecology.html#final-data-collection-and-analysis"><i class="fa fa-check"></i><b>11.4</b> Final data collection and analysis</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="population-ecology.html"><a href="population-ecology.html#microcosm-studies-of-population-dynamics"><i class="fa fa-check"></i><b>11.4.1</b> Microcosm studies of population dynamics</a></li>
+<li class="chapter" data-level="11.4.2" data-path="population-ecology.html"><a href="population-ecology.html#mortality-is-a-measurement-not-a-failure"><i class="fa fa-check"></i><b>11.4.2</b> Mortality is a measurement, not a failure</a></li>
+<li class="chapter" data-level="11.4.3" data-path="population-ecology.html"><a href="population-ecology.html#population-dynamics-basics"><i class="fa fa-check"></i><b>11.4.3</b> Population dynamics basics</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="population-ecology.html"><a href="population-ecology.html#assignment-7"><i class="fa fa-check"></i><b>11.5</b> Assignment</a></li>
+<li class="chapter" data-level="11.6" data-path="population-ecology.html"><a href="population-ecology.html#notes-for-tas-3"><i class="fa fa-check"></i><b>11.6</b> Notes for TAs</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html"><i class="fa fa-check"></i><b>12</b> Population structure and demography</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#choosing-a-track-1"><i class="fa fa-check"></i><b>12.1</b> Choosing a track</a></li>
+<li class="chapter" data-level="12.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#substituting-structure-for-time"><i class="fa fa-check"></i><b>12.2.1</b> Substituting structure for time</a></li>
+<li class="chapter" data-level="12.2.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#the-static-life-table-and-its-assumption"><i class="fa fa-check"></i><b>12.2.2</b> The static life table, and its assumption</a></li>
+<li class="chapter" data-level="12.2.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#survivorship-curves"><i class="fa fa-check"></i><b>12.2.3</b> Survivorship curves</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-a-campus-ponderosa"><i class="fa fa-check"></i><b>12.3</b> Track A — Campus ponderosa</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#downloads-for-this-lab-5"><i class="fa fa-check"></i><b>12.3.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="12.3.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#objectives-7"><i class="fa fa-check"></i><b>12.3.2</b> Objectives</a></li>
+<li class="chapter" data-level="12.3.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#materials-3"><i class="fa fa-check"></i><b>12.3.3</b> Materials</a></li>
+<li class="chapter" data-level="12.3.4" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#procedure-4"><i class="fa fa-check"></i><b>12.3.4</b> Procedure</a></li>
+<li class="chapter" data-level="12.3.5" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#recording-your-data-1"><i class="fa fa-check"></i><b>12.3.5</b> Recording your data</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-b-centennial-forest-extension"><i class="fa fa-check"></i><b>12.4</b> Track B — Centennial Forest extension</a></li>
+<li class="chapter" data-level="12.5" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-c-virtual-cemetery-indoor-fallback"><i class="fa fa-check"></i><b>12.5</b> Track C — Virtual cemetery (indoor fallback)</a></li>
+<li class="chapter" data-level="12.6" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#analysis-1"><i class="fa fa-check"></i><b>12.6</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#one-setting-you-must-get-right"><i class="fa fa-check"></i><b>12.6.1</b> One setting you must get right</a></li>
+<li class="chapter" data-level="12.6.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#running-the-script"><i class="fa fa-check"></i><b>12.6.2</b> Running the script</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#assignment-8"><i class="fa fa-check"></i><b>12.7</b> Assignment</a></li>
+<li class="chapter" data-level="12.8" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#notes-for-tas-4"><i class="fa fa-check"></i><b>12.8</b> Notes for TAs</a></li>
+<li class="chapter" data-level="12.9" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#acknowledgements"><i class="fa fa-check"></i><b>12.9</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html"><i class="fa fa-check"></i><b>13</b> Plant population biology: matrix models and viability</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#downloads-for-this-lab-6"><i class="fa fa-check"></i><b>13.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="13.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#objectives-8"><i class="fa fa-check"></i><b>13.1</b> Objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#background-5"><i class="fa fa-check"></i><b>13.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#why-not-just-count"><i class="fa fa-check"></i><b>13.2.1</b> Why not just count?</a></li>
+<li class="chapter" data-level="13.2.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#stages-not-ages"><i class="fa fa-check"></i><b>13.2.2</b> Stages, not ages</a></li>
+<li class="chapter" data-level="13.2.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#the-projection-matrix"><i class="fa fa-check"></i><b>13.2.3</b> The projection matrix</a></li>
+<li class="chapter" data-level="13.2.4" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#lambda-again"><i class="fa fa-check"></i><b>13.2.4</b> Lambda, again</a></li>
+<li class="chapter" data-level="13.2.5" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#elasticity-which-rate-matters-most"><i class="fa fa-check"></i><b>13.2.5</b> Elasticity: which rate matters most</a></li>
+<li class="chapter" data-level="13.2.6" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#stochasticity-and-why-a-single-lambda-is-not-enough"><i class="fa fa-check"></i><b>13.2.6</b> Stochasticity, and why a single lambda is not enough</a></li>
+<li class="chapter" data-level="13.2.7" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#quasi-extinction"><i class="fa fa-check"></i><b>13.2.7</b> Quasi-extinction</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-1-field-census"><i class="fa fa-check"></i><b>13.3</b> Part 1 — Field census</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#materials-4"><i class="fa fa-check"></i><b>13.3.1</b> Materials</a></li>
+<li class="chapter" data-level="13.3.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#procedure-5"><i class="fa fa-check"></i><b>13.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="13.3.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#the-problem-of-year-one"><i class="fa fa-check"></i><b>13.3.3</b> The problem of year one</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-2-building-the-matrix-by-hand"><i class="fa fa-check"></i><b>13.4</b> Part 2 — Building the matrix by hand</a></li>
+<li class="chapter" data-level="13.5" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-3-analysis-in-r"><i class="fa fa-check"></i><b>13.5</b> Part 3 — Analysis in R</a></li>
+<li class="chapter" data-level="13.6" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#assignment-9"><i class="fa fa-check"></i><b>13.6</b> Assignment</a></li>
+<li class="chapter" data-level="13.7" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#notes-for-tas-5"><i class="fa fa-check"></i><b>13.7</b> Notes for TAs</a></li>
+<li class="chapter" data-level="13.8" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#sources-2"><i class="fa fa-check"></i><b>13.8</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="invasive-species.html"><a href="invasive-species.html"><i class="fa fa-check"></i><b>14</b> Invasive species</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="invasive-species.html"><a href="invasive-species.html#introduction-1"><i class="fa fa-check"></i><b>14.1</b> Introduction</a></li>
+<li class="chapter" data-level="14.2" data-path="invasive-species.html"><a href="invasive-species.html#downloads-for-this-lab-7"><i class="fa fa-check"></i><b>14.2</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="14.3" data-path="invasive-species.html"><a href="invasive-species.html#objectives-9"><i class="fa fa-check"></i><b>14.3</b> Objectives</a></li>
+<li class="chapter" data-level="14.4" data-path="invasive-species.html"><a href="invasive-species.html#materials-5"><i class="fa fa-check"></i><b>14.4</b> Materials</a></li>
+<li class="chapter" data-level="14.5" data-path="invasive-species.html"><a href="invasive-species.html#procedure-6"><i class="fa fa-check"></i><b>14.5</b> Procedure</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="invasive-species.html"><a href="invasive-species.html#hypothesis-development"><i class="fa fa-check"></i><b>14.5.1</b> Hypothesis development</a></li>
+<li class="chapter" data-level="14.5.2" data-path="invasive-species.html"><a href="invasive-species.html#nonnative-species-density-quadrats"><i class="fa fa-check"></i><b>14.5.2</b> Nonnative species density quadrats</a></li>
+<li class="chapter" data-level="14.5.3" data-path="invasive-species.html"><a href="invasive-species.html#analyses"><i class="fa fa-check"></i><b>14.5.3</b> Analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="invasive-species.html"><a href="invasive-species.html#assignment-10"><i class="fa fa-check"></i><b>14.6</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="water-quality.html"><a href="water-quality.html"><i class="fa fa-check"></i><b>15</b> Water quality</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="water-quality.html"><a href="water-quality.html#background-6"><i class="fa fa-check"></i><b>15.1</b> Background</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="water-quality.html"><a href="water-quality.html#history-of-francis-short-pond"><i class="fa fa-check"></i><b>15.1.1</b> History of Francis Short Pond</a></li>
+<li class="chapter" data-level="15.1.2" data-path="water-quality.html"><a href="water-quality.html#rio-de-flag-flood-control-project"><i class="fa fa-check"></i><b>15.1.2</b> Rio de Flag Flood Control Project</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="water-quality.html"><a href="water-quality.html#key-water-quality-terms-and-concepts"><i class="fa fa-check"></i><b>15.2</b> Key Water Quality Terms and Concepts</a></li>
+<li class="chapter" data-level="15.3" data-path="water-quality.html"><a href="water-quality.html#water-quality-monitoring"><i class="fa fa-check"></i><b>15.3</b> Water Quality Monitoring</a></li>
+<li class="chapter" data-level="15.4" data-path="water-quality.html"><a href="water-quality.html#downloads-for-this-lab-8"><i class="fa fa-check"></i><b>15.4</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="15.5" data-path="water-quality.html"><a href="water-quality.html#hypothesis-generation"><i class="fa fa-check"></i><b>15.5</b> Hypothesis generation</a></li>
+<li class="chapter" data-level="15.6" data-path="water-quality.html"><a href="water-quality.html#methods-1"><i class="fa fa-check"></i><b>15.6</b> Methods</a>
+<ul>
+<li class="chapter" data-level="15.6.1" data-path="water-quality.html"><a href="water-quality.html#record-and-compare-your-results"><i class="fa fa-check"></i><b>15.6.1</b> Record and compare your results</a></li>
+</ul></li>
+<li class="chapter" data-level="15.7" data-path="water-quality.html"><a href="water-quality.html#assignment-11"><i class="fa fa-check"></i><b>15.7</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="species-interaction-project.html"><a href="species-interaction-project.html"><i class="fa fa-check"></i><b>16</b> Species interaction project</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#introduction-2"><i class="fa fa-check"></i><b>16.1</b> Introduction</a></li>
+<li class="chapter" data-level="16.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#objectives-10"><i class="fa fa-check"></i><b>16.2</b> Objectives</a></li>
+<li class="chapter" data-level="16.3" data-path="species-interaction-project.html"><a href="species-interaction-project.html#week-1"><i class="fa fa-check"></i><b>16.3</b> Week 1</a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads-for-this-lab-9"><i class="fa fa-check"></i><b>16.3.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="16.3.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#materials-6"><i class="fa fa-check"></i><b>16.3.2</b> Materials</a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="species-interaction-project.html"><a href="species-interaction-project.html#overall-procedure"><i class="fa fa-check"></i><b>16.4</b> Overall procedure</a></li>
+<li class="chapter" data-level="16.5" data-path="species-interaction-project.html"><a href="species-interaction-project.html#set-up-your-experiment"><i class="fa fa-check"></i><b>16.5</b> Set up your experiment</a></li>
+<li class="chapter" data-level="16.6" data-path="species-interaction-project.html"><a href="species-interaction-project.html#creating-your-data-sheet"><i class="fa fa-check"></i><b>16.6</b> Creating your Data Sheet</a></li>
+<li class="chapter" data-level="16.7" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in-week-1"><i class="fa fa-check"></i><b>16.7</b> Turn-in week 1</a></li>
+<li class="chapter" data-level="16.8" data-path="species-interaction-project.html"><a href="species-interaction-project.html#weeks-2---5"><i class="fa fa-check"></i><b>16.8</b> Weeks 2 - 5</a>
+<ul>
+<li class="chapter" data-level="16.8.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#analyzing-and-visualizing-your-data"><i class="fa fa-check"></i><b>16.8.1</b> Analyzing and visualizing your data</a></li>
+</ul></li>
+<li class="chapter" data-level="16.9" data-path="species-interaction-project.html"><a href="species-interaction-project.html#final-week"><i class="fa fa-check"></i><b>16.9</b> Final week</a>
+<ul>
+<li class="chapter" data-level="16.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads"><i class="fa fa-check"></i><b>16.9.1</b> Downloads</a></li>
+<li class="chapter" data-level="16.9.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in"><i class="fa fa-check"></i><b>16.9.2</b> Turn-in</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="species-diversity.html"><a href="species-diversity.html"><i class="fa fa-check"></i><b>17</b> Species diversity</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="species-diversity.html"><a href="species-diversity.html#introduction-3"><i class="fa fa-check"></i><b>17.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.2" data-path="species-diversity.html"><a href="species-diversity.html#week-1-1"><i class="fa fa-check"></i><b>17.2</b> Week 1</a></li>
+<li class="chapter" data-level="17.3" data-path="species-diversity.html"><a href="species-diversity.html#downloads-for-this-lab-10"><i class="fa fa-check"></i><b>17.3</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="17.4" data-path="species-diversity.html"><a href="species-diversity.html#objectives-11"><i class="fa fa-check"></i><b>17.4</b> Objectives</a></li>
+<li class="chapter" data-level="17.5" data-path="species-diversity.html"><a href="species-diversity.html#methods-2"><i class="fa fa-check"></i><b>17.5</b> Methods</a></li>
+<li class="chapter" data-level="17.6" data-path="species-diversity.html"><a href="species-diversity.html#turn-in-week-1-1"><i class="fa fa-check"></i><b>17.6</b> Turn-in week 1</a></li>
+<li class="chapter" data-level="17.7" data-path="species-diversity.html"><a href="species-diversity.html#week-2"><i class="fa fa-check"></i><b>17.7</b> Week 2</a></li>
+<li class="chapter" data-level="17.8" data-path="species-diversity.html"><a href="species-diversity.html#downloads-for-this-lab-11"><i class="fa fa-check"></i><b>17.8</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="17.9" data-path="species-diversity.html"><a href="species-diversity.html#objectives-12"><i class="fa fa-check"></i><b>17.9</b> Objectives</a></li>
+<li class="chapter" data-level="17.10" data-path="species-diversity.html"><a href="species-diversity.html#methods-3"><i class="fa fa-check"></i><b>17.10</b> Methods</a></li>
+<li class="chapter" data-level="17.11" data-path="species-diversity.html"><a href="species-diversity.html#turn-in-week-2"><i class="fa fa-check"></i><b>17.11</b> Turn-in week 2</a></li>
+<li class="chapter" data-level="17.12" data-path="species-diversity.html"><a href="species-diversity.html#acknowledgements-1"><i class="fa fa-check"></i><b>17.12</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html"><i class="fa fa-check"></i><b>18</b> Urban ecology: the crosstown walk</a>
+<ul>
+<li class="chapter" data-level="18.0.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#downloads-for-this-lab-12"><i class="fa fa-check"></i><b>18.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="18.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#objectives-13"><i class="fa fa-check"></i><b>18.1</b> Objectives</a></li>
+<li class="chapter" data-level="18.2" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#background-7"><i class="fa fa-check"></i><b>18.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#a-socioeconomic-gradient-is-an-ecological-gradient"><i class="fa fa-check"></i><b>18.2.1</b> A socioeconomic gradient is an ecological gradient</a></li>
+<li class="chapter" data-level="18.2.2" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#the-point-of-walking"><i class="fa fa-check"></i><b>18.2.2</b> The point of walking</a></li>
+<li class="chapter" data-level="18.2.3" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#one-more-thing-worth-saying-out-loud"><i class="fa fa-check"></i><b>18.2.3</b> One more thing worth saying out loud</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#the-route"><i class="fa fa-check"></i><b>18.3</b> The route</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#conduct"><i class="fa fa-check"></i><b>18.3.1</b> Conduct</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-1-the-observation-walk"><i class="fa fa-check"></i><b>18.4</b> Part 1 — The observation walk</a></li>
+<li class="chapter" data-level="18.5" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-2-your-study"><i class="fa fa-check"></i><b>18.5</b> Part 2 — Your study</a>
+<ul>
+<li class="chapter" data-level="18.5.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#recording"><i class="fa fa-check"></i><b>18.5.1</b> Recording</a></li>
+</ul></li>
+<li class="chapter" data-level="18.6" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-3-presentation"><i class="fa fa-check"></i><b>18.6</b> Part 3 — Presentation</a></li>
+<li class="chapter" data-level="18.7" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#assignment-12"><i class="fa fa-check"></i><b>18.7</b> Assignment</a></li>
+<li class="chapter" data-level="18.8" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#notes-for-tas-6"><i class="fa fa-check"></i><b>18.8</b> Notes for TAs</a></li>
+<li class="chapter" data-level="18.9" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#sources-3"><i class="fa fa-check"></i><b>18.9</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html"><i class="fa fa-check"></i><b>19</b> Species Distribution Modeling</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#introduction-4"><i class="fa fa-check"></i><b>19.1</b> Introduction</a></li>
+<li class="chapter" data-level="19.2" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#a-brief-review-of-niche-theory"><i class="fa fa-check"></i><b>19.2</b> A brief review of niche theory</a></li>
+<li class="chapter" data-level="19.3" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#downloads-for-this-lab-13"><i class="fa fa-check"></i><b>19.3</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="19.4" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#objectives-14"><i class="fa fa-check"></i><b>19.4</b> Objectives</a></li>
+<li class="chapter" data-level="19.5" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#methods-4"><i class="fa fa-check"></i><b>19.5</b> Methods</a>
+<ul>
+<li class="chapter" data-level="19.5.1" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#lets-get-modeling"><i class="fa fa-check"></i><b>19.5.1</b> Let’s get modeling</a></li>
+<li class="chapter" data-level="19.5.2" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#run-the-r-code"><i class="fa fa-check"></i><b>19.5.2</b> Run the R code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="labreport.html"><a href="labreport.html"><i class="fa fa-check"></i><b>20</b> Written lab report guidelines</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="labreport.html"><a href="labreport.html#general-rules"><i class="fa fa-check"></i><b>20.1</b> General rules</a>
+<ul>
+<li class="chapter" data-level="20.1.1" data-path="labreport.html"><a href="labreport.html#needed-components"><i class="fa fa-check"></i><b>20.1.1</b> Needed components</a></li>
+</ul></li>
+<li class="chapter" data-level="20.2" data-path="labreport.html"><a href="labreport.html#components-and-instructions"><i class="fa fa-check"></i><b>20.2</b> Components and instructions</a>
+<ul>
+<li class="chapter" data-level="20.2.1" data-path="labreport.html"><a href="labreport.html#abstract-write-last"><i class="fa fa-check"></i><b>20.2.1</b> Abstract (write last)</a></li>
+<li class="chapter" data-level="20.2.2" data-path="labreport.html"><a href="labreport.html#introduction-write-after-results"><i class="fa fa-check"></i><b>20.2.2</b> Introduction (write after results)</a></li>
+<li class="chapter" data-level="20.2.3" data-path="labreport.html"><a href="labreport.html#methods-analysis-write-first"><i class="fa fa-check"></i><b>20.2.3</b> Methods &amp; Analysis (write first)</a></li>
+<li class="chapter" data-level="20.2.4" data-path="labreport.html"><a href="labreport.html#results-write-second"><i class="fa fa-check"></i><b>20.2.4</b> Results (write second)</a></li>
+<li class="chapter" data-level="20.2.5" data-path="labreport.html"><a href="labreport.html#discussion-conclusion-write-after-results"><i class="fa fa-check"></i><b>20.2.5</b> Discussion &amp; Conclusion (write after results)</a></li>
+<li class="chapter" data-level="20.2.6" data-path="labreport.html"><a href="labreport.html#tables-figures"><i class="fa fa-check"></i><b>20.2.6</b> Tables &amp; Figures</a></li>
+<li class="chapter" data-level="20.2.7" data-path="labreport.html"><a href="labreport.html#literature-cited"><i class="fa fa-check"></i><b>20.2.7</b> Literature Cited</a></li>
+</ul></li>
+<li class="chapter" data-level="20.3" data-path="labreport.html"><a href="labreport.html#lab-report-checklist"><i class="fa fa-check"></i><b>20.3</b> Lab report checklist</a></li>
+<li class="chapter" data-level="20.4" data-path="labreport.html"><a href="labreport.html#the-rubric"><i class="fa fa-check"></i><b>20.4</b> The rubric</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="env-226-lab-exercises.html"><a href="env-226-lab-exercises.html"><i class="fa fa-check"></i><b>21</b> ENV 226 Lab Exercises</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="env-226-lab-exercises.html"><a href="env-226-lab-exercises.html#conclusions"><i class="fa fa-check"></i><b>21.1</b> Conclusions</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ENV 226 Lab Online R Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="identifying-trees-dichotomous-keys-and-the-campus-tree-walk" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Identifying trees: dichotomous keys and the campus tree walk<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#identifying-trees-dichotomous-keys-and-the-campus-tree-walk" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p><strong>Skills this lab builds.</strong> <em>4DEE:</em> Ecology Practices → Natural history; Fieldwork; Communicating and applying ecology. Human–Environment Interactions → Human interdependence with the environment; Ecological ethics. <em>BioSkills:</em> Process of Science → Scientific Thinking, Information Literacy, Study Design (“Execute protocols and accurately record measurements and observations”); Quantitative Reasoning → “Record, organize, and annotate simple data sets”; Communication &amp; Collaboration → Communication; Science &amp; Society → Ethics.</p>
+</blockquote>
+<p>Everything else in this manual assumes you can tell one organism from another. Sampling a plant community, running a species-diversity index, cleaning occurrence records for a distribution model — all of it collapses if the identifications underneath are wrong.</p>
+<p>This lab is where you learn to make them, and, more importantly, where you learn what an identification actually is: <strong>a hypothesis you tested against a series of yes-or-no observations, and can defend.</strong></p>
+<div id="how-this-lab-runs" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> How this lab runs<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#how-this-lab-runs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It comes in two parts, and the second part has two versions.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>What happens</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Part 1 — Key practice</strong></td>
+<td>Indoors and just outside the building. You learn to use a dichotomous key on trees within a few minutes’ walk.</td>
+<td>Always, the week before the walk</td>
+</tr>
+<tr class="even">
+<td><strong>Part 2A — The Arbor Day walk</strong></td>
+<td>You join NAU’s annual arboretum tree walk, led by the people who curate the collection.</td>
+<td>Fall (default)</td>
+</tr>
+<tr class="odd">
+<td><strong>Part 2B — Self-guided walk</strong></td>
+<td>Your group walks one of the three arboretum routes on its own, keying as you go.</td>
+<td>Spring, or when the Arbor Day walk doesn’t fall in a class slot</td>
+</tr>
+<tr class="even">
+<td><strong>Part 3 — When the key fails</strong></td>
+<td>Documenting the trees you <em>couldn’t</em> identify, well enough that someone else could.</td>
+<td>Always</td>
+</tr>
+<tr class="odd">
+<td><strong>Part 3B — The Deaver Herbarium</strong></td>
+<td>A visit to NAU’s own plant collection, to resolve your unknowns and see where identifications go to be checked.</td>
+<td>Optional; arranged in advance</td>
+</tr>
+<tr class="even">
+<td><strong>Part 4 — Write your own key</strong></td>
+<td>You build a key of your own and another group tries to break it.</td>
+<td>Always</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Part 1 is not optional and not a warm-up.</strong> On the Arbor Day walk you are moving with a group and listening to someone who knows these trees, which is a very different situation from standing alone in front of a tree with twenty minutes and a key. You need the key to already be in your hands, not something you are learning while trying to keep up.</p>
+<div id="downloads-for-this-lab-1" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Downloads for this lab<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#downloads-for-this-lab-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="downloads/tree_walk_datasheet.csv">Tree walk datasheet (.csv)</a></li>
+<li><a href="downloads/unknown_plant_log.csv">Unknown plant log (.csv)</a></li>
+<li><a href="downloads/TreeWalk.R">R script for this lab</a></li>
+</ul>
+</div>
+</div>
+<div id="objectives-2" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Objectives<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#objectives-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Use a dichotomous key to identify trees in the field, and record the character states that got you there.</li>
+<li>Recognise where keys fail, and what to do when they do.</li>
+<li>Write a working key of your own to a small set of species.</li>
+<li>Compare the tree community NAU planted with the tree community that grew here.</li>
+</ol>
+</div>
+<div id="background-1" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Background<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#background-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-a-dichotomous-key-is" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> What a dichotomous key is<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-a-dichotomous-key-is" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A dichotomous key is a chain of paired either/or choices. Each pair is a <strong>couplet</strong>. You read both halves, decide which describes the plant in front of you, and follow it — either to the next couplet, or to a name.</p>
+<p>That structure has a property worth noticing. A key is not a list of species you scan for the best match. It is a <strong>decision procedure</strong>, and it only works if you answer each couplet honestly, one at a time, without skipping ahead to the answer you were hoping for. Skipping ahead is the single most common way students get the wrong tree.</p>
+<p>It has a second property. Because you passed through specific couplets to get to a name, you can always say <em>why</em> — “alternate leaves, once-pinnately compound, paired spines at the leaf base.” That is a defensible identification. “It looked like a locust” is not.</p>
+</div>
+<div id="characters-and-character-states" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Characters and character states<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#characters-and-character-states" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>character</strong> is a feature you can observe: leaf arrangement, needle count, bark texture. A <strong>character state</strong> is the value that feature takes in this individual: opposite, three per bundle, plated.</p>
+<p>Good keys are built on characters that are:</p>
+<ul>
+<li><strong>Present when you need them.</strong> A key that depends on flowers is useless in November. A key built on leaves is useless on a deciduous tree in February. Keys for winter use run on twigs, buds and bark instead.</li>
+<li><strong>Discrete rather than continuous.</strong> “Needles in bundles of 2 vs. 3” is a clean split. “Leaves large vs. small” is not, until someone tells you where large stops.</li>
+<li><strong>Visible without equipment you do not have.</strong> Every character in the key below can be seen with your eyes and a tape measure.</li>
+</ul>
+</div>
+<div id="where-keys-fail" class="section level3 hasAnchor" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> Where keys fail<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#where-keys-fail" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Three ways, and you will meet all three.</p>
+<p><strong>The tree is not in the key.</strong> The key below covers trees you can expect on and around campus. NAU’s arboretum deliberately includes species from other continents. When you key an eastern hemlock or a giant sequoia with a Flagstaff key, the key will still hand you a name — the wrong one. <strong>A key can only tell you which of its own species best fits. It cannot tell you the answer is not on its list.</strong> That is your job.</p>
+<p><strong>The character is ambiguous on this individual.</strong> Young trees often do not have adult bark. A shaded branch may have larger, thinner leaves than a sun branch on the same tree. Look at several parts of the plant, and prefer the sun leaves.</p>
+<p><strong>The tree is a cultivar or a hybrid.</strong> Planted urban trees are frequently selected forms — thornless honeylocust, for one — bred to lack the very character a wild key uses.</p>
+<p>When a key fails, you do not guess. You record the character states you observed, photograph the plant, and give it a placeholder name until someone can confirm it. That is exactly the convention professional monitoring crews use, and you will use it again in the field methods lab.</p>
+<hr />
+</div>
+</div>
+<div id="part-1-key-practice" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Part 1 — Key practice<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-1-key-practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before the walk, your group will key <strong>at least six trees</strong> within a few minutes of the classroom, using the key below.</p>
+<p>For each one:</p>
+<ol style="list-style-type: decimal">
+<li>Look at the whole tree first — shape, bark, whether it stands alone or in a clump — and write down your first impression <strong>before</strong> you open the key. First impressions are worth recording because they are what you will actually use once you know these species.</li>
+<li>Work through the key one couplet at a time. <strong>Write down every couplet number you pass through, in order.</strong></li>
+<li>Record a <code>Confidence</code> value — <code>High</code>, <code>Medium</code> or <code>Low</code> — <strong>before</strong> your TA tells you anything.</li>
+<li>Measure DBH: diameter at 1.37 m above the ground, on the uphill side.</li>
+</ol>
+<p>Then your TA confirms. Compare your <code>Confidence</code> column to how you actually did. Most groups discover their <code>Medium</code> calls were fine and one of their <code>High</code> calls was wrong. That gap between how sure you felt and how right you were is the point of the exercise, and you will meet the formal version of it in the field methods lab when you measure how much two observers disagree.</p>
+<hr />
+</div>
+<div id="key-to-trees-of-the-nau-campus-and-the-flagstaff-area" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Key to trees of the NAU campus and the Flagstaff area<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#key-to-trees-of-the-nau-campus-and-the-flagstaff-area" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>How to use it.</strong> Start at couplet 1. Read <strong>1a</strong> and <strong>1b</strong>, pick the one that fits, and go where it sends you. Write down each couplet number you passed through — you will hand those in.</p>
+<p>Species marked <strong>[N]</strong> are native to the Flagstaff area. Species marked <strong>[P]</strong> are planted here and native somewhere else.</p>
+<div id="group-i-leaves-needle-like-or-scale-like-conifers" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Group I — Leaves needle-like or scale-like (conifers)<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#group-i-leaves-needle-like-or-scale-like-conifers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1a.</strong> Leaves scale-like, tiny, pressed flat against the twig; fruit a small round berry-like cone → <strong>go to 2</strong></p>
+<p><strong>1b.</strong> Leaves needle-like → <strong>go to 5</strong></p>
+<hr />
+<p><strong>2a.</strong> Bark broken into hard, roughly square plates, like alligator hide → <strong><em>Juniperus deppeana</em>, alligator juniper [N]</strong></p>
+<p><strong>2b.</strong> Bark shredding in long thin strips → <strong>go to 3</strong></p>
+<hr />
+<p><strong>3a.</strong> Scale-leaf margins smooth (entire) under close inspection; foliage dark green; usually a single main trunk → <strong><em>Juniperus scopulorum</em>, Rocky Mountain juniper [N]</strong></p>
+<p><strong>3b.</strong> Scale-leaf margins minutely toothed (denticulate) → <strong>go to 4</strong></p>
+<hr />
+<p><strong>4a.</strong> Usually branching from at or near the ground, no single trunk; foliage green; cones reddish-blue with a whitish bloom, one seed → <strong><em>Juniperus monosperma</em>, one-seed juniper [N]</strong></p>
+<p><strong>4b.</strong> Foliage distinctly light yellow-green; cones bluish-brown, often tan beneath the bloom → <strong><em>Juniperus osteosperma</em>, Utah juniper [N]</strong></p>
+<blockquote>
+<p>Couplets 3 and 4 are hard, and they are hard for professionals too. If your group splits on this one, record both possibilities and say which characters disagreed. That is a better answer than a confident wrong one.</p>
+</blockquote>
+<hr />
+<p><strong>5a.</strong> Needles borne in bundles (fascicles) of 2, 3 or 5, wrapped at the base in a papery sheath → <strong>go to 6</strong> <em>(pines)</em></p>
+<p><strong>5b.</strong> Needles borne singly along the twig → <strong>go to 11</strong></p>
+<hr />
+<p><strong>6a.</strong> Needles 2 per bundle → <strong>go to 7</strong></p>
+<p><strong>6b.</strong> Needles 3 per bundle, 5–10 in (13–25 cm) long; bark on old trees breaking into large flat yellow-orange plates; cones 3–6 in with a prickle pointing outward → <strong><em>Pinus ponderosa</em> var. <em>scopulorum</em>, ponderosa pine [N]</strong></p>
+<p><strong>6c.</strong> Needles 5 per bundle → <strong>go to 9</strong></p>
+<hr />
+<p><strong>7a.</strong> Needles short, 1–1.5 in (2.5–4 cm), stiff and curved, blue-green; cone small, ~2 in, with large wingless seeds → <strong><em>Pinus edulis</em>, two-needle pinyon [N]</strong></p>
+<p><strong>7b.</strong> Needles longer than 1.5 in → <strong>go to 8</strong></p>
+<hr />
+<p><strong>8a.</strong> Needles 1.5–3 in (4–8 cm), stout, distinctly <strong>twisted</strong>, blue-green; cones small, 1.5–2.5 in → <strong><em>Pinus sylvestris</em>, Scots pine [P]</strong></p>
+<p><strong>8b.</strong> Needles 3–6 in (8–15 cm), stiff, straight, <strong>very dark green</strong>; cones 3–6 in, ovoid; bark dark grey-brown, never orange-plated → <strong><em>Pinus nigra</em>, Austrian pine [P]</strong></p>
+<blockquote>
+<p><strong>The three-way trap.</strong> Ponderosa, Austrian and Scots pine are the confusion that catches everyone. Count the needles in the bundle <em>first</em> — three means ponderosa and you are done. If it is two, measure the needle. Short and twisted is Scots; long, straight and very dark is Austrian.</p>
+</blockquote>
+<hr />
+<p><strong>9a.</strong> Needles ~1.5 in, densely crowded around the twig like a bottlebrush, with small white resin dots on the surface → <strong><em>Pinus aristata</em>, Rocky Mountain bristlecone pine [N, uncommon]</strong></p>
+<p><strong>9b.</strong> Needles 2–4 in, not bottlebrush-crowded → <strong>go to 10</strong></p>
+<hr />
+<p><strong>10a.</strong> Cone 3–6 in, scale tips smooth and appressed, no prickle; twigs notably flexible → <strong><em>Pinus flexilis</em>, limber pine [N]</strong></p>
+<p><strong>10b.</strong> Cone 5–9 in, scale tips bent backward (reflexed) → <strong><em>Pinus strobiformis</em>, southwestern white pine [N]</strong></p>
+<hr />
+<p><strong>11a.</strong> Needles square in cross-section — roll one between your fingers and it turns rather than resisting; sharp-tipped; borne on small woody pegs that stay on the twig after the needle falls → <strong>go to 12</strong> <em>(spruces)</em></p>
+<p><strong>11b.</strong> Needles flat in cross-section — roll one and it resists → <strong>go to 13</strong></p>
+<hr />
+<p><strong>12a.</strong> Needles distinctly blue-grey, stiff; cones papery, hanging → <strong><em>Picea pungens</em>, Colorado blue spruce [P in Flagstaff]</strong></p>
+<p><strong>12b.</strong> Needles green; cones very long and drooping; branchlets strongly pendulous → <strong><em>Picea abies</em>, Norway spruce [P]</strong></p>
+<hr />
+<p><strong>13a.</strong> Needle attached to the twig by a short, bent, yellowish stalk (petiole); cones hanging, with three-pointed bracts sticking out between the scales like the back end of a mouse → <strong><em>Pseudotsuga menziesii</em>, Douglas-fir [N]</strong></p>
+<p><strong>13b.</strong> Needle attached directly to the twig, no stalk; cone bracts short and hidden → <strong>go to 14</strong> <em>(true firs)</em></p>
+<hr />
+<p><strong>14a.</strong> Bark thick, pale, soft and spongy — you can press it with a thumb → <strong><em>Abies lasiocarpa</em> var. <em>arizonica</em>, corkbark fir [N; on the Wommack route]</strong></p>
+<p><strong>14b.</strong> Bark firm, grey; needles blue-green, often curving upward from the twig → <strong><em>Abies concolor</em>, white fir [N]</strong></p>
+<hr />
+</div>
+<div id="group-ii-leaves-broad-and-flat-hardwoods" class="section level3 hasAnchor" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Group II — Leaves broad and flat (hardwoods)<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#group-ii-leaves-broad-and-flat-hardwoods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>15a.</strong> Leaves <strong>opposite</strong> — attached in pairs, directly across from each other → <strong>go to 16</strong></p>
+<p><strong>15b.</strong> Leaves <strong>alternate</strong> — staggered along the twig → <strong>go to 19</strong></p>
+<blockquote>
+<p>Check leaf arrangement on a twig from this year’s growth, and check it twice. It is the most powerful single character in the key and the one people most often get wrong by looking at a crowded shoot.</p>
+</blockquote>
+<hr />
+<p><strong>16a.</strong> Leaf compound — one leaf divided into separate leaflets along a central stalk → <strong>go to 17</strong></p>
+<p><strong>16b.</strong> Leaf simple — one blade, however deeply lobed → <strong>go to 18</strong></p>
+<hr />
+<p><strong>17a.</strong> 3–5 (rarely 7) leaflets, 2–4 in, coarsely toothed or lobed; fruit a pair of winged samaras in a narrow V → <strong><em>Acer negundo</em>, boxelder [N]</strong></p>
+<p><strong>17b.</strong> Many leaflets (7 or more) in a pinnate arrangement; fruit a single-winged samara; bark dark grey-brown, furrowed into ridges → <strong><em>Fraxinus pennsylvanica</em>, green ash [P]</strong></p>
+<blockquote>
+<p>Boxelder is a maple with a compound leaf. It is the reason couplet 16 comes before any question about lobing — if you go looking for a maple-shaped leaf first, boxelder will beat you.</p>
+</blockquote>
+<hr />
+<p><strong>18a.</strong> Break the petiole: <strong>milky white sap</strong> oozes out. Leaf palmately 5–7 lobed with long pointed teeth; samaras spread at a wide, nearly straight angle → <strong><em>Acer platanoides</em>, Norway maple [P]</strong></p>
+<p><strong>18b.</strong> Sap clear. Leaf with 5 deep sinuses, coarsely toothed, conspicuously pale silvery-white underneath; samaras large, 1.5–2.5 in → <strong><em>Acer saccharinum</em>, silver maple [P]</strong></p>
+<p><strong>18c.</strong> Sap clear. Leaf palmately lobed, dark green, lobes broad and blunt-toothed → <strong><em>Acer pseudoplatanus</em>, sycamore maple [P; on the Wommack route]</strong></p>
+<hr />
+<p><strong>19a.</strong> Leaf compound → <strong>go to 20</strong></p>
+<p><strong>19b.</strong> Leaf simple → <strong>go to 22</strong></p>
+<hr />
+<p><strong>20a.</strong> Leaflets tiny (½–1.5 in), 15–30 of them, sometimes the leaf twice-divided (bipinnate); bark grey-brown to bronze, smooth, covered in horizontal lenticels; fruit a flat leathery red-brown pod 6–8 in → <strong><em>Gleditsia triacanthos</em> var. <em>inermis</em>, thornless honeylocust [P]</strong></p>
+<p><strong>20b.</strong> Leaflets larger, 9–21 of them; a <strong>pair of stiff spines at the base of each leaf</strong> → <strong>go to 21</strong></p>
+<hr />
+<p><strong>21a.</strong> Pod flat, 3–4 in, densely covered in bristly hairs; flowers pink to white in hanging clusters; bark light grey-brown, shallowly furrowed → <strong><em>Robinia neomexicana</em>, New Mexico locust [N]</strong></p>
+<p><strong>21b.</strong> Pod flat, 2–4 in, smooth; leaflets smooth-edged; bark thick, deeply furrowed into interlacing ridges like rope → <strong><em>Robinia pseudoacacia</em>, black locust [P]</strong></p>
+<hr />
+<p><strong>22a.</strong> Bark smooth and chalky white to pale grey → <strong>go to 23</strong></p>
+<p><strong>22b.</strong> Bark not smooth and white → <strong>go to 24</strong></p>
+<hr />
+<p><strong>23a.</strong> Leaf round to heart-shaped, finely toothed; <strong>petiole flattened side-to-side</strong>, so the leaf trembles in the slightest wind; bark greenish-white, furrowing dark at the base of old trunks → <strong><em>Populus tremuloides</em>, quaking aspen [N]</strong></p>
+<p><strong>23b.</strong> Leaf roughly triangular to oval, toothed; petiole round in cross-section, leaf does not tremble → <strong><em>Betula pendula</em>, European white birch [P; on the Wommack route]</strong></p>
+<hr />
+<p><strong>24a.</strong> Leaf deeply lobed → <strong>go to 25</strong></p>
+<p><strong>24b.</strong> Leaf not lobed, or only shallowly and irregularly so → <strong>go to 27</strong></p>
+<hr />
+<p><strong>25a.</strong> Lobes <strong>rounded</strong>, no bristle at the tip; leaf leathery, 3–6 in, with 5–9 lobes; often growing as a dense clonal thicket of many stems → <strong><em>Quercus gambelii</em>, Gambel oak [N]</strong></p>
+<p><strong>25b.</strong> Lobes tipped with a fine <strong>bristle</strong> → <strong><em>Quercus rubra</em>, northern red oak [P; on the Wommack route]</strong></p>
+<p><strong>25c.</strong> Leaf obovate, very large (6–12 in), lobed, pale and fuzzy beneath; acorn large with a warty, fringed cup → <strong><em>Quercus macrocarpa</em>, bur oak [P]</strong></p>
+<hr />
+<p><strong>26.</strong> <em>(reserved — see the “write your own key” exercise below)</em></p>
+<hr />
+<p><strong>27a.</strong> Leaf silvery on the underside → <strong>go to 28</strong></p>
+<p><strong>27b.</strong> Leaf green on the underside → <strong>go to 29</strong></p>
+<hr />
+<p><strong>28a.</strong> Leaf narrow, linear to lanceolate, 1–3 in, <strong>strikingly silver</strong> beneath; fruit a silvery-brown berry-like drupe → <strong><em>Elaeagnus angustifolia</em>, Russian olive [P, invasive]</strong></p>
+<p><strong>28b.</strong> Leaf lanceolate, 2–5 in, finely toothed, shiny green above, blotchy orange beneath; near water → <strong><em>Populus angustifolia</em>, narrowleaf cottonwood [N]</strong></p>
+<hr />
+<p><strong>29a.</strong> Leaf small (1–2.5 in), elliptic, singly toothed, smooth dark green; fruit a nearly round papery samara ~½ in, in dense clusters → <strong><em>Ulmus pumila</em>, Siberian elm [P, invasive]</strong></p>
+<p><strong>29b.</strong> Leaf 2–6 in, broadly ovate to heart-shaped with an <strong>asymmetric base</strong>, toothed; fruit a cluster of small nutlets hanging from a strap-like leafy bract → <strong><em>Tilia</em> sp., linden [P]</strong></p>
+<p><strong>29c.</strong> Leaves on the same tree variable — some unlobed, some with one or several deep lobes; fruit a soft blackberry-like aggregate → <strong><em>Morus alba</em>, white mulberry [P; on the Wommack route]</strong></p>
+<p><strong>29d.</strong> Leaf glossy dark green, ovate, finely toothed; fruit a small hard pome ¼–½ in → <strong><em>Pyrus calleryana</em>, Callery pear [P]</strong></p>
+<p><strong>29e.</strong> Leaf 1–4 in, toothed; flowers 5-petalled white to pink; fruit a pome → <strong><em>Malus</em> sp., flowering crabapple [P]</strong></p>
+<hr />
+<blockquote>
+<p><strong>If your tree does not key out</strong>, do not force it. Some trees in the arboretum are from other continents entirely and are not in this key by design. Record the characters, photograph it, and label it <strong>UNK-1</strong>, <strong>UNK-2</strong>, and so on. Part 3 is about how to do that properly.</p>
+</blockquote>
+<hr />
+</div>
+</div>
+<div id="the-nau-arboretum" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> The NAU arboretum<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-nau-arboretum" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>NAU’s north campus is an arboretum, curated and maintained as a living collection. There are three self-guided routes through it, each with its own character:</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>Named for</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Wommack</strong></td>
+<td>Dr. Donald Wommack, Forestry, 1968–99</td>
+<td>Species collected from around the world — the botanical-oddity route</td>
+</tr>
+<tr class="even">
+<td><strong>Littleman</strong></td>
+<td>Lemuel Littleman, groundskeeper, 1947–83</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Grimm</strong></td>
+<td>J. Norm Grim, biologist; planted late 1970s</td>
+<td>Arranged by altitudinal vegetation zone, desert through subalpine</td>
+</tr>
+</tbody>
+</table>
+<p>Routes and an interactive species map: <a href="https://in.nau.edu/greenhouse/nau-arboretum-tree-walks/" class="uri">https://in.nau.edu/greenhouse/nau-arboretum-tree-walks/</a></p>
+<p>The Grimm route is laid out as an <strong>elevation gradient</strong>, which means the species change along it in the same order they would if you drove from the Verde Valley up to the San Francisco Peaks. The Wommack route is the opposite: a deliberate collection of things that do not grow here at all.</p>
+<hr />
+</div>
+<div id="part-2a-the-arbor-day-walk-fall" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Part 2A — The Arbor Day walk (fall)<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-2a-the-arbor-day-walk-fall" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Each fall, the people who curate the arboretum lead a public tree walk in honour of Arbor Day, usually in October when the leaves are turning. It is a long-running NAU tradition, and this section of ENV 226 joins it.</p>
+<p><strong>You are guests at a real event, not on a class field trip that happens to have a guide.</strong> Members of the public will be there. Behave accordingly: stay with the group, keep questions for the pauses, and do not wander off to measure something.</p>
+<div id="what-is-different-about-being-led" class="section level3 hasAnchor" number="7.7.1">
+<h3><span class="header-section-number">7.7.1</span> What is different about being led<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-is-different-about-being-led" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In Part 1 you keyed trees alone, slowly, with the key open. Here the identifications are handed to you by someone who has known these trees for years, and the pace is set by the group.</p>
+<p>That is not a lesser exercise — it is a different one, and it is worth naming what you are getting. <strong>You are watching an expert do in three seconds what took you fifteen minutes.</strong> They are not running the key. They are recognising a pattern, the way you recognise a friend’s face without checking their features one at a time. That recognition is built out of thousands of prior identifications, most of which were made slowly, with a key.</p>
+<p>So your job on the walk is to <strong>reverse-engineer the recognition</strong>. When a tree is named, ask yourself which couplets in your key would have got you there, and write those down. If you cannot reconstruct the path, that is the interesting case — it means the expert used a character your key does not contain, and you should ask what it was.</p>
+</div>
+<div id="what-to-record" class="section level3 hasAnchor" number="7.7.2">
+<h3><span class="header-section-number">7.7.2</span> What to record<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-to-record" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Use the same datasheet, with two extra habits:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Fill in <code>CoupletPath</code> from your own reasoning</strong>, not from the answer. Work out the path you <em>would</em> have taken. If you cannot, write <code>?</code> — that is data, and it tells you where your key is thin.</li>
+<li><strong>Write down every character the guide mentions that is not in the key.</strong> Smell, bud shape, branching angle, the sound of the needles, how the tree behaves in wind or snow, where it was planted and why. These go in <code>Notes</code>, and they are the raw material for Part 3.</li>
+</ol>
+<p>Also record, when the guide says so:</p>
+<ul>
+<li>Whether the tree is <strong>native or planted</strong>, and if planted, where it came from.</li>
+<li>Anything about <strong>why it is here</strong> — who planted it, when, whether it is thriving.</li>
+</ul>
+<p>That last one is not decoration. An arboretum is a hundred years of decisions about what should grow in Flagstaff, made by people who are named on the routes you are walking. Some of those decisions have aged well and some have not, and you can see which is which.</p>
+</div>
+<div id="questions-worth-asking" class="section level3 hasAnchor" number="7.7.3">
+<h3><span class="header-section-number">7.7.3</span> Questions worth asking<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#questions-worth-asking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Come with at least one. Some that would get a good answer:</p>
+<ul>
+<li>Which planted species have done best here, and which are struggling as the climate warms?</li>
+<li>Is anything on campus at the edge of its range?</li>
+<li>What gets planted now that would not have been planted thirty years ago — and why?</li>
+<li>How is the collection maintained, and what happens when a specimen dies?</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="part-2b-self-guided-walk-spring-or-when-the-arbor-day-walk-doesnt-fit-the-schedule" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> Part 2B — Self-guided walk (spring, or when the Arbor Day walk doesn’t fit the schedule)<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-2b-self-guided-walk-spring-or-when-the-arbor-day-walk-doesnt-fit-the-schedule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Same objectives, no guide. Your instructor will assign one of the three routes.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Work in groups of 3–4.</strong> One person keys, one records, one holds the tape. Rotate every few trees so everyone keys.</li>
+<li>At each stop, record your first impression before opening the key.</li>
+<li>Key the tree, writing down every couplet number.</li>
+<li>Record <code>Confidence</code> before your TA confirms anything.</li>
+<li>Measure DBH.</li>
+</ol>
+<p>Aim for at least twelve trees, deliberately mixing native and planted specimens.</p>
+<hr />
+</div>
+<div id="recording-your-data" class="section level2 hasAnchor" number="7.9">
+<h2><span class="header-section-number">7.9</span> Recording your data<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#recording-your-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Both tracks use the same file. The columns are:</p>
+<pre><code>Site,Group,TreeID,Species,Origin,CoupletPath,Confidence,DBH_cm,Notes</code></pre>
+<ul>
+<li><code>Site</code> — which route</li>
+<li><code>Species</code> — the scientific name you arrived at, or <code>UNK-1</code></li>
+<li><code>Origin</code> — <code>Native</code> or <code>Planted</code></li>
+<li><code>CoupletPath</code> — e.g. <code>1a-5a-6b</code>, or <code>?</code> if you could not reconstruct it</li>
+<li><code>Confidence</code> — <code>High</code>, <code>Medium</code> or <code>Low</code>, decided <strong>before</strong> anyone confirms</li>
+<li><code>DBH_cm</code> — diameter at breast height, 1.37 m above the ground</li>
+<li><code>Notes</code> — characters the key does not use; anything the guide said</li>
+</ul>
+<p><strong>One claim to test.</strong> People often say the bark furrows of old ponderosa pines smell of vanilla or butterscotch. Have each person in your group smell one independently, without saying anything, then compare answers. Whether or not you all agree is itself a result — and it is the same kind of observer disagreement you will quantify formally in the field methods lab.</p>
+<hr />
+</div>
+<div id="part-3-when-the-key-fails" class="section level2 hasAnchor" number="7.10">
+<h2><span class="header-section-number">7.10</span> Part 3 — When the key fails<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-3-when-the-key-fails" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Some of your trees will not key out. That is guaranteed, and it is not a mark against you.</p>
+<p>What matters is what you do next, and there is a distinction here worth getting straight, because it is the difference between an amateur and a professional:</p>
+<blockquote>
+<p><strong>“I can’t identify this”</strong> is a gap in your knowledge. It is temporary and someone can close it.</p>
+<p><strong>“This can’t be identified from what I wrote down”</strong> is a gap in your record. It is permanent, and nobody can close it — not you next week, not a botanist next year.</p>
+</blockquote>
+<p>The first is fine. Everyone who works with plants has a pile of unknowns. The second is the actual failure, and it happens silently: you looked at the tree, you understood it perfectly well at the time, and you wrote down “big oak-ish thing near the parking lot.” Two weeks later that sentence identifies nothing.</p>
+<p>So the skill this part teaches is <strong>documenting an unknown well enough that it stays resolvable.</strong></p>
+<div id="give-it-a-code-and-use-the-code-consistently" class="section level3 hasAnchor" number="7.10.1">
+<h3><span class="header-section-number">7.10.1</span> Give it a code, and use the code consistently<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#give-it-a-code-and-use-the-code-consistently" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Label it <code>UNK-1</code>, <code>UNK-2</code>, and so on. If you see what you believe is the same species again, <strong>give it the same code</strong>.</p>
+<p>This sounds trivial. It is the single highest-value thing you will do. A consistently applied placeholder is real data: when someone eventually tells you <code>UNK-3</code> is <em>Tilia cordata</em>, every row where you wrote <code>UNK-3</code> updates at once. Ten rows of “unknown,” “some kind of maple?”, “same as before?” and “unsure” resolve to nothing, ever.</p>
+<p>You will use the same convention in the field methods lab, where professional monitoring crews use codes like <code>TR1</code> and <code>SH2</code> for exactly this reason.</p>
+</div>
+<div id="fill-in-the-unknown-plant-log" class="section level3 hasAnchor" number="7.10.2">
+<h3><span class="header-section-number">7.10.2</span> Fill in the unknown plant log<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#fill-in-the-unknown-plant-log" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Download: <a href="downloads/unknown_plant_log.csv">Unknown plant log (.csv)</a></p>
+<p>For every unknown, record:</p>
+<pre><code>UnknownCode,Date,Collector,Site,LocationNotes,GrowthHabit,LeafArrangement,
+LeafType,BarkNotes,FruitOrCone,OtherCharacters,PhotoNumbers,SpecimenCollected,
+iNatURL,ProposedID,Determiner,DeterminedDate</code></pre>
+<p>Two columns people skip, which are the two that matter most later:</p>
+<ul>
+<li><strong><code>LocationNotes</code></strong> — precise enough that a stranger could walk to this exact tree. “North side of the Grimm route, third tree east of the bench” beats “north campus.” If you have GPS on your phone, add coordinates.</li>
+<li><strong><code>Determiner</code> / <code>DeterminedDate</code></strong> — who eventually identified it, and when. Blank for now. We come back to this.</li>
+</ul>
+</div>
+<div id="photograph-it-properly" class="section level3 hasAnchor" number="7.10.3">
+<h3><span class="header-section-number">7.10.3</span> Photograph it properly<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#photograph-it-properly" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You cannot bring a tree indoors, so photographs are most of your record. Take <strong>at least four</strong>, of specific things rather than four angles of the same thing:</p>
+<ol style="list-style-type: decimal">
+<li><strong>The whole tree</strong> — growth form, branching, how it stands.</li>
+<li><strong>A leaf or needle still attached to the twig</strong>, showing the arrangement. A leaf picked off and photographed alone has thrown away the character that would have keyed it.</li>
+<li><strong>Bark at chest height.</strong> Include something for scale — a hand, a pen.</li>
+<li><strong>Fruit, cone, flower or bud</strong>, if there is any. This is usually what a botanist will ask for first.</li>
+</ol>
+<p>Photograph in even light — full sun or full shade, not dappled shade under a canopy, which is the single most common reason a plant photo turns out unusable.</p>
+</div>
+<div id="route-one-inaturalist" class="section level3 hasAnchor" number="7.10.4">
+<h3><span class="header-section-number">7.10.4</span> Route one: iNaturalist<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#route-one-inaturalist" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You have used iNaturalist already in the invasive species lab. It is a reasonable first stop for an unknown, and it is worth understanding what happens to your observation.</p>
+<p>Upload all your photos of <strong>one tree</strong> as <strong>one observation</strong> — this is the rule people most often break, and splitting one tree across four observations makes all four harder to identify. Add the date and location, which iNaturalist usually takes from your photos.</p>
+<p>An observation becomes <strong>Research Grade</strong> when it is “verifiable” — has a date, a location, photo or sound evidence, and is a wild rather than planted organism — <em>and</em> more than two-thirds of the identifiers agree on an identification at species level or below.</p>
+<p>Read that last condition again, because it has a consequence for you: <strong>most of the arboretum is planted.</strong> A cultivated tree is marked as not wild and stays “Casual” no matter how confidently it is identified. That is not a flaw; iNaturalist is a biodiversity record, and a Norway spruce someone planted outside Old Main is not evidence that Norway spruce grows in Flagstaff. But it does mean iNaturalist will help you <em>name</em> your unknown while declining to <em>keep</em> it, and knowing why is the point.</p>
+<p>Research Grade observations with an open licence are exported to GBIF, the global biodiversity database, roughly once a week.</p>
+</div>
+<div id="route-two-a-specimen" class="section level3 hasAnchor" number="7.10.5">
+<h3><span class="header-section-number">7.10.5</span> Route two: a specimen<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#route-two-a-specimen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The other route is to bring back a piece of the plant.</p>
+<p>You cannot press a tree. What you press is a <strong>twig short enough to lie flat within about 30 × 40 cm</strong>, which is the size of a standard herbarium sheet. On that twig you want everything the key would have used: leaves still attached in their natural arrangement, and any flowers, fruit, cones or buds. A bare stick is not a specimen.</p>
+<p>Standard practice before you cut anything:</p>
+<ul>
+<li><strong>Get permission.</strong> On campus, ask — the arboretum is a curated collection and its specimens are not yours to prune. On Coconino National Forest, National Park Service land or tribal land, collecting generally requires a permit. Your instructor will tell you what applies where you are.</li>
+<li><strong>Take the smallest adequate piece</strong>, from a part of the plant that is representative of the whole.</li>
+<li><strong>Write the label at the moment you collect it</strong>, not later. Memory is not a data source.</li>
+</ul>
+<p>Press it flat between sheets of newspaper, under weight, and change the paper if it goes damp. Woody stems need more pressure and longer drying than herbaceous plants.</p>
+</div>
+<div id="what-goes-on-the-label" class="section level3 hasAnchor" number="7.10.6">
+<h3><span class="header-section-number">7.10.6</span> What goes on the label<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-goes-on-the-label" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A field label carries the minimum: <strong>code, date, collector, locality</strong>. A full herbarium label carries considerably more, and the extra fields are what make a specimen useful to someone who never met you:</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Why it’s there</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Scientific name, with family and authority</td>
+<td>The identification itself</td>
+</tr>
+<tr class="even">
+<td><strong>Determiner and date determined</strong></td>
+<td><em>Who</em> made this identification, and <em>when</em></td>
+</tr>
+<tr class="odd">
+<td>Collector, other collectors, collection number</td>
+<td>Who to ask; how to find the collector’s field notes</td>
+</tr>
+<tr class="even">
+<td>Date collected</td>
+<td>Phenology, and which year’s conditions produced this plant</td>
+</tr>
+<tr class="odd">
+<td>Locality — country, state, county, verbal description, lat/long, elevation</td>
+<td>So someone can return to the exact spot</td>
+</tr>
+<tr class="even">
+<td>Habitat and associated species</td>
+<td>The ecological context that a pressed twig destroys</td>
+</tr>
+<tr class="odd">
+<td>Abundance / frequency</td>
+<td>Whether it was one tree or a thousand</td>
+</tr>
+<tr class="even">
+<td>Plant description — habit, height, colour, scent</td>
+<td>Everything pressing and drying takes away</td>
+</tr>
+<tr class="odd">
+<td>Wild or cultivated</td>
+<td>Whether this is evidence of a range, or of a gardener</td>
+</tr>
+</tbody>
+</table>
+<p>That table is the answer to “why doesn’t a photo do the job.” A photo captures the plant. A labelled specimen captures the plant <em>plus the circumstances of its observation</em>, in a form someone can re-examine in a hundred years.</p>
+</div>
+<div id="the-determiner-field-and-why-this-chapter-has-been-about-it-all-along" class="section level3 hasAnchor" number="7.10.7">
+<h3><span class="header-section-number">7.10.7</span> The determiner field, and why this chapter has been about it all along<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-determiner-field-and-why-this-chapter-has-been-about-it-all-along" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Look at that table again. A herbarium label records <strong>who identified the specimen and when</strong> — separately from who collected it.</p>
+<p>That is there because <strong>an identification is not permanent.</strong> Species get split, merged and renamed. A specimen filed as one thing in 1954 gets re-examined and re-determined as another in 2019, and the sheet carries both determinations, dated and attributed. The evidence outlives the conclusion.</p>
+<p>This is the thing this whole chapter has been driving at. At the start you were told an identification is a hypothesis you tested against observations and can defend. A specimen is what makes that hypothesis <strong>re-testable by someone else, later, without you</strong>. Your <code>CoupletPath</code> column is a small version of the same idea: it records not just your answer but your reasoning, so a person who disagrees can find out exactly where they’d part company with you.</p>
+<hr />
+</div>
+</div>
+<div id="part-3b-the-deaver-herbarium-optional" class="section level2 hasAnchor" number="7.11">
+<h2><span class="header-section-number">7.11</span> Part 3B — The Deaver Herbarium (optional)<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-3b-the-deaver-herbarium-optional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>NAU has its own herbarium, on this campus, and it is not small.</p>
+<p>The <strong>Deaver Herbarium</strong> was founded in <strong>1930</strong> and is named for <strong>Chester “Danny” Deaver</strong>, its first curator. It holds roughly <strong>130,000 specimens</strong>, the oldest from the <strong>1880s</strong>. Its international code is <strong>ASC</strong> — assigned back when NAU was Arizona State College, which is a small piece of institutional history hiding in a four-letter code.</p>
+<p>The collection is worldwide in scope, with 55 countries represented, but <strong>more than three-quarters of it is Arizona</strong> — northern Arizona especially, the southern Colorado Plateau, the San Francisco Peaks, the Coconino National Forest, and collections from ten national parks on federal and tribal lands. Which means: <strong>the plants of the ground you have been walking on all semester are already in a cabinet a few minutes from your classroom</strong>, collected by people going back to the 1880s.</p>
+<p>The herbarium is in the <strong>Science Annex (Building 20)</strong>, third floor. Entry is through the northern entrance of the Biology building (Building 21) off South Beaver Street. Access is limited, so <strong>visits are arranged in advance by emailing <a href="mailto:Deaver.Herbarium@nau.edu" class="email">Deaver.Herbarium@nau.edu</a> a few days ahead</strong>, and someone meets you at the doors. Your instructor arranges this for the class.</p>
+<div id="what-youll-do-there" class="section level3 hasAnchor" number="7.11.1">
+<h3><span class="header-section-number">7.11.1</span> What you’ll do there<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-youll-do-there" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>Resolve your unknowns by comparison.</strong> This is how identification actually worked before keys and how it still often works in practice: you put your specimen next to a sheet somebody else already identified and see whether they match. It is a completely different cognitive operation from running a key, and doing both in one semester is the point.</p></li>
+<li><p><strong>Read old labels.</strong> Find a specimen collected near Flagstaff a hundred years ago and read what the collector wrote down. Notice what they recorded that you did not, and what they left out that you would want.</p></li>
+<li><p><strong>Look for a re-determination.</strong> Find a sheet with more than one determination on it — an original identification and a later one by a different person. That is the process in the section above, made physical.</p></li>
+<li><p><strong>See how the collection is organised.</strong> Specimens are filed by family, then genus, then species. Working out where your plant belongs means working out its family, which is a different question from working out its name.</p></li>
+</ol>
+</div>
+<div id="if-you-want-an-identification" class="section level3 hasAnchor" number="7.11.2">
+<h3><span class="header-section-number">7.11.2</span> If you want an identification<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#if-you-want-an-identification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The herbarium’s stated policy is worth knowing, because it tells you what an identification costs:</p>
+<blockquote>
+<p>Staff will identify plants for individuals, nonprofit organisations and government agencies <strong>when an acceptable specimen with locality information is donated to the collection.</strong></p>
+</blockquote>
+<p>So the price of an expert identification is a specimen — properly collected, properly labelled, with locality data — that stays in the collection and becomes available to everyone afterward. That is a fair trade and a sound principle: the identification is only worth something because it is attached to physical evidence somebody can go back and check.</p>
+<p>If your specimen is good enough, it stays. Student collections do become part of this herbarium.</p>
+</div>
+<div id="the-collection-is-also-online" class="section level3 hasAnchor" number="7.11.3">
+<h3><span class="header-section-number">7.11.3</span> The collection is also online<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-collection-is-also-online" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Essentially all of Deaver’s specimens have been <strong>databased and imaged</strong>. They are served through <strong>SEINet</strong> (<a href="https://swbiodiversity.org/seinet/index.php" class="uri">https://swbiodiversity.org/seinet/index.php</a>), a portal network carrying about <strong>24 million specimen records from 456 collections</strong>. You can search by species, filter to the Deaver Herbarium, and open individual records to see the specimen image — the actual pressed sheet, zoomable enough to read the original handwritten label — alongside the collector, date, locality, elevation and determiner.</p>
+<p>Try this: search SEINet for a species you keyed on the walk, filter to Arizona, and look at where it has been collected. That map is the raw material of a species distribution model.</p>
+</div>
+<div id="where-this-connects-to-the-rest-of-the-manual" class="section level3 hasAnchor" number="7.11.4">
+<h3><span class="header-section-number">7.11.4</span> Where this connects to the rest of the manual<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#where-this-connects-to-the-rest-of-the-manual" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>From SEINet, Deaver’s records flow to <strong>GBIF</strong> (<a href="https://www.gbif.org" class="uri">https://www.gbif.org</a>), the global biodiversity database — the same place the species distribution modeling chapter gets its occurrence records.</p>
+<p>It is worth being precise about what those records are. As of 2026, GBIF holds roughly <strong>643 million plant occurrence records</strong>. About <strong>21% are preserved specimens</strong> — physical plants somebody collected, pressed, labelled and filed. About <strong>75% are human observations</strong>, overwhelmingly from iNaturalist. The Deaver Herbarium’s own 133,000 records are <strong>essentially 100% preserved specimens</strong>.</p>
+<p>So when you clean occurrence data in the distribution modeling lab, you are handling a mixture of two very different kinds of evidence. One is a photograph and a GPS point. The other is a physical object in a cabinet that a specialist can pull out and re-examine — and if the identification turns out to be wrong, correct.</p>
+<p>Neither is better in every respect. Observations are vastly more numerous and cover ground no collector reached. Specimens are verifiable. Knowing which one you are looking at, and what each can and cannot support, is a real skill, and it is why this lab and that one belong in the same manual.</p>
+<hr />
+</div>
+</div>
+<div id="part-4-write-your-own-key" class="section level2 hasAnchor" number="7.12">
+<h2><span class="header-section-number">7.12</span> Part 4 — Write your own key<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-4-write-your-own-key" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Keying is one skill. Building the key is a different and harder one, and it is where you find out whether you actually looked at the plant.</p>
+<p>Your TA will give your group <strong>five species</strong> you saw on the walk. Write a dichotomous key that separates all five.</p>
+<p>Rules:</p>
+<ul>
+<li>Couplets must be <strong>paired and mutually exclusive</strong>. Both halves must read as a genuine either/or, not “has X” versus “everything else.”</li>
+<li>Use only characters visible in the field, without a hand lens.</li>
+<li>Every couplet leads either to another couplet or to a species name. Nothing is left dangling.</li>
+<li>No character may be vague. “Large leaves” is not a character state; “leaves over 8 cm long” is.</li>
+</ul>
+<p><strong>If you did the Arbor Day walk, use your <code>Notes</code> column.</strong> The characters the guide mentioned that are not in this manual’s key are exactly the material a better key is built from — and getting one of them into a couplet that actually works is the hardest and most satisfying part of this assignment.</p>
+<p>Then swap keys with another group and run theirs on your five species without telling them what you found. Write down where it broke.</p>
+<blockquote>
+<p>Couplet 26 was left empty in the key above on purpose. Once you have written your own, look at where the key would need a new couplet to admit a species it currently cannot handle, and say what that couplet would be.</p>
+</blockquote>
+<hr />
+</div>
+<div id="assignment-4" class="section level2 hasAnchor" number="7.13">
+<h2><span class="header-section-number">7.13</span> Assignment<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#assignment-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Turn in to your TA:</p>
+<ol style="list-style-type: decimal">
+<li>Your completed datasheet, from Part 1 and the walk together.</li>
+<li>The figure from <code>TreeWalk.R</code> comparing native and planted species.</li>
+<li><strong>Your unknown plant log</strong>, complete, with at least four photographs per unknown.</li>
+<li><strong>Your group’s key to five species</strong>, plus the other group’s written critique of it.</li>
+<li>Your accuracy check from Part 1: how many identifications were correct, broken down by your stated confidence.</li>
+<li><strong>One paragraph.</strong> NAU’s campus holds two tree communities at once — the one that grew here, and the one people planted. Using your own data, describe how they differ, and give one ecological consequence of that difference. (A place to start: which community is drought-adapted, which is not, and what that means for water and for the next few decades of Flagstaff summers.)</li>
+<li><strong>One paragraph on one of your unknowns.</strong> Not a guess at what it is — an account of what you recorded, and an honest answer to this: if you handed your log entry and photographs to a botanist you have never met, could they identify it? If not, name the specific thing you failed to record.</li>
+</ol>
+<p><strong>If you did the Arbor Day walk</strong>, add:</p>
+<ol start="8" style="list-style-type: decimal">
+<li><strong>One character the guide used that is not in this manual’s key</strong>, why it works, and a couplet you would write to capture it.</li>
+</ol>
+<p><strong>If you visited the Deaver Herbarium</strong>, add:</p>
+<ol start="9" style="list-style-type: decimal">
+<li><strong>A specimen you found in the collection that was collected within 20 miles of campus.</strong> Give its collector, date, and locality as written on the label. Then say one thing the label records that your own unknown plant log does not — and whether you think it should.</li>
+</ol>
+<hr />
+</div>
+<div id="notes-for-tas" class="section level2 hasAnchor" number="7.14">
+<h2><span class="header-section-number">7.14</span> Notes for TAs<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#notes-for-tas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="if-you-are-running-the-arbor-day-walk-part-2a" class="section level3 hasAnchor" number="7.14.1">
+<h3><span class="header-section-number">7.14.1</span> If you are running the Arbor Day walk (Part 2A)<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#if-you-are-running-the-arbor-day-walk-part-2a" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Confirm the date early and check it against the class meeting time.</strong> The walk is scheduled around the event, not around this course, and it will not move.</li>
+<li>The walk is roughly half a mile and has historically met at the front of Old Main. Confirm the meeting point each year rather than assuming.</li>
+<li><strong>A class of 30–60 is a lot to add to a public event.</strong> Talk to the organisers about whether to split into two waves, and warn students that they will not all be able to hear from the back.</li>
+<li><strong>Part 1 must happen the week before.</strong> Students who arrive at the walk without having used the key get a pleasant hour outdoors and no learning.</li>
+<li>The <code>CoupletPath</code> column will be sparser than on a self-guided walk. That is expected and it is not a problem — the <code>?</code> entries are the useful ones, because they mark where the key is thin.</li>
+<li>Ask whether the organisers want the class’s datasheets afterward. A class of forty keying and measuring DBH along a route is real curation labour, and offering it back is the right way to be a good guest.</li>
+</ul>
+</div>
+<div id="either-way" class="section level3 hasAnchor" number="7.14.2">
+<h3><span class="header-section-number">7.14.2</span> Either way<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#either-way" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Walk the route yourself the week before</strong> and mark which trees key cleanly. Every route has two or three specimens that are genuinely hard, and it is much better to point students at them deliberately than to have them stumble in.</li>
+<li>The Wommack route deliberately breaks the key. That is a feature — it is the cleanest way to teach that a key cannot tell you when the answer is off its list — but tell students beforehand that some trees will not key out, or a few groups will spend twenty minutes forcing a giant sequoia into couplet 14.</li>
+<li><strong>The <code>Confidence</code> column must be filled in before anyone confirms.</strong> Filled in afterward it teaches nothing.</li>
+<li>Expect leaf arrangement (couplet 15) to be the biggest source of errors. Demonstrate opposite vs. alternate on a real twig at the start, not on a diagram.</li>
+<li><strong>October is the right window for the broadleaf half of this key.</strong> In a spring or winter section, run Group I (conifers) plus bark and twig characters, and say out loud that the constraint is real — professional crews plan their season around exactly this.</li>
+<li>NAU completed a full campus tree inventory in summer 2025 (School of Earth &amp; Sustainability, using TreeKeeper software). If that dataset is available, it would let students check their route against a ground-truth species list.</li>
+</ul>
+</div>
+<div id="unknowns-and-the-herbarium-visit" class="section level3 hasAnchor" number="7.14.3">
+<h3><span class="header-section-number">7.14.3</span> Unknowns and the herbarium visit<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#unknowns-and-the-herbarium-visit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Make sure every group ends the walk with at least two unknowns.</strong> If a route is keying too cleanly, point groups at the Wommack specimens. A group with no unknowns cannot do Part 3, and Part 3 is where the transferable skill is.</li>
+<li><strong>The herbarium visit needs arranging in advance</strong> — access is limited and someone has to meet the group at the doors. Email <strong><a href="mailto:Deaver.Herbarium@nau.edu" class="email">Deaver.Herbarium@nau.edu</a></strong> several days ahead, and expect to split a class of 30–60 into groups; a herbarium is not a lecture hall. Confirm the meeting point and current room when you book, and confirm the Building 20 / Building 21 entrance detail rather than taking it from this chapter.</li>
+<li><strong>Ask what they’d find useful.</strong> They mention student curatorships and note that student collections become part of the herbarium. A class arriving with well-labelled specimens is a contribution; a class arriving with forty badly-pressed twigs is a burden. Which one it is depends entirely on whether Part 3 was taken seriously.</li>
+<li><strong>Do not have students collect anything without settling permissions first.</strong> The arboretum is a curated collection and its trees are not available for pruning; Coconino National Forest, NPS and tribal land generally require permits. Decide before the lab what students may collect and where, and put it on the board.</li>
+<li>If a herbarium visit is not possible in a given term, <strong>the SEINet exercise runs on any computer</strong> and preserves most of the teaching: search a species, filter to Arizona, read a hundred-year-old label off a specimen image. Assignment question 9 works from SEINet as well as from a physical visit.</li>
+<li>The <code>Determiner</code> / <code>DeterminedDate</code> columns will be empty when logs are handed in. That is correct and worth saying out loud — they are there to show students that an identification is attributed and dated, not to be filled in this week.</li>
+</ul>
+</div>
+</div>
+<div id="sources-and-further-reading" class="section level2 hasAnchor" number="7.15">
+<h2><span class="header-section-number">7.15</span> Sources and further reading<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#sources-and-further-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>NAU Arboretum tree walks and interactive map: <a href="https://in.nau.edu/greenhouse/nau-arboretum-tree-walks/" class="uri">https://in.nau.edu/greenhouse/nau-arboretum-tree-walks/</a></li>
+<li>NAU Network video channel, which has carried coverage of the Arbor Day walk: <a href="https://www.youtube.com/@NAUnetwork" class="uri">https://www.youtube.com/@NAUnetwork</a></li>
+<li>Arizona Department of Forestry and Fire Management, <em>Arizona Urban Tree Map field guide, Interior West</em>: <a href="https://dffm.az.gov/sites/default/files/files/forestry/ucf/azutm/AZUTM_tree_guide_interior_west_2015_04_28.pdf" class="uri">https://dffm.az.gov/sites/default/files/files/forestry/ucf/azutm/AZUTM_tree_guide_interior_west_2015_04_28.pdf</a></li>
+<li>University of Arizona Cooperative Extension, <em>Pines of Arizona</em> (AZ1584): <a href="https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1584.pdf" class="uri">https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1584.pdf</a></li>
+<li>USDA PLANTS database, for standard species codes: <a href="https://plants.usda.gov" class="uri">https://plants.usda.gov</a></li>
+<li>Deaver Herbarium, NAU: <a href="https://in.nau.edu/deaver-herbarium/" class="uri">https://in.nau.edu/deaver-herbarium/</a> · visits and identifications: <a href="mailto:Deaver.Herbarium@nau.edu" class="email">Deaver.Herbarium@nau.edu</a></li>
+<li>SEINet Portal Network: <a href="https://swbiodiversity.org/seinet/index.php" class="uri">https://swbiodiversity.org/seinet/index.php</a></li>
+<li>Deaver Herbarium’s records on GBIF: <a href="https://www.gbif.org/dataset/e5d9d04e-ffd1-4395-9b10-76034f0c619c" class="uri">https://www.gbif.org/dataset/e5d9d04e-ffd1-4395-9b10-76034f0c619c</a></li>
+<li>iNaturalist, on how observations become Research Grade: <a href="https://help.inaturalist.org/en/support/solutions/articles/151000169936-what-is-the-data-quality-assessment-and-how-do-observations-qualify-to-become-research-grade-" class="uri">https://help.inaturalist.org/en/support/solutions/articles/151000169936-what-is-the-data-quality-assessment-and-how-do-observations-qualify-to-become-research-grade-</a></li>
+<li>University of Florida Herbarium, <em>Preparation of Plant Specimens for Deposit as Herbarium Vouchers</em> — the source for the label fields and the 30 × 40 cm sheet: <a href="https://www.floridamuseum.ufl.edu/herbarium/methods/vouchers/" class="uri">https://www.floridamuseum.ufl.edu/herbarium/methods/vouchers/</a></li>
+<li>University of Connecticut, <em>Collecting for the CONN Herbarium</em> — the clearest free guide on woody specimens: <a href="https://biodiversity.uconn.edu/wp-content/uploads/sites/556/2022/02/Collecting-for-the-CONN-herbarium.pdf" class="uri">https://biodiversity.uconn.edu/wp-content/uploads/sites/556/2022/02/Collecting-for-the-CONN-herbarium.pdf</a></li>
+</ul>
+<blockquote>
+<p><strong>Instructor note.</strong> The photograph checklist in Part 3 is community best practice, assembled from experienced iNaturalist users — iNaturalist itself publishes no official standard for photographing trees, and this chapter does not claim it does. The GBIF proportions are a September 2026 snapshot and will drift; the iNaturalist share has been growing steadily.</p>
+</blockquote>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="ecological-sampling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="field-methods-running-a-monitoring-plot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/sarasouther/ENV226LabRManual/edit/main/05a-TreeWalk.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": {},
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

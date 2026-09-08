@@ -1,0 +1,235 @@
+# Population structure and demography
+
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Populations. Ecology Practices → Natural history; Fieldwork; Data analysis and interpretation. Cross-Cutting Themes → Space & Time. *BioSkills:* Process of Science → "Describe sources of error and uncertainty in data"; Modeling & Simulation → Purpose of Models.
+
+In the last lab, you watched a population grow. You counted the same microcosm week
+after week, and time did the work for you.
+
+Most populations do not cooperate like that. A ponderosa pine takes decades to do
+anything you could measure in a semester. So ecologists who study long-lived organisms
+almost never watch a population change. Instead they **substitute something else for
+time** — and then defend the substitution.
+
+That is the skill this lab teaches. You will visit a population once, and reconstruct
+its history from what is standing in front of you.
+
+## Choosing a track
+
+This lab runs in three versions. They use different populations and the same analysis.
+Your instructor will tell you which one you are doing.
+
+| Track | Where | What you measure | Weather |
+|---|---|---|---|
+| **A. Campus ponderosa** | Walking distance from class | Trunk diameter of every tree in your plot | Works in snow |
+| **B. Centennial Forest** | NAU's teaching forest, short drive | Same, across a management contrast | Works in snow |
+| **C. Virtual cemetery** | Indoor, computer lab | Age at death from online records | Indoor |
+
+All three produce the same four-column datasheet, so the analysis script does not care
+which one you did.
+
+## Background
+
+### Substituting structure for time
+
+Imagine two forests. In the first, there are many small trees, fewer medium ones, and a
+handful of large ones. In the second, there are almost no small trees, and nearly all of
+the trees are the same middling size.
+
+Neither forest told you its history. But you can read it anyway.
+
+The first forest has a **reverse-J** size distribution — lots of young individuals
+constantly replacing the few that die. That is what a population that has been
+reproducing steadily for a long time looks like.
+
+The second forest has a **gap** where the small trees should be. Something stopped
+recruitment. And because all the survivors are a similar size, they probably established
+at roughly the same time, in a single pulse.
+
+Here is why that matters in Flagstaff. Fire scars at Chimney Spring, just northwest of
+town, record fires every **4.9 years on average between 1540 and 1876** (Fort Valley
+Experimental Forest records). Frequent, low-intensity fire killed pine seedlings before
+they could grow into the canopy, and the forest stayed open. After 1876 — grazing removed
+the fine fuels that carried fire, and later, fire suppression became policy — the fires
+stopped. Seedlings that would have burned survived instead.
+
+The result is a size-class distribution with a century of management history written into
+it, standing on the ground you can walk to from this classroom.
+
+> **Instructor note:** insert the presettlement vs. current stand density figures you
+> prefer here (Covington & Moore 1994 is the standard citation). I have deliberately not
+> filled in numbers I could not verify from a primary source.
+
+### The static life table, and its assumption
+
+If you are willing to assume the population has been growing at a constant rate with
+constant mortality — a **stable stage distribution** — then a single snapshot of size
+classes can be converted into a survivorship curve, as though you had followed one cohort
+from birth to death.
+
+That assumption is often wrong, and the Flagstaff ponderosa forest is a good example of
+how wrong it can be. A recruitment pulse after 1876 violates it badly.
+
+This does not make the method useless. It makes the method *conditional*, and knowing the
+condition is the difference between a number and a number you trust. Part of your
+assignment is to say whether your population plausibly meets the assumption, and what it
+would mean for your conclusions if it does not.
+
+### Survivorship curves
+
+Plotting the log of the number of survivors against age gives one of three shapes:
+
+- **Type I** — most die old. Mortality is concentrated late.
+- **Type II** — constant risk of dying at every age. A straight line on a log scale.
+- **Type III** — most die young. Enormous early mortality, then a few survivors persist.
+
+A pine that produces thousands of seeds and recruits a handful of trees is a textbook
+Type III. A modern human population is close to Type I. If you run Track C, you will
+generate one of these from real records.
+
+## Track A — Campus ponderosa
+
+### Downloads for this lab
+
+- [Population structure datasheet (.csv)](downloads/population_structure_datasheet.csv)
+- [R script for this lab](downloads/PopulationStructure.R)
+
+### Objectives
+
+To infer the recent history of a tree population from its size structure, and to state
+the assumptions that inference depends on.
+
+### Materials
+
+1. Diameter tape, or a standard tape measure
+2. Flagging or pin flags to mark your plot corners
+3. A 30 m tape for laying out the plot
+4. Datasheet and clipboard
+5. Optional: a second person's independent measurement of the same tree
+
+### Procedure
+
+1. **Lay out a plot.** Working in groups of 3–5, establish a 20 m × 20 m plot in the
+   stand your TA assigns you. Mark all four corners before you measure anything.
+
+2. **Measure every tree.** For every ponderosa pine rooted inside the plot, measure the
+   diameter at breast height (**DBH**) — 1.37 m above the ground on the uphill side.
+   Record each tree as its own row. Do not round to convenient numbers.
+
+3. **Include the small ones.** Every tree above 2.5 cm DBH counts. The small trees are
+   the entire story of this lab, and they are the ones people skip because they are
+   tedious. If a stem is below 2.5 cm, record it as a seedling in your notes but not in
+   the datasheet.
+
+4. **Check your measurement error.** Have a second person re-measure five trees without
+   looking at your numbers. Record both. You will report the difference.
+
+5. **Optional — age from whorls.** Ponderosa pine puts out one whorl of branches per
+   year. On saplings short enough to see the whole stem, count the whorls from the base
+   to the tip to estimate the tree's age, and measure the distance between successive
+   whorls to recover its growth history. One visit, one tree, a decade of data.
+
+### Recording your data
+
+Every track uses the same four columns:
+
+```
+Site,Group,IndividualID,Value,ValueType
+```
+
+For Track A, `Value` is DBH in centimetres and `ValueType` is `DBH_cm`. Use `Group` for
+whatever you are comparing — plot number, or open stand versus dense stand.
+
+## Track B — Centennial Forest extension
+
+The Centennial Forest is NAU's own research, teaching and demonstration forest, and it
+contains stands under different management histories: thinned, burned, and untreated.
+
+Run the identical protocol in two contrasting stands and use `Group` to distinguish them.
+This is **space-for-time substitution** — you are not watching one stand change, you are
+comparing stands that have travelled different distances from the same starting point.
+
+Access requires a permit; your instructor arranges this in advance.
+
+## Track C — Virtual cemetery (indoor fallback)
+
+When the weather makes fieldwork impossible, this track builds the same life table from
+human records instead of trees. It is adapted from Lanza's TIEE module (see
+Acknowledgements), which uses gravestone records, online cemetery databases, and census
+data.
+
+1. Choose two groups to compare — two time periods, two regions, or two categories your
+   TA approves.
+2. Collect at least 50 individuals per group from an online cemetery database, recording
+   birth year and death year.
+3. Compute age at death for each individual.
+4. Record one row per individual, with `Value` as age at death in years and `ValueType`
+   as `AgeAtDeath_yr`.
+
+Because the analysis is shared, everything you do from here is identical to Track A.
+
+## Analysis
+
+### One setting you must get right
+
+Near the top of the script there is a line that reads `record_type`. Set it to
+`"standing"` for Tracks A and B, and `"death"` for Track C.
+
+This is not a formatting detail. In Track A, every tree you measured is **alive** — your
+counts are survivors. In Track C, every record is a **death** — your counts are deaths.
+Survivors and deaths do not become a life table by the same arithmetic, and if you set
+this wrong the script will still run and still draw you a survivorship curve. It will
+just be wrong in a way that looks entirely reasonable.
+
+Deciding which kind of data you collected is part of the analysis, not a preliminary to
+it.
+
+### Running the script
+
+Open `PopulationStructure.R`. It will:
+
+1. Bin your individuals into classes
+2. Plot the distribution so you can see its shape
+3. Build a static life table
+4. Plot survivorship on a log scale so you can identify the type
+
+Look at the distribution **before** you compute anything. The shape is the result. The
+life table is how you put numbers on it.
+
+## Assignment
+
+Turn in to your TA:
+
+1. Your size-class (or age-class) distribution figure, with a one-sentence description of
+   its shape.
+2. Your static life table.
+3. Your survivorship curve, and which type it most resembles.
+4. Your measurement-error check: the mean absolute difference between the two observers,
+   and whether it is large enough to change your conclusions.
+5. **The assumption paragraph.** State whether your population plausibly has a stable
+   stage distribution. If you think it does not, explain what specifically violates it,
+   and say which of your conclusions survive anyway.
+
+Item 5 is worth as much as items 1–4 combined. Anyone can bin numbers. The skill is
+knowing what the bins are allowed to tell you.
+
+## Notes for TAs
+
+- The measurement-error check in step 4 is not busywork — it is usually the first time
+  students see that data has error before analysis begins. Do not let groups skip it.
+- Expect students to under-record small trees. Spot-check one plot per group.
+- Track C requires more out-of-class time than Tracks A and B. Lanza's original module
+  budgets two lab sessions plus 3–4 hours per team; trim the scope rather than the
+  analysis if you only have one period.
+- Groups will want to compare their plot to a neighbouring group's. Encourage it — that
+  is a second `Group` level for free.
+
+## Acknowledgements
+
+Track C is adapted from: Lanza, Janet. 2012. Demography from physical cemeteries,
+"virtual cemeteries," and census data. *Teaching Issues and Experiments in Ecology*,
+Vol. 8, Experiment #1.
+<https://www.esa.org/tiee/vol/v8/experiments/lanza/abstract.html>
+
+Fire return interval figures for Chimney Spring are from the Fort Valley Experimental
+Forest centennial volume, Olberding and Moore (eds.), 2008.
+<https://www.fs.usda.gov/rm/pubs/rmrs_p055/rmrs_p055_038_047.pdf>

@@ -1,0 +1,154 @@
+# Urban ecology: the crosstown walk
+
+> **Skills this lab builds.** *4DEE:* Human–Environment Interactions → Human interdependence with the environment; Human impacts on the environment from local to global scales; Ecological Ethics. Ecology Practices → Natural history; Fieldwork; Designing, conducting, and critiquing investigations; Communicating and applying ecology. *BioSkills:* Interdisciplinary Nature of Science → Connecting Scientific Knowledge, Interdisciplinary Problem Solving; Science & Society → Societal Influences, Science's Impact on Society; Communication & Collaboration → Communication.
+
+Every other lab in this manual has taken you to a place chosen because it is relatively free of people: a wash, a stand of pines, a jar. This one goes the other way. You are going to walk a few blocks of Flagstaff and treat the city as what it is — an ecosystem, with gradients, patches, disturbance regimes, and a species composition that is the direct result of decisions people made and are still making.
+
+### Downloads for this lab
+
+- [Urban walk datasheet (.csv)](downloads/urban_walk_datasheet.csv)
+- [R script for this lab](downloads/UrbanEcology.R)
+
+## Objectives
+
+1. Read a city street as an ecological gradient.
+2. Make structured qualitative observations, then design your own quantitative study from them.
+3. Relate differences in urban vegetation and habitat to the history and policy that produced them.
+4. Present and defend a study you designed yourselves.
+
+---
+
+## Background
+
+### A socioeconomic gradient is an ecological gradient
+
+You have already worked with gradients this semester — elevation on the Grimm tree walk, distance from water, burn severity. A gradient is any environmental variable that changes systematically across space and drags biological patterns along with it.
+
+Cities have gradients too, and some of the strongest ones are social. Tree canopy cover, park area per resident, impervious surface, summer surface temperature, bird species richness — all of these vary systematically across neighbourhoods within a single city, and they vary in the same direction as income, and as the history of who was allowed to buy property where.
+
+This is not a metaphor. It is a measurable, repeatedly documented pattern in urban ecology, and it has a mechanism that is entirely ordinary: trees are expensive to plant and take decades to grow, so canopy accumulates where there has been sustained investment, and does not where there has not. A century of decisions is standing in the street, and you can count it.
+
+### The point of walking
+
+The original version of this exercise — Middendorf and Nilon's *Crosstown Walk* — sends students down a single street that crosses several distinct neighbourhoods, on foot, in one continuous transect. Walking is the method, not a way of getting to the method. At driving speed you see none of this. At walking speed you see building condition, street trees, what is growing in the cracks, whether there is shade to stand in, who is outside and what they are doing.
+
+### One more thing worth saying out loud
+
+The last of the authors' five learning goals is this:
+
+> "Student will understand that there is not a single, correct way to do science."
+
+You will design your own study in the second half of this lab, and different groups will design genuinely different ones — some counting birds, some measuring trees, some mapping land cover. They are not competing to find the one right method. They are demonstrating that a question can be attacked from several directions, and that the directions illuminate different things.
+
+---
+
+## The route
+
+Your instructor will assign a transect. The default runs through **Southside**, one of Flagstaff's oldest neighbourhoods, and continues north across the tracks toward downtown and the campus edge — a short walk that crosses a great deal of history.
+
+Southside connects to work you have already done. The **Rio de Flag Flood Control Project**, which the ecological sampling lab is built around, is a joint City of Flagstaff and US Army Corps of Engineers project intended both to restore habitat along the Rio de Flag and to reduce flood risk in historically minority neighbourhoods — a twenty-year, $122 million undertaking. You sampled the restoration end of it. Today you walk the neighbourhood end.
+
+### Conduct
+
+You are walking through the places where people live. Behave accordingly.
+
+- **Do not photograph people, or into windows or yards.** Photograph streetscapes, vegetation and infrastructure only.
+- **Stay on public sidewalks and rights of way.** Do not enter yards to measure a tree.
+- If a resident asks what you are doing, tell them plainly — a class exercise on street trees and neighbourhood habitat.
+- Record what you observe, not what you infer about the people who live there. "Three street trees per block, two in poor condition" is an observation. Statements about residents are not yours to make and are not what this lab measures.
+
+---
+
+## Part 1 — The observation walk
+
+No instruments. Walk the transect in groups of 3–4, with assigned roles: one **recorder**, one **reporter**, and everyone observing. Rotate roles at the halfway point.
+
+Stop at the start of each block and spend five minutes recording:
+
+| Category | What to record |
+|---|---|
+| **Buildings** | Type, approximate density, and condition — abandoned; occupied but in need of repair; litter and graffiti present; good to excellent |
+| **Street trees** | How many, roughly what size, condition, species if you can key them from the tree walk lab |
+| **Other vegetation** | Yards, lots, medians, plants in pavement cracks. Watered or not? |
+| **Impervious surface** | Roughly what fraction of the block is paved or roofed |
+| **Shade** | Is there anywhere to stand out of the sun? |
+| **Open space** | Parks, vacant lots, the wash — how much, and in what condition |
+| **Infrastructure** | Sidewalks, storm drains, street lights, bus stops |
+| **Animals** | Birds, squirrels, insects, dogs — what you actually see and hear |
+
+Record blocks in order so the data is a transect, not a list.
+
+At the end of the walk, before you leave the last block, each group writes down **three things that changed along the transect** and **one thing that surprised them**. Do this outdoors, while you can still see the street. It is markedly harder an hour later.
+
+---
+
+## Part 2 — Your study
+
+Each group now frames a hypothesis about the transect and designs a quantitative study to test it. Your design must be executable in one afternoon by four people with the equipment available.
+
+Some directions that have worked:
+
+- **Street trees.** Identify, measure DBH, and score condition for every street tree along the transect. Test whether canopy or tree size differs between segments. The key from the tree walk lab and the DBH protocol from the population structure lab both apply directly.
+- **Bird richness.** Fixed-duration point counts at set intervals along the transect, all at the same time of day. The species accumulation logic from the diversity lab applies.
+- **Land cover.** Classify a fixed frame — a quadrat of sidewalk, or a satellite image tile — into paved, roofed, bare, herbaceous and canopy. Compare proportions among segments.
+- **Line intercept.** Run a tape along a block and record what is under it at fixed intervals. This is line-point intercept from the field methods lab, transplanted to a street, and it works. The original module includes a worked example of exactly this along one block of its transect.
+- **Shade and surface temperature.** With an infrared thermometer, measure surface temperature on paved and shaded surfaces in each segment at the same time of day.
+
+Whatever you choose, your proposal must state:
+
+1. The hypothesis, and the prediction that follows from it.
+2. What you will measure, and the units.
+3. How you will place your sampling units — and this must be a **defensible sampling design**, not "wherever looked good." Everything from the ecological sampling lab applies here; the fact that you are on a sidewalk changes nothing about bias.
+4. What you will compare to what, and how.
+5. What result would make you reject your hypothesis.
+
+Your TA approves the proposal before you collect anything.
+
+### Recording
+
+```
+Segment,Block,Group,Variable,Value,Unit,Notes
+```
+
+Deliberately long-format, so that groups measuring completely different things can still pool into one class dataset. `UrbanEcology.R` reads this format and produces comparisons across segments for whichever variable you supply.
+
+---
+
+## Part 3 — Presentation
+
+Each group gives a **15-minute presentation**: question, design, results, and what you would do differently.
+
+Then two questions to the whole class:
+
+1. **Where do groups agree?** Several different methods pointed at the same transect. Did they find the same pattern? Convergence from different methods is much stronger evidence than any single method — and divergence is more interesting still.
+2. **What did nobody measure?** Every design leaves things out. Naming what your collective study missed is not self-criticism; it is the discussion section.
+
+---
+
+## Assignment
+
+Turn in to your TA:
+
+1. Your group's observation-walk notes from Part 1.
+2. Your approved proposal.
+3. Your data, in the shared format, and your figure.
+4. Your slides.
+5. **One paragraph.** You measured a pattern across a few blocks of one city. Choose one thing you observed and trace it back to a decision — a policy, an investment, an omission — that plausibly produced it. Then say what evidence you would need to check whether your explanation is right. You are not being asked to be sure; you are being asked to be specific about what would settle it.
+
+---
+
+## Notes for TAs
+
+- **Walk the route yourself first**, with attention to traffic, sidewalk gaps, and where 30 students can safely stand. Break into staggered groups rather than moving as one block.
+- Twelve blocks is about right for the observation walk. The original module notes "usually about 12 blocks."
+- **The conduct rules are not boilerplate.** Say them out loud before you leave, and enforce the no-photographing-people rule. This exercise is only defensible if it is done respectfully.
+- Expect the proposal step to be where groups struggle — they will propose something un-executable or unfalsifiable. Budget real time for reviewing proposals; it is the highest-value teaching in the lab.
+- The module runs comfortably over multiple weeks: week 1 walk and proposal, week 2 self-scheduled data collection, week 3 analysis and discussion, week 4 presentations. It also compresses into one lab period plus outside time if the slot is tight.
+- Rubrics, a participation assessment and a background questionnaire ship with the original module and are worth using as-is. The module does **not** include a blank field datasheet — students design their own recording forms, which is intentional.
+
+## Sources
+
+Adapted from: Middendorf, G., and C. Nilon. 2005. A crosstown walk to assess environmental changes along an urban socioeconomic gradient. *Teaching Issues and Experiments in Ecology*, Vol. 3, Experiment #3. <https://tiee.esa.org/vol/v3/experiments/crosstown/abstract.html>
+
+- Module downloads, including rubrics and assessment materials: <https://tiee.esa.org/vol/v3/experiments/crosstown/downloads.html>
+- Full module PDF: <https://www.esa.org/tiee/vol/v3/experiments/crosstown/pdf/crosstown.pdf>

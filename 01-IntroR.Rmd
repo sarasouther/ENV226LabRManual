@@ -1,5 +1,7 @@
 # Welcome to R
 
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Quantitative reasoning and computational thinking. *BioSkills:* Quantitative Reasoning → "Record, organize, and annotate simple data sets"; "Apply the tools of graphing, statistics, and data science to analyze biological data."
+
 R is a free, open-source program used by ecologists and other scientists to work with data—from organizing spreadsheets to making figures and running analyses.
 
 In this course, we’ll use R to learn the basics of data analysis. You do not need prior coding experience. You also do not need to understand everything right away. The goal today is simply to get R working on your computer and take the first steps.
@@ -72,7 +74,11 @@ Once every has entered your responses, have your TA check-out the google sheet. 
 
 [Download the data file (.csv)](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/export?format=csv)
 
-Then, download your R script: [Download the R file](https://drive.google.com/uc?export=download&id=1JKAzcU--tpLG3bSXXNwF8NO3PI5x_jkW) Download and use the R script to practice with R.
+**Save it as `WelcomeToENV226.csv`.** Your browser may add something to the name, like `WelcomeToENV226 - Sheet1.csv` — rename it so it matches exactly, or the R script will not find it.
+
+If the class data isn't ready yet, you can run the script on an example file with the same columns: [example data (.csv)](downloads/WelcomeToENV226.csv)
+
+Then, download your R script: [Download the R file](downloads/intro.R) Download and use the R script to practice with R.
 
 You should have these two files and place them inside that folder:
 
@@ -105,9 +111,33 @@ Install the tidyverse (one time only)
 
 Run this once in the Console:
 
-```{r}
+```{r eval=FALSE}
 install.packages("tidyverse")
 ```
+
+### The full package list for this course
+
+Different labs use different packages. Rather than installing them one at a time
+mid-lab, run this block **once** at the start of the semester and you are set for
+every chapter:
+
+```{r eval=FALSE}
+install.packages(c(
+  "tidyverse",    # used in almost every lab
+  "car",          # invasive species
+  "ggpubr",       # invasive species
+  "gridExtra",    # natural selection
+  "gplots",       # plant population biology
+  "popbio",       # plant population biology - matrix models and PVA
+  "dplR"          # dendrochronology - tree rings
+))
+```
+
+The species distribution modeling lab needs a larger set of spatial packages, and
+its script installs those for you the first time you run it.
+
+If a lab script stops with `there is no package called '...'`, you have found one
+this list missed - install it and tell your instructor so it can be added.
 
 If asked, choose Yes to install dependencies.
 

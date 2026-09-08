@@ -1,0 +1,7 @@
+Treatment,Day,PopulationSize
+LowInitialDensity,0,5
+LowInitialDensity,7,23
+LowInitialDensity,14,62
+HighInitialDensity,0,25
+HighInitialDensity,7,79
+HighInitialDensity,14,108

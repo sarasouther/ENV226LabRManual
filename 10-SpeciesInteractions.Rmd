@@ -1,5 +1,7 @@
 # Species interaction project
 
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Communities. Ecology Practices → Designing, conducting, and critiquing investigations; Working collaboratively; Communicating and applying ecology. *BioSkills:* Process of Science → "Formulate testable hypotheses and state their predictions"; Communication & Collaboration → "Use a variety of modes to communicate science (e.g., oral, written, visual)."
+
 ## Introduction 
 
 When you look at a given ecological community (whether it’s a ponderosa pine forest, a meadow, or a garden), you are looking at the combined results of thousands of interactions. Interactions can occur between species (i.e., interspecific interactions) or within (among the same) species (i.e., intraspecific interactions). Studies of ecological interactions are important in a range of disciplines, including agriculture, disease ecology, restoration, forestry and fisheries. 
@@ -26,9 +28,9 @@ Over the next six to eight weeks, you will visit your experimental plants in the
 
 Please download:
 
-- [A reading about plant species interactions](https://drive.google.com/uc?export=download&id=1-moim7ZLWY_sMWzRfh0UXx6NKRnOWy8E)
-- [Experimental design worksheet for turn-in](https://drive.google.com/uc?export=download&id=1-s5YEWarOOD420vWT_zcQ8FGdOKB07tU)
-- [An example data sheet](https://drive.google.com/uc?export=download&id=1-skItueuzz_NAF4Qm9uMV3mPaGTgbFAF)
+- [A reading about plant species interactions](downloads/HuotEtAl2014.pdf)
+- [Experimental design worksheet for turn-in](downloads/EcologicalInteractions_TurninWeek1.docx)
+- [An example data sheet](downloads/SpeciesInteractionsDatasheet.csv)
 
 **This is a datasheet for an experiment with 12 pots and two species, with each pot containing species A & B. You may need to adjust the structure of the dataset depending your experimental design**
 
@@ -107,8 +109,8 @@ Refer back to lab manual chapters 3 and 4 for a reminder about descriptive and i
 
 Please download:
 
-- [Poster instructions](https://docs.google.com/document/d/1__T1jhAOm3JKRFCgicyOp7SqHQGBpwLU/export?format=docx)
-- [Peer evaluation](https://drive.google.com/uc?export=download&id=1F-1RDATlsQs7ZsMd3VmexTc8I7xltD22)
+- [Poster instructions](downloads/LabPosterInstructions.pdf)
+- [Peer evaluation](downloads/GroupMemberAssessment.pdf)
 
 Once you have all of your data, you will prepare a poster with your group detailing your experiment and its outcome. 
 For the poster you will follow standard scientific writing style (see handout). Using the statistical lessons and R scripts that you have received earlier in the semester, analyze your data and create figures. Remember the correct methods for reporting results and writing figure lessons. 

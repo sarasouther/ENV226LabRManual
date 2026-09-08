@@ -1,5 +1,7 @@
 # Species diversity
 
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Communities. Ecology Practices → Natural history; Quantitative reasoning and computational thinking. *BioSkills:* Quantitative Reasoning → "Interpret the biological meaning of quantitative results"; Science & Society → Ethics.
+
 ## Introduction
 
 Diversity and the measurement of diversity are central to many issues in ecological research as well as for applying ecology to real world problems. Every textbook in ecology devotes considerable description and explanation of species diversity, species richness, and species evenness. Community ecologists use measures of diversity to study and explain ecological patterns in many different types of communities.In terrestrial ecosystems, litter decomposition has important effects on processes such as nutrient cycling and community structure. Decomposition is affected by the type and quality of litter, climate, the edaphic conditions (including soil temperature, hydration, and chemistry), and the community of decomposer organisms (Swift et al. 1979).
@@ -33,7 +35,7 @@ Here are the video links:
 
 ## Downloads for this lab
 
-[Directions to the meeting area and approximate location of the compost area](https://docs.google.com/document/d/1tPXp0FvchBA4hqernEQKmI8_eDEMTka9/export?format=docx)
+[Directions to the meeting area](downloads/DirectionsToCompostSite.docx) and a [map of the compost site](downloads/MapToCompost.pdf)
 
 [Exact location of the compost pile](https://maps.app.goo.gl/BTxo4DuPnW1kboyc8)
 
@@ -76,11 +78,12 @@ Please turn-in:
 
 Please download this information:
 
-- [Data sheets for recording arthropod diversity](https://docs.google.com/document/d/17EEEAznHCsfMOvyqD2xU2wx9W7enbTth/export?format=docx)
-- [Taxonomic key for arthropod identification](https://drive.google.com/uc?export=download&id=15L5cU5sXxGj-w83Hm0Tfgavl9iRG-vUO)
-- [Excel files to calculate diversity](https://docs.google.com/spreadsheets/d/1MbHuYrZbnnisuUqpPi8_IswaG8dORmrH/export?format=xlsx)
-- [Reading on Shannon's Index](https://drive.google.com/uc?export=download&id=1ymTaRVXzTZHUAs1w6miGt-1Sdfbxv9LI)
-- [Discussion questions](https://docs.google.com/document/d/1POS4xISzodRSV3urLwb2b_KMnCDd1Tmg/export?format=docx)
+- [Data sheets for recording arthropod diversity](downloads/IndividualTallySheets.docx)
+- [Taxon recording table](downloads/TaxonRecordingDoc.docx)
+- [Taxonomic key for arthropod identification](downloads/SoilInvertebrateKey.pdf)
+- [Excel files to calculate diversity](downloads/DiversityCalculator.xlsx)
+- [Reading on Shannon's Index](downloads/ShannonDiversityReading.pdf)
+- [Discussion questions](downloads/DiscussionQuestions.docx)
 
 In this lab we will be analyzing the data from the compost arthropod lab to determine values for  species richness, evenness, and diversity. We will compare two metrics of soil invertebrate  biodiversity. 
 
@@ -100,6 +103,6 @@ Please turn in your discussion questions.
 
 ## Acknowledgements
 
-Material in this lab is based mainly on: Boyce, Richard L. 2005. Life under your feet: measuring soil invertebrate diversity.http://tiee.esa.org/vol/v3/experiments/soil/abstract.html. 
+Material in this lab is based mainly on: Boyce, Richard L. 2005. Life under your feet: measuring soil invertebrate diversity. <https://tiee.esa.org/vol/v3/experiments/soil/abstract.html> 
 
 

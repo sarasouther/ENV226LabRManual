@@ -4,7 +4,7 @@ output_dir: "docs"
 language:
   ui:
     chapter_name: "Chapter "
-resource_files: ["images/**"]
+resource_files: ["images/**", "downloads/**"]
 rmd_files: [
   "index.Rmd",
   "01-IntroR.Rmd",
@@ -12,12 +12,19 @@ rmd_files: [
   "03-BasicStatisticalTest.Rmd",
   "04-SelectingStatisticalTests.Rmd",
   "05-EcologicalSampling.Rmd",
+  "05a-TreeWalk.Rmd",
+  "05b-FieldMethods.Rmd",
+  "05c-Dendrochronology.Rmd",
   "06-NaturalSelection.Rmd",
   "07-PopulationEcology.Rmd",
+  "07a-PopulationStructure.Rmd",
+  "07b-PlantDemography.Rmd",
   "08-InvasiveSpecies.Rmd",
   "09-WaterQuality.Rmd",
   "10-SpeciesInteractions.Rmd",
   "11-SpeciesDiversity.Rmd",
+  "11a-UrbanEcology.Rmd",
   "12-SpeciesDistributionModeling.Rmd",
+  "12a-LabReportGuidelines.Rmd",
   "13-Conclusion.Rmd"
 ]

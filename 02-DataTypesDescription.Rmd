@@ -1,5 +1,7 @@
 # Descriptive statistics
 
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Data analysis and interpretation; Quantitative reasoning and computational thinking. *BioSkills:* Quantitative Reasoning → "Perform basic calculations (e.g., percentages, frequencies, rates, means)"; "Create and interpret informative graphs and other data visualizations."
+
 Over the next few weeks, we will build your skills evaluating and developing experiments, collecting data, analyzing data, and reporting results. We will start with something familiar to most folks in the class: descriptive statistics. Descriptive statistics refers to quantifying features of a focal population (e.g., describing the mean height of the adult population of the U.S., or the percent of a community that consists of flowering plants). Descriptive statistics aren’t statistical tests (which we will get to in the next tutorial), but they are a key part of the results section of a manuscript. They tell us what our data look like—summarizing central tendencies, variation, and overall patterns—so that we can see the “big picture” before diving into more complex analyses. In other words, descriptive statistics provide the foundation for interpreting data and for deciding what kinds of formal tests or models we might need next.
 
 They are also an essential part of a complete results summary in a manuscript, which typically includes three components:
@@ -18,14 +20,14 @@ In this lab, we will focus exclusively on data description and a teeny bit of vi
 
 Last week, you should have created a folder to keep files for lab. Download these materials and place in your folder:
 
-- For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](https://drive.google.com/uc?export=download&id=1jhqzC8Qms-KajOj60hCt1jegW1b1BQPU)
+- For your reference, here is a guide that shows the basics formulas for calculations in R: [Supplementary Material](downloads/calculator.pdf)
 
-- [Download the example dataset](https://drive.google.com/uc?export=download&id=11ul4c3e6Ucqml5bmwiPmC81vgCEVno3D)
+- [Download the example dataset](downloads/summarystatsdata.csv)
 
 The code can be used to import the data, but in case you wanted to access the data yourself - provided above!
 
 - Build on this code, to generate your description of the petal lengths of your focal species:
-[R Script for Chapter 1](https://drive.google.com/uc?export=download&id=1vyxsv3L2-zMJ3MXUd0duMRngvuuYRZc9)
+[R Script for Chapter 1](downloads/summarystatistics.R)
 
 - [Watch this video if you need additional help](https://youtu.be/sSPQRhNgZF0)
 

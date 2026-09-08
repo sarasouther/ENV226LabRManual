@@ -1,0 +1,241 @@
+# Dendrochronology: reading time in wood
+
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Natural history; Quantitative reasoning and computational thinking; Data analysis and interpretation. Cross-Cutting Themes → Space & Time. Human–Environment Interactions → Human impacts on the environment from local to global scales. *BioSkills:* Quantitative Reasoning → "Apply the tools of graphing, statistics, and data science to analyze biological data"; Process of Science → Data Interpretation & Evaluation.
+
+> **Scheduling note for instructors.** This chapter and the field methods chapter are designed as **term alternates in one slot** — field methods in fall, dendrochronology in spring. Dendro is entirely indoor once the samples are in the room, which is why it is the spring lab in a town where the ground is frozen until April.
+
+A ponderosa pine standing on the Fort Valley flats put on a ring last year, and another the year before that, and another every year since before Arizona was a state. Nobody was recording rainfall in northern Arizona in 1750. The tree was.
+
+That is what this lab is about: wood as an archive, and the specific discipline required to read it without fooling yourself.
+
+### Downloads for this lab
+
+- [Ring width datasheet (.csv)](downloads/ring_width_datasheet.csv)
+- [R script for this lab](downloads/Dendrochronology.R)
+
+You will also need the R package **`dplR`** (Dendrochronology Program Library in R). Install it once:
+
+```{r eval=FALSE}
+install.packages("dplR")
+```
+
+## Objectives
+
+1. Read a sequence of annual rings and describe its pattern.
+2. Understand why counting rings is not dating rings, and what crossdating adds.
+3. Identify pointer years in a real Arizona ponderosa chronology and relate them to documented drought.
+4. Interpret a fire-scarred cross-section as a record of a management history.
+
+---
+
+## Background
+
+### One ring, one year — usually
+
+In a temperate or semi-arid climate a tree grows in a single burst each year and then stops. The cells laid down early in the season are large and thin-walled, so that wood looks pale: **earlywood**. Late in the season the cells are small and thick-walled, and that wood looks dark: **latewood**. The sharp boundary where dark latewood meets the next year's pale earlywood is the ring boundary, and one earlywood-plus-latewood pair is one year.
+
+That is the rule. It has two well-known exceptions, and both of them are why this lab exists:
+
+- A **locally absent ring** (or "missing ring") happens when a year is so bad the tree fails to lay down wood at all — at least around part of its circumference. Count the rings and you will be one year short, and every ring beyond it will carry the wrong date.
+- A **false ring** happens when growth stops and restarts within one season, often after a dry spell breaks. It looks like a ring boundary but is not. Count it and you are one year long.
+
+Neither of these announces itself. This is the central problem of dendrochronology, and counting cannot solve it.
+
+### Crossdating
+
+The solution is not to count better. It is to stop relying on counting at all.
+
+Growth is limited by the same climate across a whole region, so trees in one area vary **together**: a drought year is narrow in nearly every tree, a wet year is wide in nearly every tree. That gives each stretch of years a distinctive fingerprint of wide and narrow — a barcode, in effect — that repeats across samples.
+
+**Crossdating** matches those patterns among samples so that every individual ring is assigned its exact year of formation. Because the pattern is what carries the date, a missing ring shows up as a *misalignment* rather than as an invisible off-by-one. The sequence stops matching, and you know exactly where to look.
+
+The classic demonstration comes from northern Arizona. At Betatakin, two Douglas-fir beams cut by ancestral Puebloan builders show the same distinctive sequence of narrow rings in the same relative positions — which proves the beams grew at the same time, and lets both be dated absolutely against a regional master chronology. That is how a building with no written record acquires a construction date.
+
+### Marker years and pointer years
+
+A **marker year** is a ring so distinctively narrow (or wide) across an entire stand that it works as an anchor — you can find it in almost any sample and count outward from it.
+
+Formally, a **pointer year** is a year in which a large fraction of the series in a collection show growth change in the same direction. `dplR` implements this: a year counts as a pointer year when at least 75% of series show a relative growth change exceeding 10%, in the same direction. Both thresholds are adjustable.
+
+> **We are not giving you a list of marker years to memorise.** Lists of "the" Arizona marker years circulate, and we could not trace one to a source we were willing to print. You will derive yours from data instead, which is both more defensible and a better exercise.
+
+### What limits a ponderosa in northern Arizona
+
+Water. This is a semi-arid site — the trees are not short of light or warmth, they are short of moisture, and that is exactly why their rings are **sensitive** (variable from year to year) rather than **complacent** (all about the same width). Sensitive trees are informative trees. A well-watered tree in a mild climate produces beautiful uniform rings that tell you almost nothing.
+
+Some droughts you can check your pointer years against:
+
+- **2000–2004** produced the lowest five-year natural flow on the Colorado River since records began in 1906, and 2000–2009 the lowest ten-year mean. Tree-ring reconstruction places early-21st-century conditions as matching or exceeding the severity of the **1950s** drought (Woodhouse et al. 2010).
+- The **2002–2003** drought in the Southwest was warmer than the 1950s drought and drove regional vegetation die-off across more than 12,000 km², including over 90% mortality of pinyon pine at some sites (Breshears et al. 2005).
+- Longer reconstructions from more than 1,500 tree-ring chronologies place **2000–2021 as the driest 22-year period in the Southwest since 800 CE**, with the late 1500s the driest reconstructed period before that.
+
+Every one of those statements exists because someone did what you are about to do.
+
+---
+
+## Track A — Physical cross-sections
+
+If your instructor has obtained ponderosa cross-sections — the Ecological Restoration Institute on this campus works with fire-scarred material — you will start with wood in your hands.
+
+### Materials
+
+1. A sanded cross-section or increment core
+2. Hand lens
+3. Fine-pointed dividers or a ruler with millimetre marks
+4. Pencil
+5. Strip of paper, at least as long as the sample radius
+
+### Procedure
+
+1. **Look at the whole sample before you measure anything.** Find the pith (centre) and the bark side. Sketch the outline and mark any scars, cracks or unusual features.
+
+2. **Find the ring boundaries.** Work outward from the pith with the hand lens. The boundary is where dark latewood meets pale earlywood. Mark each one lightly in pencil.
+
+3. **Build a skeleton plot.** Lay your paper strip along a radius. For each ring, make a mark whose **length is inversely proportional to how wide the ring is** — a long tick for a conspicuously narrow ring, nothing at all for an average ring, and a mark below the line for a conspicuously wide one. You are deliberately throwing away the average years and keeping only the extremes, because it is the extremes that carry the pattern.
+
+   Use two special marks: a **dashed** tick where you suspect a locally absent ring, and a **diagonal** tick where you suspect a false ring.
+
+4. **Compare skeleton plots with another group.** Slide one strip along the other until the long ticks line up. If the strips will not align anywhere, one of you has a missing or false ring. Find it. This is crossdating, done by hand, and it is exactly what the software does numerically.
+
+5. **Measure ring widths** for the last 50 years and record them in `ring_width_datasheet.csv`:
+
+```
+SampleID,Year,RingWidth_mm
+```
+
+### Fire scars
+
+A surface fire that burns hot enough to kill part of the cambium leaves a wound. The tree does not heal over it the way skin does — it grows *around* it, laying down curled lobes of new wood from the edges of the injury inward. In cross-section those lobes are visible, and because each one sits between two datable rings, **the year of the fire is recoverable** — often the season within the year as well, from the position of the scar within the earlywood or latewood.
+
+A single northern Arizona ponderosa can carry 34 fire scars over 240 years. Work out what that means for how often this forest used to burn.
+
+Then set it against what the population structure lab found. Fire scars at Chimney Spring, northwest of Flagstaff, record fires roughly every 4.9 years between 1540 and 1876. After 1876 they stop — livestock grazing removed the fine fuels that carried surface fire, and organised fire suppression followed. The trees that would have burned as seedlings instead grew into the dense stands you walked through.
+
+**That is the same event, recorded twice, in two independent archives:** as an absence of scars after 1876 in the wood, and as a pulse of same-aged trees in the size structure of the stand. When two independent lines of evidence point at the same date, you have something much stronger than either alone.
+
+---
+
+## Track B — ITRDB chronologies (no physical material needed)
+
+The **International Tree-Ring Data Bank**, archived by NOAA's National Centers for Environmental Information, holds tens of thousands of tree-ring collections contributed by researchers worldwide, free to download. Several are from ponderosa pine within an hour of this classroom.
+
+### Getting the data
+
+ITRDB files are named by state code plus site number. Arizona sites are `az###`.
+
+| Site | Code | Location | Elevation | Span |
+|---|---|---|---|---|
+| **G.A. Pearson Natural Area** | **AZ617** | 35.3 N, 111.7 W — Fort Valley, ~10 km from campus | 2213 m | 1767–2016 |
+| Robinson Mountain (update) | AZ606 | 35.38 N, 111.53 W | 2225 m | 1621–2016 |
+| Slate Mountain (update) | AZ608 | 35.50 N, 111.83 W | 2194 m | 1590–2016 |
+| Beaver Creek Watershed | AZ509 | 34.88 N, 111.57 W | 2050 m | 1728–1985 |
+
+Raw ring-width measurements, Tucson format:
+
+```
+https://www.ncei.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/az617.rwl
+```
+
+The same file with a full metadata header, readable in a text editor:
+
+```
+https://www.ncei.noaa.gov/pub/data/paleo/treering/measurements/northamerica/usa/az617-rwl-noaa.txt
+```
+
+Or search interactively: <https://www.ncei.noaa.gov/access/paleo-search/?dataTypeId=18>
+
+**Start with AZ617.** It is the closest site to campus, it is a well-replicated collection (580 dated series), and the trees are growing in the same forest type you have been walking through all semester.
+
+### Reading it into R
+
+`dplR` reads the Tucson format ITRDB uses directly:
+
+```{r eval=FALSE}
+library(dplR)
+az617 <- read.rwl("az617.rwl")
+rwl.report(az617)
+plot(az617, plot.type = "spag")
+```
+
+`dplR` also ships several ITRDB collections as built-in datasets, so you can try everything before you download anything:
+
+```{r eval=FALSE}
+data(ca533)   # Campito Mountain, CA — bristlecone pine
+data(co021)   # Mesa Verde, CO
+data(nm046)   # Los Alamos, NM
+data(gp.rwl)  # ponderosa pine, with DBH and pith offsets
+```
+
+Those names are literal ITRDB site codes. `ca533` in R and `ca533.rwl` on the NOAA server are the same collection.
+
+### Checking the dating
+
+```{r eval=FALSE}
+crossdate <- corr.rwl.seg(az617, seg.length = 50, pcrit = 0.05)
+```
+
+This takes each series in turn, builds a master chronology from **all the others**, and correlates the two in overlapping 50-year windows. The plot is colour-coded:
+
+- **Blue** — this segment correlates with the master above the threshold. Dating is fine.
+- **Red** — this segment fails the threshold. Possible dating error, worth investigating.
+- **Green** — not enough overlap to judge.
+
+A published ITRDB collection should be mostly blue. **Run it anyway.** Checking published data rather than assuming it is correct is a habit worth acquiring, and finding the occasional red segment in a professional dataset is instructive in its own right.
+
+### Detrending, and why
+
+A young tree puts on wide rings simply because it is adding wood to a small circumference. As it ages, the same volume of wood spreads over a larger circle, so ring widths decline — a slow downward trend that has nothing to do with climate.
+
+**Detrending** removes that age-related trend so that what remains is the year-to-year variation you actually want. Each series is divided by a fitted curve, producing a dimensionless **ring width index** centred on 1.
+
+```{r eval=FALSE}
+az617.rwi <- detrend(az617, method = "Spline")
+az617.crn <- chron(az617.rwi)
+plot(az617.crn, add.spline = TRUE, nyrs = 20)
+```
+
+Dividing rather than subtracting matters: a 0.2 mm difference is enormous in a 0.5 mm ring and trivial in a 3 mm one, so the *ratio* is comparable across ages and the difference is not.
+
+### Finding your pointer years
+
+```{r eval=FALSE}
+pt <- pointer(az617.rwi)
+```
+
+Default thresholds: at least 75% of series showing more than 10% relative growth change in the same direction. Try tightening and loosening both and watch which years survive — the ones that persist under every setting are your robust marker years.
+
+Now check them against history. Do your negative pointer years line up with the 1950s drought? With 2002? With the late 1500s, if your chronology reaches that far? Where they line up, you have independent confirmation. Where they do not, you have something to explain — and local factors (an insect outbreak, a fire, a thinning treatment) are as real as regional climate.
+
+---
+
+## Assignment
+
+Turn in to your TA:
+
+1. **Track A:** your skeleton plot, photographed or scanned, with any suspected missing or false rings marked.
+   **Track B:** your `corr.rwl.seg` plot, and a sentence on whether the collection appears correctly dated.
+2. Your detrended chronology plot with a 20-year spline.
+3. **Your list of pointer years**, with the thresholds you used, and a note of which survived when you changed them.
+4. **A comparison table**: your negative pointer years alongside documented Southwest droughts. Say which match, which do not, and offer one hypothesis for a mismatch.
+5. **One paragraph.** Ring counting and crossdating both produce a date for a ring. Explain what crossdating gives you that counting cannot, and describe a specific situation in which the difference would change a conclusion.
+
+---
+
+## Notes for TAs
+
+- **Contact the Ecological Restoration Institute early** about fire-scarred cross-sections, ideally already sanded (<https://eri.nau.edu/>). Whether they can lend material decides whether this lab is free or needs a $500 increment borer. Track B runs at zero cost either way, so the lab is never blocked.
+- ERI's public piece *What Fire Scars Tell Us About the Past* is a good pre-lab reading and is written for a general audience.
+- If sanding is needed, it takes longer than anyone expects. Progressive grits to at least 400; the ring boundaries do not resolve under a hand lens until the surface is genuinely polished.
+- **Do the skeleton plot even if you are running Track B.** Ten minutes on paper is what makes the numerical crossdating comprehensible rather than magic, and it is the step students remember years later.
+- The University of Arizona's Laboratory of Tree-Ring Research has a free step-by-step crossdating tutorial: <https://www.ltrr.arizona.edu/skeletonplot/introcrossdate.htm>. The interactive applet on that site is Java-based and will not run in a current browser; the static pages are fine. LTRR also loans science kits and offers classroom visits (<https://ltrr.arizona.edu/educators>).
+- `dplR` version 1.7.9 was current as of mid-2026. Have students run `install.packages("dplR")` before lab, not during it.
+
+## Sources
+
+- Bunn, A. `dplR`: Dendrochronology Program Library in R. <https://cran.r-project.org/package=dplR>. Workshop and tutorials: <https://opendendro.github.io/dplR-workshop/>
+- International Tree-Ring Data Bank, NOAA NCEI: <https://www.ncei.noaa.gov/products/paleoclimatology/tree-ring> · archive root <https://www.ncei.noaa.gov/pub/data/paleo/treering/>
+- Laboratory of Tree-Ring Research, University of Arizona — crossdating basics: <https://www.ltrr.arizona.edu/lorim/basic.html>
+- Ecological Restoration Institute, NAU: <https://eri.nau.edu/>
+- Breshears, D.D., et al. 2005. Regional vegetation die-off in response to global-change-type drought. *PNAS* 102(42): 15144–15148. <https://doi.org/10.1073/pnas.0505734102>
+- Woodhouse, C.A., D.M. Meko, G.M. MacDonald, D.W. Stahle, and E.R. Cook. 2010. A 1,200-year perspective of 21st century drought in southwestern North America. *PNAS* 107(50): 21283–21288.
+- Olberding, S.D., and M.M. Moore (eds.). 2008. *Fort Valley Experimental Forest — A Century of Research 1908–2008*. USDA Forest Service RMRS-P-55. <https://www.fs.usda.gov/rm/pubs/rmrs_p055/rmrs_p055_038_047.pdf>

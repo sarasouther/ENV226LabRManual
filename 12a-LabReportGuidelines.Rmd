@@ -1,0 +1,199 @@
+# Written lab report guidelines {#labreport}
+
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Communicating and applying ecology. *BioSkills:* Communication & Collaboration → "Share ideas, data, and findings with others clearly and accurately"; "Use appropriate language and style to communicate science effectively to targeted audiences"; Process of Science → "Make evidence-based arguments using your own and others' findings."
+
+This chapter is the reference several of the labs point back to. Read it before you write your first lab report, and come back to the rubric at the end of this chapter before you submit — **that rubric is what your TA grades with.**
+
+A well-written scientific report must:
+
+- Be clear, concise, and organized
+- Completely describe the procedures that were followed and the results that were obtained
+- Relate results to the existing state of knowledge (using citations) and interpret their significance — what do the results mean?
+
+## General rules
+
+Lab reports should be formatted as follows:
+
+- Typed
+- Double spaced
+- 12 point font
+- 1 inch margins
+- Page numbers
+- Proof-read!
+- Label sections (Introduction, Methods, Results, etc.)
+
+### Needed components
+
+- **Title page** — your name, class and section, date, and the abstract. This should be on its own separate page.
+- **Body of the text:**
+  - Full introduction, addressing all five questions outlined in the specific instructions below, including references to published literature on the topic
+  - Methods & Analysis
+  - Results
+  - Discussion & Conclusion
+- **Tables & Figures** — on a separate page
+- **Literature Cited** — must reference a minimum of 3 peer-reviewed scientific journals
+
+## Components and instructions
+
+### Abstract (write last)
+
+A brief summary of the purpose of your experiment, the hypotheses you tested, how you performed your test, what results were found, what hypotheses were supported or rejected, and what your results imply with regard to the research question. The abstract will probably be about 5–6 sentences in length.
+
+### Introduction (write after results)
+
+This section should explain the objectives of the study, and why it is a worthwhile effort. Be as specific as possible. Please be sure to address the following questions:
+
+- Why did you undertake this study?
+- What is the existing state of knowledge about this topic? Refer to outside sources to answer this question and use in-text citations.
+- What are your research questions and objectives?
+- What is your hypothesis? Include a "because" statement.
+- What result(s) would you expect to see if your hypothesis is supported?
+
+Previous studies are used often to help focus your audience toward the specific questions and the scope of the current study. If there are readings associated with this lab, you should refer to those papers here, as well as in the discussion. You will most likely need to find a few outside sources as well.
+
+### Methods & Analysis (write first)
+
+Step-by-step instructions on how the lab was performed, in sentence form, using your own words. This section must answer all the basic questions about the way the study was conducted: what, when, where, and how.
+
+**WHAT.** What are the organism(s) being studied? Explain why this is an appropriate unit of study for the research. Italicize all scientific names — e.g. Mountain goat (*Oreamnos americanus*). Be certain to reference your sources if plant or animal descriptions are taken from the literature.
+
+**WHEN.** Give the time periods during which the work was done — year, month, day, time of day — whenever this is relevant to the type of data collected. Describe the special conditions of the organism (developmental or reproductive state) in the context of the seasonal cycle, or within other natural cycles such as weather, that prevailed during the study period.
+
+**WHERE.** Location — latitude and longitude, elevation, site, state.
+
+**HOW.** Explain the techniques of collecting data or conducting experiments, and describe the equipment used. Where these procedures and equipment are standard, do this by reference to other publications. Otherwise, describe them in enough detail that a reader can duplicate them. State the techniques used to record, summarize, and analyze the data.
+
+Although you should try to cover all four topics in your methods section, it is neither necessary nor advisable to break them apart into subheadings. The best written methods cover materials and methods with well written paragraphs.
+
+### Results (write second)
+
+Include all data and statistics. Do not include raw, un-summarized data in this section, but referring to specific numbers that illustrate trends or significant data points is encouraged. Actual data sheets, if included in the lab report, should be in an appendix. Data should be summarized and analyzed — means, standard deviation, and so on — and presented as visually as possible. Well constructed graphs are clearer than tables for most data.
+
+Refer to the figures and tables within a narrative, describing the trends. In other words, walk the reader through your results. The opening paragraph should state the overall trends found in the data — but do **not** say SIGNIFICANT difference unless you did the statistics to test for significance. The following paragraphs should give the specific findings that support the overall trend.
+
+Do not say "See tables for results" or "Figure one shows that…" or "(See Figure 1)." Say:
+
+> There were more herbivores than primary producers (Fig. 1).
+
+This section should contain, in summarized form, the data and observations obtained in the study. Use complete sentences and paragraph formatting. Refer to each table and figure individually in this section. In general, the presentation of data as a table or figure is sufficient; it is usually not necessary that the same data be presented in both ways. To be complete and concise in the text, concentrate on general patterns, trends and differences in the results and not on the details of the numbers themselves — although referring to averages, or even individual numbers that illustrate a point, is very useful.
+
+For labs with statistical analyses, you should make every attempt to combine statements about the significance of differences with a precise indication, in parentheses, of the test used and the probability. For example:
+
+> The difference between means of two samples was highly significant (paired *t* test; *t* = 6.35, DF = 11, *p* < 0.01; Sokal and Rohlf 1981).
+
+Use the metric system and other international units whenever possible. Write numbers as numerals whenever they are associated with measurement units (e.g. 3 meters) or are parts of dates or mathematical expressions. In other cases, spell them out for numbers less than 10 (e.g. five cells), and give them as numerals for larger values (e.g. 21 cells).
+
+The results section should summarize the data but should be free of interpretation of the data. Any explanation, interpretation, or "because" statements should not appear in the results, but in the discussion. This is frequently difficult, because it is very tempting when first presenting data to tell why the results turned out as they did, or what the results mean. Force yourself to maintain the critical distinction between results and their interpretations.
+
+### Discussion & Conclusion (write after results)
+
+This is the appropriate section to interpret the data in relation to the original objectives or hypotheses, and to relate these interpretations to the state of knowledge and future needs for research. A common mistake is to repeat the results at some higher level of generality; the discussion section should be genuinely interpretive.
+
+Your discussion should start with an interpretation of your results and then expand to explain your results in the context of relevant published work. This can be achieved by following the outline below — feel free to modify the order of these points to achieve a logical flow in your writing:
+
+- Reach conclusions about the initial question(s) or hypothesis(es).
+- Identify sources of error and basic inadequacies of technique, and suggest improvements in methods or approaches, if any.
+- Raise questions and discuss ambiguous data.
+- State how your results relate to or build upon previous studies, and compare your conclusions to those reached by other related studies.
+- Suggest future studies that should be carried out to further knowledge on this topic. Mention practical applications for the research.
+- Speculate upon broader meanings of the conclusions reached.
+
+You should end this section with 1–2 sentences that restate your main conclusions, speak to their importance, and note how they relate back to your research question.
+
+### Tables & Figures
+
+Technically part of results, but goes at the end of the body of the report as its own section.
+
+- Located after discussion and conclusion
+- Referenced in text. Example: *Our results showed that as pinecone height increases, pinecone weight also increases (Figure 1).*
+- Labeled with title, axis labels including units, and a legend if applicable
+- Contains a caption, numbered (Figure 1, Table 1, etc.). This gives context to the data — a miniature summary of the project as it pertains to the data presented — an interpretation of the graph, and a discussion of the implications of the project results. Use complete sentences and scientific language.
+
+### Literature Cited
+
+This section should contain, in alphabetical order, only those items specifically referred to in the text. For your lab reports, please follow the formats below, which provide all the essential information.
+
+**Journal article**
+
+> Shiels, A.B. and R.L. Sanford, Jr. 2001. Soil nutrient differences between two krummholz-form tree species and adjacent alpine tundra. *Geoderma* 102:205–217.
+
+This reference includes the names of the authors, the year of publication, the article title, the fully spelled journal name, and the volume and page numbers of the article itself.
+
+**Book**
+
+> Molles, Jr. M.C. 2004. *Ecology: Concepts and Applications* (3rd Edition). McGraw Hill, Boston, MA, USA. 586 pages.
+
+This reference gives the author, date of publication, title, and the publisher's name and location.
+
+**Article in an edited volume**
+
+> Sanford, Jr., R.L. and E. Cuevas. 1996. Root growth and rhizosphere interactions in tropical forests. Pages 268–300 *in* S.S. Mulkey, R.L. Chazdon, and A.P. Smith (eds.) *Tropical Forest Plant Ecophysiology*. Chapman and Hall, New York, NY, USA.
+
+This reference includes the article authors, the date of publication, the article title, pages in volume, names of volume editors, volume title, and the publisher's name and location.
+
+**Proper in-text citation format**
+
+Paraphrase references and cite them in the Literature Cited section. Do not use quotations or footnotes. Here are three examples of proper citation format:
+
+- Shiels and Sanford (2001) found that…
+- Soil nutrients above tree lines show patterns that are… (Shiels and Sanford 2001).
+- Phosphorus fractions in the surface soils (Shiels and Sanford 2001) are correlated with…
+
+If there are more than two authors, it is common to abbreviate with (Sanford et al. 1985). The abbreviation *et al.* is for the Latin phrase meaning "and others."
+
+## Lab report checklist
+
+Have you remembered to include these components in your lab report?
+
+- [ ] Title page
+- [ ] Introduction — description, research question, hypotheses, literature cited
+- [ ] Methods & Analysis
+- [ ] Results — all significant data also described in words in the text, with important numbers and values
+- [ ] Referred to tables & figures
+- [ ] Included table and figure legends, titles, and captions
+- [ ] Discussion & Conclusion
+- [ ] Included headers for all sections (Introduction, Methods & Analysis, Results)
+
+Have questions? Email your lab instructor **more than 24 hours before the due date** to receive guidance — better yet, come to office hours or schedule an appointment.
+
+## The rubric
+
+**This is what your TAs are using to grade your lab report.**
+
+```{r labreport-rubric, echo=FALSE, message=FALSE, warning=FALSE}
+# Renders the rubric from downloads/lab_report_rubric.csv, which is also the
+# source the Canvas rubric builder reads. Base R + knitr only, and no format=
+# argument, so this works identically in the gitbook, PDF and epub builds.
+
+rubric_path <- "downloads/lab_report_rubric.csv"
+
+if (file.exists(rubric_path)) {
+  rub <- utils::read.csv(rubric_path, stringsAsFactors = FALSE)
+  rub <- rub[order(rub$Order), ]
+
+  # Criteria are stored pipe-separated so one file serves both outputs.
+  rub$Criteria <- vapply(
+    strsplit(rub$Criteria, "|", fixed = TRUE),
+    function(x) paste(trimws(x), collapse = "; "),
+    character(1)
+  )
+
+  out <- rub[, c("Section", "Points", "Criteria")]
+
+  knitr::kable(
+    out,
+    row.names = FALSE,
+    caption   = paste0("Lab report rubric. Total: ", sum(rub$Points), " points.")
+  )
+} else {
+  knitr::asis_output(
+    "*(Rubric table could not be rendered - `downloads/lab_report_rubric.csv` is missing.)*"
+  )
+}
+```
+
+You can also [download the rubric as a CSV](downloads/lab_report_rubric.csv) if you want to check off criteria as you write.
+
+> **One source, two places.** This table is generated at build time from
+> `downloads/lab_report_rubric.csv`, and the Canvas rubric your TA grades with is built
+> from that same file. If they ever disagree, the CSV is wrong and should be fixed once.

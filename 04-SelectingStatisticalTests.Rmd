@@ -1,5 +1,7 @@
 # Selecting statistical tests  
 
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Designing, conducting, and critiquing investigations. *BioSkills:* Process of Science → "Compare the strengths and limitations of various study designs"; "Formulate testable hypotheses and state their predictions."
+
 ## A foray into statistics  
 
 We've talked about data types, describing data, and basic hypothesis testing. This week we are applying these concepts to run a statistical analysis. When conducting an analysis, a dataset will contain one or more **response variables** (aka *y-variables*, dependent variables) and one or more **explanatory variables** (aka *x-variables*, independent variables). Explanatory variables are used to explain variation in response variables.  
@@ -72,7 +74,7 @@ By the end of this module, you should be able to:
 
 ## Downloads for this class
 
-- [Download the R file](https://drive.google.com/uc?export=download&id=14tBsHZx8ZBXV-Gf1sxKG_jiNAXwu94dm)
+- [Download the R file](downloads/SelectingStatisticalTests.R)
 - Completing your species interactions final project and need more help? 
   - [Watch the YouTube tutorial here](https://youtu.be/ZQz770Uzvyo)
 

@@ -1,0 +1,13 @@
+Site,Section,PlantID,Year,Size,Reproductive,Fruits,Fate
+Campus Meadow,A,101,2026,2.1,No,0,
+Campus Meadow,A,102,2026,5.4,No,0,
+Campus Meadow,A,103,2026,11.8,Yes,6,
+Campus Meadow,A,104,2026,9.2,No,0,
+Campus Meadow,A,105,2026,1.4,No,0,
+Campus Meadow,A,106,2026,14.6,Yes,11,
+Campus Meadow,A,107,2026,7.7,No,0,
+Campus Meadow,A,108,2026,3.2,No,0,
+Campus Meadow,B,201,2026,12.9,Yes,8,
+Campus Meadow,B,202,2026,6.1,No,0,
+Campus Meadow,B,203,2026,1.9,No,0,
+Campus Meadow,B,204,2026,10.3,Yes,4,

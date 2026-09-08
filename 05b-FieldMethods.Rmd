@@ -1,0 +1,238 @@
+# Field methods: running a monitoring plot
+
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Fieldwork; Natural history; Working collaboratively; Quantitative reasoning and computational thinking. *BioSkills:* Process of Science → Study Design ("Execute protocols and accurately record measurements and observations"), Data Interpretation & Evaluation ("Describe sources of error and uncertainty in data"); Quantitative Reasoning → "Record, organize, and annotate simple data sets."
+
+In the ecological sampling lab you decided **where** to sample and **why**. This lab is the other half: what you actually do once you are standing at the point, and how you keep the numbers you write down from being quietly wrong.
+
+The protocol here is not invented for teaching. It is **line-point intercept (LPI)** from the *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, the method the Bureau of Land Management uses to assess rangeland condition across the western United States under its Assessment, Inventory and Monitoring (AIM) program. Millions of acres are managed off the back of this method. If you take a field job in this region, there is a real chance you will run it for money.
+
+### Downloads for this lab
+
+- [LPI datasheet (.csv)](downloads/lpi_datasheet.csv)
+- [Observer calibration datasheet (.csv)](downloads/calibration_datasheet.csv)
+- [R script for this lab](downloads/FieldMethods_LPI.R)
+
+## Objectives
+
+1. Establish a monitoring plot and run three LPI transects on it.
+2. Calculate foliar cover, bare ground, basal cover and species composition from point-intercept hits.
+3. Quantify the disagreement between observers, and decide whether it is small enough to trust your result.
+4. Collect, press and label a voucher specimen for a plant you cannot identify.
+
+## Why point intercept rather than "how much is covered?"
+
+Ask five people to eyeball the percentage of ground covered by grass and you will get five different answers, all of them confident. Ocular cover estimates are fast, and they are unreliable in a way that does not shrink when you get more experienced — it just gets harder to notice.
+
+Point intercept replaces judgment with an event. A pin either hits a plant or it does not. There is no estimating step, so there is nothing for two observers to disagree about except what species they hit and whether the pin was vertical. Cover is then not a guess but a **proportion**: hits divided by drops.
+
+That is the whole idea, and it is worth stating plainly because it recurs everywhere in this manual. **Whenever you can replace an estimate with a count, do it.**
+
+---
+
+## Part 1 — Establishing the plot
+
+The standard AIM plot uses a **spoke design**: a permanent stake at plot centre, with three transects radiating out at **120° from one another**.
+
+### Materials
+
+1. Three 25 m tapes (or one tape, run three times)
+2. Compass
+3. Pin flag — a thin, straight rod, marked so you can identify it
+4. Stakes for plot centre and transect ends; flagging
+5. Datasheets, clipboard, pencils (pencil, not pen — rain)
+6. Field guide or the key from the tree walk lab
+7. Newspaper and a plant press, or two boards and straps
+
+### Procedure
+
+1. **Set plot centre.** Drive the centre stake in, leaving **less than 30 cm exposed**. Your instructor will have assigned the point using one of the randomisation methods from the sampling lab — do not move it because the vegetation looks more interesting three metres away. That is exactly the bias the sampling lab warned you about.
+
+2. **Choose the first azimuth at random**, then set the other two at +120° and +240° from it. Record all three bearings. (The manual specifies the 120° spacing; how you pick the first bearing is a local convention, so we make it random and we write it down.)
+
+3. **Set transect start stakes 5 m out from centre** along each bearing. Run each tape from its start stake outward for **25 m**, and stake the far end.
+
+4. **Keep the tape taut, straight, and close to the ground** — but not so close that it drags on and disturbs the soil surface. A sagging tape puts your points somewhere other than where you think they are.
+
+5. **Photograph the plot** from centre along each transect before anyone walks on it.
+
+> The 25 m three-transect spoke plot samples roughly **0.3 ha**. The 50 m version in the older edition of the manual samples about **1 ha**. Which one a project uses depends on how patchy the vegetation is and how big a change it needs to detect — which is a sample-size question, and you already know how to think about it.
+
+---
+
+## Part 2 — Line-point intercept
+
+You will record **50 points per transect, spaced 1 m apart**, for **150 points on the plot**.
+
+### Dropping the pin
+
+At each 1 m mark:
+
+1. Hold the pin **vertical**, with its lower end several centimetres above the top of the vegetation, next to the tape.
+2. **Release it and let it slide through your hand until it hits the ground.** Do not guide it, do not aim it, do not adjust it after it lands.
+3. It matters much more that the pin fell **freely** than that it landed exactly on the tape mark. Resist the urge to nudge.
+
+Every nudge is a small act of bias, and the direction people nudge is always the same: toward the interesting plant. Two hundred nudges is a systematic error, not noise.
+
+### What you record at each point
+
+Three groups of columns:
+
+**Top layer (first hit).** The uppermost or first stem, leaf or plant base the pin intercepts. Record the species code. If the pin touches nothing on the way down, record **N**.
+
+**Lower layers.** Everything else the pin passes through on its way down, in vertical order, plus these non-plant codes:
+
+| Code | Meaning |
+|---|---|
+| **HL** | Herbaceous litter |
+| **WL** | Woody or succulent litter, > 5 mm |
+| **NL** | Non-vegetative litter |
+| **VL** | Vagrant lichen |
+| **DS** | Deposited soil |
+
+**Soil surface.** What is at the very bottom — the base of a plant (record its species code), or:
+
+| Code | Meaning |
+|---|---|
+| **S** | Bare mineral soil |
+| **LC** | Lichen crust |
+| **CY** | Cyanobacterial crust |
+| **M** | Moss |
+| **D** | Duff |
+| **R** | Rock, ≥ 5 mm |
+| **BR** | Bedrock |
+| **W** | Water |
+
+> **The one rule people break:** record each plant species **only once per pin drop**, the first time the pin intercepts it — even if the pin passes through the same plant three times on the way down. A species that got hit is a species that got hit; the number of times is not data here.
+
+### Species codes
+
+Use USDA PLANTS codes (<https://plants.usda.gov>) — generally the first two letters of the genus plus the first two of the species: *Pinus ponderosa* → **PIPO**, *Bouteloua gracilis* → **BOGR**.
+
+**When you do not know the plant**, do not guess and do not leave it blank. Give it a placeholder:
+
+| Code | Meaning |
+|---|---|
+| **AF1, AF2 …** | Annual forb, unknown 1, 2 … |
+| **PF1, PF2 …** | Perennial forb |
+| **AG1, AG2 …** | Annual graminoid |
+| **PG1, PG2 …** | Perennial graminoid |
+| **SH1, SH2 …** | Shrub |
+| **TR1, TR2 …** | Tree |
+
+A consistently-applied placeholder is real data. You can go back and resolve **PF1** to a name later, and every point where you recorded it updates at once. "Some kind of daisy?" cannot be resolved by anyone, ever.
+
+---
+
+## Part 3 — Observer calibration
+
+This is the part of the lab that most resembles a real field job and least resembles a normal class exercise. Before a crew's data is used, the crew has to demonstrate that its members produce the same numbers on the same ground.
+
+### Procedure
+
+1. Your TA will lay **one extra transect** in a piece of ground with a good mix of vegetation, litter and bare soil.
+2. **Each person in the group runs that same transect independently**, recording their own datasheet. Do not talk. Do not look at anyone else's sheet. This is the whole point.
+3. Everyone calculates foliar cover, bare ground and litter cover from their own numbers.
+4. Assemble the group's results into `calibration_datasheet.csv` and look at the spread.
+
+### The thresholds
+
+The monitoring manual sets these explicitly:
+
+| Method | Standard |
+|---|---|
+| Line-point intercept | **All observers within 10 percentage points (absolute) of one another**, for each indicator |
+| Vegetation height | Counts in each height category differ by no more than **2** |
+| Species inventory | Number of species recorded differs by no more than **2** |
+
+Crews recalibrate **once a month, or whenever they move into a new ecosystem type, whichever comes first.**
+
+### What to do with the answer
+
+If your group is inside 10 points: say so, and say which indicator was closest to failing.
+
+If your group is outside 10 points — and some groups will be — **that is a finding, not a failure**, and the useful move is to work out *where* the disagreement came from. Almost always it is one of three things:
+
+- **Species identification.** Two people hit the same plant and called it different things. Fixable with a key and a voucher.
+- **The "did it touch?" judgment.** One person counts a leaf that brushes the pin; another does not. Fixable with an agreed rule, stated out loud, before you start.
+- **Pin verticality.** Someone is unconsciously tilting the pin. Fixable by watching each other drop it.
+
+Notice that all three are fixable, and none of them are fixed by trying harder. **The fix for observer error is a clearer protocol, not more effort** — and that is the transferable lesson of this entire lab.
+
+---
+
+## Part 4 — Unknown plants and voucher specimens
+
+The placeholder codes only help if someone can eventually resolve them. That is what a **voucher specimen** is for: a physical, permanent record of exactly which plant you meant.
+
+1. **Check permission first.** Collecting is allowed here because your instructor arranged it for this site. On public land it usually requires a permit, and on private land it requires the landowner. This is not a formality — it is the first question a professional asks.
+
+2. **Finish all measurements on the plot before you collect anything.** Collecting first means walking on and disturbing the thing you are about to measure.
+
+3. **Collect from outside the plot if you possibly can.** Only take a specimen from inside the plot if more than ten individuals of that species are present on it.
+
+4. **Take a whole plant if you can** — roots, leaves, and any flowers or fruit. The reproductive parts are what most keys run on, and a specimen without them often cannot be identified at all.
+
+5. **Press it.** Lay the plant flat between several sheets of newspaper, spread the leaves so they do not overlap, and put it under weight or in a press. The newspaper draws the moisture out; change it if it gets damp.
+
+6. **Label it.** The monitoring manual requires, at minimum: **plot name, unknown plant ID number, and date.** That is what ties the pressed specimen back to the code in your dataset.
+
+   A herbarium label carries more than that — collector, precise locality, elevation, habitat, associated species — and the extra information is what makes a specimen useful to anyone beyond your project decades later. Put those on the **Unknown Plant Tracking Sheet** with your photographs, and record them even though the minimum label does not demand it. Every specimen in the Deaver Herbarium on this campus is useful today because someone wrote down more than the minimum.
+
+7. **Once dry**, mount the specimen on stiff paper and tape it down in a few places, positioned so that the diagnostic features stay visible.
+
+---
+
+## Analysis
+
+Open `FieldMethods_LPI.R`. It calculates, from your 150 points:
+
+$$\%\ \text{foliar cover} = \frac{\text{points with any plant in the top layer}}{\text{total pin drops}} \times 100$$
+
+$$\%\ \text{bare ground} = \frac{\text{points with top layer} = \texttt{N},\ \text{no lower layers, and soil surface} = \texttt{S}}{\text{total pin drops}} \times 100$$
+
+$$\%\ \text{basal cover} = \frac{\text{points with a species code in the soil surface column}}{\text{total pin drops}} \times 100$$
+
+$$\%\ \text{composition of species A} = \frac{\text{points where A occurs in any layer}}{\text{points with any rooted vegetation}} \times 100$$
+
+Two things to notice before you run it.
+
+**Foliar cover and basal cover are different numbers and they answer different questions.** Foliar cover is how much of the ground is shaded from above — it governs interception of rain, soil temperature, and how much light reaches a seedling. Basal cover is how much ground the plants actually occupy at the soil surface — it is far less variable between seasons and is what erosion models care about. A grassland can lose most of its foliar cover in a dry August and lose almost none of its basal cover.
+
+**Percentages of different things do not add to 100.** Foliar cover, basal cover and bare ground are all computed over the same 150 points but count different events. If your numbers sum to 130, you have not made an arithmetic mistake.
+
+---
+
+## Assignment
+
+Turn in to your TA:
+
+1. Your plot map: centre location, the three bearings, and the date.
+2. Foliar cover, bare ground, basal cover, and the composition of the three most abundant species, with your figure.
+3. **Your calibration result** — the spread among observers for each indicator, whether you met the 10-point standard, and for whichever indicator was worst, your best explanation of what caused the disagreement.
+4. Your unknown-plant list: placeholder codes, what you recorded on the tracking sheet, and which ones you were able to resolve to a species.
+5. **One paragraph.** You now have a cover estimate and a measure of how much observers disagree about it. Suppose a land manager wanted to know whether cover on this site had changed by 5% since last year. Could your data answer that question? Justify your answer using your calibration numbers, not your intuition.
+
+Question 5 is the one that matters. A number with no error estimate attached cannot be compared to anything, and a great deal of monitoring money is spent on data that turns out not to be able to answer the question it was collected for.
+
+---
+
+## Notes for TAs
+
+- **Run the calibration transect first, not last.** Students who have already spent two hours on their own plot will rush it, and it is the highest-value ten minutes in the lab.
+- Enforce silence during calibration. One helpful whisper destroys the measurement.
+- Groups reliably under-record the **lower layers** — they see the top hit and move on. Spot-check one transect per group early.
+- Fifty points on a 25 m transect at 1 m spacing gives you 25 points, not 50. Either use 0.5 m spacing on a 25 m tape, or run 1 m spacing on a 50 m tape. **Decide which before the lab and put it on the board**, because the datasheet and the script both key off `PointID`.
+- Sinclair Wash works well for this and connects directly to the Rio de Flag monitoring framing in the ecological sampling lab — students can see their plot as one year of a series rather than a one-off exercise. Marking and collecting there requires permission; arrange it in advance.
+- If snow or frozen ground makes plot establishment impossible, the calibration exercise still runs indoors on photographs, and the analysis runs on prior-year class data.
+
+## Sources
+
+Herrick, J.E., J.W. Van Zee, S.E. McCord, E.M. Courtright, J.W. Karl, and L.M. Burkett. *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, 2nd ed., Volume I: Core Methods. USDA-ARS Jornada Experimental Range, Las Cruces, New Mexico.
+
+- Volume I, 2nd edition (PDF): <https://landscapetoolbox.org/wp-content/uploads/2023/01/MMGSSE_20200211.pdf>
+- Blank datasheets, 2nd edition: <https://landscapetoolbox.org/methods-manuals/monitoring-manual-2nd-edition/>
+- Volume I, Quick Start (1st edition): <http://jornada.nmsu.edu/files/Quick_Start.pdf>
+- Volume II, design and interpretation: <https://jornada.nmsu.edu/files/Volume_II.pdf>
+- USDA PLANTS database: <https://plants.usda.gov>
+
+> **Instructor note:** confirm the edition year on the printed title page before citing. The 2nd edition is widely cited as 2017; the PDF linked above is a February 2020 revision of it.
