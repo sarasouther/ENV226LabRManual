@@ -9,7 +9,7 @@ The protocol here is not invented for teaching. It is **line-point intercept (LP
 ### Downloads for this lab
 
 - [Specimen quality scoring sheet (.csv)](downloads/specimen_quality_datasheet.csv) — used in Part 5
-
+- [**Herbarium labels**](downloads/HerbariumLabel.docx) — print, cut out and fill in by hand for the voucher you press in Part 4. Same sheet as the tree walk lab.
 - [LPI datasheet (.csv)](downloads/lpi_datasheet.csv)
 - [Observer calibration datasheet (.csv)](downloads/calibration_datasheet.csv)
 - [R script for this lab](downloads/FieldMethods_LPI.R)
@@ -181,7 +181,7 @@ The placeholder codes only help if someone can eventually resolve them. That is 
 
 6. **Label it.** The monitoring manual requires, at minimum: **plot name, unknown plant ID number, and date.** That is what ties the pressed specimen back to the code in your dataset.
 
-   A herbarium label carries more than that — collector, precise locality, elevation, habitat, associated species — and the extra information is what makes a specimen useful to anyone beyond your project decades later. Put those on the **Unknown Plant Tracking Sheet** with your photographs, and record them even though the minimum label does not demand it. Every specimen in the Deaver Herbarium on this campus is useful today because someone wrote down more than the minimum.
+   A herbarium label carries more than that — collector, precise locality, elevation, habitat, associated species — and the extra information is what makes a specimen useful to anyone beyond your project decades later. Use the printed [herbarium label](downloads/HerbariumLabel.docx) from the tree walk lab, fill in every field even though the minimum label does not demand it, and affix it to the mounted sheet. Every specimen in the Deaver Herbarium on this campus is useful today because someone wrote down more than the minimum.
 
 7. **Once dry**, mount the specimen. How to do that well — and how to tell whether you did — is Part 5.
 
