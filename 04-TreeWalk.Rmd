@@ -10,12 +10,11 @@ This lab is where you learn basic plant ID, and, more importantly, how you can f
 
 | | What happens | When |
 |---|---|---|
-| **Part 1 — Key practice** | Indoors and just outside the building. You learn to use a dichotomous key on trees within a few minutes' walk. | Always |
-| **Part 2 — The arboretum walk** | Your group walks one of the three arboretum routes, finding each tree on the map and keying it. | Always |
-| **Part 3 — When the key fails** | Documenting the trees you *couldn't* identify, well enough that someone else could. | Always |
-| **Part 4 — What the record shows** | A SEINet investigation of what herbarium records can and cannot tell you about where a plant grows. | Always |
+| **Part 1 — The arboretum walk** | Your group walks one of the three arboretum routes, finding each tree on the map and keying it out. | Always |
+| **Part 2 — When you can't identify something** | Documenting a plant you *couldn't* name, well enough that somebody else could name it later. | Always |
+| **Part 3 — The herbarium record** | A SEINet investigation of what herbarium records can and cannot tell you about where a plant grows. | Always |
 
-**Parts 2 and 4 are what you hand in**, on one worksheet. There is also an **extra-credit option**: Adair Patterson, who curates the arboretum, leads guided walks, and you can sign up to go on one. Ask your instructor.
+**Parts 1 and 3 are what you hand in**, on one worksheet. There is also an **extra-credit option**: Adair Patterson, who curates the arboretum, leads guided walks, and you can sign up to go on one. Ask your instructor.
 
 ### Downloads for this lab
 
@@ -31,7 +30,7 @@ This lab is where you learn basic plant ID, and, more importantly, how you can f
 
 1. Use a dichotomous key to identify trees in the field, and record the character states that got you there.
 2. Recognize where keys fail, and what to do when they do.
-3. Write a working key of your own to a small set of species.
+3. Document an unknown plant well enough that someone else could identify it.
 4. Compare the tree community NAU planted with the tree community that grew here.
 
 ## Background
@@ -60,372 +59,9 @@ When a key fails, record the character states you observed, photograph the plant
 
 ---
 
-## Part 1 — Key practice
+## Part 1 — The arboretum walk
 
-### Key to trees of the NAU campus and the Flagstaff area
-
-**How to use it.** Start at couplet 1. Read the leads, pick the one that fits, and go where it sends you. Write down every couplet number you pass through — the path is what you hand in, not just the name.
-
-> **There is a printable version of this key**, and three shorter ones — one per arboretum walk. See the downloads at the top of this chapter. The printed keys use the same couplet numbers as the key below, so a `CoupletPath` recorded from either is comparable.
-
-**This key covers every tree on the three arboretum walks**, plus the common natives and street trees around campus — 55 taxa in 41 couplets. Species marked **[N]** are native to the Flagstaff area; **[P]** are planted here and native elsewhere; **[P*]** are planted and locally invasive. Where a species sits on one of the walks, the walk is named.
-
-### Group I — Leaves needle-like or scale-like (conifers)
-
-**1a.** Leaves scale-like, or short and awl-shaped, overlapping and pressed close along the twig. → **go to 2**
-
-**1b.** Leaves needle-like, standing clearly out from the twig. → **go to 4**
-
-
----
-
-**2a.** Cone woody, 4–9 cm, built of thick shield-shaped scales; foliage in three rows along cord-like branchlets; bark very thick, spongy, reddish-brown, deeply furrowed — you can punch it. → ***Sequoiadendron giganteum*, giant sequoia [P; Wommack]**
-
-**2b.** Cone fleshy and berry-like, 3–20 mm, staying closed, usually with a whitish bloom; leaves in opposite pairs or whorls of three. → **go to 3**
-
-
-> Bark alone will not separate these two — a big alligator juniper and a young sequoia both have thick furrowed reddish bark. Look at the cone.
-
-
----
-
-**3a.** Bark broken into hard, roughly square plates, like alligator hide. → ***Juniperus deppeana*, alligator juniper [N; Littleman]**
-
-**3b.** Bark shredding in long thin strips; scale-leaf margins smooth under a hand lens; foliage dark green; usually one main trunk. → ***Juniperus scopulorum*, Rocky Mountain juniper [N; Grim]**
-
-**3c.** Bark shredding; scale-leaf margins minutely toothed under a lens; branching from at or near the ground, no single trunk; cones reddish-blue under the bloom, one seed. → ***Juniperus monosperma*, one-seed juniper [N; Grim]**
-
-**3d.** Bark shredding; margins minutely toothed; foliage distinctly yellow-green; cones bluish-brown, often tan beneath the bloom. → ***Juniperus osteosperma*, Utah juniper [N; Littleman]**
-
-
-> Couplets 3c and 3d are hard, and they are hard for professionals. If your group splits, record both and say which characters disagreed.
-
-
----
-
-**4a.** Needles in dense whorls of twenty or more on short stubby spur shoots, with single needles on the long shoots; needles under 2.5 cm, three-sided, blue-green; cones erect, barrel-shaped, breaking apart on the tree. → ***Cedrus atlantica* var. *glauca*, blue atlas cedar [P; Wommack]**
-
-**4b.** Needles in bundles of 2–5, wrapped at the base in a papery sheath. → **go to 5**
-
-**4c.** Needles borne singly along the twig. → **go to 12**
-
-
----
-
-**5a.** Needles mostly 3 per bundle. → **go to 6**
-
-**5b.** Needles 2 per bundle. → **go to 7**
-
-**5c.** Needles 5 per bundle. → **go to 10**
-
-
-> Ponderosa often carries some 2-needle bundles. If a two-needled pine has needles longer than 17 cm and yellow-orange plated bark, check several more bundles before you leave this couplet.
-
-
----
-
-**6a.** Needles 25–45 cm, drooping in a brush at the twig tips; twigs 1–2 cm thick; buds up to 2 cm; cone 11–14 cm, its scale tips often drawn out into an out-curved claw. → ***Pinus engelmannii*, Apache pine [N; Grim]**
-
-**6b.** Needles 10–17 cm; bark of old trunks in broad flat yellow-orange plates; cone 5–15 cm, each scale with a stout outward-pointing prickle. → ***Pinus ponderosa* var. *scopulorum*, ponderosa pine [N; Wommack]**
-
-
----
-
-**7a.** Sheath falling away early, so the bundle base is bare; needles 2.5–4 cm, stout, curved, blue-green; cone about 5 cm, nearly round; seeds large and wingless. → ***Pinus edulis*, two-needle pinyon [N; Littleman]**
-
-**7b.** Sheath persistent at the bundle base; needles longer than 4 cm. → **go to 8**
-
-
----
-
-**8a.** Needles 4–8 cm, stout, conspicuously twisted, blue-green to grey-green; bark of the upper trunk thin, flaking, orange-red. → ***Pinus sylvestris*, Scots pine [P; Wommack]**
-
-**8b.** Needles 8–15 cm, straight. → **go to 9**
-
-
----
-
-**9a.** Bend a needle sharply: it snaps cleanly in two. Needles deep yellow-green; cone 3.5–6 cm, the central boss of each scale dimpled and unarmed; bark light red-brown in rectangular scaly plates. → ***Pinus resinosa*, red pine [P; Grim]**
-
-**9b.** Needles pliant, bending without snapping; very dark green; cone 5–10 cm, each scale with a tiny sharp point; bark dark grey-brown. → ***Pinus nigra*, Austrian pine [P]**
-
-
-> Needle length will not separate these two — they overlap almost completely. The snap test will.
-
-
----
-
-**10a.** Needles about 4 cm, crowded and pressed close around the twig like a bottlebrush, with scattered white resin flecks on the surfaces. → ***Pinus aristata*, Rocky Mountain bristlecone pine [N; Grim]**
-
-**10b.** Needles 5–10 cm, not crowded into a bottlebrush. → **go to 11**
-
-
----
-
-**11a.** Cone 8–15 cm, scale tips smooth and closed, no prickle; twigs notably flexible — you can tie a young one in a loose knot. → ***Pinus flexilis*, limber pine [N]**
-
-**11b.** Cone 13–23 cm, scale tips bent sharply backward. → ***Pinus strobiformis*, southwestern white pine [N; Grim]**
-
-
----
-
-**12a.** Needles four-sided — roll one between finger and thumb and it turns rather than resisting; sharp-tipped; borne on small woody pegs that stay on the twig after the needle falls, leaving old twigs rough. → **go to 13**
-
-**12b.** Needles flat — roll one and it resists. → **go to 16**
-
-
----
-
-**13a.** Cone 12–16 cm, far longer than any other spruce here; needles blunt-tipped. → ***Picea abies*, Norway spruce [P; Wommack]**
-
-**13b.** Cone under 12 cm. → **go to 14**
-
-
----
-
-**14a.** Cone 2.3–4.5 cm, the smallest here; cone scales broadest near the tip and stiff; needles somewhat flexible, yellow-green to dark green, not blue; twigs densely hairy. → ***Picea rubens*, red spruce [P; Littleman]**
-
-**14b.** Cone 3–12 cm; needles blue-green to blue-white. → **go to 15**
-
-
----
-
-**15a.** Cone scales widest ABOVE the middle and flexible — bend one and it gives; twigs finely hairy under a lens; needles sharp but not spine-tipped. → ***Picea engelmannii*, Engelmann spruce [N; Littleman]**
-
-**15b.** Cone scales widest BELOW the middle and stiff; twigs hairless; needles spine-tipped, often strongly blue-white. → ***Picea pungens*, Colorado blue spruce [P; Wommack]**
-
-
-> Do not try to separate these two on needle length. Their ranges are identical and this is the most common way to mis-name a campus blue spruce. The cone scale is the character that works.
-
-
----
-
-**16a.** Needle attached by a short bent yellowish stalk; cones hanging, with three-pointed bracts sticking out between the scales like the back end of a mouse; buds about 10 mm, sharp-pointed. → ***Pseudotsuga menziesii*, Douglas-fir [N; Grim]**
-
-**16b.** Needles in two flat ranks on tiny stalks set on woody pegs; needle margins minutely toothed under a lens; cones only 1.5–2.5 cm; buds about 2 mm; the leading shoot at the top of the tree droops over. → ***Tsuga canadensis*, eastern hemlock [P; Wommack]**
-
-**16c.** Needle attached directly to the twig, leaving a round scar flush with the surface; cones erect and falling apart on the tree, so you rarely find a whole one under it. → **go to 17**
-
-
-> The bud is the quickest way in: Douglas-fir about 10 mm, hemlock about 2 mm. That is a fivefold difference you can see without a lens.
-
-
----
-
-**17a.** Needles 6–20 mm, stiff, nearly round in cross-section, standing straight out all round the twig like a bottle brush. → ***Abies pinsapo*, Spanish fir [P; Wommack]**
-
-**17b.** Needles 15–60 mm, flat. → **go to 18**
-
-
----
-
-**18a.** Bark thick, pale, soft and corky — you can press a dent in it with a thumb. → ***Abies lasiocarpa* var. *arizonica*, corkbark fir [N; Wommack]**
-
-**18b.** Bark firm, grey; needles blue-green, mostly in two flat ranks, often curving upward from the twig. → ***Abies concolor*, white fir [N; Littleman]**
-
-
----
-
-
-### Group II — Leaves broad and flat (hardwoods)
-
-**19a.** Leaves opposite — in pairs directly across from each other. → **go to 20**
-
-**19b.** Leaves alternate — staggered along the twig. → **go to 25**
-
-
-> Check this on a twig from this year's growth, and check it twice. It is the most powerful character in this group and the one people most often get wrong on a crowded shoot.
-
-
----
-
-**20a.** Leaf compound — divided into separate leaflets. → **go to 21**
-
-**20b.** Leaf simple — one blade, however deeply lobed. → **go to 22**
-
-
----
-
-**21a.** 3–5 (rarely 7) leaflets, coarsely toothed or lobed; fruit a pair of winged keys in a narrow V. → ***Acer negundo*, boxelder [N]**
-
-**21b.** 7 or more leaflets in a pinnate arrangement; fruit a single-winged key; bark dark grey-brown, furrowed into interlacing ridges. → ***Fraxinus pennsylvanica*, green ash [P]**
-
-
-> Boxelder is a maple with a compound leaf. That is why couplet 20 comes before any question about lobing — if you go looking for a maple-shaped leaf first, boxelder will beat you.
-
-
----
-
-**22a.** Break the petiole: milky white sap oozes out. Leaf palmately 5–7 lobed with long pointed teeth; keys spreading at a wide, nearly straight angle. → ***Acer platanoides*, Norway maple [P]**
-
-**22b.** Sap clear. → **go to 23**
-
-
----
-
-**23a.** Leaf with 5 deep sinuses, coarsely toothed, conspicuously pale silvery-white underneath; keys large, 4–6 cm. → ***Acer saccharinum*, silver maple [P]**
-
-**23b.** Leaf lobes broad, dark green, with blunt rounded teeth all along the margin. → ***Acer pseudoplatanus*, sycamore maple [P; Wommack]**
-
-**23c.** Leaf with a few large, widely spaced teeth and otherwise smooth-edged lobes. → **go to 24**
-
-
----
-
-**24a.** Trunk bark furrowed into long, thick, irregular ridges that curl outward at the edges; a single straight bole, 18–30 m; leaf 7.5–15 cm across, sinuses narrow and deep, leaf base heart-shaped. → ***Acer saccharum*, sugar maple [P; Littleman]**
-
-**24b.** Trunk bark thin, smooth or flaky; often several stems from the base, usually under 8 m; leaf 2.5–10 cm across, sinuses broad and shallow, teeth rounded. → ***Acer grandidentatum*, bigtooth maple [N; Grim]**
-
-
-> Many botanists treat these as one species, *Acer saccharum* subsp. *grandidentatum*, and their leaves genuinely overlap — a large bigtooth and a small sugar maple cannot be told apart by leaf. Key them on bark and habit. If your tree sits between the two, **"*Acer saccharum* complex" is a defensible answer** — write down what made you hesitate.
-
-
----
-
-**25a.** Leaf compound. → **go to 26**
-
-**25b.** Leaf simple. → **go to 29**
-
-
----
-
-**26a.** Stems armed with prickles that snap off cleanly if you push them sideways with a thumbnail; stipules fused along the petiole; 5–9 leaflets; fruit a fleshy red hip. → ***Rosa sp.*, rose — the Riles and McCormick roses [P; Wommack and Littleman]**
-
-**26b.** Unarmed, or armed with a pair of stiff spines at the base of each leaf. → **go to 27**
-
-
-> A prickle is an outgrowth of the bark and shears off cleanly. A spine is a modified leaf part and a thorn is a modified shoot — both are anchored in the wood and will not shear. Try it on a rose and on a black locust and you will not forget the difference.
-
-
----
-
-**27a.** Cut a twig lengthwise: the pith is chambered, divided into little hollow compartments like a ladder. 9–15 leaflets; leaf scars large and three-lobed; fruit a round nut in a thick husk. → ***Juglans major*, Arizona walnut [N; Grim]**
-
-**27b.** Pith solid. → **go to 28**
-
-
-> Chambered pith is a walnut-family character and nothing else in this key has it. One cut settles it.
-
-
----
-
-**28a.** Leaflets tiny, 15–30 of them, the leaf often twice-divided; bark smooth, bronze to grey-brown, covered in horizontal lenticels; pod flat, leathery, red-brown, 15–20 cm. → ***Gleditsia triacanthos* var. *inermis*, thornless honeylocust [P]**
-
-**28b.** A pair of stiff spines at the base of each leaf; pod flat, 5–10 cm, smooth; leaflet margins smooth; bark thick, deeply furrowed into interlacing ridges like rope. → ***Robinia pseudoacacia*, black locust [P; Grim]**
-
-**28c.** Paired spines; pod 8–10 cm, densely covered in bristly hairs; flowers pink to white in hanging clusters. → ***Robinia neomexicana*, New Mexico locust [N]**
-
-
----
-
-**29a.** Bark smooth and chalky white to pale grey, at least on the upper trunk. → **go to 30**
-
-**29b.** Bark not white. → **go to 31**
-
-
----
-
-**30a.** Leaf round to heart-shaped, finely toothed; petiole flattened side-to-side, so the leaf trembles in the slightest wind. → ***Populus tremuloides*, quaking aspen [N; Grim]**
-
-**30b.** Leaf 3-lobed and maple-like, densely silvery-white woolly underneath; petiole round; bark milky greenish-white with dark diamond-shaped splits; suckering into thickets. → ***Populus alba*, white poplar [P; Littleman]**
-
-**30c.** Leaf triangular to oval, doubly toothed; petiole round; branchlets strongly weeping; trunk white, turning black at the base with age. → ***Betula pendula*, European white birch [P; Wommack]**
-
-
-> White poplar is the trap here. The leaf looks like a maple's, but these leaves are alternate, not opposite — which is why you are in this half of the key at all.
-
-
----
-
-**31a.** Leaf deeply lobed. → **go to 32**
-
-**31b.** Leaf not lobed, or only shallowly and irregularly so. → **go to 33**
-
-
----
-
-**32a.** Lobes rounded, with no bristle at the tip; leaf leathery, 8–15 cm, with 5–9 lobes; often growing as a dense thicket of many stems. → ***Quercus gambelii*, Gambel oak [N; Grim]**
-
-**32b.** Lobes tipped with a fine bristle. → ***Quercus rubra*, northern red oak [P; Wommack]**
-
-**32c.** Leaf obovate, very large (15–30 cm), lobed, pale and fuzzy beneath; acorn large with a warty, fringed cup. → ***Quercus macrocarpa*, bur oak [P]**
-
-
----
-
-**33a.** Leaf conspicuously silvery or white on the underside. → **go to 34**
-
-**33b.** Leaf green on the underside. → **go to 35**
-
-
----
-
-**34a.** Leaf narrow, 3–8 cm, strikingly silver beneath with tiny scurfy scales; fruit a silvery-brown berry-like drupe. → ***Elaeagnus angustifolia*, Russian olive [P*]**
-
-**34b.** Leaf lanceolate, 5–13 cm, finely toothed, shiny green above, blotchy orange beneath; growing near water. → ***Populus angustifolia*, narrowleaf cottonwood [N]**
-
-
----
-
-**35a.** Petiole flattened side-to-side; leaf broadly triangular, 4–8 cm, with 3–15 coarse teeth per side, the tooth tips rounded; bark pale tan and deeply furrowed on old trunks. → ***Populus fremontii*, Fremont cottonwood [N; Littleman]**
-
-**35b.** Petiole round or grooved, not flattened. → **go to 36**
-
-
----
-
-**36a.** Leaf base conspicuously lopsided — one side meets the petiole lower than the other. → **go to 37**
-
-**36b.** Leaf base symmetrical or nearly so. → **go to 38**
-
-
----
-
-**37a.** Leaf 7.5–13 cm, margin coarsely and sharply doubly toothed (small teeth riding on larger ones), downy beneath; winged fruit hairy along the margin; bark grey with diamond-shaped fissures; trunk dividing into arching limbs in a vase shape. → ***Ulmus americana*, American elm — the George Washington Elm [P; Littleman]**
-
-**37b.** Leaf 2–6.5 cm, margin singly toothed, smooth on both sides; winged fruit hairless. → ***Ulmus pumila*, Siberian elm [P*]**
-
-**37c.** Leaf 5–15 cm, broadly heart-shaped, toothed; fruit a cluster of small nutlets hanging from a strap-shaped leafy bract. → ***Tilia sp.*, linden [P]**
-
-
----
-
-**38a.** Leaf 2–5 cm, doubly toothed, base heart-shaped or rounded; twigs covered in warty resin glands; a shrubby tree, usually several stems, 4.5–9 m; bark dark red-brown to almost black with long horizontal lenticels, never white and not peeling. → ***Betula occidentalis*, western birch [N; Grim]**
-
-**38b.** Leaves variable on the same tree — some unlobed, some with one or several deep lobes; fruit a soft blackberry-like cluster. → ***Morus alba*, white mulberry [P; Wommack]**
-
-**38c.** Not as either of the above. → **go to 39**
-
-
----
-
-**39a.** Twigs armed with stout unbranched thorns, woody right through and not shearing off; leaf 2.5–10 cm, toothed and often shallowly lobed; fruit a small pome containing hard bony nutlets; flowers white in flat-topped clusters. → ***Crataegus sp.*, hawthorn [P; Wommack]**
-
-**39b.** Twigs unarmed. → **go to 40**
-
-
-> Hawthorns are keyed to genus here and left there. There are somewhere between 100 and 200 species in North America, they hybridise freely, and telling them apart needs flowers *and* mature fruit in hand. Stopping at the genus is the correct professional answer, not a failure.
-
-
----
-
-**40a.** Leaf narrow, 3–4 times longer than wide, often folded upward along the midrib; two small glands where the blade meets the petiole; three buds side by side at each node on winter twigs; fruit a large velvety drupe. → ***Prunus persica*, peach [P; Wommack]**
-
-**40b.** Leaf oblong, about 2–2.5 times longer than wide, finely toothed, glossy above, usually with a band of brownish hairs along the midrib beneath; flowers in a long hanging raceme of twenty or more; bark on older trunks breaking into small upturned plates like burnt cornflakes; scratched twigs smell of bitter almonds. → ***Prunus serotina*, black cherry [P; Wommack]**
-
-**40c.** Leaf broader, less than twice as long as wide; fruit a pome. → **go to 41**
-
-
----
-
-**41a.** Leaf glossy dark green, ovate, finely and evenly toothed; petiole long and slender so the leaf flutters; fruit a small hard pome 6–12 mm. → ***Pyrus calleryana*, Callery pear [P]**
-
-**41b.** Leaf 2.5–10 cm, toothed, dull green, often slightly downy beneath; flowers 5-petalled, white to pink; fruit a pome — small and hard in crabapples, large and edible in the orchard apple. → ***Malus sp.*, crabapple and domestic apple [P; Wommack and Littleman]**
-
-
----
-
-## The NAU arboretum
+### The NAU arboretum
 
 NAU's north campus is an arboretum, curated and maintained as a living collection. There are three self-guided routes through it, each with its own character:
 
@@ -445,11 +81,9 @@ Open that link **on your phone before you leave the building**. It opens in the 
 
 > **Read the pin's description *after* you have keyed the tree, not before.** The description names the species. If you read it first you have not keyed anything, you have read a label — and the point of this lab is the difference between those two things.
 
-The Grimm route is laid out as an **elevation gradient**, which means the species change along it in the same order they would if you drove from the Verde Valley up to the San Francisco Peaks. The Wommack route is the opposite: a deliberate collection of things that do not grow here at all.
+The Grim route is laid out as an **elevation gradient**, which means the species change along it in the same order they would if you drove from the Verde Valley up to the San Francisco Peaks. The Wommack route is the opposite: a deliberate collection of things that do not grow here at all.
 
----
-
-## Part 2 — The arboretum walk
+### Walking your route
 
 Your instructor will assign your group one of the three routes.
 
@@ -468,7 +102,7 @@ Your instructor will assign your group one of the three routes.
 
 **The Spanish fir.** The map records the Wommack Spanish fir as *Picea pinsapo*. Key it yourself and see where you land. Spanish fir is a **fir**, *Abies pinsapo* — *Picea* is the spruce genus. The needles will tell you: attached directly to the twig leaving a round flush scar, not sitting on little woody pegs. **A record in a database is evidence, not proof**, and you have just found an error in one. Note it on your worksheet.
 
-## Recording your data
+### Recording your data
 
 Both tracks use the same file. The columns are:
 
@@ -485,9 +119,315 @@ Site,Group,TreeID,Species,Origin,CoupletPath,Confidence,DBH_cm,Notes
 
 **One claim to test.** People often say the bark furrows of old ponderosa pines smell of vanilla or butterscotch. Have each person in your group smell one independently, without saying anything, then compare answers. Whether or not you all agree is itself a result — and it is the same kind of observer disagreement you will quantify formally in the field methods lab.
 
+### The key to trees of the NAU campus and the Flagstaff area
+
+**How to use it.** Start at couplet 1. Read the leads, pick the one that fits, and go where it sends you. Write down every couplet number you pass through — the path is what you hand in, not just the name.
+
+> **There is a printable version of this key**, and three shorter ones — one per arboretum walk. See the downloads at the top of this chapter. The printed keys use the same couplet numbers as the key below, so a `CoupletPath` recorded from either is comparable.
+
+**This key covers every tree on the three arboretum walks**, plus the common natives and street trees around campus — 55 taxa in 41 couplets. Species marked **[N]** are native to the Flagstaff area; **[P]** are planted here and native elsewhere; **[P*]** are planted and locally invasive. Where a species sits on one of the walks, the walk is named.
+
+#### Group I — Leaves needle-like or scale-like (conifers)
+
+**1a.** Leaves scale-like, or short and awl-shaped, overlapping and pressed close along the twig. → **go to 2**
+
+**1b.** Leaves needle-like, standing clearly out from the twig. → **go to 4**
+
 ---
 
-## Part 3 — When the key fails
+**2a.** Cone woody, 4–9 cm, built of thick shield-shaped scales; foliage in three rows along cord-like branchlets; bark very thick, spongy, reddish-brown, deeply furrowed — you can punch it. → ***Sequoiadendron giganteum*, giant sequoia [P; Wommack]**
+
+**2b.** Cone fleshy and berry-like, 3–20 mm, staying closed, usually with a whitish bloom; leaves in opposite pairs or whorls of three. → **go to 3**
+
+> Bark alone will not separate these two — a big alligator juniper and a young sequoia both have thick furrowed reddish bark. Look at the cone.
+
+---
+
+**3a.** Bark broken into hard, roughly square plates, like alligator hide. → ***Juniperus deppeana*, alligator juniper [N; Littleman]**
+
+**3b.** Bark shredding in long thin strips; scale-leaf margins smooth under a hand lens; foliage dark green; usually one main trunk. → ***Juniperus scopulorum*, Rocky Mountain juniper [N; Grim]**
+
+**3c.** Bark shredding; scale-leaf margins minutely toothed under a lens; branching from at or near the ground, no single trunk; cones reddish-blue under the bloom, one seed. → ***Juniperus monosperma*, one-seed juniper [N; Grim]**
+
+**3d.** Bark shredding; margins minutely toothed; foliage distinctly yellow-green; cones bluish-brown, often tan beneath the bloom. → ***Juniperus osteosperma*, Utah juniper [N; Littleman]**
+
+> Couplets 3c and 3d are hard, and they are hard for professionals. If your group splits, record both and say which characters disagreed.
+
+---
+
+**4a.** Needles in dense whorls of twenty or more on short stubby spur shoots, with single needles on the long shoots; needles under 2.5 cm, three-sided, blue-green; cones erect, barrel-shaped, breaking apart on the tree. → ***Cedrus atlantica* var. *glauca*, blue atlas cedar [P; Wommack]**
+
+**4b.** Needles in bundles of 2–5, wrapped at the base in a papery sheath. → **go to 5**
+
+**4c.** Needles borne singly along the twig. → **go to 12**
+
+---
+
+**5a.** Needles mostly 3 per bundle. → **go to 6**
+
+**5b.** Needles 2 per bundle. → **go to 7**
+
+**5c.** Needles 5 per bundle. → **go to 10**
+
+> Ponderosa often carries some 2-needle bundles. If a two-needled pine has needles longer than 17 cm and yellow-orange plated bark, check several more bundles before you leave this couplet.
+
+---
+
+**6a.** Needles 25–45 cm, drooping in a brush at the twig tips; twigs 1–2 cm thick; buds up to 2 cm; cone 11–14 cm, its scale tips often drawn out into an out-curved claw. → ***Pinus engelmannii*, Apache pine [N; Grim]**
+
+**6b.** Needles 10–17 cm; bark of old trunks in broad flat yellow-orange plates; cone 5–15 cm, each scale with a stout outward-pointing prickle. → ***Pinus ponderosa* var. *scopulorum*, ponderosa pine [N; Wommack]**
+
+---
+
+**7a.** Sheath falling away early, so the bundle base is bare; needles 2.5–4 cm, stout, curved, blue-green; cone about 5 cm, nearly round; seeds large and wingless. → ***Pinus edulis*, two-needle pinyon [N; Littleman]**
+
+**7b.** Sheath persistent at the bundle base; needles longer than 4 cm. → **go to 8**
+
+---
+
+**8a.** Needles 4–8 cm, stout, conspicuously twisted, blue-green to grey-green; bark of the upper trunk thin, flaking, orange-red. → ***Pinus sylvestris*, Scots pine [P; Wommack]**
+
+**8b.** Needles 8–15 cm, straight. → **go to 9**
+
+---
+
+**9a.** Bend a needle sharply: it snaps cleanly in two. Needles deep yellow-green; cone 3.5–6 cm, the central boss of each scale dimpled and unarmed; bark light red-brown in rectangular scaly plates. → ***Pinus resinosa*, red pine [P; Grim]**
+
+**9b.** Needles pliant, bending without snapping; very dark green; cone 5–10 cm, each scale with a tiny sharp point; bark dark grey-brown. → ***Pinus nigra*, Austrian pine [P]**
+
+> Needle length will not separate these two — they overlap almost completely. The snap test will.
+
+---
+
+**10a.** Needles about 4 cm, crowded and pressed close around the twig like a bottlebrush, with scattered white resin flecks on the surfaces. → ***Pinus aristata*, Rocky Mountain bristlecone pine [N; Grim]**
+
+**10b.** Needles 5–10 cm, not crowded into a bottlebrush. → **go to 11**
+
+---
+
+**11a.** Cone 8–15 cm, scale tips smooth and closed, no prickle; twigs notably flexible — you can tie a young one in a loose knot. → ***Pinus flexilis*, limber pine [N]**
+
+**11b.** Cone 13–23 cm, scale tips bent sharply backward. → ***Pinus strobiformis*, southwestern white pine [N; Grim]**
+
+---
+
+**12a.** Needles four-sided — roll one between finger and thumb and it turns rather than resisting; sharp-tipped; borne on small woody pegs that stay on the twig after the needle falls, leaving old twigs rough. → **go to 13**
+
+**12b.** Needles flat — roll one and it resists. → **go to 16**
+
+---
+
+**13a.** Cone 12–16 cm, far longer than any other spruce here; needles blunt-tipped. → ***Picea abies*, Norway spruce [P; Wommack]**
+
+**13b.** Cone under 12 cm. → **go to 14**
+
+---
+
+**14a.** Cone 2.3–4.5 cm, the smallest here; cone scales broadest near the tip and stiff; needles somewhat flexible, yellow-green to dark green, not blue; twigs densely hairy. → ***Picea rubens*, red spruce [P; Littleman]**
+
+**14b.** Cone 3–12 cm; needles blue-green to blue-white. → **go to 15**
+
+---
+
+**15a.** Cone scales widest ABOVE the middle and flexible — bend one and it gives; twigs finely hairy under a lens; needles sharp but not spine-tipped. → ***Picea engelmannii*, Engelmann spruce [N; Littleman]**
+
+**15b.** Cone scales widest BELOW the middle and stiff; twigs hairless; needles spine-tipped, often strongly blue-white. → ***Picea pungens*, Colorado blue spruce [P; Wommack]**
+
+> Do not try to separate these two on needle length. Their ranges are identical and this is the most common way to mis-name a campus blue spruce. The cone scale is the character that works.
+
+---
+
+**16a.** Needle attached by a short bent yellowish stalk; cones hanging, with three-pointed bracts sticking out between the scales like the back end of a mouse; buds about 10 mm, sharp-pointed. → ***Pseudotsuga menziesii*, Douglas-fir [N; Grim]**
+
+**16b.** Needles in two flat ranks on tiny stalks set on woody pegs; needle margins minutely toothed under a lens; cones only 1.5–2.5 cm; buds about 2 mm; the leading shoot at the top of the tree droops over. → ***Tsuga canadensis*, eastern hemlock [P; Wommack]**
+
+**16c.** Needle attached directly to the twig, leaving a round scar flush with the surface; cones erect and falling apart on the tree, so you rarely find a whole one under it. → **go to 17**
+
+> The bud is the quickest way in: Douglas-fir about 10 mm, hemlock about 2 mm. That is a fivefold difference you can see without a lens.
+
+---
+
+**17a.** Needles 6–20 mm, stiff, nearly round in cross-section, standing straight out all round the twig like a bottle brush. → ***Abies pinsapo*, Spanish fir [P; Wommack]**
+
+**17b.** Needles 15–60 mm, flat. → **go to 18**
+
+---
+
+**18a.** Bark thick, pale, soft and corky — you can press a dent in it with a thumb. → ***Abies lasiocarpa* var. *arizonica*, corkbark fir [N; Wommack]**
+
+**18b.** Bark firm, grey; needles blue-green, mostly in two flat ranks, often curving upward from the twig. → ***Abies concolor*, white fir [N; Littleman]**
+
+---
+
+#### Group II — Leaves broad and flat (hardwoods)
+
+**19a.** Leaves opposite — in pairs directly across from each other. → **go to 20**
+
+**19b.** Leaves alternate — staggered along the twig. → **go to 25**
+
+> Check this on a twig from this year's growth, and check it twice. It is the most powerful character in this group and the one people most often get wrong on a crowded shoot.
+
+---
+
+**20a.** Leaf compound — divided into separate leaflets. → **go to 21**
+
+**20b.** Leaf simple — one blade, however deeply lobed. → **go to 22**
+
+---
+
+**21a.** 3–5 (rarely 7) leaflets, coarsely toothed or lobed; fruit a pair of winged keys in a narrow V. → ***Acer negundo*, boxelder [N]**
+
+**21b.** 7 or more leaflets in a pinnate arrangement; fruit a single-winged key; bark dark grey-brown, furrowed into interlacing ridges. → ***Fraxinus pennsylvanica*, green ash [P]**
+
+> Boxelder is a maple with a compound leaf. That is why couplet 20 comes before any question about lobing — if you go looking for a maple-shaped leaf first, boxelder will beat you.
+
+---
+
+**22a.** Break the petiole: milky white sap oozes out. Leaf palmately 5–7 lobed with long pointed teeth; keys spreading at a wide, nearly straight angle. → ***Acer platanoides*, Norway maple [P]**
+
+**22b.** Sap clear. → **go to 23**
+
+---
+
+**23a.** Leaf with 5 deep sinuses, coarsely toothed, conspicuously pale silvery-white underneath; keys large, 4–6 cm. → ***Acer saccharinum*, silver maple [P]**
+
+**23b.** Leaf lobes broad, dark green, with blunt rounded teeth all along the margin. → ***Acer pseudoplatanus*, sycamore maple [P; Wommack]**
+
+**23c.** Leaf with a few large, widely spaced teeth and otherwise smooth-edged lobes. → **go to 24**
+
+---
+
+**24a.** Trunk bark furrowed into long, thick, irregular ridges that curl outward at the edges; a single straight bole, 18–30 m; leaf 7.5–15 cm across, sinuses narrow and deep, leaf base heart-shaped. → ***Acer saccharum*, sugar maple [P; Littleman]**
+
+**24b.** Trunk bark thin, smooth or flaky; often several stems from the base, usually under 8 m; leaf 2.5–10 cm across, sinuses broad and shallow, teeth rounded. → ***Acer grandidentatum*, bigtooth maple [N; Grim]**
+
+> Many botanists treat these as one species, *Acer saccharum* subsp. *grandidentatum*, and their leaves genuinely overlap — a large bigtooth and a small sugar maple cannot be told apart by leaf. Key them on bark and habit. If your tree sits between the two, **"*Acer saccharum* complex" is a defensible answer** — write down what made you hesitate.
+
+---
+
+**25a.** Leaf compound. → **go to 26**
+
+**25b.** Leaf simple. → **go to 29**
+
+---
+
+**26a.** Stems armed with prickles that snap off cleanly if you push them sideways with a thumbnail; stipules fused along the petiole; 5–9 leaflets; fruit a fleshy red hip. → ***Rosa sp.*, rose — the Riles and McCormick roses [P; Wommack and Littleman]**
+
+**26b.** Unarmed, or armed with a pair of stiff spines at the base of each leaf. → **go to 27**
+
+> A prickle is an outgrowth of the bark and shears off cleanly. A spine is a modified leaf part and a thorn is a modified shoot — both are anchored in the wood and will not shear. Try it on a rose and on a black locust and you will not forget the difference.
+
+---
+
+**27a.** Cut a twig lengthwise: the pith is chambered, divided into little hollow compartments like a ladder. 9–15 leaflets; leaf scars large and three-lobed; fruit a round nut in a thick husk. → ***Juglans major*, Arizona walnut [N; Grim]**
+
+**27b.** Pith solid. → **go to 28**
+
+> Chambered pith is a walnut-family character and nothing else in this key has it. One cut settles it.
+
+---
+
+**28a.** Leaflets tiny, 15–30 of them, the leaf often twice-divided; bark smooth, bronze to grey-brown, covered in horizontal lenticels; pod flat, leathery, red-brown, 15–20 cm. → ***Gleditsia triacanthos* var. *inermis*, thornless honeylocust [P]**
+
+**28b.** A pair of stiff spines at the base of each leaf; pod flat, 5–10 cm, smooth; leaflet margins smooth; bark thick, deeply furrowed into interlacing ridges like rope. → ***Robinia pseudoacacia*, black locust [P; Grim]**
+
+**28c.** Paired spines; pod 8–10 cm, densely covered in bristly hairs; flowers pink to white in hanging clusters. → ***Robinia neomexicana*, New Mexico locust [N]**
+
+---
+
+**29a.** Bark smooth and chalky white to pale grey, at least on the upper trunk. → **go to 30**
+
+**29b.** Bark not white. → **go to 31**
+
+---
+
+**30a.** Leaf round to heart-shaped, finely toothed; petiole flattened side-to-side, so the leaf trembles in the slightest wind. → ***Populus tremuloides*, quaking aspen [N; Grim]**
+
+**30b.** Leaf 3-lobed and maple-like, densely silvery-white woolly underneath; petiole round; bark milky greenish-white with dark diamond-shaped splits; suckering into thickets. → ***Populus alba*, white poplar [P; Littleman]**
+
+**30c.** Leaf triangular to oval, doubly toothed; petiole round; branchlets strongly weeping; trunk white, turning black at the base with age. → ***Betula pendula*, European white birch [P; Wommack]**
+
+> White poplar is the trap here. The leaf looks like a maple's, but these leaves are alternate, not opposite — which is why you are in this half of the key at all.
+
+---
+
+**31a.** Leaf deeply lobed. → **go to 32**
+
+**31b.** Leaf not lobed, or only shallowly and irregularly so. → **go to 33**
+
+---
+
+**32a.** Lobes rounded, with no bristle at the tip; leaf leathery, 8–15 cm, with 5–9 lobes; often growing as a dense thicket of many stems. → ***Quercus gambelii*, Gambel oak [N; Grim]**
+
+**32b.** Lobes tipped with a fine bristle. → ***Quercus rubra*, northern red oak [P; Wommack]**
+
+**32c.** Leaf obovate, very large (15–30 cm), lobed, pale and fuzzy beneath; acorn large with a warty, fringed cup. → ***Quercus macrocarpa*, bur oak [P]**
+
+---
+
+**33a.** Leaf conspicuously silvery or white on the underside. → **go to 34**
+
+**33b.** Leaf green on the underside. → **go to 35**
+
+---
+
+**34a.** Leaf narrow, 3–8 cm, strikingly silver beneath with tiny scurfy scales; fruit a silvery-brown berry-like drupe. → ***Elaeagnus angustifolia*, Russian olive [P*]**
+
+**34b.** Leaf lanceolate, 5–13 cm, finely toothed, shiny green above, blotchy orange beneath; growing near water. → ***Populus angustifolia*, narrowleaf cottonwood [N]**
+
+---
+
+**35a.** Petiole flattened side-to-side; leaf broadly triangular, 4–8 cm, with 3–15 coarse teeth per side, the tooth tips rounded; bark pale tan and deeply furrowed on old trunks. → ***Populus fremontii*, Fremont cottonwood [N; Littleman]**
+
+**35b.** Petiole round or grooved, not flattened. → **go to 36**
+
+---
+
+**36a.** Leaf base conspicuously lopsided — one side meets the petiole lower than the other. → **go to 37**
+
+**36b.** Leaf base symmetrical or nearly so. → **go to 38**
+
+---
+
+**37a.** Leaf 7.5–13 cm, margin coarsely and sharply doubly toothed (small teeth riding on larger ones), downy beneath; winged fruit hairy along the margin; bark grey with diamond-shaped fissures; trunk dividing into arching limbs in a vase shape. → ***Ulmus americana*, American elm — the George Washington Elm [P; Littleman]**
+
+**37b.** Leaf 2–6.5 cm, margin singly toothed, smooth on both sides; winged fruit hairless. → ***Ulmus pumila*, Siberian elm [P*]**
+
+**37c.** Leaf 5–15 cm, broadly heart-shaped, toothed; fruit a cluster of small nutlets hanging from a strap-shaped leafy bract. → ***Tilia sp.*, linden [P]**
+
+---
+
+**38a.** Leaf 2–5 cm, doubly toothed, base heart-shaped or rounded; twigs covered in warty resin glands; a shrubby tree, usually several stems, 4.5–9 m; bark dark red-brown to almost black with long horizontal lenticels, never white and not peeling. → ***Betula occidentalis*, western birch [N; Grim]**
+
+**38b.** Leaves variable on the same tree — some unlobed, some with one or several deep lobes; fruit a soft blackberry-like cluster. → ***Morus alba*, white mulberry [P; Wommack]**
+
+**38c.** Not as either of the above. → **go to 39**
+
+---
+
+**39a.** Twigs armed with stout unbranched thorns, woody right through and not shearing off; leaf 2.5–10 cm, toothed and often shallowly lobed; fruit a small pome containing hard bony nutlets; flowers white in flat-topped clusters. → ***Crataegus sp.*, hawthorn [P; Wommack]**
+
+**39b.** Twigs unarmed. → **go to 40**
+
+> Hawthorns are keyed to genus here and left there. There are somewhere between 100 and 200 species in North America, they hybridise freely, and telling them apart needs flowers *and* mature fruit in hand. Stopping at the genus is the correct professional answer, not a failure.
+
+---
+
+**40a.** Leaf narrow, 3–4 times longer than wide, often folded upward along the midrib; two small glands where the blade meets the petiole; three buds side by side at each node on winter twigs; fruit a large velvety drupe. → ***Prunus persica*, peach [P; Wommack]**
+
+**40b.** Leaf oblong, about 2–2.5 times longer than wide, finely toothed, glossy above, usually with a band of brownish hairs along the midrib beneath; flowers in a long hanging raceme of twenty or more; bark on older trunks breaking into small upturned plates like burnt cornflakes; scratched twigs smell of bitter almonds. → ***Prunus serotina*, black cherry [P; Wommack]**
+
+**40c.** Leaf broader, less than twice as long as wide; fruit a pome. → **go to 41**
+
+---
+
+**41a.** Leaf glossy dark green, ovate, finely and evenly toothed; petiole long and slender so the leaf flutters; fruit a small hard pome 6–12 mm. → ***Pyrus calleryana*, Callery pear [P]**
+
+**41b.** Leaf 2.5–10 cm, toothed, dull green, often slightly downy beneath; flowers 5-petalled, white to pink; fruit a pome — small and hard in crabapples, large and edible in the orchard apple. → ***Malus sp.*, crabapple and domestic apple [P; Wommack and Littleman]**
+
+---
+
+## Part 2 — When you can't identify something
 
 Some of your trees will not key out. That is guaranteed, and it is not a mark against you. What matters is what you do next! 
 
@@ -548,7 +488,11 @@ Standard practice before you cut anything:
 
 Press it flat between sheets of newspaper, under weight, and change the paper if it goes damp. Woody stems need more pressure and longer drying than herbaceous plants.
 
-*In this lab, we will likely not be able to collect a tree specimen, and will likely need to collect a weed or other undesirable plant from NAU's landscaping perspective"
+> **Where to collect.** The arboretum is a curated collection and nothing in it is yours to cut. If you are collecting a specimen for this lab, go to this spot instead — landscaped ground, where the plant you want is a weed the grounds crew would pull anyway:
+>
+> **<https://maps.app.goo.gl/MrKVwk9oosZAnF179>**
+>
+> Collect a weed, not a tree, and check with your instructor before you cut.
 
 ### What goes on the label
 
@@ -578,7 +522,9 @@ At the start you were told an identification is a hypothesis you tested against 
 
 ---
 
-## The Deaver Herbarium 
+## Part 3 — The herbarium record
+
+### The Deaver Herbarium
 
 NAU has its own herbarium, or a collection of preserved plant specimens and related data used for scientific study.
 
@@ -590,7 +536,9 @@ The herbarium is in the **Science Annex (Building 20)**, third floor. Entry is t
 
 Herbaria support species identification and research (have plants changed through time). NAU's herbarium staff are not available for class visits due to lack of capacity; however, they are available to help with research projects.
 
-### If you want an identification
+### Getting an identification
+
+A herbarium is **one of the ways an unknown plant eventually gets a name.** You will not be doing this for this lab, but it is the route a professional takes when the key runs out, and it is worth knowing how it works.
 
 The herbarium's stated policy:
 
@@ -610,9 +558,7 @@ From SEINet, Deaver's records flow to **GBIF** (<https://www.gbif.org>), the glo
 
 As of 2026, GBIF holds roughly **643 million plant occurrence records**. About **21% are preserved specimens** — physical plants somebody collected, pressed, labelled and filed. About **75% are human observations**, overwhelmingly from iNaturalist. The Deaver Herbarium's own 133,000 records are **essentially 100% preserved specimens**.
 
----
-
-## Part 4 — What the record actually shows
+### The SEINet investigation
 
 > **This activity was written by Richie Hodel, Ph.D. (he/him), Director and Curator of the Deaver Herbarium and Assistant Professor of Biological Sciences at NAU, and is used and adapted here with his permission.** 
 
@@ -680,6 +626,8 @@ Then Richie's question, which is the point of the whole exercise:
 
 > **Do the dots on the map represent the plant's true distribution — or where botanists have collected it?**
 
+---
+
 ## Assignment
 
 **Everything goes on one worksheet:** [`TreeWalk_Worksheet.docx`](downloads/TreeWalk_Worksheet.docx). Type into it and upload the file to Canvas.
@@ -694,7 +642,7 @@ Then Richie's question, which is the point of the whole exercise:
 
 **Part B — the record**
 
-6. The five sections of the SEINet investigation from Part 4, including your **records-by-decade table**.
+6. The five sections of the SEINet investigation from Part 3, including your **records-by-decade table**.
 
 **If you went on the guided walk for extra credit**, add:
 
@@ -716,4 +664,4 @@ Then Richie's question, which is the point of the whole exercise:
 - University of Florida Herbarium, *Preparation of Plant Specimens for Deposit as Herbarium Vouchers* — the source for the label fields and the 30 × 40 cm sheet: <https://www.floridamuseum.ufl.edu/herbarium/methods/vouchers/>
 - University of Connecticut, *Collecting for the CONN Herbarium* — the clearest free guide on woody specimens: <https://biodiversity.uconn.edu/wp-content/uploads/sites/556/2022/02/Collecting-for-the-CONN-herbarium.pdf>
 
-> **A note on this source.** The photograph checklist in Part 3 is community best practice, assembled from experienced iNaturalist users — iNaturalist itself publishes no official standard for photographing trees, and this chapter does not claim it does. The GBIF proportions are a September 2026 snapshot and will drift; the iNaturalist share has been growing steadily.
+> **A note on this source.** The photograph checklist in Part 2 is community best practice, assembled from experienced iNaturalist users — iNaturalist itself publishes no official standard for photographing trees, and this chapter does not claim it does. The GBIF proportions are a September 2026 snapshot and will drift; the iNaturalist share has been growing steadily.
