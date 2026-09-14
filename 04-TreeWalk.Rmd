@@ -22,9 +22,9 @@ This lab is where you learn basic plant ID, and, more importantly, how you can f
 - **Printable field keys.** Take the one for your route:
   - [Wommack walk key](downloads/TreeKey_Wommack.docx) · [Littleman walk key](downloads/TreeKey_Littleman.docx) · [Grim walk key](downloads/TreeKey_Grim.docx)
   - [Full campus key](downloads/TreeKey_NAU.docx) — all 55 taxa, with a glossary and species index, in technical botanical terminology
-- [Tree walk datasheet (.csv)](downloads/tree_walk_datasheet.csv)
+- [Tree walk datasheet (.csv)](downloads/tree_walk_datasheet.csv) — the field sheet; print it or keep it on a phone.
 - [Unknown plant log (.csv)](downloads/unknown_plant_log.csv)
-- [R script for this lab](downloads/TreeWalk.R)
+- [**Herbarium labels**](downloads/HerbariumLabel.docx) — print and cut out. One per specimen, filled in by hand. Only needed if you collect.
 
 ## Objectives
 
@@ -88,7 +88,7 @@ The Grim route is laid out as an **elevation gradient**, which means the species
 Your instructor will assign your group one of the three routes.
 
 1. **Work in groups of 3–4.** One person navigates with the map, the others key, one records. **The navigator does not read out the pin description until the group has committed to an answer.** Rotate roles every few trees so everyone keys.
-2. **Find the tree**, then key it. Write down every couplet number you passed through — that path is worth more marks than the name.
+2. **Find the tree**, then key it as a group — one couplet at a time, out loud, so everyone sees which character decided it.
 3. **Record your confidence before you check.** High, Medium or Low. Then open the pin and see.
 4. **Key at least ten trees.** Your route has 12–18, so you have some slack for ones you cannot reach or cannot resolve.
 
@@ -104,26 +104,28 @@ Your instructor will assign your group one of the three routes.
 
 ### Recording your data
 
-Both tracks use the same file. The columns are:
+Keep it short. You have the answer in your pocket, so the record is not there to prove you found the name — it is there to show what you thought before you looked.
 
 ```
-Site,Group,TreeID,Species,Origin,CoupletPath,Confidence,DBH_cm,Notes
+TreeNumber,PinName,Species,Confidence,Correct,Notes
 ```
 
-- `Site` — which route
-- `Species` — the scientific name you arrived at, or `UNK-1`
-- `Origin` — `Native` or `Planted`
-- `CoupletPath` — e.g. `1a-5a-6b`, or `?` if you could not reconstruct it
-- `Confidence` — `High`, `Medium` or `Low`, decided **before** anyone confirms
-- `Notes` — characters the key does not use; anything the guide said
+- `TreeNumber` — 1, 2, 3… in the order you visit them
+- `PinName` — the pin's label on the map, so a TA can tell which tree you mean
+- `Species` — the scientific name you keyed to, or `UNK-1`
+- `Confidence` — `High`, `Medium` or `Low`, decided **before** anyone opens the pin
+- `Correct` — `Yes` or `No`, filled in *after* you open it
+- `Notes` — anything the key did not use, or why it went wrong
+
+You do not need to record whether the tree is native or planted. The key already marks every species **[N]** or **[P]**, so you can sort that out afterwards from your species list.
 
 **One claim to test.** People often say the bark furrows of old ponderosa pines smell of vanilla or butterscotch. Have each person in your group smell one independently, without saying anything, then compare answers. Whether or not you all agree is itself a result — and it is the same kind of observer disagreement you will quantify formally in the field methods lab.
 
 ### The key to trees of the NAU campus and the Flagstaff area
 
-**How to use it.** Start at couplet 1. Read the leads, pick the one that fits, and go where it sends you. Write down every couplet number you pass through — the path is what you hand in, not just the name.
+**How to use it.** Start at couplet 1. Read *both* leads, pick the one that fits, and go where it sends you. Answer one couplet at a time — skipping ahead to the species that looks right is the single most common way to land on the wrong tree.
 
-> **There is a printable version of this key**, and three shorter ones — one per arboretum walk. See the downloads at the top of this chapter. The printed keys use the same couplet numbers as the key below, so a `CoupletPath` recorded from either is comparable.
+> **There is a printable version of this key**, and three shorter ones — one per arboretum walk. See the downloads at the top of this chapter. Each route key is pruned to just that walk, so its couplet numbers are its own and will not match the numbers below. Either key gets you to the same name.
 
 **This key covers every tree on the three arboretum walks**, plus the common natives and street trees around campus — 55 taxa in 41 couplets. Species marked **[N]** are native to the Flagstaff area; **[P]** are planted here and native elsewhere; **[P*]** are planted and locally invasive. Where a species sits on one of the walks, the walk is named.
 
@@ -496,6 +498,8 @@ Press it flat between sheets of newspaper, under weight, and change the paper if
 
 ### What goes on the label
 
+Download: [**Herbarium labels to print and fill in by hand**](downloads/HerbariumLabel.docx) — a worked example on the first page, blanks to cut out on the second.
+
 A field label carries the minimum: **code, date, collector, locality**. A full herbarium label carries considerably more, and the extra fields are what make a specimen useful to someone who never met you:
 
 | Field | Why it's there |
@@ -518,7 +522,7 @@ A herbarium label records **who identified the specimen and when** — separatel
 
 That is there because **an identification is not permanent.** Species get split, merged and renamed. A specimen filed as one thing in 1954 gets re-examined and re-determined as another in 2019, and the sheet carries both determinations, dated and attributed. The evidence outlives the conclusion.
 
-At the start you were told an identification is a hypothesis you tested against observations and can defend. A specimen is what makes that hypothesis **re-testable by someone else, later, without you**. Your `CoupletPath` column is a small version of the same idea: it records not just your answer but your reasoning, so a person who disagrees can find out exactly where they'd part company with you.
+At the start you were told an identification is a hypothesis you tested against observations and can defend. A specimen is what makes that hypothesis **re-testable by someone else, later, without you**. Your `Notes` column is a small version of the same idea: when you write down the character that decided it, a person who disagrees can find out exactly where they'd part company with you.
 
 ---
 
@@ -568,7 +572,6 @@ Work in SEINet (<https://swbiodiversity.org/seinet/index.php>). Use the occurren
 
 | Species | Why it's on the list |
 |---|---|
-| **One tree you keyed on the walk** — your choice | You have stood under this one |
 | ***Pinus ponderosa*** | Everywhere around Flagstaff, and everybody drives past it |
 | ***Pinus aristata*** (Rocky Mountain bristlecone pine) | Restricted to high elevation — the San Francisco Peaks, visible from campus |
 | ***Primula parryi*** (Parry's primrose) | Alpine, wet, and a walk from the nearest road |
@@ -634,11 +637,11 @@ Then Richie's question, which is the point of the whole exercise:
 
 **Part A — the walk**
 
-1. Your **tree table**: for each of at least ten trees, the pin name, the couplet path you took, the name you arrived at, your confidence *recorded before you checked*, and whether you were right.
+1. Your **tree table**: for each of at least ten trees, the pin name, the name you keyed it to, your confidence *recorded before you checked*, and whether you were right.
 2. **Your accuracy, broken down by confidence.** How many High calls were right? How many Low calls turned out fine?
 3. **One tree you got wrong**, and which character misled you. If you got none wrong, take the one you found hardest and say what nearly went wrong.
 4. **Your unknown plant log** for anything that would not key out, with photographs.
-5. **One paragraph.** NAU's campus holds two tree communities at once — the one that grew here, and the one people planted. Using your own data, describe how they differ, and give one ecological consequence. (A place to start: which community is drought-adapted, which is not, and what that means for water and for the next few decades of Flagstaff summers.)
+5. **One paragraph.** NAU's campus holds two tree communities at once — the one that grew here, and the one people planted. Using your own data — the key marks every species **[N]** or **[P]**, so sort your list that way — describe how they differ, and give one ecological consequence. (A place to start: which community is drought-adapted, which is not, and what that means for water and for the next few decades of Flagstaff summers.)
 
 **Part B — the record**
 
