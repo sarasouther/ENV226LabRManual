@@ -1,0 +1,167 @@
+# Mark–recapture: how many are there?
+
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Populations. Ecology Practices → Designing, conducting, and critiquing investigations; Quantitative reasoning and computational thinking. Cross-Cutting Themes → Systems. *BioSkills:* Process of Science → "Describe sources of error and uncertainty in data"; Quantitative Reasoning → "Use probability and understanding of biological variability to reason about biological processes."
+
+"How many are there?" is the first question anyone asks about a population, and it is the hardest one on this list to answer. You cannot count every deer in a forest, every trout in a lake, or every beetle under a log. So you estimate — and an estimate is only as good as the assumptions underneath it.
+
+This lab is the one place in the manual where **you get to check your answer.** In the indoor track your TA knows the true population size. You will produce an estimate, and then you will find out how wrong it was. Almost no ecologist ever gets to do that.
+
+### Downloads for this lab
+
+- [Mark–recapture datasheet (.csv)](downloads/mark_recapture_datasheet.csv)
+- [R script for this lab](downloads/MarkRecapture.R)
+
+## Objectives
+
+1. Estimate population size using the Lincoln–Petersen and Chapman estimators.
+2. Put a confidence interval on an estimate of abundance.
+3. Break each of the method's assumptions on purpose, and predict which direction the estimate moves.
+
+## The idea
+
+You catch some animals, mark them, and let them go. Later you catch some more. Some of the second catch are already marked.
+
+If the marked animals mixed back in evenly, then **the fraction of your second sample that is marked should equal the fraction of the whole population that is marked**:
+
+$$\frac{m_2}{n_2} = \frac{n_1}{N}$$
+
+where $n_1$ is the number you marked, $n_2$ is the number you caught the second time, $m_2$ is how many of those were already marked, and $N$ is the population size you want.
+
+Rearranged, that is the **Lincoln–Petersen estimator**:
+
+$$\hat{N} = \frac{n_1 \times n_2}{m_2}$$
+
+That is the whole method. It is arithmetic a middle schooler can do, which is exactly why it is dangerous — the difficulty is not the calculation, it is whether the sentence "the marked animals mixed back in evenly" is true.
+
+> **A better version of the same estimator.** Lincoln–Petersen is biased upward when samples are small, and it explodes if $m_2 = 0$. The **Chapman estimator** fixes both:
+> $$\hat{N} = \frac{(n_1+1)(n_2+1)}{m_2+1} - 1$$
+> The script calculates both so you can see how far apart they are. With big samples they nearly agree; with small ones they do not, and Chapman is the one to report.
+
+## The four assumptions
+
+Every one of these is a sentence that can be false, and each one bends your estimate in a **specific direction**. Learn the directions — they are the actual content of this lab.
+
+| Assumption | What it means | If it's false, $\hat{N}$ is… |
+|---|---|---|
+| **Closure** | No births, deaths, immigration or emigration between the two samples | **Too high**, if unmarked individuals arrive |
+| **Equal catchability** | Every individual is equally likely to be caught, both times | **Too low**, if some individuals are easier to catch |
+| **Marks are permanent and readable** | No mark falls off, fades, or gets missed | **Too high**, if marks are lost |
+| **Marking doesn't change behaviour** | A marked animal is no more or less catchable afterwards | **Too low** if marking makes them trap-happy; **too high** if trap-shy |
+
+Two of those push the same way for reasons worth separating in your head. **Lost marks** and **new arrivals** both make the second sample look like it contains fewer marked individuals than it should, and anything that lowers $m_2$ raises $\hat{N}$. Look back at the formula and confirm that for yourself before you go on — $m_2$ is in the denominator, and it is the number your whole estimate hangs on.
+
+---
+
+## Track A — The bag (indoor, and you find out the truth)
+
+Your TA has a bag with a known number of beans in it. **You do not get to know that number until the end.**
+
+### Step 1: Sample and mark
+
+1. Without looking, scoop beans from the bag with the measure your TA gives you — a level half-cup holds roughly a hundred beans. Count them. **That is $n_1$.** Record it.
+2. Mark every bean you drew, using the marker provided. Mark them all the same way.
+3. Put every marked bean back in the bag.
+4. **Mix thoroughly.** Shake the bag for a good ten seconds. This step is doing real work — it is the "mixed back in evenly" assumption, and you are the one responsible for it being true.
+
+### Step 2: Recapture
+
+1. Without looking, take a second scoop the same way. Count them. **That is $n_2$.**
+2. Count how many of those are marked. **That is $m_2$.**
+3. Record all three numbers as one row in your datasheet, with `Treatment` = `Clean`.
+4. Return every bean to the bag and mix again.
+
+### Step 3: Do it four more times
+
+Repeat Steps 1–2 four more times, so you have **five `Clean` trials**. Use a different mark colour each round, or erase between rounds — your TA will say which.
+
+Five trials from the same population, with the same true $N$, will give you five different estimates. **How different they are from each other is your first real result**, and it costs nothing to collect. A single mark–recapture estimate with no sense of its spread is not worth much.
+
+### Step 4: Break it on purpose
+
+Now three more trials, one per broken assumption. **Before each one, write down which direction you predict the estimate will move, and why.** Write the prediction before you get the number — a prediction made afterwards is not a prediction.
+
+**Trial `UnequalCatch` — unequal catchability.** Your TA will add a handful of large beans to the bag. Large beans are easier to grab, so they are more likely to be caught both times. Run one trial exactly as before.
+
+**Trial `Closure` — closure violated.** Run Step 1 as normal. Then, **before** you take the second sample, your TA will add a scoop of unmarked beans — immigrants arriving between your two visits. Then run Step 2.
+
+**Trial `MarkLoss` — marks lost.** Run Step 1 as normal. Then, before Step 2, your TA will remove a few marked beans and replace them with unmarked ones — the same individuals, marks rubbed off. Then run Step 2.
+
+### Step 5: The reveal
+
+Your TA tells you the true $N$. Compare it against all eight of your estimates.
+
+- Did the true value fall inside the confidence interval on your `Clean` trials?
+- Did each broken-assumption trial move in the direction you predicted?
+- Which violation did the most damage?
+- Did any broken trial land *inside* the spread of your clean trials? If so, does that mean the assumption did not matter?
+
+> **Bias and precision are different things.** A broken assumption bends the estimate the same way *every time you run the study* — that is bias. The spread of your five clean trials is precision. A single noisy trial often cannot detect a bias that is genuinely there, which is exactly why you ran five clean trials first and why one mark–recapture estimate, on its own, tells you much less than it appears to.
+
+---
+
+## Track B — Isopods under cover boards (outdoor)
+
+Same method, real animals, and **nobody knows the true answer** — which is the normal situation in ecology.
+
+Terrestrial isopods (pillbugs, woodlice) live under rocks, logs and boards, are easy to find, easy to handle, and are invertebrates, so no animal-use protocol applies. Your instructor will have put out cover boards a week or two ahead so the animals have found them.
+
+### Day 1 — Mark
+
+1. **Work one board at a time.** Lift it, collect the isopods underneath into a container, and replace the board exactly where it was.
+2. **Count them. That is $n_1$.**
+3. **Mark each one** with a tiny dot of the paint pen on the back — one dot, on the hard dorsal plates, not on the joints or the head. Let it dry for a minute.
+4. **Release them where you found them**, under the board, and replace the board gently.
+5. Wait at least 24 hours, and ideally a week. This is the "mix back in" step, and unlike the bag, you cannot shake it.
+
+### Day 2 — Recapture
+
+1. Work the same boards in the same way.
+2. **Count the total caught. That is $n_2$. Count how many carry a dot. That is $m_2$.**
+3. Release everything where you found it.
+4. Record one row per site, with `Treatment` = `Field`.
+
+### Handling rules
+
+- **Work in the shade and work quickly.** Isopods dry out fast; they breathe through modified gills and need damp air.
+- **One dot, and let it dry.** A blob of paint across the joints stops the animal moving normally, which breaks the fourth assumption and is also just unkind.
+- **Everything goes back where it came from**, including the board. The board is somebody's roof.
+
+### Which assumptions are actually at risk here
+
+All four, and that is the point. Write down, for your own site:
+
+- **Closure.** A week is long enough for isopods to move in from surrounding litter. Which way does that push your estimate?
+- **Equal catchability.** Did you catch the ones that ran, or the ones that curled up? If one behaviour is more catchable, and it is heritable or size-related, you sampled a biased subset **twice**.
+- **Mark loss.** Isopods moult. A moulted isopod loses its mark entirely. Over a week, how many do you think moulted?
+- **Behaviour change.** Being caught, handled and painted is a disturbance. Would you go back under the same board?
+
+---
+
+## Analysis
+
+Run `MarkRecapture.R`. It calculates both estimators for every row of your datasheet, puts a confidence interval on each, and plots your estimates against the true value where you have one.
+
+The confidence interval uses the standard variance for the Chapman estimator:
+
+$$\widehat{\operatorname{var}}(\hat{N}) = \frac{(n_1+1)(n_2+1)(n_1-m_2)(n_2-m_2)}{(m_2+1)^2(m_2+2)}$$
+
+You do not need to derive it. You do need to notice what is in it: **every term involves $m_2$**, and the interval gets very wide when $m_2$ is small. Catching only two or three marked individuals gives you an estimate, but not a useful one.
+
+> **If $m_2 = 0$, Lincoln–Petersen divides by zero and returns infinity.** That is not a bug in the script — it is the method telling you the truth, which is that a sample with no recaptures contains no information about population size. Chapman will still return a number. Treat it with suspicion.
+
+## Assignment
+
+Submit one document containing:
+
+1. **Your completed datasheet**, all trials.
+2. **A table of estimates** — Lincoln–Petersen, Chapman, and the confidence interval for each trial.
+3. **A figure** showing your `Clean` estimates with their confidence intervals, and the true value marked as a horizontal line.
+4. **Your three written predictions from Step 4**, followed by what actually happened. Say plainly where you were wrong; a wrong prediction you can explain is worth more here than a right one you guessed.
+5. **Two or three sentences** on this: your five `Clean` trials sampled the same population with the same method and got different answers. If you had run only the first one, how confident would you have been, and how confident should you have been?
+6. **One paragraph** naming the assumption most likely to be violated in a real study of an animal you care about, saying which direction it would bend the estimate, and saying what you would do about it.
+
+## Sources
+
+Chapman, D.G. 1951. Some properties of the hypergeometric distribution with applications to zoological sample censuses. *University of California Publications in Statistics* 1: 131–160. — the bias-corrected estimator.
+
+Seber, G.A.F. 1982. *The Estimation of Animal Abundance and Related Parameters*, 2nd ed. Macmillan, New York. — the standard reference for the variance formula and for everything that happens when the assumptions fail.

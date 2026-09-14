@@ -2,6 +2,10 @@
 
 > **Skills this lab builds.** *4DEE:* Ecology Practices → Fieldwork; Designing, conducting, and critiquing investigations. *BioSkills:* Process of Science → "Design controlled experiments, including plans for analyzing the data"; "Describe sources of error and uncertainty in data."
 
+> **This is where you stop following a protocol and start writing one.** In the tree walk you identified what was in front of you. In the field methods lab you ran a monitoring protocol that somebody else designed, down to the transect angles and the number of points. Both times, the hard decisions — where to put the plot, how many to run, what counts as a measurement — had already been made for you. This lab is where you make them.
+>
+> That order is deliberate. It is very hard to design a sampling scheme before you have knelt on the ground with a tape and found out how long 150 points actually takes.
+
 ## Background
 
 Ecology is the study of organisms and their relationship to the environment. With infinite time and capacity, we could measure every organism, every characteristic of the environment, every physiological function that affects the way an organism responds to the environment, and every gene that underlies those physiological functions in order to understand ecological systems. In practice, such detailed measurements are time-consuming and impractical. For that reason, we use statistics to account for the fact we are always missing information when we conduct ecological studies. 
@@ -84,6 +88,7 @@ This information can help you develop your sampling plan.
 Please print for class:
 
 - [Lab worksheet](downloads/EcologicalSampling_Turnin.docx)
+- [Field notes sheet](downloads/SinclairWash_FieldNotes.pdf) — bring this on a clipboard
 
 ### Sampling Q & A
 
@@ -125,17 +130,79 @@ There are several nice resources to learn about this project, including this [re
 
 Once you have looked over this information and the downloads provided, if the weather allows, walk out to Sinclair Wash and orient yourself to the site. [Walking directions](https://maps.app.goo.gl/XckDsR2THhCctFL26). If the weather is poor, check out what the wash looks like on google and use this view to create your plan. Navigate to the [Aerial view of Sinclair Wash](https://maps.app.goo.gl/bGy3fkAut525xXk77), and zoom in until you can see the Rio, which follows the tree line and path (path is hard to see here). Create your plan - you can even import a screenshot into powerpoint or use other applications to map out your sampling strategy.
 
-Write out a brief description of a sampling strategy for determining how restoration is affecting revegetation along eroded banks along Sinclair Wash. Be sure to mention how you would reduce bias, collect a representative sample, and reduce error. Please also describe plot shapes and sizes. Then, draw or make a map of your sampling strategy.
+### Before you design anything: look
+
+**Do this at the wash, before you read the next section.** You have been handed a research
+question in every lab so far. This time you are going to find one yourself, which is what
+ecologists actually spend their time doing.
+
+**Step 1 — Ten minutes of observations, and nothing else.**
+
+Stand somewhere with a good view of the bank and write down **at least five things you can
+actually see, hear or count**. Not what they mean. Not why they are that way. Just what is
+there.
+
+The rule: if a sentence contains *because*, *due to*, *caused by*, or *shows that*, it is
+not an observation and it does not count yet.
+
+Things worth looking at:
+
+- Where plants have come back, and where they have not
+- Whether the plants that are back are the same everywhere, or different in different spots
+- What the bank looks like where it is bare — steep? crumbling? compacted?
+- Where water has obviously run recently
+- Where people and dogs walk
+- Rubbish, and where it collects
+- Anything planted on purpose, and how it is doing compared with what arrived on its own
+
+Compare notes with your group and pool them. You should have fifteen or twenty between you.
+
+**Step 2 — Turn three observations into three questions.**
+
+Pick your three most interesting observations and write a question for each. A question
+counts only if **data could answer it**.
+
+> "Why is the wash like this?" — too big, no data could settle it.
+>
+> "Is there more plant cover on the gentle bank than the steep bank?" — countable. Good.
+>
+> "Are there more non-native plants close to the path than away from it?" — countable. Good.
+
+**Step 3 — Pick one and make it a hypothesis.**
+
+Choose the question your group most wants to answer, and write:
+
+1. **The question**, in one sentence.
+2. **Your hypothesis** — your best explanation, with a *because* in it.
+   *We think there is more cover on gentle banks **because** seedlings get washed off steep
+   ones before they root.*
+3. **Your prediction** — what you would see in the data if you are right.
+4. **And what you would see if you are wrong.** This one is the hard part and the most
+   important. If you cannot describe a result that would change your mind, your hypothesis
+   is not testable yet — go back and sharpen it.
+
+Keep this. You will do exactly the same four steps in the greenhouse experiment later in
+the semester, with much less help.
+
+
+Now design the sampling. Because this data is being compiled over time for the City, every group answers the same core monitoring question — so write out a brief description of a sampling strategy for determining how restoration is affecting revegetation along eroded banks along Sinclair Wash. **Then say how you would change that design to also answer your group's own question from Step 3.** Sometimes it is a small adjustment; sometimes your question needs a completely different design, and noticing that is worth as much as the answer. Be sure to mention how you would reduce bias, collect a representative sample, and reduce error. Please also describe plot shapes and sizes. Then, draw or make a map of your sampling strategy.
 
 ### Deliverables
 
 Please turn in:
 
-1. The lab worksheet, which includes:
+1. Your **field notes sheet**, which includes:
 
-    A. The answers the the questions.
+    A. Your observations from Step 1
+    B. Your three questions from Step 2
+    C. Your group's question, hypothesis, prediction, and what would prove you wrong
+
+2. The lab worksheet, which includes:
+
+    A. The answers to the questions.
     B. A written description of your sampling strategy
-    C. A picture / drawing of your sampling strategy
+    C. A note on how you would adjust that design for your own question
+    D. A picture / drawing of your sampling strategy
 
 
 

@@ -1,0 +1,13 @@
+Treatment,Day,PopulationSize
+Lemna_Mono,0,50
+Lemna_Mono,7,58
+Lemna_Mono,14,61
+Lemna_Mix,0,25
+Lemna_Mix,7,24
+Lemna_Mix,14,22
+Azolla_Mix,0,25
+Azolla_Mix,7,37
+Azolla_Mix,14,45
+Azolla_Mono,0,50
+Azolla_Mono,7,63
+Azolla_Mono,14,70

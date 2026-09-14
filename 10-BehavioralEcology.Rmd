@@ -1,0 +1,125 @@
+# Behavioral ecology: watching animals on purpose
+
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Organisms. Ecology Practices → Natural history; Designing, conducting, and critiquing investigations. *BioSkills:* Process of Science → "Execute protocols and accurately record measurements and observations"; "Describe sources of error and uncertainty in data."
+
+Everything else in this manual counts things: stems, thalli, points, individuals. This lab counts **what an animal is doing**, which turns out to be much harder, because "what an animal is doing" is not a fact sitting in the world waiting to be recorded. It is a category you invented before you walked outside, and the animal has never heard of it.
+
+That is the skill here. Anybody can watch a squirrel. Producing numbers from watching a squirrel that a second person would also produce — that takes a protocol.
+
+### Downloads for this lab
+
+- [Behavior datasheet (.csv)](downloads/behavior_datasheet.csv)
+- [R script for this lab](downloads/BehavioralEcology.R)
+
+You will also want a watch or phone timer that can beep at a fixed interval, and a clipboard.
+
+## Objectives
+
+1. Build an ethogram — a defined, mutually exclusive list of behaviors — before collecting any data.
+2. Collect behavior data by instantaneous focal sampling.
+3. Measure how much two observers watching the same animal disagree.
+4. Test a prediction about vigilance from foraging theory.
+
+## Why you write the ethogram first
+
+An **ethogram** is a list of behaviors, each with a definition precise enough that two people applying it to the same animal at the same moment write down the same code.
+
+The reason to write it before you start is not tidiness. It is that **"eating" and "looking around" are easy to tell apart in your head and surprisingly hard to tell apart on a stopwatch.** A squirrel with a seed in its paws, chewing, head up, eyes moving — is that foraging or vigilance? Whatever you decide, you must decide it the same way at 10:14 and at 10:47, and so must your partner. If you settle that question while the animal is in front of you, you will settle it differently every time, and in a direction that suits whatever you were hoping to find.
+
+This is the same problem as the observer calibration exercise in the field methods lab, in a harder form. There, two people disagreed about whether a pin hit a plant. Here, two people disagree about what a whole animal is *doing*, and there is no pin.
+
+### The ethogram for this lab
+
+Use these six. They are **mutually exclusive** — at any instant, exactly one is true — and **exhaustive**, because `OTH` catches the rest.
+
+| Code | Behavior | Definition |
+|---|---|---|
+| `FOR` | Foraging | Handling, chewing, digging for, or carrying food. Head may be up or down. |
+| `VIG` | Vigilant | Stationary, head up above shoulder height, not handling food, scanning. |
+| `LOC` | Locomoting | Moving more than one body length — walking, running, climbing. |
+| `REST` | Resting | Stationary, head at or below shoulder height, not scanning, not feeding. |
+| `SOC` | Social | Any interaction with another individual — chasing, grooming, calling at, fleeing from. |
+| `OTH` | Other / out of sight | Anything else, or the animal is obscured. |
+
+> **`OTH` is a real category and you should use it.** The temptation when an animal goes behind a tree is to write down what it was doing before. That is not an observation, it is a guess, and a dataset where guesses are indistinguishable from observations is not fixable afterward. Code it `OTH` and move on.
+
+---
+
+## Step 1: Pick your study animal
+
+Campus gives you several options, all free, all approachable, and none requiring a permit or protocol — these are wild animals in a public space and you are only looking at them.
+
+| Species | Where | Why it works |
+|---|---|---|
+| **Abert's squirrel** (*Sciurus aberti*) | Ponderosa stands on and around campus | Tassel-eared, conspicuous, and a ponderosa specialist — the same tree you keyed in the tree walk and cored in the dendrochronology lab |
+| **Rock squirrel** (*Otospermophilus variegatus*) | Rocky edges, walls, building margins | Ground-dwelling, so distance-to-cover is easy to measure |
+| **Common raven** (*Corvus corax*) | Parking lots, dumpsters, athletic fields | Large, slow-moving, easy to follow; often in pairs or small groups |
+| **Dark-eyed junco** (*Junco hyemalis*) | Ground under shrubs and feeders, **winter** | Flocks — the only option here that lets you test group size properly |
+
+Your TA will assign or approve a species. **Everyone in a section should use the same species**, so the class data pools.
+
+## Step 2: Choose your question
+
+Two predictions, both from foraging theory, both testable in one lab period. Your TA will tell you which the section is running, or your group may choose.
+
+**Question A — Distance to cover.** An animal far from safety should spend more time watching for danger and less time eating. **Prediction: the proportion of time spent vigilant increases with distance to the nearest cover.**
+
+**Question B — Group size.** In a group, many eyes are watching, so any one individual can afford to watch less. **Prediction: the proportion of time an individual spends vigilant decreases as group size increases.** (This one needs a flocking or grouping species — juncos or ravens, not solitary squirrels.)
+
+Write your prediction as an if/then statement before you go outside.
+
+## Step 3: Focal sampling
+
+You will use **instantaneous focal sampling**: pick one animal, and at fixed moments record what it is doing *at that instant*. Not what it did during the interval — what it is doing when the timer beeps.
+
+1. **Find an animal** and wait two minutes before recording. It has noticed you. Give it time to go back to normal, or your whole first sample is a record of the animal reacting to you.
+2. **Record the setup** for this focal animal: species, your observer initials, the site, a `FocalID` (use `A1`, `A2`, …), the **group size** (count every individual of that species within 10 m, including your focal animal), and the **distance to the nearest cover** in meters — cover being anything it could get under, into or behind within a couple of seconds.
+3. **Start the timer, beeping every 10 seconds.**
+4. **At each beep, write down one code.** One code. No hedging, no two codes, no arrows.
+5. **Continue for 5 minutes — 30 intervals.** Number them 1 to 30.
+6. If the animal leaves for good before 30 intervals, stop and record how many you got. A short focal is usable; an invented one is not.
+7. **Repeat with a new animal.** Aim for at least four focal animals per group, spanning a range of distances to cover or group sizes.
+
+> **Do not follow the animal.** Move as little as you can. If it goes out of sight, that is `OTH` — which is exactly why `OTH` exists. An observer who walks around to keep the animal in view is an observer who is changing the animal's behavior and measuring the result.
+
+## Step 4: Two observers, one animal
+
+For **at least one** focal animal, two people in your group record the same animal at the same time, independently — no talking, no glancing at each other's sheets.
+
+Give this focal the same `FocalID` on both sheets, and record each observer's own initials in the `Observer` column. The script will find the pair automatically and calculate your **percent agreement**: the fraction of the 30 intervals where you both wrote the same code.
+
+There is no official standard for this the way the AIM manual sets one for cover. As a working target, treat **below 80% agreement as a sign your ethogram needs tightening**, not as a sign one of you is bad at watching squirrels. Look at *which* codes you disagreed about — it is almost always one specific pair, and that pair is a definition that isn't sharp enough yet.
+
+## Step 5: Enter your data
+
+One row per interval, per focal animal, per observer. The columns are:
+
+```
+Observer,Site,Species,FocalID,GroupSize,DistToCover_m,Interval,Behavior
+```
+
+Thirty rows per five-minute focal. That feels like a lot of typing and it is — this is what behavioral data looks like, and it is why people build apps for it. Enter it in your spreadsheet using the rules from the spreadsheet chapter: one rectangle, one observation per row, one consistent code set.
+
+---
+
+## Analysis
+
+Run `BehavioralEcology.R`. It:
+
+1. Checks that every code you used is in the ethogram — a stray `vig` or `F` or `FOR ` with a trailing space will be caught here rather than silently becoming its own category.
+2. Collapses each focal animal into a **proportion of intervals vigilant**, which is your response variable.
+3. Plots that proportion against distance to cover and against group size, and fits a line.
+4. Calculates percent agreement for any focal watched by two observers.
+
+The move in step 2 is worth noticing. You collected 30 rows per animal, but **your sample size is the number of animals, not the number of intervals.** The 30 intervals within one focal are not independent of each other — they are the same squirrel, thirty times. Treating them as 30 independent data points would inflate your sample size by a factor of thirty and make almost anything look significant. This mistake has a name, pseudoreplication, and it is one of the most common errors in published behavioral work.
+
+## Assignment
+
+Submit one document containing:
+
+1. **Your prediction**, written as an if/then statement, from before you collected data.
+2. **Your ethogram**, including any definition your group had to sharpen partway through — and say what forced the change.
+3. **A figure**: proportion of time vigilant against distance to cover (or group size), one point per focal animal, with the fitted line. Figure legend included, no title on the figure itself.
+4. **Your percent agreement** for the double-observed focal, and a sentence on which two codes you disagreed about most.
+5. **Your result** in one or two sentences — supported, not supported, or too noisy to say.
+6. **One paragraph** on this: your animals were not assigned to distances at random. They chose where to forage. Does that change what your result can mean? What would you have to do to turn this correlation into a causal claim, and could you ethically do it?

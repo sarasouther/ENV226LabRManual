@@ -37,6 +37,33 @@ In lab, we will conduct experiments and practice skills used in the ecological s
 
 Each chapter in this online book corresponds to lab that you will complete. For most labs, you will download R code that you will use to analyze your data, and that can be also be used for other analyses and projects that you have in college and in the workplace.
 
+**How this manual is ordered**
+
+The chapters follow the same path the course does, from the smallest scale to the largest:
+
+1. **Getting your tools working** — R, RStudio, spreadsheets, and how to describe a set of numbers.
+2. **Learning to work in the field** — identifying what's there, running a professional monitoring protocol, and then designing a study of your own.
+3. **Organisms and populations** — animal behavior, natural selection, estimating abundance, population structure, demography, and population growth.
+4. **Communities** — species interactions and diversity.
+5. **Ecosystems and landscapes** — decomposition, water quality, and modeling where species can live.
+
+Statistical testing sits deliberately late, right before you analyze your own data, because
+tests make far more sense when you have a question you actually care about answering.
+
+Three things about this order are worth knowing up front:
+
+- **Some chapters are alternatives, not additions.** Dendrochronology is the spring
+  substitute for the field methods lab, and the Crosstown Walk is an alternative to the
+  Sinclair Wash study. You will do one of each pair, not both.
+- **Two labs do not run in chapter order, and both say so at the top.** You plant the
+  species interaction project early and visit the greenhouse weekly for six to eight weeks
+  while the class works through other labs; the analysis and poster come at the end, in a
+  separate chapter. The litter decomposition bags go out around week 3 and come back in
+  around week 12, and need nothing from you in between.
+- **Weather reorders things.** Flagstaff sits at 7,000 feet, and outdoor labs get moved when
+  the forecast says so. Pay close attention to your TA, your Canvas shell and your email so
+  that you don't get lost.
+
 **Important downloads**
 
 Your rubrics for the lab report and final class project poster can be downloaded here:
@@ -48,9 +75,7 @@ These links are also embedded within the class projects for which you will creat
 
 ## Skills you'll build
 
-Every chapter in this manual opens with a short box headed **"Skills this lab builds."** Those boxes are not decoration. They tell you which professional competencies a given lab is training, and they are drawn from two published frameworks that the ecology and biology education communities use to design and evaluate courses.
-
-The point of naming them is simple: **you should be able to say what you can do, not just what you covered.** "I took an ecology lab" is a line on a transcript. "I can run a line-point intercept transect, calculate cover, and quantify observer disagreement against a published standard" is a thing an employer can hire.
+Every chapter in this manual opens with a short box headed **"Skills this lab builds."** These boxes tell you which professional competencies a given lab is training. Skills are drawn from two published frameworks that the ecology and biology education communities use to design and evaluate courses.
 
 ### The two frameworks
 
@@ -72,26 +97,24 @@ The point of naming them is simple: **you should be able to say what you can do,
 5. **Communication & Collaboration** — communication, collaboration, collegial review, metacognition
 6. **Science & Society** — ethics, societal influences, science's impact on society
 
-The two frameworks complement each other rather than overlapping. BioSkills is sharpest on quantitative reasoning, communication and research ethics. It contains **no outcome naming natural history or field observation** — and those are precisely the first two Ecology Practices in 4DEE. A field-based ecology lab needs both.
+The two frameworks complement each other rather than overlapping. BioSkills emphasizes quantitative reasoning, communication and research ethics. It contains **no outcome naming natural history or field observation**, while those skills are highlighted in 4DEE.
 
 ### Where this manual covers what
 
-| Skill area | Where you practise it |
+| Skill area | Where you practice it |
 |---|---|
-| **Natural history and field observation** | Tree walk · Field methods · Population structure · Urban ecology |
-| **Fieldwork and protocol execution** | Ecological sampling · Field methods · Plant population biology · Water quality · Species interactions |
-| **Study design** | Ecological sampling · Selecting statistical tests · Species interactions · Urban ecology |
-| **Measurement error and uncertainty** | Field methods (observer calibration) · Population structure · Ecological sampling |
-| **Data management** | Welcome to R · Descriptive statistics · every lab with a shared class datasheet |
+| **Natural history and field observation** | Tree walk · Field methods · Behavioral ecology · Population structure · Urban ecology |
+| **Fieldwork and protocol execution** | Field methods · Ecological sampling · Plant population biology · Water quality · Species interactions I |
+| **Study design** | Ecological sampling · Selecting statistical tests · Species interactions I · Urban ecology |
+| **Measurement error and uncertainty** | Field methods (observer calibration) · Behavioral ecology (observer agreement) · Mark–recapture (assumption violations) · Population structure · Ecological sampling |
+| **Data management** | Getting started · Working with data in a spreadsheet · Descriptive statistics · every lab with a shared class datasheet |
+| **Reproducible workflows** | Working with data in a spreadsheet · every lab that ships an R script |
 | **Quantitative and statistical analysis** | Basic statistical testing · Selecting statistical tests · Species diversity · every analysis chapter |
 | **Modeling and simulation** | Plant population biology · Species distribution modeling · Population ecology · Dendrochronology |
-| **Communication and collaboration** | Species interactions · Urban ecology · the class project |
-| **Ethics and responsible conduct** | Population ecology (culture disposal) · Species diversity (specimen collection) · Field methods (collecting permission) · Urban ecology (conduct in neighbourhoods) |
+| **Communication and collaboration** | Species interactions I and II · Urban ecology · the class project |
+| **Ethics and responsible conduct** | Population ecology (culture disposal) · Species diversity (specimen collection) · Field methods (collecting permission) · Urban ecology (conduct in neighborhoods) |
 | **Science and society** | Urban ecology · Invasive species · Water quality · Dendrochronology |
-
-### If you are reading this as an instructor or reviewer
-
-The tags are also a coverage map. Reading down the chapters, you can see which competencies the manual hits repeatedly and which it touches once — which is exactly the information you need to decide what the next revision should add.
+| **Ecosystem processes** | Litter decomposition · Water quality · Species diversity |
 
 **Sources.** ESA 4DEE framework: <https://esa.org/4dee/>. Foundational paper: Klemow, K., A. Berkowitz, C. Cid, and G. Middendorf. 2019. Improving ecological education through a four-dimensional framework. *Frontiers in Ecology and the Environment* 17(2): 71. <https://doi.org/10.1002/fee.2013>
 

@@ -1,0 +1,242 @@
+# Getting started: the course, your tools, and your data
+
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Quantitative reasoning and computational thinking. *BioSkills:* Quantitative Reasoning → "Record, organize, and annotate simple data sets"; "Apply the tools of graphing, statistics, and data science to analyze biological data."
+
+Welcome to ENV 226 lab! Today has three jobs, and we do them in this order:
+
+1. **Meet the people you'll be working with**, and collect the first dataset of the semester — from each other.
+2. **Get R and RStudio onto your computer.**
+3. **Run your first script**, using the data you just collected.
+
+R is a free, open-source program that ecologists and other scientists use to work with data — from organizing spreadsheets to making figures and running analyses. You do not need prior coding experience, and you do not need to understand everything today. The goal is to get R working and take the first steps.
+
+If something feels confusing at first, that's normal. Everyone learns R by using it, not by memorizing it.
+
+### Downloads for this lab
+
+Get these before you start. You'll be told where to put them in Step 6.
+
+- [Practice R script (`intro.R`)](downloads/intro.R)
+- [Example data file (`WelcomeToENV226.csv`)](downloads/WelcomeToENV226.csv) — a stand-in with the same columns as the class sheet, so you can run the script even if the class data isn't ready yet
+- [Class data sheet](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/edit?usp=sharing) — the live sheet you'll add your own data to
+- [Lab report guidelines and rubric](#labreport) — you won't need this today, but download it now so it's in your folder
+
+Software you'll install (Steps 1 and 2):
+
+- R — <https://www.r-project.org>
+- RStudio Desktop (Free) — <https://posit.co/download/rstudio-desktop/>
+
+---
+
+## Part 1 — Start your downloads
+
+The installers take a while, and there is no reason to sit and watch them. Start them now and go meet your classmates while they run.
+
+### Step 1: Start the R download
+
+1. Go to <https://www.r-project.org>
+2. Click **Download R from CRAN**
+3. Choose any mirror — it truly does not matter
+4. Download the version for your operating system (Mac, Windows, or Linux)
+5. **Leave it downloading** and move on to Step 2
+
+### Step 2: Start the RStudio download
+
+1. Go to <https://posit.co/download/rstudio-desktop/>
+2. Download **RStudio Desktop (Free)**
+3. **Leave it downloading** and go to Part 2
+
+You need two programs because they do two different jobs. R does the calculations; RStudio helps you write and organize code. Think of R as the engine and RStudio as the dashboard. You only install each one once per computer.
+
+---
+
+## Part 2 — Meet your class and collect data
+
+While those download: this is the meet-and-greet, and it is also the first data collection of the semester. Everything you measure today gets analyzed in the next two labs.
+
+### Step 3: Interview your group
+
+Find your group and ask each person:
+
+1. **How far from home are you?** Use Google Maps to get the mileage.
+2. **Do you prefer cats or dogs?** ("Neither" is a valid answer.)
+3. **How many roommates do you have?**
+
+### Step 4: Measure some trees
+
+If the weather is nice, follow your TA outside to measure the diameter of aspen trees. Your TA will show you how — the measurement is **DBH**, diameter at breast height, and you'll use it again in several later labs.
+
+If the weather isn't cooperating, your TA will tell you what to do instead.
+
+### Step 5: Add your data to the class sheet
+
+1. Open the [class data sheet](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/edit?usp=sharing)
+2. Add one row per person, filling in all four columns
+3. **Do not** rename the columns, add extra columns, or type units into the cells — the script expects the sheet exactly as it is
+4. Tell your TA when your group is done
+
+Once everyone has entered their data, your TA will check the sheet over. **Wait for the green light before downloading it** — if you download early you'll get a half-empty file.
+
+---
+
+## Part 3 — Set up your computer
+
+Your downloads should be finished by now.
+
+### Step 6: Install R and RStudio
+
+1. Run the R installer, using the default options
+2. Run the RStudio installer, using the default options
+
+RStudio will automatically find R once both are installed.
+
+### Step 7: Make your lab folder
+
+Create a folder on your desktop called **`EcologyLab`**. Everything for this course goes in it. One folder, all semester.
+
+### Step 8: Put your files in it
+
+1. Download the [practice R script](downloads/intro.R) and save it in **`EcologyLab`**
+2. Once your TA gives the green light, [download the class data sheet as a .csv](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/export?format=csv) and save it in **`EcologyLab`**
+3. **Rename it to exactly `WelcomeToENV226.csv`.** Your browser may save it as something like `WelcomeToENV226 - Sheet1.csv`. Fix the name, or the script will not find the file.
+
+If the class data isn't ready, use the [example file](downloads/WelcomeToENV226.csv) instead — it has the same columns, so the script runs either way.
+
+You should now have two files in `EcologyLab`: the R script and the CSV.
+
+### Step 9: Open RStudio and look around
+
+When you open RStudio you'll see four panes. You do not need to customize anything.
+
+- **Console** — where R runs code
+- **Source** — where you write and save code
+- **Environment** — shows what data you have loaded
+- **Plots / Files / Help** — where figures and help appear
+
+Your layout may look slightly different from your neighbor's. That's fine.
+
+### Step 10: Install your packages
+
+R comes with built-in tools, but most ecological work uses **packages** — collections of tools written by other scientists.
+
+Run this **once**, in the Console, and you're set for every lab this semester:
+
+```{r eval=FALSE}
+install.packages(c(
+  "tidyverse",    # used in almost every lab
+  "car",          # invasive species
+  "ggpubr",       # invasive species
+  "gridExtra",    # natural selection
+  "gplots",       # plant population biology
+  "popbio",       # plant population biology - matrix models and PVA
+  "dplR"          # dendrochronology - tree rings
+))
+```
+
+If asked whether to install dependencies, choose **Yes**. This takes a few minutes.
+
+The species distribution modeling lab needs a larger set of spatial packages, and its script installs those for you the first time you run it.
+
+If a lab script later stops with `there is no package called '...'`, you've found one this list missed — install it and tell your instructor so it can be added.
+
+### Step 11: Load the tidyverse
+
+Installing is once per computer. **Loading is every session.** Every time you open R:
+
+```{r}
+library(tidyverse)
+```
+
+Forgetting to load a package is one of the most common R mistakes, and it produces errors that look much scarier than they are.
+
+---
+
+## Part 4 — Run your first script
+
+### Step 12: Open the script
+
+In RStudio: **File → Open File** → select `intro.R` from your `EcologyLab` folder.
+
+Look at what's in it:
+
+- Lines starting with `#` — these are notes, not code
+- Code for installing and loading packages
+- Code for setting a working directory
+- Code for importing data
+- Code for visualizing your data
+
+We'll go through these together.
+
+### Step 13: Set your working directory
+
+A working directory tells R where your files live. This is the single most common thing to go wrong, so do it deliberately.
+
+The easy way, with the script already open:
+
+**Session → Set Working Directory → To Source File Location**
+
+Because your script and your data are in the same folder, R can now find the CSV without you typing any file paths.
+
+The other way, through the Files pane:
+
+1. Go to the **Files** pane
+2. Navigate to your `EcologyLab` folder
+3. Click **More**, then **Set As Working Directory**
+
+### Step 14: Import your data
+
+Once your working directory is set, the `read.csv()` line in the script will just work. Run it.
+
+You can also import through the menus, which is useful while you're learning or troubleshooting a file path:
+
+1. Go to the **Environment** pane
+2. Click **Import Dataset**
+3. Choose **From Text (readr)**
+4. Navigate to your CSV and select it
+5. Click **Import**
+
+RStudio will load the data, show it in a spreadsheet-like view, and — usefully — write out the R code it used. For reproducible work we'll rely on code-based imports, but the menu is a fine crutch early on.
+
+### Step 15: Make your figures
+
+Run the visualization code at the bottom of the script. You should get four plots.
+
+### Step 16: Save your figures
+
+For each figure:
+
+1. Click the **Plots** tab (lower-right pane)
+2. Make sure the figure you want is showing
+3. Click **Export**
+4. Choose a format (PNG or PDF)
+5. Save it into your `EcologyLab` folder
+
+Saving this way lets you control file type and size, which matters when you're dropping figures into reports and posters later in the semester.
+
+---
+
+## Two habits worth starting today
+
+### Comment your code
+
+Anything after a `#` is ignored by R.
+
+```{r}
+# This is a note to myself
+```
+
+Use comments to explain what the code does, why you wrote it, and anything future-you will forget. Good code is readable code.
+
+### Get unstuck efficiently
+
+Everyone — including professional scientists — gets errors in R. When you're stuck:
+
+1. **Read the error message.** It usually names the problem.
+2. Copy it and search it, or paste it into an AI assistant and ask "What does this error mean?"
+3. Check the two usual suspects first: is your working directory set, and is your file named exactly right?
+
+Learning to debug is part of learning R, not a sign you're doing it wrong.
+
+## Assignment
+
+Put your four figures into a Word document and submit it through Canvas.

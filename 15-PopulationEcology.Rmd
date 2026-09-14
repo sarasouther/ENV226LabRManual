@@ -107,14 +107,46 @@ To investigate population dynamics of duckweed using microcosms.
 5.	Light source (natural sunlight or artificial light)
 6.	Data recording sheets
 
-First, we will explore growth rates of populations with two different initial population sizes. Working in groups of 3 – 5, follow the procedure below. Then, proceed to setting up your experiment in which nutrient levels are varied!
+First, we will explore growth rates of populations with two different initial **densities**. Working in groups of 3 – 5, follow the procedure below. Then, proceed to setting up your experiment in which nutrient levels are varied!
+
+### Why density, and not just "how many plants"
+
+Duckweed floats. It does not compete for volume — it competes for **surface**, and for the light falling on that surface. So what limits a duckweed population is not how much water is in the cup but how much of the water's surface is already occupied.
+
+That has a consequence for how you set the experiment up. "Put fifteen plants in the cup" is not a density: a plant can be one thallus or four, and a wide cup has far more surface than a narrow one holding the same volume. **Two groups following that instruction with different cups are running different experiments.** So we stock by area instead.
+
+The densities below are not arbitrary. In published work on *Lemna minor*, growth rate falls measurably as starting density rises across the range **0.7 to 2.8 thalli per cm²** — and it falls in the untreated controls, from crowding alone. Those are the two ends we use.
 
 ### Procedure
-1.	Fill two microcosms with artificial pond water, 200 ml. Mark the 200 ml water level on the cup so that you can refresh the culture solution to the same volume.
-2.	Place two healthy Lemna plants in one of the cups. Place 15 health Lemna plants in the second cup.
-3.	Because a plant can consist of one or more thalli, it is necessary that you now count the number of thalli in each cup. One thallus is any leaf unit that is over 1.5 mm. Record these data in the Day 0 column of Table 1.
-4.	Place the cups under fluorescent or near natural lights for a period of two weeks, check them periodically to refill the cups to the 200 ml line.
-5.	Count the number of thalli in each cup on Day 7 and Day 14. These counts are already reflected in the datasheet for this lab, but you will need to record population size going forward
+
+1.	**Work out your cup's surface area.** Measure the inside diameter of the cup at the water line, in centimetres, and calculate
+
+$$\text{area} = \pi \times \left(\frac{\text{diameter}}{2}\right)^{2}$$
+
+	A cup 6.2 cm across has an area of about 30 cm². Write your area down — it goes in your methods, and without it nobody can repeat what you did.
+
+2.	**Work out your two stocking numbers.**
+
+	| Treatment | Density | Number of thalli |
+	|---|---|---|
+	| Low | 0.7 thalli per cm² | area × 0.7 |
+	| High | 2.8 thalli per cm² | area × 2.8 |
+
+	For a 30 cm² cup that is **21 thalli** and **84 thalli**. For a standard ~28.5 cm² cup it is **20** and **80**. Round to whole thalli.
+
+3.	**Fill two microcosms with 200 ml of artificial pond water.** Mark the 200 ml water level on each cup so that you can refresh the culture solution to the same volume.
+
+4.	**Stock each cup.** One thallus is any leaf unit over 1.5 mm — so count thalli, not plants. A plant with three thalli attached counts as three. Add plants to each cup until you reach your two target numbers, counting as you go.
+
+5.	**Record the actual counts in the Day 0 row of your datasheet** — the number you actually put in, not the number you were aiming for. If you overshot to 86 instead of 84, 86 is your data.
+
+6.	**Before you move on, estimate by eye what fraction of each cup's surface is covered**, and write that down too. You will compare it against the count later. Two things are worth noticing: how far your estimate is from the count, and how much less of the surface 2.8 thalli per cm² covers than you would guess.
+
+7.	**Place the cups under fluorescent or near-natural light** for two weeks, and check them periodically to refill to the 200 ml line.
+
+8.	**Count the number of thalli in each cup on Day 7 and Day 14** and record each count in your datasheet.
+
+> **Counting a hundred-odd thalli.** Put the cup on a sheet of paper with four lines drawn through the centre, count one sector at a time, and total them. Counting a crowded cup as one mass is where the error comes from, not the arithmetic.
 
 Here is some information on *L. minor* to assist you!
 ![](images/04-populationecology/LemnaInfo.png)
@@ -123,6 +155,84 @@ Here is some information on *L. minor* to assist you!
 
 1.	Check the microcosms and refill the cups to the 200 ml line.
 2.	Count the number of thalli in each cup on Day 7 and Day 14. Record these data in the population size column of your datasheet.
+
+> **What you are looking for.** Both cups will grow. The question is not which one ends up with more thalli — the crowded one starts with more and will probably finish with more. The question is whether each thallus is *reproducing as fast*. That is what `r` measures, and if competition is happening, the crowded cup's `r` will be lower. Roughly half is a normal result.
+
+---
+
+## Track C — Two species in one cup (optional extension)
+
+Track B is **intraspecific** competition: duckweed against duckweed. If you have two floating species, the same cups answer a bigger question — what happens when a second species is competing for the same surface.
+
+This is a **replacement series**, the design de Wit introduced in 1960 and the standard way to separate "there are simply more plants in the cup" from "this species is worse off *because the other one is there*." The trick is that **total density stays constant** across every treatment. Only the ratio changes.
+
+### The design
+
+Total density is **2.8 units per cm²** in every cup — the same crowded density from Track B. What changes is who makes it up:
+
+| Treatment | *Lemna* | Second species | What it tells you |
+|---|---|---|---|
+| `Lemna_Mono` | 100% | 0% | How *Lemna* does with only its own kind to compete with |
+| `Mixture` | 50% | 50% | How each does with the other present |
+| `Azolla_Mono` | 0% | 100% | How the second species does alone |
+
+Run each in duplicate if you have the cups. In the mixture, record the two species **separately** — that is the entire point.
+
+### The second species
+
+**Azolla** (a small floating water fern) is the practical partner, and the background section of this chapter already names it: free-floating plants like *Lemna* and the water ferns *Azolla* and *Salvinia* all grow continuously, which is what makes them usable here.
+
+> **Azolla is not a fair fight, and that is interesting.** *Azolla* carries a symbiotic cyanobacterium, *Anabaena azollae*, in cavities in its fronds, and that symbiont fixes atmospheric nitrogen. So *Azolla* is not nitrogen-limited in the way *Lemna* is. Both species still compete for the same **surface and light** — that is the resource the replacement series is about — but one of them has a private nitrogen supply. Predict what that does in nitrogen-poor pond water, then see whether you were right. A competitor that is limited by a different resource than you are is a common situation in real communities and one of the reasons coexistence happens at all.
+
+### Measuring two species in one cup
+
+You cannot count *Azolla* the way you count *Lemna*. *Lemna* comes in discrete thalli; *Azolla* branches and fragments, and "one individual" stops being a meaningful unit.
+
+So switch the response variable to **cover**, measured by point intercept — the same method you ran on a transect in the field methods lab, shrunk to a cup:
+
+1. Lay a **transparent grid** over the cup — 100 points, printed on an overhead sheet or drawn on clear plastic.
+2. At each point, record which species is directly underneath: *Lemna*, *Azolla*, or open water.
+3. **That count is your `PopulationSize`** — number of grid points occupied by that species.
+4. Count on Day 0, Day 7 and Day 14, same as Track B.
+
+One rule, straight from the field methods lab: **a point is a point**. If two fronds overlap under one grid point, record the top one. Do not record both and do not average.
+
+### Recording it
+
+Use the same three-column datasheet. Encode species and treatment together in the `Treatment` column so one script still reads everything:
+
+```
+Treatment,Day,PopulationSize
+Lemna_Mono,0,50
+Lemna_Mix,0,25
+Azolla_Mix,0,25
+Azolla_Mono,0,50
+```
+
+`PopulationGrowth.R` will treat these as four groups and give you `r` for each. Then run [`ReplacementSeries.R`](downloads/ReplacementSeries.R) on the same file for the competition part.
+
+### What the numbers mean
+
+For each species, the **relative yield** is how it did in the mixture compared with how it did alone:
+
+$$RY_{Lemna} = \frac{\text{final cover of } Lemna \text{ in the mixture}}{\text{final cover of } Lemna \text{ in monoculture}}$$
+
+You planted each species at half its monoculture density, so **if nothing happened except halving the starting numbers, $RY$ would be 0.5.** Above 0.5 means it did better than its share; below means worse.
+
+Adding the two relative yields gives the **relative yield total**, and its value is the result:
+
+| $RYT$ | Interpretation |
+|---|---|
+| **≈ 1.0** | The two species are competing for **the same limiting resource**. One's gain is the other's loss. |
+| **> 1.0** | They are using **partly different resources** — niche differentiation, or one is helping the other |
+| **< 1.0** | Mutual interference — each does worse together than the resource accounting predicts |
+
+Look at the individual $RY$ values too. $RYT$ near 1 with $RY$ of 0.3 and 0.7 means the same resource and a clear winner.
+
+### Downloads for Track C
+
+- [Replacement series datasheet (.csv)](downloads/replacement_series_datasheet.csv)
+- [R script for Track C](downloads/ReplacementSeries.R)
 
 > **If your duckweed dies, when it died tells you why.** Dying in week one, before it grew at all, is almost always chlorine in the water or too little light. Dying in week three, after it grew and filled the cup, is not a failure at all — that is the population hitting carrying capacity, and it is the most interesting result you can get.
 
@@ -252,11 +362,3 @@ Please turn into your TA, your:
 **If you ran Track A**, add one more:
 
 5. What happened to the ratio of juveniles to adults over the three weeks, and what does that tell you about the population that the total count alone does not?
-
-## Notes for TAs
-
-- **Order the starter culture two weeks ahead, or collect locally.** Local collection from a Flagstaff-area pond is free and removes the non-native release question entirely — but confirm the collection is permitted for the water body you use.
-- Total cost for the *Daphnia* track is under $50 for the whole course: $15–25 for a starter culture, a few dollars for yeast or spirulina, jars and hand lenses you already have. No compound scope is needed.
-- **Watch for overfeeding in week 1.** It is the single most common way a section loses its cultures, and students overfeed because feeding feels like caring. Show them what "faintly cloudy" looks like on day one.
-- Keep a spare culture running in the prep room. A group whose jar crashes in week one should be able to restart rather than sit out two weeks.
-- The disposal step is a two-minute conversation, not a paragraph to skip. It is the only place in the manual that touches responsible conduct of research directly.

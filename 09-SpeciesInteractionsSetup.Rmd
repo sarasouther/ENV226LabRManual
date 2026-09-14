@@ -1,0 +1,110 @@
+# Species interactions I: designing and planting your experiment
+
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Communities. Ecology Practices → Designing, conducting, and critiquing investigations; Working collaboratively. *BioSkills:* Process of Science → "Formulate testable hypotheses and state their predictions"; "Design controlled experiments, including plans for analyzing the data."
+
+> **This lab is not a one-week lab, and it does not run in the order the manual is printed in.** You plant your experiment today. Then, for the next six to eight weeks, you visit the greenhouse **once a week** to measure your plants — while the class is working through other labs. At the end of the semester you harvest, analyze, and present a poster. That last part is its own chapter: **Species interactions II: analysis and poster**, near the end of this manual. Read this chapter now; read that one when your plants come out of the greenhouse.
+
+## Introduction 
+
+When you look at a given ecological community (whether it’s a ponderosa pine forest, a meadow, or a garden), you are looking at the combined results of thousands of interactions. Interactions can occur between species (i.e., interspecific interactions) or within (among the same) species (i.e., intraspecific interactions). Studies of ecological interactions are important in a range of disciplines, including agriculture, disease ecology, restoration, forestry and fisheries. 
+
+In this lab, you will use an experimental approach to explore various types of ecological interactions. This lab will require you to develop scientific questions, generate hypotheses, and design tests that will allow you to gather evidence to support (or fail to support) those hypotheses. This is a multi-week lab. On the first day of the lab, you will select and initiate your experimental tests. You will also begin to plan a final poster based on this lab. Over the next six to seven weeks, you will visit your experimental plants to measure their growth. 
+
+Organisms interact with one another to obtain food, protection, transportation, growth substrate, and other requirements. In interactions, the service or substance exchanged between organisms is known as “currency.” Like an exchange of money, currency exchanges can be two-way (where both organisms receive something beneficial) or one-way (where only one organism receives something beneficial. Furthermore, one-way exchanges can exert a negative effect on the other organism (as in the case of predation) or may have no effect on the other organism. The characteristics of ecological communities are determined by interactions between organisms. That is, ecological interactions dictate what species are present in a given environment and in what numbers, what species are able to colonize or invade a particular location, and sometimes even whether species become extinct. 
+
+Ecological interactions are often classified by an interaction sign (Table 1). The sign is a reflection of the impact of the interaction on the reproductive potential of each participating organism. Interactions that are mutually harmful are delineated with two negative signs (-,-). Interactions that benefit one organism while being detrimental to another are delineated with a negative and a positive sign (-,+). Interactions that are mutually positive are delineated (+,+); and so on.
+
+Understanding the sign of a given interaction can be important for predicting its effects on the community. If a new species is introduced to a site and acts as an herbivore, for example, it may be expected to decrease the reproductive potential of one or more plants in the area. This in turn can alter the abundance of those plants, and perhaps their competitive interactions or ability to interact with their pollinators or with other herbivores. 
+
+Over the next six to eight weeks, you will visit your experimental plants in the greenhouse every week to measure their growth. At the end of that time, you will perform final measurements on your plants and dispose of them. Toward the end of the semester, you will turn in a poster reporting your results. 
+
+## Objectives 
+
+1. To explore ecological interactions using plants as model organisms. 
+2. To become more familiar with (and comfortable with) the scientific method of inquiry.
+3. To practice scientific writing. 
+
+## Week 1
+
+### Downloads for this lab
+
+Please download:
+
+- [A reading about plant species interactions](downloads/HuotEtAl2014.pdf)
+- [Experimental design worksheet for turn-in](downloads/EcologicalInteractions_TurninWeek1.docx)
+- [An example data sheet](downloads/SpeciesInteractionsDatasheet.csv)
+
+**This is a datasheet for an experiment with 12 pots and two species, with each pot containing species A & B. You may need to adjust the structure of the dataset depending your experimental design**
+
+We will be working in the NAU greenhouse. For those of you who have not visited the greenhouse yet, here is a mapped location:
+
+- [View NAU greenhouse location on Google Maps](https://maps.app.goo.gl/UHgzcexkYzsEHVPW7)
+
+### Materials 
+
+Each group of two should have: 
+
+- 2 six-pack of pots
+- Potting soil 
+- Seeds 
+- Labels 
+- Permanent marker (for pot labeling) 
+- Data sheet 
+
+## Overall procedure 
+
+1. This lab will run between 6 and 8 weeks. The first week will be devoted to hypothesis generation, experimental design, and planting. During the following weeks, while the class is completing other lab assignments, students should arrange with one another to ensure that the plants from this experiment are measured at least once per week until the end of the experiment. At that time plants will be removed from pots and their root and shoot lengths measured and biomass placed in a drying oven. 
+
+2. In this lab, you will evaluate ecological interactions in very small, micro-communities: greenhouse pots. Considering your previous experience and the knowledge you bring to the lab, consider what might happen if you plant certain combinations of seeds in a particular pot and why a particular pattern might emerge. 
+
+3. Available to you are multiple plant species. By sowing these plants in pots, separately or together, you can create small-scale communities. Working in groups, develop one to two scientific questions relevant to ecological interactions among or within the species at hand. To do this, begin by brainstorming what sort of ecological interactions might occur if various combinations of seeds are used. Then, develop a question about an ecological interaction that is of interest to you and might be expected to occur among these species. Write down your question(s). You may want to google species that you use in your project in order to inform your question and hypotheses. 
+
+4. Develop a hypothesis for your scientific question. Hypotheses are possible answers to your questions. Write down your hypotheses. You’ll include these in your poster. Check with your instructor to make sure you’ve appropriately developed your hypotheses. 
+
+5. Consider the type of evidence that might support each of your hypotheses (“if… and … then…”). Develop experimental tests (plant species/number of seeds) that would give you the evidence for each of your hypotheses. Ensure that the experiments you design are scientifically robust (controlled, quantifiable, unbiased, repeatable, falsifiable, etc.). 
+
+**Note: Since we have limited space, we won't be able to ensure independence of our replicates**
+
+6. Carry out your experiments. Each group of students will have the use of at least 12 small pots, labeled with your names. Note that most questions/hypotheses will require more than one pot (for example, pots for controls and treatments). Thus, the number of questions and tests carried out may vary among pairs of students. Carefully record the species and number of seeds used on a white label inserted into each pot so you know for sure what each pot contains. Each white tag should include: Your group's initials and lab section number. Tray # and Space # and what’s in each pot and the quantity.
+
+Here is an example label:
+![](images/10-speciesinteractions/examplelabel.png)
+
+**Note**: the greenhouse is open between 7:00 am - 3:00 pm & you will need to get the greenhouse code from your instructor.
+
+## Set up your experiment
+
+Now that you have generated your question, hypothesis, and identified what evidence you need to gather (if/then statement), set up your experiment. When planting, ensure sufficient light: smaller seeds should be buried approximately ¼ inch below the soil surface, and larger seeds approximately ½ inch. Take a photo of your pots once they are planted and the labels are in place.
+
+## Creating your Data Sheet
+
+1. You should create a data sheet with your group members to successfully record your data
+for the next 6 - 8 weeks. Do this by modifying the example data sheet that we have provided.
+2. Here are a few suggestions for recording data:
+  - If no germination, record "No" or 0. 
+  - If dead, record "No" under the survival column or 0. 
+  - If multiple shoots per species, you may want to record the average height.
+
+> **Set the sheet up properly now, not later.** You are about to spend eight weeks adding rows to this file. Every rule from **Working with data in a spreadsheet** applies: one rectangle, one variable per column, one observation per row, plain column names, and one consistent marker for missing data. A sheet that is awkward in week 1 is unusable by week 8, and you will not want to retype it the night before the poster is due.
+
+## Turn-in week 1
+
+1. Name of group members
+2. Date of planting
+3. Question/s
+4. Hypothesis/es
+5. Evidence (if/then statement)
+6. Drawing of your experimental design
+7. Your data sheet and a description of what you will measure each week
+
+## The weeks in between
+
+During this time, you will be maintaining your experiment and continue to collect data. Make a schedule with your group members to ensure that someone will measure growth of the plants at least once per week over the next seven weeks. The same person should also photograph the plants each time measurements are made. To measure each plant, place the end of a ruler against the soil surface. Gently pull the plant to its full height and measure the tallest point intersected along the ruler by the plant. ALL MEASUREMENTS ARE IN MILLIMETERS!
+
+**Note: the greenhouse is open between 7:00 am - 3:00 pm. You will need to get the pass code from your TA!**
+
+**A missed week is a hole in your dataset that cannot be filled in afterwards.** Growth measurements are a time series — you cannot reconstruct week 4 in week 5. Put the greenhouse visit in your calendar the way you would a shift, and if the person whose turn it is can't go, swap rather than skip.
+
+## What happens next
+
+When your plants come out of the greenhouse, go to **Species interactions II: analysis and poster** for the harvest protocol, the analysis, and the poster requirements. You may want to skim that chapter now, so you know what you'll be asked to produce — it is much easier to collect the right data for eight weeks if you already know what the poster needs.

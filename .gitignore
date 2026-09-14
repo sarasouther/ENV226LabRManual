@@ -19,3 +19,7 @@ _book/
 _bookdown_files/
 _main_files/
 notes/
+
+# --- Source material from collaborators: adapted into the manual with credit,
+# --- but not ours to republish verbatim on a public site. 19 MB, mostly one pptx.
+DeaverHerbariumActivity/

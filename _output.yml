@@ -8,7 +8,12 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/sarasouther/ENV226LabRManual/edit/main/%s
-    download: ["pdf", "epub"]   # <-- add pdf here so the button appears
+    # Kept EMPTY deliberately, matching index.Rmd. A download button advertises
+    # docs/_main.pdf / _main.epub, which only exist if you render those formats
+    # too; with a gitbook-only render the buttons 404. To turn them on, render
+    # with bookdown::render_book("index.Rmd", output_format = "all") and set
+    # this to ["pdf", "epub"] AND change the matching line in index.Rmd.
+    download: []
 
 bookdown::pdf_book:
   latex_engine: xelatex

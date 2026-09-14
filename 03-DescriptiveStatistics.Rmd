@@ -27,7 +27,7 @@ Last week, you should have created a folder to keep files for lab. Download thes
 The code can be used to import the data, but in case you wanted to access the data yourself - provided above!
 
 - Build on this code, to generate your description of the petal lengths of your focal species:
-[R Script for Chapter 1](downloads/summarystatistics.R)
+[R script for this lab](downloads/summarystatistics.R)
 
 - [Watch this video if you need additional help](https://youtu.be/sSPQRhNgZF0)
 

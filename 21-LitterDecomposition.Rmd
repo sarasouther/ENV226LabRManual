@@ -1,0 +1,141 @@
+# Litter decomposition: measuring an ecosystem process
+
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Ecosystems. Cross-Cutting Themes → Pathways & Transformations of Matter and Energy. Ecology Practices → Fieldwork; Quantitative reasoning and computational thinking. *BioSkills:* Process of Science → "Design controlled experiments, including plans for analyzing the data"; Quantitative Reasoning → "Interpret the biological meaning of quantitative results."
+
+> **This lab is deployed early and retrieved late.** You put litterbags out around **week 3** and collect them around **week 12**. Between those two days it needs nothing from you. Read this chapter when you deploy, and again when you retrieve.
+
+Everything a forest builds, it eventually takes apart. A ponderosa drops its needles, and somewhere between the forest floor and the atmosphere those needles stop being needles and become carbon dioxide, fungal tissue, and soil. **Decomposition is the return half of the carbon cycle**, and it is the process that determines whether an ecosystem stores carbon or releases it.
+
+The species diversity lab opens with a figure from Swift et al. (1979) showing the three things that control how fast that happens: the **biota** doing the decomposing, the **physico-chemical environment** they work in, and the **resource attributes** of the litter itself. That lab measures the biota. This lab measures the rate — and lets you manipulate whichever arm of that diagram you choose.
+
+### Downloads for this lab
+
+- [Litterbag datasheet (.csv)](downloads/litter_decomposition_datasheet.csv)
+- [R script for this lab](downloads/LitterDecomposition.R)
+
+## Objectives
+
+1. Measure mass loss from litter in the field over a known interval.
+2. Convert mass loss into a decomposition rate constant, $k$.
+3. Test whether $k$ differs between two levels of one factor you choose.
+4. Use a standard substrate as a positive control, and explain why that is necessary here.
+
+## The model
+
+Litter does not lose mass at a steady rate. It loses a **constant fraction** of what remains, which means the curve is a negative exponential — the same shape as radioactive decay, and the same shape as the exponential growth from the population ecology lab with the sign flipped:
+
+$$\frac{M_t}{M_0} = e^{-kt}$$
+
+where $M_0$ is the starting mass, $M_t$ the mass remaining after time $t$, and $k$ the **decomposition rate constant**. Rearranged for the thing you want:
+
+$$k = \frac{-\ln(M_t / M_0)}{t}$$
+
+Report $k$ in **per day** if your interval is a semester, or multiply by 365 for the per-year figure the literature uses. A $k$ of 0.2 yr⁻¹ means about 18% of the litter disappears in a year; $k$ = 1.0 yr⁻¹ means about 63% does.
+
+> **Why a rate constant and not just "percent lost"?** Because percent lost depends on how long you left the bags out, and $k$ does not. Your bags and a published study's bags were out for different numbers of days, and $k$ is what makes the two comparable. This is the same reason the population ecology lab insists on a per-day lambda.
+
+---
+
+## Part 1 — Choose your factor
+
+Pick **one** arm of the Swift diagram. Your TA may assign it.
+
+| Factor | What you vary | What you hold constant | The question |
+|---|---|---|---|
+| **`LitterType`** | Ponderosa needles vs Gambel oak leaves | One location | Does resource quality control decomposition rate? |
+| **`Microhabitat`** | Under closed canopy vs open ground; or Sinclair Wash vs upland | One litter type | Does the physical environment control it? |
+| **`MeshSize`** | Fine mesh (~0.5 mm, excludes invertebrates) vs coarse (~4 mm, lets them in) | One litter, one location | How much of decomposition is done by the soil fauna? |
+
+The mesh-size option is the most direct link to the diversity lab: the animals you extract in a Berlese funnel are the ones the fine mesh is keeping out.
+
+## Part 2 — Prepare the bags
+
+You need **six bags per level** — twelve bags for a two-level comparison. Six feels like a lot for one afternoon. It is the minimum that will detect anything, because between-bag variation in the field is large and the signal here is small.
+
+### Step 1: Collect and air-dry the litter
+
+Collect freshly fallen litter — on the ground, not off the tree, and not already crumbling. Spread it somewhere dry indoors for at least a week.
+
+### Step 2: Work out the air-dry to oven-dry correction
+
+This is the step people skip, and it is the one that will otherwise wreck your numbers.
+
+Air-dry litter still holds water. Oven-dry litter does not. If you weigh your litter air-dry going in and oven-dry coming out, **some of your "mass loss" is just the water you never drove off in the first place** — and it can easily be larger than the real signal.
+
+You cannot oven-dry the litter you deploy, because heating it changes how it decomposes. So instead:
+
+1. Take **five extra subsamples** of the same litter, about 5 g each. Weigh each air-dry, to 0.01 g.
+2. Oven-dry them at **60 °C for 48 hours**, then reweigh.
+3. Calculate the mean ratio: $\text{correction} = \overline{(\text{oven-dry} / \text{air-dry})}$.
+4. Your true starting mass for every bag is its air-dry mass × that correction.
+
+Record the correction factor. It goes in your methods.
+
+### Step 3: Fill and label
+
+1. Weigh **about 5.00 g** of air-dry litter into each bag. It does not need to be exactly 5.00 — it needs to be **recorded exactly**, to 0.01 g.
+2. Seal the bag. Staples, or stitch it.
+3. Label with a plastic tag and pencil or an aluminium tag — **not a marker on masking tape**, which will be an unreadable grey smear in November.
+4. Record the `BagID`, the `Level`, and the `InitialMass_g` in your datasheet before the bag leaves the room.
+
+### Step 4: Add the standard substrate
+
+Alongside your litter bags, deploy **two commercial tea bags at each location**: one green tea, one rooibos. Same depth, same day.
+
+This is not a gimmick. It is a **positive control**, and here is why you need one.
+
+Ponderosa needles are tough, waxy and low in nitrogen, and in a dry montane fall they may lose only 3–5% of their mass in ten weeks — which is close enough to your weighing error that a null result would be uninterpretable. You would not know whether the needles resisted decomposition or your site was simply too dry and cold for anything to happen at all. **The tea tells you which.** Green tea loses roughly half its mass in the same period almost anywhere that decomposition happens. If your green tea decomposed and your needles did not, that is a real result about needles. If nothing decomposed, that is a result about your site.
+
+This use of standard tea as a comparable substrate is a published method — the **Tea Bag Index** (Keuskamp et al. 2013) — and if you follow the standard protocol your numbers join a global dataset.
+
+> **Check the bag material before you buy.** The Tea Bag Index depends on the mesh itself not decomposing. Some manufacturers have switched from nylon to plant-based mesh that breaks down in soil, which destroys the measurement. Your instructor will confirm what is currently available; if the mesh is not synthetic, use fine-mesh bags of your own filled with the tea leaves.
+
+## Part 3 — Deploy
+
+1. **Choose your locations** using the randomization approach from the sampling lab. Do not place bags where the litter looks interesting.
+2. **Clear the surface litter** aside, lay the bag flat **on the soil surface**, and replace the litter on top. Tea bags go **8 cm deep** in the soil — that is the Tea Bag Index standard and changing it makes your numbers incomparable.
+3. **Pin each bag** with a landscape staple or a wire flag so it does not blow away.
+4. **Mark the spot** so you can find it in ten weeks under snow. Flag it, and record a GPS point or a written description with two distances to fixed objects.
+5. **Record the date.** This is $t$, and getting it wrong makes every $k$ wrong.
+
+> **Expect to lose bags.** Animals dig them up, snow buries the flags, grounds crews tidy. Deploying twelve and recovering ten is a normal outcome — one more reason six per level and not three.
+
+## Part 4 — Retrieve and weigh
+
+1. **Record the date** and calculate `Days`.
+2. **Lift each bag carefully.** Roots will have grown into it and soil will have washed in.
+3. **Clean the outside** — brush off soil, clip away roots growing through the mesh. Do this gently and consistently; how hard you brush is now part of your method.
+4. **Oven-dry at 60 °C for 48 hours.**
+5. **Weigh to 0.01 g**, and record as `FinalMass_g`.
+
+> **The bias you cannot brush away.** Fine soil and mineral grit work through the mesh and stay there. That inflates your final mass, which makes your litter look *less* decomposed than it was. Every litterbag study has this problem. The proper fix is **ash-free dry mass** — combust a subsample in a muffle furnace at 500 °C, weigh the ash, and subtract the mineral fraction. If your instructor has a muffle furnace available, do it. If not, say so in your methods and state **which direction** the bias pushes your result. Naming the direction of a bias you could not remove is what a careful methods section looks like.
+
+---
+
+## Analysis
+
+Run `LitterDecomposition.R`. It calculates percent mass remaining and $k$ for every bag, compares your levels, and plots them.
+
+Two things to look at before you conclude anything:
+
+- **The spread within a level.** Six bags of identical litter in the same place will not give six identical numbers. If the within-level spread is as big as the between-level difference, you have not shown anything, regardless of what the mean says.
+- **The tea.** If green tea lost less than about 20% of its mass, decomposition barely happened at your site over your interval, and your litter comparison has no power to detect anything. That is a legitimate finding and it is the one to report.
+
+## Assignment
+
+Submit one document containing:
+
+1. **Your completed datasheet**, including the air-dry to oven-dry correction factor and how you calculated it.
+2. **A table** of mean percent mass remaining and mean $k$ (per day and per year) for each level, with the standard deviation.
+3. **A figure** showing $k$ for each level, with the individual bags visible as points. Legend included, no title on the figure.
+4. **Your result**: did $k$ differ between your two levels, and by how much?
+5. **The control**: what did the tea do, and what does that let you say about the interpretation in item 4?
+6. **One paragraph** on the assumption most likely to be wrong in your study — soil contamination, bags lost non-randomly, the correction factor, mesh excluding fauna you did not mean to exclude — stating **which direction** it would push your result and whether your conclusion survives it.
+
+## Sources
+
+Olson, J.S. 1963. Energy storage and the balance of producers and decomposers in ecological systems. *Ecology* 44(2): 322–331. — the negative exponential decay model and $k$.
+
+Keuskamp, J.A., B.J.J. Dingemans, T. Lehtinen, J.M. Sarneel, and M.M. Hefting. 2013. Tea Bag Index: a novel approach to collect uniform decomposition data across ecosystems. *Methods in Ecology and Evolution* 4(11): 1070–1075. <https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12097>. Protocol and current guidance at <https://www.teatime4science.org>.
+
+Swift, M.J., O.W. Heal, and J.M. Anderson. 1979. *Decomposition in Terrestrial Ecosystems*. Blackwell, Oxford. — the three-factor framework, and the source of the figure in the species diversity chapter.

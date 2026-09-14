@@ -2,7 +2,7 @@
 
 > **Skills this lab builds.** *4DEE:* Ecology Practices → Natural history; Quantitative reasoning and computational thinking; Data analysis and interpretation. Cross-Cutting Themes → Space & Time. Human–Environment Interactions → Human impacts on the environment from local to global scales. *BioSkills:* Quantitative Reasoning → "Apply the tools of graphing, statistics, and data science to analyze biological data"; Process of Science → Data Interpretation & Evaluation.
 
-> **Scheduling note for instructors.** This chapter and the field methods chapter are designed as **term alternates in one slot** — field methods in fall, dendrochronology in spring. Dendro is entirely indoor once the samples are in the room, which is why it is the spring lab in a town where the ground is frozen until April.
+> **This lab and the field methods lab are term alternates.** You will do one of them, not both — field methods in the fall, dendrochronology in the spring. Once the samples are in the room this lab is entirely indoors, which is why it is the spring one, in a town where the ground stays frozen until April.
 
 A ponderosa pine standing on the Fort Valley flats put on a ring last year, and another the year before that, and another every year since before Arizona was a state. Nobody was recording rainfall in northern Arizona in 1750. The tree was.
 
@@ -109,9 +109,9 @@ A surface fire that burns hot enough to kill part of the cambium leaves a wound.
 
 A single northern Arizona ponderosa can carry 34 fire scars over 240 years. Work out what that means for how often this forest used to burn.
 
-Then set it against what the population structure lab found. Fire scars at Chimney Spring, northwest of Flagstaff, record fires roughly every 4.9 years between 1540 and 1876. After 1876 they stop — livestock grazing removed the fine fuels that carried surface fire, and organised fire suppression followed. The trees that would have burned as seedlings instead grew into the dense stands you walked through.
+Then set it against the age structure of the stands around town. Fire scars at Chimney Spring, northwest of Flagstaff, record fires roughly every 4.9 years between 1540 and 1876. After 1876 they stop — livestock grazing removed the fine fuels that carried surface fire, and organised fire suppression followed. The trees that would have burned as seedlings instead grew into the dense stands you walked through.
 
-**That is the same event, recorded twice, in two independent archives:** as an absence of scars after 1876 in the wood, and as a pulse of same-aged trees in the size structure of the stand. When two independent lines of evidence point at the same date, you have something much stronger than either alone.
+You will meet the other half of this record in the **population structure lab**, where a size-class distribution of these same stands shows that 1876 pulse as a bulge of same-aged trees. **That is the same event, recorded twice, in two independent archives:** as an absence of scars after 1876 in the wood, and as a pulse of same-aged trees in the size structure of the stand. When two independent lines of evidence point at the same date, you have something much stronger than either alone.
 
 ---
 
@@ -220,15 +220,6 @@ Turn in to your TA:
 5. **One paragraph.** Ring counting and crossdating both produce a date for a ring. Explain what crossdating gives you that counting cannot, and describe a specific situation in which the difference would change a conclusion.
 
 ---
-
-## Notes for TAs
-
-- **Contact the Ecological Restoration Institute early** about fire-scarred cross-sections, ideally already sanded (<https://eri.nau.edu/>). Whether they can lend material decides whether this lab is free or needs a $500 increment borer. Track B runs at zero cost either way, so the lab is never blocked.
-- ERI's public piece *What Fire Scars Tell Us About the Past* is a good pre-lab reading and is written for a general audience.
-- If sanding is needed, it takes longer than anyone expects. Progressive grits to at least 400; the ring boundaries do not resolve under a hand lens until the surface is genuinely polished.
-- **Do the skeleton plot even if you are running Track B.** Ten minutes on paper is what makes the numerical crossdating comprehensible rather than magic, and it is the step students remember years later.
-- The University of Arizona's Laboratory of Tree-Ring Research has a free step-by-step crossdating tutorial: <https://www.ltrr.arizona.edu/skeletonplot/introcrossdate.htm>. The interactive applet on that site is Java-based and will not run in a current browser; the static pages are fine. LTRR also loans science kits and offers classroom visits (<https://ltrr.arizona.edu/educators>).
-- `dplR` version 1.7.9 was current as of mid-2026. Have students run `install.packages("dplR")` before lab, not during it.
 
 ## Sources
 

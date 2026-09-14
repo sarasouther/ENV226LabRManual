@@ -2,11 +2,13 @@
 
 > **Skills this lab builds.** *4DEE:* Ecology Practices → Fieldwork; Natural history; Working collaboratively; Quantitative reasoning and computational thinking. *BioSkills:* Process of Science → Study Design ("Execute protocols and accurately record measurements and observations"), Data Interpretation & Evaluation ("Describe sources of error and uncertainty in data"); Quantitative Reasoning → "Record, organize, and annotate simple data sets."
 
-In the ecological sampling lab you decided **where** to sample and **why**. This lab is the other half: what you actually do once you are standing at the point, and how you keep the numbers you write down from being quietly wrong.
+This lab is about what you actually do once you are standing at a sampling point: how you take the measurements, and how you keep the numbers you write down from being quietly wrong. **Where** that point is, and why, is the other half of the problem — that is the ecological sampling lab, a few weeks from now. For today the point has been chosen for you, and part of the exercise is not moving it.
 
 The protocol here is not invented for teaching. It is **line-point intercept (LPI)** from the *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, the method the Bureau of Land Management uses to assess rangeland condition across the western United States under its Assessment, Inventory and Monitoring (AIM) program. Millions of acres are managed off the back of this method. If you take a field job in this region, there is a real chance you will run it for money.
 
 ### Downloads for this lab
+
+- [Specimen quality scoring sheet (.csv)](downloads/specimen_quality_datasheet.csv) — used in Part 5
 
 - [LPI datasheet (.csv)](downloads/lpi_datasheet.csv)
 - [Observer calibration datasheet (.csv)](downloads/calibration_datasheet.csv)
@@ -18,6 +20,7 @@ The protocol here is not invented for teaching. It is **line-point intercept (LP
 2. Calculate foliar cover, bare ground, basal cover and species composition from point-intercept hits.
 3. Quantify the disagreement between observers, and decide whether it is small enough to trust your result.
 4. Collect, press and label a voucher specimen for a plant you cannot identify.
+5. Judge whether a herbarium specimen is good enough to be worth keeping.
 
 ## Why point intercept rather than "how much is covered?"
 
@@ -45,7 +48,7 @@ The standard AIM plot uses a **spoke design**: a permanent stake at plot centre,
 
 ### Procedure
 
-1. **Set plot centre.** Drive the centre stake in, leaving **less than 30 cm exposed**. Your instructor will have assigned the point using one of the randomisation methods from the sampling lab — do not move it because the vegetation looks more interesting three metres away. That is exactly the bias the sampling lab warned you about.
+1. **Set plot centre.** Drive the centre stake in, leaving **less than 30 cm exposed**. Your instructor will have assigned the point using a randomisation method — do not move it because the vegetation looks more interesting three metres away. Nudging a plot toward the interesting vegetation is the most common way field data gets biased, and you will take that problem apart properly in the sampling lab in a few weeks. For now, take it on trust: the point is where it is precisely so that nobody's judgement chose it.
 
 2. **Choose the first azimuth at random**, then set the other two at +120° and +240° from it. Record all three bearings. (The manual specifies the 120° spacing; how you pick the first bearing is a local convention, so we make it random and we write it down.)
 
@@ -55,17 +58,19 @@ The standard AIM plot uses a **spoke design**: a permanent stake at plot centre,
 
 5. **Photograph the plot** from centre along each transect before anyone walks on it.
 
-> The 25 m three-transect spoke plot samples roughly **0.3 ha**. The 50 m version in the older edition of the manual samples about **1 ha**. Which one a project uses depends on how patchy the vegetation is and how big a change it needs to detect — which is a sample-size question, and you already know how to think about it.
+> The 25 m three-transect spoke plot samples roughly **0.3 ha**. The 50 m version in the older edition of the manual samples about **1 ha**. Which one a project uses depends on how patchy the vegetation is and how big a change it needs to detect — which is a sample-size question — exactly the kind you will learn to answer for yourself in the sampling lab.
 
 ---
 
 ## Part 2 — Line-point intercept
 
-You will record **50 points per transect, spaced 1 m apart**, for **150 points on the plot**.
+You will record **50 points per transect, spaced 0.5 m apart**, for **150 points on the plot**.
+
+So the first point is at 0.5 m, the second at 1.0 m, and the fiftieth at 25.0 m — the far end of the tape.
 
 ### Dropping the pin
 
-At each 1 m mark:
+At each 0.5 m mark:
 
 1. Hold the pin **vertical**, with its lower end several centimetres above the top of the vegetation, next to the tape.
 2. **Release it and let it slide through your hand until it hits the ground.** Do not guide it, do not aim it, do not adjust it after it lands.
@@ -178,7 +183,90 @@ The placeholder codes only help if someone can eventually resolve them. That is 
 
    A herbarium label carries more than that — collector, precise locality, elevation, habitat, associated species — and the extra information is what makes a specimen useful to anyone beyond your project decades later. Put those on the **Unknown Plant Tracking Sheet** with your photographs, and record them even though the minimum label does not demand it. Every specimen in the Deaver Herbarium on this campus is useful today because someone wrote down more than the minimum.
 
-7. **Once dry**, mount the specimen on stiff paper and tape it down in a few places, positioned so that the diagnostic features stay visible.
+7. **Once dry**, mount the specimen. How to do that well — and how to tell whether you did — is Part 5.
+
+---
+
+## Part 5 — What makes a good herbarium specimen
+
+> **This part is adapted from the teaching module *What makes a good herbarium specimen?* by Richie Hodel, Ph.D. (he/him), Director and Curator of the Deaver Herbarium and Assistant Professor of Biological Sciences at NAU, and is used here with his permission. The illustrations in the original module are credited to the Royal Botanic Gardens, Kew; Indiana University; and the California Botanical Garden.** This version is text and uses publicly available specimen images from SEINet in place of the original figures.
+
+You have pressed a plant. Whether it was worth pressing is a separate question, and it has a real answer.
+
+The Deaver Herbarium's policy, quoted in the tree walk chapter, is that staff will identify a plant for you when **an acceptable specimen with locality information is donated to the collection.** The word doing the work in that sentence is *acceptable*. This part is what it means.
+
+### What a herbarium actually is
+
+A herbarium is a collection of plant specimens, preserved, labeled and stored so that they can be found again. Dried plants, used for research and teaching. It is **not** a place where herbs are grown, despite the name.
+
+### The five parts of a mounted specimen
+
+| Part | What it is |
+|---|---|
+| **Plant specimen** | The pressed plant, ideally with reproductive material — flowers, fruits, cones or spores |
+| **Specimen label** | Location, date, and the people involved in collecting it |
+| **Fragment packet** | A small envelope on the sheet holding fragile or broken material |
+| **Herbarium stamp** | The institution's stamp, with a specimen number or barcode |
+| **Mounting paper** | 11 × 17 inches, archival — acid-free, 100% cotton |
+
+### Who is this for?
+
+Not you. That is the point, and it changes what counts as good.
+
+A specimen you make today may be pulled out of a cabinet in eighty years by a taxonomist describing a new species, a conservation biologist tracking a rare or invasive plant, an ecologist reconstructing a distribution, or someone from the community who needs a plant identified. **None of them can ask you what you meant.** Everything they need has to be on the sheet.
+
+That is the whole standard, and every rule below follows from it.
+
+### What matters most
+
+**Reproductive material.** Flowers, fruits, cones, spores and seeds are what most keys run on, and a specimen without them often cannot be identified at all. They need to be **easily viewed on the sheet** — not buried under a leaf, not face-down.
+
+**Vegetative material.** Both the **upper and lower leaf surfaces** should be visible — mount some leaves face up and turn at least one over, because half of leaf characters are on the underside. Include roots and stems.
+
+**Label data.** Detailed enough that the place can be found again: GPS point, elevation, habitat and soil, date and collector. Compare this against the monitoring manual's minimum from step 6 — plot, unknown ID, date. The minimum ties the specimen to *your* dataset. The herbarium label ties it to *everyone's*.
+
+### Making it last
+
+**Archival materials.** Museum-quality throughout: 100% cotton, acid-free paper; linen-based tapes and strings. **Labels printed with a laser printer or photocopier — never water-based ink**, which will run the first time the sheet meets humidity.
+
+**Mounting.**
+
+- Leave a **1 inch margin** around the sheet.
+- **Always include a fragment packet**, even if it is empty when you mount it. Things fall off.
+- Use **floss** to secure awkward or bulky material, **linen tape** for smaller or delicate pieces.
+- Position the plant so it **fills most of the sheet** but **stays away from the edges** — material at the edge gets crushed and torn every time the sheet is handled.
+
+### Exercise A — Score your own
+
+Score the specimen you pressed against the checklist in [`specimen_quality_datasheet.csv`](downloads/specimen_quality_datasheet.csv). One row per criterion, scored 0, 1 or 2:
+
+- **0** — absent or unusable
+- **1** — present but compromised
+- **2** — meets the standard
+
+Be hard on it. A specimen you scored honestly at 9 out of 20 is more useful to you than one you talked yourself into calling fine.
+
+### Exercise B — Good or bad?
+
+Now score three specimens you did not make, using real digitized sheets.
+
+1. Go to SEINet (<https://swbiodiversity.org/seinet/index.php>) and search for a species you collected or keyed this semester.
+2. Open three records **with specimen images**, from three different collectors and, if you can, three different decades.
+3. Score each one against the same checklist. You cannot assess the paper stock from a photograph — score what you can see and mark the rest `NA`.
+
+Then answer:
+
+- Which was the best, and which single criterion separated it from the worst?
+- Did the older or the newer specimens score higher? Would you have predicted that?
+- Find one specimen where **you can read the label but could not relocate the site** from it. What is missing?
+
+### Exercise C — Swap
+
+Trade your pressed specimen with another group and score theirs. Then compare their score of your specimen against your own score of it.
+
+You have done this before, twice — the observer calibration in Part 3, and the confidence rating in the tree walk. Same lesson each time: **the gap between how good you thought it was and how good somebody else thought it was is data.** If the two of you disagree by more than 3 points overall, find the criterion you read differently and work out which reading the herbarium would use.
+
+> **Specimens students make do end up in this collection.** The Deaver Herbarium accepts donated material, and a well-made student specimen with proper locality data is a real contribution — roughly 130,000 sheets are there because people who were not professionals wrote down more than the minimum. Yours is not a practice exercise that gets thrown away unless you decide it is.
 
 ---
 
@@ -216,16 +304,10 @@ Question 5 is the one that matters. A number with no error estimate attached can
 
 ---
 
-## Notes for TAs
-
-- **Run the calibration transect first, not last.** Students who have already spent two hours on their own plot will rush it, and it is the highest-value ten minutes in the lab.
-- Enforce silence during calibration. One helpful whisper destroys the measurement.
-- Groups reliably under-record the **lower layers** — they see the top hit and move on. Spot-check one transect per group early.
-- Fifty points on a 25 m transect at 1 m spacing gives you 25 points, not 50. Either use 0.5 m spacing on a 25 m tape, or run 1 m spacing on a 50 m tape. **Decide which before the lab and put it on the board**, because the datasheet and the script both key off `PointID`.
-- Sinclair Wash works well for this and connects directly to the Rio de Flag monitoring framing in the ecological sampling lab — students can see their plot as one year of a series rather than a one-off exercise. Marking and collecting there requires permission; arrange it in advance.
-- If snow or frozen ground makes plot establishment impossible, the calibration exercise still runs indoors on photographs, and the analysis runs on prior-year class data.
-
 ## Sources
+
+Hodel, R. *What makes a good herbarium specimen?* Teaching module, Deaver Herbarium, Northern Arizona University. Used and adapted with permission; figures in the original are credited to the Royal Botanic Gardens, Kew; Indiana University; and the California Botanical Garden.
+
 
 Herrick, J.E., J.W. Van Zee, S.E. McCord, E.M. Courtright, J.W. Karl, and L.M. Burkett. *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, 2nd ed., Volume I: Core Methods. USDA-ARS Jornada Experimental Range, Las Cruces, New Mexico.
 
@@ -235,4 +317,4 @@ Herrick, J.E., J.W. Van Zee, S.E. McCord, E.M. Courtright, J.W. Karl, and L.M. B
 - Volume II, design and interpretation: <https://jornada.nmsu.edu/files/Volume_II.pdf>
 - USDA PLANTS database: <https://plants.usda.gov>
 
-> **Instructor note:** confirm the edition year on the printed title page before citing. The 2nd edition is widely cited as 2017; the PDF linked above is a February 2020 revision of it.
+> **A note on this source:** confirm the edition year on the printed title page before citing. The 2nd edition is widely cited as 2017; the PDF linked above is a February 2020 revision of it.

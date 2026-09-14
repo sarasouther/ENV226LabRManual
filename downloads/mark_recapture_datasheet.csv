@@ -1,0 +1,9 @@
+Trial,Treatment,n1,n2,m2,TrueN
+1,Clean,118,112,33,400
+2,Clean,114,124,33,400
+3,Clean,110,116,35,400
+4,Clean,113,121,31,400
+5,Clean,119,111,36,400
+6,UnequalCatch,120,120,38,500
+7,Closure,120,120,26,400
+8,MarkLoss,120,120,30,400

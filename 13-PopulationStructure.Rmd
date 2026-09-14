@@ -2,10 +2,7 @@
 
 > **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Populations. Ecology Practices → Natural history; Fieldwork; Data analysis and interpretation. Cross-Cutting Themes → Space & Time. *BioSkills:* Process of Science → "Describe sources of error and uncertainty in data"; Modeling & Simulation → Purpose of Models.
 
-In the last lab, you watched a population grow. You counted the same microcosm week
-after week, and time did the work for you.
-
-Most populations do not cooperate like that. A ponderosa pine takes decades to do
+A ponderosa pine takes decades to do
 anything you could measure in a semester. So ecologists who study long-lived organisms
 almost never watch a population change. Instead they **substitute something else for
 time** — and then defend the substitution.
@@ -54,10 +51,6 @@ stopped. Seedlings that would have burned survived instead.
 
 The result is a size-class distribution with a century of management history written into
 it, standing on the ground you can walk to from this classroom.
-
-> **Instructor note:** insert the presettlement vs. current stand density figures you
-> prefer here (Covington & Moore 1994 is the standard citation). I have deliberately not
-> filled in numbers I could not verify from a primary source.
 
 ### The static life table, and its assumption
 
@@ -211,17 +204,6 @@ Turn in to your TA:
 
 Item 5 is worth as much as items 1–4 combined. Anyone can bin numbers. The skill is
 knowing what the bins are allowed to tell you.
-
-## Notes for TAs
-
-- The measurement-error check in step 4 is not busywork — it is usually the first time
-  students see that data has error before analysis begins. Do not let groups skip it.
-- Expect students to under-record small trees. Spot-check one plot per group.
-- Track C requires more out-of-class time than Tracks A and B. Lanza's original module
-  budgets two lab sessions plus 3–4 hours per team; trim the scope rather than the
-  analysis if you only have one period.
-- Groups will want to compare their plot to a neighbouring group's. Encourage it — that
-  is a second `Group` level for free.
 
 ## Acknowledgements
 

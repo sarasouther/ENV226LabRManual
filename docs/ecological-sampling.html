@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Ecological sampling | ENV 226 Lab Online R Manual</title>
+  <title>Chapter 8 Ecological sampling | ENV 226 Lab Online R Manual</title>
   <meta name="description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Ecological sampling | ENV 226 Lab Online R Manual" />
+  <meta property="og:title" content="Chapter 8 Ecological sampling | ENV 226 Lab Online R Manual" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   <meta name="github-repo" content="sarasouther/ENV226LabRManual" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Ecological sampling | ENV 226 Lab Online R Manual" />
+  <meta name="twitter:title" content="Chapter 8 Ecological sampling | ENV 226 Lab Online R Manual" />
   
   <meta name="twitter:description" content="This online R manual is designed for students in ENV 226 Lab. It provides an introduction to using R for ecological data analysis, focusing on practical exercises and coding tutorials." />
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Sara Souther" />
 
 
-<meta name="date" content="2026-09-08" />
+<meta name="date" content="2026-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="selecting-statistical-tests.html"/>
-<link rel="next" href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"/>
+<link rel="prev" href="dendrochronology-reading-time-in-wood.html"/>
+<link rel="next" href="urban-ecology-the-crosstown-walk.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -147,427 +147,563 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#the-two-frameworks"><i class="fa fa-check"></i><b>1.1.1</b> The two frameworks</a></li>
 <li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#where-this-manual-covers-what"><i class="fa fa-check"></i><b>1.1.2</b> Where this manual covers what</a></li>
-<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#if-you-are-reading-this-as-an-instructor-or-reviewer"><i class="fa fa-check"></i><b>1.1.3</b> If you are reading this as an instructor or reviewer</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="welcome-to-r.html"><a href="welcome-to-r.html"><i class="fa fa-check"></i><b>2</b> Welcome to R</a>
+<li class="chapter" data-level="2" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html"><i class="fa fa-check"></i><b>2</b> Getting started: the course, your tools, and your data</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#what-you-need-two-things"><i class="fa fa-check"></i><b>2.1</b> What you need (two things)</a>
+<li class="chapter" data-level="2.0.1" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#downloads-for-this-lab"><i class="fa fa-check"></i><b>2.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="2.1" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#part-1-start-your-downloads"><i class="fa fa-check"></i><b>2.1</b> Part 1 — Start your downloads</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-1-install-r"><i class="fa fa-check"></i><b>2.1.1</b> Step 1: Install R:</a></li>
-<li class="chapter" data-level="2.1.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-2-install-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> Step 2: Install RStudio:</a></li>
-<li class="chapter" data-level="2.1.3" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-3-open-rstudio"><i class="fa fa-check"></i><b>2.1.3</b> Step 3: Open RStudio</a></li>
-<li class="chapter" data-level="2.1.4" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-4-download-the-files-for-this-lab"><i class="fa fa-check"></i><b>2.1.4</b> Step 4: Download the files for this lab</a></li>
-<li class="chapter" data-level="2.1.5" data-path="welcome-to-r.html"><a href="welcome-to-r.html#step-5-open-the-r-script"><i class="fa fa-check"></i><b>2.1.5</b> Step 5: Open the R script</a></li>
-<li class="chapter" data-level="2.1.6" data-path="welcome-to-r.html"><a href="welcome-to-r.html#packages-what-they-are-why-we-use-them"><i class="fa fa-check"></i><b>2.1.6</b> Packages (what they are &amp; why we use them)</a></li>
-<li class="chapter" data-level="2.1.7" data-path="welcome-to-r.html"><a href="welcome-to-r.html#the-full-package-list-for-this-course"><i class="fa fa-check"></i><b>2.1.7</b> The full package list for this course</a></li>
-<li class="chapter" data-level="2.1.8" data-path="welcome-to-r.html"><a href="welcome-to-r.html#working-directories-the-simple-version"><i class="fa fa-check"></i><b>2.1.8</b> Working directories (the simple version)</a></li>
-<li class="chapter" data-level="2.1.9" data-path="welcome-to-r.html"><a href="welcome-to-r.html#importing-data"><i class="fa fa-check"></i><b>2.1.9</b> Importing data</a></li>
-<li class="chapter" data-level="2.1.10" data-path="welcome-to-r.html"><a href="welcome-to-r.html#download-each-figure"><i class="fa fa-check"></i><b>2.1.10</b> Download each figure</a></li>
-<li class="chapter" data-level="2.1.11" data-path="welcome-to-r.html"><a href="welcome-to-r.html#other-information-about-this-r-code"><i class="fa fa-check"></i><b>2.1.11</b> Other information about this R code</a></li>
+<li class="chapter" data-level="2.1.1" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-1-start-the-r-download"><i class="fa fa-check"></i><b>2.1.1</b> Step 1: Start the R download</a></li>
+<li class="chapter" data-level="2.1.2" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-2-start-the-rstudio-download"><i class="fa fa-check"></i><b>2.1.2</b> Step 2: Start the RStudio download</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="welcome-to-r.html"><a href="welcome-to-r.html#assignment"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
+<li class="chapter" data-level="2.2" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#part-2-meet-your-class-and-collect-data"><i class="fa fa-check"></i><b>2.2</b> Part 2 — Meet your class and collect data</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-3-interview-your-group"><i class="fa fa-check"></i><b>2.2.1</b> Step 3: Interview your group</a></li>
+<li class="chapter" data-level="2.2.2" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-4-measure-some-trees"><i class="fa fa-check"></i><b>2.2.2</b> Step 4: Measure some trees</a></li>
+<li class="chapter" data-level="2.2.3" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-5-add-your-data-to-the-class-sheet"><i class="fa fa-check"></i><b>2.2.3</b> Step 5: Add your data to the class sheet</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>3</b> Descriptive statistics</a>
+<li class="chapter" data-level="2.3" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#part-3-set-up-your-computer"><i class="fa fa-check"></i><b>2.3</b> Part 3 — Set up your computer</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#objectives"><i class="fa fa-check"></i><b>3.1</b> Objectives</a></li>
-<li class="chapter" data-level="3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#downloads-for-this-lab"><i class="fa fa-check"></i><b>3.2</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-types"><i class="fa fa-check"></i><b>3.3</b> Data types</a></li>
-<li class="chapter" data-level="3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-1"><i class="fa fa-check"></i><b>3.4</b> Descriptive statistics</a></li>
-<li class="chapter" data-level="3.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#figures"><i class="fa fa-check"></i><b>3.5</b> Figures</a></li>
-<li class="chapter" data-level="3.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary"><i class="fa fa-check"></i><b>3.6</b> Summary</a></li>
-<li class="chapter" data-level="3.7" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#assignment-1"><i class="fa fa-check"></i><b>3.7</b> Assignment</a></li>
+<li class="chapter" data-level="2.3.1" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-6-install-r-and-rstudio"><i class="fa fa-check"></i><b>2.3.1</b> Step 6: Install R and RStudio</a></li>
+<li class="chapter" data-level="2.3.2" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-7-make-your-lab-folder"><i class="fa fa-check"></i><b>2.3.2</b> Step 7: Make your lab folder</a></li>
+<li class="chapter" data-level="2.3.3" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-8-put-your-files-in-it"><i class="fa fa-check"></i><b>2.3.3</b> Step 8: Put your files in it</a></li>
+<li class="chapter" data-level="2.3.4" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-9-open-rstudio-and-look-around"><i class="fa fa-check"></i><b>2.3.4</b> Step 9: Open RStudio and look around</a></li>
+<li class="chapter" data-level="2.3.5" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-10-install-your-packages"><i class="fa fa-check"></i><b>2.3.5</b> Step 10: Install your packages</a></li>
+<li class="chapter" data-level="2.3.6" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-11-load-the-tidyverse"><i class="fa fa-check"></i><b>2.3.6</b> Step 11: Load the tidyverse</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html"><i class="fa fa-check"></i><b>4</b> Basic statistical testing</a>
+<li class="chapter" data-level="2.4" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#part-4-run-your-first-script"><i class="fa fa-check"></i><b>2.4</b> Part 4 — Run your first script</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#a-short-statistical-review"><i class="fa fa-check"></i><b>4.1</b> A short statistical review</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#what-can-statistics-tell-us"><i class="fa fa-check"></i><b>4.1.1</b> What can statistics tell us?</a></li>
-<li class="chapter" data-level="4.1.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#sampling-populations"><i class="fa fa-check"></i><b>4.1.2</b> Sampling populations</a></li>
+<li class="chapter" data-level="2.4.1" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-12-open-the-script"><i class="fa fa-check"></i><b>2.4.1</b> Step 12: Open the script</a></li>
+<li class="chapter" data-level="2.4.2" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-13-set-your-working-directory"><i class="fa fa-check"></i><b>2.4.2</b> Step 13: Set your working directory</a></li>
+<li class="chapter" data-level="2.4.3" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-14-import-your-data"><i class="fa fa-check"></i><b>2.4.3</b> Step 14: Import your data</a></li>
+<li class="chapter" data-level="2.4.4" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-15-make-your-figures"><i class="fa fa-check"></i><b>2.4.4</b> Step 15: Make your figures</a></li>
+<li class="chapter" data-level="2.4.5" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#step-16-save-your-figures"><i class="fa fa-check"></i><b>2.4.5</b> Step 16: Save your figures</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#hypothesis-testing-review"><i class="fa fa-check"></i><b>4.2</b> Hypothesis testing review</a></li>
-<li class="chapter" data-level="4.3" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#downloads-for-this-module"><i class="fa fa-check"></i><b>4.3</b> Downloads for this module</a></li>
-<li class="chapter" data-level="4.4" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#objectives-1"><i class="fa fa-check"></i><b>4.4</b> Objectives</a></li>
-<li class="chapter" data-level="4.5" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#tailed-tests"><i class="fa fa-check"></i><b>4.5</b> Tailed tests</a>
+<li class="chapter" data-level="2.5" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#two-habits-worth-starting-today"><i class="fa fa-check"></i><b>2.5</b> Two habits worth starting today</a>
 <ul>
-<li class="chapter" data-level="4.5.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#generate-hypotheses"><i class="fa fa-check"></i><b>4.5.1</b> Generate hypotheses</a></li>
-<li class="chapter" data-level="4.5.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#calculate-a-test-statistic"><i class="fa fa-check"></i><b>4.5.2</b> Calculate a test statistic</a></li>
-<li class="chapter" data-level="4.5.3" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#determine-the-p-value"><i class="fa fa-check"></i><b>4.5.3</b> Determine the p-value</a></li>
+<li class="chapter" data-level="2.5.1" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#comment-your-code"><i class="fa fa-check"></i><b>2.5.1</b> Comment your code</a></li>
+<li class="chapter" data-level="2.5.2" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#get-unstuck-efficiently"><i class="fa fa-check"></i><b>2.5.2</b> Get unstuck efficiently</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#drawing-conclusions-from-statistics"><i class="fa fa-check"></i><b>4.6</b> Drawing conclusions from statistics</a></li>
-<li class="chapter" data-level="4.7" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#reporting-results"><i class="fa fa-check"></i><b>4.7</b> Reporting results</a></li>
-<li class="chapter" data-level="4.8" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#assignment-2"><i class="fa fa-check"></i><b>4.8</b> Assignment</a></li>
+<li class="chapter" data-level="2.6" data-path="getting-started-the-course-your-tools-and-your-data.html"><a href="getting-started-the-course-your-tools-and-your-data.html#assignment"><i class="fa fa-check"></i><b>2.6</b> Assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html"><i class="fa fa-check"></i><b>5</b> Selecting statistical tests</a>
+<li class="chapter" data-level="3" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html"><i class="fa fa-check"></i><b>3</b> Working with data in a spreadsheet</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#a-foray-into-statistics"><i class="fa fa-check"></i><b>5.1</b> A foray into statistics</a></li>
-<li class="chapter" data-level="5.2" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#pick-the-explanatory-and-response-variable"><i class="fa fa-check"></i><b>5.2</b> Pick the explanatory and response variable</a></li>
-<li class="chapter" data-level="5.3" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#variable-types-refresher"><i class="fa fa-check"></i><b>5.3</b> Variable types refresher</a></li>
-<li class="chapter" data-level="5.4" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#more-examples"><i class="fa fa-check"></i><b>5.4</b> More examples</a></li>
-<li class="chapter" data-level="5.5" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#the-decision-matrix"><i class="fa fa-check"></i><b>5.5</b> The decision matrix</a></li>
-<li class="chapter" data-level="5.6" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#a-note-on-assumptions"><i class="fa fa-check"></i><b>5.6</b> A note on assumptions</a></li>
-<li class="chapter" data-level="5.7" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#learning-goals"><i class="fa fa-check"></i><b>5.7</b> Learning goals</a></li>
-<li class="chapter" data-level="5.8" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#downloads-for-this-class"><i class="fa fa-check"></i><b>5.8</b> Downloads for this class</a></li>
-<li class="chapter" data-level="5.9" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#in-class-practice"><i class="fa fa-check"></i><b>5.9</b> In-class practice</a></li>
-<li class="chapter" data-level="5.10" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#assignment-choosing-and-running-the-right-test"><i class="fa fa-check"></i><b>5.10</b> Assignment: Choosing and Running the Right Test</a>
+<li class="chapter" data-level="3.0.1" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#downloads-for-this-lab-1"><i class="fa fa-check"></i><b>3.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="3.1" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#part-1-set-up"><i class="fa fa-check"></i><b>3.1</b> Part 1 — Set up</a>
 <ul>
-<li class="chapter" data-level="5.10.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#deliverables"><i class="fa fa-check"></i><b>5.10.1</b> Deliverables</a></li>
+<li class="chapter" data-level="3.1.1" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-1-make-your-own-copy"><i class="fa fa-check"></i><b>3.1.1</b> Step 1: Make your own copy</a></li>
+<li class="chapter" data-level="3.1.2" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-2-find-your-bearings"><i class="fa fa-check"></i><b>3.1.2</b> Step 2: Find your bearings</a></li>
 </ul></li>
-<li class="chapter" data-level="5.11" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#statistical-analyses-for-your-species-interaction-lab"><i class="fa fa-check"></i><b>5.11</b> Statistical analyses for your species interaction lab</a></li>
+<li class="chapter" data-level="3.2" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#part-2-six-rules-for-a-spreadsheet-a-computer-can-read"><i class="fa fa-check"></i><b>3.2</b> Part 2 — Six rules for a spreadsheet a computer can read</a></li>
+<li class="chapter" data-level="3.3" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#part-3-summary-statistics-by-hand"><i class="fa fa-check"></i><b>3.3</b> Part 3 — Summary statistics by hand</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-3-set-up-a-scratch-area"><i class="fa fa-check"></i><b>3.3.1</b> Step 3: Set up a scratch area</a></li>
+<li class="chapter" data-level="3.3.2" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-4-write-the-five-formulas"><i class="fa fa-check"></i><b>3.3.2</b> Step 4: Write the five formulas</a></li>
+<li class="chapter" data-level="3.3.3" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-5-do-it-again-for-the-second-column"><i class="fa fa-check"></i><b>3.3.3</b> Step 5: Do it again for the second column</a></li>
+<li class="chapter" data-level="3.3.4" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-6-count-the-categories"><i class="fa fa-check"></i><b>3.3.4</b> Step 6: Count the categories</a></li>
+<li class="chapter" data-level="3.3.5" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-7-group-means"><i class="fa fa-check"></i><b>3.3.5</b> Step 7: Group means</a></li>
+<li class="chapter" data-level="3.3.6" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-8-write-your-numbers-down"><i class="fa fa-check"></i><b>3.3.6</b> Step 8: Write your numbers down</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="ecological-sampling.html"><a href="ecological-sampling.html"><i class="fa fa-check"></i><b>6</b> Ecological sampling</a>
+<li class="chapter" data-level="3.4" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#part-4-export-to-csv"><i class="fa fa-check"></i><b>3.4</b> Part 4 — Export to CSV</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#background"><i class="fa fa-check"></i><b>6.1</b> Background</a></li>
-<li class="chapter" data-level="6.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-approaches"><i class="fa fa-check"></i><b>6.2</b> Sampling approaches</a>
-<ul>
-<li class="chapter" data-level="6.2.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#random-sampling"><i class="fa fa-check"></i><b>6.2.1</b> Random sampling</a></li>
-<li class="chapter" data-level="6.2.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#stratefied-random-sampling"><i class="fa fa-check"></i><b>6.2.2</b> Stratefied random sampling</a></li>
-<li class="chapter" data-level="6.2.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#gridded-random-sampling"><i class="fa fa-check"></i><b>6.2.3</b> Gridded random sampling</a></li>
-<li class="chapter" data-level="6.2.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#random-cluster-sampling"><i class="fa fa-check"></i><b>6.2.4</b> Random cluster sampling</a></li>
+<li class="chapter" data-level="3.4.1" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-9-clean-up-before-you-export"><i class="fa fa-check"></i><b>3.4.1</b> Step 9: Clean up before you export</a></li>
+<li class="chapter" data-level="3.4.2" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-10-export"><i class="fa fa-check"></i><b>3.4.2</b> Step 10: Export</a></li>
+<li class="chapter" data-level="3.4.3" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-11-look-at-what-a-csv-actually-is"><i class="fa fa-check"></i><b>3.4.3</b> Step 11: Look at what a CSV actually is</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#plot-shapes-sizes-and-transects"><i class="fa fa-check"></i><b>6.3</b> Plot shapes, sizes, and transects</a></li>
-<li class="chapter" data-level="6.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#reducing-sampling-error"><i class="fa fa-check"></i><b>6.4</b> Reducing sampling error</a></li>
-<li class="chapter" data-level="6.5" data-path="ecological-sampling.html"><a href="ecological-sampling.html#variables-of-interest"><i class="fa fa-check"></i><b>6.5</b> Variables of interest</a></li>
-<li class="chapter" data-level="6.6" data-path="ecological-sampling.html"><a href="ecological-sampling.html#assignment-3"><i class="fa fa-check"></i><b>6.6</b> Assignment</a>
+<li class="chapter" data-level="3.5" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#part-5-the-same-numbers-in-r"><i class="fa fa-check"></i><b>3.5</b> Part 5 — The same numbers in R</a>
 <ul>
-<li class="chapter" data-level="6.6.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#downloads-for-this-class-1"><i class="fa fa-check"></i><b>6.6.1</b> Downloads for this class</a></li>
-<li class="chapter" data-level="6.6.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-q-a"><i class="fa fa-check"></i><b>6.6.2</b> Sampling Q &amp; A</a></li>
-<li class="chapter" data-level="6.6.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-activity"><i class="fa fa-check"></i><b>6.6.3</b> Sampling activity</a></li>
-<li class="chapter" data-level="6.6.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#deliverables-1"><i class="fa fa-check"></i><b>6.6.4</b> Deliverables</a></li>
+<li class="chapter" data-level="3.5.1" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-12-open-and-run-the-script"><i class="fa fa-check"></i><b>3.5.1</b> Step 12: Open and run the script</a></li>
+<li class="chapter" data-level="3.5.2" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-13-compare"><i class="fa fa-check"></i><b>3.5.2</b> Step 13: Compare</a></li>
 </ul></li>
+<li class="chapter" data-level="3.6" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#part-6-so-why-bother-with-r"><i class="fa fa-check"></i><b>3.6</b> Part 6 — So why bother with R?</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-14-add-one-row"><i class="fa fa-check"></i><b>3.6.1</b> Step 14: Add one row</a></li>
+<li class="chapter" data-level="3.6.2" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#step-15-the-real-difference"><i class="fa fa-check"></i><b>3.6.2</b> Step 15: The real difference</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><i class="fa fa-check"></i><b>7</b> Identifying trees: dichotomous keys and the campus tree walk</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#how-this-lab-runs"><i class="fa fa-check"></i><b>7.1</b> How this lab runs</a>
-<ul>
-<li class="chapter" data-level="7.1.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#downloads-for-this-lab-1"><i class="fa fa-check"></i><b>7.1.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="3.7" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#summary"><i class="fa fa-check"></i><b>3.7</b> Summary</a></li>
+<li class="chapter" data-level="3.8" data-path="working-with-data-in-a-spreadsheet.html"><a href="working-with-data-in-a-spreadsheet.html#assignment-1"><i class="fa fa-check"></i><b>3.8</b> Assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#objectives-2"><i class="fa fa-check"></i><b>7.2</b> Objectives</a></li>
-<li class="chapter" data-level="7.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#background-1"><i class="fa fa-check"></i><b>7.3</b> Background</a>
+<li class="chapter" data-level="4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>4</b> Descriptive statistics</a>
 <ul>
-<li class="chapter" data-level="7.3.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-a-dichotomous-key-is"><i class="fa fa-check"></i><b>7.3.1</b> What a dichotomous key is</a></li>
-<li class="chapter" data-level="7.3.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#characters-and-character-states"><i class="fa fa-check"></i><b>7.3.2</b> Characters and character states</a></li>
-<li class="chapter" data-level="7.3.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#where-keys-fail"><i class="fa fa-check"></i><b>7.3.3</b> Where keys fail</a></li>
+<li class="chapter" data-level="4.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#objectives"><i class="fa fa-check"></i><b>4.1</b> Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#downloads-for-this-lab-2"><i class="fa fa-check"></i><b>4.2</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="4.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-types"><i class="fa fa-check"></i><b>4.3</b> Data types</a></li>
+<li class="chapter" data-level="4.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-1"><i class="fa fa-check"></i><b>4.4</b> Descriptive statistics</a></li>
+<li class="chapter" data-level="4.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#figures"><i class="fa fa-check"></i><b>4.5</b> Figures</a></li>
+<li class="chapter" data-level="4.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary-1"><i class="fa fa-check"></i><b>4.6</b> Summary</a></li>
+<li class="chapter" data-level="4.7" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#assignment-2"><i class="fa fa-check"></i><b>4.7</b> Assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-1-key-practice"><i class="fa fa-check"></i><b>7.4</b> Part 1 — Key practice</a></li>
-<li class="chapter" data-level="7.5" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#key-to-trees-of-the-nau-campus-and-the-flagstaff-area"><i class="fa fa-check"></i><b>7.5</b> Key to trees of the NAU campus and the Flagstaff area</a>
+<li class="chapter" data-level="5" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><i class="fa fa-check"></i><b>5</b> Identifying trees: dichotomous keys and the campus tree walk</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#group-i-leaves-needle-like-or-scale-like-conifers"><i class="fa fa-check"></i><b>7.5.1</b> Group I — Leaves needle-like or scale-like (conifers)</a></li>
-<li class="chapter" data-level="7.5.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#group-ii-leaves-broad-and-flat-hardwoods"><i class="fa fa-check"></i><b>7.5.2</b> Group II — Leaves broad and flat (hardwoods)</a></li>
+<li class="chapter" data-level="5.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#how-this-lab-runs"><i class="fa fa-check"></i><b>5.1</b> How this lab runs</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#downloads-for-this-lab-3"><i class="fa fa-check"></i><b>5.1.1</b> Downloads for this lab</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-nau-arboretum"><i class="fa fa-check"></i><b>7.6</b> The NAU arboretum</a></li>
-<li class="chapter" data-level="7.7" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-2a-the-arbor-day-walk-fall"><i class="fa fa-check"></i><b>7.7</b> Part 2A — The Arbor Day walk (fall)</a>
+<li class="chapter" data-level="5.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#objectives-1"><i class="fa fa-check"></i><b>5.2</b> Objectives</a></li>
+<li class="chapter" data-level="5.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#background"><i class="fa fa-check"></i><b>5.3</b> Background</a>
 <ul>
-<li class="chapter" data-level="7.7.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-is-different-about-being-led"><i class="fa fa-check"></i><b>7.7.1</b> What is different about being led</a></li>
-<li class="chapter" data-level="7.7.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-to-record"><i class="fa fa-check"></i><b>7.7.2</b> What to record</a></li>
-<li class="chapter" data-level="7.7.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#questions-worth-asking"><i class="fa fa-check"></i><b>7.7.3</b> Questions worth asking</a></li>
+<li class="chapter" data-level="5.3.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-a-dichotomous-key-is"><i class="fa fa-check"></i><b>5.3.1</b> What a dichotomous key is</a></li>
+<li class="chapter" data-level="5.3.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#characters-and-character-states"><i class="fa fa-check"></i><b>5.3.2</b> Characters and character states</a></li>
+<li class="chapter" data-level="5.3.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#where-keys-fail"><i class="fa fa-check"></i><b>5.3.3</b> Where keys fail</a></li>
 </ul></li>
-<li class="chapter" data-level="7.8" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-2b-self-guided-walk-spring-or-when-the-arbor-day-walk-doesnt-fit-the-schedule"><i class="fa fa-check"></i><b>7.8</b> Part 2B — Self-guided walk (spring, or when the Arbor Day walk doesn’t fit the schedule)</a></li>
-<li class="chapter" data-level="7.9" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#recording-your-data"><i class="fa fa-check"></i><b>7.9</b> Recording your data</a></li>
-<li class="chapter" data-level="7.10" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-3-when-the-key-fails"><i class="fa fa-check"></i><b>7.10</b> Part 3 — When the key fails</a>
+<li class="chapter" data-level="5.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-1-key-practice"><i class="fa fa-check"></i><b>5.4</b> Part 1 — Key practice</a>
 <ul>
-<li class="chapter" data-level="7.10.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#give-it-a-code-and-use-the-code-consistently"><i class="fa fa-check"></i><b>7.10.1</b> Give it a code, and use the code consistently</a></li>
-<li class="chapter" data-level="7.10.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#fill-in-the-unknown-plant-log"><i class="fa fa-check"></i><b>7.10.2</b> Fill in the unknown plant log</a></li>
-<li class="chapter" data-level="7.10.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#photograph-it-properly"><i class="fa fa-check"></i><b>7.10.3</b> Photograph it properly</a></li>
-<li class="chapter" data-level="7.10.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#route-one-inaturalist"><i class="fa fa-check"></i><b>7.10.4</b> Route one: iNaturalist</a></li>
-<li class="chapter" data-level="7.10.5" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#route-two-a-specimen"><i class="fa fa-check"></i><b>7.10.5</b> Route two: a specimen</a></li>
-<li class="chapter" data-level="7.10.6" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-goes-on-the-label"><i class="fa fa-check"></i><b>7.10.6</b> What goes on the label</a></li>
-<li class="chapter" data-level="7.10.7" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-determiner-field-and-why-this-chapter-has-been-about-it-all-along"><i class="fa fa-check"></i><b>7.10.7</b> The determiner field, and why this chapter has been about it all along</a></li>
+<li class="chapter" data-level="5.4.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#key-to-trees-of-the-nau-campus-and-the-flagstaff-area"><i class="fa fa-check"></i><b>5.4.1</b> Key to trees of the NAU campus and the Flagstaff area</a></li>
+<li class="chapter" data-level="5.4.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#group-i-leaves-needle-like-or-scale-like-conifers"><i class="fa fa-check"></i><b>5.4.2</b> Group I — Leaves needle-like or scale-like (conifers)</a></li>
+<li class="chapter" data-level="5.4.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#group-ii-leaves-broad-and-flat-hardwoods"><i class="fa fa-check"></i><b>5.4.3</b> Group II — Leaves broad and flat (hardwoods)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.11" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-3b-the-deaver-herbarium-optional"><i class="fa fa-check"></i><b>7.11</b> Part 3B — The Deaver Herbarium (optional)</a>
+<li class="chapter" data-level="5.5" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-nau-arboretum"><i class="fa fa-check"></i><b>5.5</b> The NAU arboretum</a>
 <ul>
-<li class="chapter" data-level="7.11.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-youll-do-there"><i class="fa fa-check"></i><b>7.11.1</b> What you’ll do there</a></li>
-<li class="chapter" data-level="7.11.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#if-you-want-an-identification"><i class="fa fa-check"></i><b>7.11.2</b> If you want an identification</a></li>
-<li class="chapter" data-level="7.11.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-collection-is-also-online"><i class="fa fa-check"></i><b>7.11.3</b> The collection is also online</a></li>
-<li class="chapter" data-level="7.11.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#where-this-connects-to-the-rest-of-the-manual"><i class="fa fa-check"></i><b>7.11.4</b> Where this connects to the rest of the manual</a></li>
+<li class="chapter" data-level="5.5.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#following-a-route"><i class="fa fa-check"></i><b>5.5.1</b> Following a route</a></li>
 </ul></li>
-<li class="chapter" data-level="7.12" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-4-write-your-own-key"><i class="fa fa-check"></i><b>7.12</b> Part 4 — Write your own key</a></li>
-<li class="chapter" data-level="7.13" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#assignment-4"><i class="fa fa-check"></i><b>7.13</b> Assignment</a></li>
-<li class="chapter" data-level="7.14" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#notes-for-tas"><i class="fa fa-check"></i><b>7.14</b> Notes for TAs</a>
+<li class="chapter" data-level="5.6" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-2-the-arboretum-walk"><i class="fa fa-check"></i><b>5.6</b> Part 2 — The arboretum walk</a>
 <ul>
-<li class="chapter" data-level="7.14.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#if-you-are-running-the-arbor-day-walk-part-2a"><i class="fa fa-check"></i><b>7.14.1</b> If you are running the Arbor Day walk (Part 2A)</a></li>
-<li class="chapter" data-level="7.14.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#either-way"><i class="fa fa-check"></i><b>7.14.2</b> Either way</a></li>
-<li class="chapter" data-level="7.14.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#unknowns-and-the-herbarium-visit"><i class="fa fa-check"></i><b>7.14.3</b> Unknowns and the herbarium visit</a></li>
+<li class="chapter" data-level="5.6.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#two-things-on-these-walks-that-a-key-cannot-resolve"><i class="fa fa-check"></i><b>5.6.1</b> Two things on these walks that a key cannot resolve</a></li>
 </ul></li>
-<li class="chapter" data-level="7.15" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#sources-and-further-reading"><i class="fa fa-check"></i><b>7.15</b> Sources and further reading</a></li>
+<li class="chapter" data-level="5.7" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#recording-your-data"><i class="fa fa-check"></i><b>5.7</b> Recording your data</a></li>
+<li class="chapter" data-level="5.8" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-3-when-the-key-fails"><i class="fa fa-check"></i><b>5.8</b> Part 3 — When the key fails</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#give-it-a-code-and-use-the-code-consistently"><i class="fa fa-check"></i><b>5.8.1</b> Give it a code, and use the code consistently</a></li>
+<li class="chapter" data-level="5.8.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#fill-in-the-unknown-plant-log"><i class="fa fa-check"></i><b>5.8.2</b> Fill in the unknown plant log</a></li>
+<li class="chapter" data-level="5.8.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#photograph-it-properly"><i class="fa fa-check"></i><b>5.8.3</b> Photograph it properly</a></li>
+<li class="chapter" data-level="5.8.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#route-one-inaturalist"><i class="fa fa-check"></i><b>5.8.4</b> Route one: iNaturalist</a></li>
+<li class="chapter" data-level="5.8.5" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#route-two-a-specimen"><i class="fa fa-check"></i><b>5.8.5</b> Route two: a specimen</a></li>
+<li class="chapter" data-level="5.8.6" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-goes-on-the-label"><i class="fa fa-check"></i><b>5.8.6</b> What goes on the label</a></li>
+<li class="chapter" data-level="5.8.7" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-determiner-field-and-why-this-chapter-has-been-about-it-all-along"><i class="fa fa-check"></i><b>5.8.7</b> The determiner field, and why this chapter has been about it all along</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html"><i class="fa fa-check"></i><b>8</b> Field methods: running a monitoring plot</a>
+<li class="chapter" data-level="5.9" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-deaver-herbarium"><i class="fa fa-check"></i><b>5.9</b> The Deaver Herbarium</a>
 <ul>
-<li class="chapter" data-level="8.0.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#downloads-for-this-lab-2"><i class="fa fa-check"></i><b>8.0.1</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="8.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#objectives-3"><i class="fa fa-check"></i><b>8.1</b> Objectives</a></li>
-<li class="chapter" data-level="8.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#why-point-intercept-rather-than-how-much-is-covered"><i class="fa fa-check"></i><b>8.2</b> Why point intercept rather than “how much is covered?”</a></li>
-<li class="chapter" data-level="8.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-1-establishing-the-plot"><i class="fa fa-check"></i><b>8.3</b> Part 1 — Establishing the plot</a>
-<ul>
-<li class="chapter" data-level="8.3.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#materials"><i class="fa fa-check"></i><b>8.3.1</b> Materials</a></li>
-<li class="chapter" data-level="8.3.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#procedure"><i class="fa fa-check"></i><b>8.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="5.9.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#if-you-want-an-identification"><i class="fa fa-check"></i><b>5.9.1</b> If you want an identification</a></li>
+<li class="chapter" data-level="5.9.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#the-collection-is-also-online"><i class="fa fa-check"></i><b>5.9.2</b> The collection is also online</a></li>
+<li class="chapter" data-level="5.9.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#where-this-connects-to-the-rest-of-the-manual"><i class="fa fa-check"></i><b>5.9.3</b> Where this connects to the rest of the manual</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-2-line-point-intercept"><i class="fa fa-check"></i><b>8.4</b> Part 2 — Line-point intercept</a>
+<li class="chapter" data-level="5.10" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#part-4-what-the-record-actually-shows"><i class="fa fa-check"></i><b>5.10</b> Part 4 — What the record actually shows</a>
 <ul>
-<li class="chapter" data-level="8.4.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#dropping-the-pin"><i class="fa fa-check"></i><b>8.4.1</b> Dropping the pin</a></li>
-<li class="chapter" data-level="8.4.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#what-you-record-at-each-point"><i class="fa fa-check"></i><b>8.4.2</b> What you record at each point</a></li>
-<li class="chapter" data-level="8.4.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#species-codes"><i class="fa fa-check"></i><b>8.4.3</b> Species codes</a></li>
+<li class="chapter" data-level="5.10.1" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#your-species"><i class="fa fa-check"></i><b>5.10.1</b> Your species</a></li>
+<li class="chapter" data-level="5.10.2" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#geographic-distribution"><i class="fa fa-check"></i><b>5.10.2</b> 1. Geographic distribution</a></li>
+<li class="chapter" data-level="5.10.3" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#collections-through-time"><i class="fa fa-check"></i><b>5.10.3</b> 2. Collections through time</a></li>
+<li class="chapter" data-level="5.10.4" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#a-record-that-looks-wrong"><i class="fa fa-check"></i><b>5.10.4</b> 3. A record that looks wrong</a></li>
+<li class="chapter" data-level="5.10.5" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#what-is-actually-in-a-specimen-record"><i class="fa fa-check"></i><b>5.10.5</b> 4. What is actually in a specimen record</a></li>
+<li class="chapter" data-level="5.10.6" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#interpretation"><i class="fa fa-check"></i><b>5.10.6</b> 5. Interpretation</a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-3-observer-calibration"><i class="fa fa-check"></i><b>8.5</b> Part 3 — Observer calibration</a>
-<ul>
-<li class="chapter" data-level="8.5.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#procedure-1"><i class="fa fa-check"></i><b>8.5.1</b> Procedure</a></li>
-<li class="chapter" data-level="8.5.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#the-thresholds"><i class="fa fa-check"></i><b>8.5.2</b> The thresholds</a></li>
-<li class="chapter" data-level="8.5.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#what-to-do-with-the-answer"><i class="fa fa-check"></i><b>8.5.3</b> What to do with the answer</a></li>
+<li class="chapter" data-level="5.11" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#assignment-3"><i class="fa fa-check"></i><b>5.11</b> Assignment</a></li>
+<li class="chapter" data-level="5.12" data-path="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html"><a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html#sources-and-further-reading"><i class="fa fa-check"></i><b>5.12</b> Sources and further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="8.6" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-4-unknown-plants-and-voucher-specimens"><i class="fa fa-check"></i><b>8.6</b> Part 4 — Unknown plants and voucher specimens</a></li>
-<li class="chapter" data-level="8.7" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#analysis"><i class="fa fa-check"></i><b>8.7</b> Analysis</a></li>
-<li class="chapter" data-level="8.8" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#assignment-5"><i class="fa fa-check"></i><b>8.8</b> Assignment</a></li>
-<li class="chapter" data-level="8.9" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#notes-for-tas-1"><i class="fa fa-check"></i><b>8.9</b> Notes for TAs</a></li>
-<li class="chapter" data-level="8.10" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#sources"><i class="fa fa-check"></i><b>8.10</b> Sources</a></li>
+<li class="chapter" data-level="6" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html"><i class="fa fa-check"></i><b>6</b> Field methods: running a monitoring plot</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#downloads-for-this-lab-4"><i class="fa fa-check"></i><b>6.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="6.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#objectives-2"><i class="fa fa-check"></i><b>6.1</b> Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#why-point-intercept-rather-than-how-much-is-covered"><i class="fa fa-check"></i><b>6.2</b> Why point intercept rather than “how much is covered?”</a></li>
+<li class="chapter" data-level="6.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-1-establishing-the-plot"><i class="fa fa-check"></i><b>6.3</b> Part 1 — Establishing the plot</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#materials"><i class="fa fa-check"></i><b>6.3.1</b> Materials</a></li>
+<li class="chapter" data-level="6.3.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#procedure"><i class="fa fa-check"></i><b>6.3.2</b> Procedure</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html"><i class="fa fa-check"></i><b>9</b> Dendrochronology: reading time in wood</a>
+<li class="chapter" data-level="6.4" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-2-line-point-intercept"><i class="fa fa-check"></i><b>6.4</b> Part 2 — Line-point intercept</a>
 <ul>
-<li class="chapter" data-level="9.0.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#downloads-for-this-lab-3"><i class="fa fa-check"></i><b>9.0.1</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="9.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#objectives-4"><i class="fa fa-check"></i><b>9.1</b> Objectives</a></li>
-<li class="chapter" data-level="9.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#background-2"><i class="fa fa-check"></i><b>9.2</b> Background</a>
-<ul>
-<li class="chapter" data-level="9.2.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#one-ring-one-year-usually"><i class="fa fa-check"></i><b>9.2.1</b> One ring, one year — usually</a></li>
-<li class="chapter" data-level="9.2.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#crossdating"><i class="fa fa-check"></i><b>9.2.2</b> Crossdating</a></li>
-<li class="chapter" data-level="9.2.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#marker-years-and-pointer-years"><i class="fa fa-check"></i><b>9.2.3</b> Marker years and pointer years</a></li>
-<li class="chapter" data-level="9.2.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#what-limits-a-ponderosa-in-northern-arizona"><i class="fa fa-check"></i><b>9.2.4</b> What limits a ponderosa in northern Arizona</a></li>
+<li class="chapter" data-level="6.4.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#dropping-the-pin"><i class="fa fa-check"></i><b>6.4.1</b> Dropping the pin</a></li>
+<li class="chapter" data-level="6.4.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#what-you-record-at-each-point"><i class="fa fa-check"></i><b>6.4.2</b> What you record at each point</a></li>
+<li class="chapter" data-level="6.4.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#species-codes"><i class="fa fa-check"></i><b>6.4.3</b> Species codes</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#track-a-physical-cross-sections"><i class="fa fa-check"></i><b>9.3</b> Track A — Physical cross-sections</a>
+<li class="chapter" data-level="6.5" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-3-observer-calibration"><i class="fa fa-check"></i><b>6.5</b> Part 3 — Observer calibration</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#materials-1"><i class="fa fa-check"></i><b>9.3.1</b> Materials</a></li>
-<li class="chapter" data-level="9.3.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#procedure-2"><i class="fa fa-check"></i><b>9.3.2</b> Procedure</a></li>
-<li class="chapter" data-level="9.3.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#fire-scars"><i class="fa fa-check"></i><b>9.3.3</b> Fire scars</a></li>
+<li class="chapter" data-level="6.5.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#procedure-1"><i class="fa fa-check"></i><b>6.5.1</b> Procedure</a></li>
+<li class="chapter" data-level="6.5.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#the-thresholds"><i class="fa fa-check"></i><b>6.5.2</b> The thresholds</a></li>
+<li class="chapter" data-level="6.5.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#what-to-do-with-the-answer"><i class="fa fa-check"></i><b>6.5.3</b> What to do with the answer</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#track-b-itrdb-chronologies-no-physical-material-needed"><i class="fa fa-check"></i><b>9.4</b> Track B — ITRDB chronologies (no physical material needed)</a>
+<li class="chapter" data-level="6.6" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-4-unknown-plants-and-voucher-specimens"><i class="fa fa-check"></i><b>6.6</b> Part 4 — Unknown plants and voucher specimens</a></li>
+<li class="chapter" data-level="6.7" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#part-5-what-makes-a-good-herbarium-specimen"><i class="fa fa-check"></i><b>6.7</b> Part 5 — What makes a good herbarium specimen</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#getting-the-data"><i class="fa fa-check"></i><b>9.4.1</b> Getting the data</a></li>
-<li class="chapter" data-level="9.4.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#reading-it-into-r"><i class="fa fa-check"></i><b>9.4.2</b> Reading it into R</a></li>
-<li class="chapter" data-level="9.4.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#checking-the-dating"><i class="fa fa-check"></i><b>9.4.3</b> Checking the dating</a></li>
-<li class="chapter" data-level="9.4.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#detrending-and-why"><i class="fa fa-check"></i><b>9.4.4</b> Detrending, and why</a></li>
-<li class="chapter" data-level="9.4.5" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#finding-your-pointer-years"><i class="fa fa-check"></i><b>9.4.5</b> Finding your pointer years</a></li>
+<li class="chapter" data-level="6.7.1" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#what-a-herbarium-actually-is"><i class="fa fa-check"></i><b>6.7.1</b> What a herbarium actually is</a></li>
+<li class="chapter" data-level="6.7.2" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#the-five-parts-of-a-mounted-specimen"><i class="fa fa-check"></i><b>6.7.2</b> The five parts of a mounted specimen</a></li>
+<li class="chapter" data-level="6.7.3" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#who-is-this-for"><i class="fa fa-check"></i><b>6.7.3</b> Who is this for?</a></li>
+<li class="chapter" data-level="6.7.4" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#what-matters-most"><i class="fa fa-check"></i><b>6.7.4</b> What matters most</a></li>
+<li class="chapter" data-level="6.7.5" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#making-it-last"><i class="fa fa-check"></i><b>6.7.5</b> Making it last</a></li>
+<li class="chapter" data-level="6.7.6" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#exercise-a-score-your-own"><i class="fa fa-check"></i><b>6.7.6</b> Exercise A — Score your own</a></li>
+<li class="chapter" data-level="6.7.7" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#exercise-b-good-or-bad"><i class="fa fa-check"></i><b>6.7.7</b> Exercise B — Good or bad?</a></li>
+<li class="chapter" data-level="6.7.8" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#exercise-c-swap"><i class="fa fa-check"></i><b>6.7.8</b> Exercise C — Swap</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#assignment-6"><i class="fa fa-check"></i><b>9.5</b> Assignment</a></li>
-<li class="chapter" data-level="9.6" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#notes-for-tas-2"><i class="fa fa-check"></i><b>9.6</b> Notes for TAs</a></li>
-<li class="chapter" data-level="9.7" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#sources-1"><i class="fa fa-check"></i><b>9.7</b> Sources</a></li>
+<li class="chapter" data-level="6.8" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#analysis"><i class="fa fa-check"></i><b>6.8</b> Analysis</a></li>
+<li class="chapter" data-level="6.9" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#assignment-4"><i class="fa fa-check"></i><b>6.9</b> Assignment</a></li>
+<li class="chapter" data-level="6.10" data-path="field-methods-running-a-monitoring-plot.html"><a href="field-methods-running-a-monitoring-plot.html#sources"><i class="fa fa-check"></i><b>6.10</b> Sources</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="natural-selection.html"><a href="natural-selection.html"><i class="fa fa-check"></i><b>10</b> Natural selection</a>
+<li class="chapter" data-level="7" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html"><i class="fa fa-check"></i><b>7</b> Dendrochronology: reading time in wood</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="natural-selection.html"><a href="natural-selection.html#background-3"><i class="fa fa-check"></i><b>10.1</b> Background</a></li>
-<li class="chapter" data-level="10.2" data-path="natural-selection.html"><a href="natural-selection.html#downloads-for-this-class-2"><i class="fa fa-check"></i><b>10.2</b> Downloads for this class</a></li>
-<li class="chapter" data-level="10.3" data-path="natural-selection.html"><a href="natural-selection.html#objectives-5"><i class="fa fa-check"></i><b>10.3</b> Objectives</a></li>
-<li class="chapter" data-level="10.4" data-path="natural-selection.html"><a href="natural-selection.html#research-question"><i class="fa fa-check"></i><b>10.4</b> Research question:</a></li>
-<li class="chapter" data-level="10.5" data-path="natural-selection.html"><a href="natural-selection.html#methods"><i class="fa fa-check"></i><b>10.5</b> Methods</a></li>
-<li class="chapter" data-level="10.6" data-path="natural-selection.html"><a href="natural-selection.html#what-to-turn-in"><i class="fa fa-check"></i><b>10.6</b> What to turn in</a></li>
+<li class="chapter" data-level="7.0.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#downloads-for-this-lab-5"><i class="fa fa-check"></i><b>7.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="7.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#objectives-3"><i class="fa fa-check"></i><b>7.1</b> Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#background-1"><i class="fa fa-check"></i><b>7.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#one-ring-one-year-usually"><i class="fa fa-check"></i><b>7.2.1</b> One ring, one year — usually</a></li>
+<li class="chapter" data-level="7.2.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#crossdating"><i class="fa fa-check"></i><b>7.2.2</b> Crossdating</a></li>
+<li class="chapter" data-level="7.2.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#marker-years-and-pointer-years"><i class="fa fa-check"></i><b>7.2.3</b> Marker years and pointer years</a></li>
+<li class="chapter" data-level="7.2.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#what-limits-a-ponderosa-in-northern-arizona"><i class="fa fa-check"></i><b>7.2.4</b> What limits a ponderosa in northern Arizona</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="population-ecology.html"><a href="population-ecology.html"><i class="fa fa-check"></i><b>11</b> Population ecology</a>
+<li class="chapter" data-level="7.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#track-a-physical-cross-sections"><i class="fa fa-check"></i><b>7.3</b> Track A — Physical cross-sections</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="population-ecology.html"><a href="population-ecology.html#choosing-a-track"><i class="fa fa-check"></i><b>11.1</b> Choosing a track</a>
-<ul>
-<li class="chapter" data-level="11.1.1" data-path="population-ecology.html"><a href="population-ecology.html#downloads-for-this-lab-4"><i class="fa fa-check"></i><b>11.1.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="7.3.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#materials-1"><i class="fa fa-check"></i><b>7.3.1</b> Materials</a></li>
+<li class="chapter" data-level="7.3.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#procedure-2"><i class="fa fa-check"></i><b>7.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="7.3.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#fire-scars"><i class="fa fa-check"></i><b>7.3.3</b> Fire scars</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="population-ecology.html"><a href="population-ecology.html#track-a-daphnia-microcosms"><i class="fa fa-check"></i><b>11.2</b> Track A — <em>Daphnia</em> microcosms</a>
+<li class="chapter" data-level="7.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#track-b-itrdb-chronologies-no-physical-material-needed"><i class="fa fa-check"></i><b>7.4</b> Track B — ITRDB chronologies (no physical material needed)</a>
 <ul>
-<li class="chapter" data-level="11.2.1" data-path="population-ecology.html"><a href="population-ecology.html#lab-set-up-week-1"><i class="fa fa-check"></i><b>11.2.1</b> Lab set-up (week 1)</a></li>
-<li class="chapter" data-level="11.2.2" data-path="population-ecology.html"><a href="population-ecology.html#maintaining-your-microcosms-week-2"><i class="fa fa-check"></i><b>11.2.2</b> Maintaining your microcosms (week 2)</a></li>
-<li class="chapter" data-level="11.2.3" data-path="population-ecology.html"><a href="population-ecology.html#final-counts-week-3"><i class="fa fa-check"></i><b>11.2.3</b> Final counts (week 3)</a></li>
-<li class="chapter" data-level="11.2.4" data-path="population-ecology.html"><a href="population-ecology.html#ethics-and-disposal"><i class="fa fa-check"></i><b>11.2.4</b> Ethics and disposal</a></li>
+<li class="chapter" data-level="7.4.1" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#getting-the-data"><i class="fa fa-check"></i><b>7.4.1</b> Getting the data</a></li>
+<li class="chapter" data-level="7.4.2" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#reading-it-into-r"><i class="fa fa-check"></i><b>7.4.2</b> Reading it into R</a></li>
+<li class="chapter" data-level="7.4.3" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#checking-the-dating"><i class="fa fa-check"></i><b>7.4.3</b> Checking the dating</a></li>
+<li class="chapter" data-level="7.4.4" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#detrending-and-why"><i class="fa fa-check"></i><b>7.4.4</b> Detrending, and why</a></li>
+<li class="chapter" data-level="7.4.5" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#finding-your-pointer-years"><i class="fa fa-check"></i><b>7.4.5</b> Finding your pointer years</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="population-ecology.html"><a href="population-ecology.html#track-b-duckweed-microcosms"><i class="fa fa-check"></i><b>11.3</b> Track B — Duckweed microcosms</a>
-<ul>
-<li class="chapter" data-level="11.3.1" data-path="population-ecology.html"><a href="population-ecology.html#lab-set-up-week-1-1"><i class="fa fa-check"></i><b>11.3.1</b> Lab set-up (week 1)</a></li>
-<li class="chapter" data-level="11.3.2" data-path="population-ecology.html"><a href="population-ecology.html#objectives-6"><i class="fa fa-check"></i><b>11.3.2</b> Objectives</a></li>
-<li class="chapter" data-level="11.3.3" data-path="population-ecology.html"><a href="population-ecology.html#materials-2"><i class="fa fa-check"></i><b>11.3.3</b> Materials</a></li>
-<li class="chapter" data-level="11.3.4" data-path="population-ecology.html"><a href="population-ecology.html#procedure-3"><i class="fa fa-check"></i><b>11.3.4</b> Procedure</a></li>
-<li class="chapter" data-level="11.3.5" data-path="population-ecology.html"><a href="population-ecology.html#maintaining-your-microcosms-and-measuring-population-growth-week-2"><i class="fa fa-check"></i><b>11.3.5</b> Maintaining your microcosms and measuring population growth (week 2)</a></li>
+<li class="chapter" data-level="7.5" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#assignment-5"><i class="fa fa-check"></i><b>7.5</b> Assignment</a></li>
+<li class="chapter" data-level="7.6" data-path="dendrochronology-reading-time-in-wood.html"><a href="dendrochronology-reading-time-in-wood.html#sources-1"><i class="fa fa-check"></i><b>7.6</b> Sources</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="population-ecology.html"><a href="population-ecology.html#final-data-collection-and-analysis"><i class="fa fa-check"></i><b>11.4</b> Final data collection and analysis</a>
+<li class="chapter" data-level="8" data-path="ecological-sampling.html"><a href="ecological-sampling.html"><i class="fa fa-check"></i><b>8</b> Ecological sampling</a>
 <ul>
-<li class="chapter" data-level="11.4.1" data-path="population-ecology.html"><a href="population-ecology.html#microcosm-studies-of-population-dynamics"><i class="fa fa-check"></i><b>11.4.1</b> Microcosm studies of population dynamics</a></li>
-<li class="chapter" data-level="11.4.2" data-path="population-ecology.html"><a href="population-ecology.html#mortality-is-a-measurement-not-a-failure"><i class="fa fa-check"></i><b>11.4.2</b> Mortality is a measurement, not a failure</a></li>
-<li class="chapter" data-level="11.4.3" data-path="population-ecology.html"><a href="population-ecology.html#population-dynamics-basics"><i class="fa fa-check"></i><b>11.4.3</b> Population dynamics basics</a></li>
+<li class="chapter" data-level="8.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#background-2"><i class="fa fa-check"></i><b>8.1</b> Background</a></li>
+<li class="chapter" data-level="8.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-approaches"><i class="fa fa-check"></i><b>8.2</b> Sampling approaches</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#random-sampling"><i class="fa fa-check"></i><b>8.2.1</b> Random sampling</a></li>
+<li class="chapter" data-level="8.2.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#stratefied-random-sampling"><i class="fa fa-check"></i><b>8.2.2</b> Stratefied random sampling</a></li>
+<li class="chapter" data-level="8.2.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#gridded-random-sampling"><i class="fa fa-check"></i><b>8.2.3</b> Gridded random sampling</a></li>
+<li class="chapter" data-level="8.2.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#random-cluster-sampling"><i class="fa fa-check"></i><b>8.2.4</b> Random cluster sampling</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="population-ecology.html"><a href="population-ecology.html#assignment-7"><i class="fa fa-check"></i><b>11.5</b> Assignment</a></li>
-<li class="chapter" data-level="11.6" data-path="population-ecology.html"><a href="population-ecology.html#notes-for-tas-3"><i class="fa fa-check"></i><b>11.6</b> Notes for TAs</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html"><i class="fa fa-check"></i><b>12</b> Population structure and demography</a>
+<li class="chapter" data-level="8.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#plot-shapes-sizes-and-transects"><i class="fa fa-check"></i><b>8.3</b> Plot shapes, sizes, and transects</a></li>
+<li class="chapter" data-level="8.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#reducing-sampling-error"><i class="fa fa-check"></i><b>8.4</b> Reducing sampling error</a></li>
+<li class="chapter" data-level="8.5" data-path="ecological-sampling.html"><a href="ecological-sampling.html#variables-of-interest"><i class="fa fa-check"></i><b>8.5</b> Variables of interest</a></li>
+<li class="chapter" data-level="8.6" data-path="ecological-sampling.html"><a href="ecological-sampling.html#assignment-6"><i class="fa fa-check"></i><b>8.6</b> Assignment</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#choosing-a-track-1"><i class="fa fa-check"></i><b>12.1</b> Choosing a track</a></li>
-<li class="chapter" data-level="12.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#background-4"><i class="fa fa-check"></i><b>12.2</b> Background</a>
-<ul>
-<li class="chapter" data-level="12.2.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#substituting-structure-for-time"><i class="fa fa-check"></i><b>12.2.1</b> Substituting structure for time</a></li>
-<li class="chapter" data-level="12.2.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#the-static-life-table-and-its-assumption"><i class="fa fa-check"></i><b>12.2.2</b> The static life table, and its assumption</a></li>
-<li class="chapter" data-level="12.2.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#survivorship-curves"><i class="fa fa-check"></i><b>12.2.3</b> Survivorship curves</a></li>
-</ul></li>
-<li class="chapter" data-level="12.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-a-campus-ponderosa"><i class="fa fa-check"></i><b>12.3</b> Track A — Campus ponderosa</a>
-<ul>
-<li class="chapter" data-level="12.3.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#downloads-for-this-lab-5"><i class="fa fa-check"></i><b>12.3.1</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="12.3.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#objectives-7"><i class="fa fa-check"></i><b>12.3.2</b> Objectives</a></li>
-<li class="chapter" data-level="12.3.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#materials-3"><i class="fa fa-check"></i><b>12.3.3</b> Materials</a></li>
-<li class="chapter" data-level="12.3.4" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#procedure-4"><i class="fa fa-check"></i><b>12.3.4</b> Procedure</a></li>
-<li class="chapter" data-level="12.3.5" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#recording-your-data-1"><i class="fa fa-check"></i><b>12.3.5</b> Recording your data</a></li>
-</ul></li>
-<li class="chapter" data-level="12.4" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-b-centennial-forest-extension"><i class="fa fa-check"></i><b>12.4</b> Track B — Centennial Forest extension</a></li>
-<li class="chapter" data-level="12.5" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-c-virtual-cemetery-indoor-fallback"><i class="fa fa-check"></i><b>12.5</b> Track C — Virtual cemetery (indoor fallback)</a></li>
-<li class="chapter" data-level="12.6" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#analysis-1"><i class="fa fa-check"></i><b>12.6</b> Analysis</a>
-<ul>
-<li class="chapter" data-level="12.6.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#one-setting-you-must-get-right"><i class="fa fa-check"></i><b>12.6.1</b> One setting you must get right</a></li>
-<li class="chapter" data-level="12.6.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#running-the-script"><i class="fa fa-check"></i><b>12.6.2</b> Running the script</a></li>
-</ul></li>
-<li class="chapter" data-level="12.7" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#assignment-8"><i class="fa fa-check"></i><b>12.7</b> Assignment</a></li>
-<li class="chapter" data-level="12.8" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#notes-for-tas-4"><i class="fa fa-check"></i><b>12.8</b> Notes for TAs</a></li>
-<li class="chapter" data-level="12.9" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#acknowledgements"><i class="fa fa-check"></i><b>12.9</b> Acknowledgements</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html"><i class="fa fa-check"></i><b>13</b> Plant population biology: matrix models and viability</a>
-<ul>
-<li class="chapter" data-level="13.0.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#downloads-for-this-lab-6"><i class="fa fa-check"></i><b>13.0.1</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="13.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#objectives-8"><i class="fa fa-check"></i><b>13.1</b> Objectives</a></li>
-<li class="chapter" data-level="13.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#background-5"><i class="fa fa-check"></i><b>13.2</b> Background</a>
-<ul>
-<li class="chapter" data-level="13.2.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#why-not-just-count"><i class="fa fa-check"></i><b>13.2.1</b> Why not just count?</a></li>
-<li class="chapter" data-level="13.2.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#stages-not-ages"><i class="fa fa-check"></i><b>13.2.2</b> Stages, not ages</a></li>
-<li class="chapter" data-level="13.2.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#the-projection-matrix"><i class="fa fa-check"></i><b>13.2.3</b> The projection matrix</a></li>
-<li class="chapter" data-level="13.2.4" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#lambda-again"><i class="fa fa-check"></i><b>13.2.4</b> Lambda, again</a></li>
-<li class="chapter" data-level="13.2.5" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#elasticity-which-rate-matters-most"><i class="fa fa-check"></i><b>13.2.5</b> Elasticity: which rate matters most</a></li>
-<li class="chapter" data-level="13.2.6" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#stochasticity-and-why-a-single-lambda-is-not-enough"><i class="fa fa-check"></i><b>13.2.6</b> Stochasticity, and why a single lambda is not enough</a></li>
-<li class="chapter" data-level="13.2.7" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#quasi-extinction"><i class="fa fa-check"></i><b>13.2.7</b> Quasi-extinction</a></li>
-</ul></li>
-<li class="chapter" data-level="13.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-1-field-census"><i class="fa fa-check"></i><b>13.3</b> Part 1 — Field census</a>
-<ul>
-<li class="chapter" data-level="13.3.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#materials-4"><i class="fa fa-check"></i><b>13.3.1</b> Materials</a></li>
-<li class="chapter" data-level="13.3.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#procedure-5"><i class="fa fa-check"></i><b>13.3.2</b> Procedure</a></li>
-<li class="chapter" data-level="13.3.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#the-problem-of-year-one"><i class="fa fa-check"></i><b>13.3.3</b> The problem of year one</a></li>
-</ul></li>
-<li class="chapter" data-level="13.4" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-2-building-the-matrix-by-hand"><i class="fa fa-check"></i><b>13.4</b> Part 2 — Building the matrix by hand</a></li>
-<li class="chapter" data-level="13.5" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-3-analysis-in-r"><i class="fa fa-check"></i><b>13.5</b> Part 3 — Analysis in R</a></li>
-<li class="chapter" data-level="13.6" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#assignment-9"><i class="fa fa-check"></i><b>13.6</b> Assignment</a></li>
-<li class="chapter" data-level="13.7" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#notes-for-tas-5"><i class="fa fa-check"></i><b>13.7</b> Notes for TAs</a></li>
-<li class="chapter" data-level="13.8" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#sources-2"><i class="fa fa-check"></i><b>13.8</b> Sources</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="invasive-species.html"><a href="invasive-species.html"><i class="fa fa-check"></i><b>14</b> Invasive species</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="invasive-species.html"><a href="invasive-species.html#introduction-1"><i class="fa fa-check"></i><b>14.1</b> Introduction</a></li>
-<li class="chapter" data-level="14.2" data-path="invasive-species.html"><a href="invasive-species.html#downloads-for-this-lab-7"><i class="fa fa-check"></i><b>14.2</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="14.3" data-path="invasive-species.html"><a href="invasive-species.html#objectives-9"><i class="fa fa-check"></i><b>14.3</b> Objectives</a></li>
-<li class="chapter" data-level="14.4" data-path="invasive-species.html"><a href="invasive-species.html#materials-5"><i class="fa fa-check"></i><b>14.4</b> Materials</a></li>
-<li class="chapter" data-level="14.5" data-path="invasive-species.html"><a href="invasive-species.html#procedure-6"><i class="fa fa-check"></i><b>14.5</b> Procedure</a>
-<ul>
-<li class="chapter" data-level="14.5.1" data-path="invasive-species.html"><a href="invasive-species.html#hypothesis-development"><i class="fa fa-check"></i><b>14.5.1</b> Hypothesis development</a></li>
-<li class="chapter" data-level="14.5.2" data-path="invasive-species.html"><a href="invasive-species.html#nonnative-species-density-quadrats"><i class="fa fa-check"></i><b>14.5.2</b> Nonnative species density quadrats</a></li>
-<li class="chapter" data-level="14.5.3" data-path="invasive-species.html"><a href="invasive-species.html#analyses"><i class="fa fa-check"></i><b>14.5.3</b> Analyses</a></li>
-</ul></li>
-<li class="chapter" data-level="14.6" data-path="invasive-species.html"><a href="invasive-species.html#assignment-10"><i class="fa fa-check"></i><b>14.6</b> Assignment</a></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="water-quality.html"><a href="water-quality.html"><i class="fa fa-check"></i><b>15</b> Water quality</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="water-quality.html"><a href="water-quality.html#background-6"><i class="fa fa-check"></i><b>15.1</b> Background</a>
-<ul>
-<li class="chapter" data-level="15.1.1" data-path="water-quality.html"><a href="water-quality.html#history-of-francis-short-pond"><i class="fa fa-check"></i><b>15.1.1</b> History of Francis Short Pond</a></li>
-<li class="chapter" data-level="15.1.2" data-path="water-quality.html"><a href="water-quality.html#rio-de-flag-flood-control-project"><i class="fa fa-check"></i><b>15.1.2</b> Rio de Flag Flood Control Project</a></li>
-</ul></li>
-<li class="chapter" data-level="15.2" data-path="water-quality.html"><a href="water-quality.html#key-water-quality-terms-and-concepts"><i class="fa fa-check"></i><b>15.2</b> Key Water Quality Terms and Concepts</a></li>
-<li class="chapter" data-level="15.3" data-path="water-quality.html"><a href="water-quality.html#water-quality-monitoring"><i class="fa fa-check"></i><b>15.3</b> Water Quality Monitoring</a></li>
-<li class="chapter" data-level="15.4" data-path="water-quality.html"><a href="water-quality.html#downloads-for-this-lab-8"><i class="fa fa-check"></i><b>15.4</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="15.5" data-path="water-quality.html"><a href="water-quality.html#hypothesis-generation"><i class="fa fa-check"></i><b>15.5</b> Hypothesis generation</a></li>
-<li class="chapter" data-level="15.6" data-path="water-quality.html"><a href="water-quality.html#methods-1"><i class="fa fa-check"></i><b>15.6</b> Methods</a>
-<ul>
-<li class="chapter" data-level="15.6.1" data-path="water-quality.html"><a href="water-quality.html#record-and-compare-your-results"><i class="fa fa-check"></i><b>15.6.1</b> Record and compare your results</a></li>
-</ul></li>
-<li class="chapter" data-level="15.7" data-path="water-quality.html"><a href="water-quality.html#assignment-11"><i class="fa fa-check"></i><b>15.7</b> Assignment</a></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="species-interaction-project.html"><a href="species-interaction-project.html"><i class="fa fa-check"></i><b>16</b> Species interaction project</a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#introduction-2"><i class="fa fa-check"></i><b>16.1</b> Introduction</a></li>
-<li class="chapter" data-level="16.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#objectives-10"><i class="fa fa-check"></i><b>16.2</b> Objectives</a></li>
-<li class="chapter" data-level="16.3" data-path="species-interaction-project.html"><a href="species-interaction-project.html#week-1"><i class="fa fa-check"></i><b>16.3</b> Week 1</a>
-<ul>
-<li class="chapter" data-level="16.3.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads-for-this-lab-9"><i class="fa fa-check"></i><b>16.3.1</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="16.3.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#materials-6"><i class="fa fa-check"></i><b>16.3.2</b> Materials</a></li>
-</ul></li>
-<li class="chapter" data-level="16.4" data-path="species-interaction-project.html"><a href="species-interaction-project.html#overall-procedure"><i class="fa fa-check"></i><b>16.4</b> Overall procedure</a></li>
-<li class="chapter" data-level="16.5" data-path="species-interaction-project.html"><a href="species-interaction-project.html#set-up-your-experiment"><i class="fa fa-check"></i><b>16.5</b> Set up your experiment</a></li>
-<li class="chapter" data-level="16.6" data-path="species-interaction-project.html"><a href="species-interaction-project.html#creating-your-data-sheet"><i class="fa fa-check"></i><b>16.6</b> Creating your Data Sheet</a></li>
-<li class="chapter" data-level="16.7" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in-week-1"><i class="fa fa-check"></i><b>16.7</b> Turn-in week 1</a></li>
-<li class="chapter" data-level="16.8" data-path="species-interaction-project.html"><a href="species-interaction-project.html#weeks-2---5"><i class="fa fa-check"></i><b>16.8</b> Weeks 2 - 5</a>
-<ul>
-<li class="chapter" data-level="16.8.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#analyzing-and-visualizing-your-data"><i class="fa fa-check"></i><b>16.8.1</b> Analyzing and visualizing your data</a></li>
-</ul></li>
-<li class="chapter" data-level="16.9" data-path="species-interaction-project.html"><a href="species-interaction-project.html#final-week"><i class="fa fa-check"></i><b>16.9</b> Final week</a>
-<ul>
-<li class="chapter" data-level="16.9.1" data-path="species-interaction-project.html"><a href="species-interaction-project.html#downloads"><i class="fa fa-check"></i><b>16.9.1</b> Downloads</a></li>
-<li class="chapter" data-level="16.9.2" data-path="species-interaction-project.html"><a href="species-interaction-project.html#turn-in"><i class="fa fa-check"></i><b>16.9.2</b> Turn-in</a></li>
+<li class="chapter" data-level="8.6.1" data-path="ecological-sampling.html"><a href="ecological-sampling.html#downloads-for-this-class"><i class="fa fa-check"></i><b>8.6.1</b> Downloads for this class</a></li>
+<li class="chapter" data-level="8.6.2" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-q-a"><i class="fa fa-check"></i><b>8.6.2</b> Sampling Q &amp; A</a></li>
+<li class="chapter" data-level="8.6.3" data-path="ecological-sampling.html"><a href="ecological-sampling.html#sampling-activity"><i class="fa fa-check"></i><b>8.6.3</b> Sampling activity</a></li>
+<li class="chapter" data-level="8.6.4" data-path="ecological-sampling.html"><a href="ecological-sampling.html#before-you-design-anything-look"><i class="fa fa-check"></i><b>8.6.4</b> Before you design anything: look</a></li>
+<li class="chapter" data-level="8.6.5" data-path="ecological-sampling.html"><a href="ecological-sampling.html#deliverables"><i class="fa fa-check"></i><b>8.6.5</b> Deliverables</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="species-diversity.html"><a href="species-diversity.html"><i class="fa fa-check"></i><b>17</b> Species diversity</a>
+<li class="chapter" data-level="9" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html"><i class="fa fa-check"></i><b>9</b> Urban ecology: the crosstown walk</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="species-diversity.html"><a href="species-diversity.html#introduction-3"><i class="fa fa-check"></i><b>17.1</b> Introduction</a></li>
-<li class="chapter" data-level="17.2" data-path="species-diversity.html"><a href="species-diversity.html#week-1-1"><i class="fa fa-check"></i><b>17.2</b> Week 1</a></li>
-<li class="chapter" data-level="17.3" data-path="species-diversity.html"><a href="species-diversity.html#downloads-for-this-lab-10"><i class="fa fa-check"></i><b>17.3</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="17.4" data-path="species-diversity.html"><a href="species-diversity.html#objectives-11"><i class="fa fa-check"></i><b>17.4</b> Objectives</a></li>
-<li class="chapter" data-level="17.5" data-path="species-diversity.html"><a href="species-diversity.html#methods-2"><i class="fa fa-check"></i><b>17.5</b> Methods</a></li>
-<li class="chapter" data-level="17.6" data-path="species-diversity.html"><a href="species-diversity.html#turn-in-week-1-1"><i class="fa fa-check"></i><b>17.6</b> Turn-in week 1</a></li>
-<li class="chapter" data-level="17.7" data-path="species-diversity.html"><a href="species-diversity.html#week-2"><i class="fa fa-check"></i><b>17.7</b> Week 2</a></li>
-<li class="chapter" data-level="17.8" data-path="species-diversity.html"><a href="species-diversity.html#downloads-for-this-lab-11"><i class="fa fa-check"></i><b>17.8</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="17.9" data-path="species-diversity.html"><a href="species-diversity.html#objectives-12"><i class="fa fa-check"></i><b>17.9</b> Objectives</a></li>
-<li class="chapter" data-level="17.10" data-path="species-diversity.html"><a href="species-diversity.html#methods-3"><i class="fa fa-check"></i><b>17.10</b> Methods</a></li>
-<li class="chapter" data-level="17.11" data-path="species-diversity.html"><a href="species-diversity.html#turn-in-week-2"><i class="fa fa-check"></i><b>17.11</b> Turn-in week 2</a></li>
-<li class="chapter" data-level="17.12" data-path="species-diversity.html"><a href="species-diversity.html#acknowledgements-1"><i class="fa fa-check"></i><b>17.12</b> Acknowledgements</a></li>
+<li class="chapter" data-level="9.0.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#downloads-for-this-lab-6"><i class="fa fa-check"></i><b>9.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="9.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#objectives-4"><i class="fa fa-check"></i><b>9.1</b> Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#background-3"><i class="fa fa-check"></i><b>9.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#a-socioeconomic-gradient-is-an-ecological-gradient"><i class="fa fa-check"></i><b>9.2.1</b> A socioeconomic gradient is an ecological gradient</a></li>
+<li class="chapter" data-level="9.2.2" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#the-point-of-walking"><i class="fa fa-check"></i><b>9.2.2</b> The point of walking</a></li>
+<li class="chapter" data-level="9.2.3" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#one-more-thing-worth-saying-out-loud"><i class="fa fa-check"></i><b>9.2.3</b> One more thing worth saying out loud</a></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html"><i class="fa fa-check"></i><b>18</b> Urban ecology: the crosstown walk</a>
+<li class="chapter" data-level="9.3" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#the-route"><i class="fa fa-check"></i><b>9.3</b> The route</a>
 <ul>
-<li class="chapter" data-level="18.0.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#downloads-for-this-lab-12"><i class="fa fa-check"></i><b>18.0.1</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="18.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#objectives-13"><i class="fa fa-check"></i><b>18.1</b> Objectives</a></li>
-<li class="chapter" data-level="18.2" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#background-7"><i class="fa fa-check"></i><b>18.2</b> Background</a>
-<ul>
-<li class="chapter" data-level="18.2.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#a-socioeconomic-gradient-is-an-ecological-gradient"><i class="fa fa-check"></i><b>18.2.1</b> A socioeconomic gradient is an ecological gradient</a></li>
-<li class="chapter" data-level="18.2.2" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#the-point-of-walking"><i class="fa fa-check"></i><b>18.2.2</b> The point of walking</a></li>
-<li class="chapter" data-level="18.2.3" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#one-more-thing-worth-saying-out-loud"><i class="fa fa-check"></i><b>18.2.3</b> One more thing worth saying out loud</a></li>
+<li class="chapter" data-level="9.3.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#conduct"><i class="fa fa-check"></i><b>9.3.1</b> Conduct</a></li>
 </ul></li>
-<li class="chapter" data-level="18.3" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#the-route"><i class="fa fa-check"></i><b>18.3</b> The route</a>
+<li class="chapter" data-level="9.4" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-1-the-observation-walk"><i class="fa fa-check"></i><b>9.4</b> Part 1 — The observation walk</a></li>
+<li class="chapter" data-level="9.5" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-2-your-study"><i class="fa fa-check"></i><b>9.5</b> Part 2 — Your study</a>
 <ul>
-<li class="chapter" data-level="18.3.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#conduct"><i class="fa fa-check"></i><b>18.3.1</b> Conduct</a></li>
+<li class="chapter" data-level="9.5.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#recording"><i class="fa fa-check"></i><b>9.5.1</b> Recording</a></li>
 </ul></li>
-<li class="chapter" data-level="18.4" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-1-the-observation-walk"><i class="fa fa-check"></i><b>18.4</b> Part 1 — The observation walk</a></li>
-<li class="chapter" data-level="18.5" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-2-your-study"><i class="fa fa-check"></i><b>18.5</b> Part 2 — Your study</a>
+<li class="chapter" data-level="9.6" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-3-presentation"><i class="fa fa-check"></i><b>9.6</b> Part 3 — Presentation</a></li>
+<li class="chapter" data-level="9.7" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#assignment-7"><i class="fa fa-check"></i><b>9.7</b> Assignment</a></li>
+<li class="chapter" data-level="9.8" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#sources-2"><i class="fa fa-check"></i><b>9.8</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html"><i class="fa fa-check"></i><b>10</b> Species interactions I: designing and planting your experiment</a>
 <ul>
-<li class="chapter" data-level="18.5.1" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#recording"><i class="fa fa-check"></i><b>18.5.1</b> Recording</a></li>
-</ul></li>
-<li class="chapter" data-level="18.6" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#part-3-presentation"><i class="fa fa-check"></i><b>18.6</b> Part 3 — Presentation</a></li>
-<li class="chapter" data-level="18.7" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#assignment-12"><i class="fa fa-check"></i><b>18.7</b> Assignment</a></li>
-<li class="chapter" data-level="18.8" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#notes-for-tas-6"><i class="fa fa-check"></i><b>18.8</b> Notes for TAs</a></li>
-<li class="chapter" data-level="18.9" data-path="urban-ecology-the-crosstown-walk.html"><a href="urban-ecology-the-crosstown-walk.html#sources-3"><i class="fa fa-check"></i><b>18.9</b> Sources</a></li>
-</ul></li>
-<li class="chapter" data-level="19" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html"><i class="fa fa-check"></i><b>19</b> Species Distribution Modeling</a>
+<li class="chapter" data-level="10.1" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#introduction-1"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#objectives-5"><i class="fa fa-check"></i><b>10.2</b> Objectives</a></li>
+<li class="chapter" data-level="10.3" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#week-1"><i class="fa fa-check"></i><b>10.3</b> Week 1</a>
 <ul>
-<li class="chapter" data-level="19.1" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#introduction-4"><i class="fa fa-check"></i><b>19.1</b> Introduction</a></li>
-<li class="chapter" data-level="19.2" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#a-brief-review-of-niche-theory"><i class="fa fa-check"></i><b>19.2</b> A brief review of niche theory</a></li>
-<li class="chapter" data-level="19.3" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#downloads-for-this-lab-13"><i class="fa fa-check"></i><b>19.3</b> Downloads for this lab</a></li>
-<li class="chapter" data-level="19.4" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#objectives-14"><i class="fa fa-check"></i><b>19.4</b> Objectives</a></li>
-<li class="chapter" data-level="19.5" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#methods-4"><i class="fa fa-check"></i><b>19.5</b> Methods</a>
+<li class="chapter" data-level="10.3.1" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#downloads-for-this-lab-7"><i class="fa fa-check"></i><b>10.3.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="10.3.2" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#materials-2"><i class="fa fa-check"></i><b>10.3.2</b> Materials</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#overall-procedure"><i class="fa fa-check"></i><b>10.4</b> Overall procedure</a></li>
+<li class="chapter" data-level="10.5" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#set-up-your-experiment"><i class="fa fa-check"></i><b>10.5</b> Set up your experiment</a></li>
+<li class="chapter" data-level="10.6" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#creating-your-data-sheet"><i class="fa fa-check"></i><b>10.6</b> Creating your Data Sheet</a></li>
+<li class="chapter" data-level="10.7" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#turn-in-week-1"><i class="fa fa-check"></i><b>10.7</b> Turn-in week 1</a></li>
+<li class="chapter" data-level="10.8" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#the-weeks-in-between"><i class="fa fa-check"></i><b>10.8</b> The weeks in between</a></li>
+<li class="chapter" data-level="10.9" data-path="species-interactions-i-designing-and-planting-your-experiment.html"><a href="species-interactions-i-designing-and-planting-your-experiment.html#what-happens-next"><i class="fa fa-check"></i><b>10.9</b> What happens next</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html"><i class="fa fa-check"></i><b>11</b> Behavioral ecology: watching animals on purpose</a>
 <ul>
-<li class="chapter" data-level="19.5.1" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#lets-get-modeling"><i class="fa fa-check"></i><b>19.5.1</b> Let’s get modeling</a></li>
-<li class="chapter" data-level="19.5.2" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#run-the-r-code"><i class="fa fa-check"></i><b>19.5.2</b> Run the R code</a></li>
+<li class="chapter" data-level="11.0.1" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#downloads-for-this-lab-8"><i class="fa fa-check"></i><b>11.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="11.1" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#objectives-6"><i class="fa fa-check"></i><b>11.1</b> Objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#why-you-write-the-ethogram-first"><i class="fa fa-check"></i><b>11.2</b> Why you write the ethogram first</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#the-ethogram-for-this-lab"><i class="fa fa-check"></i><b>11.2.1</b> The ethogram for this lab</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#step-1-pick-your-study-animal"><i class="fa fa-check"></i><b>11.3</b> Step 1: Pick your study animal</a></li>
+<li class="chapter" data-level="11.4" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#step-2-choose-your-question"><i class="fa fa-check"></i><b>11.4</b> Step 2: Choose your question</a></li>
+<li class="chapter" data-level="11.5" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#step-3-focal-sampling"><i class="fa fa-check"></i><b>11.5</b> Step 3: Focal sampling</a></li>
+<li class="chapter" data-level="11.6" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#step-4-two-observers-one-animal"><i class="fa fa-check"></i><b>11.6</b> Step 4: Two observers, one animal</a></li>
+<li class="chapter" data-level="11.7" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#step-5-enter-your-data"><i class="fa fa-check"></i><b>11.7</b> Step 5: Enter your data</a></li>
+<li class="chapter" data-level="11.8" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#analysis-1"><i class="fa fa-check"></i><b>11.8</b> Analysis</a></li>
+<li class="chapter" data-level="11.9" data-path="behavioral-ecology-watching-animals-on-purpose.html"><a href="behavioral-ecology-watching-animals-on-purpose.html#assignment-8"><i class="fa fa-check"></i><b>11.9</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="natural-selection.html"><a href="natural-selection.html"><i class="fa fa-check"></i><b>12</b> Natural selection</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="natural-selection.html"><a href="natural-selection.html#background-4"><i class="fa fa-check"></i><b>12.1</b> Background</a></li>
+<li class="chapter" data-level="12.2" data-path="natural-selection.html"><a href="natural-selection.html#downloads-for-this-class-1"><i class="fa fa-check"></i><b>12.2</b> Downloads for this class</a></li>
+<li class="chapter" data-level="12.3" data-path="natural-selection.html"><a href="natural-selection.html#objectives-7"><i class="fa fa-check"></i><b>12.3</b> Objectives</a></li>
+<li class="chapter" data-level="12.4" data-path="natural-selection.html"><a href="natural-selection.html#research-question"><i class="fa fa-check"></i><b>12.4</b> Research question:</a></li>
+<li class="chapter" data-level="12.5" data-path="natural-selection.html"><a href="natural-selection.html#methods"><i class="fa fa-check"></i><b>12.5</b> Methods</a></li>
+<li class="chapter" data-level="12.6" data-path="natural-selection.html"><a href="natural-selection.html#what-to-turn-in"><i class="fa fa-check"></i><b>12.6</b> What to turn in</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html"><i class="fa fa-check"></i><b>13</b> Mark–recapture: how many are there?</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#downloads-for-this-lab-9"><i class="fa fa-check"></i><b>13.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="13.1" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#objectives-8"><i class="fa fa-check"></i><b>13.1</b> Objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#the-idea"><i class="fa fa-check"></i><b>13.2</b> The idea</a></li>
+<li class="chapter" data-level="13.3" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#the-four-assumptions"><i class="fa fa-check"></i><b>13.3</b> The four assumptions</a></li>
+<li class="chapter" data-level="13.4" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#track-a-the-bag-indoor-and-you-find-out-the-truth"><i class="fa fa-check"></i><b>13.4</b> Track A — The bag (indoor, and you find out the truth)</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#step-1-sample-and-mark"><i class="fa fa-check"></i><b>13.4.1</b> Step 1: Sample and mark</a></li>
+<li class="chapter" data-level="13.4.2" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#step-2-recapture"><i class="fa fa-check"></i><b>13.4.2</b> Step 2: Recapture</a></li>
+<li class="chapter" data-level="13.4.3" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#step-3-do-it-four-more-times"><i class="fa fa-check"></i><b>13.4.3</b> Step 3: Do it four more times</a></li>
+<li class="chapter" data-level="13.4.4" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#step-4-break-it-on-purpose"><i class="fa fa-check"></i><b>13.4.4</b> Step 4: Break it on purpose</a></li>
+<li class="chapter" data-level="13.4.5" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#step-5-the-reveal"><i class="fa fa-check"></i><b>13.4.5</b> Step 5: The reveal</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#track-b-isopods-under-cover-boards-outdoor"><i class="fa fa-check"></i><b>13.5</b> Track B — Isopods under cover boards (outdoor)</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#day-1-mark"><i class="fa fa-check"></i><b>13.5.1</b> Day 1 — Mark</a></li>
+<li class="chapter" data-level="13.5.2" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#day-2-recapture"><i class="fa fa-check"></i><b>13.5.2</b> Day 2 — Recapture</a></li>
+<li class="chapter" data-level="13.5.3" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#handling-rules"><i class="fa fa-check"></i><b>13.5.3</b> Handling rules</a></li>
+<li class="chapter" data-level="13.5.4" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#which-assumptions-are-actually-at-risk-here"><i class="fa fa-check"></i><b>13.5.4</b> Which assumptions are actually at risk here</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#analysis-2"><i class="fa fa-check"></i><b>13.6</b> Analysis</a></li>
+<li class="chapter" data-level="13.7" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#assignment-9"><i class="fa fa-check"></i><b>13.7</b> Assignment</a></li>
+<li class="chapter" data-level="13.8" data-path="markrecapture-how-many-are-there.html"><a href="markrecapture-how-many-are-there.html#sources-3"><i class="fa fa-check"></i><b>13.8</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html"><i class="fa fa-check"></i><b>14</b> Population structure and demography</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#choosing-a-track"><i class="fa fa-check"></i><b>14.1</b> Choosing a track</a></li>
+<li class="chapter" data-level="14.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#background-5"><i class="fa fa-check"></i><b>14.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#substituting-structure-for-time"><i class="fa fa-check"></i><b>14.2.1</b> Substituting structure for time</a></li>
+<li class="chapter" data-level="14.2.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#the-static-life-table-and-its-assumption"><i class="fa fa-check"></i><b>14.2.2</b> The static life table, and its assumption</a></li>
+<li class="chapter" data-level="14.2.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#survivorship-curves"><i class="fa fa-check"></i><b>14.2.3</b> Survivorship curves</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-a-campus-ponderosa"><i class="fa fa-check"></i><b>14.3</b> Track A — Campus ponderosa</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#downloads-for-this-lab-10"><i class="fa fa-check"></i><b>14.3.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="14.3.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#objectives-9"><i class="fa fa-check"></i><b>14.3.2</b> Objectives</a></li>
+<li class="chapter" data-level="14.3.3" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#materials-3"><i class="fa fa-check"></i><b>14.3.3</b> Materials</a></li>
+<li class="chapter" data-level="14.3.4" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#procedure-3"><i class="fa fa-check"></i><b>14.3.4</b> Procedure</a></li>
+<li class="chapter" data-level="14.3.5" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#recording-your-data-1"><i class="fa fa-check"></i><b>14.3.5</b> Recording your data</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-b-centennial-forest-extension"><i class="fa fa-check"></i><b>14.4</b> Track B — Centennial Forest extension</a></li>
+<li class="chapter" data-level="14.5" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#track-c-virtual-cemetery-indoor-fallback"><i class="fa fa-check"></i><b>14.5</b> Track C — Virtual cemetery (indoor fallback)</a></li>
+<li class="chapter" data-level="14.6" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#analysis-3"><i class="fa fa-check"></i><b>14.6</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#one-setting-you-must-get-right"><i class="fa fa-check"></i><b>14.6.1</b> One setting you must get right</a></li>
+<li class="chapter" data-level="14.6.2" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#running-the-script"><i class="fa fa-check"></i><b>14.6.2</b> Running the script</a></li>
+</ul></li>
+<li class="chapter" data-level="14.7" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#assignment-10"><i class="fa fa-check"></i><b>14.7</b> Assignment</a></li>
+<li class="chapter" data-level="14.8" data-path="population-structure-and-demography.html"><a href="population-structure-and-demography.html#acknowledgements"><i class="fa fa-check"></i><b>14.8</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html"><i class="fa fa-check"></i><b>15</b> Plant population biology: matrix models and viability</a>
+<ul>
+<li class="chapter" data-level="15.0.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#downloads-for-this-lab-11"><i class="fa fa-check"></i><b>15.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="15.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#objectives-10"><i class="fa fa-check"></i><b>15.1</b> Objectives</a></li>
+<li class="chapter" data-level="15.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#background-6"><i class="fa fa-check"></i><b>15.2</b> Background</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#why-not-just-count"><i class="fa fa-check"></i><b>15.2.1</b> Why not just count?</a></li>
+<li class="chapter" data-level="15.2.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#stages-not-ages"><i class="fa fa-check"></i><b>15.2.2</b> Stages, not ages</a></li>
+<li class="chapter" data-level="15.2.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#the-projection-matrix"><i class="fa fa-check"></i><b>15.2.3</b> The projection matrix</a></li>
+<li class="chapter" data-level="15.2.4" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#lambda-again"><i class="fa fa-check"></i><b>15.2.4</b> Lambda, again</a></li>
+<li class="chapter" data-level="15.2.5" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#elasticity-which-rate-matters-most"><i class="fa fa-check"></i><b>15.2.5</b> Elasticity: which rate matters most</a></li>
+<li class="chapter" data-level="15.2.6" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#stochasticity-and-why-a-single-lambda-is-not-enough"><i class="fa fa-check"></i><b>15.2.6</b> Stochasticity, and why a single lambda is not enough</a></li>
+<li class="chapter" data-level="15.2.7" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#quasi-extinction"><i class="fa fa-check"></i><b>15.2.7</b> Quasi-extinction</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-1-field-census"><i class="fa fa-check"></i><b>15.3</b> Part 1 — Field census</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#materials-4"><i class="fa fa-check"></i><b>15.3.1</b> Materials</a></li>
+<li class="chapter" data-level="15.3.2" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#procedure-4"><i class="fa fa-check"></i><b>15.3.2</b> Procedure</a></li>
+<li class="chapter" data-level="15.3.3" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#the-problem-of-year-one"><i class="fa fa-check"></i><b>15.3.3</b> The problem of year one</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-2-building-the-matrix-by-hand"><i class="fa fa-check"></i><b>15.4</b> Part 2 — Building the matrix by hand</a></li>
+<li class="chapter" data-level="15.5" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#part-3-analysis-in-r"><i class="fa fa-check"></i><b>15.5</b> Part 3 — Analysis in R</a></li>
+<li class="chapter" data-level="15.6" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#assignment-11"><i class="fa fa-check"></i><b>15.6</b> Assignment</a></li>
+<li class="chapter" data-level="15.7" data-path="plant-population-biology-matrix-models-and-viability.html"><a href="plant-population-biology-matrix-models-and-viability.html#sources-4"><i class="fa fa-check"></i><b>15.7</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="population-ecology.html"><a href="population-ecology.html"><i class="fa fa-check"></i><b>16</b> Population ecology</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="population-ecology.html"><a href="population-ecology.html#choosing-a-track-1"><i class="fa fa-check"></i><b>16.1</b> Choosing a track</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="population-ecology.html"><a href="population-ecology.html#downloads-for-this-lab-12"><i class="fa fa-check"></i><b>16.1.1</b> Downloads for this lab</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="population-ecology.html"><a href="population-ecology.html#track-a-daphnia-microcosms"><i class="fa fa-check"></i><b>16.2</b> Track A — <em>Daphnia</em> microcosms</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="population-ecology.html"><a href="population-ecology.html#lab-set-up-week-1"><i class="fa fa-check"></i><b>16.2.1</b> Lab set-up (week 1)</a></li>
+<li class="chapter" data-level="16.2.2" data-path="population-ecology.html"><a href="population-ecology.html#maintaining-your-microcosms-week-2"><i class="fa fa-check"></i><b>16.2.2</b> Maintaining your microcosms (week 2)</a></li>
+<li class="chapter" data-level="16.2.3" data-path="population-ecology.html"><a href="population-ecology.html#final-counts-week-3"><i class="fa fa-check"></i><b>16.2.3</b> Final counts (week 3)</a></li>
+<li class="chapter" data-level="16.2.4" data-path="population-ecology.html"><a href="population-ecology.html#ethics-and-disposal"><i class="fa fa-check"></i><b>16.2.4</b> Ethics and disposal</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="population-ecology.html"><a href="population-ecology.html#track-b-duckweed-microcosms"><i class="fa fa-check"></i><b>16.3</b> Track B — Duckweed microcosms</a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="population-ecology.html"><a href="population-ecology.html#lab-set-up-week-1-1"><i class="fa fa-check"></i><b>16.3.1</b> Lab set-up (week 1)</a></li>
+<li class="chapter" data-level="16.3.2" data-path="population-ecology.html"><a href="population-ecology.html#objectives-11"><i class="fa fa-check"></i><b>16.3.2</b> Objectives</a></li>
+<li class="chapter" data-level="16.3.3" data-path="population-ecology.html"><a href="population-ecology.html#materials-5"><i class="fa fa-check"></i><b>16.3.3</b> Materials</a></li>
+<li class="chapter" data-level="16.3.4" data-path="population-ecology.html"><a href="population-ecology.html#why-density-and-not-just-how-many-plants"><i class="fa fa-check"></i><b>16.3.4</b> Why density, and not just “how many plants”</a></li>
+<li class="chapter" data-level="16.3.5" data-path="population-ecology.html"><a href="population-ecology.html#procedure-5"><i class="fa fa-check"></i><b>16.3.5</b> Procedure</a></li>
+<li class="chapter" data-level="16.3.6" data-path="population-ecology.html"><a href="population-ecology.html#maintaining-your-microcosms-and-measuring-population-growth-week-2"><i class="fa fa-check"></i><b>16.3.6</b> Maintaining your microcosms and measuring population growth (week 2)</a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="population-ecology.html"><a href="population-ecology.html#track-c-two-species-in-one-cup-optional-extension"><i class="fa fa-check"></i><b>16.4</b> Track C — Two species in one cup (optional extension)</a>
+<ul>
+<li class="chapter" data-level="16.4.1" data-path="population-ecology.html"><a href="population-ecology.html#the-design"><i class="fa fa-check"></i><b>16.4.1</b> The design</a></li>
+<li class="chapter" data-level="16.4.2" data-path="population-ecology.html"><a href="population-ecology.html#the-second-species"><i class="fa fa-check"></i><b>16.4.2</b> The second species</a></li>
+<li class="chapter" data-level="16.4.3" data-path="population-ecology.html"><a href="population-ecology.html#measuring-two-species-in-one-cup"><i class="fa fa-check"></i><b>16.4.3</b> Measuring two species in one cup</a></li>
+<li class="chapter" data-level="16.4.4" data-path="population-ecology.html"><a href="population-ecology.html#recording-it"><i class="fa fa-check"></i><b>16.4.4</b> Recording it</a></li>
+<li class="chapter" data-level="16.4.5" data-path="population-ecology.html"><a href="population-ecology.html#what-the-numbers-mean"><i class="fa fa-check"></i><b>16.4.5</b> What the numbers mean</a></li>
+<li class="chapter" data-level="16.4.6" data-path="population-ecology.html"><a href="population-ecology.html#downloads-for-track-c"><i class="fa fa-check"></i><b>16.4.6</b> Downloads for Track C</a></li>
+</ul></li>
+<li class="chapter" data-level="16.5" data-path="population-ecology.html"><a href="population-ecology.html#final-data-collection-and-analysis"><i class="fa fa-check"></i><b>16.5</b> Final data collection and analysis</a>
+<ul>
+<li class="chapter" data-level="16.5.1" data-path="population-ecology.html"><a href="population-ecology.html#microcosm-studies-of-population-dynamics"><i class="fa fa-check"></i><b>16.5.1</b> Microcosm studies of population dynamics</a></li>
+<li class="chapter" data-level="16.5.2" data-path="population-ecology.html"><a href="population-ecology.html#mortality-is-a-measurement-not-a-failure"><i class="fa fa-check"></i><b>16.5.2</b> Mortality is a measurement, not a failure</a></li>
+<li class="chapter" data-level="16.5.3" data-path="population-ecology.html"><a href="population-ecology.html#population-dynamics-basics"><i class="fa fa-check"></i><b>16.5.3</b> Population dynamics basics</a></li>
+</ul></li>
+<li class="chapter" data-level="16.6" data-path="population-ecology.html"><a href="population-ecology.html#assignment-12"><i class="fa fa-check"></i><b>16.6</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="invasive-species.html"><a href="invasive-species.html"><i class="fa fa-check"></i><b>17</b> Invasive species</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="invasive-species.html"><a href="invasive-species.html#introduction-2"><i class="fa fa-check"></i><b>17.1</b> Introduction</a></li>
+<li class="chapter" data-level="17.2" data-path="invasive-species.html"><a href="invasive-species.html#downloads-for-this-lab-13"><i class="fa fa-check"></i><b>17.2</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="17.3" data-path="invasive-species.html"><a href="invasive-species.html#objectives-12"><i class="fa fa-check"></i><b>17.3</b> Objectives</a></li>
+<li class="chapter" data-level="17.4" data-path="invasive-species.html"><a href="invasive-species.html#materials-6"><i class="fa fa-check"></i><b>17.4</b> Materials</a></li>
+<li class="chapter" data-level="17.5" data-path="invasive-species.html"><a href="invasive-species.html#procedure-6"><i class="fa fa-check"></i><b>17.5</b> Procedure</a>
+<ul>
+<li class="chapter" data-level="17.5.1" data-path="invasive-species.html"><a href="invasive-species.html#hypothesis-development"><i class="fa fa-check"></i><b>17.5.1</b> Hypothesis development</a></li>
+<li class="chapter" data-level="17.5.2" data-path="invasive-species.html"><a href="invasive-species.html#nonnative-species-density-quadrats"><i class="fa fa-check"></i><b>17.5.2</b> Nonnative species density quadrats</a></li>
+<li class="chapter" data-level="17.5.3" data-path="invasive-species.html"><a href="invasive-species.html#analyses"><i class="fa fa-check"></i><b>17.5.3</b> Analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="17.6" data-path="invasive-species.html"><a href="invasive-species.html#assignment-13"><i class="fa fa-check"></i><b>17.6</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html"><i class="fa fa-check"></i><b>18</b> Basic statistical testing</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#a-short-statistical-review"><i class="fa fa-check"></i><b>18.1</b> A short statistical review</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#what-can-statistics-tell-us"><i class="fa fa-check"></i><b>18.1.1</b> What can statistics tell us?</a></li>
+<li class="chapter" data-level="18.1.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#sampling-populations"><i class="fa fa-check"></i><b>18.1.2</b> Sampling populations</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#hypothesis-testing-review"><i class="fa fa-check"></i><b>18.2</b> Hypothesis testing review</a></li>
+<li class="chapter" data-level="18.3" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#downloads-for-this-module"><i class="fa fa-check"></i><b>18.3</b> Downloads for this module</a></li>
+<li class="chapter" data-level="18.4" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#objectives-13"><i class="fa fa-check"></i><b>18.4</b> Objectives</a></li>
+<li class="chapter" data-level="18.5" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#tailed-tests"><i class="fa fa-check"></i><b>18.5</b> Tailed tests</a>
+<ul>
+<li class="chapter" data-level="18.5.1" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#generate-hypotheses"><i class="fa fa-check"></i><b>18.5.1</b> Generate hypotheses</a></li>
+<li class="chapter" data-level="18.5.2" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#calculate-a-test-statistic"><i class="fa fa-check"></i><b>18.5.2</b> Calculate a test statistic</a></li>
+<li class="chapter" data-level="18.5.3" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#determine-the-p-value"><i class="fa fa-check"></i><b>18.5.3</b> Determine the p-value</a></li>
+</ul></li>
+<li class="chapter" data-level="18.6" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#drawing-conclusions-from-statistics"><i class="fa fa-check"></i><b>18.6</b> Drawing conclusions from statistics</a></li>
+<li class="chapter" data-level="18.7" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#reporting-results"><i class="fa fa-check"></i><b>18.7</b> Reporting results</a></li>
+<li class="chapter" data-level="18.8" data-path="basic-statistical-testing.html"><a href="basic-statistical-testing.html#assignment-14"><i class="fa fa-check"></i><b>18.8</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html"><i class="fa fa-check"></i><b>19</b> Selecting statistical tests</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#a-foray-into-statistics"><i class="fa fa-check"></i><b>19.1</b> A foray into statistics</a></li>
+<li class="chapter" data-level="19.2" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#pick-the-explanatory-and-response-variable"><i class="fa fa-check"></i><b>19.2</b> Pick the explanatory and response variable</a></li>
+<li class="chapter" data-level="19.3" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#variable-types-refresher"><i class="fa fa-check"></i><b>19.3</b> Variable types refresher</a></li>
+<li class="chapter" data-level="19.4" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#more-examples"><i class="fa fa-check"></i><b>19.4</b> More examples</a></li>
+<li class="chapter" data-level="19.5" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#the-decision-matrix"><i class="fa fa-check"></i><b>19.5</b> The decision matrix</a></li>
+<li class="chapter" data-level="19.6" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#a-note-on-assumptions"><i class="fa fa-check"></i><b>19.6</b> A note on assumptions</a></li>
+<li class="chapter" data-level="19.7" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#learning-goals"><i class="fa fa-check"></i><b>19.7</b> Learning goals</a></li>
+<li class="chapter" data-level="19.8" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#downloads-for-this-class-2"><i class="fa fa-check"></i><b>19.8</b> Downloads for this class</a></li>
+<li class="chapter" data-level="19.9" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#in-class-practice"><i class="fa fa-check"></i><b>19.9</b> In-class practice</a></li>
+<li class="chapter" data-level="19.10" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#assignment-choosing-and-running-the-right-test"><i class="fa fa-check"></i><b>19.10</b> Assignment: Choosing and Running the Right Test</a>
+<ul>
+<li class="chapter" data-level="19.10.1" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#deliverables-1"><i class="fa fa-check"></i><b>19.10.1</b> Deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="19.11" data-path="selecting-statistical-tests.html"><a href="selecting-statistical-tests.html#statistical-analyses-for-your-species-interaction-lab"><i class="fa fa-check"></i><b>19.11</b> Statistical analyses for your species interaction lab</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="species-interactions-ii-analysis-and-poster.html"><a href="species-interactions-ii-analysis-and-poster.html"><i class="fa fa-check"></i><b>20</b> Species interactions II: analysis and poster</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="species-interactions-ii-analysis-and-poster.html"><a href="species-interactions-ii-analysis-and-poster.html#final-measurements"><i class="fa fa-check"></i><b>20.1</b> Final measurements</a></li>
+<li class="chapter" data-level="20.2" data-path="species-interactions-ii-analysis-and-poster.html"><a href="species-interactions-ii-analysis-and-poster.html#analyzing-and-visualizing-your-data"><i class="fa fa-check"></i><b>20.2</b> Analyzing and visualizing your data</a></li>
+<li class="chapter" data-level="20.3" data-path="species-interactions-ii-analysis-and-poster.html"><a href="species-interactions-ii-analysis-and-poster.html#final-week"><i class="fa fa-check"></i><b>20.3</b> Final week</a>
+<ul>
+<li class="chapter" data-level="20.3.1" data-path="species-interactions-ii-analysis-and-poster.html"><a href="species-interactions-ii-analysis-and-poster.html#downloads"><i class="fa fa-check"></i><b>20.3.1</b> Downloads</a></li>
+<li class="chapter" data-level="20.3.2" data-path="species-interactions-ii-analysis-and-poster.html"><a href="species-interactions-ii-analysis-and-poster.html#turn-in"><i class="fa fa-check"></i><b>20.3.2</b> Turn-in</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="20" data-path="labreport.html"><a href="labreport.html"><i class="fa fa-check"></i><b>20</b> Written lab report guidelines</a>
+<li class="chapter" data-level="21" data-path="species-diversity.html"><a href="species-diversity.html"><i class="fa fa-check"></i><b>21</b> Species diversity</a>
 <ul>
-<li class="chapter" data-level="20.1" data-path="labreport.html"><a href="labreport.html#general-rules"><i class="fa fa-check"></i><b>20.1</b> General rules</a>
-<ul>
-<li class="chapter" data-level="20.1.1" data-path="labreport.html"><a href="labreport.html#needed-components"><i class="fa fa-check"></i><b>20.1.1</b> Needed components</a></li>
+<li class="chapter" data-level="21.1" data-path="species-diversity.html"><a href="species-diversity.html#introduction-3"><i class="fa fa-check"></i><b>21.1</b> Introduction</a></li>
+<li class="chapter" data-level="21.2" data-path="species-diversity.html"><a href="species-diversity.html#week-1-1"><i class="fa fa-check"></i><b>21.2</b> Week 1</a></li>
+<li class="chapter" data-level="21.3" data-path="species-diversity.html"><a href="species-diversity.html#downloads-for-this-lab-14"><i class="fa fa-check"></i><b>21.3</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="21.4" data-path="species-diversity.html"><a href="species-diversity.html#objectives-14"><i class="fa fa-check"></i><b>21.4</b> Objectives</a></li>
+<li class="chapter" data-level="21.5" data-path="species-diversity.html"><a href="species-diversity.html#methods-1"><i class="fa fa-check"></i><b>21.5</b> Methods</a></li>
+<li class="chapter" data-level="21.6" data-path="species-diversity.html"><a href="species-diversity.html#turn-in-week-1-1"><i class="fa fa-check"></i><b>21.6</b> Turn-in week 1</a></li>
+<li class="chapter" data-level="21.7" data-path="species-diversity.html"><a href="species-diversity.html#week-2"><i class="fa fa-check"></i><b>21.7</b> Week 2</a></li>
+<li class="chapter" data-level="21.8" data-path="species-diversity.html"><a href="species-diversity.html#downloads-for-this-lab-15"><i class="fa fa-check"></i><b>21.8</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="21.9" data-path="species-diversity.html"><a href="species-diversity.html#objectives-15"><i class="fa fa-check"></i><b>21.9</b> Objectives</a></li>
+<li class="chapter" data-level="21.10" data-path="species-diversity.html"><a href="species-diversity.html#methods-2"><i class="fa fa-check"></i><b>21.10</b> Methods</a></li>
+<li class="chapter" data-level="21.11" data-path="species-diversity.html"><a href="species-diversity.html#turn-in-week-2"><i class="fa fa-check"></i><b>21.11</b> Turn-in week 2</a></li>
+<li class="chapter" data-level="21.12" data-path="species-diversity.html"><a href="species-diversity.html#acknowledgements-1"><i class="fa fa-check"></i><b>21.12</b> Acknowledgements</a></li>
 </ul></li>
-<li class="chapter" data-level="20.2" data-path="labreport.html"><a href="labreport.html#components-and-instructions"><i class="fa fa-check"></i><b>20.2</b> Components and instructions</a>
+<li class="chapter" data-level="22" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html"><i class="fa fa-check"></i><b>22</b> Litter decomposition: measuring an ecosystem process</a>
 <ul>
-<li class="chapter" data-level="20.2.1" data-path="labreport.html"><a href="labreport.html#abstract-write-last"><i class="fa fa-check"></i><b>20.2.1</b> Abstract (write last)</a></li>
-<li class="chapter" data-level="20.2.2" data-path="labreport.html"><a href="labreport.html#introduction-write-after-results"><i class="fa fa-check"></i><b>20.2.2</b> Introduction (write after results)</a></li>
-<li class="chapter" data-level="20.2.3" data-path="labreport.html"><a href="labreport.html#methods-analysis-write-first"><i class="fa fa-check"></i><b>20.2.3</b> Methods &amp; Analysis (write first)</a></li>
-<li class="chapter" data-level="20.2.4" data-path="labreport.html"><a href="labreport.html#results-write-second"><i class="fa fa-check"></i><b>20.2.4</b> Results (write second)</a></li>
-<li class="chapter" data-level="20.2.5" data-path="labreport.html"><a href="labreport.html#discussion-conclusion-write-after-results"><i class="fa fa-check"></i><b>20.2.5</b> Discussion &amp; Conclusion (write after results)</a></li>
-<li class="chapter" data-level="20.2.6" data-path="labreport.html"><a href="labreport.html#tables-figures"><i class="fa fa-check"></i><b>20.2.6</b> Tables &amp; Figures</a></li>
-<li class="chapter" data-level="20.2.7" data-path="labreport.html"><a href="labreport.html#literature-cited"><i class="fa fa-check"></i><b>20.2.7</b> Literature Cited</a></li>
-</ul></li>
-<li class="chapter" data-level="20.3" data-path="labreport.html"><a href="labreport.html#lab-report-checklist"><i class="fa fa-check"></i><b>20.3</b> Lab report checklist</a></li>
-<li class="chapter" data-level="20.4" data-path="labreport.html"><a href="labreport.html#the-rubric"><i class="fa fa-check"></i><b>20.4</b> The rubric</a></li>
-</ul></li>
-<li class="chapter" data-level="21" data-path="env-226-lab-exercises.html"><a href="env-226-lab-exercises.html"><i class="fa fa-check"></i><b>21</b> ENV 226 Lab Exercises</a>
+<li class="chapter" data-level="22.0.1" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#downloads-for-this-lab-16"><i class="fa fa-check"></i><b>22.0.1</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="22.1" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#objectives-16"><i class="fa fa-check"></i><b>22.1</b> Objectives</a></li>
+<li class="chapter" data-level="22.2" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#the-model"><i class="fa fa-check"></i><b>22.2</b> The model</a></li>
+<li class="chapter" data-level="22.3" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#part-1-choose-your-factor"><i class="fa fa-check"></i><b>22.3</b> Part 1 — Choose your factor</a></li>
+<li class="chapter" data-level="22.4" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#part-2-prepare-the-bags"><i class="fa fa-check"></i><b>22.4</b> Part 2 — Prepare the bags</a>
 <ul>
-<li class="chapter" data-level="21.1" data-path="env-226-lab-exercises.html"><a href="env-226-lab-exercises.html#conclusions"><i class="fa fa-check"></i><b>21.1</b> Conclusions</a></li>
+<li class="chapter" data-level="22.4.1" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#step-1-collect-and-air-dry-the-litter"><i class="fa fa-check"></i><b>22.4.1</b> Step 1: Collect and air-dry the litter</a></li>
+<li class="chapter" data-level="22.4.2" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#step-2-work-out-the-air-dry-to-oven-dry-correction"><i class="fa fa-check"></i><b>22.4.2</b> Step 2: Work out the air-dry to oven-dry correction</a></li>
+<li class="chapter" data-level="22.4.3" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#step-3-fill-and-label"><i class="fa fa-check"></i><b>22.4.3</b> Step 3: Fill and label</a></li>
+<li class="chapter" data-level="22.4.4" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#step-4-add-the-standard-substrate"><i class="fa fa-check"></i><b>22.4.4</b> Step 4: Add the standard substrate</a></li>
+</ul></li>
+<li class="chapter" data-level="22.5" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#part-3-deploy"><i class="fa fa-check"></i><b>22.5</b> Part 3 — Deploy</a></li>
+<li class="chapter" data-level="22.6" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#part-4-retrieve-and-weigh"><i class="fa fa-check"></i><b>22.6</b> Part 4 — Retrieve and weigh</a></li>
+<li class="chapter" data-level="22.7" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#analysis-4"><i class="fa fa-check"></i><b>22.7</b> Analysis</a></li>
+<li class="chapter" data-level="22.8" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#assignment-15"><i class="fa fa-check"></i><b>22.8</b> Assignment</a></li>
+<li class="chapter" data-level="22.9" data-path="litter-decomposition-measuring-an-ecosystem-process.html"><a href="litter-decomposition-measuring-an-ecosystem-process.html#sources-5"><i class="fa fa-check"></i><b>22.9</b> Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="water-quality.html"><a href="water-quality.html"><i class="fa fa-check"></i><b>23</b> Water quality</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="water-quality.html"><a href="water-quality.html#background-7"><i class="fa fa-check"></i><b>23.1</b> Background</a>
+<ul>
+<li class="chapter" data-level="23.1.1" data-path="water-quality.html"><a href="water-quality.html#history-of-francis-short-pond"><i class="fa fa-check"></i><b>23.1.1</b> History of Francis Short Pond</a></li>
+<li class="chapter" data-level="23.1.2" data-path="water-quality.html"><a href="water-quality.html#rio-de-flag-flood-control-project"><i class="fa fa-check"></i><b>23.1.2</b> Rio de Flag Flood Control Project</a></li>
+</ul></li>
+<li class="chapter" data-level="23.2" data-path="water-quality.html"><a href="water-quality.html#key-water-quality-terms-and-concepts"><i class="fa fa-check"></i><b>23.2</b> Key Water Quality Terms and Concepts</a></li>
+<li class="chapter" data-level="23.3" data-path="water-quality.html"><a href="water-quality.html#water-quality-monitoring"><i class="fa fa-check"></i><b>23.3</b> Water Quality Monitoring</a></li>
+<li class="chapter" data-level="23.4" data-path="water-quality.html"><a href="water-quality.html#downloads-for-this-lab-17"><i class="fa fa-check"></i><b>23.4</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="23.5" data-path="water-quality.html"><a href="water-quality.html#hypothesis-generation"><i class="fa fa-check"></i><b>23.5</b> Hypothesis generation</a></li>
+<li class="chapter" data-level="23.6" data-path="water-quality.html"><a href="water-quality.html#methods-3"><i class="fa fa-check"></i><b>23.6</b> Methods</a>
+<ul>
+<li class="chapter" data-level="23.6.1" data-path="water-quality.html"><a href="water-quality.html#record-and-compare-your-results"><i class="fa fa-check"></i><b>23.6.1</b> Record and compare your results</a></li>
+</ul></li>
+<li class="chapter" data-level="23.7" data-path="water-quality.html"><a href="water-quality.html#assignment-16"><i class="fa fa-check"></i><b>23.7</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html"><i class="fa fa-check"></i><b>24</b> Species Distribution Modeling</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#introduction-4"><i class="fa fa-check"></i><b>24.1</b> Introduction</a></li>
+<li class="chapter" data-level="24.2" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#a-brief-review-of-niche-theory"><i class="fa fa-check"></i><b>24.2</b> A brief review of niche theory</a></li>
+<li class="chapter" data-level="24.3" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#downloads-for-this-lab-18"><i class="fa fa-check"></i><b>24.3</b> Downloads for this lab</a></li>
+<li class="chapter" data-level="24.4" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#objectives-17"><i class="fa fa-check"></i><b>24.4</b> Objectives</a></li>
+<li class="chapter" data-level="24.5" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#methods-4"><i class="fa fa-check"></i><b>24.5</b> Methods</a>
+<ul>
+<li class="chapter" data-level="24.5.1" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#lets-get-modeling"><i class="fa fa-check"></i><b>24.5.1</b> Let’s get modeling</a></li>
+<li class="chapter" data-level="24.5.2" data-path="species-distribution-modeling.html"><a href="species-distribution-modeling.html#run-the-r-code"><i class="fa fa-check"></i><b>24.5.2</b> Run the R code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="labreport.html"><a href="labreport.html"><i class="fa fa-check"></i><b>25</b> Written lab report guidelines</a>
+<ul>
+<li class="chapter" data-level="25.1" data-path="labreport.html"><a href="labreport.html#general-rules"><i class="fa fa-check"></i><b>25.1</b> General rules</a>
+<ul>
+<li class="chapter" data-level="25.1.1" data-path="labreport.html"><a href="labreport.html#needed-components"><i class="fa fa-check"></i><b>25.1.1</b> Needed components</a></li>
+</ul></li>
+<li class="chapter" data-level="25.2" data-path="labreport.html"><a href="labreport.html#components-and-instructions"><i class="fa fa-check"></i><b>25.2</b> Components and instructions</a>
+<ul>
+<li class="chapter" data-level="25.2.1" data-path="labreport.html"><a href="labreport.html#abstract-write-last"><i class="fa fa-check"></i><b>25.2.1</b> Abstract (write last)</a></li>
+<li class="chapter" data-level="25.2.2" data-path="labreport.html"><a href="labreport.html#introduction-write-after-results"><i class="fa fa-check"></i><b>25.2.2</b> Introduction (write after results)</a></li>
+<li class="chapter" data-level="25.2.3" data-path="labreport.html"><a href="labreport.html#methods-analysis-write-first"><i class="fa fa-check"></i><b>25.2.3</b> Methods &amp; Analysis (write first)</a></li>
+<li class="chapter" data-level="25.2.4" data-path="labreport.html"><a href="labreport.html#results-write-second"><i class="fa fa-check"></i><b>25.2.4</b> Results (write second)</a></li>
+<li class="chapter" data-level="25.2.5" data-path="labreport.html"><a href="labreport.html#discussion-conclusion-write-after-results"><i class="fa fa-check"></i><b>25.2.5</b> Discussion &amp; Conclusion (write after results)</a></li>
+<li class="chapter" data-level="25.2.6" data-path="labreport.html"><a href="labreport.html#tables-figures"><i class="fa fa-check"></i><b>25.2.6</b> Tables &amp; Figures</a></li>
+<li class="chapter" data-level="25.2.7" data-path="labreport.html"><a href="labreport.html#literature-cited"><i class="fa fa-check"></i><b>25.2.7</b> Literature Cited</a></li>
+</ul></li>
+<li class="chapter" data-level="25.3" data-path="labreport.html"><a href="labreport.html#lab-report-checklist"><i class="fa fa-check"></i><b>25.3</b> Lab report checklist</a></li>
+<li class="chapter" data-level="25.4" data-path="labreport.html"><a href="labreport.html#the-rubric"><i class="fa fa-check"></i><b>25.4</b> The rubric</a></li>
+</ul></li>
+<li class="chapter" data-level="26" data-path="env-226-lab-exercises.html"><a href="env-226-lab-exercises.html"><i class="fa fa-check"></i><b>26</b> ENV 226 Lab Exercises</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="env-226-lab-exercises.html"><a href="env-226-lab-exercises.html#conclusions"><i class="fa fa-check"></i><b>26.1</b> Conclusions</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -589,63 +725,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ecological-sampling" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Ecological sampling<a href="ecological-sampling.html#ecological-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ecological-sampling" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Ecological sampling<a href="ecological-sampling.html#ecological-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
 <p><strong>Skills this lab builds.</strong> <em>4DEE:</em> Ecology Practices → Fieldwork; Designing, conducting, and critiquing investigations. <em>BioSkills:</em> Process of Science → “Design controlled experiments, including plans for analyzing the data”; “Describe sources of error and uncertainty in data.”</p>
 </blockquote>
-<div id="background" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Background<a href="ecological-sampling.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p><strong>This is where you stop following a protocol and start writing one.</strong> In the tree walk you identified what was in front of you. In the field methods lab you ran a monitoring protocol that somebody else designed, down to the transect angles and the number of points. Both times, the hard decisions — where to put the plot, how many to run, what counts as a measurement — had already been made for you. This lab is where you make them.</p>
+<p>That order is deliberate. It is very hard to design a sampling scheme before you have knelt on the ground with a tape and found out how long 150 points actually takes.</p>
+</blockquote>
+<div id="background-2" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Background<a href="ecological-sampling.html#background-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Ecology is the study of organisms and their relationship to the environment. With infinite time and capacity, we could measure every organism, every characteristic of the environment, every physiological function that affects the way an organism responds to the environment, and every gene that underlies those physiological functions in order to understand ecological systems. In practice, such detailed measurements are time-consuming and impractical. For that reason, we use statistics to account for the fact we are always missing information when we conduct ecological studies.</p>
 <p>In statistics, a <strong>population</strong> refers to the all units of the thing that you are interested in (i.e., all Suriname frogs, all species in a marshland, all grains of sand, all aspen leaves from a genotype found in southern Arizona). Note that the term ‘population’ in statistics differs from the term population in population ecology, where a population refers to a group of individuals in a particular area that interbreed. Statistics accounts for the fact that we never perfectly measure the ‘true population’ or the all units of interest. Luckily, by properly applying statistics, we can learn practically anything about almost any population using <strong>samples</strong>!</p>
 <p>A <strong>sample</strong> is a subset of the population that we measure to infer something about the true population. In order to avoid erroneous conclusions about the population, our sample must be <strong>representative</strong> of the population of interest and <strong>unbiased</strong>. As an example, imagine that you were interested in whether coat color in cats differed between house cats and feral cats. To select the house cat sample, you randomly select house numbers, visit the house and record coat color, thus collecting a random sample. However, to survey feral cats, you go to several cat colonies at night and record the first cat that you see, which are always white or tan. The sampling strategy for feral cats introduces bias, because darker cats are harder to see at night. This causes you to overestimate the number of light-coated feral cats, and underestimate dark-coated feral cats, resulting in the erroneous conclusion that a greater proportion of feral cats are light-colored compared to house cats. Experiments must be carefully planned to reduce bias.</p>
 <p><img src="images/05-ecologicalsampling/cat.jpeg" />
 We can conduct statistical analysis until the cats come home (ha!), but if your sample is biased, our results will always be meaningless. In the cat example, it was pretty obvious that the researcher was introducing bias, BUT it is REALLY easy to introduce bias in ecological and social research on accident! Imagine that you looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat’s claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. Let’s talk about several types of appropriate sampling strategies.</p>
 </div>
-<div id="sampling-approaches" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Sampling approaches<a href="ecological-sampling.html#sampling-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="random-sampling" class="section level3 hasAnchor" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Random sampling<a href="ecological-sampling.html#random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sampling-approaches" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Sampling approaches<a href="ecological-sampling.html#sampling-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="random-sampling" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Random sampling<a href="ecological-sampling.html#random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In order to reduce bias, researchers <strong>randomize</strong> sampling. <strong>Random sampling</strong> is when every item within the focal population has an equal chance of being selected. In research, random sampling can be applied to selecting experimental subjects, assigning individuals to treatments, or identifying plot locations. It is <strong>REALLY</strong> easy to introduce bias in ecological and social research on accident if you do not use a random sampling technique! Imagine that you are looking at fire effects on vegetative communities in the Sonoran. In high severity burn areas, there are thickets of cat’s claw (a pokey plant). Without proper field sampling protocols, it is very tempting to avoid establishing plots in the cat claw thickets, thus not capturing true differences in vegetation along burn severity gradients. In practice, researchers use number generators, like those on your phone, or within computer programs, like ArcGIS, to randomly place sampling points. Here, we’ve included a random number sheet to use to randomly array plots. A random number sheet contains random numbers that someone generated in advance to assist in the field.</p>
 <p>We can quickly and easily generate such a sample in R, using the sample function.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="ecological-sampling.html#cb45-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>##  [1]  74  50  98 100  86  76  84  46  17  62</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="ecological-sampling.html#cb47-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
-<span id="cb47-2"><a href="ecological-sampling.html#cb47-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
-<span id="cb47-3"><a href="ecological-sampling.html#cb47-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="ecological-sampling.html#cb58-1" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">10</span>, <span class="at">replace=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>##  [1] 26 32  7 27 42  5 70 16 24 99</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="ecological-sampling.html#cb60-1" tabindex="-1"></a><span class="co">#1:10000 = numbers to chose among </span></span>
+<span id="cb60-2"><a href="ecological-sampling.html#cb60-2" tabindex="-1"></a><span class="co">#number of random numbers you wish to generate</span></span>
+<span id="cb60-3"><a href="ecological-sampling.html#cb60-3" tabindex="-1"></a><span class="co">#to replace or not (in other words do you wish for the same number to be selected multiple times)</span></span></code></pre></div>
 </div>
-<div id="stratefied-random-sampling" class="section level3 hasAnchor" number="6.2.2">
-<h3><span class="header-section-number">6.2.2</span> Stratefied random sampling<a href="ecological-sampling.html#stratefied-random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="stratefied-random-sampling" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Stratefied random sampling<a href="ecological-sampling.html#stratefied-random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To make a sample representative of the population, you will want to capture the typical state of the population of interest. This is challenging, since prior to collecting data, you do not know the typical state of the population. With an understanding of ecology, however, and precisely describing your research question, you can improve the representation of your sample without a lot of specific a priori (beforehand) knowledge of the target population. One typical approach is referred to as <strong>stratified random sampling</strong>, in which you ensure that you are proportionately sampling from major habitat types or features. In the example in <strong>Fig. 1</strong>, a random sample of the study area overrepresents the forested habitat relative to the grassland habitat. To account for this, the researchers adjust the sampling technique, such that plot locations occur in both of the major habitats proportionally. Since grasslands make up 55% of the study area, 55% of the points would be randomly located in the grassland area. Since there are twenty plots, 11 are placed within grasslands (0.55*20). The remaining 9 plots are then randomly allotted to the forested habitat.</p>
 <p><img src="images/05-ecologicalsampling/StratefiedSamplingFig.png" />
 <strong>Figure 1.</strong> Random versus stratified sampling.</p>
 </div>
-<div id="gridded-random-sampling" class="section level3 hasAnchor" number="6.2.3">
-<h3><span class="header-section-number">6.2.3</span> Gridded random sampling<a href="ecological-sampling.html#gridded-random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gridded-random-sampling" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Gridded random sampling<a href="ecological-sampling.html#gridded-random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In complex, multi-species systems, another approach to improve coverage of random sampling is to randomly place plots within a grid (<strong>Fig. 2</strong>). This is to ensure that you capture species, which may have an array of distributions. <strong>Distribution</strong> in plant ecology refers to the spatial arrangement of a species or organisms across the landscape. Depending on system dynamics, species may be dispersed, randomly arrayed, or clumped, thus a gridded approach can help capture species, no matter their spatial orientation (<strong>Fig. 2</strong>).</p>
 <p><img src="images/05-ecologicalsampling/GriddedSamplingDesign.png" />
 <strong>Figure 2.</strong> Randomly placing plots within a gridded region helps maximize the likelihood to capture species dynamics in complex, multi-species systems, composed of species with a variety of spatial distributions.</p>
 </div>
-<div id="random-cluster-sampling" class="section level3 hasAnchor" number="6.2.4">
-<h3><span class="header-section-number">6.2.4</span> Random cluster sampling<a href="ecological-sampling.html#random-cluster-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="random-cluster-sampling" class="section level3 hasAnchor" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> Random cluster sampling<a href="ecological-sampling.html#random-cluster-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Random cluster sampling</strong> randomly select groups (aka clusters) within a population. This sampling design is used commonly in ecology, when we select random locations for plots, then measure all individuals within those plots. If for instance, we are interested in Ponderosa Pine growth rates on the Coconino National Forest, we would randomly assign points across Pondo habitat on the Coconino. At each point, we would set up a plot in which we measure Ponderosa Pines within an 11.71m radius plot. <strong>Why wouldn’t we just go out to a point and measure 1 tree to create a totally random sample?</strong> The plots are randomly assigned (yay!), but the trees within the plots are not <strong>independent</strong>. In other words, we might expect measures of trees within plot A to be more similar to each other than they are to trees within plot B, due to differences in microsite characteristics, genetic similarity among co-occurring trees, or site history (logging, fire). Luckily, we can account for this non-independence, as long as the plots are random!</p>
 </div>
 </div>
-<div id="plot-shapes-sizes-and-transects" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Plot shapes, sizes, and transects<a href="ecological-sampling.html#plot-shapes-sizes-and-transects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="plot-shapes-sizes-and-transects" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Plot shapes, sizes, and transects<a href="ecological-sampling.html#plot-shapes-sizes-and-transects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Deciding on the shape and size of your sampling unit depends on the species or feature that you are trying to measure. <strong>Plots</strong> can be <em>ANY</em> shape, but usually the shape of the plot is either a square or circle for simplicity – why would you sample using a hexagon? Often in forestry, plots are circular, marked with a central post, which foresters attach logging tape and rapidly measure trees that fall within a certain radius from the central post (<strong>Fig. 3</strong>). Since trees are large, this helps foresters quickly collect data on the species composition and structure of forests. For smaller organisms, like understory species, <strong>quadrats</strong> (small plots, often square and 1 m2 in size) are often used, since many smaller organisms occur in this area – if plots were too large, then data collection would be too time-consuming. In some cases, researchers are interested in how certain ecological variables differ as a function of distance from a feature. In these cases, researchers will often use a <strong>transect</strong> – a linear feature – and collect variables of interest along it. Any of these sampling shapes and sizes can be combined or adapted to measure ecological features to answer the question of interest.</p>
 <p><img src="images/05-ecologicalsampling/ForestryPlots.png" />
 <strong>Figure 3.</strong> A) The standard plot configuration for the Forest Inventory and Analysis dataset, which includes data on all of our forested lands in the US. Forestry plots are often circular (A), allowing foresters to attach loggers tape to a central plot marker (B) and quickly measure trees within
 these fairly large plots (C). Plots must be large in order to include enough trees to describe stand characteristics.</p>
 </div>
-<div id="reducing-sampling-error" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Reducing sampling error<a href="ecological-sampling.html#reducing-sampling-error" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="reducing-sampling-error" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Reducing sampling error<a href="ecological-sampling.html#reducing-sampling-error" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>What is <strong>sampling error</strong>? Sampling error is the difference between the true estimate of a population and the measurements that researchers collect on a sample. Error happens by chance and is unavoidable – it can be thought of as noise within the data. Error is different from bias, because it is non-systematic. For instance, imagine two people are measuring cactus heights for a demographic study. Error in height measurement is introduced by many things – the shakiness of each person’s hands, the amount of degradation and stretch in various measuring tapes. <strong>Bias</strong>, on the other hand, would be introduced if person 1 only measures the small cacti, or always mis-reading the measuring tape and measuring heights 5 cm less than their actual height. Bias should always be avoided, and error reduced as much as possible. Larger samples are less affected by chance and so will have lower bias. In ecology, we refer to the number of independent units being measured as <strong>replicates</strong>. The more replicates, the less sampling error!</p>
 <p><img src="images/05-ecologicalsampling/Replication.png" />
 <strong>Figure 4.</strong> As the number of replicate plots increases so does the accuracy at which we can estimate parameters for this forest stand.</p>
 </div>
-<div id="variables-of-interest" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Variables of interest<a href="ecological-sampling.html#variables-of-interest" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="variables-of-interest" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Variables of interest<a href="ecological-sampling.html#variables-of-interest" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Finally, depending on the research question, there are a number of different variables that you might want to measure. In ecology, you may want to measure the number of different species in an area to look at diversity patterns, or collect data on size or growth to look at performance, or monitor individuals after a disturbance to look at mortality. We will collect different forms of data throughout the semester, but the following principles will always apply:</p>
 <ol style="list-style-type: decimal">
 <li>Samples should be random and representative</li>
@@ -653,10 +793,10 @@ these fairly large plots (C). Plots must be large in order to include enough tre
 <li>More replication is better, since it reduces sampling error</li>
 </ol>
 </div>
-<div id="assignment-3" class="section level2 hasAnchor" number="6.6">
-<h2><span class="header-section-number">6.6</span> Assignment<a href="ecological-sampling.html#assignment-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="downloads-for-this-class-1" class="section level3 hasAnchor" number="6.6.1">
-<h3><span class="header-section-number">6.6.1</span> Downloads for this class<a href="ecological-sampling.html#downloads-for-this-class-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="assignment-6" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Assignment<a href="ecological-sampling.html#assignment-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="downloads-for-this-class" class="section level3 hasAnchor" number="8.6.1">
+<h3><span class="header-section-number">8.6.1</span> Downloads for this class<a href="ecological-sampling.html#downloads-for-this-class" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Please download for class:</p>
 <ul>
 <li><a href="downloads/compassbearings.pdf">Random number table for compass bearings (optional)</a></li>
@@ -668,10 +808,11 @@ This information can help you develop your sampling plan.</li>
 <p>Please print for class:</p>
 <ul>
 <li><a href="downloads/EcologicalSampling_Turnin.docx">Lab worksheet</a></li>
+<li><a href="downloads/SinclairWash_FieldNotes.pdf">Field notes sheet</a> — bring this on a clipboard</li>
 </ul>
 </div>
-<div id="sampling-q-a" class="section level3 hasAnchor" number="6.6.2">
-<h3><span class="header-section-number">6.6.2</span> Sampling Q &amp; A<a href="ecological-sampling.html#sampling-q-a" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sampling-q-a" class="section level3 hasAnchor" number="8.6.2">
+<h3><span class="header-section-number">8.6.2</span> Sampling Q &amp; A<a href="ecological-sampling.html#sampling-q-a" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Answer the following questions on your printed <em>Lab worksheet</em>.</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>You are working in an agroforestry system attempting to understand where a species of finch occurs across this landscape. The habitat is patchy, with forests comprising 80% of the landscape and fields covering the remaining 20%. You decide to use random stratified sampling to capture finch occupation in both systems proportionally. Given this, how many of your 40 plots will occur in forested habitat? Select one:</p>
@@ -695,22 +836,72 @@ B. Survival (yes, no)
 C. Foliar nitrogen content</p></li>
 </ol>
 </div>
-<div id="sampling-activity" class="section level3 hasAnchor" number="6.6.3">
-<h3><span class="header-section-number">6.6.3</span> Sampling activity<a href="ecological-sampling.html#sampling-activity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sampling-activity" class="section level3 hasAnchor" number="8.6.3">
+<h3><span class="header-section-number">8.6.3</span> Sampling activity<a href="ecological-sampling.html#sampling-activity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We are going to monitor the impacts of the <strong>Rio de Flag Flood Control Project</strong> on the recovery of Sinclair Wash (also called Clay Avenue Wash) to be compiled over time and provided to the City of Flagstaff. This project has the dual benefit of restoring important ecological habitat along the Rio de Flag, as well as reducing flood risk in historically minority neighborhoods in Flagstaff. The project is a collaboration between the City of Flagstaff and the US Army Corps of Engineers and is projected to take 20 years to complete and cost $122 million dollars.</p>
 <p>There are several nice resources to learn about this project, including this <a href="https://www.southsideflagstaff.com/resources-1">resource page</a>. Please watch the following informational video on the project (feel free to watch in groups):
 <a href="https://vimeo.com/27081671">A Southside Story</a>. Also, please visit the <a href="https://www.flagstaff.az.gov/4189/Rio-De-Flag-Flood-Control-Project">city project page</a>.</p>
 <p>Once you have looked over this information and the downloads provided, if the weather allows, walk out to Sinclair Wash and orient yourself to the site. <a href="https://maps.app.goo.gl/XckDsR2THhCctFL26">Walking directions</a>. If the weather is poor, check out what the wash looks like on google and use this view to create your plan. Navigate to the <a href="https://maps.app.goo.gl/bGy3fkAut525xXk77">Aerial view of Sinclair Wash</a>, and zoom in until you can see the Rio, which follows the tree line and path (path is hard to see here). Create your plan - you can even import a screenshot into powerpoint or use other applications to map out your sampling strategy.</p>
-<p>Write out a brief description of a sampling strategy for determining how restoration is affecting revegetation along eroded banks along Sinclair Wash. Be sure to mention how you would reduce bias, collect a representative sample, and reduce error. Please also describe plot shapes and sizes. Then, draw or make a map of your sampling strategy.</p>
 </div>
-<div id="deliverables-1" class="section level3 hasAnchor" number="6.6.4">
-<h3><span class="header-section-number">6.6.4</span> Deliverables<a href="ecological-sampling.html#deliverables-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="before-you-design-anything-look" class="section level3 hasAnchor" number="8.6.4">
+<h3><span class="header-section-number">8.6.4</span> Before you design anything: look<a href="ecological-sampling.html#before-you-design-anything-look" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Do this at the wash, before you read the next section.</strong> You have been handed a research
+question in every lab so far. This time you are going to find one yourself, which is what
+ecologists actually spend their time doing.</p>
+<p><strong>Step 1 — Ten minutes of observations, and nothing else.</strong></p>
+<p>Stand somewhere with a good view of the bank and write down <strong>at least five things you can
+actually see, hear or count</strong>. Not what they mean. Not why they are that way. Just what is
+there.</p>
+<p>The rule: if a sentence contains <em>because</em>, <em>due to</em>, <em>caused by</em>, or <em>shows that</em>, it is
+not an observation and it does not count yet.</p>
+<p>Things worth looking at:</p>
+<ul>
+<li>Where plants have come back, and where they have not</li>
+<li>Whether the plants that are back are the same everywhere, or different in different spots</li>
+<li>What the bank looks like where it is bare — steep? crumbling? compacted?</li>
+<li>Where water has obviously run recently</li>
+<li>Where people and dogs walk</li>
+<li>Rubbish, and where it collects</li>
+<li>Anything planted on purpose, and how it is doing compared with what arrived on its own</li>
+</ul>
+<p>Compare notes with your group and pool them. You should have fifteen or twenty between you.</p>
+<p><strong>Step 2 — Turn three observations into three questions.</strong></p>
+<p>Pick your three most interesting observations and write a question for each. A question
+counts only if <strong>data could answer it</strong>.</p>
+<blockquote>
+<p>“Why is the wash like this?” — too big, no data could settle it.</p>
+<p>“Is there more plant cover on the gentle bank than the steep bank?” — countable. Good.</p>
+<p>“Are there more non-native plants close to the path than away from it?” — countable. Good.</p>
+</blockquote>
+<p><strong>Step 3 — Pick one and make it a hypothesis.</strong></p>
+<p>Choose the question your group most wants to answer, and write:</p>
+<ol style="list-style-type: decimal">
+<li><strong>The question</strong>, in one sentence.</li>
+<li><strong>Your hypothesis</strong> — your best explanation, with a <em>because</em> in it.
+<em>We think there is more cover on gentle banks <strong>because</strong> seedlings get washed off steep
+ones before they root.</em></li>
+<li><strong>Your prediction</strong> — what you would see in the data if you are right.</li>
+<li><strong>And what you would see if you are wrong.</strong> This one is the hard part and the most
+important. If you cannot describe a result that would change your mind, your hypothesis
+is not testable yet — go back and sharpen it.</li>
+</ol>
+<p>Keep this. You will do exactly the same four steps in the greenhouse experiment later in
+the semester, with much less help.</p>
+<p>Now design the sampling. Because this data is being compiled over time for the City, every group answers the same core monitoring question — so write out a brief description of a sampling strategy for determining how restoration is affecting revegetation along eroded banks along Sinclair Wash. <strong>Then say how you would change that design to also answer your group’s own question from Step 3.</strong> Sometimes it is a small adjustment; sometimes your question needs a completely different design, and noticing that is worth as much as the answer. Be sure to mention how you would reduce bias, collect a representative sample, and reduce error. Please also describe plot shapes and sizes. Then, draw or make a map of your sampling strategy.</p>
+</div>
+<div id="deliverables" class="section level3 hasAnchor" number="8.6.5">
+<h3><span class="header-section-number">8.6.5</span> Deliverables<a href="ecological-sampling.html#deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Please turn in:</p>
 <ol style="list-style-type: decimal">
+<li><p>Your <strong>field notes sheet</strong>, which includes:</p>
+<p>A. Your observations from Step 1
+B. Your three questions from Step 2
+C. Your group’s question, hypothesis, prediction, and what would prove you wrong</p></li>
 <li><p>The lab worksheet, which includes:</p>
-<p>A. The answers the the questions.
+<p>A. The answers to the questions.
 B. A written description of your sampling strategy
-C. A picture / drawing of your sampling strategy</p></li>
+C. A note on how you would adjust that design for your own question
+D. A picture / drawing of your sampling strategy</p></li>
 </ol>
 
 </div>
@@ -721,8 +912,8 @@ C. A picture / drawing of your sampling strategy</p></li>
           </div>
         </div>
       </div>
-<a href="selecting-statistical-tests.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="identifying-trees-dichotomous-keys-and-the-campus-tree-walk.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="dendrochronology-reading-time-in-wood.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="urban-ecology-the-crosstown-walk.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -753,7 +944,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/sarasouther/ENV226LabRManual/edit/main/05-EcologicalSampling.Rmd",
+    "link": "https://github.com/sarasouther/ENV226LabRManual/edit/main/07-EcologicalSampling.Rmd",
     "text": "Edit"
   },
   "history": {

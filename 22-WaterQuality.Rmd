@@ -91,6 +91,3 @@ Turn into your TA:
 2. Your if/then statement
 3. Your table with water quality results
 4. Your answer to the question: Is the Francis Short Pond water within standard ranges for water quality? 
-
-
-

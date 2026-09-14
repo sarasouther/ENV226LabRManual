@@ -67,8 +67,14 @@ ggplot(data, aes(x = Day, y = log_PopulationSize)) +
   theme_minimal()
 
 # ---- 3. Estimate lambda ----------------------------------------------------
-# lambda is the factor a population multiplies by per unit time.
+# lambda is the factor a population multiplies by PER DAY.
 # lambda > 1 means growing, lambda < 1 means shrinking, lambda = 1 means stable.
+#
+# Note the ^(1 / total_time): that is what makes lambda a per-DAY rate rather
+# than a per-count-interval one. It matters. A lambda measured over a 7-day gap
+# and a lambda measured over a 1-day gap are not comparable numbers unless you
+# do this, and you cannot compare your duckweed to somebody's Daphnia without
+# them being on the same footing.
 
 calculate_lambda <- function(initial_pop, final_pop, total_time) {
   (final_pop / initial_pop)^(1 / total_time)
@@ -94,10 +100,15 @@ for (t in treatments) {
 # N rises. Plot lambda against N, fit a line, and read K off where lambda = 1
 # (the population is no longer growing - that is carrying capacity).
 
+# Use the PER-DAY lambda here too, for the same reason as above. Dividing the
+# raw counts would give you a per-interval figure, which changes if you count
+# fortnightly instead of weekly - and a carrying capacity that depends on how
+# often you visited the lab is not a carrying capacity.
+
 lambda_by_step <- data %>%
   group_by(Treatment) %>%
   arrange(Day, .by_group = TRUE) %>%
-  mutate(lambda = lead(PopulationSize) / PopulationSize) %>%
+  mutate(lambda = (lead(PopulationSize) / PopulationSize)^(1 / (lead(Day) - Day))) %>%
   filter(!is.na(lambda)) %>%
   ungroup()
 
@@ -106,7 +117,7 @@ ggplot(lambda_by_step, aes(x = PopulationSize, y = lambda)) +
   geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
   geom_hline(yintercept = 1, linetype = "dashed") +
   xlab("Population size (N)") +
-  ylab("Geometric growth rate (lambda)") +
+  ylab("Geometric growth rate (lambda, per day)") +
   theme_minimal()
 
 lambda_model <- lm(lambda ~ PopulationSize, data = lambda_by_step)

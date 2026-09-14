@@ -1,0 +1,297 @@
+# Working with data in a spreadsheet
+
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Quantitative reasoning and computational thinking; Data analysis and interpretation. *BioSkills:* Quantitative Reasoning → "Record, organize, and annotate simple data sets"; "Perform basic calculations (e.g., percentages, frequencies, rates, means)"; Process of Science → "Analyze data, summarize resulting patterns, and draw appropriate conclusions."
+
+Almost every dataset you will ever meet arrives as a spreadsheet. Not as a database, not as an R object — a spreadsheet. Today you will calculate a set of summary statistics **twice**: once by hand in a spreadsheet, and once in R. You already know the data — it's the class data you collected last week. That's deliberate. The data is familiar so the **tools** can be the new thing.
+
+At the end, the two sets of numbers should match exactly. If they don't, one of them is wrong, and finding out which is the actual lesson.
+
+### Downloads for this lab
+
+- [Class data sheet](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/edit?usp=sharing) — the sheet you added your data to last week
+- [Example data file (`WelcomeToENV226.csv`)](downloads/WelcomeToENV226.csv) — the stand-in, if you'd rather work from a fixed dataset
+- [R script for this lab (`spreadsheet_to_R.R`)](downloads/spreadsheet_to_R.R)
+
+Everything goes in your **`EcologyLab`** folder, same as last week.
+
+> **Excel or Google Sheets?** The instructions below are written for **Google Sheets**, because everyone has it, there's nothing to install, and the class data already lives there. Everything you learn transfers — the formulas are character-for-character identical in Excel. Where the *menus* differ, there's an **In Excel** note. Use whichever you prefer.
+
+---
+
+## Part 1 — Set up
+
+### Step 1: Make your own copy
+
+**Do not work in the class sheet.** Twenty-five people editing the same formulas is a bad afternoon for everybody.
+
+1. Open the [class data sheet](https://docs.google.com/spreadsheets/d/1iWaYjmBsaiPl5_rwEaIEW4dU9rlZcbdt50cjVAsVExI/edit?usp=sharing)
+2. **File → Make a copy**
+3. Name it `YourLastName_ENV226_Week2`
+4. Work in your copy from here on
+
+> **In Excel:** **File → Save As**, and give it the same name.
+
+### Step 2: Find your bearings
+
+Your data has four columns. Look at the top row and note which letter each one is in:
+
+| Column | What it holds | Data type |
+|---|---|---|
+| A | `DistanceFrHome` | numerical, continuous |
+| B | `NumberOfRoommates` | numerical, discrete |
+| C | `FavoritePet` | categorical |
+| D | `DBH` | numerical, continuous |
+
+Row 1 is the header. Your data starts in **row 2**. Scroll to the bottom and write down **the row number of your last row of data** — you will type it into every formula today, and getting it wrong is the single most common way this lab goes sideways.
+
+The examples below assume data in **rows 2 through 25** (24 students). Substitute your own last row.
+
+---
+
+## Part 2 — Six rules for a spreadsheet a computer can read
+
+Before you calculate anything: your spreadsheet is going to become a CSV, and a CSV is going into R. These six rules are what makes that work
+
+1. **One rectangle, one sheet.** One header row, then data. No second table below the first, no summary block off to the right of the data, no notes in row 1. *Consequence if you break it:* R reads your notes as data rows.
+2. **One variable per column, one observation per row.** Not "23 cm" in a cell — a `DBH` column that holds `23`, with the units stated in the column name or a separate README. *Consequence:* R reads the whole column as text and refuses to average it.
+3. **One piece of information per cell.** Not `Dog, 2 roommates`. Two columns. *Consequence:* you can never analyze either one separately.
+4. **No formatting as data.** Highlighting a row yellow to mean "exclude this one" is invisible to every program that isn't the spreadsheet you're sitting in. If a row is special, add a column that says so. *Consequence:* your exclusions vanish silently on export.
+5. **Plain column names.** Letters, numbers and underscores. No spaces, no `#`, `%`, `/`, or parentheses, and don't start with a number. `DBH_cm`, not `DBH (cm)`. *Consequence:* R quietly renames your columns and your script stops finding them.
+6. **Be consistent about missing data.** Pick one marker — a truly empty cell, or `NA` — and use it everywhere. Never `-999`, never `0` for "didn't measure", never the word `none`. *Consequence:* a missing measurement gets averaged in as a real zero, and your mean is wrong in a way nothing will flag.
+
+> **Zero is not missing.** If you counted and found none, that's a `0` and it belongs in the analysis. If you never looked, that's missing. These are different facts and a spreadsheet will not distinguish them for you.
+
+**Check your sheet against all six now.** Fix anything that's off before you go on — including in the class data, if your classmates typed units or notes into cells.
+
+---
+
+## Part 3 — Summary statistics by hand
+
+You'll build a small results table off to the side of your data.
+
+### Step 3: Set up a scratch area
+
+Click on cell **F1** and type `Statistic`. In **G1** type `DBH`. In **H1** type `DistanceFrHome`.
+
+Then, going down column F, type these labels in F2 through F6:
+
+`n`, `mean`, `median`, `minimum`, `maximum`
+
+> This little block is off to the side of your data, which technically breaks Rule 1. That's fine **because you are about to delete it**, or because you'll copy the numbers out before exporting. Rule 1 applies to the file you hand to a computer, not to your scratch work. Just don't forget which one you're looking at.
+
+### Step 4: Write the five formulas
+
+In cell **G2**, type this and press Enter:
+
+```
+=COUNT(D2:D25)
+```
+
+Then fill in G3 through G6:
+
+```
+=AVERAGE(D2:D25)
+=MEDIAN(D2:D25)
+=MIN(D2:D25)
+=MAX(D2:D25)
+```
+
+**Every formula starts with `=`.** That's how the spreadsheet knows you mean "calculate this" and not "store this text."
+
+`D2:D25` is a **range** — everything from cell D2 to cell D25. Change `25` to your own last row.
+
+### Step 5: Do it again for the second column
+
+Select **G2:G6**, copy, then click **H2** and paste.
+
+Look at what happened to the formulas. They now say `A2:A25` instead of `D2:D25` — the spreadsheet shifted the column reference to match where you pasted. That behavior is called a **relative reference**, and it is either the most useful thing a spreadsheet does or the reason your numbers are wrong, depending on whether you noticed.
+
+Click on H3 and check the formula bar. Does it point at column A? Good. If it points somewhere else, fix it by hand.
+
+### Step 6: Count the categories
+
+You can't average a category, but you can count it. Put these somewhere below your table:
+
+```
+=COUNTIF(C2:C25,"Dog")
+=COUNTIF(C2:C25,"Cat")
+=COUNTIF(C2:C25,"Neither")
+```
+
+Add the three results up. **Do they equal your `n`?** If not, someone typed `dog` or `Dogs` or `dog ` with a trailing space — `COUNTIF` won't match it, and neither will R. Go find it and fix it in the data.
+
+This is a real quality-control check, and it's the whole reason to do the counting before the analysis.
+
+### Step 7: Group means
+
+Now: is mean DBH different for cat people and dog people? (It shouldn't be. That's part of the point.)
+
+```
+=AVERAGEIF(C2:C25,"Dog",D2:D25)
+=AVERAGEIF(C2:C25,"Cat",D2:D25)
+=AVERAGEIF(C2:C25,"Neither",D2:D25)
+```
+
+Read that as: look through C2:C25, and every time you find "Dog", average the matching value from D2:D25.
+
+### Step 8: Write your numbers down
+
+**On paper, or in a separate document — not in the spreadsheet.** You are going to compare these against R in a few minutes, and you want a record that R can't accidentally overwrite.
+
+| Statistic | DBH | DistanceFrHome |
+|---|---|---|
+| n | | |
+| mean | | |
+| median | | |
+| minimum | | |
+| maximum | | |
+
+| Group | Count | Mean DBH |
+|---|---|---|
+| Dog | | |
+| Cat | | |
+| Neither | | |
+
+**Round to two decimal places.** Look at your mean and median for `DistanceFrHome` before you move on — are they close together, or is one much bigger than the other? Hang on to that observation; it comes back in the next lab.
+
+---
+
+## Part 4 — Export to CSV
+
+### Step 9: Clean up before you export
+
+Delete your scratch table (columns F, G, H). You wrote the numbers down in Step 8, so you don't need them in the file, and leaving them there breaks Rule 1.
+
+Your sheet should now be exactly one rectangle: a header row and your data.
+
+### Step 10: Export
+
+**File → Download → Comma Separated Values (.csv)**
+
+> **In Excel:** **File → Save As**, and choose **CSV UTF-8 (Comma delimited)**. Excel will warn you that some features can't be saved in CSV format. That warning is correct and you should click through it — colors, formulas, and multiple tabs genuinely do not exist in a CSV. Only the values survive.
+
+Save it into **`EcologyLab`** as `WelcomeToENV226.csv`.
+
+### Step 11: Look at what a CSV actually is
+
+Right-click the file → **Open With** → TextEdit (Mac) or Notepad (Windows).
+
+You'll see something like:
+
+```
+DistanceFrHome,NumberOfRoommates,FavoritePet,DBH
+26,1,Dog,15
+58,2,Dog,19.9
+```
+
+That's it. That's the whole file format. Plain text, one line per row, commas between fields.
+
+There are no formulas in there. **Your `AVERAGE` didn't survive the export — only the numbers it produced did.** Notice too that the file has no idea DBH is in centimeters, and no record of who collected it or when. A CSV is bare values and column names, nothing else. That's exactly why it works everywhere, and exactly why the units and the methods have to live somewhere else — in your lab notebook, your methods section, and your column names.
+
+---
+
+## Part 5 — The same numbers in R
+
+### Step 12: Open and run the script
+
+Open `spreadsheet_to_R.R` from your `EcologyLab` folder, then **Session → Set Working Directory → To Source File Location**, and run it top to bottom.
+
+Here is what it's doing:
+
+```{r eval=FALSE}
+data <- read.csv("WelcomeToENV226.csv")
+
+length(data$DBH)   # n
+mean(data$DBH)
+median(data$DBH)
+min(data$DBH)
+max(data$DBH)
+```
+
+`data$DBH` means "the column named DBH, from the object named data." The `$` is how you reach into a table and pull out one column.
+
+Counting the categories:
+
+```{r eval=FALSE}
+table(data$FavoritePet)
+```
+
+And the group means — one line for all three groups at once:
+
+```{r eval=FALSE}
+aggregate(DBH ~ FavoritePet, data = data, FUN = mean)
+```
+
+Read that as: DBH *as a function of* FavoritePet, take the mean of each group. That `~` shows up constantly from here on.
+
+### Step 13: Compare
+
+Put R's numbers next to the ones you wrote down in Step 8.
+
+**Do they match?**
+
+If yes — good. You now know that `AVERAGE` and `mean()` are the same operation with different spelling, which is worth knowing because you will spend the rest of the semester in R and you should not feel like you left your arithmetic behind.
+
+If no, work through these in order:
+
+- **Everything is off by a little.** Your range was wrong — you probably typed `D2:D24` and missed the last row, or `D1:D25` and included the header.
+- **`n` doesn't match.** Same problem, or you have blank rows in the middle of your data.
+- **A group mean is off and the counts don't add up.** Inconsistent category spelling. `Dog` and `dog` are two different things to both programs.
+- **R gives you `NA`.** There's a non-number somewhere in a number column — a stray "cm", a note, a typed dash. Run `str(data)` and look at the column types: if `DBH` says `chr` instead of `num`, that's your answer.
+- **R won't find the file.** Working directory, or the filename. It is almost always one of those two.
+
+---
+
+## Part 6 — So why bother with R?
+
+Fair question. You just did the whole thing in a spreadsheet in about ten minutes. Here's the demonstration.
+
+### Step 14: Add one row
+
+A student who missed lab shows up with their data. Go back to your spreadsheet copy, rebuild the little scratch table from Step 3, then add one new row **at the bottom** — row 26 — with any plausible values.
+
+**Look at your mean.**
+
+It did not change. Your formula says `D2:D25`. The new student is in row 26, and the formula has no idea they exist. The spreadsheet is now confidently reporting a mean that is wrong, and **nothing on the screen indicates a problem**.
+
+Now do the same thing in R: add the row to your CSV, and re-run the script.
+
+```{r eval=FALSE}
+data <- read.csv("WelcomeToENV226.csv")
+mean(data$DBH)
+```
+
+`data$DBH` means "the DBH column," however long it happens to be. There is no row number to get wrong.
+
+### Step 15: The real difference
+
+The point isn't that spreadsheets are bad. You'll use one this week and every week after. The point is what each tool leaves behind:
+
+- A spreadsheet leaves you a **number in a cell**. Six weeks from now you cannot tell whether it averaged 24 rows or 23, or whether someone nudged a value while scrolling.
+- A script leaves you the **recipe**. Anyone — including you, next semester, and a reviewer, in two years — can read exactly what was done and run it again on new data.
+
+That property has a name: **reproducibility**. It is the reason this manual is built around R, and it is the single most transferable thing you'll take out of this course.
+
+Use the spreadsheet for what it's genuinely best at — entering data, eyeballing it, sorting and filtering to hunt for problems. Then hand it to a script for anything you'll have to defend.
+
+---
+
+## Summary
+
+1. A spreadsheet a computer can read is one rectangle: one header row, one variable per column, one observation per row.
+2. Formatting is not data. Colors, merged cells, notes and formulas do not survive export.
+3. `=COUNT`, `=AVERAGE`, `=MEDIAN`, `=MIN`, `=MAX` are `length()`, `mean()`, `median()`, `min()`, `max()`.
+4. `=COUNTIF` and `=AVERAGEIF` are `table()` and `aggregate()`.
+5. Counting your categories is quality control, not busywork — it's how you catch `Dog` vs `dog`.
+6. A CSV is plain text: values and column names, nothing else. Units and methods live elsewhere.
+7. Ranges are typed by hand and are therefore wrong sooner or later. Columns are not.
+
+## Assignment
+
+Submit a single document through Canvas containing:
+
+1. **Your completed tables from Step 8** — the five statistics for both columns, and the counts and group means for the three pet categories.
+2. **R's output for the same quantities**, pasted in.
+3. **One or two sentences** on whether they matched, and if not, what was wrong and how you found it. "They matched" is a complete and correct answer — but say how you checked.
+4. **One or two sentences** answering: your mean and median for `DistanceFrHome` are not the same number. Which one better describes how far a typical ENV 226 student is from home, and why?
+5. **One sentence** naming which of the six rules in Part 2 you think is most often broken in real data, and why you'd guess that.

@@ -88,7 +88,7 @@ Each group now frames a hypothesis about the transect and designs a quantitative
 
 Some directions that have worked:
 
-- **Street trees.** Identify, measure DBH, and score condition for every street tree along the transect. Test whether canopy or tree size differs between segments. The key from the tree walk lab and the DBH protocol from the population structure lab both apply directly.
+- **Street trees.** Identify, measure DBH, and score condition for every street tree along the transect. Test whether canopy or tree size differs between segments. The key and the DBH protocol from the tree walk lab both apply directly — diameter at 1.37 m, measured the same way on every tree.
 - **Bird richness.** Fixed-duration point counts at set intervals along the transect, all at the same time of day. The species accumulation logic from the diversity lab applies.
 - **Land cover.** Classify a fixed frame — a quadrat of sidewalk, or a satellite image tile — into paved, roofed, bare, herbaceous and canopy. Compare proportions among segments.
 - **Line intercept.** Run a tape along a block and record what is under it at fixed intervals. This is line-point intercept from the field methods lab, transplanted to a street, and it works. The original module includes a worked example of exactly this along one block of its transect.
@@ -136,15 +136,6 @@ Turn in to your TA:
 5. **One paragraph.** You measured a pattern across a few blocks of one city. Choose one thing you observed and trace it back to a decision — a policy, an investment, an omission — that plausibly produced it. Then say what evidence you would need to check whether your explanation is right. You are not being asked to be sure; you are being asked to be specific about what would settle it.
 
 ---
-
-## Notes for TAs
-
-- **Walk the route yourself first**, with attention to traffic, sidewalk gaps, and where 30 students can safely stand. Break into staggered groups rather than moving as one block.
-- Twelve blocks is about right for the observation walk. The original module notes "usually about 12 blocks."
-- **The conduct rules are not boilerplate.** Say them out loud before you leave, and enforce the no-photographing-people rule. This exercise is only defensible if it is done respectfully.
-- Expect the proposal step to be where groups struggle — they will propose something un-executable or unfalsifiable. Budget real time for reviewing proposals; it is the highest-value teaching in the lab.
-- The module runs comfortably over multiple weeks: week 1 walk and proposal, week 2 self-scheduled data collection, week 3 analysis and discussion, week 4 presentations. It also compresses into one lab period plus outside time if the slot is tight.
-- Rubrics, a participation assessment and a background questionnaire ship with the original module and are worth using as-is. The module does **not** include a blank field datasheet — students design their own recording forms, which is intentional.
 
 ## Sources
 

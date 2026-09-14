@@ -209,15 +209,6 @@ Question 7 is where the grade is. A PVA that reports a number without its assump
 
 ---
 
-## Notes for TAs
-
-- **Site and species selection is the whole ballgame.** You need a perennial with at least 100 individuals — ideally 50–300 — in a patch small enough to census in three hours, on ground you have standing permission to mark. A dense herbaceous perennial in a stable patch works; anything rare, protected, or ephemeral does not.
-- **Do not use a listed or sensitive species.** Tagging and repeated visitation are not neutral for a rare plant, and the permitting is not a class-scale task.
-- Budget roughly: 30–45 min introducing matrix models, 3 h in the field, 2–3 h in the computer lab, 30 min homework for data entry.
-- **Between sessions you must compile the data and set the stage boundaries.** This is real prep time and it is unavoidable in year one.
-- Students do not write R here — they run a provided script line by line and read the output. That is deliberate; the goal is the model, not the syntax.
-- The single most common data problem is duplicate plant IDs. Assign non-overlapping ID ranges in writing before anyone goes outside.
-
 ## Sources
 
 Adapted from: Charney, N., and S. Record. 2013. Performing a population viability analysis from data students collect on a local plant. *Teaching Issues and Experiments in Ecology*, Vol. 9, Experiment #2. <https://tiee.esa.org/vol/v9/experiments/charney/abstract.html>

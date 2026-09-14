@@ -1,7 +1,7 @@
 Treatment,Day,PopulationSize
-LowInitialDensity,0,5
-LowInitialDensity,7,23
-LowInitialDensity,14,62
-HighInitialDensity,0,25
-HighInitialDensity,7,79
-HighInitialDensity,14,108
+LowInitialDensity,0,20
+LowInitialDensity,7,40
+LowInitialDensity,14,72
+HighInitialDensity,0,80
+HighInitialDensity,7,117
+HighInitialDensity,14,146

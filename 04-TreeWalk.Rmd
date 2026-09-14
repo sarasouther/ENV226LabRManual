@@ -1,0 +1,719 @@
+# Identifying trees: dichotomous keys and the campus tree walk
+
+> **Skills this lab builds.** *4DEE:* Ecology Practices → Natural history; Fieldwork; Communicating and applying ecology. Human–Environment Interactions → Human interdependence with the environment; Ecological ethics. *BioSkills:* Process of Science → Scientific Thinking, Information Literacy, Study Design ("Execute protocols and accurately record measurements and observations"); Quantitative Reasoning → "Record, organize, and annotate simple data sets"; Communication & Collaboration → Communication; Science & Society → Ethics.
+
+Species identification is necessary for sampling a plant community, running a species-diversity index, cleaning occurrence records for a distribution model, but what do you do if you don't know what species you are observing?
+
+This lab is where you learn basic plant ID, and, more importantly, how you can figure out what species you are observing.
+
+## How this lab runs
+
+| | What happens | When |
+|---|---|---|
+| **Part 1 — Key practice** | Indoors and just outside the building. You learn to use a dichotomous key on trees within a few minutes' walk. | Always |
+| **Part 2 — The arboretum walk** | Your group walks one of the three arboretum routes, finding each tree on the map and keying it. | Always |
+| **Part 3 — When the key fails** | Documenting the trees you *couldn't* identify, well enough that someone else could. | Always |
+| **Part 4 — What the record shows** | A SEINet investigation of what herbarium records can and cannot tell you about where a plant grows. | Always |
+
+**Parts 2 and 4 are what you hand in**, on one worksheet. There is also an **extra-credit option**: Adair Patterson, who curates the arboretum, leads guided walks, and you can sign up to go on one. Ask your instructor.
+
+### Downloads for this lab
+
+- [**Worksheet — what you turn in**](downloads/TreeWalk_Worksheet.docx) — type straight into it and upload to Canvas.
+- **Printable field keys.** Take the one for your route:
+  - [Wommack walk key](downloads/TreeKey_Wommack.docx) · [Littleman walk key](downloads/TreeKey_Littleman.docx) · [Grim walk key](downloads/TreeKey_Grim.docx)
+  - [Full campus key](downloads/TreeKey_NAU.docx) — all 55 taxa, with a glossary and species index, in technical botanical terminology
+- [Tree walk datasheet (.csv)](downloads/tree_walk_datasheet.csv)
+- [Unknown plant log (.csv)](downloads/unknown_plant_log.csv)
+- [R script for this lab](downloads/TreeWalk.R)
+
+## Objectives
+
+1. Use a dichotomous key to identify trees in the field, and record the character states that got you there.
+2. Recognize where keys fail, and what to do when they do.
+3. Write a working key of your own to a small set of species.
+4. Compare the tree community NAU planted with the tree community that grew here.
+
+## Background
+
+### What a dichotomous key is
+
+A dichotomous key is a chain of paired either/or choices. Each pair is a **couplet**. You read both halves, decide which describes the plant in front of you, and follow it — either to the next couplet, or to a name. A key is not a list of species you scan for the best match. It is a **decision procedure**, and it only works if you answer each couplet one at a time. Skipping ahead is the single most common way students get the wrong tree.
+
+### Characters and character states
+
+A **character** is a feature you can observe: leaf arrangement, needle count, bark texture. A **character state** is the value that feature takes in this individual: opposite, three per bundle, plated.
+
+Good keys are built on characters that are:
+
+- **Present when you need them.** A key that depends on flowers is useless in November. A key built on leaves is useless on a deciduous tree in February. Keys for winter use run on twigs, buds and bark instead.
+- **Discrete rather than continuous.** "Needles in bundles of 2 vs. 3" is a clean split. "Leaves large vs. small" is not, until someone tells you where large stops.
+- **Visible without equipment you do not have.** Every character in the key below can be seen with your eyes and a tape measure.
+
+### Where keys fail
+
+**The character is ambiguous on this individual.** Young trees often do not have adult bark. A shaded branch may have larger, thinner leaves than a sun branch on the same tree. Look at several parts of the plant, and prefer the sun leaves.
+
+**The tree is a cultivar or a hybrid.** Planted urban trees are frequently selected forms — thornless honeylocust, for one — bred to lack the very character a wild key uses.
+
+When a key fails, record the character states you observed, photograph the plant, and give it a placeholder name until someone can confirm it. That is exactly the convention professional monitoring crews use, and you will use it again in the field methods lab.
+
+---
+
+## Part 1 — Key practice
+
+### Key to trees of the NAU campus and the Flagstaff area
+
+**How to use it.** Start at couplet 1. Read the leads, pick the one that fits, and go where it sends you. Write down every couplet number you pass through — the path is what you hand in, not just the name.
+
+> **There is a printable version of this key**, and three shorter ones — one per arboretum walk. See the downloads at the top of this chapter. The printed keys use the same couplet numbers as the key below, so a `CoupletPath` recorded from either is comparable.
+
+**This key covers every tree on the three arboretum walks**, plus the common natives and street trees around campus — 55 taxa in 41 couplets. Species marked **[N]** are native to the Flagstaff area; **[P]** are planted here and native elsewhere; **[P*]** are planted and locally invasive. Where a species sits on one of the walks, the walk is named.
+
+### Group I — Leaves needle-like or scale-like (conifers)
+
+**1a.** Leaves scale-like, or short and awl-shaped, overlapping and pressed close along the twig. → **go to 2**
+
+**1b.** Leaves needle-like, standing clearly out from the twig. → **go to 4**
+
+
+---
+
+**2a.** Cone woody, 4–9 cm, built of thick shield-shaped scales; foliage in three rows along cord-like branchlets; bark very thick, spongy, reddish-brown, deeply furrowed — you can punch it. → ***Sequoiadendron giganteum*, giant sequoia [P; Wommack]**
+
+**2b.** Cone fleshy and berry-like, 3–20 mm, staying closed, usually with a whitish bloom; leaves in opposite pairs or whorls of three. → **go to 3**
+
+
+> Bark alone will not separate these two — a big alligator juniper and a young sequoia both have thick furrowed reddish bark. Look at the cone.
+
+
+---
+
+**3a.** Bark broken into hard, roughly square plates, like alligator hide. → ***Juniperus deppeana*, alligator juniper [N; Littleman]**
+
+**3b.** Bark shredding in long thin strips; scale-leaf margins smooth under a hand lens; foliage dark green; usually one main trunk. → ***Juniperus scopulorum*, Rocky Mountain juniper [N; Grim]**
+
+**3c.** Bark shredding; scale-leaf margins minutely toothed under a lens; branching from at or near the ground, no single trunk; cones reddish-blue under the bloom, one seed. → ***Juniperus monosperma*, one-seed juniper [N; Grim]**
+
+**3d.** Bark shredding; margins minutely toothed; foliage distinctly yellow-green; cones bluish-brown, often tan beneath the bloom. → ***Juniperus osteosperma*, Utah juniper [N; Littleman]**
+
+
+> Couplets 3c and 3d are hard, and they are hard for professionals. If your group splits, record both and say which characters disagreed.
+
+
+---
+
+**4a.** Needles in dense whorls of twenty or more on short stubby spur shoots, with single needles on the long shoots; needles under 2.5 cm, three-sided, blue-green; cones erect, barrel-shaped, breaking apart on the tree. → ***Cedrus atlantica* var. *glauca*, blue atlas cedar [P; Wommack]**
+
+**4b.** Needles in bundles of 2–5, wrapped at the base in a papery sheath. → **go to 5**
+
+**4c.** Needles borne singly along the twig. → **go to 12**
+
+
+---
+
+**5a.** Needles mostly 3 per bundle. → **go to 6**
+
+**5b.** Needles 2 per bundle. → **go to 7**
+
+**5c.** Needles 5 per bundle. → **go to 10**
+
+
+> Ponderosa often carries some 2-needle bundles. If a two-needled pine has needles longer than 17 cm and yellow-orange plated bark, check several more bundles before you leave this couplet.
+
+
+---
+
+**6a.** Needles 25–45 cm, drooping in a brush at the twig tips; twigs 1–2 cm thick; buds up to 2 cm; cone 11–14 cm, its scale tips often drawn out into an out-curved claw. → ***Pinus engelmannii*, Apache pine [N; Grim]**
+
+**6b.** Needles 10–17 cm; bark of old trunks in broad flat yellow-orange plates; cone 5–15 cm, each scale with a stout outward-pointing prickle. → ***Pinus ponderosa* var. *scopulorum*, ponderosa pine [N; Wommack]**
+
+
+---
+
+**7a.** Sheath falling away early, so the bundle base is bare; needles 2.5–4 cm, stout, curved, blue-green; cone about 5 cm, nearly round; seeds large and wingless. → ***Pinus edulis*, two-needle pinyon [N; Littleman]**
+
+**7b.** Sheath persistent at the bundle base; needles longer than 4 cm. → **go to 8**
+
+
+---
+
+**8a.** Needles 4–8 cm, stout, conspicuously twisted, blue-green to grey-green; bark of the upper trunk thin, flaking, orange-red. → ***Pinus sylvestris*, Scots pine [P; Wommack]**
+
+**8b.** Needles 8–15 cm, straight. → **go to 9**
+
+
+---
+
+**9a.** Bend a needle sharply: it snaps cleanly in two. Needles deep yellow-green; cone 3.5–6 cm, the central boss of each scale dimpled and unarmed; bark light red-brown in rectangular scaly plates. → ***Pinus resinosa*, red pine [P; Grim]**
+
+**9b.** Needles pliant, bending without snapping; very dark green; cone 5–10 cm, each scale with a tiny sharp point; bark dark grey-brown. → ***Pinus nigra*, Austrian pine [P]**
+
+
+> Needle length will not separate these two — they overlap almost completely. The snap test will.
+
+
+---
+
+**10a.** Needles about 4 cm, crowded and pressed close around the twig like a bottlebrush, with scattered white resin flecks on the surfaces. → ***Pinus aristata*, Rocky Mountain bristlecone pine [N; Grim]**
+
+**10b.** Needles 5–10 cm, not crowded into a bottlebrush. → **go to 11**
+
+
+---
+
+**11a.** Cone 8–15 cm, scale tips smooth and closed, no prickle; twigs notably flexible — you can tie a young one in a loose knot. → ***Pinus flexilis*, limber pine [N]**
+
+**11b.** Cone 13–23 cm, scale tips bent sharply backward. → ***Pinus strobiformis*, southwestern white pine [N; Grim]**
+
+
+---
+
+**12a.** Needles four-sided — roll one between finger and thumb and it turns rather than resisting; sharp-tipped; borne on small woody pegs that stay on the twig after the needle falls, leaving old twigs rough. → **go to 13**
+
+**12b.** Needles flat — roll one and it resists. → **go to 16**
+
+
+---
+
+**13a.** Cone 12–16 cm, far longer than any other spruce here; needles blunt-tipped. → ***Picea abies*, Norway spruce [P; Wommack]**
+
+**13b.** Cone under 12 cm. → **go to 14**
+
+
+---
+
+**14a.** Cone 2.3–4.5 cm, the smallest here; cone scales broadest near the tip and stiff; needles somewhat flexible, yellow-green to dark green, not blue; twigs densely hairy. → ***Picea rubens*, red spruce [P; Littleman]**
+
+**14b.** Cone 3–12 cm; needles blue-green to blue-white. → **go to 15**
+
+
+---
+
+**15a.** Cone scales widest ABOVE the middle and flexible — bend one and it gives; twigs finely hairy under a lens; needles sharp but not spine-tipped. → ***Picea engelmannii*, Engelmann spruce [N; Littleman]**
+
+**15b.** Cone scales widest BELOW the middle and stiff; twigs hairless; needles spine-tipped, often strongly blue-white. → ***Picea pungens*, Colorado blue spruce [P; Wommack]**
+
+
+> Do not try to separate these two on needle length. Their ranges are identical and this is the most common way to mis-name a campus blue spruce. The cone scale is the character that works.
+
+
+---
+
+**16a.** Needle attached by a short bent yellowish stalk; cones hanging, with three-pointed bracts sticking out between the scales like the back end of a mouse; buds about 10 mm, sharp-pointed. → ***Pseudotsuga menziesii*, Douglas-fir [N; Grim]**
+
+**16b.** Needles in two flat ranks on tiny stalks set on woody pegs; needle margins minutely toothed under a lens; cones only 1.5–2.5 cm; buds about 2 mm; the leading shoot at the top of the tree droops over. → ***Tsuga canadensis*, eastern hemlock [P; Wommack]**
+
+**16c.** Needle attached directly to the twig, leaving a round scar flush with the surface; cones erect and falling apart on the tree, so you rarely find a whole one under it. → **go to 17**
+
+
+> The bud is the quickest way in: Douglas-fir about 10 mm, hemlock about 2 mm. That is a fivefold difference you can see without a lens.
+
+
+---
+
+**17a.** Needles 6–20 mm, stiff, nearly round in cross-section, standing straight out all round the twig like a bottle brush. → ***Abies pinsapo*, Spanish fir [P; Wommack]**
+
+**17b.** Needles 15–60 mm, flat. → **go to 18**
+
+
+---
+
+**18a.** Bark thick, pale, soft and corky — you can press a dent in it with a thumb. → ***Abies lasiocarpa* var. *arizonica*, corkbark fir [N; Wommack]**
+
+**18b.** Bark firm, grey; needles blue-green, mostly in two flat ranks, often curving upward from the twig. → ***Abies concolor*, white fir [N; Littleman]**
+
+
+---
+
+
+### Group II — Leaves broad and flat (hardwoods)
+
+**19a.** Leaves opposite — in pairs directly across from each other. → **go to 20**
+
+**19b.** Leaves alternate — staggered along the twig. → **go to 25**
+
+
+> Check this on a twig from this year's growth, and check it twice. It is the most powerful character in this group and the one people most often get wrong on a crowded shoot.
+
+
+---
+
+**20a.** Leaf compound — divided into separate leaflets. → **go to 21**
+
+**20b.** Leaf simple — one blade, however deeply lobed. → **go to 22**
+
+
+---
+
+**21a.** 3–5 (rarely 7) leaflets, coarsely toothed or lobed; fruit a pair of winged keys in a narrow V. → ***Acer negundo*, boxelder [N]**
+
+**21b.** 7 or more leaflets in a pinnate arrangement; fruit a single-winged key; bark dark grey-brown, furrowed into interlacing ridges. → ***Fraxinus pennsylvanica*, green ash [P]**
+
+
+> Boxelder is a maple with a compound leaf. That is why couplet 20 comes before any question about lobing — if you go looking for a maple-shaped leaf first, boxelder will beat you.
+
+
+---
+
+**22a.** Break the petiole: milky white sap oozes out. Leaf palmately 5–7 lobed with long pointed teeth; keys spreading at a wide, nearly straight angle. → ***Acer platanoides*, Norway maple [P]**
+
+**22b.** Sap clear. → **go to 23**
+
+
+---
+
+**23a.** Leaf with 5 deep sinuses, coarsely toothed, conspicuously pale silvery-white underneath; keys large, 4–6 cm. → ***Acer saccharinum*, silver maple [P]**
+
+**23b.** Leaf lobes broad, dark green, with blunt rounded teeth all along the margin. → ***Acer pseudoplatanus*, sycamore maple [P; Wommack]**
+
+**23c.** Leaf with a few large, widely spaced teeth and otherwise smooth-edged lobes. → **go to 24**
+
+
+---
+
+**24a.** Trunk bark furrowed into long, thick, irregular ridges that curl outward at the edges; a single straight bole, 18–30 m; leaf 7.5–15 cm across, sinuses narrow and deep, leaf base heart-shaped. → ***Acer saccharum*, sugar maple [P; Littleman]**
+
+**24b.** Trunk bark thin, smooth or flaky; often several stems from the base, usually under 8 m; leaf 2.5–10 cm across, sinuses broad and shallow, teeth rounded. → ***Acer grandidentatum*, bigtooth maple [N; Grim]**
+
+
+> Many botanists treat these as one species, *Acer saccharum* subsp. *grandidentatum*, and their leaves genuinely overlap — a large bigtooth and a small sugar maple cannot be told apart by leaf. Key them on bark and habit. If your tree sits between the two, **"*Acer saccharum* complex" is a defensible answer** — write down what made you hesitate.
+
+
+---
+
+**25a.** Leaf compound. → **go to 26**
+
+**25b.** Leaf simple. → **go to 29**
+
+
+---
+
+**26a.** Stems armed with prickles that snap off cleanly if you push them sideways with a thumbnail; stipules fused along the petiole; 5–9 leaflets; fruit a fleshy red hip. → ***Rosa sp.*, rose — the Riles and McCormick roses [P; Wommack and Littleman]**
+
+**26b.** Unarmed, or armed with a pair of stiff spines at the base of each leaf. → **go to 27**
+
+
+> A prickle is an outgrowth of the bark and shears off cleanly. A spine is a modified leaf part and a thorn is a modified shoot — both are anchored in the wood and will not shear. Try it on a rose and on a black locust and you will not forget the difference.
+
+
+---
+
+**27a.** Cut a twig lengthwise: the pith is chambered, divided into little hollow compartments like a ladder. 9–15 leaflets; leaf scars large and three-lobed; fruit a round nut in a thick husk. → ***Juglans major*, Arizona walnut [N; Grim]**
+
+**27b.** Pith solid. → **go to 28**
+
+
+> Chambered pith is a walnut-family character and nothing else in this key has it. One cut settles it.
+
+
+---
+
+**28a.** Leaflets tiny, 15–30 of them, the leaf often twice-divided; bark smooth, bronze to grey-brown, covered in horizontal lenticels; pod flat, leathery, red-brown, 15–20 cm. → ***Gleditsia triacanthos* var. *inermis*, thornless honeylocust [P]**
+
+**28b.** A pair of stiff spines at the base of each leaf; pod flat, 5–10 cm, smooth; leaflet margins smooth; bark thick, deeply furrowed into interlacing ridges like rope. → ***Robinia pseudoacacia*, black locust [P; Grim]**
+
+**28c.** Paired spines; pod 8–10 cm, densely covered in bristly hairs; flowers pink to white in hanging clusters. → ***Robinia neomexicana*, New Mexico locust [N]**
+
+
+---
+
+**29a.** Bark smooth and chalky white to pale grey, at least on the upper trunk. → **go to 30**
+
+**29b.** Bark not white. → **go to 31**
+
+
+---
+
+**30a.** Leaf round to heart-shaped, finely toothed; petiole flattened side-to-side, so the leaf trembles in the slightest wind. → ***Populus tremuloides*, quaking aspen [N; Grim]**
+
+**30b.** Leaf 3-lobed and maple-like, densely silvery-white woolly underneath; petiole round; bark milky greenish-white with dark diamond-shaped splits; suckering into thickets. → ***Populus alba*, white poplar [P; Littleman]**
+
+**30c.** Leaf triangular to oval, doubly toothed; petiole round; branchlets strongly weeping; trunk white, turning black at the base with age. → ***Betula pendula*, European white birch [P; Wommack]**
+
+
+> White poplar is the trap here. The leaf looks like a maple's, but these leaves are alternate, not opposite — which is why you are in this half of the key at all.
+
+
+---
+
+**31a.** Leaf deeply lobed. → **go to 32**
+
+**31b.** Leaf not lobed, or only shallowly and irregularly so. → **go to 33**
+
+
+---
+
+**32a.** Lobes rounded, with no bristle at the tip; leaf leathery, 8–15 cm, with 5–9 lobes; often growing as a dense thicket of many stems. → ***Quercus gambelii*, Gambel oak [N; Grim]**
+
+**32b.** Lobes tipped with a fine bristle. → ***Quercus rubra*, northern red oak [P; Wommack]**
+
+**32c.** Leaf obovate, very large (15–30 cm), lobed, pale and fuzzy beneath; acorn large with a warty, fringed cup. → ***Quercus macrocarpa*, bur oak [P]**
+
+
+---
+
+**33a.** Leaf conspicuously silvery or white on the underside. → **go to 34**
+
+**33b.** Leaf green on the underside. → **go to 35**
+
+
+---
+
+**34a.** Leaf narrow, 3–8 cm, strikingly silver beneath with tiny scurfy scales; fruit a silvery-brown berry-like drupe. → ***Elaeagnus angustifolia*, Russian olive [P*]**
+
+**34b.** Leaf lanceolate, 5–13 cm, finely toothed, shiny green above, blotchy orange beneath; growing near water. → ***Populus angustifolia*, narrowleaf cottonwood [N]**
+
+
+---
+
+**35a.** Petiole flattened side-to-side; leaf broadly triangular, 4–8 cm, with 3–15 coarse teeth per side, the tooth tips rounded; bark pale tan and deeply furrowed on old trunks. → ***Populus fremontii*, Fremont cottonwood [N; Littleman]**
+
+**35b.** Petiole round or grooved, not flattened. → **go to 36**
+
+
+---
+
+**36a.** Leaf base conspicuously lopsided — one side meets the petiole lower than the other. → **go to 37**
+
+**36b.** Leaf base symmetrical or nearly so. → **go to 38**
+
+
+---
+
+**37a.** Leaf 7.5–13 cm, margin coarsely and sharply doubly toothed (small teeth riding on larger ones), downy beneath; winged fruit hairy along the margin; bark grey with diamond-shaped fissures; trunk dividing into arching limbs in a vase shape. → ***Ulmus americana*, American elm — the George Washington Elm [P; Littleman]**
+
+**37b.** Leaf 2–6.5 cm, margin singly toothed, smooth on both sides; winged fruit hairless. → ***Ulmus pumila*, Siberian elm [P*]**
+
+**37c.** Leaf 5–15 cm, broadly heart-shaped, toothed; fruit a cluster of small nutlets hanging from a strap-shaped leafy bract. → ***Tilia sp.*, linden [P]**
+
+
+---
+
+**38a.** Leaf 2–5 cm, doubly toothed, base heart-shaped or rounded; twigs covered in warty resin glands; a shrubby tree, usually several stems, 4.5–9 m; bark dark red-brown to almost black with long horizontal lenticels, never white and not peeling. → ***Betula occidentalis*, western birch [N; Grim]**
+
+**38b.** Leaves variable on the same tree — some unlobed, some with one or several deep lobes; fruit a soft blackberry-like cluster. → ***Morus alba*, white mulberry [P; Wommack]**
+
+**38c.** Not as either of the above. → **go to 39**
+
+
+---
+
+**39a.** Twigs armed with stout unbranched thorns, woody right through and not shearing off; leaf 2.5–10 cm, toothed and often shallowly lobed; fruit a small pome containing hard bony nutlets; flowers white in flat-topped clusters. → ***Crataegus sp.*, hawthorn [P; Wommack]**
+
+**39b.** Twigs unarmed. → **go to 40**
+
+
+> Hawthorns are keyed to genus here and left there. There are somewhere between 100 and 200 species in North America, they hybridise freely, and telling them apart needs flowers *and* mature fruit in hand. Stopping at the genus is the correct professional answer, not a failure.
+
+
+---
+
+**40a.** Leaf narrow, 3–4 times longer than wide, often folded upward along the midrib; two small glands where the blade meets the petiole; three buds side by side at each node on winter twigs; fruit a large velvety drupe. → ***Prunus persica*, peach [P; Wommack]**
+
+**40b.** Leaf oblong, about 2–2.5 times longer than wide, finely toothed, glossy above, usually with a band of brownish hairs along the midrib beneath; flowers in a long hanging raceme of twenty or more; bark on older trunks breaking into small upturned plates like burnt cornflakes; scratched twigs smell of bitter almonds. → ***Prunus serotina*, black cherry [P; Wommack]**
+
+**40c.** Leaf broader, less than twice as long as wide; fruit a pome. → **go to 41**
+
+
+---
+
+**41a.** Leaf glossy dark green, ovate, finely and evenly toothed; petiole long and slender so the leaf flutters; fruit a small hard pome 6–12 mm. → ***Pyrus calleryana*, Callery pear [P]**
+
+**41b.** Leaf 2.5–10 cm, toothed, dull green, often slightly downy beneath; flowers 5-petalled, white to pink; fruit a pome — small and hard in crabapples, large and edible in the orchard apple. → ***Malus sp.*, crabapple and domestic apple [P; Wommack and Littleman]**
+
+
+---
+
+## The NAU arboretum
+
+NAU's north campus is an arboretum, curated and maintained as a living collection. There are three self-guided routes through it, each with its own character:
+
+| Route | Named for | Trees | What it is |
+|---|---|---|---|
+| **Wommack** | Dr. Donald Wommack, Forestry, 1968–99 | 18 | Species collected from around the world — the botanical-oddity route |
+| **Littleman** | Lemuel Littleman, groundskeeper, 1947–83 | 12 | Much of it planted by Littleman himself, including fruit trees that fed students during the Depression |
+| **Grim** | J. Norm Grim, biologist; planted late 1970s | 13 | Arranged by altitudinal vegetation zone, desert through subalpine |
+
+### Following a route
+
+The arboretum map is a Google map with all 43 trees on it, each with a description written by the greenhouse staff:
+
+**<https://www.google.com/maps/d/viewer?mid=17MquqgFMAz47Fywbk5kbhptIV8MY4hdI>**
+
+Open that link **on your phone before you leave the building**. It opens in the Google Maps app, shows your own position as a blue dot, and every tree is a labelled pin — so you navigate to a pin, stand under the tree, and key it. Each pin's name ends in the walk it belongs to (`— Wommack`, `— Littleman`, `— Grim`), so you can tell at a glance which stops are yours.
+
+> **Read the pin's description *after* you have keyed the tree, not before.** The description names the species. If you read it first you have not keyed anything, you have read a label — and the point of this lab is the difference between those two things.
+
+The Grimm route is laid out as an **elevation gradient**, which means the species change along it in the same order they would if you drove from the Verde Valley up to the San Francisco Peaks. The Wommack route is the opposite: a deliberate collection of things that do not grow here at all.
+
+---
+
+## Part 2 — The arboretum walk
+
+Your instructor will assign your group one of the three routes.
+
+1. **Work in groups of 3–4.** One person navigates with the map, the others key, one records. **The navigator does not read out the pin description until the group has committed to an answer.** Rotate roles every few trees so everyone keys.
+2. **Find the tree**, then key it. Write down every couplet number you passed through — that path is worth more marks than the name.
+3. **Record your confidence before you check.** High, Medium or Low. Then open the pin and see.
+4. **Key at least ten trees.** Your route has 12–18, so you have some slack for ones you cannot reach or cannot resolve.
+
+> **You will get some wrong, and that is the data.** The gap between how sure you felt and how right you were is the single most useful number this lab produces. Nobody is marked down for a Low-confidence miss they recorded honestly. Writing `High` and being wrong is the interesting case — work out which character misled you.
+
+### Two things on these walks that a key cannot resolve
+
+**The two roses.** The **Riles Rose** on the Wommack walk and the **McCormick Rose** on the Littleman are both *Rosa*, and the key will take you that far and stop. It cannot take you further, and neither can anyone else: NAU's own record gives the Riles Rose only as "*Rosa* spp." and says its variety is unknown, and the McCormick Rose is recorded as *Rosa gallica* on the map while the plaque beside it calls it a Boursault rose — which is a different thing. These are heritage specimens propagated by cuttings, identified by their labels and their provenance records rather than by their morphology. **That is a real limit of keys, not a failure of this one.** Cultivars and clones sit below the level a key can reach.
+
+*Worth testing while you are standing there:* Boursault roses are described as nearly thornless, and *Rosa gallica* is densely prickly. Look at the canes of the McCormick Rose and write down what you see. That one observation bears on which of NAU's two records is defensible.
+
+**The Spanish fir.** The map records the Wommack Spanish fir as *Picea pinsapo*. Key it yourself and see where you land. Spanish fir is a **fir**, *Abies pinsapo* — *Picea* is the spruce genus. The needles will tell you: attached directly to the twig leaving a round flush scar, not sitting on little woody pegs. **A record in a database is evidence, not proof**, and you have just found an error in one. Note it on your worksheet.
+
+## Recording your data
+
+Both tracks use the same file. The columns are:
+
+```
+Site,Group,TreeID,Species,Origin,CoupletPath,Confidence,DBH_cm,Notes
+```
+
+- `Site` — which route
+- `Species` — the scientific name you arrived at, or `UNK-1`
+- `Origin` — `Native` or `Planted`
+- `CoupletPath` — e.g. `1a-5a-6b`, or `?` if you could not reconstruct it
+- `Confidence` — `High`, `Medium` or `Low`, decided **before** anyone confirms
+- `Notes` — characters the key does not use; anything the guide said
+
+**One claim to test.** People often say the bark furrows of old ponderosa pines smell of vanilla or butterscotch. Have each person in your group smell one independently, without saying anything, then compare answers. Whether or not you all agree is itself a result — and it is the same kind of observer disagreement you will quantify formally in the field methods lab.
+
+---
+
+## Part 3 — When the key fails
+
+Some of your trees will not key out. That is guaranteed, and it is not a mark against you. What matters is what you do next! 
+
+It it is critical that you are able to **document an unknown well enough that its ID is resolvable.**
+
+### Give it a code, and use the code consistently
+
+Label it `UNK-1`, `UNK-2`, and so on. If you see what you believe is the same species again, **give it the same code**.
+
+This sounds trivial. It is the single highest-value thing you will do. A consistently applied placeholder is real data: when someone eventually tells you `UNK-3` is *Tilia cordata*, every row where you wrote `UNK-3` updates at once. Ten rows of "unknown," "some kind of maple?", "same as before?" and "unsure" resolve to nothing, ever.
+
+You will use the same convention in the field methods lab, where professional monitoring crews use codes like `TR1` and `SH2` for exactly this reason.
+
+### Fill in the unknown plant log
+
+Download: [Unknown plant log (.csv)](downloads/unknown_plant_log.csv)
+
+For every unknown, record:
+
+```
+UnknownCode,Date,Collector,Site,LocationNotes,GrowthHabit,LeafArrangement,
+LeafType,BarkNotes,FruitOrCone,OtherCharacters,PhotoNumbers,SpecimenCollected,
+iNatURL,ProposedID,Determiner,DeterminedDate
+```
+
+### Photograph it properly
+
+You cannot bring a tree indoors, so photographs are most of your record. Take **at least four**, of specific things rather than four angles of the same thing:
+
+1. **The whole tree** — growth form, branching, how it stands.
+2. **A leaf or needle still attached to the twig**, showing the arrangement. A leaf picked off and photographed alone has thrown away the character that would have keyed it.
+3. **Bark at chest height.** Include something for scale — a hand, a pen.
+4. **Fruit, cone, flower or bud**, if there is any. This is usually what a botanist will ask for first.
+
+Photograph in even light — full sun or full shade, not dappled shade under a canopy, which is the single most common reason a plant photo turns out unusable.
+
+### Route one: iNaturalist
+
+iNaturalist is a reasonable first stop for an unknown. You will use it again later in the semester, for a different job, in the invasive species lab.
+
+Upload all your photos of **one tree** as **one observation** — this is the rule people most often break, and splitting one tree across four observations makes all four harder to identify. Add the date and location, which iNaturalist usually takes from your photos.
+
+An observation becomes **Research Grade** when it is "verifiable" — has a date, a location, photo or sound evidence, and is a wild rather than planted organism — *and* more than two-thirds of the identifiers agree on an identification at species level or below. A cultivated tree is marked as not wild and stays "Casual" no matter how confidently it is identified. That is not a flaw; iNaturalist is a biodiversity record, and a Norway spruce someone planted outside Old Main is not evidence that Norway spruce grows in Flagstaff. But it does mean iNaturalist will help you *name* your unknown while declining to *keep* it, and knowing why is the point.
+
+Research Grade observations with an open licence are exported to GBIF, the global biodiversity database, roughly once a week.
+
+### Route two: a specimen
+
+The other route is to bring back a piece of the plant. When working on botanical projects, you will often be asked to collect a voucher specimen - a preserved biological specimen that serves as a permanent, verifiable physical record of an organism used in a scientific study or survey. 
+
+You cannot press a tree. What you press is a **twig short enough to lie flat within about 30 × 40 cm**, which is the size of a standard herbarium sheet. On that twig you want everything the key would have used: leaves still attached in their natural arrangement, and any flowers, fruit, cones or buds. A bare stick is not a specimen.
+
+Standard practice before you cut anything:
+
+- **Get permission.** On campus, ask — the arboretum is a curated collection and its specimens are not yours to prune. On Coconino National Forest, National Park Service land or tribal land, collecting generally requires a permit. Your instructor will tell you what applies where you are.
+- **Take the smallest adequate piece**, from a part of the plant that is representative of the whole.
+- **Write the label at the moment you collect it**, not later. 
+
+Press it flat between sheets of newspaper, under weight, and change the paper if it goes damp. Woody stems need more pressure and longer drying than herbaceous plants.
+
+*In this lab, we will likely not be able to collect a tree specimen, and will likely need to collect a weed or other undesirable plant from NAU's landscaping perspective"
+
+### What goes on the label
+
+A field label carries the minimum: **code, date, collector, locality**. A full herbarium label carries considerably more, and the extra fields are what make a specimen useful to someone who never met you:
+
+| Field | Why it's there |
+|---|---|
+| Scientific name, with family and authority | The identification itself |
+| **Determiner and date determined** | *Who* made this identification, and *when* |
+| Collector, other collectors, collection number | Who to ask; how to find the collector's field notes |
+| Date collected | Phenology, and which year's conditions produced this plant |
+| Locality — country, state, county, verbal description, lat/long, elevation | So someone can return to the exact spot |
+| Habitat and associated species | The ecological context that a pressed twig destroys |
+| Abundance / frequency | Whether it was one tree or a thousand |
+| Plant description — habit, height, colour, scent | Everything pressing and drying takes away |
+| Wild or cultivated | Whether this is evidence of a range, or of a gardener |
+
+That table is the answer to "why doesn't a photo do the job." A photo captures the plant. A labelled specimen captures the plant *plus the circumstances of its observation*, in a form someone can re-examine in a hundred years.
+
+### The determiner field, and why this chapter has been about it all along
+
+A herbarium label records **who identified the specimen and when** — separately from who collected it.
+
+That is there because **an identification is not permanent.** Species get split, merged and renamed. A specimen filed as one thing in 1954 gets re-examined and re-determined as another in 2019, and the sheet carries both determinations, dated and attributed. The evidence outlives the conclusion.
+
+At the start you were told an identification is a hypothesis you tested against observations and can defend. A specimen is what makes that hypothesis **re-testable by someone else, later, without you**. Your `CoupletPath` column is a small version of the same idea: it records not just your answer but your reasoning, so a person who disagrees can find out exactly where they'd part company with you.
+
+---
+
+## The Deaver Herbarium 
+
+NAU has its own herbarium, or a collection of preserved plant specimens and related data used for scientific study.
+
+The **Deaver Herbarium** was founded in **1930** and is named for **Chester "Danny" Deaver**, its first curator. It holds roughly **130,000 specimens**, the oldest from the **1880s**. Its international code is **ASC** — assigned back when NAU was Arizona State College, which is a small piece of institutional history hiding in a four-letter code.
+
+The collection is worldwide in scope, with 55 countries represented, but **more than three-quarters of it is Arizona** — northern Arizona especially, the southern Colorado Plateau, the San Francisco Peaks, the Coconino National Forest, and collections from ten national parks on federal and tribal lands. Which means: **the plants of the ground you have been walking on all semester are already in a cabinet a few minutes from your classroom**, collected by people going back to the 1880s.
+
+The herbarium is in the **Science Annex (Building 20)**, third floor. Entry is through the northern entrance of the Biology building (Building 21) off South Beaver Street. Access is limited, so **visits are arranged in advance by emailing Deaver.Herbarium@nau.edu a few days ahead**, and someone meets you at the doors. 
+
+Herbaria support species identification and research (have plants changed through time). NAU's herbarium staff are not available for class visits due to lack of capacity; however, they are available to help with research projects.
+
+### If you want an identification
+
+The herbarium's stated policy:
+
+> Staff will identify plants for individuals, nonprofit organisations and government agencies **when an acceptable specimen with locality information is donated to the collection.**
+
+So the price of an expert identification is a specimen — properly collected, properly labelled, with locality data — that stays in the collection and becomes available to everyone afterward. That is a fair trade and a sound principle: the identification is only worth something because it is attached to physical evidence somebody can go back and check.
+
+If your specimen is good enough, it stays. Student collections do become part of this herbarium.
+
+### The collection is also online
+
+Essentially all of Deaver's specimens have been **databased and imaged**. They are served through **SEINet** (<https://swbiodiversity.org/seinet/index.php>), a portal network carrying about **24 million specimen records from 456 collections**. You can search by species, filter to the Deaver Herbarium, and open individual records to see the specimen image — the actual pressed sheet, zoomable enough to read the original handwritten label — alongside the collector, date, locality, elevation and determiner.
+
+### Where this connects to the rest of the manual
+
+From SEINet, Deaver's records flow to **GBIF** (<https://www.gbif.org>), the global biodiversity database — the same place the species distribution modeling chapter gets its occurrence records.
+
+As of 2026, GBIF holds roughly **643 million plant occurrence records**. About **21% are preserved specimens** — physical plants somebody collected, pressed, labelled and filed. About **75% are human observations**, overwhelmingly from iNaturalist. The Deaver Herbarium's own 133,000 records are **essentially 100% preserved specimens**.
+
+---
+
+## Part 4 — What the record actually shows
+
+> **This activity was written by Richie Hodel, Ph.D. (he/him), Director and Curator of the Deaver Herbarium and Assistant Professor of Biological Sciences at NAU, and is used and adapted here with his permission.** 
+
+Work in SEINet (<https://swbiodiversity.org/seinet/index.php>). Use the occurrence search, and for each species open both the record list and the map.
+
+### Your species
+
+| Species | Why it's on the list |
+|---|---|
+| **One tree you keyed on the walk** — your choice | You have stood under this one |
+| ***Pinus ponderosa*** | Everywhere around Flagstaff, and everybody drives past it |
+| ***Pinus aristata*** (Rocky Mountain bristlecone pine) | Restricted to high elevation — the San Francisco Peaks, visible from campus |
+| ***Primula parryi*** (Parry's primrose) | Alpine, wet, and a walk from the nearest road |
+
+### 1. Geographic distribution
+
+Examine the occurrence map for each species.
+
+- Describe the worldwide distribution. Where are records most concentrated?
+- Describe the distribution within Arizona.
+- For *Pinus aristata* and *Primula parryi*: are the records spread across the mountain, or clustered along something?
+
+### 2. Collections through time
+
+Look at the collection dates.
+
+- What is the earliest record for each species? The most recent?
+- **Count the records by decade** for **one** species. Use the search filters to set a date range, run it once per decade, and record the number of records in the table below.
+
+| Decade | Number of records |
+|---|---|
+| Before 1900 | |
+| 1900–1919 | |
+| 1920–1939 | |
+| 1940–1959 | |
+| 1960–1979 | |
+| 1980–1999 | |
+| 2000–2019 | |
+| 2020–present | |
+
+Plot it or look for patterns in the data. 
+
+Now the question the plot is for: **does that shape look like the history of the plant, or the history of the botanists?** Think about what was happening at this institution, and in American botany, in the decades with the tall bars and the short ones.
+
+### 3. A record that looks wrong
+
+Find a record that seems unusual or suspicious — a point far outside the main cluster, an implausible elevation, a date that does not fit.
+
+- Describe it.
+- Why might it be unusual? List **three** possible explanations, and note that only one of them is "the plant really was there."
+
+Georeferencing errors, transcription slips, misidentifications and genuine outlying populations all produce the same dot on the same map, and telling them apart requires going back to the specimen.
+
+### 4. What is actually in a specimen record
+
+Open several individual records and look past the map. Record **three** notable observations. Consider elevation, habitat, collector, associated species, reproductive condition, locality description, or other label notes.
+
+Then answer: which of those fields could you *not* have obtained from a photograph?
+
+### 5. Interpretation
+
+In two or three sentences, summarize what the SEINet records tell you about **one** species you choose, and **one** limitation of using herbarium records to determine its actual distribution.
+
+Then Richie's question, which is the point of the whole exercise:
+
+> **Do the dots on the map represent the plant's true distribution — or where botanists have collected it?**
+
+## Assignment
+
+**Everything goes on one worksheet:** [`TreeWalk_Worksheet.docx`](downloads/TreeWalk_Worksheet.docx). Type into it and upload the file to Canvas.
+
+**Part A — the walk**
+
+1. Your **tree table**: for each of at least ten trees, the pin name, the couplet path you took, the name you arrived at, your confidence *recorded before you checked*, and whether you were right.
+2. **Your accuracy, broken down by confidence.** How many High calls were right? How many Low calls turned out fine?
+3. **One tree you got wrong**, and which character misled you. If you got none wrong, take the one you found hardest and say what nearly went wrong.
+4. **Your unknown plant log** for anything that would not key out, with photographs.
+5. **One paragraph.** NAU's campus holds two tree communities at once — the one that grew here, and the one people planted. Using your own data, describe how they differ, and give one ecological consequence. (A place to start: which community is drought-adapted, which is not, and what that means for water and for the next few decades of Flagstaff summers.)
+
+**Part B — the record**
+
+6. The five sections of the SEINet investigation from Part 4, including your **records-by-decade table**.
+
+**If you went on the guided walk for extra credit**, add:
+
+7. **One character the guide used that is not in this manual's key**, why it works, and the couplet you would write to capture it.
+
+---
+
+## Sources and further reading
+
+- NAU Arboretum tree walks and interactive map: <https://in.nau.edu/greenhouse/nau-arboretum-tree-walks/>
+- NAU Network video channel, which has carried coverage of the Arbor Day walk: <https://www.youtube.com/@NAUnetwork>
+- Arizona Department of Forestry and Fire Management, *Arizona Urban Tree Map field guide, Interior West*: <https://dffm.az.gov/sites/default/files/files/forestry/ucf/azutm/AZUTM_tree_guide_interior_west_2015_04_28.pdf>
+- University of Arizona Cooperative Extension, *Pines of Arizona* (AZ1584): <https://extension.arizona.edu/sites/extension.arizona.edu/files/pubs/az1584.pdf>
+- USDA PLANTS database, for standard species codes: <https://plants.usda.gov>
+- Deaver Herbarium, NAU: <https://in.nau.edu/deaver-herbarium/> · visits and identifications: Deaver.Herbarium@nau.edu
+- SEINet Portal Network: <https://swbiodiversity.org/seinet/index.php>
+- Deaver Herbarium's records on GBIF: <https://www.gbif.org/dataset/e5d9d04e-ffd1-4395-9b10-76034f0c619c>
+- iNaturalist, on how observations become Research Grade: <https://help.inaturalist.org/en/support/solutions/articles/151000169936-what-is-the-data-quality-assessment-and-how-do-observations-qualify-to-become-research-grade->
+- University of Florida Herbarium, *Preparation of Plant Specimens for Deposit as Herbarium Vouchers* — the source for the label fields and the 30 × 40 cm sheet: <https://www.floridamuseum.ufl.edu/herbarium/methods/vouchers/>
+- University of Connecticut, *Collecting for the CONN Herbarium* — the clearest free guide on woody specimens: <https://biodiversity.uconn.edu/wp-content/uploads/sites/556/2022/02/Collecting-for-the-CONN-herbarium.pdf>
+
+> **A note on this source.** The photograph checklist in Part 3 is community best practice, assembled from experienced iNaturalist users — iNaturalist itself publishes no official standard for photographing trees, and this chapter does not claim it does. The GBIF proportions are a September 2026 snapshot and will drift; the iNaturalist share has been growing steadily.

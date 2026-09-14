@@ -1,0 +1,56 @@
+# Species interactions II: analysis and poster
+
+> **Skills this lab builds.** *4DEE:* Core Ecological Concepts → Communities. Ecology Practices → Data analysis and interpretation; Working collaboratively; Communicating and applying ecology. *BioSkills:* Communication & Collaboration → "Use a variety of modes to communicate science (e.g., oral, written, visual)"; Process of Science → "Analyze data, summarize resulting patterns, and draw appropriate conclusions."
+
+> **This is the second half of the greenhouse experiment you planted earlier in the semester.** The design, planting and weekly measurement protocol are in **Species interactions I: designing and planting your experiment**. This chapter covers the harvest, the analysis and the poster.
+
+By now you have six to eight weeks of weekly measurements on a set of pots you designed yourselves. This chapter is where that turns into a result.
+
+## Final measurements
+
+At the end of the experiment, plants come out of the pots. Working group by group:
+
+1. **Take your last set of height measurements** before you disturb anything, using the same ruler-at-the-soil-surface method you have used every week. Photograph the pots one last time.
+2. **Remove the plants from the pots.** Work gently — you need the roots intact, and roots break where you can't see them.
+3. **Measure root and shoot lengths** for each plant, in millimetres, keeping them associated with the pot and species they came from. A root length recorded without knowing which pot it belongs to is not data.
+4. **Place the biomass in a drying oven.** Dry weight is a much better measure of how much a plant actually built than fresh weight, because fresh weight is mostly water and water content varies with how recently the pot was watered.
+5. **Record everything in the same data sheet** you have been using all along. Resist starting a new file for the harvest data — one file, one structure, is what makes the analysis straightforward.
+
+Your TA will tell you how long the material stays in the oven and when to come back and weigh it.
+
+## Analyzing and visualizing your data
+
+You now have the two things a statistical test needs: a question you wrote down in week 1, and data collected to answer it.
+
+- For a reminder about summarizing your data — means, medians, spread, and the figures that show them — see [Descriptive statistics](descriptive-statistics.html).
+- For the logic of hypothesis testing, p-values and what a test is actually telling you, see [Basic statistical testing](basic-statistical-testing.html).
+- To work out **which** test your particular design calls for, and to get R code you can modify, see [Selecting statistical tests](selecting-statistical-tests.html).
+
+Work from your own question backwards. What you measured, and whether your groups are independent, determine the test — not the other way around. If you find that your design doesn't support the test you had in mind, say so in your poster. **A clearly explained limitation is worth more marks than a test applied to data that doesn't meet its assumptions**, and your instructors can tell the difference.
+
+Remember that a growth time series gives you more than one way in. You can compare final heights between treatments, or compare growth *rates*, or ask when the treatments began to diverge. These are different questions and they do not always give the same answer.
+
+## Final week
+
+### Downloads
+
+Please download:
+
+- [Poster instructions](downloads/LabPosterInstructions.pdf)
+- [Peer evaluation](downloads/GroupMemberAssessment.pdf)
+
+Once you have all of your data, you will prepare a poster with your group detailing your experiment and its outcome. 
+For the poster you will follow standard scientific writing style (see handout). Using the statistical lessons and R scripts that you have received earlier in the semester, analyze your data and create figures. Remember the correct methods for reporting results and writing figure lessons. 
+
+Figure legends matter here more than anywhere else in the course, because on a poster the figure is what people actually read. The seven components of a good legend are listed in [Descriptive statistics](descriptive-statistics.html).
+
+### Turn-in 
+
+Submit your **poster as a PDF** to your lab instructor through canvas (or via email, if instructed by your TA). Only one person in your group needs to submit. Each group member must also submit a **peer evaluation**, assessing the contribution of each group member.
+
+Please review the poster instructions and rubric to ensure that you receive full points for this assignment.
+
+Other notes:
+
+- You do not need an abstract on this poster.
+- Participation points will be determined by both your performance during the presentation, and by your group mate’s assessment of your participation level. 
