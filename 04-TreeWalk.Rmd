@@ -22,9 +22,7 @@ This lab is where you learn basic plant ID, and, more importantly, how you can f
 - **Printable field keys.** Take the one for your route:
   - [Wommack walk key](downloads/TreeKey_Wommack.docx) · [Littleman walk key](downloads/TreeKey_Littleman.docx) · [Grim walk key](downloads/TreeKey_Grim.docx)
   - [Full campus key](downloads/TreeKey_NAU.docx) — all 55 taxa, with a glossary and species index, in technical botanical terminology
-- [Tree walk datasheet (.csv)](downloads/tree_walk_datasheet.csv) — the field sheet; print it or keep it on a phone.
-- [Unknown plant log (.csv)](downloads/unknown_plant_log.csv)
-- [**Herbarium labels**](downloads/HerbariumLabel.docx) — print and cut out. One per specimen, filled in by hand. Only needed if you collect.
+- [**Herbarium labels**](downloads/HerbariumLabel.docx) — print and cut out. One per specimen, filled in by hand and affixed to the sheet. Only needed if you collect.
 
 ## Objectives
 
@@ -104,20 +102,18 @@ Your instructor will assign your group one of the three routes.
 
 ### Recording your data
 
-Keep it short. You have the answer in your pocket, so the record is not there to prove you found the name — it is there to show what you thought before you looked.
+Everything goes straight onto the worksheet — there is no separate datasheet to keep track of. Part A is a table with fifteen slots:
 
-```
-TreeNumber,PinName,Species,Confidence,Correct,Notes
-```
+| # | Pin name on the map | What you keyed it to | Confidence (H/M/L) | Right? |
+|---|---|---|---|---|
 
-- `TreeNumber` — 1, 2, 3… in the order you visit them
-- `PinName` — the pin's label on the map, so a TA can tell which tree you mean
-- `Species` — the scientific name you keyed to, or `UNK-1`
-- `Confidence` — `High`, `Medium` or `Low`, decided **before** anyone opens the pin
-- `Correct` — `Yes` or `No`, filled in *after* you open it
-- `Notes` — anything the key did not use, or why it went wrong
+- **Pin name**, so a TA can tell which tree you mean. The arboretum pins are labelled by common name, not numbered.
+- **Confidence** — High, Medium or Low, decided **before** anyone opens the pin.
+- **Right?** — filled in *after* you open it.
 
-You do not need to record whether the tree is native or planted. The key already marks every species **[N]** or **[P]**, so you can sort that out afterwards from your species list.
+Keep it short. You have the answer in your pocket, so the record is not there to prove you found the name. It is there to show what you thought before you looked.
+
+You do not need to record whether each tree is native or planted. The key already marks every species **[N]** or **[P]**, so you can sort that out afterwards from your finished list.
 
 **One claim to test.** People often say the bark furrows of old ponderosa pines smell of vanilla or butterscotch. Have each person in your group smell one independently, without saying anything, then compare answers. Whether or not you all agree is itself a result — and it is the same kind of observer disagreement you will quantify formally in the field methods lab.
 
@@ -443,17 +439,13 @@ This sounds trivial. It is the single highest-value thing you will do. A consist
 
 You will use the same convention in the field methods lab, where professional monitoring crews use codes like `TR1` and `SH2` for exactly this reason.
 
-### Fill in the unknown plant log
+### Record it properly on the worksheet
 
-Download: [Unknown plant log (.csv)](downloads/unknown_plant_log.csv)
+Part B of the worksheet is one unknown, recorded the way a botanist would need it. Pick the plant that would not key out — or, if everything keyed, the one you were least sure of — and fill in every row:
 
-For every unknown, record:
+code · date · collector · walk and where on it · where exactly · growth habit · leaf arrangement · leaf type · bark · fruit, cone, flower or bud · other characters · photo numbers · specimen collected · iNaturalist URL · proposed ID · **determiner** · **date determined**
 
-```
-UnknownCode,Date,Collector,Site,LocationNotes,GrowthHabit,LeafArrangement,
-LeafType,BarkNotes,FruitOrCone,OtherCharacters,PhotoNumbers,SpecimenCollected,
-iNatURL,ProposedID,Determiner,DeterminedDate
-```
+The last two stay blank until somebody identifies it. That is exactly why they are there: the record has to be able to outlive your guess.
 
 ### Photograph it properly
 
@@ -633,17 +625,20 @@ Then Richie's question, which is the point of the whole exercise:
 
 ## Assignment
 
-**Everything goes on one worksheet:** [`TreeWalk_Worksheet.docx`](downloads/TreeWalk_Worksheet.docx). Type into it and upload the file to Canvas.
+**Everything goes on one worksheet:** [`TreeWalk_Worksheet.docx`](downloads/TreeWalk_Worksheet.docx). Type into it and upload the file to Canvas. There is nothing else to hand in.
 
 **Part A — the walk**
 
-1. Your **tree table**: for each of at least ten trees, the pin name, the name you keyed it to, your confidence *recorded before you checked*, and whether you were right.
+1. Your **tree table** — fifteen slots, at least ten of them filled: the pin name, the name you keyed it to, your confidence *recorded before you checked*, and whether you were right.
 2. **Your accuracy, broken down by confidence.** How many High calls were right? How many Low calls turned out fine?
 3. **One tree you got wrong**, and which character misled you. If you got none wrong, take the one you found hardest and say what nearly went wrong.
-4. **Your unknown plant log** for anything that would not key out, with photographs.
-5. **One paragraph.** NAU's campus holds two tree communities at once — the one that grew here, and the one people planted. Using your own data — the key marks every species **[N]** or **[P]**, so sort your list that way — describe how they differ, and give one ecological consequence. (A place to start: which community is drought-adapted, which is not, and what that means for water and for the next few decades of Flagstaff summers.)
+4. **One paragraph.** NAU's campus holds two tree communities at once — the one that grew here, and the one people planted. Using your own data — the key marks every species **[N]** or **[P]**, so sort your list that way — describe how they differ, and give one ecological consequence. (A place to start: which community is drought-adapted, which is not, and what that means for water and for the next few decades of Flagstaff summers.)
 
-**Part B — the record**
+**Part B — your unknown plant**
+
+5. **The full record for one plant**, every row of the table filled in, plus the couplet that stopped you and the one observation that would settle it. Keep your photographs with the file.
+
+**Part C — the record**
 
 6. The five sections of the SEINet investigation from Part 3, including your **records-by-decade table**.
 
