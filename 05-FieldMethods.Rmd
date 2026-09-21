@@ -2,25 +2,69 @@
 
 > **Skills this lab builds.** *4DEE:* Ecology Practices → Fieldwork; Natural history; Working collaboratively; Quantitative reasoning and computational thinking. *BioSkills:* Process of Science → Study Design ("Execute protocols and accurately record measurements and observations"), Data Interpretation & Evaluation ("Describe sources of error and uncertainty in data"); Quantitative Reasoning → "Record, organize, and annotate simple data sets."
 
-This lab is about what you actually do once you are standing at a sampling point: how you take the measurements, and how you keep the numbers you write down from being quietly wrong. **Where** that point is, and why, is the other half of the problem — that is the ecological sampling lab, a few weeks from now. For today the point has been chosen for you, and part of the exercise is not moving it.
+What ecological data do you collect at a sampling site? There are many possibilities! In today's lab, we will learn several of the most common data collection methods practiced in the Southwest. The protocols presented here are from the *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, the method the Bureau of Land Management uses to assess rangeland condition across the western United States under its Assessment, Inventory and Monitoring (AIM) program. Millions of acres are managed using these data to adaptively manage resources. If you take a field job in this region, there is a real chance you will need to perform this protocols.
 
-The protocol here is not invented for teaching. It is **line-point intercept (LPI)** from the *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, the method the Bureau of Land Management uses to assess rangeland condition across the western United States under its Assessment, Inventory and Monitoring (AIM) program. Millions of acres are managed off the back of this method. If you take a field job in this region, there is a real chance you will run it for money.
+### Watch these before lab
+
+The BLM publishes short training videos for each core method. **Watch these three before you come — 28 minutes total.** They cover what every group does first.
+
+| Video | Length |
+|---|---|
+| [Intro to the core methods](https://vimeo.com/552514694/91cbc383c6) | 3:28 |
+| [Establishing a transect](https://vimeo.com/552514613/3a4bc132ba) | 6:01 |
+| [Line-point intercept](https://vimeo.com/552514737/872acfdfe9) | 18:50 |
+
+The other two — photo points and canopy gap — are linked at the top of their own sections below. Watch each one when you get there, or before lab if you have time.
+
+All of them, plus the manual and blank datasheets, live at <https://www.blm.gov/aim/training>.
+
+### Also before lab: look up your ecological site
+
+> Watch first: [**Ecological site identification**](https://vimeo.com/552514455/0be5d6bd48) (12:30)
+
+**About ten minutes at a computer.** A field crew never arrives at a plot cold — they have already pulled the soil map and worked out what kind of ground they expect to be standing on. You are going to do the same thing, for the same reason: it is what makes your field description a *test* of something rather than a description of nothing in particular.
+
+Your instructor will give you the plot coordinates.
+
+1. **Open Web Soil Survey** (<https://websoilsurvey.nrcs.usda.gov/app/>) and click the green *Start WSS* button.
+
+2. **Define your Area of Interest.** Zoom to the plot — searching the coordinates is faster than panning — and draw a small rectangle around it with the AOI tool.
+
+3. **Soil Map tab.** Read off the **map unit name and symbol** the plot falls in. If your rectangle covers more than one map unit, note which one the plot centre is actually in.
+
+4. **Soil Data Explorer tab → Soil Reports → Vegetative Productivity → Link to Ecological Site Descriptions in EDIT**, then **View Soil Report.** The table that opens lists each map unit with a link to its ecological site description in the last column.
+
+5. **Follow the link into EDIT** (the Ecosystem Dynamics Interpretive Tool, <https://edit.sc.egov.usda.gov/>). Record the **ecological site name and ID**.
+
+6. **Read two sections of the ESD.** In *General information*, find the reference state's plant community — the species it expects and roughly how much of each. Then find the **state-and-transition model**, usually drawn as boxes and arrows. Note the slope range, landform and hillslope position the site is described as occupying; you will check those against the ground.
+
+Fill in **Part A** of the [ecological site worksheet](downloads/ecological_site_worksheet.csv) — questions 1 and 2 — and bring it with you. Part B waits until you have your data.
+
+> **Notes for TAs.** Run this lookup yourself before assigning it and confirm the map unit **has** an ecological site assigned — not all do, and a group that lands on one without an ESD will stall. Fallbacks: use the nearest mapped unit that does have one and make the distance an explicit caveat; or browse [EDIT](https://edit.sc.egov.usda.gov/catalogs/esd) by MLRA and pick a plausible site for the area, naming it as an approximation. Tell students which one they are doing. EDIT moved from Jornada to NRCS hosting in April 2026, so older handouts pointing at `edit.jornada.nmsu.edu` will redirect at best.
 
 ### Downloads for this lab
 
-- [Specimen quality scoring sheet (.csv)](downloads/specimen_quality_datasheet.csv) — used in Part 5
-- [**Herbarium labels**](downloads/HerbariumLabel.docx) — print, cut out and fill in by hand for the voucher you press in Part 4. Same sheet as the tree walk lab.
+- [**Herbarium labels**](downloads/HerbariumLabel.docx) — print, cut out and fill in by hand for the voucher you press in Part 5. Same sheet as the tree walk lab.
 - [LPI datasheet (.csv)](downloads/lpi_datasheet.csv)
 - [Observer calibration datasheet (.csv)](downloads/calibration_datasheet.csv)
-- [R script for this lab](downloads/FieldMethods_LPI.R)
+- [Plot characterization sheet (.csv)](downloads/plot_characterization_datasheet.csv) — one per plot, filled in before you measure anything
+- [Photo point log (.csv)](downloads/photo_point_log.csv)
+- [Canopy gap datasheet (.csv)](downloads/gap_datasheet.csv)
+- [Unknown plant log (.csv)](downloads/unknown_plant_log.csv)
+- [Ecological site worksheet (.csv)](downloads/ecological_site_worksheet.csv) — **Part A before lab**, Part B after you have your data
+- [Specimen quality scoring sheet (.csv)](downloads/specimen_quality_datasheet.csv) — the checklist from the tree walk lab, for the voucher you press
+- [R script for this lab](downloads/FieldMethods_LPI.R) — **optional.** Nothing you turn in requires it; it is there if you want to see your own cover numbers.
 
 ## Objectives
 
-1. Establish a monitoring plot and run three LPI transects on it.
-2. Calculate foliar cover, bare ground, basal cover and species composition from point-intercept hits.
-3. Quantify the disagreement between observers, and decide whether it is small enough to trust your result.
-4. Collect, press and label a voucher specimen for a plant you cannot identify.
-5. Judge whether a herbarium specimen is good enough to be worth keeping.
+1. Establish a monitoring plot and run three AIM core methods on it: photo points, line-point intercept, and canopy gap intercept.
+2. Execute each protocol as written, and record data someone else could use.
+3. Identify the ecological site your plot sits on, and use it to say whether your cover numbers are good news or bad.
+4. Quantify the disagreement between observers, and decide whether it is small enough to trust your result.
+5. Collect, press and label a voucher specimen for a plant you cannot identify, to the standard set in the tree walk lab.
+6. Say what each method can and cannot tell you — which is what lets you choose among them when you design your own study.
+
+> **What this lab is for.** You are not here to produce a publishable assessment of this site. You are here to run the protocols with your own hands, so that when you design your own sampling scheme in the ecological sampling lab you are choosing between methods you have actually used rather than methods you have read about. That is why the turn-in is mostly datasheets.
 
 ## Why point intercept rather than "how much is covered?"
 
@@ -43,26 +87,119 @@ The standard AIM plot uses a **spoke design**: a permanent stake at plot centre,
 3. Pin flag — a thin, straight rod, marked so you can identify it
 4. Stakes for plot centre and transect ends; flagging
 5. Datasheets, clipboard, pencils (pencil, not pen — rain)
-6. Field guide or the key from the tree walk lab
-7. Newspaper and a plant press, or two boards and straps
+6. Camera or phone, and a photo identification board — a small whiteboard, or paper on a clipboard
+7. Clinometer (or a phone clinometer app) and a GPS unit or phone GPS
+8. Field guide or the key from the tree walk lab
+9. Newspaper and a plant press, or two boards and straps
 
 ### Procedure
 
 1. **Set plot centre.** Drive the centre stake in, leaving **less than 30 cm exposed**. Your instructor will have assigned the point using a randomisation method — do not move it because the vegetation looks more interesting three metres away. Nudging a plot toward the interesting vegetation is the most common way field data gets biased, and you will take that problem apart properly in the sampling lab in a few weeks. For now, take it on trust: the point is where it is precisely so that nobody's judgement chose it.
 
-2. **Choose the first azimuth at random**, then set the other two at +120° and +240° from it. Record all three bearings. (The manual specifies the 120° spacing; how you pick the first bearing is a local convention, so we make it random and we write it down.)
+2. **Choose the first azimuth at random**, then set the other two at +120° and +240° from it. Record all three bearings on the plot characterization sheet, along with your GPS coordinates, elevation, slope and aspect — you will need the coordinates again in Part 6. (The manual specifies the 120° spacing; how you pick the first bearing is a local convention, so we make it random and we write it down.)
 
 3. **Set transect start stakes 5 m out from centre** along each bearing. Run each tape from its start stake outward for **25 m**, and stake the far end.
 
 4. **Keep the tape taut, straight, and close to the ground** — but not so close that it drags on and disturbs the soil surface. A sagging tape puts your points somewhere other than where you think they are.
 
-5. **Photograph the plot** from centre along each transect before anyone walks on it.
+5. **Take your photo points** — before anyone walks on the plot. This is a core method in its own right, not a snapshot. See below.
+
+### Photo points
+
+> Watch first: [**Photo points**](https://vimeo.com/552515077/bdad2b09a8) (6:40)
+
+A photo point is a photograph taken from a recorded position, on a recorded bearing, with the date and plot written *in the frame* — so that someone standing in the same place in ten years can take the same photograph and lay the two side by side. The whole value is in the repeatability, which is why the position and the board matter more than the photograph does.
+
+1. **Write the board** for each transect: date, plot name, transect number, transect bearing.
+2. **Stand 5 m back from the transect start stake**, in line with the transect bearing, looking out along the tape.
+3. **Hold the board at the bottom centre of the frame**, with a little space below it, and take the photo. One per transect, three per plot.
+4. **Take them before any other measurement.** Once your group has walked the transect the vegetation no longer looks the way it did.
+
+A photograph will not tell you percent cover, and it is not trying to. What it does is catch the things your numbers were not designed to catch — a burn, a gully that opened, a shrub that died — and it is the only record on the plot that someone can interpret without knowing your protocol.
 
 > The 25 m three-transect spoke plot samples roughly **0.3 ha**. The 50 m version in the older edition of the manual samples about **1 ha**. Which one a project uses depends on how patchy the vegetation is and how big a change it needs to detect — which is a sample-size question — exactly the kind you will learn to answer for yourself in the sampling lab.
+
+### Describing the site
+
+Before you measure any vegetation, describe the **ground it is growing on**. This takes about ten minutes and it is the part students are most tempted to rush, because it feels like paperwork. It is not. Every field below is one of the things that *defines* an ecological site, which means this is the only independent evidence you will collect against which to check the map in Part 6.
+
+Put another way: you are not digging a pit, so **this description is the only field evidence you have.** Take it seriously in proportion.
+
+Fill in the topography and landform block of the plot characterization sheet. **Record what you actually see.** You looked up a candidate ecological site before lab, and it comes with expectations about slope and landform — do not let them fill in the blanks for you. If the ground disagrees with the map, that disagreement is the most useful thing you will collect today.
+
+#### Slope
+
+**What it is:** how steep the ground is, as a percentage — a 10% slope drops 10 m over 100 m travelled. Percent, not degrees; they are different numbers and mixing them up is a classic error.
+
+**How to take it:** sight through the clinometer from plot centre **in the direction water would run off the plot**, at a target the same height as your eye. If two people take it, average them.
+
+**Why it matters:** slope drives how fast water leaves and how much soil leaves with it.
+
+#### Aspect
+
+**What it is:** the compass direction the slope faces — again, the direction water runs *downhill*. Record it in degrees from magnetic north (so 180° is due south).
+
+**Why it matters, especially here:** in northern Arizona aspect is one of the strongest controls on what grows where. North-facing slopes get less direct sun, stay cooler, hold snow longer into spring and lose less water to evaporation; south-facing slopes are hotter and drier. Two plots a hundred metres apart on opposite aspects can carry genuinely different plant communities on the same soil. If your plot and a neighbouring group's differ, check your aspects before you conclude anything else.
+
+#### Slope shape
+
+**What it is:** whether the ground surface curves, and which way. Recorded **twice** — once looking down the slope, once looking across it.
+
+| Shape | What you see | What it does with water |
+|---|---|---|
+| **Concave** | Curves inward, like the inside of a bowl | **Collects** water, and the fine soil and litter that travel with it |
+| **Linear** | Straight — even, uniform, no curvature | Passes water through |
+| **Convex** | Curves outward, like the crest of a hill | **Sheds** water, and loses fines off the surface |
+
+Record both directions, e.g. *downslope linear, across-slope concave*.
+
+**Why it matters:** two plots at the same slope and aspect can be wet or dry depending only on this. A concave position is a water-gathering position and will usually carry more cover than the convex ground above it.
+
+#### Landform
+
+**What it is:** the kind of landscape feature the plot sits on. Choose one:
+
+| Landform | What it is |
+|---|---|
+| **Hill or mountain** | Ground that rises above the surrounding land, shaped mainly by erosion |
+| **Alluvial fan** | The fan-shaped apron of sediment where a channel leaves a confined slope and spreads out |
+| **Floodplain or basin** | Low flat ground beside a channel that water spreads across when the channel is full |
+| **Terrace** | A former floodplain, now abandoned above the active channel — flat tread with a steeper riser dropping off it |
+| **Flat or plain** | Extensive level to gently sloping ground with no strong relief |
+| **Playa** | A closed basin floor that ponds water and dries out, usually barren and fine-textured |
+| **Dunes** | Wind-deposited sand with its own relief |
+
+If you chose **terrace**, also record whether you are on the **tread** (the flat top) or the **riser** (the slope dropping off its edge).
+
+#### Hillslope position
+
+**What it is:** where on a hillslope you are, from top to bottom. The standard sequence:
+
+| Position | Where it is | What tends to be true there |
+|---|---|---|
+| **Summit** | The nearly level top | Stable, but exposed and often thin-soiled |
+| **Shoulder** | The convex break just below the summit, where the ground starts to fall away | **Sheds** water and soil; usually the most erosional position on the hill |
+| **Backslope** | The main, steepest, straight middle of the slope | Material moves *through* rather than accumulating |
+| **Footslope** | The concave apron at the base, where the slope flattens | **Collects** material coming down the hill |
+| **Toeslope** | The gently sloping ground at the very bottom, grading into the valley floor | Wettest and deepest-soiled of the five |
+
+Notice the pattern: **shoulders lose, footslopes and toeslopes gain.** That single fact explains a great deal of why vegetation changes as you walk down a hill, and you should expect your cover numbers to reflect it.
+
+#### Surface observations
+
+Three quick ones, all by eye:
+
+- **Surface rock fragments (%).** Roughly what proportion of the ground surface is rock rather than soil or plant. Rock armours the surface against erosion, and it also means less rooting volume.
+- **Erosion features.** Note what you can actually see: **rills** (small channels a few centimetres deep), **gullies** (channels deep enough to step into), **pedestals** (plants or rocks left standing on little columns as the soil around them washed away), or **water flow patterns** (fans of deposited litter and sediment showing where water ran).
+- **Disturbance.** Roads, trails, stumps, fire scars, grazing sign, construction. Write what you see, not what you infer.
+
+> **Definitions note for TAs.** The categories above are the AIM plot characterization sheet's own fields; the wording of the definitions is written for this course from the NRCS *Field Book for Describing and Sampling Soils* (v4.0) rather than quoted from it, so it is plainer than the official language and slightly less precise. If the printed AIM sheet you hand out offers a different or shorter list of options — its hillslope profile list in particular may be a subset — **use the sheet's list** and treat the table above as background.
 
 ---
 
 ## Part 2 — Line-point intercept
+
+> Watch first: [**Line-point intercept**](https://vimeo.com/552514737/872acfdfe9) (18:50) — required before lab.
 
 You will record **50 points per transect, spaced 0.5 m apart**, for **150 points on the plot**.
 
@@ -109,6 +246,8 @@ Three groups of columns:
 
 > **The one rule people break:** record each plant species **only once per pin drop**, the first time the pin intercepts it — even if the pin passes through the same plant three times on the way down. A species that got hit is a species that got hit; the number of times is not data here.
 
+**What this method cannot see.** A pin records a species only if it lands on one. A plant occupying 1% of the plot has roughly a 1% chance per drop, so across 150 points you will miss most of the uncommon species entirely — and uncommon is often exactly what a manager is required to know about. Line-point intercept is a good way to measure **abundance** and a poor way to establish **presence**. Keep an eye out as you walk for species that never turn up under the pin; you do not have to record them today, but noticing them is the point.
+
 ### Species codes
 
 Use USDA PLANTS codes (<https://plants.usda.gov>) — generally the first two letters of the genus plus the first two of the species: *Pinus ponderosa* → **PIPO**, *Bouteloua gracilis* → **BOGR**.
@@ -124,11 +263,45 @@ Use USDA PLANTS codes (<https://plants.usda.gov>) — generally the first two le
 | **SH1, SH2 …** | Shrub |
 | **TR1, TR2 …** | Tree |
 
-A consistently-applied placeholder is real data. You can go back and resolve **PF1** to a name later, and every point where you recorded it updates at once. "Some kind of daisy?" cannot be resolved by anyone, ever.
+A consistently-applied placeholder is real data — the same convention you used for `UNK-1` in the tree walk lab, with the growth form built into the code. You can go back and resolve **PF1** to a name later, and every point where you recorded it updates at once. "Some kind of daisy?" cannot be resolved by anyone, ever.
 
 ---
 
-## Part 3 — Observer calibration
+## Part 3 — Canopy gap intercept
+
+> Watch first: [**Canopy gap intercept**](https://vimeo.com/552514234/27a1e9c283) (15:35)
+
+Line-point intercept tells you **how much** plant cover there is. It cannot tell you **how that cover is arranged**, and those are different things. Two plots can both come in at 40% foliar cover — one as an even scatter of small plants, the other as dense clumps separated by three metres of open ground. Wind and water do not treat those two plots the same. Neither do seeds, and neither does fire.
+
+Gap intercept measures the arrangement. You run it on the **same three tapes**, so it costs you a walk rather than a setup.
+
+### Procedure
+
+1. **Walk the tape from 0 m outward**, watching the line rather than the ground beside it.
+2. **A gap begins where plant canopy ends, and continues until plant canopy begins again.** Only canopy that is *over the line* counts — a plant 10 cm to the side of the tape is not closing your gap.
+3. **Record the start and end position of each gap, in centimetres.** The gap length is the difference.
+4. **Gaps shorter than 25 cm are not recorded.** That is the manual's minimum: below it you are measuring the space between grass blades, not the structure of the plant community.
+5. Repeat for all three transects.
+
+### The decision you have to make before you start
+
+The official datasheet carries a line that says **circle one: perennial vegetation only, or annual and perennial vegetation.** That is not a formality. In a wet year, annuals can close most of the gaps on a site whose perennial structure has not changed at all — so the two choices can give you very different numbers off the same tape on the same afternoon.
+
+**Decide as a group, say it out loud, write it on the sheet.** Then, when you compare with another group, check that they made the same call before you conclude anything about the two plots.
+
+This is the same problem as the "did it touch?" rule in the calibration section, arriving from a different direction: **a protocol is only repeatable to the extent that its judgment calls have been written down.**
+
+### What you calculate
+
+Gap lengths are summed within size classes and expressed as a proportion of the line:
+
+$$\%\ \text{of line in gaps of a given class} = \frac{\text{sum of gap lengths in that class}}{\text{line length}} \times 100$$
+
+The standard classes are **25–50 cm, 51–100 cm, 101–200 cm, and greater than 200 cm.** Report all four. The largest class is usually the one managers care about, because a two-metre gap is where erosion starts and where an invasive seedling lands without competition.
+
+---
+
+## Part 4 — Observer calibration
 
 This is the part of the lab that most resembles a real field job and least resembles a normal class exercise. Before a crew's data is used, the crew has to demonstrate that its members produce the same numbers on the same ground.
 
@@ -149,6 +322,8 @@ The monitoring manual sets these explicitly:
 | Vegetation height | Counts in each height category differ by no more than **2** |
 | Species inventory | Number of species recorded differs by no more than **2** |
 
+Only the first row applies to what you ran today. The other two are in the table because calibration is not something done once for one method — **every method a crew runs has a standard it has to meet**, and a crew that passes on line-point intercept and fails on height is not a calibrated crew.
+
 Crews recalibrate **once a month, or whenever they move into a new ecosystem type, whichever comes first.**
 
 ### What to do with the answer
@@ -165,9 +340,11 @@ Notice that all three are fixable, and none of them are fixed by trying harder. 
 
 ---
 
-## Part 4 — Unknown plants and voucher specimens
+## Part 5 — Unknown plants and voucher specimens
 
 The placeholder codes only help if someone can eventually resolve them. That is what a **voucher specimen** is for: a physical, permanent record of exactly which plant you meant.
+
+The tree walk lab covered why a specimen works and what makes one worth keeping — reproductive material, both leaf surfaces, a relocatable locality, the determiner field. This part is the protocol for doing it on a plot you are in the middle of measuring, where the order of operations matters and the collecting is not free.
 
 1. **Check permission first.** Collecting is allowed here because your instructor arranged it for this site. On public land it usually requires a permit, and on private land it requires the landowner. This is not a formality — it is the first question a professional asks.
 
@@ -183,94 +360,71 @@ The placeholder codes only help if someone can eventually resolve them. That is 
 
    A herbarium label carries more than that — collector, precise locality, elevation, habitat, associated species — and the extra information is what makes a specimen useful to anyone beyond your project decades later. Use the printed [herbarium label](downloads/HerbariumLabel.docx) from the tree walk lab, fill in every field even though the minimum label does not demand it, and affix it to the mounted sheet. Every specimen in the Deaver Herbarium on this campus is useful today because someone wrote down more than the minimum.
 
-7. **Once dry**, mount the specimen. How to do that well — and how to tell whether you did — is Part 5.
+7. **Once dry**, mount the specimen to the standard from the tree walk lab: reproductive material easily viewed, one leaf turned over so the underside shows, a fragment packet on the sheet, and the plant filling the sheet without reaching the edges. Score it against the [same checklist](downloads/specimen_quality_datasheet.csv) you used there, in the `OWN` rows, before you hand it in — a specimen that would not survive that scoring is not going to survive a curator.
 
 ---
 
-## Part 5 — What makes a good herbarium specimen
+---
 
-> **This part is adapted from the teaching module *What makes a good herbarium specimen?* by Richie Hodel, Ph.D. (he/him), Director and Curator of the Deaver Herbarium and Assistant Professor of Biological Sciences at NAU, and is used here with his permission. The illustrations in the original module are credited to the Royal Botanic Gardens, Kew; Indiana University; and the California Botanical Garden.** This version is text and uses publicly available specimen images from SEINet in place of the original figures.
+## Part 6 — Ecological site: does the map match the ground?
 
-You have pressed a plant. Whether it was worth pressing is a separate question, and it has a real answer.
+> **Back indoors, at a computer.** Bring your plot characterization sheet, your LPI and gap results, and Part A of the worksheet you filled in before lab.
 
-The Deaver Herbarium's policy, quoted in the tree walk chapter, is that staff will identify a plant for you when **an acceptable specimen with locality information is donated to the collection.** The word doing the work in that sentence is *acceptable*. This part is what it means.
+You have a foliar cover number. Here is the problem with it: **40% cover is good news on one site and a symptom on another**, and nothing in your data can tell you which. A dry, shallow-soiled site may never have supported more than 30%. A deep-soiled meadow at 40% has lost most of what it had.
 
-### What a herbarium actually is
+Cover is not interpretable on its own. It is only interpretable against **what this particular piece of ground is capable of** — and that is what an ecological site is.
 
-A herbarium is a collection of plant specimens, preserved, labeled and stored so that they can be found again. Dried plants, used for research and teaching. It is **not** a place where herbs are grown, despite the name.
+An **ecological site** is a kind of land defined by the soil, climate and landform it has, grouped so that all the land in one ecological site produces the same kind of plant community and responds to disturbance the same way. Each one has a published **Ecological Site Description (ESD)**: a reference plant community with expected species and cover, and a **state-and-transition model** showing the other states that site can be in and what pushes it between them.
 
-### The five parts of a mounted specimen
+Before lab you found the site the **map** says you were standing on. You have now spent an afternoon on the actual ground. This part is where those two meet.
 
-| Part | What it is |
-|---|---|
-| **Plant specimen** | The pressed plant, ideally with reproductive material — flowers, fruits, cones or spores |
-| **Specimen label** | Location, date, and the people involved in collecting it |
-| **Fragment packet** | A small envelope on the sheet holding fragile or broken material |
-| **Herbarium stamp** | The institution's stamp, with a specimen number or barcode |
-| **Mounting paper** | 11 × 17 inches, archival — acid-free, 100% cotton |
+### What we are not doing, and why it matters
 
-### Who is this for?
+The full AIM protocol confirms the ecological site by digging a **soil pit 50 cm across and at least 70 cm deep**, describing every horizon, texturing the soil by hand, and photographing the profile. We are not doing that — it needs permission, a shovel, and an hour we do not have.
 
-Not you. That is the point, and it changes what counts as good.
+So the map's claim stands or falls on your **surface** description alone. **That is a real limitation and you should name it in your answer.** Soil maps are drawn at a scale where a single mapped polygon routinely contains more than one soil, so the ecological site you looked up is a **hypothesis about your plot, not a fact about it.** The pit is how a crew tests that hypothesis properly; your slope, aspect, landform and hillslope position are how you test it partially.
 
-A specimen you make today may be pulled out of a cabinet in eighty years by a taxonomist describing a new species, a conservation biologist tracking a rare or invasive plant, an ecologist reconstructing a distribution, or someone from the community who needs a plant identified. **None of them can ask you what you meant.** Everything they need has to be on the sheet.
+You have met this shape before. In the tree walk lab an identification was a hypothesis you could defend and someone could later re-test. This is the same thing one level up: the map proposes, the ground disposes.
 
-That is the whole standard, and every rule below follows from it.
+### Part B of the worksheet
 
-### What matters most
+Questions 1 and 2 you answered before lab. These are the rest.
 
-**Reproductive material.** Flowers, fruits, cones, spores and seeds are what most keys run on, and a specimen without them often cannot be identified at all. They need to be **easily viewed on the sheet** — not buried under a leaf, not face-down.
+3. **How does your plot compare?** Put your LPI foliar cover and your three most abundant species next to the reference community's. Do not smooth over the differences — the interesting result is a mismatch.
 
-**Vegetative material.** Both the **upper and lower leaf surfaces** should be visible — mount some leaves face up and turn at least one over, because half of leaf characters are on the underside. Include roots and stems.
+4. **Which state on the state-and-transition model does your plot best match?** Name the state and give your evidence from your own data. If you cannot tell from what you collected, say that instead — and say what you would have needed to measure.
 
-**Label data.** Detailed enough that the place can be found again: GPS point, elevation, habitat and soil, date and collector. Compare this against the monitoring manual's minimum from step 6 — plot, unknown ID, date. The minimum ties the specimen to *your* dataset. The herbarium label ties it to *everyone's*.
+5. **Does your own site description agree with the ecological site?** The ESD gives a slope range, a landform and a hillslope position for its site. Put yours beside them. If they disagree, that is a real result and worth more than agreement — say which is more likely to be wrong, the map or your reading of the ground, and why.
 
-### Making it last
+6. **What would the soil pit have let you check that your surface description could not?** One or two sentences, in your own words.
 
-**Archival materials.** Museum-quality throughout: 100% cotton, acid-free paper; linen-based tapes and strings. **Labels printed with a laser printer or photocopier — never water-based ink**, which will run the first time the sheet meets humidity.
-
-**Mounting.**
-
-- Leave a **1 inch margin** around the sheet.
-- **Always include a fragment packet**, even if it is empty when you mount it. Things fall off.
-- Use **floss** to secure awkward or bulky material, **linen tape** for smaller or delicate pieces.
-- Position the plant so it **fills most of the sheet** but **stays away from the edges** — material at the edge gets crushed and torn every time the sheet is handled.
-
-### Exercise A — Score your own
-
-Score the specimen you pressed against the checklist in [`specimen_quality_datasheet.csv`](downloads/specimen_quality_datasheet.csv). One row per criterion, scored 0, 1 or 2:
-
-- **0** — absent or unusable
-- **1** — present but compromised
-- **2** — meets the standard
-
-Be hard on it. A specimen you scored honestly at 9 out of 20 is more useful to you than one you talked yourself into calling fine.
-
-### Exercise B — Good or bad?
-
-Now score three specimens you did not make, using real digitized sheets.
-
-1. Go to SEINet (<https://swbiodiversity.org/seinet/index.php>) and search for a species you collected or keyed this semester.
-2. Open three records **with specimen images**, from three different collectors and, if you can, three different decades.
-3. Score each one against the same checklist. You cannot assess the paper stock from a photograph — score what you can see and mark the rest `NA`.
-
-Then answer:
-
-- Which was the best, and which single criterion separated it from the worst?
-- Did the older or the newer specimens score higher? Would you have predicted that?
-- Find one specimen where **you can read the label but could not relocate the site** from it. What is missing?
-
-### Exercise C — Swap
-
-Trade your pressed specimen with another group and score theirs. Then compare their score of your specimen against your own score of it.
-
-You have done this before, twice — the observer calibration in Part 3, and the confidence rating in the tree walk. Same lesson each time: **the gap between how good you thought it was and how good somebody else thought it was is data.** If the two of you disagree by more than 3 points overall, find the criterion you read differently and work out which reading the herbarium would use.
-
-> **Specimens students make do end up in this collection.** The Deaver Herbarium accepts donated material, and a well-made student specimen with proper locality data is a real contribution — roughly 130,000 sheets are there because people who were not professionals wrote down more than the minimum. Yours is not a practice exercise that gets thrown away unless you decide it is.
+7. **Does your gap data fit the story?** Look at the largest gap class and ask whether it is consistent with the state you chose in question 4.
 
 ---
 
-## Analysis
+## The rest of the core methods
+
+You ran three field methods and identified your ecological site. A real AIM crew runs the whole core set on the same plot, and the ones you did not run are not harder — they are just more time than one lab period has.
+
+**These are here to practice if you want to.** Nothing below is assigned and none of it is graded. But if you are thinking about a field job in this region, or you want a method for your own study at Sinclair Wash that measures something the three you ran cannot, this is where to look. Each video is short, and every protocol is written out in the manual.
+
+| Method | What it measures that today's three don't | Time on a 3-transect plot | Video |
+|---|---|---|---|
+| **Plant species inventory** | Which species are *present*, including the uncommon ones the pins miss. Gives richness, and invasive and rare-plant presence/absence | 0.25 h | [4:02](https://vimeo.com/552515168/07d8e6f618) |
+| **Vegetation height** | Vertical structure — 30 points on the transects you have already laid out | 0.25–0.5 h | [8:06](https://vimeo.com/552515477/9eae8b6c28) |
+| **Basal gap intercept** | Gaps between plant *bases* rather than canopies. Far less seasonal than canopy gap, and it is what erosion models actually want | 0.1–1.0 h | covered in the [canopy gap video](https://vimeo.com/552514234/27a1e9c283) |
+| **Soil stability test** | Whether the soil itself holds together when it gets wet — the only measurement in the set that is about soil rather than plants | 0.4–0.6 h, 18 samples run in parallel | [16:18](https://vimeo.com/552515274/a16679598c) |
+| **Soil hand texturing** | Soil texture by feel — sand, silt and clay fractions, without a lab | 10:50 of video, then practice | [10:50](https://vimeo.com/1106516077/0979e1a885?fl=pl&fe=cm) |
+
+**The one worth a second look is soil stability.** It pairs directly with the canopy gap data you collected. Large gaps tell you where water and wind get a run at bare ground; aggregate stability tells you whether that ground comes apart when they do. Either number alone understates the risk; together they are the erosion story. The test runs 18 samples at once in a well kit, so the elapsed time is mostly waiting.
+
+It is also the method that would let you answer question 6 on the ecological site worksheet properly, rather than by inference.
+
+Blank datasheets and the full protocol for every method are at <https://www.blm.gov/aim/training>. If you want to run one of these on your own time, ask your instructor — the plot stakes stay in the ground.
+
+## Analysis — optional
+
+**You do not have to do this, and none of it is graded.** Today was about running the protocols. But you collected real data, and if you want to see what it says, the script is there.
 
 Open `FieldMethods_LPI.R`. It calculates, from your 150 points:
 
@@ -292,22 +446,36 @@ Two things to notice before you run it.
 
 ## Assignment
 
-Turn in to your TA:
+Most of what you turn in is the raw record. That is deliberate: a field crew is judged on whether its datasheets are usable, not on whether it did the arithmetic.
 
-1. Your plot map: centre location, the three bearings, and the date.
-2. Foliar cover, bare ground, basal cover, and the composition of the three most abundant species, with your figure.
-3. **Your calibration result** — the spread among observers for each indicator, whether you met the 10-point standard, and for whichever indicator was worst, your best explanation of what caused the disagreement.
-4. Your unknown-plant list: placeholder codes, what you recorded on the tracking sheet, and which ones you were able to resolve to a species.
-5. **One paragraph.** You now have a cover estimate and a measure of how much observers disagree about it. Suppose a land manager wanted to know whether cover on this site had changed by 5% since last year. Could your data answer that question? Justify your answer using your calibration numbers, not your intuition.
+**1. Your datasheets**, complete and legible, for every method you ran:
 
-Question 5 is the one that matters. A number with no error estimate attached cannot be compared to anything, and a great deal of monitoring money is spent on data that turns out not to be able to answer the question it was collected for.
+| Sheet | What makes it complete |
+|---|---|
+| Plot characterization | Coordinates, elevation, and the full site description — slope, aspect, both slope shapes, landform, hillslope position, surface observations — plus all three bearings and your gap vegetation rule |
+| Photo point log | Three rows, three photographs attached, board readable in each |
+| Line-point intercept | All 150 points |
+| Canopy gap | All three transects |
+| Unknown plant log | One row per placeholder code, with location notes and photo numbers |
+| Ecological site worksheet | All seven questions |
+
+A datasheet with blanks in it is not finished. If a cell is genuinely empty, write why.
+
+**2. Your calibration result** — the spread among observers for each indicator, whether you met the 10-point standard, and for whichever indicator was worst, your best explanation of what caused the disagreement.
+
+**3. One paragraph — the method-selection question.** This is the part that matters.
+
+> You ran three methods today, on one plot, and there are seven more in the AIM core set you did not run. In a few weeks you will design your own sampling scheme at Sinclair Wash. **Pick the method you would build that study around, name the question it answers, and say what it will fail to tell you — then name one method you did *not* run today that you would add to cover the gap.**
+
+Answer it from what happened to you today — how long each method took, where your group disagreed, what you could see standing on the plot that none of the three methods wrote down, and what the ecological site description told you that your own numbers could not — not from the descriptions in this chapter. The honest version of this paragraph is worth more than a correct one.
+
+> **One thing to carry forward.** Your calibration numbers say how much two people disagree about the same ground. Any change you later claim to detect — between years, between treatments, between sites — has to be bigger than that disagreement before it means anything. A number with no error estimate attached cannot be compared to anything, and a great deal of monitoring money is spent on data that turns out not to be able to answer the question it was collected for.
 
 ---
 
 ## Sources
 
-Hodel, R. *What makes a good herbarium specimen?* Teaching module, Deaver Herbarium, Northern Arizona University. Used and adapted with permission; figures in the original are credited to the Royal Botanic Gardens, Kew; Indiana University; and the California Botanical Garden.
-
+BLM Assessment, Inventory and Monitoring (AIM) training materials — the core-method videos, the manual and blank datasheets: <https://www.blm.gov/aim/training>
 
 Herrick, J.E., J.W. Van Zee, S.E. McCord, E.M. Courtright, J.W. Karl, and L.M. Burkett. *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, 2nd ed., Volume I: Core Methods. USDA-ARS Jornada Experimental Range, Las Cruces, New Mexico.
 
@@ -316,5 +484,8 @@ Herrick, J.E., J.W. Van Zee, S.E. McCord, E.M. Courtright, J.W. Karl, and L.M. B
 - Volume I, Quick Start (1st edition): <http://jornada.nmsu.edu/files/Quick_Start.pdf>
 - Volume II, design and interpretation: <https://jornada.nmsu.edu/files/Volume_II.pdf>
 - USDA PLANTS database: <https://plants.usda.gov>
+- NRCS, *Field Book for Describing and Sampling Soils*, version 4.0 — the source for the slope shape, hillslope position and landform categories: <https://www.nrcs.usda.gov/sites/default/files/2025-01/Field-Book-for-Describing-and-Sampling-Soils-v4.pdf>
+- Web Soil Survey: <https://websoilsurvey.nrcs.usda.gov/app/>
+- EDIT, the Ecosystem Dynamics Interpretive Tool: <https://edit.sc.egov.usda.gov/>
 
-> **A note on this source:** confirm the edition year on the printed title page before citing. The 2nd edition is widely cited as 2017; the PDF linked above is a February 2020 revision of it.
+> **A note on these sources:** confirm the edition year on the printed title page before citing. The 2nd edition is widely cited as 2017; the PDF linked above is a February 2020 revision of it. The AIM training videos are unlisted Vimeo videos published by DOI-BLM Media Services; the links here work for anyone with them, but if one stops resolving, the training page above is the stable route to all of them.

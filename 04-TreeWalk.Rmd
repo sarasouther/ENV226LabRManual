@@ -11,8 +11,8 @@ This lab is where you learn basic plant ID, and, more importantly, how you can f
 | | What happens | When |
 |---|---|---|
 | **Part 1 — The arboretum walk** | Your group walks one of the three arboretum routes, finding each tree on the map and keying it out. | Always |
-| **Part 2 — When you can't identify something** | Documenting a plant you *couldn't* name, well enough that somebody else could name it later. | Always |
-| **Part 3 — The herbarium record** | A SEINet investigation of what herbarium records can and cannot tell you about where a plant grows. | Always |
+| **Part 2 — When you can't identify something** | Documenting a plant you *couldn't* name, well enough that somebody else could name it later — and what separates a specimen worth keeping from one that isn't. | Always |
+| **Part 3 — The herbarium record** | A SEINet investigation of what herbarium records can and cannot tell you about where a plant grows, plus scoring real specimens against the standard from Part 2. | Always |
 
 **Parts 1 and 3 are what you hand in**, on one worksheet. There is also an **extra-credit option**: Adair Patterson, who curates the arboretum, leads guided walks, and you can sign up to go on one. Ask your instructor.
 
@@ -23,13 +23,15 @@ This lab is where you learn basic plant ID, and, more importantly, how you can f
   - [Wommack walk key](downloads/TreeKey_Wommack.docx) · [Littleman walk key](downloads/TreeKey_Littleman.docx) · [Grim walk key](downloads/TreeKey_Grim.docx)
   - [Full campus key](downloads/TreeKey_NAU.docx) — all 55 taxa, with a glossary and species index, in technical botanical terminology
 - [**Herbarium labels**](downloads/HerbariumLabel.docx) — print and cut out. One per specimen, filled in by hand and affixed to the sheet. Only needed if you collect.
+- [**Specimen quality scoring sheet**](downloads/specimen_quality_datasheet.csv) — the checklist you score specimens against in Part 3.
 
 ## Objectives
 
 1. Use a dichotomous key to identify trees in the field, and record the character states that got you there.
 2. Recognize where keys fail, and what to do when they do.
 3. Document an unknown plant well enough that someone else could identify it.
-4. Compare the tree community NAU planted with the tree community that grew here.
+4. Judge whether a herbarium specimen is good enough to be worth keeping.
+5. Compare the tree community NAU planted with the tree community that grew here.
 
 ## Background
 
@@ -488,6 +490,53 @@ Press it flat between sheets of newspaper, under weight, and change the paper if
 >
 > Collect a weed, not a tree, and check with your instructor before you cut.
 
+### What makes a specimen worth keeping
+
+> **This section is adapted from the teaching module *What makes a good herbarium specimen?* by Richie Hodel, Ph.D. (he/him), Director and Curator of the Deaver Herbarium and Assistant Professor of Biological Sciences at NAU, and is used here with his permission. The illustrations in the original module are credited to the Royal Botanic Gardens, Kew; Indiana University; and the California Botanical Garden.** This version is text, and uses publicly available specimen images from SEINet in place of the original figures.
+
+You have pressed a plant. Whether it was worth pressing is a separate question, and it has a real answer.
+
+The Deaver Herbarium's policy — you meet it in full in Part 3 — is that staff will identify a plant for you when **an acceptable specimen with locality information is donated to the collection.** The word doing the work in that sentence is *acceptable*. This is what it means.
+
+#### The five parts of a mounted specimen
+
+| Part | What it is |
+|---|---|
+| **Plant specimen** | The pressed plant, ideally with reproductive material — flowers, fruits, cones or spores |
+| **Specimen label** | Location, date, and the people involved in collecting it |
+| **Fragment packet** | A small envelope on the sheet holding fragile or broken material |
+| **Herbarium stamp** | The institution's stamp, with a specimen number or barcode |
+| **Mounting paper** | 11 × 17 inches, archival — acid-free, 100% cotton |
+
+#### Who is this for?
+
+Not you. That is the point, and it changes what counts as good.
+
+A specimen you make today may be pulled out of a cabinet in eighty years by a taxonomist describing a new species, a conservation biologist tracking a rare or invasive plant, an ecologist reconstructing a distribution, or someone from the community who needs a plant identified. **None of them can ask you what you meant.** Everything they need has to be on the sheet.
+
+That is the whole standard, and every rule below follows from it.
+
+#### What matters most
+
+**Reproductive material.** Flowers, fruits, cones, spores and seeds are what most keys run on, and a specimen without them often cannot be identified at all. They need to be **easily viewed on the sheet** — not buried under a leaf, not face-down.
+
+**Vegetative material.** Both the **upper and lower leaf surfaces** should be visible — mount some leaves face up and turn at least one over, because half of leaf characters are on the underside. Include roots and stems where the plant allows it; on a woody twig, keep the leaves attached in their natural arrangement.
+
+**Label data.** Detailed enough that the place can be found again: GPS point, elevation, habitat and soil, date and collector. That is the next section, and it is where most specimens fail.
+
+#### Making it last
+
+**Archival materials.** Museum-quality throughout: 100% cotton, acid-free paper; linen-based tapes and strings. **Labels printed with a laser printer or photocopier — never water-based ink**, which will run the first time the sheet meets humidity.
+
+**Mounting.**
+
+- Leave a **1 inch margin** around the sheet.
+- **Always include a fragment packet**, even if it is empty when you mount it. Things fall off.
+- Use **floss** to secure awkward or bulky material, **linen tape** for smaller or delicate pieces.
+- Position the plant so it **fills most of the sheet** but **stays away from the edges** — material at the edge gets crushed and torn every time the sheet is handled.
+
+> **Specimens students make do end up in this collection.** The Deaver Herbarium accepts donated material, and a well-made student specimen with proper locality data is a real contribution — roughly 130,000 sheets are there because people who were not professionals wrote down more than the minimum. Yours is not a practice exercise that gets thrown away unless you decide it is.
+
 ### What goes on the label
 
 Download: [**Herbarium labels to print and fill in by hand**](downloads/HerbariumLabel.docx) — a worked example on the first page, blanks to cut out on the second.
@@ -522,7 +571,7 @@ At the start you were told an identification is a hypothesis you tested against 
 
 ### The Deaver Herbarium
 
-NAU has its own herbarium, or a collection of preserved plant specimens and related data used for scientific study.
+NAU has its own herbarium, or a collection of preserved plant specimens and related data used for scientific study — dried plants, labelled and stored so that they can be found again. It is not, despite the name, a place where herbs are grown.
 
 The **Deaver Herbarium** was founded in **1930** and is named for **Chester "Danny" Deaver**, its first curator. It holds roughly **130,000 specimens**, the oldest from the **1880s**. Its international code is **ASC** — assigned back when NAU was Arizona State College, which is a small piece of institutional history hiding in a four-letter code.
 
@@ -621,6 +670,36 @@ Then Richie's question, which is the point of the whole exercise:
 
 > **Do the dots on the map represent the plant's true distribution — or where botanists have collected it?**
 
+### 6. Good or bad? Scoring real specimens
+
+You have the standard from Part 2. Now use it on specimens you did not make.
+
+Score three real digitized sheets against the checklist in [`specimen_quality_datasheet.csv`](downloads/specimen_quality_datasheet.csv). One row per criterion, scored 0, 1 or 2:
+
+- **0** — absent or unusable
+- **1** — present but compromised
+- **2** — meets the standard
+
+1. In SEINet, search for a species you collected or keyed this semester.
+2. Open three records **with specimen images**, from three different collectors and, if you can, three different decades.
+3. Score each one in the `SEINET-1`, `SEINET-2` and `SEINET-3` rows of the sheet, and note the catalogue number and collector for each. You cannot assess the paper stock from a photograph — score what you can see and mark the rest `NA`.
+
+Then answer:
+
+- Which was the best, and which single criterion separated it from the worst?
+- Did the older or the newer specimens score higher? Would you have predicted that?
+- Find one specimen where **you can read the label but could not relocate the site** from it. What is missing?
+
+### If your group collected a specimen
+
+Skip this section if you did not collect. If you did, do it once your specimen is dry.
+
+**Score your own.** Run the same checklist over the specimen you pressed, using the `OWN` rows of the scoring sheet. Fifteen criteria at 0–2 gives a maximum of 30. Be hard on it: a specimen you scored honestly at 14 out of 30 is more useful to you than one you talked yourself into calling fine.
+
+**Then swap.** Trade specimens with another group, score theirs in the `SWAP` rows, and compare their score of your specimen against your own score of it.
+
+You did a version of this earlier today with the confidence ratings on your tree table, and you will do it again in the field methods lab, where observer disagreement gets quantified formally. Same lesson each time: **the gap between how good you thought it was and how good somebody else thought it was is data.** If the two of you disagree by more than 3 points overall, find the criterion you read differently and work out which reading the herbarium would use.
+
 ---
 
 ## Assignment
@@ -641,15 +720,21 @@ Then Richie's question, which is the point of the whole exercise:
 **Part C — the record**
 
 6. The five sections of the SEINet investigation from Part 3, including your **records-by-decade table**.
+7. **Your three specimen scores** from section 6, and the single criterion that separated the best sheet from the worst.
+
+**If your group collected and pressed a specimen**, add:
+
+8. **Your own specimen's score**, the other group's score of it, and — if the two disagreed by more than 3 points — the criterion you read differently and which reading the herbarium would use.
 
 **If you went on the guided walk for extra credit**, add:
 
-7. **One character the guide used that is not in this manual's key**, why it works, and the couplet you would write to capture it.
+9. **One character the guide used that is not in this manual's key**, why it works, and the couplet you would write to capture it.
 
 ---
 
 ## Sources and further reading
 
+- Hodel, R. *What makes a good herbarium specimen?* Teaching module, Deaver Herbarium, Northern Arizona University. Used and adapted with permission; figures in the original are credited to the Royal Botanic Gardens, Kew; Indiana University; and the California Botanical Garden.
 - NAU Arboretum tree walks and interactive map: <https://in.nau.edu/greenhouse/nau-arboretum-tree-walks/>
 - NAU Network video channel, which has carried coverage of the Arbor Day walk: <https://www.youtube.com/@NAUnetwork>
 - Arizona Department of Forestry and Fire Management, *Arizona Urban Tree Map field guide, Interior West*: <https://dffm.az.gov/sites/default/files/files/forestry/ucf/azutm/AZUTM_tree_guide_interior_west_2015_04_28.pdf>
