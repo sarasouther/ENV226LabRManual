@@ -12,7 +12,7 @@ This lab is where you learn basic plant ID, and, more importantly, how you can f
 |---|---|---|
 | **Part 1 — The arboretum walk** | Your group walks one of the three arboretum routes, finding each tree on the map and keying it out. | Always |
 | **Part 2 — When you can't identify something** | Documenting a plant you *couldn't* name, well enough that somebody else could name it later — and what separates a specimen worth keeping from one that isn't. | Always |
-| **Part 3 — The herbarium record** | A SEINet investigation of what herbarium records can and cannot tell you about where a plant grows, plus scoring real specimens against the standard from Part 2. | Always |
+| **Part 3 — The herbarium record** | Testing your identification against real specimen records in SEINet, and what those records can and cannot tell you. | Always |
 
 **Parts 1 and 3 are what you hand in**, on one worksheet. There is also an **extra-credit option**: Adair Patterson, who curates the arboretum, leads guided walks, and you can sign up to go on one. Ask your instructor.
 
@@ -470,6 +470,8 @@ An observation becomes **Research Grade** when it is "verifiable" — has a date
 
 Research Grade observations with an open licence are exported to GBIF, the global biodiversity database, roughly once a week.
 
+**What you want out of this is a name to test** — a candidate, not a verdict. Write down whatever iNaturalist and its identifiers suggest, even if you doubt it, because in Part 3 you are going to take that name to the specimen record and find out whether it holds up.
+
 ### Route two: a specimen
 
 The other route is to bring back a piece of the plant. When working on botanical projects, you will often be asked to collect a voucher specimen - a preserved biological specimen that serves as a permanent, verifiable physical record of an organism used in a scientific study or survey. 
@@ -478,17 +480,44 @@ You cannot press a tree. What you press is a **twig short enough to lie flat wit
 
 Standard practice before you cut anything:
 
-- **Get permission.** On campus, ask — the arboretum is a curated collection and its specimens are not yours to prune. On Coconino National Forest, National Park Service land or tribal land, collecting generally requires a permit. Your instructor will tell you what applies where you are.
+- **Get permission.** On campus, we will walk to an unmanaged public space. On Coconino National Forest, National Park Service land or tribal land, collecting generally requires a permit. Your instructor will tell you what applies where you are.
 - **Take the smallest adequate piece**, from a part of the plant that is representative of the whole.
 - **Write the label at the moment you collect it**, not later. 
-
-Press it flat between sheets of newspaper, under weight, and change the paper if it goes damp. Woody stems need more pressure and longer drying than herbaceous plants.
 
 > **Where to collect.** The arboretum is a curated collection and nothing in it is yours to cut. If you are collecting a specimen for this lab, go to this spot instead — landscaped ground, where the plant you want is a weed the grounds crew would pull anyway:
 >
 > **<https://maps.app.goo.gl/MrKVwk9oosZAnF179>**
 >
 > Collect a weed, not a tree, and check with your instructor before you cut.
+
+### Label it, before you walk away
+
+Download: [**Herbarium labels to print and fill in by hand**](downloads/HerbariumLabel.docx) — a worked example on the first page, blanks to cut out on the second.
+
+**Fill the label in standing over the plant, not back at the bench.** Almost everything on it is information that exists only here — the habitat, what was growing around it, how tall it was, whether anyone planted it. The walk back is long enough to lose most of it, and a label finished from memory is a label with quiet guesses in it.
+
+A field label carries the minimum: **code, date, collector, locality**. A full herbarium label carries considerably more, and the extra fields are what make a specimen useful to someone who never met you:
+
+| Field | Why it's there |
+|---|---|
+| Scientific name, with family and authority | The identification itself |
+| **Determiner and date determined** | *Who* made this identification, and *when* |
+| Collector, other collectors, collection number | Who to ask; how to find the collector's field notes |
+| Date collected | Phenology, and which year's conditions produced this plant |
+| Locality — country, state, county, verbal description, lat/long, elevation | So someone can return to the exact spot |
+| Habitat and associated species | The ecological context that a pressed twig destroys |
+| Abundance / frequency | Whether it was one tree or a thousand |
+| Plant description — habit, height, colour, scent | Everything pressing and drying takes away |
+| Wild or cultivated | Whether this is evidence of a range, or of a gardener |
+
+That table is the answer to "why doesn't a photo do the job." A photo captures the plant. A labelled specimen captures the plant *plus the circumstances of its observation*, in a form someone can re-examine in a hundred years.
+
+### Press it
+
+Press it flat between sheets of newspaper, under weight, and change the paper if it goes damp. Woody stems need more pressure and longer drying than herbaceous plants.
+
+**Put the label in the press with the specimen, now.** A pressed plant and its label travelling separately is the single most common way a specimen becomes worthless — not lost, just anonymous. If you have not finished the label, finish it before the plant goes in.
+
 
 ### What makes a specimen worth keeping
 
@@ -522,7 +551,7 @@ That is the whole standard, and every rule below follows from it.
 
 **Vegetative material.** Both the **upper and lower leaf surfaces** should be visible — mount some leaves face up and turn at least one over, because half of leaf characters are on the underside. Include roots and stems where the plant allows it; on a woody twig, keep the leaves attached in their natural arrangement.
 
-**Label data.** Detailed enough that the place can be found again: GPS point, elevation, habitat and soil, date and collector. That is the next section, and it is where most specimens fail.
+**Label data.** Detailed enough that the place can be found again: GPS point, elevation, habitat and soil, date and collector. You wrote yours in the field two sections ago; this is the standard it has to meet, and it is where most specimens fail.
 
 #### Making it last
 
@@ -536,26 +565,6 @@ That is the whole standard, and every rule below follows from it.
 - Position the plant so it **fills most of the sheet** but **stays away from the edges** — material at the edge gets crushed and torn every time the sheet is handled.
 
 > **Specimens students make do end up in this collection.** The Deaver Herbarium accepts donated material, and a well-made student specimen with proper locality data is a real contribution — roughly 130,000 sheets are there because people who were not professionals wrote down more than the minimum. Yours is not a practice exercise that gets thrown away unless you decide it is.
-
-### What goes on the label
-
-Download: [**Herbarium labels to print and fill in by hand**](downloads/HerbariumLabel.docx) — a worked example on the first page, blanks to cut out on the second.
-
-A field label carries the minimum: **code, date, collector, locality**. A full herbarium label carries considerably more, and the extra fields are what make a specimen useful to someone who never met you:
-
-| Field | Why it's there |
-|---|---|
-| Scientific name, with family and authority | The identification itself |
-| **Determiner and date determined** | *Who* made this identification, and *when* |
-| Collector, other collectors, collection number | Who to ask; how to find the collector's field notes |
-| Date collected | Phenology, and which year's conditions produced this plant |
-| Locality — country, state, county, verbal description, lat/long, elevation | So someone can return to the exact spot |
-| Habitat and associated species | The ecological context that a pressed twig destroys |
-| Abundance / frequency | Whether it was one tree or a thousand |
-| Plant description — habit, height, colour, scent | Everything pressing and drying takes away |
-| Wild or cultivated | Whether this is evidence of a range, or of a gardener |
-
-That table is the answer to "why doesn't a photo do the job." A photo captures the plant. A labelled specimen captures the plant *plus the circumstances of its observation*, in a form someone can re-examine in a hundred years.
 
 ### The determiner field, and why this chapter has been about it all along
 
@@ -603,102 +612,41 @@ From SEINet, Deaver's records flow to **GBIF** (<https://www.gbif.org>), the glo
 
 As of 2026, GBIF holds roughly **643 million plant occurrence records**. About **21% are preserved specimens** — physical plants somebody collected, pressed, labelled and filed. About **75% are human observations**, overwhelmingly from iNaturalist. The Deaver Herbarium's own 133,000 records are **essentially 100% preserved specimens**.
 
-### The SEINet investigation
+### Test your guess
 
-> **This activity was written by Richie Hodel, Ph.D. (he/him), Director and Curator of the Deaver Herbarium and Assistant Professor of Biological Sciences at NAU, and is used and adapted here with his permission.** 
+You now have a candidate name. It came from the key, or from iNaturalist, or from the two of them disagreeing — and either way it is still a **hypothesis**. This is where you test it against the evidence base, which is the whole reason the evidence base exists.
 
-Work in SEINet (<https://swbiodiversity.org/seinet/index.php>). Use the occurrence search, and for each species open both the record list and the map.
+> **The question that closes this section is adapted from a teaching exercise by Richie Hodel, Ph.D. (he/him), Director and Curator of the Deaver Herbarium and Assistant Professor of Biological Sciences at NAU, and is used here with his permission.**
 
-### Your species
+Work in SEINet (<https://swbiodiversity.org/seinet/index.php>).
 
-| Species | Why it's on the list |
-|---|---|
-| ***Pinus ponderosa*** | Everywhere around Flagstaff, and everybody drives past it |
-| ***Pinus aristata*** (Rocky Mountain bristlecone pine) | Restricted to high elevation — the San Francisco Peaks, visible from campus |
-| ***Primula parryi*** (Parry's primrose) | Alpine, wet, and a walk from the nearest road |
+1. **Search for your candidate species.** Use the occurrence search and enter the scientific name your key or iNaturalist gave you.
 
-### 1. Geographic distribution
+2. **Open three records that have specimen images** — real pressed sheets, zoomable enough to read the original handwritten label.
 
-Examine the occurrence map for each species.
+3. **Compare them with your own plant.** Put your pressed specimen beside them if you collected one; use your four photographs if you did not. Work through the characters that actually decided your identification — the ones you wrote in your `Notes` column — and check each against the sheets.
 
-- Describe the worldwide distribution. Where are records most concentrated?
-- Describe the distribution within Arizona.
-- For *Pinus aristata* and *Primula parryi*: are the records spread across the mountain, or clustered along something?
+   - Do the sheets show what you expected?
+   - Is there a character visible on the sheets that you never looked at, and should have?
+   - **Would you still make the same call?** If not, say so, and say what changed it. Changing your mind when better evidence turns up is the correct behaviour here, not a failure — it is the determiner field doing its job, with you as the determiner.
 
-### 2. Collections through time
+4. **Score two of those sheets** against the checklist in [`specimen_quality_datasheet.csv`](downloads/specimen_quality_datasheet.csv), in the `SEINET-1` and `SEINET-2` rows. Fifteen criteria at 0–2, so 30 is the maximum. You cannot judge paper stock from a photograph — score what you can see and mark the rest `NA`.
 
-Look at the collection dates.
+   Then answer: which single criterion separated the better sheet from the worse one? And was the sheet you found it easier to identify from also the one that scored higher?
 
-- What is the earliest record for each species? The most recent?
-- **Count the records by decade** for **one** species. Use the search filters to set a date range, run it once per decade, and record the number of records in the table below.
+5. **Look at the map.** SEINet plots every record of your species. Look at where the dots are — and where they are not.
 
-| Decade | Number of records |
-|---|---|
-| Before 1900 | |
-| 1900–1919 | |
-| 1920–1939 | |
-| 1940–1959 | |
-| 1960–1979 | |
-| 1980–1999 | |
-| 2000–2019 | |
-| 2020–present | |
+   > **Do the dots on the map represent the plant's true distribution — or where botanists have collected it?**
 
-Plot it or look for patterns in the data. 
-
-Now the question the plot is for: **does that shape look like the history of the plant, or the history of the botanists?** Think about what was happening at this institution, and in American botany, in the decades with the tall bars and the short ones.
-
-### 3. A record that looks wrong
-
-Find a record that seems unusual or suspicious — a point far outside the main cluster, an implausible elevation, a date that does not fit.
-
-- Describe it.
-- Why might it be unusual? List **three** possible explanations, and note that only one of them is "the plant really was there."
-
-Georeferencing errors, transcription slips, misidentifications and genuine outlying populations all produce the same dot on the same map, and telling them apart requires going back to the specimen.
-
-### 4. What is actually in a specimen record
-
-Open several individual records and look past the map. Record **three** notable observations. Consider elevation, habitat, collector, associated species, reproductive condition, locality description, or other label notes.
-
-Then answer: which of those fields could you *not* have obtained from a photograph?
-
-### 5. Interpretation
-
-In two or three sentences, summarize what the SEINet records tell you about **one** species you choose, and **one** limitation of using herbarium records to determine its actual distribution.
-
-Then Richie's question, which is the point of the whole exercise:
-
-> **Do the dots on the map represent the plant's true distribution — or where botanists have collected it?**
-
-### 6. Good or bad? Scoring real specimens
-
-You have the standard from Part 2. Now use it on specimens you did not make.
-
-Score three real digitized sheets against the checklist in [`specimen_quality_datasheet.csv`](downloads/specimen_quality_datasheet.csv). One row per criterion, scored 0, 1 or 2:
-
-- **0** — absent or unusable
-- **1** — present but compromised
-- **2** — meets the standard
-
-1. In SEINet, search for a species you collected or keyed this semester.
-2. Open three records **with specimen images**, from three different collectors and, if you can, three different decades.
-3. Score each one in the `SEINET-1`, `SEINET-2` and `SEINET-3` rows of the sheet, and note the catalogue number and collector for each. You cannot assess the paper stock from a photograph — score what you can see and mark the rest `NA`.
-
-Then answer:
-
-- Which was the best, and which single criterion separated it from the worst?
-- Did the older or the newer specimens score higher? Would you have predicted that?
-- Find one specimen where **you can read the label but could not relocate the site** from it. What is missing?
+   Before you answer, notice what the clusters sit on. Roads. Towns. University campuses. Anywhere a person carrying a plant press could park.
 
 ### If your group collected a specimen
 
-Skip this section if you did not collect. If you did, do it once your specimen is dry.
+Once your specimen is dry, score it too, in the `OWN` rows. Be hard on it — a specimen you scored honestly at 14 out of 30 is more useful to you than one you talked yourself into calling fine.
 
-**Score your own.** Run the same checklist over the specimen you pressed, using the `OWN` rows of the scoring sheet. Fifteen criteria at 0–2 gives a maximum of 30. Be hard on it: a specimen you scored honestly at 14 out of 30 is more useful to you than one you talked yourself into calling fine.
+Then trade with another group, score theirs in the `SWAP` rows, and compare their score of your specimen against your own.
 
-**Then swap.** Trade specimens with another group, score theirs in the `SWAP` rows, and compare their score of your specimen against your own score of it.
-
-You did a version of this earlier today with the confidence ratings on your tree table, and you will do it again in the field methods lab, where observer disagreement gets quantified formally. Same lesson each time: **the gap between how good you thought it was and how good somebody else thought it was is data.** If the two of you disagree by more than 3 points overall, find the criterion you read differently and work out which reading the herbarium would use.
+You did a version of this earlier today with the confidence ratings on your tree table, and you will do it again in the field methods lab, where observer disagreement gets quantified formally. Same lesson each time: **the gap between how good you thought it was and how good somebody else thought it was is data.**
 
 ---
 
@@ -719,16 +667,17 @@ You did a version of this earlier today with the confidence ratings on your tree
 
 **Part C — the record**
 
-6. The five sections of the SEINet investigation from Part 3, including your **records-by-decade table**.
-7. **Your three specimen scores** from section 6, and the single criterion that separated the best sheet from the worst.
+6. **Your SEINet comparison** — the three records you opened, whether the sheets supported the characters you keyed on, and **whether you would still make the same call**.
+7. **Your two sheet scores**, and the single criterion that separated the better from the worse.
+8. **Your answer to the distribution question** — the dots as the plant, or the dots as the botanists.
 
 **If your group collected and pressed a specimen**, add:
 
-8. **Your own specimen's score**, the other group's score of it, and — if the two disagreed by more than 3 points — the criterion you read differently and which reading the herbarium would use.
+9. **Your own specimen's score**, the other group's score of it, and — if the two disagreed by more than 3 points — the criterion you read differently and which reading the herbarium would use.
 
 **If you went on the guided walk for extra credit**, add:
 
-9. **One character the guide used that is not in this manual's key**, why it works, and the couplet you would write to capture it.
+10. **One character the guide used that is not in this manual's key**, why it works, and the couplet you would write to capture it.
 
 ---
 

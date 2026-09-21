@@ -2,9 +2,20 @@
 
 > **Skills this lab builds.** *4DEE:* Ecology Practices → Fieldwork; Natural history; Working collaboratively; Quantitative reasoning and computational thinking. *BioSkills:* Process of Science → Study Design ("Execute protocols and accurately record measurements and observations"), Data Interpretation & Evaluation ("Describe sources of error and uncertainty in data"); Quantitative Reasoning → "Record, organize, and annotate simple data sets."
 
-What ecological data do you collect at a sampling site? There are many possibilities! In today's lab, we will learn several of the most common data collection methods practiced in the Southwest. The protocols presented here are from the *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, the method the Bureau of Land Management uses to assess rangeland condition across the western United States under its Assessment, Inventory and Monitoring (AIM) program. Millions of acres are managed using these data to adaptively manage resources. If you take a field job in this region, there is a real chance you will need to perform this protocols.
+What ecological data do you collect at a sampling site? There are many possibilities! In today's lab, we will learn several of the most common data collection methods practiced in the Southwest. The protocols presented here are from the *Monitoring Manual for Grassland, Shrubland, and Savanna Ecosystems*, the method the Bureau of Land Management uses to assess rangeland condition across the western United States under its Assessment, Inventory and Monitoring (AIM) program. Millions of acres are managed using these data to adaptively manage resources. If you take a field job in this region, there is a real chance you will perform this protocols.
 
-### Watch these before lab
+### Where this lab happens
+
+**Sinclair Wash** — also called Clay Avenue Wash — a short walk from campus.
+
+- [**Walking directions to the site**](https://maps.app.goo.gl/XckDsR2THhCctFL26)
+- [**Aerial view of the wash**](https://maps.app.goo.gl/bGy3fkAut525xXk77) — zoom in until you can see the Rio, which follows the tree line and the path
+
+This is the same ground you will be designing your own sampling scheme on in the ecological sampling lab, and it is an active restoration site: the Rio de Flag Flood Control Project is reshaping this reach, and the banks you will be measuring are recovering from that work. So the numbers you collect today are not a classroom exercise with a real-world flavour — **they are the same measurements a restoration monitoring crew would take here**, for the same reason: to find out whether the vegetation is coming back, and how fast.
+
+Keep that in mind in Part 7. When you ask which state on the state-and-transition model your plot best matches, you are asking a live question about a site somebody is actively trying to move from one state to another.
+
+### Before class: watch these
 
 The BLM publishes short training videos for each core method. **Watch these three before you come — 28 minutes total.** They cover what every group does first.
 
@@ -14,52 +25,49 @@ The BLM publishes short training videos for each core method. **Watch these thre
 | [Establishing a transect](https://vimeo.com/552514613/3a4bc132ba) | 6:01 |
 | [Line-point intercept](https://vimeo.com/552514737/872acfdfe9) | 18:50 |
 
-The other two — photo points and canopy gap — are linked at the top of their own sections below. Watch each one when you get there, or before lab if you have time.
+The other three — ecological site identification, photo points and canopy gap — are linked at the top of their own sections below. Watch each one when you reach it.
 
 All of them, plus the manual and blank datasheets, live at <https://www.blm.gov/aim/training>.
 
-### Also before lab: look up your ecological site
-
-> Watch first: [**Ecological site identification**](https://vimeo.com/552514455/0be5d6bd48) (12:30)
-
-**About ten minutes at a computer.** A field crew never arrives at a plot cold — they have already pulled the soil map and worked out what kind of ground they expect to be standing on. You are going to do the same thing, for the same reason: it is what makes your field description a *test* of something rather than a description of nothing in particular.
-
-Your instructor will give you the plot coordinates.
-
-1. **Open Web Soil Survey** (<https://websoilsurvey.nrcs.usda.gov/app/>) and click the green *Start WSS* button.
-
-2. **Define your Area of Interest.** Zoom to the plot — searching the coordinates is faster than panning — and draw a small rectangle around it with the AOI tool.
-
-3. **Soil Map tab.** Read off the **map unit name and symbol** the plot falls in. If your rectangle covers more than one map unit, note which one the plot centre is actually in.
-
-4. **Soil Data Explorer tab → Soil Reports → Vegetative Productivity → Link to Ecological Site Descriptions in EDIT**, then **View Soil Report.** The table that opens lists each map unit with a link to its ecological site description in the last column.
-
-5. **Follow the link into EDIT** (the Ecosystem Dynamics Interpretive Tool, <https://edit.sc.egov.usda.gov/>). Record the **ecological site name and ID**.
-
-6. **Read two sections of the ESD.** In *General information*, find the reference state's plant community — the species it expects and roughly how much of each. Then find the **state-and-transition model**, usually drawn as boxes and arrows. Note the slope range, landform and hillslope position the site is described as occupying; you will check those against the ground.
-
-Fill in **Part A** of the [ecological site worksheet](downloads/ecological_site_worksheet.csv) — questions 1 and 2 — and bring it with you. Part B waits until you have your data.
-
-> **Notes for TAs.** Run this lookup yourself before assigning it and confirm the map unit **has** an ecological site assigned — not all do, and a group that lands on one without an ESD will stall. Fallbacks: use the nearest mapped unit that does have one and make the distance an explicit caveat; or browse [EDIT](https://edit.sc.egov.usda.gov/catalogs/esd) by MLRA and pick a plausible site for the area, naming it as an approximation. Tell students which one they are doing. EDIT moved from Jornada to NRCS hosting in April 2026, so older handouts pointing at `edit.jornada.nmsu.edu` will redirect at best.
-
 ### Downloads for this lab
 
-- [**Herbarium labels**](downloads/HerbariumLabel.docx) — print, cut out and fill in by hand for the voucher you press in Part 5. Same sheet as the tree walk lab.
+- [**Herbarium labels**](downloads/HerbariumLabel.docx) — print, cut out and fill in by hand for the voucher you press in Part 6. Same sheet as the tree walk lab.
 - [LPI datasheet (.csv)](downloads/lpi_datasheet.csv)
 - [Observer calibration datasheet (.csv)](downloads/calibration_datasheet.csv)
 - [Plot characterization sheet (.csv)](downloads/plot_characterization_datasheet.csv) — one per plot, filled in before you measure anything
 - [Photo point log (.csv)](downloads/photo_point_log.csv)
 - [Canopy gap datasheet (.csv)](downloads/gap_datasheet.csv)
 - [Unknown plant log (.csv)](downloads/unknown_plant_log.csv)
-- [Ecological site worksheet (.csv)](downloads/ecological_site_worksheet.csv) — **Part A before lab**, Part B after you have your data
+- [Ecological site worksheet (.csv)](downloads/ecological_site_worksheet.csv) — **Part A in Part 1**, Part B in Part 7
 - [Specimen quality scoring sheet (.csv)](downloads/specimen_quality_datasheet.csv) — the checklist from the tree walk lab, for the voucher you press
 - [R script for this lab](downloads/FieldMethods_LPI.R) — **optional.** Nothing you turn in requires it; it is there if you want to see your own cover numbers.
+
+### What to print and bring
+
+The forms you fill in outdoors are the **official AIM field sheets** — the same ones a BLM crew carries. They are built for a clipboard, which a spreadsheet is not, and using the real thing is part of the point.
+
+| Print | How many | What it is |
+|---|---|---|
+| [Plot characterization](https://landscapetoolbox.org/wp-content/uploads/2025/07/PlotCharacterization_MMGSSE2017.pdf) | 1 per group | Coordinates, slope, aspect, slope shape, landform, hillslope position. **Skip the soil horizon table** — that is the pit we are not digging |
+| [Photo ID card](https://landscapetoolbox.org/wp-content/uploads/2025/07/PhotoIDCard_MMGSSE2017.pdf) | 1 per group | This *is* the board you hold in the photo. Fill it in before each shot |
+| [Line-point intercept](https://landscapetoolbox.org/wp-content/uploads/2025/07/LinePointIntercept_MMGSSE2017.pdf) | enough for 150 points per group | One sheet per transect, or more — check how many points a sheet holds |
+| [Gap intercept](https://landscapetoolbox.org/wp-content/uploads/2025/07/Gapintercept_MMGSSE2017.pdf) | 1 per transect per group | Note the *minimum gap size* and *perennial only / annual and perennial* boxes at the top — fill them in before you start |
+| [Unknown plant tracking sheet](https://landscapetoolbox.org/wp-content/uploads/2025/07/UnknownPlantTrackingSheet_MMGSSE2017.pdf) | 1 per group | The official version of the placeholder-code log |
+| [QA/QC sheet](https://landscapetoolbox.org/wp-content/uploads/2025/07/QualityAssuranceandQualityControlDataSheet_MMGSSE2017.pdf) | 1 per group | For the calibration in Part 5 |
+| [Herbarium label](downloads/HerbariumLabel.docx) | 1 per specimen | Only if you collect |
+| Your species list | 1 per group | From Part 1 — print it with images if you can |
+
+**The `.csv` files in the downloads list are for afterwards, not for the field.** Once you are back indoors, type your paper sheets into them. That is how the data gets into a form the analysis script can read, and it is also when transcription errors surface — which is why crews enter data the same day, while they can still remember what a smudged code said.
+
+The two worksheets that are *not* field sheets — the [ecological site worksheet](downloads/ecological_site_worksheet.csv) and the [specimen quality checklist](downloads/specimen_quality_datasheet.csv) — you fill in at a computer, in Parts 1 and 7.
+
+> Every blank AIM sheet, including the methods we are not running, is at the [Monitoring Manual datasheets page](https://landscapetoolbox.org/methods-manuals/monitoring-manual-2nd-edition/).
 
 ## Objectives
 
 1. Establish a monitoring plot and run three AIM core methods on it: photo points, line-point intercept, and canopy gap intercept.
 2. Execute each protocol as written, and record data someone else could use.
-3. Identify the ecological site your plot sits on, and use it to say whether your cover numbers are good news or bad.
+3. Prepare for a field day the way a crew does — identify the ecological site your plot sits on and build a species list for it before going out — and use the site to say whether your cover numbers are good news or bad.
 4. Quantify the disagreement between observers, and decide whether it is small enough to trust your result.
 5. Collect, press and label a voucher specimen for a plant you cannot identify, to the standard set in the tree walk lab.
 6. Say what each method can and cannot tell you — which is what lets you choose among them when you design your own study.
@@ -76,7 +84,63 @@ That is the whole idea, and it is worth stating plainly because it recurs everyw
 
 ---
 
-## Part 1 — Establishing the plot
+## Part 1 — At the computer, before you walk out
+
+A field crew does not start at the plot. It starts at a desk, working out what kind of ground it is about to stand on and what is likely to be growing there — and it does that on work time, because it is part of the job rather than preparation for it.
+
+**You have about twenty minutes.** Do both of these before anyone puts boots on.
+
+### Look up your ecological site
+
+> Watch first: [**Ecological site identification**](https://vimeo.com/552514455/0be5d6bd48) (12:30)
+
+**About ten minutes.** A field crew never arrives at a plot without completing a pre-site evaluation — they have already pulled the soil map and worked out what kind of ground they expect to be standing on. You are going to do the same thing, for the same reason: it is what makes your field description a *test* of something rather than a description of nothing in particular.
+
+**The whole class looks up the same point** — a reference point in the reach of Sinclair Wash we will be working in. Your own plot centre gets assigned when you get out there, and one of the first things you will do on returning is check whether it landed in the map unit you looked up. Sometimes it will not, and that is worth knowing: a wash is exactly where soil map units change, because floodplain, terrace and upland are different ground.
+
+Use the [aerial view link](https://maps.app.goo.gl/bGy3fkAut525xXk77) above to find the reach. **Zoom in until you can see the Rio, which follows the tree line and the path** — the path is hard to make out from above, so use the trees. Draw your Area of Interest over that stretch of wash, a few hundred metres of it, centred on the tree line.
+
+1. **Open Web Soil Survey** (<https://websoilsurvey.nrcs.usda.gov/app/>) and click the green *Start WSS* button.
+
+2. **Define your Area of Interest.** Zoom to the plot — searching the coordinates is faster than panning — and draw a small rectangle around it with the AOI tool.
+
+3. **Soil Map tab.** Read off the **map unit name and symbol** the plot falls in. If your rectangle covers more than one map unit, note which one the plot centre is actually in.
+
+4. **Soil Data Explorer tab → Soil Reports → Vegetative Productivity → Link to Ecological Site Descriptions in EDIT**, then **View Soil Report.** The table that opens lists each map unit with a link to its ecological site description in the last column.
+
+5. **Follow the link into EDIT** (the Ecosystem Dynamics Interpretive Tool, <https://edit.sc.egov.usda.gov/>). Record the **ecological site name and ID**.
+
+6. **Read two sections of the ESD.** In *General information*, find the reference state's plant community — the species it expects and roughly how much of each. Then find the **state-and-transition model**, usually drawn as boxes and arrows. Note the slope range, landform and hillslope position the site is described as occupying; you will check those against the ground.
+
+Fill in **Part A** of the [ecological site worksheet](downloads/ecological_site_worksheet.csv) — questions 1 and 2 — and take it with you. Part B waits until you are back with your data.
+
+### Build a species list
+
+> **About ten minutes.** You used SEINet in the tree walk lab to test one identification. Here you use it for the other thing it is good for: finding out what has been found near a place before you go there.
+
+The ecological site description told you what this kind of ground *should* support. A SEINet search tells you what people have actually **collected** here. Those are different questions and the answers rarely match exactly, which is the point.
+
+The practical reason to do this: line-point intercept goes much faster when you already recognise the common species and have their PLANTS codes written down. The scientific reason is better — **anything you find that is not on your list is worth a second look.** It may be a new record, it may be something invasive, or it may just be a plant nobody bothered to collect. All three are interesting, and you cannot notice any of them without knowing what was expected.
+
+1. **Go to SEINet** (<https://swbiodiversity.org/seinet/index.php>) and choose **Search → Search Collections**.
+
+2. **Choose collections.** Select all of them, or just the Arizona herbaria if you want a tighter list, then click **Next**.
+
+3. **Find the Point-Radius Search box** on the search criteria page. Either type the decimal-degree coordinates for Sinclair Wash straight in, or click the **globe icon** to open a map and pick the spot, then **Submit Coordinates**.
+
+4. **Set your radius.** Three to five kilometres is about right here — small enough to be about this place, large enough to return a usable number of records.
+
+5. **Run the search**, then click the **Species List** tab. That converts the specimen records into a list of taxa.
+
+6. **Optional but worth it:** choose **Display as Images** to get an illustrated checklist. Printed, that is a field-usable picture key to the species most likely to be under your pin.
+
+Print it, or keep it on a phone, and **write the PLANTS code beside the ten or so species you expect to see most.** That list walks out to the wash with you.
+
+> **Read the list for what it is.** It is a record of *collecting effort*, not a census. Showy plants, roadside plants and anything growing near a parking area are over-represented; grasses, sedges and unglamorous weeds are under-represented, because fewer people stop to press them. You met exactly this problem in the tree walk lab, where the question was whether the dots on the map were the plant or the botanists. It is the same warning here: **treat the list as a prior, not a checklist to tick off.**
+
+---
+
+## Part 2 — Establishing the plot
 
 The standard AIM plot uses a **spoke design**: a permanent stake at plot centre, with three transects radiating out at **120° from one another**.
 
@@ -96,7 +160,7 @@ The standard AIM plot uses a **spoke design**: a permanent stake at plot centre,
 
 1. **Set plot centre.** Drive the centre stake in, leaving **less than 30 cm exposed**. Your instructor will have assigned the point using a randomisation method — do not move it because the vegetation looks more interesting three metres away. Nudging a plot toward the interesting vegetation is the most common way field data gets biased, and you will take that problem apart properly in the sampling lab in a few weeks. For now, take it on trust: the point is where it is precisely so that nobody's judgement chose it.
 
-2. **Choose the first azimuth at random**, then set the other two at +120° and +240° from it. Record all three bearings on the plot characterization sheet, along with your GPS coordinates, elevation, slope and aspect — you will need the coordinates again in Part 6. (The manual specifies the 120° spacing; how you pick the first bearing is a local convention, so we make it random and we write it down.)
+2. **Choose the first azimuth at random**, then set the other two at +120° and +240° from it. Record all three bearings on the plot characterization sheet, along with your GPS coordinates, elevation, slope and aspect — you will need the coordinates again in Part 7. (The manual specifies the 120° spacing; how you pick the first bearing is a local convention, so we make it random and we write it down.)
 
 3. **Set transect start stakes 5 m out from centre** along each bearing. Run each tape from its start stake outward for **25 m**, and stake the far end.
 
@@ -121,11 +185,11 @@ A photograph will not tell you percent cover, and it is not trying to. What it d
 
 ### Describing the site
 
-Before you measure any vegetation, describe the **ground it is growing on**. This takes about ten minutes and it is the part students are most tempted to rush, because it feels like paperwork. It is not. Every field below is one of the things that *defines* an ecological site, which means this is the only independent evidence you will collect against which to check the map in Part 6.
+Before you measure any vegetation, describe the **ground it is growing on**. This takes about ten minutes and it is the part students are most tempted to rush, because it feels like paperwork. It is not. Every field below is one of the things that *defines* an ecological site, which means this is the only independent evidence you will collect against which to check the map in Part 7.
 
 Put another way: you are not digging a pit, so **this description is the only field evidence you have.** Take it seriously in proportion.
 
-Fill in the topography and landform block of the plot characterization sheet. **Record what you actually see.** You looked up a candidate ecological site before lab, and it comes with expectations about slope and landform — do not let them fill in the blanks for you. If the ground disagrees with the map, that disagreement is the most useful thing you will collect today.
+Fill in the topography and landform block of the plot characterization sheet. **Record what you actually see.** You looked up a candidate ecological site an hour ago, and it comes with expectations about slope and landform — do not let them fill in the blanks for you. If the ground disagrees with the map, that disagreement is the most useful thing you will collect today.
 
 #### Slope
 
@@ -193,13 +257,11 @@ Three quick ones, all by eye:
 - **Erosion features.** Note what you can actually see: **rills** (small channels a few centimetres deep), **gullies** (channels deep enough to step into), **pedestals** (plants or rocks left standing on little columns as the soil around them washed away), or **water flow patterns** (fans of deposited litter and sediment showing where water ran).
 - **Disturbance.** Roads, trails, stumps, fire scars, grazing sign, construction. Write what you see, not what you infer.
 
-> **Definitions note for TAs.** The categories above are the AIM plot characterization sheet's own fields; the wording of the definitions is written for this course from the NRCS *Field Book for Describing and Sampling Soils* (v4.0) rather than quoted from it, so it is plainer than the official language and slightly less precise. If the printed AIM sheet you hand out offers a different or shorter list of options — its hillslope profile list in particular may be a subset — **use the sheet's list** and treat the table above as background.
-
 ---
 
-## Part 2 — Line-point intercept
+## Part 3 — Line-point intercept
 
-> Watch first: [**Line-point intercept**](https://vimeo.com/552514737/872acfdfe9) (18:50) — required before lab.
+> Watch first: [**Line-point intercept**](https://vimeo.com/552514737/872acfdfe9) (18:50) — required before class.
 
 You will record **50 points per transect, spaced 0.5 m apart**, for **150 points on the plot**.
 
@@ -267,7 +329,7 @@ A consistently-applied placeholder is real data — the same convention you used
 
 ---
 
-## Part 3 — Canopy gap intercept
+## Part 4 — Canopy gap intercept
 
 > Watch first: [**Canopy gap intercept**](https://vimeo.com/552514234/27a1e9c283) (15:35)
 
@@ -301,7 +363,7 @@ The standard classes are **25–50 cm, 51–100 cm, 101–200 cm, and greater th
 
 ---
 
-## Part 4 — Observer calibration
+## Part 5 — Observer calibration
 
 This is the part of the lab that most resembles a real field job and least resembles a normal class exercise. Before a crew's data is used, the crew has to demonstrate that its members produce the same numbers on the same ground.
 
@@ -340,7 +402,7 @@ Notice that all three are fixable, and none of them are fixed by trying harder. 
 
 ---
 
-## Part 5 — Unknown plants and voucher specimens
+## Part 6 — Unknown plants and voucher specimens
 
 The placeholder codes only help if someone can eventually resolve them. That is what a **voucher specimen** is for: a physical, permanent record of exactly which plant you meant.
 
@@ -366,9 +428,9 @@ The tree walk lab covered why a specimen works and what makes one worth keeping 
 
 ---
 
-## Part 6 — Ecological site: does the map match the ground?
+## Part 7 — Ecological site: does the map match the ground?
 
-> **Back indoors, at a computer.** Bring your plot characterization sheet, your LPI and gap results, and Part A of the worksheet you filled in before lab.
+> **Back indoors, at a computer.** Bring your plot characterization sheet, your LPI and gap results, and Part A of the worksheet you filled in at the start of the period.
 
 You have a foliar cover number. Here is the problem with it: **40% cover is good news on one site and a symptom on another**, and nothing in your data can tell you which. A dry, shallow-soiled site may never have supported more than 30%. A deep-soiled meadow at 40% has lost most of what it had.
 
@@ -376,7 +438,7 @@ Cover is not interpretable on its own. It is only interpretable against **what t
 
 An **ecological site** is a kind of land defined by the soil, climate and landform it has, grouped so that all the land in one ecological site produces the same kind of plant community and responds to disturbance the same way. Each one has a published **Ecological Site Description (ESD)**: a reference plant community with expected species and cover, and a **state-and-transition model** showing the other states that site can be in and what pushes it between them.
 
-Before lab you found the site the **map** says you were standing on. You have now spent an afternoon on the actual ground. This part is where those two meet.
+At the computer this morning you found the site the **map** says you were standing on. You have now spent an afternoon on the actual ground. This part is where those two meet.
 
 ### What we are not doing, and why it matters
 
@@ -386,9 +448,20 @@ So the map's claim stands or falls on your **surface** description alone. **That
 
 You have met this shape before. In the tree walk lab an identification was a hypothesis you could defend and someone could later re-test. This is the same thing one level up: the map proposes, the ground disposes.
 
+### First: were you where we thought you were?
+
+Before anything else, check the assumption the whole lookup rested on. Take your plot's GPS coordinates off your plot characterization sheet, go back into Web Soil Survey, and draw a small Area of Interest around **your actual plot centre**.
+
+**Did it fall in the map unit the class looked up this morning?**
+
+- **If yes**, the reference community you read is the right one to compare against. Carry on.
+- **If no**, you have a more interesting afternoon than everyone else. Record your actual map unit and its ecological site, and use *that* one for the questions below. Then say, in a sentence, what is different about where your plot sits — bank, terrace, upland — that would explain two units meeting there.
+
+A wash is precisely the kind of place where this happens. It is not an error; it is the map doing its job at a boundary, and noticing it is the whole skill.
+
 ### Part B of the worksheet
 
-Questions 1 and 2 you answered before lab. These are the rest.
+Questions 1 and 2 you answered at the computer this morning. These are the rest.
 
 3. **How does your plot compare?** Put your LPI foliar cover and your three most abundant species next to the reference community's. Do not smooth over the differences — the interesting result is a mismatch.
 
@@ -457,7 +530,7 @@ Most of what you turn in is the raw record. That is deliberate: a field crew is 
 | Line-point intercept | All 150 points |
 | Canopy gap | All three transects |
 | Unknown plant log | One row per placeholder code, with location notes and photo numbers |
-| Ecological site worksheet | All seven questions |
+| Ecological site worksheet | Part A, the map unit check, and all of Part B |
 
 A datasheet with blanks in it is not finished. If a cell is genuinely empty, write why.
 
@@ -484,6 +557,8 @@ Herrick, J.E., J.W. Van Zee, S.E. McCord, E.M. Courtright, J.W. Karl, and L.M. B
 - Volume I, Quick Start (1st edition): <http://jornada.nmsu.edu/files/Quick_Start.pdf>
 - Volume II, design and interpretation: <https://jornada.nmsu.edu/files/Volume_II.pdf>
 - USDA PLANTS database: <https://plants.usda.gov>
+- SEINet Portal Network: <https://swbiodiversity.org/seinet/index.php>
+- Makings, L., L. Landrum and W. Fertig. *Making Good Use of SEINet* — the source for the checklist navigation: <https://biokic.asu.edu/sites/g/files/litvpz936/files/making_good_use_of_seinet-liz_edits-may_2016.pdf>
 - NRCS, *Field Book for Describing and Sampling Soils*, version 4.0 — the source for the slope shape, hillslope position and landform categories: <https://www.nrcs.usda.gov/sites/default/files/2025-01/Field-Book-for-Describing-and-Sampling-Soils-v4.pdf>
 - Web Soil Survey: <https://websoilsurvey.nrcs.usda.gov/app/>
 - EDIT, the Ecosystem Dynamics Interpretive Tool: <https://edit.sc.egov.usda.gov/>
