@@ -143,10 +143,10 @@ tree_data <- data.frame(
 # Scenario 4: Categorical Data
 # A conservationist records whether birds are Present or Absent at two sites: Restored and Unrestored.
 
-bird_data <- matrix(
-  c(25, 15,   # Restored: Present, Absent
-    10, 20),  # Unrestored: Present, Absent
-  nrow = 2, byrow = TRUE
+# One row per bird survey, same format as the G-test example at the top of this script
+# Restored: 25 Present, 15 Absent; Unrestored: 10 Present, 20 Absent
+bird_data <- data.frame(
+  site = factor(rep(c("Restored", "Unrestored"), times = c(40, 30))),
+  bird = factor(c(rep(c("Present", "Absent"), times = c(25, 15)),
+                  rep(c("Present", "Absent"), times = c(10, 20))))
 )
-rownames(bird_data) <- c("Restored", "Unrestored")
-colnames(bird_data) <- c("Present", "Absent")
