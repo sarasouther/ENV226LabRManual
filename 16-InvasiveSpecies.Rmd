@@ -133,8 +133,8 @@ In your brief report, provide:
 2. Your if/then statement describing the patterns that you expect to see in order to identify the information that you need to gather
 3. A results statement for each statistical test
 4. A figure with an appropriate legend
-5. Interpretation of your results, answering the question: Does disturbance affect non-native plant density? Did you support or refute your hypothesis?
+5. Interpretation of your results, answering the question: Does disturbance affect non-native plant density? Did you support or refute your hypothesis? Then discuss at least one limitation of your study design, or an alternative explanation for your results (for example, what besides disturbance could explain where your focal species occurs?).
 
-Put this in a document and turn it into your TA!
+Put this in a document and submit it on Canvas. You collect data as a group, but each student writes and submits their own report.
 
 
